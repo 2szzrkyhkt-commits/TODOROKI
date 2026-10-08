@@ -344,7 +344,28 @@ footer {
   }
 
 }
+/* スマホ用メニュー */
+.mobile-menu {
+  display: none;
+}
 
+@media (max-width: 768px) {
+  .mobile-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    padding: 12px 16px;
+    background: #111;
+    border-top: 1px solid #8b6b2e;
+  }
+
+  .mobile-menu a {
+    color: #d9b76e;
+    text-decoration: none;
+    font-size: 13px;
+  }
+}
 </style>
 </head>
 
@@ -356,15 +377,16 @@ footer {
   <div class="wrap">
     <nav>
       <a class="logo" href="#">TODOROKI</a>
-
-      <div class="navlinks">
-        <a href="#articles">記事</a>
-        <a href="#themes">テーマ</a>
-        <a href="#about">TODOROKIについて</a>
-        <a href="#social">SNS</a>
-      </div>
+ </div>
     </nav>
   </div>
+  
+  <div class="mobile-menu">
+    <a href="#articles">記事</a>
+    <a href="#themes">テーマ</a>
+    <a href="#about">TODOROKIについて</a>
+    <a href="#social">SNS</a>
+  </div>  
 </header>
 
 <main>
