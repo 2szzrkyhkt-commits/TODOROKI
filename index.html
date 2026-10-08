@@ -365,6 +365,20 @@ footer {
     text-decoration: none;
     font-size: 13px;
   }
+}/* 記事カード全体をクリック可能にする */
+.card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-link .card {
+  height: 100%;
+  cursor: pointer;
+}
+
+.card-link:hover .card {
+  border-color: #d9b76e;
 }
 </style>
 </head>
@@ -446,46 +460,47 @@ footer {
 
     <div class="cards">
 
-      <article class="card">
+      <a href="/investment.html" class="card-link">
+  <article class="card">
 
-        <span class="tag">INVESTMENT</span>
+    <span class="tag">INVESTMENT</span>
 
-        <h3><a href="/investment.html" style="color:inherit;text-decoration:none;">企業価値をどう見るか</a></h3>
+    <h3>企業価値をどう見るか</h3>
 
-        <p>
-          PERやPBRだけに頼らず、
-          利益・キャッシュフロー・安全域から
-          企業を考える。
-        </p>
+    <p>
+      PERやPBRだけに頼らず、
+      利益・キャッシュフロー・安全域から
+      企業を考える。
+    </p>
 
-      </article>
+  </article>
+</a>
+      <a href="/price-value.html" class="card-link">
+  <article class="card">
 
-      <article class="card">
+    <span class="tag">INVESTMENT</span>
 
-        <span class="tag">ECONOMY</span>
+    <h3>価格と価値の違い</h3>
 
-        <h3><a href="/price-value.html">価格と価値の違い</a></h3>
+    <p>
+      株価と企業価値は必ずしも一致しない。
+      安全域と割安株投資の考え方から、
+      価格と価値の違いを解説する。
+    </p>
 
-        <p>
-          現金の価値、金利、株式。
-          環境が変われば、
-          資産を守る方法も変わる。
-        </p>
-
-      </article>
-
-      <article class="card">
-
-        <span class="tag">MARKET</span>
-
-        <h3><a href="/inflation.html">インフレ時代の資産形成</a></h3>
-
-        <p>
-          価格を動かすのは数字だけではない。
-          投資家心理と市場の構造を読み解く。
-        </p>
-
-      </article>
+  </article>
+</a>
+      <a href="/inflation.html" class="card-link">
+  <article class="card">
+    <span class="tag">ECONOMY</span>
+    <h3>インフレ時代の資産形成</h3>
+    <p>
+      インフレで預金の購買力はどう変わるのか。
+      物価上昇と株式投資、
+      資産形成の考え方を解説する。
+    </p>
+  </article>
+</a>
 
     </div>
 
