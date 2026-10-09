@@ -61,13 +61,19 @@ footer{padding:28px;text-align:center;border-top:1px solid #302819;color:#777;fo
 </main>
 <footer>© TODOROKI</footer>
 <script>
-const owner="2szzrkyhkt-commits",repo="TODOROKI";
-const api="https://api.github.com/repos/"+owner+"/"+repo+"/contents/pdf?ref=main";
-const grid=document.getElementById("grid");
-const status=document.getElementById("status");
-const count=document.getElementById("count");
-let files=[];
-  const titleMap = {
+const owner = "2szzrkyhkt-commits";
+const repo = "TODOROKI";
+const api = `https://api.github.com/repos/${owner}/${repo}/contents/pdf?ref=main`;
+
+const grid = document.getElementById("grid");
+const statusEl = document.getElementById("status");
+const count = document.getElementById("count");
+const search = document.getElementById("search");
+const categorySelect = document.getElementById("category");
+
+let files = [];
+
+const titleMap = {
   "TOPIX_新メンバー_35_TOP10_ブラックゴールド.pdf": "TOPIX新規採用銘柄・注目の10社",
   "consolidation_black_gold.pdf": "コンソリデーションとは何か",
   "japan_rate_hike_black_gold.pdf": "日本の利上げと株価への影響",
@@ -77,46 +83,115 @@ let files=[];
   "デフレとインフレ_資産格差_黒金4枚.pdf": "デフレとインフレで変わる資産格差",
   "ヒト・モノ・カネ_企業資産の源泉_黒金.pdf": "ヒト・モノ・カネ ― 企業価値の源泉",
   "企業も自習だけでは伸びない_黒金4枚.pdf": "企業は自習だけでは成長できない",
-  
-"大衆心理_群集が判断を狂わせる理由_黒金.pdf": "大衆心理 ― 群集が判断を狂わせる理由"
+  "大衆心理_群集が判断を狂わせる理由_黒金.pdf": "大衆心理 ― 群集が判断を狂わせる理由"
 };
 
-function category(name){
+function getTitle(name) {
+  return titleMap[name] ||
+    name.replace(/\.pdf$/i, "").replace(/[_＿]/g, " ");
+}
 
-const n=name.toLowerCase();
-if(/パチスロ|スロ|マルハン|コンコルド|abc|タイキ|差枚|ジャグラー/.test(n))return "パチスロ";
-if(/半導体|宇宙|spacex|starship|量子|ai|mRNA|ダイヤ|技術/.test(n))return "科学・技術";
-if(/政治|政権|財政|戦争|ロシア|ウクライナ|教育|公共財|社会|税/.test(n))return "政治・社会";
-if(/経営|企業|資本コスト|オーナー|m&a|コンソリデーション|改革|グローバル|ヒト・モノ・カネ/.test(n))return "企業・経営";
-if(/金利|frb|インフレ|デフレ|マネー|為替|円安|ビッグマック|経済/.test(n))return "経済・金融";
-if(/株|投資|topix|日経|nikkei|グレアム|バフェット|市場|sox|心理/.test(n))return "投資・市場";
-return "その他";
+function category(name) {
+  const n = name.toLowerCase();
+
+  if (/パチスロ|スロ|マルハン|コンコルド|abc|タイキ|差枚|ジャグラー/.test(n)) return "パチスロ";
+  if (/半導体|宇宙|spacex|starship|量子|ai|mrna|ダイヤ|技術/.test(n)) return "科学・技術";
+  if (/政治|政権|財政|戦争|ロシア|ウクライナ|教育|公共財|社会|税/.test(n)) return "政治・社会";
+  if (/経営|企業|資本コスト|オーナー|m&a|コンソリデーション|consolidation|改革|グローバル|ヒト・モノ・カネ/.test(n)) return "企業・経営";
+  if (/金利|rate|frb|インフレ|デフレ|マネー|為替|円安|ビッグマック|経済/.test(n)) return "経済・金融";
+  if (/株|投資|topix|日経|nikkei|グレアム|バフェット|市場|sox|心理/.test(n)) return "投資・市場";
+
+  return "その他";
 }
-function render(){
-const q=document.getElementById("search").value.trim().toLowerCase();
-const cat=document.getElementById("category").value;
-const shown=files.filter(f=>(cat==="all"||category(f.name)===cat)&&f.name.toLowerCase().includes(q));
-count.textContent=shown.length+" 件の資料 / 全 "+files.length+" 件";
-grid.replaceChildren();
-for(const f of shown){
-const title = titleMap[f.name] || f.name.replace(/\.pdf$/i,"").replace(/[_＿]/g," ");
-const card=document.createElement("article");card.className="card";
-const tag=document.createElement("div");tag.className="tag";tag.textContent=category(f.name);
-const h=document.createElement("h2");h.textContent=title;
-const actions=document.createElement("div");actions.className="actions";
-const url="/pdf/"+f.name.split("/").map(encodeURIComponent).join("/");
-const view=document.createElement("a");view.href=url;view.target="_blank";view.rel="noopener";view.textContent="PDFを見る →";
-const dl=document.createElement("a");dl.href=url;dl.download=f.name;dl.textContent="保存 ↓";
-actions.append(view,dl);card.append(tag,h,actions);grid.append(card);
+
+function render() {
+  const q = search.value.trim().toLowerCase();
+  const cat = categorySelect.value;
+
+  const shown = files.filter(f => {
+    const matchesCategory = cat === "all" || category(f.name) === cat;
+    const matchesSearch =
+      f.name.toLowerCase().includes(q) ||
+      getTitle(f.name).toLowerCase().includes(q);
+
+    return matchesCategory && matchesSearch;
+  });
+
+  count.textContent = `${shown.length} 件の資料 / 全 ${files.length} 件`;
+  grid.replaceChildren();
+
+  for (const f of shown) {
+    const card = document.createElement("article");
+    card.className = "card";
+
+    const tag = document.createElement("div");
+    tag.className = "tag";
+    tag.textContent = category(f.name);
+
+    const h = document.createElement("h2");
+    h.textContent = getTitle(f.name);
+
+    const actions = document.createElement("div");
+    actions.className = "actions";
+
+    const url = "/pdf/" + encodeURIComponent(f.name);
+
+    const view = document.createElement("a");
+    view.href = url;
+    view.target = "_blank";
+    view.rel = "noopener";
+    view.textContent = "PDFを見る →";
+
+    const dl = document.createElement("a");
+    dl.href = url;
+    dl.download = f.name;
+    dl.textContent = "保存 ↓";
+
+    actions.append(view, dl);
+    card.append(tag, h, actions);
+    grid.append(card);
+  }
+
+  statusEl.textContent = shown.length
+    ? ""
+    : "該当する資料はありません。";
 }
-status.textContent=shown.length?"":"該当する資料はありません。";
+
+search.addEventListener("input", render);
+categorySelect.addEventListener("change", render);
+
+async function loadPDFs() {
+  statusEl.textContent = "PDFを読み込み中...";
+
+  try {
+    const response = await fetch(api, {
+      headers: { "Accept": "application/vnd.github+json" }
+    });
+
+    if (!response.ok) {
+      throw new Error(`GitHub API: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    if (!Array.isArray(data)) {
+      throw new Error("PDF一覧の形式が正しくありません");
+    }
+
+    files = data
+      .filter(f => f.type === "file" && /\.pdf$/i.test(f.name))
+      .sort((a, b) => a.name.localeCompare(b.name, "ja"));
+
+    render();
+
+  } catch (error) {
+    console.error(error);
+    statusEl.textContent =
+      "PDF一覧を取得できませんでした: " + error.message;
+  }
 }
-document.getElementById("search").addEventListener("input",render);
-document.getElementById("category").addEventListener("change",render);
-fetch(api,{headers:{"Accept":"application/vnd.github+json"}})
-.then(r=>{if(!r.ok)throw Error("取得エラー: "+r.status);return r.json()})
-.then(data=>{if(!Array.isArray(data))throw Error("一覧を取得できません");files=data.filter(f=>f.type==="file"&&/\.pdf$/i.test(f.name)).sort((a,b)=>a.name.localeCompare(b.name,"ja"));render()})
-.catch(e=>{status.textContent="PDF一覧を読み込めませんでした。少し時間を置いて再読み込みしてください。";console.error(e)});
+
+loadPDFs();
 </script>
 </body>
 </html>
