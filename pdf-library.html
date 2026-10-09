@@ -87,8 +87,17 @@ const titleMap = {
 };
 
 function getTitle(name) {
-  return titleMap[name] ||
-    name.replace(/\.pdf$/i, "").replace(/[_＿]/g, " ");
+  if (titleMap[name]) {
+    return titleMap[name];
+  }
+
+  return name
+    .replace(/\.pdf$/i, "")
+    .replace(/[_＿-]+/g, " ")
+    .replace(/black\s*gold|ブラックゴールド|黒金\s*\d*枚?|黒金PDF/gi, "")
+    .replace(/\.pdf/gi, "")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function category(name) {
