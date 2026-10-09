@@ -74,28 +74,67 @@ const categorySelect = document.getElementById("category");
 let files = [];
 
 const titleMap = {
-  "TOPIX_新メンバー_35_TOP10_ブラックゴールド.pdf": "TOPIX新規採用銘柄・注目の10社",
-  "consolidation_black_gold.pdf": "コンソリデーションとは何か",
-  "japan_rate_hike_black_gold.pdf": "日本の利上げと株価への影響",
-  "nikkei_100k_black_gold.pdf": "日経平均10万円時代は来るのか",
-  "tax_cuts_schroeder_reform_black_gold.pdf": "減税とシュレーダー改革",
-  "グローバル化_黒金PDF.pdf": "グローバル化が経済と企業に与える影響",
-  "デフレとインフレ_資産格差_黒金4枚.pdf": "デフレとインフレで変わる資産格差",
-  "ヒト・モノ・カネ_企業資産の源泉_黒金.pdf": "ヒト・モノ・カネ ― 企業価値の源泉",
-  "企業も自習だけでは伸びない_黒金4枚.pdf": "企業は自習だけでは成長できない",
-  "大衆心理_群集が判断を狂わせる理由_黒金.pdf": "大衆心理 ― 群集が判断を狂わせる理由"
+  "TOPIX_new_members_35_TOP10_black_gold.pdf":
+    "TOPIX新規採用35銘柄・注目の10社",
+
+  "consolidation_black_gold.pdf":
+    "コンソリデーションとは何か",
+
+  "inflation_capital_cost_best_owner_black_gold.pdf":
+    "インフレ時代の資本コストとベストオーナー",
+
+  "japan_rate_hike_black_gold.pdf":
+    "日本の利上げと株価への影響",
+
+  "nikkei_100k_black_gold.pdf":
+    "日経平均10万円時代は来るのか",
+
+  "tax_cuts_schroeder_reform_black_gold.pdf":
+    "減税とシュレーダー改革",
+
+  "グローバル化_黒金PDF.pdf":
+    "グローバル化が経済と企業に与える影響",
+
+  "デフレとインフレ_資産格差_黒金4枚.pdf":
+    "デフレとインフレで変わる資産格差",
+
+  "ヒト・モノ・カネ_企業価値の源泉_黒金.pdf":
+    "ヒト・モノ・カネ ― 企業価値の源泉",
+
+  "企業も自習だけでは伸びない_黒金4枚.pdf":
+    "企業は自習だけでは成長できない",
+
+  "大衆心理_群集が判断を狂わせる理由_黒金.pdf":
+    "大衆心理 ― 群集が判断を狂わせる理由",
+
+  "成功体験が人と企業を弱くする理由_黒金.pdf":
+    "成功体験の罠 ― 人と企業が衰退する理由",
+
+  "日本企業_M&A産業再編_黒金4P.pdf":
+    "日本企業のM&Aと産業再編",
+
+  "日本企業_資本の使い方_黒金_X4枚版.pdf":
+    "日本企業の資本配分と企業価値",
+
+  "経営者の世代交代_黒金.pdf":
+    "経営者の世代交代と企業の未来"
 };
 
 function getTitle(name) {
-  if (titleMap[name]) {
-    return titleMap[name];
+  const normalizedName = name.normalize("NFC");
+
+  const matchedName = Object.keys(titleMap).find(
+    key => key.normalize("NFC") === normalizedName
+  );
+
+  if (matchedName) {
+    return titleMap[matchedName];
   }
 
   return name
     .replace(/\.pdf$/i, "")
     .replace(/[_＿-]+/g, " ")
     .replace(/black\s*gold|ブラックゴールド|黒金\s*\d*枚?|黒金PDF/gi, "")
-    .replace(/\.pdf/gi, "")
     .replace(/\s+/g, " ")
     .trim();
 }
