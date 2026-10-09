@@ -67,6 +67,17 @@ const grid=document.getElementById("grid");
 const status=document.getElementById("status");
 const count=document.getElementById("count");
 let files=[];
+  const titleMap = {
+  "TOPIX_新メンバー_35_TOP10_ブラックゴールド.pdf": "TOPIX新規採用銘柄・注目の10社",
+  "consolidation_black_gold.pdf": "コンソリデーションとは何か",
+  "japan_rate_hike_black_gold.pdf": "日本の利上げと株価への影響",
+  "nikkei_100k_black_gold.pdf": "日経平均10万円時代は来るのか",
+  "tax_cuts_schroeder_reform_black_gold.pdf": "減税とシュレーダー改革",
+  "グローバル化_黒金PDF.pdf": "グローバル化が経済と企業に与える影響",
+  "デフレとインフレ_資産格差_黒金4枚.pdf": "デフレとインフレで変わる資産格差",
+  "ヒト・モノ・カネ_企業資産の源泉_黒金.pdf": "ヒト・モノ・カネ ― 企業価値の源泉",
+  "企業も自習だけでは伸びない_黒金4枚.pdf": "企業は自習だけでは成長できない",
+  "大衆心理_群集が判断を狂わせる理由_黒金.pdf": "大衆心理 ― 群集が判断を狂わせる理由"
 function category(name){
 const n=name.toLowerCase();
 if(/パチスロ|スロ|マルハン|コンコルド|abc|タイキ|差枚|ジャグラー/.test(n))return "パチスロ";
@@ -84,7 +95,7 @@ const shown=files.filter(f=>(cat==="all"||category(f.name)===cat)&&f.name.toLowe
 count.textContent=shown.length+" 件の資料 / 全 "+files.length+" 件";
 grid.replaceChildren();
 for(const f of shown){
-const title=f.name.replace(/\.pdf$/i,"").replace(/[_＿]/g," ");
+const title = titleMap[f.name] || f.name.replace(/\.pdf$/i,"").replace(/[_＿]/g," ");
 const card=document.createElement("article");card.className="card";
 const tag=document.createElement("div");tag.className="tag";tag.textContent=category(f.name);
 const h=document.createElement("h2");h.textContent=title;
