@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PDFライブラリー | TODOROKI</title>
+<meta name="description" content="TODOROKIの黒金PDF資料一覧">
+<style>
+:root{color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:#080808;color:#eee;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP",sans-serif}
+header{border-bottom:1px solid #574622;padding:20px max(20px,5vw);display:flex;align-items:center;justify-content:space-between}
+.logo{color:#d8b85c;letter-spacing:3px;font-weight:800;font-size:20px;text-decoration:none}
+.back{color:#ddd;text-decoration:none;font-size:13px}
+main{max-width:1120px;margin:auto;padding:58px 20px 100px}
+.kicker{color:#d8b85c;letter-spacing:3px;font-size:12px}
+h1{font-size:clamp(29px,5vw,48px);margin:12px 0}
+.intro{color:#aaa;line-height:1.9}
+.controls{margin:32px 0;display:flex;gap:12px;flex-wrap:wrap}
+input,select{background:#161616;color:#fff;border:1px solid #66552c;border-radius:6px;padding:13px;font-size:15px}
+input{flex:1;min-width:200px}
+select{min-width:150px}
+#count{color:#aaa;margin:18px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.card{border:1px solid #4b3d20;background:linear-gradient(140deg,#1d1a12,#101010 65%);border-radius:9px;padding:24px;display:flex;flex-direction:column;min-height:185px}
+.tag{color:#d8b85c;font-size:11px;letter-spacing:1px}
+.card h2{font-size:17px;line-height:1.7;margin:16px 0 22px;overflow-wrap:anywhere}
+.actions{margin-top:auto;display:flex;gap:15px}
+.actions a{color:#d8b85c;text-decoration:none;font-size:13px;border-bottom:1px solid #d8b85c;padding-bottom:4px}
+.card:hover{border-color:#d8b85c}
+#status{color:#aaa;line-height:1.8}
+footer{padding:28px;text-align:center;border-top:1px solid #302819;color:#777;font-size:12px}
+</style>
+</head>
+<body>
+<header>
+<a class="logo" href="/">TODOROKI</a>
+<a class="back" href="/">← トップページ</a>
+</header>
+<main>
+<div class="kicker">TODOROKI ARCHIVE</div>
+<h1>PDF LIBRARY</h1>
+<p class="intro">投資・経済・企業経営・社会・科学技術など、公開した資料をまとめています。</p>
+<div class="controls">
+<input id="search" type="search" placeholder="資料を検索">
+<select id="category">
+<option value="all">すべての資料</option>
+<option value="投資・市場">投資・市場</option>
+<option value="経済・金融">経済・金融</option>
+<option value="企業・経営">企業・経営</option>
+<option value="政治・社会">政治・社会</option>
+<option value="科学・技術">科学・技術</option>
+<option value="パチスロ">パチスロ</option>
+<option value="その他">その他</option>
+</select>
+</div>
+<div id="count"></div>
+<div id="status">PDFを読み込み中...</div>
+<div id="grid" class="grid"></div>
+</main>
+<footer>© TODOROKI</footer>
+<script>
+const owner="2szzrkyhkt-commits",repo="TODOROKI";
+const api="https://api.github.com/repos/"+owner+"/"+repo+"/contents/pdf?ref=main";
+const grid=document.getElementById("grid");
+const status=document.getElementById("status");
+const count=document.getElementById("count");
+let files=[];
+function category(name){
+const n=name.toLowerCase();
+if(/パチスロ|スロ|マルハン|コンコルド|abc|タイキ|差枚|ジャグラー/.test(n))return "パチスロ";
+if(/半導体|宇宙|spacex|starship|量子|ai|mRNA|ダイヤ|技術/.test(n))return "科学・技術";
+if(/政治|政権|財政|戦争|ロシア|ウクライナ|教育|公共財|社会|税/.test(n))return "政治・社会";
+if(/経営|企業|資本コスト|オーナー|m&a|コンソリデーション|改革|グローバル|ヒト・モノ・カネ/.test(n))return "企業・経営";
+if(/金利|frb|インフレ|デフレ|マネー|為替|円安|ビッグマック|経済/.test(n))return "経済・金融";
+if(/株|投資|topix|日経|nikkei|グレアム|バフェット|市場|sox|心理/.test(n))return "投資・市場";
+return "その他";
+}
+function render(){
+const q=document.getElementById("search").value.trim().toLowerCase();
+const cat=document.getElementById("category").value;
+const shown=files.filter(f=>(cat==="all"||category(f.name)===cat)&&f.name.toLowerCase().includes(q));
+count.textContent=shown.length+" 件の資料 / 全 "+files.length+" 件";
+grid.replaceChildren();
+for(const f of shown){
+const title=f.name.replace(/\.pdf$/i,"").replace(/[_＿]/g," ");
+const card=document.createElement("article");card.className="card";
+const tag=document.createElement("div");tag.className="tag";tag.textContent=category(f.name);
+const h=document.createElement("h2");h.textContent=title;
+const actions=document.createElement("div");actions.className="actions";
+const url="/pdf/"+f.name.split("/").map(encodeURIComponent).join("/");
+const view=document.createElement("a");view.href=url;view.target="_blank";view.rel="noopener";view.textContent="PDFを見る →";
+const dl=document.createElement("a");dl.href=url;dl.download=f.name;dl.textContent="保存 ↓";
+actions.append(view,dl);card.append(tag,h,actions);grid.append(card);
+}
+status.textContent=shown.length?"":"該当する資料はありません。";
+}
+document.getElementById("search").addEventListener("input",render);
+document.getElementById("category").addEventListener("change",render);
+fetch(api,{headers:{"Accept":"application/vnd.github+json"}})
+.then(r=>{if(!r.ok)throw Error("取得エラー: "+r.status);return r.json()})
+.then(data=>{if(!Array.isArray(data))throw Error("一覧を取得できません");files=data.filter(f=>f.type==="file"&&/\.pdf$/i.test(f.name)).sort((a,b)=>a.name.localeCompare(b.name,"ja"));render()})
+.catch(e=>{status.textContent="PDF一覧を読み込めませんでした。少し時間を置いて再読み込みしてください。";console.error(e)});
+</script>
+</body>
+</html>
