@@ -380,6 +380,17 @@ footer {
 .card-link:hover .card {
   border-color: #d9b76e;
 }
+  @media (min-width: 769px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .navlinks {
+    display: none;
+  }
+}
 </style>
 </head>
 
@@ -391,6 +402,14 @@ footer {
   <div class="wrap">
     <nav>
       <a class="logo" href="/">TODOROKI</a>
+
+      <div class="navlinks">
+        <a href="#articles">記事</a>
+        <a href="#themes">テーマ</a>
+        <a href="/pdf-library.html">PDF資料</a>
+        <a href="#about">TODOROKIについて</a>
+        <a href="#social">SNS</a>
+      </div>
     </nav>
   </div>
 
