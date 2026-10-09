@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://todoroki.8njb5bzfbz.workers.dev/sitemap.xml
