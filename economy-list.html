@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TODOROKIの経済記事一覧。インフレ、金利、財政、資産形成を数字から考える。">
+  <title>経済の記事一覧 | TODOROKI</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #080808;
+      color: #eae6dd;
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans JP", sans-serif;
+      line-height: 1.8;
+    }
+    header {
+      padding: 24px 6%;
+      border-bottom: 1px solid #29241a;
+    }
+    .logo {
+      color: #c9a646;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-decoration: none;
+    }
+    main {
+      max-width: 1100px;
+      margin: 70px auto;
+      padding: 0 24px;
+    }
+    h1 { font-size: 30px; }
+    .rule {
+      width: 55px;
+      height: 2px;
+      background: #c9a646;
+      margin-bottom: 35px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      display: block;
+      padding: 28px;
+      background: #121212;
+      border: 1px solid #302819;
+      border-radius: 14px;
+      color: inherit;
+      text-decoration: none;
+    }
+    .card:hover { border-color: #c9a646; }
+    .tag {
+      color: #c9a646;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    .card h2 { font-size: 19px; }
+    .card p { color: #aaa; font-size: 14px; }
+    .back {
+      display: inline-block;
+      margin-top: 45px;
+      color: #c9a646;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">TODOROKI</a>
+  </header>
+
+  <main>
+    <h1>経済</h1>
+    <div class="rule"></div>
+    <p>インフレ、金利、財政、産業構造をわかりやすく。</p>
+
+    <div class="cards">
+      <a class="card" href="/inflation.html">
+        <span class="tag">ECONOMY</span>
+        <h2>インフレ時代の資産形成</h2>
+        <p>物価上昇と現金の購買力、資産形成の考え方を解説。</p>
+      </a>
+    </div>
+
+    <a class="back" href="/">← トップページに戻る</a>
+  </main>
+</body>
+</html>
