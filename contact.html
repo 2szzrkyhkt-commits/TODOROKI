@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>お問い合わせ | TODOROKI</title>
+<meta name="description" content="TODOROKIへのお問い合わせはこちらから。">
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #080808;
+  color: #f4f1e8;
+  font-family: -apple-system, BlinkMacSystemFont, "Noto Sans JP", sans-serif;
+  line-height: 1.8;
+}
+header {
+  padding: 22px 5%;
+  border-bottom: 1px solid #40351e;
+}
+header a {
+  color: #f4d77b;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+}
+main {
+  width: min(680px, 90%);
+  margin: 55px auto 80px;
+}
+h1 { color: #f4d77b; font-size: 30px; }
+p { color: #ccc; }
+form { margin-top: 35px; }
+label {
+  display: block;
+  margin: 22px 0 8px;
+  color: #d4af37;
+  font-weight: bold;
+}
+input, textarea {
+  width: 100%;
+  padding: 14px;
+  background: #171717;
+  color: #fff;
+  border: 1px solid #65552b;
+  border-radius: 6px;
+  font: inherit;
+}
+textarea { min-height: 180px; resize: vertical; }
+button {
+  margin-top: 28px;
+  width: 100%;
+  padding: 16px;
+  background: #d4af37;
+  color: #080808;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+a { color: #f4d77b; }
+footer {
+  padding: 30px;
+  text-align: center;
+  border-top: 1px solid #40351e;
+  color: #888;
+  font-size: 13px;
+}
+</style>
+</head>
+<body>
+
+<header><a href="/">TODOROKI</a></header>
+
+<main>
+<h1>お問い合わせ</h1>
+<p>
+TODOROKIへのご質問・ご意見・ご連絡は、
+以下のフォームからお願いいたします。
+</p>
+
+<form action="https://formspree.io/f/mzedvogk" method="POST">
+
+<label for="name">お名前</label>
+<input id="name" type="text" name="name"
+       autocomplete="name" required>
+
+<label for="email">メールアドレス</label>
+<input id="email" type="email" name="email"
+       autocomplete="email" required>
+
+<label for="message">お問い合わせ内容</label>
+<textarea id="message" name="message" required></textarea>
+
+<button type="submit">送信する</button>
+</form>
+
+<p style="font-size:13px; margin-top:25px;">
+送信された情報は、お問い合わせへの対応に利用します。
+詳しくは<a href="/privacy.html">プライバシーポリシー</a>をご確認ください。
+</p>
+
+<p style="margin-top:40px;">
+<a href="/">← トップページに戻る</a>
+</p>
+</main>
+
+<footer>
+© 2026 TODOROKI. All rights reserved.
+</footer>
+
+</body>
+</html>
