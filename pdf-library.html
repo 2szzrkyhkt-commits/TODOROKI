@@ -208,36 +208,15 @@ function render() {
 search.addEventListener("input", render);
 categorySelect.addEventListener("change", render);
 
-async function loadPDFs() {
-  statusEl.textContent = "PDFを読み込み中...";
 
-  try {
-    const response = await fetch(api, {
-      headers: { "Accept": "application/vnd.github+json" }
-    });
+function loadPDFs() {
+  files = Object.keys(titleMap)
+    .map(name => ({ name, type: "file" }))
+    .sort((a, b) => a.name.localeCompare(b.name, "ja"));
 
-    if (!response.ok) {
-      throw new Error(`GitHub API: ${response.status}`);
-    }
-
-    const data = await response.json();
-
-    if (!Array.isArray(data)) {
-      throw new Error("PDF一覧の形式が正しくありません");
-    }
-
-    files = data
-      .filter(f => f.type === "file" && /\.pdf$/i.test(f.name))
-      .sort((a, b) => a.name.localeCompare(b.name, "ja"));
-
-    render();
-
-  } catch (error) {
-    console.error(error);
-    statusEl.textContent =
-      "PDF一覧を取得できませんでした: " + error.message;
-  }
+  render();
 }
+
 
 loadPDFs();
 </script>
