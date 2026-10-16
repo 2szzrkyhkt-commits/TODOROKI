@@ -179,7 +179,9 @@ if (/inflation|deflation|インフレ|デフレ/i.test(n)) {
 if (/blue_collar|ブルーカラー|減税|シュレーダー|schroder|schroeder|tax_cut|global|グローバル/i.test(n)) {
   return "経済";
 }
-
+if (/global|グローバル/i.test(n.normalize("NFC"))) {
+  return "経済";
+}
 // 科学・技術：ロボット・半導体部品
 if (/robot|ロボット|diode|ダイオード|transistor|トランジスタ|mosfet/i.test(n)) {
   return "科学・技術";
