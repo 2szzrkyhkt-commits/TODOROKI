@@ -214,13 +214,44 @@ const url = f.download_url || ("/pdf/" + encodeURIComponent(f.name));
     dl.download = f.name;
     dl.textContent = "保存 ↓";
 
-    actions.append(view, dl);
-    card.append(tag, h, actions);
-    grid.append(card);
+    
+async function loadPDFs() {
+  files = Object.keys(titleMap)
+    .map(name => ({ name, type: "file" }));
+
+  try {
+    const response = await fetch(api);
+    if (!response.ok) throw new Error("取得失敗");
+
+    const data = await response.json();
+    const actual = data.find(f =>
+      f.type === "file" &&
+      /コンソリデーション/i.test(f.name) &&
+      /\.pdf$/i.test(f.name)
+    );
+
+    if (actual) {
+      const index = files.findIndex(f =>
+        /コンソリデーション/i.test(f.name)
+      );
+
+      if (index !== -1) {
+        const oldName = files[index].name;
+        titleMap[actual.name] = titleMap[oldName];
+        files[index] = actual;
+      }
+    }
+  } catch (error) {
+    console.error("PDF取得エラー:", error);
   }
 
-  statusEl.textContent = shown.length
-    ? ""
+  files.sort((a, b) =>
+    a.name.localeCompare(b.name, "ja")
+  );
+
+  render();
+}
+
     : "該当する資料はありません。";
 }
 
