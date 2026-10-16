@@ -119,7 +119,8 @@ const titleMap = {
   "japan_stock_megatrends.pdf": "日本株のメタトレンド｜成長分野と関連産業",
   "企業も自習だけでは伸びない_黒金4枚.pdf":
     "企業は自習だけでは成長できない",
-
+"japan_companies_top10_20260929.pdf": "日本企業10社の比較評価｜2026年9月29日時点",
+  
   "大衆心理_群集が判断を狂わせる理由_黒金.pdf":
     "大衆心理 ― 群集が判断を狂わせる理由",
 
@@ -158,7 +159,9 @@ function getTitle(name) {
 function category(name) {
   const n = name.toLowerCase();
 
-
+if (/japan_companies_top10/i.test(n)) {
+  return "投資";
+}
 if (/情報漏洩|情報セキュリティ|サイバーセキュリティ/i.test(n)) {
   return "科学・技術";
 }
