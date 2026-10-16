@@ -197,7 +197,9 @@ function render() {
     const actions = document.createElement("div");
     actions.className = "actions";
 
-    const url = "/pdf/" + encodeURIComponent(f.name);
+    
+const url = f.download_url || ("/pdf/" + encodeURIComponent(f.name));
+
 
     const view = document.createElement("a");
     view.href = url;
