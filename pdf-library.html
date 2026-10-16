@@ -231,38 +231,38 @@ categorySelect.addEventListener("change", render);
 
 
 async function loadPDFs() {
-  files = Object.keys(titleMap)
-    .map(name => ({ name, type: "file" }))
-    .sort((a, b) => a.name.localeCompare(b.name, "ja"));
+  statusEl.textContent = "PDFを読み込み中...";
 
   try {
     const response = await fetch(api);
-    if (response.ok) {
-      const data = await response.json();
-      const actual = data.find(f =>
+
+    if (!response.ok) {
+      throw new Error(`GitHub API: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    if (!Array.isArray(data)) {
+      throw new Error("PDF一覧の形式が正しくありません。");
+    }
+
+    files = data
+      .filter(f =>
         f.type === "file" &&
-        f.name.includes("コンソリデーション") &&
         /\.pdf$/i.test(f.name)
+      )
+      .sort((a, b) =>
+        a.name.localeCompare(b.name, "ja")
       );
 
-      if (actual) {
-        const index = files.findIndex(f =>
-          f.name.includes("コンソリデーション")
-        );
-        if (index !== -1) {
-          files[index] = {
-            ...actual,
-            name: files[index].name,
-            download_url: actual.download_url
-          };
-        }
-      }
-    }
+    render();
   } catch (error) {
     console.error(error);
+    count.textContent = "";
+    grid.replaceChildren();
+    statusEl.textContent =
+      "PDF一覧を取得できませんでした。時間をおいて再読み込みしてください。";
   }
-
-  render();
 }
 
 
