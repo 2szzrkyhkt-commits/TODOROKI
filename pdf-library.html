@@ -213,6 +213,7 @@ const url = f.download_url || ("/pdf/" + encodeURIComponent(f.name));
     dl.download = f.name;
     dl.textContent = "保存 ↓";
 
+    
     actions.append(view, dl);
     card.append(tag, h, actions);
     grid.append(card);
@@ -222,6 +223,7 @@ const url = f.download_url || ("/pdf/" + encodeURIComponent(f.name));
     ? ""
     : "該当する資料はありません。";
 }
+
 
 search.addEventListener("input", render);
 categorySelect.addEventListener("change", render);
