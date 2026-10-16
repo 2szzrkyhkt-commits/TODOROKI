@@ -151,6 +151,10 @@ function category(name) {
   const n = name.toLowerCase();
 
 
+if (/情報漏洩|情報セキュリティ|サイバーセキュリティ/i.test(n)) {
+  return "科学・技術";
+}
+
 if (/DRAM|NAND|NOR|EUV|半導体/i.test(n)) {
   return "科学・技術";
 }
