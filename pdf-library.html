@@ -112,7 +112,7 @@ const titleMap = {
   "デフレとインフレ_資産格差_黒金4枚.pdf":
     "デフレとインフレで変わる資産格差",
 "diode_transistor_mosfet.pdf": "ダイオード・トランジスタ・MOSFETの基本｜仕組みと役割",
-  
+  "spintronics_mram.pdf": "スピントロニクスとは｜MRAMの仕組みと日本企業",
   "ヒト・モノ・カネ_企業価値の源泉_黒金.pdf":
     "ヒト・モノ・カネ ― 企業価値の源泉",
 
@@ -174,7 +174,9 @@ if (/graham|グレアム/i.test(n)) {
 if (/inflation|deflation|インフレ|デフレ/i.test(n)) {
   return "金融";
 }
-
+if (/spintronics|mram|スピントロニクス/i.test(n)) {
+  return "科学・技術";
+}
 // 経済：ブルーカラー・減税・グローバル化
 if (/blue_collar|ブルーカラー|減税|シュレーダー|schroder|schroeder|tax_cut|global|グローバル/i.test(n)) {
   return "経済";
