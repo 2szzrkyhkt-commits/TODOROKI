@@ -85,7 +85,8 @@ const titleMap = {
   "TOPIX_new_members_35_TOP10_black_gold.pdf":
     "TOPIX新規採用35銘柄・注目の10社",
 
-"コンソリデーションとは_企業統合と株価のもみ合い.pdf": "コンソリデーションとは｜企業統合と株価のもみ合い",
+  "コンソリデーションとは_業界再編の仕組み.pdf":
+    "コンソリデーションとは何か",
 
   "inflation_capital_cost_best_owner_black_gold.pdf":
     "インフレ時代の資本コストとベストオーナー",
@@ -198,9 +199,7 @@ function render() {
     const actions = document.createElement("div");
     actions.className = "actions";
 
-    
-const url = f.download_url || ("/pdf/" + encodeURIComponent(f.name));
-
+    const url = "/pdf/" + encodeURIComponent(f.name);
 
     const view = document.createElement("a");
     view.href = url;
@@ -213,7 +212,6 @@ const url = f.download_url || ("/pdf/" + encodeURIComponent(f.name));
     dl.download = f.name;
     dl.textContent = "保存 ↓";
 
-    
     actions.append(view, dl);
     card.append(tag, h, actions);
     grid.append(card);
@@ -224,47 +222,17 @@ const url = f.download_url || ("/pdf/" + encodeURIComponent(f.name));
     : "該当する資料はありません。";
 }
 
-
 search.addEventListener("input", render);
 categorySelect.addEventListener("change", render);
 
 
+function loadPDFs() {
+  files = Object.keys(titleMap)
+    .map(name => ({ name, type: "file" }))
+    .sort((a, b) => a.name.localeCompare(b.name, "ja"));
 
-async function loadPDFs() {
-  statusEl.textContent = "PDFを読み込み中...";
-
-  try {
-    const response = await fetch(api);
-
-    if (!response.ok) {
-      throw new Error(`GitHub API: ${response.status}`);
-    }
-
-    const data = await response.json();
-
-    if (!Array.isArray(data)) {
-      throw new Error("PDF一覧の形式が正しくありません。");
-    }
-
-    files = data
-      .filter(f =>
-        f.type === "file" &&
-        /\.pdf$/i.test(f.name)
-      )
-      .sort((a, b) =>
-        a.name.localeCompare(b.name, "ja")
-      );
-
-    render();
-  } catch (error) {
-    console.error(error);
-    count.textContent = "";
-    grid.replaceChildren();
-    statusEl.textContent =
-      "PDF一覧を取得できませんでした。時間をおいて再読み込みしてください。";
-  }
+  render();
 }
-
 
 
 loadPDFs();
