@@ -153,6 +153,11 @@ function getTitle(name) {
 function category(name) {
   const n = name.toLowerCase();
 
+
+if (/DRAM|NAND|NOR|EUV|半導体/i.test(n)) {
+  return "科学・技術";
+}
+
   if (/パチスロ|スロ|マルハン|コンコルド|abc|タイキ|差枚|ジャグラー/.test(n)) return "パチスロ";
   if (/半導体|宇宙|spacex|starship|量子|ai|mrna|ダイヤ|技術/.test(n)) return "科学・技術";
   if (/政治|政権|財政|戦争|ロシア|ウクライナ|教育|公共財|社会|税/.test(n)) return "政治・社会";
