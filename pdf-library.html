@@ -227,13 +227,42 @@ search.addEventListener("input", render);
 categorySelect.addEventListener("change", render);
 
 
-function loadPDFs() {
+
+async function loadPDFs() {
   files = Object.keys(titleMap)
     .map(name => ({ name, type: "file" }))
     .sort((a, b) => a.name.localeCompare(b.name, "ja"));
 
+  try {
+    const response = await fetch(api);
+    if (response.ok) {
+      const data = await response.json();
+      const actual = data.find(f =>
+        f.type === "file" &&
+        f.name.includes("コンソリデーション") &&
+        /\.pdf$/i.test(f.name)
+      );
+
+      if (actual) {
+        const index = files.findIndex(f =>
+          f.name.includes("コンソリデーション")
+        );
+        if (index !== -1) {
+          files[index] = {
+            ...actual,
+            name: files[index].name,
+            download_url: actual.download_url
+          };
+        }
+      }
+    }
+  } catch (error) {
+    console.error(error);
+  }
+
   render();
 }
+
 
 
 loadPDFs();
