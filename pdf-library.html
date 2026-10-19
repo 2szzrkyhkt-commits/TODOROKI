@@ -196,7 +196,9 @@ function category(name) {
   if (/switch\s*2/i.test(n)) {
   return "投資";
 }
-
+if (/半導体設計を担う日本企業/i.test(n)) {
+  return "投資";
+}
 if (/量子|quantum/i.test(n)) {
   return "科学・技術";
 }
