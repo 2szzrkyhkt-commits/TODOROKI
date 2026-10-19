@@ -137,6 +137,7 @@ const titleMap = {
     "企業は自習だけでは成長できない",
 "japan_companies_top10_20260929.pdf": "日本企業10社の比較評価｜2026年9月29日時点",
 "singularity.pdf": "シンギュラリティとは｜AIの進化と社会の変化",
+  "japan_stock_theme_map.pdf": "日本株のテーマ別監視マップ",
   
   "大衆心理_群集が判断を狂わせる理由_黒金.pdf":
     "大衆心理 ― 群集が判断を狂わせる理由",
@@ -194,6 +195,9 @@ if (/DRAM|NAND|NOR|EUV|半導体/i.test(n)) {
 if (/graham|グレアム/i.test(n)) {
   return "投資";
 }
+    if (/japan_stock_theme_map/i.test(name)) {
+    return "投資・市場";
+  }
 // 金融：インフレ・デフレ
 if (/inflation|deflation|インフレ|デフレ/i.test(n)) {
   return "金融";
