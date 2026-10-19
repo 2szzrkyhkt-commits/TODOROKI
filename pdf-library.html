@@ -136,7 +136,7 @@ const titleMap = {
   "企業も自習だけでは伸びない_黒金4枚.pdf":
     "企業は自習だけでは成長できない",
 "japan_companies_top10_20260929.pdf": "日本企業10社の比較評価｜2026年9月29日時点",
-  
+  "シンギュラリティ_黒金要約.pdf": "シンギュラリティとは｜AIの進化と社会の変化",
   "大衆心理_群集が判断を狂わせる理由_黒金.pdf":
     "大衆心理 ― 群集が判断を狂わせる理由",
 
@@ -174,7 +174,9 @@ function getTitle(name) {
 
 function category(name) {
   const n = name.toLowerCase();
-
+  if (/singularity|シンギュラリティ/i.test(name.normalize("NFC"))) {
+    return "科学・技術";
+  }
 if (/japan_companies_top10/i.test(n)) {
   return "投資";
 }
