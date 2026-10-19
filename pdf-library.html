@@ -192,6 +192,13 @@ function category(name) {
   if (/singularity|シンギュラリティ/i.test(name.normalize("NFC"))) {
     return "科学・技術";
   }
+  if (/switch\s*2/i.test(n)) {
+  return "投資";
+}
+
+if (/量子|quantum/i.test(n)) {
+  return "科学・技術";
+}
 if (/japan_companies_top10/i.test(n)) {
   return "投資";
 }
