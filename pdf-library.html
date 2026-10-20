@@ -68,8 +68,11 @@ footer{padding:28px;text-align:center;border-top:1px solid #302819;color:#777;fo
 <h1>PDF LIBRARY</h1>
 <p class="intro">投資・経済・企業経営・社会・科学技術など、公開した資料をまとめています。</p>
 <div class="controls">
-<input id="search" type="search" placeholder="資料を検索">
-<select id="category">
+<input id="search" type="search"
+  aria-label="PDF資料を検索"
+  placeholder="資料を検索">
+
+<select id="category" aria-label="資料のカテゴリ">
 <option value="all">すべての資料</option>
 <option value="投資・市場">投資・市場</option>
 <option value="経済・金融">経済・金融</option>
@@ -192,34 +195,35 @@ function getTitle(name) {
 }
 
 function category(name) {
+  name = name.normalize("NFC");
   const n = name.toLowerCase();
   if (/singularity|シンギュラリティ/i.test(name.normalize("NFC"))) {
     return "科学・技術";
   }
   if (/switch\s*2/i.test(n)) {
-  return "投資";
+  return "投資・市場";
 }
 if (/半導体設計を担う日本企業/i.test(n)) {
-  return "投資";
+  return "投資・市場";
 }
 if (/量子|quantum/i.test(n)) {
   return "科学・技術";
 }
 if (/japan_companies_top10/i.test(n)) {
-  return "投資";
+  return "投資・市場";
 }
 if (/情報漏洩|情報セキュリティ|サイバーセキュリティ/i.test(n)) {
   return "科学・技術";
 }
 if (/japan_stock_megatrends/i.test(n)) {
-  return "投資";
+  return "投資・市場";
 }
 if (/DRAM|NAND|NOR|EUV|半導体/i.test(n)) {
   return "科学・技術";
 }
 // 投資：グレアム
 if (/graham|グレアム/i.test(n)) {
-  return "投資";
+  return "投資・市場";
 }
     if (/japan_stock_theme_map/i.test(name)) {
     return "投資・市場";
@@ -233,10 +237,10 @@ if (/spintronics|mram|スピントロニクス/i.test(n)) {
 }
 // 経済：ブルーカラー・減税・グローバル化
 if (/blue_collar|ブルーカラー|減税|シュレーダー|schroder|schroeder|tax_cut|global|グローバル/i.test(n)) {
-  return "経済";
+  return "経済・金融";
 }
 if (/global|グローバル/i.test(n.normalize("NFC"))) {
-  return "経済";
+  return "経済・金融";
 }
 // 科学・技術：ロボット・半導体部品
 if (/robot|ロボット|diode|ダイオード|transistor|トランジスタ|mosfet/i.test(n)) {
