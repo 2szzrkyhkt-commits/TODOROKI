@@ -87,6 +87,9 @@ export default {
         await db.prepare('INSERT INTO login_challenges (id, email, code_hash, expires_at, attempts, created_at) VALUES (?, ?, ?, ?, 0, ?)')
           .bind(id, email, await sign(env.AUTH_SECRET, id + ':' + code), time + 600, time).run();
         let sent;
+        let mailDiagnostic = 'MAIL_NETWORK_ERROR';
+        let mailStatus = null;
+        let mailErrorType = null;
         try {
           sent = await fetch('https://api.resend.com/emails', {
             method: 'POST', signal: AbortSignal.timeout(15000),
@@ -94,10 +97,25 @@ export default {
             body: JSON.stringify({ from: env.EMAIL_FROM, to: [email], subject: 'TODOROKI ログイン認証コード',
               text: `TODOROKIの認証コードは ${code} です。\n有効期限は10分です。\nこのコードを他の人に教えないでください。\nお心当たりがなければ、このメールを破棄してください。` })
           });
-          if (!sent.ok) throw new Error('mail');
-        } catch {
+          if (!sent.ok) {
+            mailStatus = sent.status;
+            mailDiagnostic = 'MAIL_HTTP_' + sent.status;
+            // Only expose known error types, never raw responses, keys or email contents.
+            const known = new Set(['validation_error', 'missing_api_key', 'invalid_api_key', 'restricted_api_key', 'invalid_access', 'rate_limit_exceeded', 'daily_quota_exceeded', 'monthly_quota_exceeded', 'application_error', 'internal_server_error']);
+            try {
+              const details = await sent.json();
+              if (known.has(details.name)) mailErrorType = details.name;
+            } catch {}
+            throw new Error('mail');
+          }
+        } catch (mailError) {
+          if (mailStatus === null) {
+            if (mailError?.name === 'TimeoutError' || mailError?.name === 'AbortError') mailDiagnostic = 'MAIL_TIMEOUT';
+            else if (mailError?.name === 'TypeError') mailDiagnostic = 'MAIL_REQUEST_ERROR';
+          }
+          console.error(JSON.stringify({ event: 'auth_mail_failed', code: mailDiagnostic, status: mailStatus, type: mailErrorType }));
           await db.prepare('DELETE FROM login_challenges WHERE id = ?').bind(id).run();
-          return json({ error: 'メールを送信できませんでした。送信元・APIキー・Resendの配信履歴を確認してください。' }, 502);
+          return json({ error: 'メールを送信できませんでした。', code: mailDiagnostic, mail_status: mailStatus, mail_error_type: mailErrorType }, 502);
         }
         return json({ ok: true }, 200, [cookie(CHALLENGE, id, 600)]);
       }
