@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="same-origin">
+  <title>ログイン｜TODOROKI</title>
+  <style>
+    :root{color-scheme:dark;--gold:#d9bb73;--text:#f3efe5;--muted:#b4b0a5;--border:#39352b}
+    *{box-sizing:border-box}body{margin:0;background:#0c0d0e;color:var(--text);font-family:system-ui,-apple-system,"Segoe UI","Noto Sans JP",sans-serif;line-height:1.8}
+    a{color:var(--gold);text-underline-offset:5px}header{max-width:1040px;margin:auto;padding:25px 24px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border)}
+    .logo{font-size:23px;letter-spacing:.12em;text-decoration:none;font-weight:700}header>a:last-child{font-size:13px}main{max-width:520px;margin:65px auto;padding:0 22px 60px}
+    .eyebrow{font-size:11px;letter-spacing:.2em;color:var(--gold);margin:0}h1{font-size:30px;line-height:1.5;margin:10px 0 17px}.intro{color:var(--muted);font-size:14px;margin-bottom:30px}
+    .panel{padding:28px;border:1px solid var(--border);border-radius:14px;background:#141517}label{display:block;margin-bottom:9px;font-size:14px;font-weight:600}
+    input{width:100%;padding:14px;border:1px solid #595449;border-radius:6px;background:#0c0d0e;color:var(--text);font:inherit;font-size:16px;min-width:0}
+    input:focus,button:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}button,.button{display:block;width:100%;padding:13px 12px;border-radius:6px;font:inherit;font-size:15px;font-weight:700;text-align:center;cursor:pointer;text-decoration:none}
+    button[type=submit],.button{background:var(--gold);color:#17150e;border:1px solid var(--gold);margin-top:22px}button:disabled{opacity:.55;cursor:wait}.secondary{background:transparent;color:var(--gold);border:1px solid var(--border);margin-top:14px}
+    .small{font-size:12px;color:var(--muted);margin:18px 0 0}.email{overflow-wrap:anywhere;font-size:14px;color:var(--gold)}.status{font-size:14px;margin:20px 0 0;min-height:26px}.status.error{color:#ffb4a6}.status.success{color:#d9dfaf}
+    #code{letter-spacing:.25em;font-size:24px}footer{color:var(--muted);font-size:11px;text-align:center;padding:20px} [hidden]{display:none!important}
+    @media(max-width:480px){main{margin-top:38px}.panel{padding:23px}h1{font-size:27px}}
+  </style>
+</head>
+<body>
+  <header><a class="logo" href="/">TODOROKI</a><a href="/premium.html">有料記事一覧</a></header>
+  <main>
+    <p class="eyebrow">TODOROKI ACCOUNT</p>
+    <h1>メールでログイン</h1>
+    <p class="intro">メールで届く6桁の認証コードを入力してください。<br>パスワードの設定は不要です。</p>
+    <section class="panel" aria-label="ログイン">
+      <form id="email-form">
+        <label for="email">メールアドレス</label>
+        <input id="email" type="email" autocomplete="email" maxlength="254" required placeholder="you@example.com" spellcheck="false" autocapitalize="none">
+        <button type="submit">認証コードを送る</button>
+        <p class="small">初めてログインする場合は、メール認証後にアカウントが作成されます。記事の購入時も同じメールアドレスをご利用ください。</p>
+      </form>
+      <div id="code-step" hidden>
+        <p class="small" style="margin-top:0">認証コードの送信先</p><p class="email" id="destination"></p>
+        <form id="code-form">
+          <label for="code">6桁の認証コード</label>
+          <input id="code" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" minlength="6" maxlength="6" required placeholder="000000">
+          <button type="submit">ログインする</button>
+        </form>
+        <p class="small">コードの有効期限は10分です。届かない場合は迷惑メールフォルダをご確認ください。再送信は60秒後から可能です。</p>
+        <button type="button" class="secondary" id="resend">認証コードを再送信</button>
+        <button type="button" class="secondary" id="change-email">メールアドレスを変更</button>
+      </div>
+      <div id="member-step" hidden>
+        <p>ログインしています</p><p class="email" id="member-email"></p>
+        <a class="button" href="/premium.html">有料記事一覧へ</a>
+        <button type="button" class="secondary" id="logout">ログアウト</button>
+      </div>
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+    </section>
+    <p class="small"><a href="/privacy.html">プライバシーポリシー</a> ／ <a href="/contact.html">お問い合わせ</a></p>
+    <noscript><p>ログインするには、ブラウザのJavaScriptを有効にしてください。</p></noscript>
+  </main>
+  <footer>© TODOROKI</footer>
+  <script>
+    const get = id => document.getElementById(id);
+    let email = '';
+    let busy = false;
+    let resendAt = 0;
+    function show(step) {
+      get('email-form').hidden = step !== 'email';
+      get('code-step').hidden = step !== 'code';
+      get('member-step').hidden = step !== 'member';
+    }
+    function status(message, error = false) {
+      get('status').textContent = message;
+      get('status').className = 'status ' + (error ? 'error' : 'success');
+    }
+    function lock(value) {
+      busy = value;
+      document.querySelectorAll('button').forEach(button => button.disabled = value);
+    }
+    async function api(path, payload) {
+      let response;
+      try {
+        response = await fetch('/api/auth/' + path, {
+          method: payload === undefined ? 'GET' : 'POST', credentials: 'same-origin', cache: 'no-store',
+          headers: payload === undefined ? {} : { 'Content-Type': 'application/json' },
+          body: payload === undefined ? undefined : JSON.stringify(payload)
+        });
+      } catch { throw new Error('通信できませんでした。接続を確認して再度お試しください。'); }
+      const data = await response.json().catch(() => null);
+      if (response.status >= 500) throw new Error('現在ログイン処理を利用できません。時間をおいて再度お試しください。');
+      if (!response.ok || !data) throw new Error(data?.error || '処理に失敗しました。再度お試しください。');
+      return data;
+    }
+    async function action(task) {
+      if (busy) return;
+      lock(true);
+      try { await task(); } catch (error) { status(error.message, true); }
+      finally { lock(false); }
+    }
+    async function send() {
+      const seconds = Math.ceil((resendAt - Date.now()) / 1000);
+      if (seconds > 0) throw new Error(`再送信まであと${seconds}秒お待ちください。`);
+      status('認証コードを送信しています…');
+      await api('request', { email });
+      resendAt = Date.now() + 60000;
+      get('destination').textContent = email;
+      get('code').value = '';
+      show('code');
+      status('認証コードを送信しました。メールをご確認ください。');
+      get('code').focus();
+    }
+    get('email-form').addEventListener('submit', event => {
+      event.preventDefault();
+      email = get('email').value.trim().toLowerCase();
+      action(send);
+    });
+    get('resend').addEventListener('click', () => action(send));
+    get('change-email').addEventListener('click', () => { if (!busy) { show('email'); status(''); get('email').focus(); } });
+    get('code-form').addEventListener('submit', event => {
+      event.preventDefault();
+      action(async () => {
+        status('認証コードを確認しています…');
+        await api('verify', { code: get('code').value.trim() });
+        const data = await api('me');
+        if (!data.member) throw new Error('ログイン状態を保存できませんでした。Cookieの設定をご確認ください。');
+        get('member-email').textContent = data.member.email;
+        show('member'); status('ログインしました。');
+      });
+    });
+    get('logout').addEventListener('click', () => action(async () => {
+      await api('logout', {}); get('code').value = ''; get('member-email').textContent = '';
+      show('email'); status('ログアウトしました。');
+    }));
+    action(async () => {
+      status('ログイン状態を確認しています…');
+      const data = await api('me');
+      if (data.member) { get('member-email').textContent = data.member.email; show('member'); }
+      status('');
+    });
+  </script>
+</body>
+</html>
