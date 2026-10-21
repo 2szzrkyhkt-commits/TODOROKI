@@ -44,7 +44,8 @@ async function refresh(){
  const owned=state.product.owned;
  download.hidden=!owned;buy.hidden=owned;buy.disabled=false;
  buy.textContent=state.product.available?(state.member?'テスト購入へ進む':'ログインしてテスト購入'):'販売準備中';
- buy.disabled=!state.product.available;
+ buy.disabled=true;
+buy.textContent='販売準備中';
 }
 buy.addEventListener('click',async()=>{
  if(!state?.member){location.href='/login.html';return;}
