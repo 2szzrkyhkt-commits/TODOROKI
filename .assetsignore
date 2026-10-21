@@ -1,0 +1,10 @@
+/worker.js
+/wrangler.jsonc
+/wrangler.toml
+/.git/**
+/.github/**
+/node_modules/**
+/.env*
+/.dev.vars*
+**/*.sql
+**/*.zip
