@@ -54,7 +54,7 @@ function paymentConfig(env) {
 }
 function paymentReady(env) {
   const {live} = paymentConfig(env);
-  return (live ? /^sk_live_\S+$/ : /^sk_test_\S+$/).test(env.STRIPE_SECRET_KEY || '')
+  return (live ? /^(?:sk|rk)_live_\S+$/ : /^(?:sk|rk)_test_\S+$/).test(env.STRIPE_SECRET_KEY || '')
     && /^whsec_\S+$/.test(env.STRIPE_WEBHOOK_SECRET || '');
 }
 const salesEnabled = env => env.SALES_ENABLED === 'true';
