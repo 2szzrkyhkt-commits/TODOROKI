@@ -8,3 +8,7 @@
 /.dev.vars*
 **/*.sql
 **/*.zip
+/README*
+/tools/**
+/validation/**
+/migration/**
