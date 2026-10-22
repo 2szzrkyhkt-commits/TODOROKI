@@ -1,69 +1,96 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>有料PDF｜TODOROKI</title>
-<meta name="description" content="TODOROKIの企業分析PDF。株価指標と長期財務をまとめた資料をご案内します。">
-<link rel="canonical" href="https://todoroki-gold.com/premium.html">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<style>
-:root{color-scheme:dark;--gold:#d9b76e;--white:#f4f1e8}*{box-sizing:border-box}body{margin:0;background:#080808;color:var(--white);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif;line-height:1.8}a{color:var(--gold);text-underline-offset:5px}.wrap{width:min(980px,92%);margin:auto}header{border-bottom:1px solid #342c1c;background:#0b0b0b}nav{min-height:75px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;padding:14px 0}.logo{font-size:23px;font-weight:900;letter-spacing:.16em;text-decoration:none}.links{display:flex;gap:20px;font-size:14px}main{padding:55px 0 75px}.eyebrow{color:var(--gold);font-size:12px;letter-spacing:.2em}h1{font-size:clamp(30px,6vw,46px);line-height:1.4;margin:14px 0}h2{font-size:25px;line-height:1.5;margin:14px 0}.lead{color:#bbb;max-width:700px}.notice{padding:14px 18px;border:1px solid #66532e;border-radius:10px;color:#e5c681;margin:25px 0}.card{margin-top:32px;border:1px solid #44381f;border-radius:18px;background:linear-gradient(140deg,#19160e,#101010);padding:clamp(22px,5vw,40px)}.tag{color:var(--gold);font-size:12px}.meta{color:#aaa;font-size:14px}.price{font-size:34px;font-weight:700;margin:22px 0}.price small{font-size:14px;font-weight:400;color:#aaa}button,.button{display:inline-block;border:1px solid var(--gold);background:var(--gold);color:#100e08;padding:14px 28px;border-radius:9px;font:inherit;font-weight:700;cursor:pointer;text-decoration:none}button:disabled{cursor:wait;opacity:.6}[hidden]{display:none!important}#message{min-height:1.8em;margin:18px 0;color:#e8d5ae}#account{color:#aaa;font-size:14px;overflow-wrap:anywhere}.steps{margin-top:35px;color:#bbb}.steps h2{font-size:20px;color:var(--white)}footer{border-top:1px solid #342c1c;padding:30px 0;text-align:center;color:#777;font-size:13px}footer a{margin:0 8px}:focus-visible{outline:2px solid #fff;outline-offset:4px}@media(max-width:500px){.links{gap:14px;font-size:13px}.button,button{width:100%;text-align:center}}
-</style>
-</head>
-<body>
-<header><div class="wrap"><nav><a class="logo" href="/">TODOROKI</a><div class="links"><a href="/pdf-library.html">無料PDF</a><a href="/premium.html" aria-current="page">有料PDF</a><a href="/login.html">ログイン</a></div></nav></div></header>
-<main class="wrap">
-<p class="eyebrow">TODOROKI PREMIUM</p><h1>数字を手元に。<br>企業をじっくり読み解く。</h1>
-<p class="lead">企業の株価指標と、利益・キャッシュフローの長期推移をまとめたPDF資料です。</p>
-<div class="notice" id="test-notice">現在はテスト決済の確認中です。一般向けの販売はまだ開始していません。</div>
-<p id="account"></p>
-<article class="card">
-<span class="tag">企業分析 / 証券コード 7994</span><h2>オカムラ<br>株価指標と長期財務</h2>
-<p class="meta">PDF・全2ページ / 株価指標の基準日：2026年9月15日</p>
-<p>PER・PBR・配当利回り、2015〜2026年のEPSとキャッシュフロー、財務指標を整理。オーナー利益と独自計算による企業価値も収録しています。</p>
-<p class="price">300円 <small>買い切り</small></p>
-<button id="buy" disabled>確認中…</button>
-<a class="button" id="download" href="/api/download/okamura-7994" hidden>購入済みPDFをダウンロード</a>
-<p id="message" role="status" aria-live="polite"></p>
-<p class="meta">購入に使うアカウントでログインしてください。決済確認後、このページからPDFをダウンロードできます。掲載値は現在の株価・指標とは異なります。</p>
-</article>
-<section class="steps"><h2>購入後も、このページから</h2><p>同じメールアドレスでログインすると、購入済みPDFを再ダウンロードできます。決済後に画面を閉じた場合も、購入情報はアカウントに保存されます。</p><p>ご不明な点は<a href="/contact.html">お問い合わせ</a>からご連絡ください。</p></section>
-<noscript>購入・ダウンロード状況の確認にはJavaScriptを有効にしてください。</noscript>
-</main>
-<footer><div class="wrap"><p>© TODOROKI</p><a href="/privacy.html">プライバシーポリシー</a><a href="/contact.html">お問い合わせ</a></div></footer>
-<script>
-const buy=document.getElementById('buy'),download=document.getElementById('download'),message=document.getElementById('message');
-let state;
-async function api(path,data){
- const r=await fetch(path,{method:data?'POST':'GET',credentials:'same-origin',cache:'no-store',headers:data?{'Content-Type':'application/json'}:{},body:data?JSON.stringify(data):undefined});
- const j=await r.json();if(!r.ok)throw new Error(j.error||'処理できませんでした。');return j;
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {DatabaseSync} from 'node:sqlite';
+import {readFileSync} from 'node:fs';
+import {createHmac, createHash} from 'node:crypto';
+
+// Exercise the public Worker routes with real SQLite and a mocked Stripe API.
+// No requests are sent to Stripe and no actual charges are created.
+const worker = (await import('data:text/javascript;base64,' +
+  readFileSync(new URL('../worker.js', import.meta.url)).toString('base64'))).default;
+const origin = 'https://todoroki-gold.com';
+const prices = {test:'price_1USrnlCRZWKKb8vhsedZ65G0', live:'price_1UTDTyCBSUaWh0klNhPiYcte'};
+const token = 'a'.repeat(64);
+function fixture(mode = 'live') {
+  const db = new DatabaseSync(':memory:');
+  db.exec(`CREATE TABLE members(id TEXT PRIMARY KEY,email TEXT);
+    CREATE TABLE sessions(token_hash TEXT PRIMARY KEY,member_id TEXT,expires_at INTEGER);
+    CREATE TABLE digital_files(product_key TEXT PRIMARY KEY,filename TEXT,pdf BLOB,byte_count INTEGER);
+    CREATE TABLE digital_orders(id TEXT PRIMARY KEY,member_id TEXT,product_key TEXT,stripe_price_id TEXT,
+      livemode INTEGER,amount INTEGER,currency TEXT,status TEXT DEFAULT 'pending',stripe_session_id TEXT,
+      stripe_payment_intent_id TEXT,created_at INTEGER,updated_at INTEGER);
+    CREATE TABLE digital_events(stripe_event_id TEXT PRIMARY KEY,processed_at INTEGER);`);
+  db.prepare('INSERT INTO members VALUES(?,?)').run('member-1','buyer@example.invalid');
+  db.prepare('INSERT INTO sessions VALUES(?,?,?)').run(createHash('sha256').update(token).digest('hex'),'member-1',Math.floor(Date.now()/1000)+600);
+  db.prepare('INSERT INTO digital_files VALUES(?,?,?,?)').run('okamura-7994','okamura.pdf',new Uint8Array([37,80,68,70]),4);
+  const DB={prepare(sql){let args=[];return {bind(...values){args=values;return this;},
+    async first(){return db.prepare(sql).get(...args)||null;},async run(){return db.prepare(sql).run(...args);}};}};
+  const env={DB,STRIPE_MODE:mode,STRIPE_SECRET_KEY:`sk_${mode}_fixture`,STRIPE_WEBHOOK_SECRET:'whsec_fixture',
+    ASSETS:{fetch:async()=>new Response('asset')}};
+  const request=(path,input,extra={})=>worker.fetch(new Request(origin+path,{method:input?'POST':'GET',
+    headers:{Cookie:'__Host-todoroki_session='+token,Origin:origin,...(input?{'Content-Type':'application/json'}:{}),...extra},
+    ...(input?{body:JSON.stringify(input)}:{})}),env);
+  const order=(live,status='pending',id='order-1',member='member-1')=>{
+    const session=`cs_${live?'live':'test'}_${id.replaceAll('-','')}`;
+    db.prepare(`INSERT INTO digital_orders(id,member_id,product_key,stripe_price_id,livemode,amount,currency,status,stripe_session_id,created_at,updated_at)
+      VALUES(?,?,?,?,?,300,'jpy',?,?,?,?)`).run(id,member,'okamura-7994',prices[live?'live':'test'],Number(live),status,session,Math.floor(Date.now()/1000),Math.floor(Date.now()/1000));
+    return session;
+  };
+  const event=async(type,object,live=true,id='evt_fixture')=>{
+    const raw=JSON.stringify({id,type,livemode:live,data:{object}}),t=Math.floor(Date.now()/1000);
+    const sig=createHmac('sha256',env.STRIPE_WEBHOOK_SECRET).update(t+'.'+raw).digest('hex');
+    return worker.fetch(new Request(origin+'/api/stripe/webhook',{method:'POST',body:raw,
+      headers:{'Stripe-Signature':`t=${t},v1=${sig}`}}),env);
+  };
+  return {db,env,request,order,event};
 }
-async function refresh(){
- state=await api('/api/shop');
- document.getElementById('account').textContent=state.member?'ログイン中：'+state.member.email:'購入済みの方は、購入時のアカウントでログインしてください。';
- const owned=state.product.owned;
- download.hidden=!owned;buy.hidden=owned;buy.disabled=false;
- buy.textContent=state.product.available?(state.member?'テスト購入へ進む':'ログインしてテスト購入'):'販売準備中';
- buy.disabled=true;
-buy.textContent='販売準備中';
+function paidSession(id,live=true,order='order-1') {
+  return {id,livemode:live,mode:'payment',client_reference_id:order,
+    metadata:{order_id:order,member_id:'member-1',product_key:'okamura-7994'},
+    payment_status:'paid',status:'complete',amount_total:300,currency:'jpy',
+    line_items:{has_more:false,data:[{quantity:1,price:{id:prices[live?'live':'test'],livemode:live,unit_amount:300,currency:'jpy'}}]},
+    payment_intent:{id:'pi_fixture',status:'succeeded',livemode:live,amount:300,currency:'jpy',metadata:{order_id:order},
+      latest_charge:{livemode:live,paid:true,amount:300,currency:'jpy',payment_intent:'pi_fixture',refunded:false,amount_refunded:0,disputed:false}}};
 }
-buy.addEventListener('click',async()=>{
- if(!state?.member){location.href='/login.html';return;}
- buy.disabled=true;message.textContent='決済画面を開いています…';
- try{const j=await api('/api/checkout',{product_key:'okamura-7994'});if(j.owned){await refresh();message.textContent='購入済みです。';}else if(typeof j.url==='string'&&new URL(j.url).origin==='https://checkout.stripe.com'){location.assign(j.url);}else throw new Error('決済情報を確認できません。');}
- catch(e){message.textContent=e.message;buy.disabled=false;}
+async function mockStripe(fn, action) {
+  const original=globalThis.fetch;
+  globalThis.fetch=async(url,options)=>{
+    assert.equal(new URL(url).origin,'https://api.stripe.com');
+    return Response.json(await fn(url,options));
+  };
+  try{return await action();}finally{globalThis.fetch=original;}
+}
+test('closed by default: shop and direct checkout stay closed without Stripe calls',async()=>{
+  const f=fixture();
+  await mockStripe(()=>assert.fail('unexpected external request'),async()=>{
+    assert.equal((await (await f.request('/api/shop')).json()).product.available,false);
+    const response=await f.request('/api/checkout',{product_key:'okamura-7994'});
+    assert.equal(response.status,503);assert.equal((await response.json()).error,'販売準備中です。');
+    assert.equal(f.db.prepare('SELECT COUNT(*) n FROM digital_orders').get().n,0);
+  });
 });
-(async()=>{
- try{
-  await refresh();const params=new URLSearchParams(location.search),session=params.get('session_id');
-  if(session&&/^cs_test_[A-Za-z0-9_]{1,240}$/.test(session)){
-   if(!state.member){message.textContent='ログイン後に購入状況を確認できます。';return;}
-   message.textContent='決済を確認しています…';
-   const result=await api('/api/purchases/confirm',{session_id:session});await refresh();
-   message.textContent=state.product.owned?'決済を確認しました。PDFをダウンロードできます。':'決済の反映待ちです。少し時間をおいて再読み込みしてください。';
-   if(result.paid||state.product.owned)history.replaceState(null,'',location.pathname);
-  }else if(params.has('cancelled'))message.textContent='購入手続きを中断しました。';
- }catch(e){buy.disabled=true;buy.textContent='確認できませんでした';message.textContent=e.message+' 再読み込みしてお試しください。';}
-})();
-</script>
-</body></html>
+test('test purchases do not unlock live PDFs; existing test downloads still work in test mode',async()=>{
+  const f=fixture();f.order(false,'paid');
+  assert.equal((await (await f.request('/api/shop')).json()).product.owned,false);
+  assert.equal((await f.request('/api/download/okamura-7994')).status,403);
+  f.env.STRIPE_MODE='test';f.env.STRIPE_SECRET_KEY='sk_test_fixture';
+  assert.equal((await (await f.request('/api/shop')).json()).product.owned,true);
+  const pdf=await f.request('/api/download/okamura-7994');
+  assert.equal(pdf.status,200);assert.equal(pdf.headers.get('Content-Type'),'application/pdf');
+  assert.equal((await pdf.arrayBuffer()).byteLength,4);
+});
+test('live checkout uses the live price and records livemode=1; duplicate click reuses session',async()=>{
+  const f=fixture();f.env.SALES_ENABLED='true';let posts=0;
+  await mockStripe((url,options)=>{
+    assert.equal(options.headers.Authorization,'Bearer sk_live_fixture');
+    if(url.includes('/prices/'))return {id:prices.live,livemode:true,active:true,type:'one_time',unit_amount:300,currency:'jpy'};
+    if(options.method==='POST'){
+      posts++;const params=options.body;assert.equal(params.get('line_items[0][price]'),prices.live);
+      assert.equal(params.get('payment_method_types[0]'),'card');
+      assert.ok(options.headers['Idempotency-Key']);
+    }
+    return {id:'cs_live_fixture',livemode:true,status:'open',url:'https://checkout.stripe.com/c/pay/fixture'};
+  },async()=>{
+    assert.equal((await (await f.request('/api/shop')).json()).product.available,true);
+    assert.equal((await f.request('/api/checkout',{product_key:'okamura-7994'})).status,200);
+    const row=f.db.prepare('SELECT * FROM digital_orders').get();
