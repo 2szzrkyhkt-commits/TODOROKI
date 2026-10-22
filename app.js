@@ -11,6 +11,25 @@ function url(id){const doc=data.find(x=>x.id===id);if(doc?.url){const p=new URLS
 function backUrl(){const p=new URLSearchParams();if(state.q)p.set('q',state.q);if(state.theme!=='all')p.set('theme',state.theme);if(state.type!=='all')p.set('type',state.type);if(state.sort!=='recommended')p.set('sort',state.sort);return '/'+(p.size?'?'+p:'')+'#library'}
 function card(d){return `<article class="content-card ${d.type==='pdf'?'pdf-card':''}"><div class="card-top"><span class="tag">${esc(labels[d.theme])}</span><button class="save" data-save="${d.id}" aria-label="${saved.has(d.id)?'保存を解除':'あとで読むに保存'}" aria-pressed="${saved.has(d.id)}">${bookmark}</button></div><h3><a href="${esc(url(d.id))}">${esc(d.title)}</a></h3><p>${esc(d.description)}</p><div class="card-bottom"><span class="format-label">${d.type==='article'?'ARTICLE <span>／ 約'+d.minutes+'分</span>':'黒金PDF <span>／ '+d.pages+'ページ</span>'}</span><b aria-hidden="true">↗</b></div></article>`}
 function bindSave(root=document){root.querySelectorAll('[data-save]').forEach(b=>b.addEventListener('click',()=>save(b.dataset.save,b)))}
+function trackEvent(name,details={}){
+  try{
+    if(typeof window.gtag==='function')window.gtag('event',name,{...details,page_path:location.pathname,transport_type:'beacon'});
+  }catch{}
+}
+document.addEventListener('click',event=>{
+  const link=event.target?.closest?.('a[href]');
+  if(!link)return;
+  const target=new URL(link.href,location.origin);
+  if(target.origin!==location.origin)return;
+  if(link.hasAttribute('download')&&target.pathname.startsWith('/pdf/')&&/\.pdf$/i.test(target.pathname)){
+    let path;try{path=decodeURI(target.pathname)}catch{return;}
+    const doc=data.find(d=>d.type==='pdf'&&d.file===path);
+    const id=doc?.id||(document.body.dataset.read?.startsWith('pdf-')?document.body.dataset.read:undefined);
+    trackEvent('pdf_download_click',{...(id?{content_id:id}:{}),file_path:target.pathname});
+  }else if(/^\/premium(?:\.html)?\/?$/.test(target.pathname)){
+    trackEvent('premium_detail_click',{destination_path:target.pathname});
+  }
+});
 function bindShare(root=document,doc){
   const actions=root.querySelector('.reader-actions');
   if(!actions||actions.querySelector('[data-share]'))return;
