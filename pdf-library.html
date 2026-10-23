@@ -79,7 +79,7 @@ footer{padding:28px;text-align:center;border-top:1px solid #302819;color:#777;fo
 <div class="controls">
 <input id="search" type="search"
   aria-label="PDF資料を検索"
-  placeholder="資料を検索">
+  placeholder="資料を検索（例：はんどうたい、エヌビディア）">
 
 <select id="category" aria-label="資料のカテゴリ">
 <option value="all">すべての資料</option>
@@ -287,15 +287,70 @@ if (/robot|ロボット|diode|ダイオード|transistor|トランジスタ|mosf
   return "その他";
 }
 
+// 表記揺れ（ひらがな・カタカナ・全角英数）を吸収する。
+function normalizeSearch(text) {
+  return String(text).normalize("NFKC").toLowerCase()
+    .replace(/[ぁ-ゖ]/g, ch => String.fromCharCode(ch.charCodeAt(0) + 0x60))
+    .replace(/[\\s・･_－ー-]/g, "");
+}
+
+// タイトルに含まれない読み方や関連語を補完する。
+const searchKeywords = [
+  [/マーチンゲール/, "まーちんげーる ばいがけ しきんかんり"],
+  [/貸借倍率/, "たいしゃくばいりつ しんようじゅきゅう"],
+  [/半導体/, "はんどうたい"],
+  [/エヌビディア|NVIDIA/i, "えぬびでぃあ えぬびであ nvidia gpu"],
+  [/インタレストカバレッジ/, "いんたれすとかばれっじ れしお りそくしはらい"],
+  [/サクセスラーニング/, "さくせすらーにんぐ せいこうじれい"],
+  [/ToDo/i, "とぅーどぅー とぅどぅ やること たすく"],
+  [/MBO/i, "えむびーおー まねじめんとばいあうと"],
+  [/dots/i, "どっつ どっと"],
+  [/Astra/i, "あすとら"],
+  [/PHP/i, "ぴーえいちぴー ぜいじゃくせい"],
+  [/DRAM/i, "でぃーらむ めもり"],
+  [/NAND/i, "なんど ふらっしゅめもり"],
+  [/EUV/i, "いーゆーぶい きょくたんしがいせん"],
+  [/TOPIX/i, "とぴっくす とうしょうかぶかしすう"],
+  [/SOX/i, "そっくす はんどうたいしすう"],
+  [/FRB/i, "えふあーるびー れんぽうじゅんび"],
+  [/mRNA/i, "えむあーるえぬえー"],
+  [/AI/i, "えーあい じんこうちのう"],
+  [/MRAM/i, "えむらむ"],
+  [/MOSFET/i, "もすふぇっと"],
+  [/SpaceX/i, "すぺーすえっくす"],
+  [/Switch/i, "すいっち"],
+  [/グレアム|graham/i, "ぐれあむ"],
+  [/インフレ|inflation/i, "いんふれ いんふれーしょん"],
+  [/デフレ|deflation/i, "でふれ でふれーしょん"],
+  [/ビッグマック/, "びっぐまっく"],
+  [/シュレーダー/, "しゅれーだー"],
+  [/ブルーカラー/, "ぶるーからー"],
+  [/グローバル/, "ぐろーばる"],
+  [/ロボット/, "ろぼっと"],
+  [/量子/, "りょうし"],
+  [/ダイオード/, "だいおーど"],
+  [/トランジスタ/, "とらんじすた"],
+  [/シンギュラリティ/, "しんぎゅらりてぃ"],
+  [/コンソリデーション/, "こんそりでーしょん"],
+  [/フィジカル/, "ふぃじかる"],
+  [/カタリスト/, "かたりすと"]
+];
+
+function searchText(name) {
+  const title = getTitle(name);
+  const related = searchKeywords
+    .filter(([pattern]) => pattern.test(name + " " + title))
+    .map(([, words]) => words).join(" ");
+  return normalizeSearch(name + " " + title + " " + related);
+}
+
 function render() {
-  const q = search.value.trim().toLowerCase();
+  const q = normalizeSearch(search.value.trim());
   const cat = categorySelect.value;
 
   const shown = files.filter(f => {
     const matchesCategory = cat === "all" || category(f.name) === cat;
-    const matchesSearch =
-      f.name.toLowerCase().includes(q) ||
-      getTitle(f.name).toLowerCase().includes(q);
+    const matchesSearch = searchText(f.name).includes(q);
 
     return matchesCategory && matchesSearch;
   });
