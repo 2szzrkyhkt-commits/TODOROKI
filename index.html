@@ -86,39 +86,34 @@ a {
 }
 
 /* ヘッダー */
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(8,8,8,0.95);
-  border-bottom: 1px solid #302715;
+.site-header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(8,8,8,.96);
+  border-bottom:1px solid rgba(212,175,55,.28);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)
 }
-
-nav {
-  min-height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.site-header::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#d4af37 30%,#f4d77b 50%,#d4af37 70%,transparent)}
+.site-header .brand-row{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:88px}
+.site-header .logo{display:inline-block;flex-shrink:0;color:var(--lightgold);font-size:24px;font-weight:900;letter-spacing:.18em;line-height:1.2}
+.site-header .desktop-links{display:flex;align-items:center;gap:22px;margin-left:auto}
+.site-header .desktop-links a{font-size:13px;color:#bbb;white-space:nowrap;transition:color .2s}
+.site-header .desktop-links a:hover{color:var(--lightgold)}
+.site-header .account-link{display:inline-flex;align-items:center;justify-content:center;gap:8px;flex-shrink:0;min-height:40px;padding:7px 15px;border:1px solid #655329;border-radius:5px;color:var(--lightgold);font-size:12px;font-weight:600;letter-spacing:.04em;transition:background .2s,border-color .2s}
+.site-header .account-link:hover{background:#211c10;border-color:var(--gold)}
+.site-header .account-link svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.5}
+.site-header .mobile-links{display:none}
+.site-header a:focus-visible{outline:2px solid var(--lightgold);outline-offset:4px}
+@media(max-width:960px){
+  .site-header .brand-row{min-height:72px;gap:16px}
+  .site-header .logo{font-size:23px;letter-spacing:.16em}
+  .site-header .desktop-links{display:none}
+  .site-header .account-link{min-height:38px;padding:6px 12px}
+  .site-header .mobile-links{display:flex;align-items:center;gap:12px;overflow-x:auto;white-space:nowrap;flex-wrap:nowrap;padding:0 4% 0;border-top:1px solid #211e16;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .site-header .mobile-links::-webkit-scrollbar{display:none}
+  .site-header .mobile-links a{display:inline-flex;align-items:center;flex-shrink:0;min-height:48px;padding:0 2px;color:#c5b995;font-size:13px;letter-spacing:.03em}
+  .site-header .mobile-links a:hover{color:var(--lightgold)}
 }
-
-.logo {
-  color: var(--lightgold);
-  font-size: 23px;
-  font-weight: 900;
-  letter-spacing: 0.18em;
-}
-
-.navlinks {
-  display: flex;
-  gap: 24px;
-  font-size: 14px;
-  color: #cccccc;
-}
-
-.navlinks a:hover {
-  color: var(--gold);
-}
+@media(prefers-reduced-motion:reduce){.site-header a{transition:none}}
 
 /* 表紙 */
 
@@ -344,9 +339,7 @@ footer {
 
 @media (max-width: 720px) {
 
-  .navlinks {
-    display: none;
-  }
+
 
   .hero {
     min-height: 75vh;
@@ -378,28 +371,7 @@ footer {
   }
 
 }
-/* スマホ用メニュー */
-.mobile-menu {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .mobile-menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 14px;
-    padding: 12px 16px;
-    background: #111;
-    border-top: 1px solid #8b6b2e;
-  }
-
-  .mobile-menu a {
-    color: #d9b76e;
-    text-decoration: none;
-    font-size: 13px;
-  }
-}/* 記事カード全体をクリック可能にする */
+/* 記事カード全体をクリック可能にする */
 .card-link {
   display: block;
   color: inherit;
@@ -414,17 +386,9 @@ footer {
 .card-link:hover .card {
   border-color: #d9b76e;
 }
-  @media (min-width: 769px) {
-  .mobile-menu {
-    display: none;
-  }
-}
 
-@media (max-width: 768px) {
-  .navlinks {
-    display: none;
-  }
-}
+
+
 
 .page-return{margin:32px auto;text-align:center}
 .page-return a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 24px;border:1px solid #d8b85c;border-radius:6px;color:#d8b85c;text-decoration:none;font-size:14px}
@@ -438,32 +402,30 @@ footer {
 
 <!-- ヘッダー -->
 
-<header>
-  <div class="wrap">
-    <nav>
-      <a class="logo" href="/">TODOROKI</a>
-
-      <div class="navlinks">
+<header class="site-header">
+  <div class="wrap brand-row">
+    <a class="logo" href="/" aria-label="TODOROKI トップページ">TODOROKI</a>
+    <nav class="desktop-links" aria-label="メインメニュー">
         <a href="#articles">記事</a>
         <a href="#themes">テーマ</a>
         <a href="/pdf-library">PDF資料</a>
         <a href="/premium.html">有料記事</a>
         <a href="#about">TODOROKIについて</a>
         <a href="#social">SNS</a>
-        <a href="/login.html" style="color:var(--lightgold);font-weight:bold;">ログイン</a>
-      </div>
     </nav>
+    <a class="account-link" href="/login.html">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="6" r="3"/><path d="M4 18v-2a6 6 0 0 1 12 0v2"/></svg>
+      ログイン
+    </a>
   </div>
-
-  <div class="mobile-menu">
-    <a href="#articles">記事</a>
-    <a href="#themes">テーマ</a>
-    <a href="/pdf-library">PDF資料</a>
-    <a href="/premium.html">有料記事</a>
-    <a href="#about">TODOROKIについて</a>
-    <a href="#social">SNS</a>
-    <a href="/login.html" style="font-weight:bold;">ログイン</a>
-  </div>
+  <nav class="mobile-links" aria-label="メインメニュー">
+        <a href="#articles">記事</a>
+        <a href="#themes">テーマ</a>
+        <a href="/pdf-library">PDF資料</a>
+        <a href="/premium.html">有料記事</a>
+        <a href="#about" aria-label="TODOROKIについて">このサイト</a>
+        <a href="#social">SNS</a>
+  </nav>
 </header>
 
 <main>
