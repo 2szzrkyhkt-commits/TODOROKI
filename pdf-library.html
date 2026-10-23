@@ -332,6 +332,11 @@ function loadPDFs() {
 }
 
 
+const requestedCategory = new URLSearchParams(location.search).get("category");
+if (Array.from(categorySelect.options).some(option => option.value === requestedCategory)) {
+  categorySelect.value = requestedCategory;
+}
+
 loadPDFs();
 </script>
 </body>
