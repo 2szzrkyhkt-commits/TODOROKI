@@ -37,6 +37,8 @@
 body{margin:0;background:#080808;color:#eee;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP",sans-serif}
 header{border-bottom:1px solid #574622;padding:20px max(20px,5vw);display:flex;align-items:center;justify-content:space-between}
 .logo{color:#d8b85c;letter-spacing:3px;font-weight:800;font-size:20px;text-decoration:none}
+.library-nav{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+header{gap:16px;flex-wrap:wrap}
 .back{color:#ddd;text-decoration:none;font-size:13px}
 main{max-width:1120px;margin:auto;padding:58px 20px 100px}
 .kicker{color:#d8b85c;letter-spacing:3px;font-size:12px}
@@ -61,7 +63,7 @@ footer{padding:28px;text-align:center;border-top:1px solid #302819;color:#777;fo
 <body>
 <header>
 <a class="logo" href="/">TODOROKI</a>
-<a class="back" href="/">← トップページ</a>
+<nav class="library-nav" aria-label="PDFナビゲーション"><a class="back" href="/">← トップページ</a><a class="back" href="/premium.html">有料PDF</a><a class="back" href="/login.html">ログイン</a></nav>
 </header>
 <main>
 <div class="kicker">TODOROKI ARCHIVE</div>

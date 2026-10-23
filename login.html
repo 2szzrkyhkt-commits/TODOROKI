@@ -58,6 +58,12 @@
   <footer>© TODOROKI</footer>
   <script>
     const get = id => document.getElementById(id);
+    // Only the premium page and a validated checkout session may be used as a return destination.
+    const requestedNext = new URLSearchParams(location.search).get('next');
+    const returnPath = typeof requestedNext === 'string' &&
+      /^\/premium\.html(?:\?session_id=cs_(?:test|live)_[A-Za-z0-9_]{1,240})?$/.test(requestedNext)
+      ? requestedNext : null;
+    if (returnPath) document.querySelectorAll('a[href="/premium.html"]').forEach(link => link.href = returnPath);
     let email = '';
     let busy = false;
     let resendAt = 0;
@@ -122,6 +128,7 @@
         if (!data.member) throw new Error('ログイン状態を保存できませんでした。Cookieの設定をご確認ください。');
         get('member-email').textContent = data.member.email;
         show('member'); status('ログインしました。');
+        if (returnPath) location.replace(returnPath);
       });
     });
     get('logout').addEventListener('click', () => action(async () => {
@@ -131,7 +138,7 @@
     action(async () => {
       status('ログイン状態を確認しています…');
       const data = await api('me');
-      if (data.member) { get('member-email').textContent = data.member.email; show('member'); }
+      if (data.member) { get('member-email').textContent = data.member.email; show('member'); if (returnPath) location.replace(returnPath); }
       status('');
     });
   </script>
