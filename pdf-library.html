@@ -112,6 +112,12 @@ const categorySelect = document.getElementById("category");
 let files = [];
 
 const titleMap = {
+"貸借倍率_信用需給と株価の読み方.pdf": "貸借倍率｜信用需給と株価の読み方",
+"半導体の種類_材料と用途から理解する.pdf": "半導体の種類｜材料と用途から理解する",
+"エヌビディアはどんな企業か.pdf": "エヌビディアはどんな企業か",
+"インタレストカバレッジレシオ_利息支払能力の見方.pdf": "インタレスト・カバレッジ・レシオ｜利息支払能力の見方",
+"サクセスラーニング_成功事例から学ぶ方法.pdf": "サクセスラーニング｜成功事例から学ぶ方法",
+"ToDoリスト_行動を管理する基本.pdf": "ToDoリスト｜行動を管理する基本",
 "MBOを狙う_企業価値と株価の差を読む.pdf": "MBOを狙う｜企業価値と株価の差を読む",
 "dotsとは何か_常時稼働AIの仕組みと使い方.pdf": "dotsとは何か｜常時稼働AIの仕組みと使い方",
 "GPT-6_Astraとは_特徴と活用法.pdf": "GPT-6 Astraとは｜特徴と活用法",
@@ -213,6 +219,9 @@ function getTitle(name) {
 function category(name) {
   name = name.normalize("NFC");
   const n = name.toLowerCase();
+  if (/貸借倍率|インタレストカバレッジ/.test(name)) return "投資・市場";
+  if (/半導体の種類|エヌビディア/.test(name)) return "科学・技術";
+  if (/サクセスラーニング|ToDoリスト/.test(name)) return "企業・経営";
   if (/^MBOを狙う/.test(name)) return "投資・市場";
   if (/dots/i.test(n)) return "科学・技術";
   if (/gpt-6_astra/i.test(n)) return "科学・技術";
