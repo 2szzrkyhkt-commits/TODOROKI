@@ -112,6 +112,7 @@ const categorySelect = document.getElementById("category");
 let files = [];
 
 const titleMap = {
+"MBOを狙う_企業価値と株価の差を読む.pdf": "MBOを狙う｜企業価値と株価の差を読む",
 "dotsとは何か_常時稼働AIの仕組みと使い方.pdf": "dotsとは何か｜常時稼働AIの仕組みと使い方",
 "GPT-6_Astraとは_特徴と活用法.pdf": "GPT-6 Astraとは｜特徴と活用法",
 "PHPの重大な脆弱性と対策_PHP2Shell.pdf": "PHPの重大な脆弱性と対策｜PHP2Shell",
@@ -212,6 +213,7 @@ function getTitle(name) {
 function category(name) {
   name = name.normalize("NFC");
   const n = name.toLowerCase();
+  if (/^MBOを狙う/.test(name)) return "投資・市場";
   if (/dots/i.test(n)) return "科学・技術";
   if (/gpt-6_astra/i.test(n)) return "科学・技術";
   if (/php2shell|PHPの重大な脆弱性/i.test(name)) return "科学・技術";
