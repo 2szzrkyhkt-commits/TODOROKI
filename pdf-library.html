@@ -111,7 +111,9 @@ const categorySelect = document.getElementById("category");
 
 let files = [];
 
-const titleMap = {  
+const titleMap = {
+"割引効用理論_黒金_改訂版.pdf": "割引効用理論｜将来の利益と選好の逆転",
+"社会的選好_情報共有_フリーライド_黒金.pdf": "社会的選好と情報共有｜協力とフリーライド",
 "NANDフラッシュメモリとは_市場構造と関連企業.pdf": "NANDフラッシュメモリとは｜市場構造と関連企業",
 "EUVとは何か_半導体の微細化を支える技術.pdf": "EUVとは何か｜半導体の微細化を支える技術",
   "DRAMとは何か_半導体メモリの仕組み.pdf": "DRAMとは何か｜半導体メモリの仕組み",
@@ -162,13 +164,13 @@ const titleMap = {
   "japan_stock_theme_map.pdf": "日本株のテーマ別監視マップ",
   "Switch2関連半導体株の見通し_2026年9月23日.pdf":
   "Switch 2関連 半導体株の見通し",
-  
+
 "quantum_computer_japan.pdf":
   "量子コンピュータの仕組みと日本の関連銘柄",
-  
+
 "半導体設計を担う日本企業_関連5銘柄.pdf":
   "半導体設計を担う日本企業｜関連5銘柄",
-  
+
   "大衆心理_群集が判断を狂わせる理由_黒金.pdf":
     "大衆心理 ― 群集が判断を狂わせる理由",
 
@@ -207,6 +209,7 @@ function getTitle(name) {
 function category(name) {
   name = name.normalize("NFC");
   const n = name.toLowerCase();
+  if (/割引効用|社会的選好/.test(name)) return "経済・金融";
   if (/singularity|シンギュラリティ/i.test(name.normalize("NFC"))) {
     return "科学・技術";
   }
