@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNSX8VRZ2S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZNSX8VRZ2S');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PHPの重大な脆弱性「PHP2Shell」｜危険性と対処方法｜TODOROKI</title>
+<meta name="description" content="PHP2Shellで何が起きるのか。想定される被害、修正済みバージョン、サイト運営者と利用者の対処方法を黒金PDFと記事で整理します。">
+<link rel="canonical" href="https://todoroki-gold.com/php2shell">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="TODOROKI">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="PHPの重大な脆弱性「PHP2Shell」｜危険性と対処方法｜TODOROKI">
+<meta property="og:description" content="PHP2Shellで何が起きるのか。想定される被害、修正済みバージョン、サイト運営者と利用者の対処方法を黒金PDFと記事で整理します。">
+<meta property="og:url" content="https://todoroki-gold.com/php2shell">
+<style>:root{color-scheme:dark}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#080808;color:#eae6dd;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP",sans-serif;line-height:1.95}header{padding:24px 6%;border-bottom:1px solid #302819}.logo{color:#d8b85c;font-weight:800;letter-spacing:3px;text-decoration:none}main{max-width:850px;margin:60px auto 80px;padding:0 24px}a{color:#d8b85c;text-underline-offset:5px}.tag{color:#d8b85c;font-size:12px;font-weight:700;letter-spacing:.08em}h1{font-size:clamp(28px,5vw,42px);line-height:1.5;margin:14px 0 24px}h2{font-size:22px;line-height:1.6;margin:42px 0 14px}p{font-size:16px;margin:0 0 22px}.lead{font-size:18px;color:#bbb}.related{margin-top:48px;padding:24px;border:1px solid #4b3d20;border-radius:12px;background:#12110d}.related h2{margin-top:0}.related ul{padding-left:22px}.related li{margin:12px 0;color:#bbb}.button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;border:1px solid #d8b85c;border-radius:6px;text-decoration:none}.button:hover{background:#211c10}.navigation{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:36px}a:focus-visible{outline:2px solid #fff;outline-offset:4px}#article-top{scroll-margin-top:24px}footer{padding:25px 20px;border-top:1px solid #302819;text-align:center;color:#777;font-size:13px}footer a{margin:0 10px}@media(max-width:600px){main{margin-top:38px}.related{padding:20px}.button{width:100%;text-align:center}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}.article-links{list-style:none;padding:0!important}.article-links li{padding:16px 0;border-bottom:1px solid #302819}.article-links li:last-child{border-bottom:0}.article-links a{font-weight:700}.article-links p{font-size:14px;color:#aaa;margin:8px 0 0}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;margin:22px 0}th,td{padding:12px 16px;border-bottom:1px solid #40361f;text-align:left}th{color:#d8b85c;background:#17150f}.date{font-size:13px;color:#aaa}.sources{font-size:13px;color:#aaa}</style>
+</head>
+<body>
+<header><a class="logo" href="/">TODOROKI</a></header>
+<main id="article-top"><article>
+<p class="tag">SCIENCE &amp; TECHNOLOGY ／ 科学・技術</p>
+<h1>PHPの重大な脆弱性「PHP2Shell」<br>危険性と対処方法</h1>
+<p class="date">公開・情報確認日：2026年10月23日</p>
+<p class="lead">ウェブサイトの裏側で動くPHPに、外部から不正なコードを実行される恐れがある2件の重大な脆弱性が見つかりました。修正版は10月21日に公開されています。運営者にとって最優先なのは、PHPの利用状況と修正の適用状況を確認することです。</p>
+<section class="related"><h2>4ページの黒金PDFで読む</h2><p>問題の概要、想定被害、修正版と更新手順、応急策と利用者の対処を整理しました。</p><a class="button" href="/pdf/PHP%E3%81%AE%E9%87%8D%E5%A4%A7%E3%81%AA%E8%84%86%E5%BC%B1%E6%80%A7%E3%81%A8%E5%AF%BE%E7%AD%96_PHP2Shell.pdf" target="_blank" rel="noopener">PDFを読む →</a></section>
+<section><h2>01. PHPとは何か</h2><p>PHPは、サーバー側で動くプログラミング言語です。WordPressなどで使われ、ページの生成や入力内容の処理を担っています。今回の問題はPHP本体にあるため、記事の編集や管理画面のパスワード変更だけでは解決しません。</p></section>
+<section><h2>02. ログイン前でも攻撃される恐れ</h2><p>対象はCVE-2026-109618とCVE-2026-109619です。前者はメモリ不足時の処理、後者は解放済みのメモリに関わる古い内部状態の扱いに問題があります。条件がそろうと、認証していない攻撃者による遠隔コード実行につながります。両件の深刻度はCVSS v4.0で9.2です。</p><p>PHP公式は、ウェブからのリクエストを処理するPHP環境を広く注意の対象としています。PHP-FPMやApacheのmod_phpなどが含まれ、特にmod_phpではアプリケーションのコードが動く前に攻撃が成立する実証例があります。ログイン機能を設けただけで防げる問題ではありません。</p></section>
+<section><h2>03. どんな被害につながるのか</h2><p>不正なコードが実行されると、その処理が持つ権限や接続先によって、設定情報や顧客データの流出、サイトの改ざん、サービス停止、不正ファイルの設置などにつながる恐れがあります。これは想定被害であり、すべてのサイトで侵害が起きたという意味ではありません。</p><p>watchTowrは実際の悪用を観測したと報告しています。画面が普段どおりに表示されていても、それだけで安全とは判断できません。</p></section>
+<section><h2>04. 根本対策は、PHP本体の更新</h2><p>今回の修正が入ったバージョンは次のとおりです。同じ系列の修正版以降、または配布元が今回の修正を適用したパッケージを利用します。</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">使用している系列</th><th scope="col">今回の修正版</th></tr></thead><tbody><tr><td>PHP 8.2</td><td>8.2.35</td></tr><tr><td>PHP 8.3</td><td>8.3.36</td></tr><tr><td>PHP 8.4</td><td>8.4.27</td></tr><tr><td>PHP 8.5</td><td>8.5.12</td></tr></tbody></table></div>
+<p>Linuxなどの配布元が既存のバージョン番号を維持したまま修正を取り込む場合もあるため、数字だけで判断せず、提供元の告知を確認してください。PHP 8.1以前はPHP本体の通常サポートが終了しています。配布元の修正提供状況を確認し、サポート中の系列への移行を進めます。</p><ol><li>サーバー管理画面や契約先で、PHPの利用有無と修正状況を確認する。</li><li>ファイルとデータベースを保全し、更新の互換性を確認する。</li><li>PHPを更新し、必要なプロセスの再起動まで行う。複数サーバーやコンテナの更新漏れも確認する。</li><li>表示やログイン機能、不審なファイルや通信を点検する。</li></ol><p>レンタルサーバーでは、運営会社に「今回の2件のCVEへの対応が完了しているか」と問い合わせると確認しやすくなります。WordPressやプラグインの更新と、PHP本体の更新は別の作業です。</p></section>
+<section><h2>05. 更新できない場合と、侵入が疑われる場合</h2><p>PHP公式は一部の攻撃経路を減らす設定変更を案内していますが、完全な解決は更新のみとしています。WAFや設定変更だけで安全になったと判断せず、管理者と相談してアクセス制限や対象サービスの一時停止も検討します。応急策には可用性に影響するものもあるため、設定値だけをまねする対応は避けたいところです。</p><p>侵入の疑いがある場合、修正版にしても既に置かれた不正ファイルまで消えるわけではありません。ログなどを保全し、侵害範囲を調査したうえで、安全な環境からの復旧や認証情報の変更を進める必要があります。</p></section>
+<section><h2>06. 一般の利用者にできること</h2><p>相手のサーバーを修正するのは運営者です。利用サービスの注意喚起を確認し、不自然なログイン・決済画面が表示された場合は入力を止め、公式窓口へ確認してください。案内された手続きは、公式アプリや既知の公式サイトから進めると、偽の案内に誘導されるリスクを減らせます。</p></section>
+<p class="sources">確認情報：<a href="https://www.php.net/archive/2026.php#2026-10-21-1" target="_blank" rel="noopener">PHP公式の告知</a>／<a href="https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w" target="_blank" rel="noopener">CVE-2026-109618</a>／<a href="https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp" target="_blank" rel="noopener">CVE-2026-109619</a>／<a href="https://watchtowr.com/intelligence/php-cve-2026-109618-faq/" target="_blank" rel="noopener">watchTowrの観測報告</a></p>
+<section class="related"><h2>関連する資料とテーマ</h2><ul class="article-links"><li><a href="/science-technology">科学・技術を、仕組みから産業につなげて読む →</a></li><li><a href="/pdf-library?category=%E7%A7%91%E5%AD%A6%E3%83%BB%E6%8A%80%E8%A1%93">情報漏洩の仕組みと対策など、科学・技術のPDF資料 →</a></li></ul></section>
+</article><nav class="navigation" aria-label="記事ナビゲーション"><a href="/science-technology">← 科学・技術のテーマへ</a><a href="#article-top">↑ 記事の先頭へ</a></nav></main><footer>© TODOROKI <a href="/about.html">このサイトについて</a><a href="/contact.html">お問い合わせ</a></footer></body></html>

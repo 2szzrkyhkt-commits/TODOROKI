@@ -112,6 +112,7 @@ const categorySelect = document.getElementById("category");
 let files = [];
 
 const titleMap = {
+"PHPの重大な脆弱性と対策_PHP2Shell.pdf": "PHPの重大な脆弱性と対策｜PHP2Shell",
 "割引効用理論_黒金_改訂版.pdf": "割引効用理論｜将来の利益と選好の逆転",
 "社会的選好_情報共有_フリーライド_黒金.pdf": "社会的選好と情報共有｜協力とフリーライド",
 "NANDフラッシュメモリとは_市場構造と関連企業.pdf": "NANDフラッシュメモリとは｜市場構造と関連企業",
@@ -209,6 +210,7 @@ function getTitle(name) {
 function category(name) {
   name = name.normalize("NFC");
   const n = name.toLowerCase();
+  if (/php2shell|PHPの重大な脆弱性/i.test(name)) return "科学・技術";
   if (/割引効用|社会的選好/.test(name)) return "経済・金融";
   if (/singularity|シンギュラリティ/i.test(name.normalize("NFC"))) {
     return "科学・技術";
