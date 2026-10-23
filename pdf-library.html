@@ -112,6 +112,7 @@ const categorySelect = document.getElementById("category");
 let files = [];
 
 const titleMap = {
+"dotsとは何か_常時稼働AIの仕組みと使い方.pdf": "dotsとは何か｜常時稼働AIの仕組みと使い方",
 "GPT-6_Astraとは_特徴と活用法.pdf": "GPT-6 Astraとは｜特徴と活用法",
 "PHPの重大な脆弱性と対策_PHP2Shell.pdf": "PHPの重大な脆弱性と対策｜PHP2Shell",
 "割引効用理論_黒金_改訂版.pdf": "割引効用理論｜将来の利益と選好の逆転",
@@ -211,6 +212,7 @@ function getTitle(name) {
 function category(name) {
   name = name.normalize("NFC");
   const n = name.toLowerCase();
+  if (/dots/i.test(n)) return "科学・技術";
   if (/gpt-6_astra/i.test(n)) return "科学・技術";
   if (/php2shell|PHPの重大な脆弱性/i.test(name)) return "科学・技術";
   if (/割引効用|社会的選好/.test(name)) return "経済・金融";
