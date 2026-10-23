@@ -121,6 +121,18 @@
 #article-top{scroll-margin-top:24px}
 html{scroll-behavior:smooth}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.basics-related{margin-top:48px;padding:24px;border:1px solid #4b3d20;border-radius:12px;background:#12110d}
+.basics-related h2{margin:0 0 14px;color:#eae6dd;font-size:22px;line-height:1.6}
+.basics-related .article-links{list-style:none;padding:0;margin:0}
+.basics-related .article-links li{margin:12px 0;padding:16px 0;border-bottom:1px solid #302819;color:#bbb}
+.basics-related .article-links li:last-child{border-bottom:0}
+.basics-related a{color:#d8b85c;text-underline-offset:5px}
+.basics-related .article-links a{display:inline-block;padding:6px 0;font-size:16px;font-weight:700;line-height:1.8}
+.basics-related .article-links p{font-size:14px;color:#aaa;margin:8px 0 0}
+.basics-related .theme-link{display:inline-block;margin-top:18px;font-size:14px}
+.basics-related a:focus-visible{outline:2px solid #fff;outline-offset:4px}
+@media(max-width:600px){.basics-related{padding:20px}}
 </style>
 </head>
 <body>
@@ -224,20 +236,12 @@ html{scroll-behavior:smooth}
           text-decoration:none;font-weight:bold;">
   LINEで送る
 </a>  
-<section style="margin-top:50px;">
-  <h2>関連記事</h2>
-  <p>
-    <a href="/interest-rate" style="color:#c9a646;">
-      金利とは何か？ 株価と経済への影響 →
-    </a>
-  </p>
-  
-<p>
-  <a href="/inflation-asset-gap" style="color:#c9a646;">
-    インフレで差がつくのは「収入」だけではない →
-  </a>
-</p>
-
+<section class="basics-related" aria-labelledby="related-articles">
+  <h2 id="related-articles">関連記事</h2>
+  <ul class="article-links">
+    <li><a href="/interest-rate">金利とは何か？ 株価と経済への影響 →</a><p>金利が家計・企業・市場に関わる仕組みを読む。</p></li>
+    <li><a href="/inflation-asset-gap">インフレで差がつくのは「収入」だけではない →</a><p>収入と資産の両面から、物価上昇の影響を考える。</p></li>
+  </ul>
 </section>
 <p style="margin-top:28px;">
   <a href="/economy-list" style="color:#c9a646;">
