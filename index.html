@@ -428,10 +428,16 @@ footer {
     display: none;
   }
 }
+
+.page-return{margin:32px auto;text-align:center}
+.page-return a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 24px;border:1px solid #d8b85c;border-radius:6px;color:#d8b85c;text-decoration:none;font-size:14px}
+.page-return a:hover{background:#211c10}
+.page-return a:focus-visible{outline:2px solid #fff;outline-offset:4px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 
-<body>
+<body id="page-top">
 
 <!-- ヘッダー -->
 
@@ -763,6 +769,7 @@ footer {
 
 </section>
 
+<div class="page-return"><a href="#page-top">↑ ページの先頭へ</a></div>
 </main>
 
 <!-- フッター -->

@@ -137,7 +137,15 @@
       .compare { grid-template-columns: 1fr; }
       nav a { margin-right: 10px; }
     }
-  </style>
+  
+.article-return{margin-top:32px;text-align:center}
+.article-return a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 24px;border:1px solid #d8b85c;border-radius:6px;color:#d8b85c;text-decoration:none;font-size:14px}
+.article-return a:hover{background:#211c10}
+.article-return a:focus-visible{outline:2px solid #fff;outline-offset:4px}
+#article-top{scroll-margin-top:24px}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
   <header>
@@ -151,7 +159,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="article-top">
     <div class="category">ECONOMY / INFLATION</div>
     <h1>インフレで差がつくのは<br>「収入」だけではない</h1>
 
@@ -278,7 +286,8 @@
         <a href="/economy-list">経済の記事一覧に戻る</a>
       </p>
     </section>
-  </main>
+  <div class="article-return"><a href="#article-top">↑ 記事の先頭へ</a></div>
+</main>
 
   <footer>
     &copy; 2026 TODOROKI

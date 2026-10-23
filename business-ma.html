@@ -50,13 +50,21 @@ a{color:#c9a646}
 .pdf-link:hover{background:#282113}
 .back{display:inline-block;margin-top:55px;text-decoration:none}
 footer{text-align:center;color:#888;border-top:1px solid #30291b;padding:30px}
+
+.article-return{margin-top:32px;text-align:center}
+.article-return a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 24px;border:1px solid #d8b85c;border-radius:6px;color:#d8b85c;text-decoration:none;font-size:14px}
+.article-return a:hover{background:#211c10}
+.article-return a:focus-visible{outline:2px solid #fff;outline-offset:4px}
+#article-top{scroll-margin-top:24px}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 <header>
 <a class="logo" href="/">TODOROKI</a>
 </header>
-<main>
+<main id="article-top">
 <div class="tag">BUSINESS / CORPORATE STRATEGY</div>
 <h1>日本企業はなぜM&A・産業再編を進めるのか</h1>
 <div class="rule"></div>
@@ -120,6 +128,7 @@ target="_blank" rel="noopener">
 </a>
 
 <a class="back" href="/business-list">← 企業・経営の記事一覧に戻る</a>
+<div class="article-return"><a href="#article-top">↑ 記事の先頭へ</a></div>
 </main>
 <footer>© TODOROKI</footer>
 </body>
