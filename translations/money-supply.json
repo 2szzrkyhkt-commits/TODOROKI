@@ -1,0 +1,452 @@
+{
+  "en": [
+    {
+      "title": "What is money supply?",
+      "subtitle": "The amount of money held by households, businesses and others",
+      "blocks": [
+        {
+          "h": "Cash and deposits",
+          "text": "Money supply measures the amount of money in the economy by adding up balances such as cash and deposits. Different measures cover different types of money."
+        },
+        {
+          "h": "Japan uses the term “money stock”",
+          "text": "In 2008, the Bank of Japan revised its statistics and renamed its Money Supply Statistics as Money Stock Statistics."
+        },
+        {
+          "h": "Whose money is included?",
+          "text": "The main holders are individuals, non-financial businesses and local governments. Deposits held by financial institutions or the central government, among others, are excluded."
+        }
+      ]
+    },
+    {
+      "title": "M1, M2 and M3 in Japan",
+      "subtitle": "Both financial products and the institutions covered matter",
+      "blocks": [
+        {
+          "h": "M1: cash plus readily usable deposits",
+          "text": "Cash plus ordinary deposits, current deposits and similar deposit money. These funds are readily usable for payments. Coverage includes all depository institutions, including Japan Post Bank."
+        },
+        {
+          "h": "M2: cash + deposit money + quasi-money + CDs",
+          "text": "Compiled for domestic banks and other covered institutions. Includes time deposits and foreign-currency deposits, but excludes institutions such as Japan Post Bank."
+        },
+        {
+          "h": "M3: broader institutional coverage than M2",
+          "text": "Includes Japan Post Bank, credit cooperatives and agricultural cooperatives, among others. The types of financial products included are the same as in M2."
+        },
+        {
+          "h": "Important definitions",
+          "text": "CDs are negotiable certificates of deposit. Quasi-money includes time deposits and foreign-currency deposits.\nM1 and M2 cover different institutions. In Japan, M2 is not simply M1 plus time deposits."
+        }
+      ]
+    },
+    {
+      "title": "Money stock versus monetary base",
+      "subtitle": "Two different measures of money",
+      "blocks": [
+        {
+          "h": "Monetary base",
+          "text": "Money supplied by the central bank. In Japan, it is the sum of Bank of Japan notes in circulation, coins in circulation and current account balances at the Bank of Japan."
+        },
+        {
+          "h": "Money stock",
+          "text": "Cash, deposits and similar balances held by individuals, businesses and other covered holders. Financial institutions’ current account balances at the Bank of Japan are not included."
+        },
+        {
+          "h": "Bank lending and deposits",
+          "text": "When a bank makes a loan, a deposit is created in the borrower’s account. Loan demand and banks’ willingness to lend also influence the amount of money."
+        },
+        {
+          "h": "No automatic proportional increase",
+          "text": "An increase in current account balances at the Bank of Japan does not automatically increase household and business deposits by the same proportion."
+        }
+      ]
+    },
+    {
+      "title": "Does more money mean inflation?",
+      "subtitle": "More money does not necessarily mean higher prices",
+      "blocks": [
+        {
+          "h": "Money is only one factor",
+          "text": "The effect on prices depends on more than the quantity of money. Spending behavior and the supply of goods and services also matter."
+        },
+        {
+          "h": "How quickly money is spent",
+          "text": "How much flows into consumption and investment?"
+        },
+        {
+          "h": "The balance of demand and supply",
+          "text": "Is supply sufficient relative to the amount people want to buy?"
+        },
+        {
+          "h": "Interest rates, lending and inflation expectations",
+          "text": "How do borrowing and spending decisions change?"
+        },
+        {
+          "h": "Reading the indicator",
+          "text": "Money stock measures outstanding money balances. Assess its relationship with prices alongside the pace of spending and productive capacity."
+        }
+      ]
+    }
+  ],
+  "es": [
+    {
+      "title": "¿Qué es la oferta monetaria?",
+      "subtitle": "El dinero que poseen hogares, empresas y otros agentes",
+      "blocks": [
+        {
+          "h": "Efectivo y depósitos",
+          "text": "La oferta monetaria mide la cantidad de dinero de la economía sumando saldos como el efectivo y los depósitos. Cada indicador abarca distintos tipos de dinero."
+        },
+        {
+          "h": "En Japón se denomina “stock monetario”",
+          "text": "En 2008, el Banco de Japón revisó sus estadísticas y cambió su nombre de estadísticas de oferta monetaria a estadísticas de stock monetario."
+        },
+        {
+          "h": "¿De quién es el dinero incluido?",
+          "text": "Los principales tenedores son particulares, empresas no financieras y administraciones locales. Se excluyen, entre otros, los depósitos de instituciones financieras y del Gobierno central."
+        }
+      ]
+    },
+    {
+      "title": "M1, M2 y M3 en Japón",
+      "subtitle": "Importan los productos y las instituciones incluidas",
+      "blocks": [
+        {
+          "h": "M1: efectivo y depósitos de uso inmediato",
+          "text": "Efectivo, depósitos ordinarios, cuentas corrientes y otros depósitos monetarios. Son fondos fácilmente utilizables para pagar. Incluye todas las entidades depositarias, como Japan Post Bank."
+        },
+        {
+          "h": "M2: efectivo + depósitos monetarios + cuasidinero + CD",
+          "text": "Se calcula para bancos nacionales y otras instituciones incluidas. Abarca depósitos a plazo y en moneda extranjera, pero excluye entidades como Japan Post Bank."
+        },
+        {
+          "h": "M3: mayor cobertura institucional que M2",
+          "text": "Incluye Japan Post Bank, cooperativas de crédito y cooperativas agrícolas, entre otras entidades. Los tipos de productos financieros incluidos son los mismos que en M2."
+        },
+        {
+          "h": "Definiciones importantes",
+          "text": "Los CD son certificados de depósito negociables. El cuasidinero incluye depósitos a plazo y en moneda extranjera.\nM1 y M2 abarcan distintas instituciones. En Japón, M2 no equivale simplemente a M1 más depósitos a plazo."
+        }
+      ]
+    },
+    {
+      "title": "Stock monetario y base monetaria",
+      "subtitle": "Dos medidas diferentes del dinero",
+      "blocks": [
+        {
+          "h": "Base monetaria",
+          "text": "Dinero suministrado por el banco central. En Japón, suma los billetes del Banco de Japón en circulación, las monedas en circulación y los saldos de las cuentas corrientes en el Banco de Japón."
+        },
+        {
+          "h": "Stock monetario",
+          "text": "Efectivo, depósitos y saldos similares de particulares, empresas y otros tenedores incluidos. No incorpora las cuentas corrientes que las instituciones financieras mantienen en el Banco de Japón."
+        },
+        {
+          "h": "Préstamos y depósitos bancarios",
+          "text": "Cuando un banco concede un préstamo, se crea un depósito en la cuenta del prestatario. La demanda de crédito y la disposición de los bancos a prestar también influyen en la cantidad de dinero."
+        },
+        {
+          "h": "No hay un aumento proporcional automático",
+          "text": "Que aumenten los saldos de las cuentas en el Banco de Japón no implica que los depósitos de hogares y empresas crezcan automáticamente en la misma proporción."
+        }
+      ]
+    },
+    {
+      "title": "¿Más dinero significa inflación?",
+      "subtitle": "Una mayor cantidad de dinero no siempre eleva los precios",
+      "blocks": [
+        {
+          "h": "El dinero es solo un factor",
+          "text": "El efecto sobre los precios no depende únicamente del dinero disponible. También importan el gasto y la oferta de bienes y servicios."
+        },
+        {
+          "h": "La velocidad con que se gasta el dinero",
+          "text": "¿Cuánto se destina al consumo y a la inversión?"
+        },
+        {
+          "h": "El equilibrio entre oferta y demanda",
+          "text": "¿La oferta basta para cubrir lo que se quiere comprar?"
+        },
+        {
+          "h": "Tipos de interés, crédito y expectativas de inflación",
+          "text": "¿Cómo cambian las decisiones de endeudamiento y gasto?"
+        },
+        {
+          "h": "Cómo interpretar el indicador",
+          "text": "El stock monetario mide saldos de dinero. Su relación con los precios debe analizarse junto con el ritmo de gasto y la capacidad productiva."
+        }
+      ]
+    }
+  ],
+  "pt": [
+    {
+      "title": "O que é oferta monetária?",
+      "subtitle": "O dinheiro mantido por famílias, empresas e outros agentes",
+      "blocks": [
+        {
+          "h": "Dinheiro em espécie e depósitos",
+          "text": "A oferta monetária mede a quantidade de dinheiro na economia somando saldos como dinheiro em espécie e depósitos. Diferentes indicadores abrangem diferentes tipos de dinheiro."
+        },
+        {
+          "h": "No Japão, usa-se “estoque monetário”",
+          "text": "Em 2008, o Banco do Japão revisou suas estatísticas e mudou o nome de Estatísticas de Oferta Monetária para Estatísticas de Estoque Monetário."
+        },
+        {
+          "h": "De quem é o dinheiro incluído?",
+          "text": "Os principais detentores são pessoas físicas, empresas não financeiras e governos locais. Depósitos de instituições financeiras e do governo central, entre outros, são excluídos."
+        }
+      ]
+    },
+    {
+      "title": "M1, M2 e M3 no Japão",
+      "subtitle": "Os produtos e as instituições abrangidas são importantes",
+      "blocks": [
+        {
+          "h": "M1: dinheiro em espécie e depósitos disponíveis",
+          "text": "Dinheiro em espécie, depósitos comuns, contas correntes e outros depósitos monetários. São recursos facilmente utilizáveis em pagamentos. Abrange todas as instituições depositárias, incluindo o Japan Post Bank."
+        },
+        {
+          "h": "M2: espécie + depósitos monetários + quase-moeda + CD",
+          "text": "Calculado para bancos domésticos e outras instituições abrangidas. Inclui depósitos a prazo e em moeda estrangeira, mas exclui instituições como o Japan Post Bank."
+        },
+        {
+          "h": "M3: cobertura institucional maior que a de M2",
+          "text": "Inclui Japan Post Bank, cooperativas de crédito e cooperativas agrícolas, entre outras instituições. Os tipos de produtos financeiros incluídos são os mesmos de M2."
+        },
+        {
+          "h": "Definições importantes",
+          "text": "CDs são certificados de depósito negociáveis. Quase-moeda inclui depósitos a prazo e em moeda estrangeira.\nM1 e M2 abrangem instituições diferentes. No Japão, M2 não é simplesmente M1 mais depósitos a prazo."
+        }
+      ]
+    },
+    {
+      "title": "Estoque monetário e base monetária",
+      "subtitle": "Duas medidas diferentes de dinheiro",
+      "blocks": [
+        {
+          "h": "Base monetária",
+          "text": "Dinheiro fornecido pelo banco central. No Japão, soma as cédulas do Banco do Japão em circulação, as moedas em circulação e os saldos das contas correntes no Banco do Japão."
+        },
+        {
+          "h": "Estoque monetário",
+          "text": "Dinheiro em espécie, depósitos e saldos semelhantes mantidos por pessoas, empresas e outros detentores abrangidos. Não inclui as contas correntes das instituições financeiras no Banco do Japão."
+        },
+        {
+          "h": "Empréstimos e depósitos bancários",
+          "text": "Quando um banco concede um empréstimo, cria-se um depósito na conta do tomador. A demanda por crédito e a disposição dos bancos para emprestar também influenciam a quantidade de dinheiro."
+        },
+        {
+          "h": "Sem aumento proporcional automático",
+          "text": "O aumento dos saldos em contas no Banco do Japão não faz os depósitos de famílias e empresas crescerem automaticamente na mesma proporção."
+        }
+      ]
+    },
+    {
+      "title": "Mais dinheiro significa inflação?",
+      "subtitle": "Mais dinheiro nem sempre provoca preços mais altos",
+      "blocks": [
+        {
+          "h": "Dinheiro é apenas um dos fatores",
+          "text": "O efeito sobre os preços não depende só da quantidade de dinheiro. O comportamento dos gastos e a oferta de bens e serviços também importam."
+        },
+        {
+          "h": "A velocidade com que o dinheiro é gasto",
+          "text": "Quanto vai para consumo e investimento?"
+        },
+        {
+          "h": "O equilíbrio entre oferta e demanda",
+          "text": "A oferta é suficiente para atender ao que as pessoas querem comprar?"
+        },
+        {
+          "h": "Juros, crédito e expectativas de inflação",
+          "text": "Como mudam as decisões de tomar crédito e gastar?"
+        },
+        {
+          "h": "Como interpretar o indicador",
+          "text": "O estoque monetário mede saldos de dinheiro. Analise sua relação com os preços junto com o ritmo dos gastos e a capacidade produtiva."
+        }
+      ]
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "什么是货币供应量？",
+      "subtitle": "个人、企业等主体持有的货币数量",
+      "blocks": [
+        {
+          "h": "现金与存款等余额",
+          "text": "货币供应量通过汇总现金、存款等余额，观察整个经济中的货币数量。纳入的货币范围不同，形成的指标也不同。"
+        },
+        {
+          "h": "日本使用“货币存量”这一名称",
+          "text": "日本银行于2008年调整统计，将“货币供应量统计”更名为“货币存量统计”。"
+        },
+        {
+          "h": "主要持有主体",
+          "text": "主要包括个人、一般非金融企业及地方政府等。金融机构、中央政府持有的存款等不纳入统计。"
+        }
+      ]
+    },
+    {
+      "title": "日本M1、M2与M3的区别",
+      "subtitle": "不仅金融产品不同，纳入的机构范围也不同",
+      "blocks": [
+        {
+          "h": "M1：现金＋活期存款等",
+          "text": "包括现金、普通存款、支票存款等，主要是容易直接用于支付的货币。涵盖包括日本邮政银行在内的全部存款类金融机构。"
+        },
+        {
+          "h": "M2：现金＋存款货币＋准货币＋CD",
+          "text": "以日本国内银行等机构为统计对象。包括定期存款、外币存款等，但不包括日本邮政银行等机构。"
+        },
+        {
+          "h": "M3：比M2涵盖更多金融机构",
+          "text": "还包括日本邮政银行、信用组合、农业合作社等。纳入的金融产品种类与M2相同。"
+        },
+        {
+          "h": "重要定义",
+          "text": "CD指可转让定期存单。准货币包括定期存款、外币存款等。\nM1与M2涵盖的金融机构也不同。在日本，不能简单认为“M1＋定期存款＝M2”。"
+        }
+      ]
+    },
+    {
+      "title": "与基础货币的区别",
+      "subtitle": "两种不同的货币指标",
+      "blocks": [
+        {
+          "h": "基础货币",
+          "text": "由中央银行供给的货币。在日本，是日本银行券发行余额、流通硬币及金融机构在日本银行的活期账户余额之和。"
+        },
+        {
+          "h": "货币存量",
+          "text": "个人、企业等主体持有的现金、存款等余额。不包括金融机构在日本银行持有的活期账户余额。"
+        },
+        {
+          "h": "银行贷款与存款",
+          "text": "银行发放贷款时，借款人的账户中会形成存款。贷款需求及银行的放贷意愿等，也会影响货币数量。"
+        },
+        {
+          "h": "不会自动同比例增加",
+          "text": "金融机构在日本银行的账户余额增加，并不意味着个人与企业的存款会自动按相同比例增长。"
+        }
+      ]
+    },
+    {
+      "title": "货币增加就会通胀吗？",
+      "subtitle": "货币数量增加，并不必然导致物价上涨",
+      "blocks": [
+        {
+          "h": "货币数量并非唯一因素",
+          "text": "对物价的影响，还与支出变化以及商品和服务的供给有关。"
+        },
+        {
+          "h": "货币被使用的速度",
+          "text": "有多少资金流入消费与投资？"
+        },
+        {
+          "h": "供需平衡",
+          "text": "相对于人们想购买的数量，供给是否充足？"
+        },
+        {
+          "h": "利率、贷款与物价预期",
+          "text": "借款及支出决策如何变化？"
+        },
+        {
+          "h": "如何解读指标",
+          "text": "货币存量表示货币余额。观察其与物价的关系时，应结合支出力度与供给能力。"
+        }
+      ]
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "什麼是貨幣供給量？",
+      "subtitle": "個人、企業等主體持有的貨幣數量",
+      "blocks": [
+        {
+          "h": "現金與存款等餘額",
+          "text": "貨幣供給量透過彙總現金、存款等餘額，觀察整體經濟中的貨幣數量。納入的貨幣範圍不同，形成的指標也不同。"
+        },
+        {
+          "h": "日本使用「貨幣存量」這一名稱",
+          "text": "日本銀行於2008年調整統計，將「貨幣供給量統計」更名為「貨幣存量統計」。"
+        },
+        {
+          "h": "主要持有主體",
+          "text": "主要包括個人、一般非金融企業及地方政府等。金融機構、中央政府持有的存款等不納入統計。"
+        }
+      ]
+    },
+    {
+      "title": "日本M1、M2與M3的區別",
+      "subtitle": "不僅金融商品不同，納入的機構範圍也不同",
+      "blocks": [
+        {
+          "h": "M1：現金＋活期存款等",
+          "text": "包括現金、普通存款、支票存款等，主要是容易直接用於支付的貨幣。涵蓋包括日本郵政銀行在內的全部存款類金融機構。"
+        },
+        {
+          "h": "M2：現金＋存款貨幣＋準貨幣＋CD",
+          "text": "以日本國內銀行等機構為統計對象。包括定期存款、外幣存款等，但不包括日本郵政銀行等機構。"
+        },
+        {
+          "h": "M3：比M2涵蓋更多金融機構",
+          "text": "還包括日本郵政銀行、信用合作社、農業合作社等。納入的金融商品種類與M2相同。"
+        },
+        {
+          "h": "重要定義",
+          "text": "CD指可轉讓定期存單。準貨幣包括定期存款、外幣存款等。\nM1與M2涵蓋的金融機構也不同。在日本，不能簡單認為「M1＋定期存款＝M2」。"
+        }
+      ]
+    },
+    {
+      "title": "與貨幣基數的區別",
+      "subtitle": "兩種不同的貨幣指標",
+      "blocks": [
+        {
+          "h": "貨幣基數",
+          "text": "由中央銀行供給的貨幣。在日本，是日本銀行券發行餘額、流通硬幣及金融機構在日本銀行的活期帳戶餘額之和。"
+        },
+        {
+          "h": "貨幣存量",
+          "text": "個人、企業等主體持有的現金、存款等餘額。不包括金融機構在日本銀行持有的活期帳戶餘額。"
+        },
+        {
+          "h": "銀行貸款與存款",
+          "text": "銀行發放貸款時，借款人的帳戶中會形成存款。貸款需求及銀行的放貸意願等，也會影響貨幣數量。"
+        },
+        {
+          "h": "不會自動同比例增加",
+          "text": "金融機構在日本銀行的帳戶餘額增加，並不表示個人與企業的存款會自動按相同比例成長。"
+        }
+      ]
+    },
+    {
+      "title": "貨幣增加就會通膨嗎？",
+      "subtitle": "貨幣數量增加，並不必然導致物價上漲",
+      "blocks": [
+        {
+          "h": "貨幣數量並非唯一因素",
+          "text": "對物價的影響，還與支出變化以及商品和服務的供給有關。"
+        },
+        {
+          "h": "貨幣被使用的速度",
+          "text": "有多少資金流入消費與投資？"
+        },
+        {
+          "h": "供需平衡",
+          "text": "相對於人們想購買的數量，供給是否充足？"
+        },
+        {
+          "h": "利率、貸款與物價預期",
+          "text": "借款及支出決策如何變化？"
+        },
+        {
+          "h": "如何解讀指標",
+          "text": "貨幣存量表示貨幣餘額。觀察其與物價的關係時，應結合支出力道與供給能力。"
+        }
+      ]
+    }
+  ]
+}
