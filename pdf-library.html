@@ -66,11 +66,64 @@ html{scroll-behavior:smooth}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 footer{padding:28px;text-align:center;border-top:1px solid #302819;color:#777;font-size:12px}
 </style>
-</head>
+<style>.site-header{display:block;padding:0;gap:normal;flex-wrap:nowrap}.site-header .wrap{width:min(1080px,92%);margin:auto}.site-header a{letter-spacing:normal;font-weight:400;text-decoration:none}/* ヘッダー */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(8,8,8,.96);
+  border-bottom:1px solid rgba(212,175,55,.28);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)
+}
+.site-header::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#d4af37 30%,#f4d77b 50%,#d4af37 70%,transparent)}
+.site-header .brand-row{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:88px}
+.site-header .logo{display:inline-block;flex-shrink:0;color:#f4d77b;font-size:24px;font-weight:900;letter-spacing:.18em;line-height:1.2}
+.site-header .desktop-links{display:flex;align-items:center;gap:22px;margin-left:auto}
+.site-header .desktop-links a{font-size:13px;color:#bbb;white-space:nowrap;transition:color .2s}
+.site-header .desktop-links a:hover{color:#f4d77b}
+.site-header .account-link{display:inline-flex;align-items:center;justify-content:center;gap:8px;flex-shrink:0;min-height:40px;padding:7px 15px;border:1px solid #655329;border-radius:5px;color:#f4d77b;font-size:12px;font-weight:600;letter-spacing:.04em;transition:background .2s,border-color .2s}
+.site-header .account-link:hover{background:#211c10;border-color:#d4af37}
+.site-header .account-link svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.5}
+.site-header .mobile-links{display:none}
+.site-header a:focus-visible{outline:2px solid #f4d77b;outline-offset:4px}
+@media(max-width:960px){
+  .site-header .brand-row{min-height:72px;gap:16px}
+  .site-header .logo{font-size:23px;letter-spacing:.16em}
+  .site-header .desktop-links{display:none}
+  .site-header .account-link{min-height:38px;padding:6px 12px}
+  .site-header .mobile-links{display:flex;align-items:center;gap:12px;overflow-x:auto;white-space:nowrap;flex-wrap:nowrap;padding:0 4% 0;border-top:1px solid #211e16;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .site-header .mobile-links::-webkit-scrollbar{display:none}
+  .site-header .mobile-links a{display:inline-flex;align-items:center;flex-shrink:0;min-height:48px;padding:0 2px;color:#c5b995;font-size:13px;letter-spacing:.03em}
+  .site-header .mobile-links a:hover{color:#f4d77b}
+}
+@media(prefers-reduced-motion:reduce){.site-header a{transition:none}}
+
+.locale-switch{display:inline-flex;align-items:center;flex-shrink:0;gap:3px;border:1px solid #78612e;border-radius:7px;padding:3px;color:#f4d77b;font-size:12px;font-weight:800;letter-spacing:.05em}.locale-switch span,.locale-switch a{padding:6px 7px;border-radius:4px;line-height:1.4}.locale-switch span{background:#d4af37;color:#080808}.locale-switch a{color:#f4d77b}.locale-switch a:hover{background:#292111;text-decoration:none}.locale-switch a:focus-visible{outline:2px solid #fff;outline-offset:2px}@media(max-width:600px){.site-header .brand-row{gap:8px}.site-header .logo{font-size:19px;letter-spacing:.09em}.site-header .account-link{padding:6px 8px;font-size:11px}.locale-switch{font-size:11px}.locale-switch span,.locale-switch a{padding:5px 5px}}
+.site-header .desktop-links a[aria-current="page"],.site-header .mobile-links a[aria-current="page"]{color:#f4d77b}.site-header .logo{white-space:nowrap}@media(max-width:720px){.site-header .brand-row{gap:7px}.site-header .logo{font-size:clamp(15px,4.2vw,20px)}.site-header .account-link{font-size:11px}}</style><link rel="stylesheet" href="/assets/language-picker.css"><script src="/assets/language-picker.js" defer></script><style>footer .library-nav{justify-content:center;margin-bottom:18px}</style></head>
 <body>
-<header>
-<a class="logo" href="/">TODOROKI</a>
-<nav class="library-nav" aria-label="ページ移動"><a class="back" href="/">トップページ</a><a class="back" href="/glossary.html">用語辞典</a><a class="back" href="/pdf-library.html" aria-current="page">PDFライブラリー</a><a class="back" href="/login.html">ログイン</a></nav>
+<header class="site-header">
+  <div class="wrap brand-row">
+    <a class="logo" href="/" aria-label="TODOROKI トップページ">TODOROKI</a>
+    <nav class="desktop-links" aria-label="メインメニュー">
+        <a href="/#articles">記事</a>
+        <a href="/#themes">テーマ</a>
+        <a href="/glossary.html">用語辞典</a>
+        <a href="/pdf-library" aria-current="page">PDF資料</a>
+        <a href="/#about">TODOROKIについて</a>
+        <a href="/#social">SNS</a>
+    </nav>
+    <label class="todoroki-language-picker">🌐 <select data-todoroki-language aria-label="表示言語 / Language"><option value="ja">日本語</option><option value="en">English</option><option value="es">Español</option><option value="pt">Português</option></select></label>
+    <a class="account-link" href="/login.html">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="6" r="3"/><path d="M4 18v-2a6 6 0 0 1 12 0v2"/></svg>
+      ログイン
+    </a>
+  </div>
+  <nav class="mobile-links" aria-label="メインメニュー">
+        <a href="/#articles">記事</a>
+        <a href="/#themes">テーマ</a>
+        <a href="/glossary.html">用語辞典</a>
+        <a href="/pdf-library" aria-current="page">PDF資料</a>
+        <a href="/#about" aria-label="TODOROKIについて">このサイト</a>
+        <a href="/#social">SNS</a>
+  </nav>
 </header>
 <main>
 <div class="kicker">TODOROKI ARCHIVE</div>
@@ -97,7 +150,7 @@ footer{padding:28px;text-align:center;border-top:1px solid #302819;color:#777;fo
 <div id="grid" class="grid"></div>
 <div class="back-to-list"><a href="#grid">↑ PDF一覧の先頭へ</a></div>
 </main>
-<footer>© TODOROKI</footer>
+<footer><nav class="library-nav" aria-label="ページ移動"><a class="back" href="/">トップページ</a><a class="back" href="/glossary.html">用語辞典</a><a class="back" href="/pdf-library.html" aria-current="page">PDFライブラリー</a><a class="back" href="/login.html">ログイン</a></nav><p>© TODOROKI</p></footer>
 <script>
 const owner = "2szzrkyhkt-commits";
 const repo = "TODOROKI";
