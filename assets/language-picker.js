@@ -1,7 +1,7 @@
 (function(){'use strict';
 const locales=[['ja','日本語'],['en','English'],['es','Español'],['pt','Português'],['zh-Hant','繁體中文'],['zh-Hans','简体中文']];
 const prefixes=['en','es','pt','zh-Hant','zh-Hans'];
-const supported=new Set(['investment','price-value','margin-of-safety','investment-list','economy-list','business-list','inflation','glossary','pdf-library']);
+const supported=new Set(['investment','price-value','margin-of-safety','investment-list','economy-list','business-list','inflation','interest-rate','glossary','pdf-library']);
 const parts=location.pathname.replace(/\/$/,'').replace(/\.html$/,'').split('/').filter(Boolean);
 const current=prefixes.includes(parts[0])?parts[0]:'ja';
 const slug=current==='ja'?(parts[0]||''):(parts[1]||'');
