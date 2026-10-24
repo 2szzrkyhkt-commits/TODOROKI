@@ -1,0 +1,317 @@
+{
+  "en": [
+    {
+      "title": "What is EUV?",
+      "subtitle": "Extreme Ultraviolet",
+      "blocks": [
+        {
+          "h": "Lithography that enables smaller semiconductor features",
+          "text": "EUV is extreme ultraviolet light with a wavelength of 13.5 nm. It is used in lithography to transfer tiny circuit patterns onto semiconductor wafers."
+        },
+        {
+          "h": "DUV and EUV compared",
+          "table": [
+            [
+              "Technology",
+              "Wavelength and uses"
+            ],
+            [
+              "DUV (deep ultraviolet)",
+              "ArF sources: 193 nm. Used in the manufacture of a broad range of semiconductors."
+            ],
+            [
+              "EUV (extreme ultraviolet)",
+              "13.5 nm. Used for advanced logic chips and some advanced DRAM."
+            ]
+          ]
+        },
+        {
+          "h": "Why EUV matters",
+          "text": "Miniaturization: The shorter wavelength makes it easier to form finer patterns.\nFewer process steps: On some layers, EUV reduces the need for multiple exposures.\nTechnology barriers: Light sources, mirrors, masks and inspection require highly advanced technologies."
+        }
+      ]
+    },
+    {
+      "title": "The EUV industry",
+      "subtitle": "Companies behind lithography, supporting equipment and chip production",
+      "blocks": [
+        {
+          "h": "ASML / Netherlands",
+          "text": "Holds a monopoly position in the commercial supply of EUV lithography systems."
+        },
+        {
+          "h": "TSMC / Taiwan",
+          "text": "Mass-produces leading-edge logic semiconductors."
+        },
+        {
+          "h": "Samsung Electronics / South Korea",
+          "text": "Manufactures advanced logic semiconductors and DRAM."
+        },
+        {
+          "h": "SK hynix / South Korea",
+          "text": "Manufactures advanced DRAM."
+        },
+        {
+          "h": "Tokyo Electron / Japan",
+          "text": "Supplies supporting semiconductor production equipment, including coating and developing systems."
+        },
+        {
+          "h": "Lasertec / Japan",
+          "text": "Supplies inspection systems for EUV masks."
+        }
+      ]
+    }
+  ],
+  "es": [
+    {
+      "title": "¿Qué es EUV?",
+      "subtitle": "Extreme Ultraviolet / Ultravioleta extremo",
+      "blocks": [
+        {
+          "h": "Litografía para miniaturizar semiconductores",
+          "text": "EUV es luz ultravioleta extrema con una longitud de onda de 13,5 nm. Se utiliza en litografía para transferir patrones diminutos de circuitos a las obleas semiconductoras."
+        },
+        {
+          "h": "Comparación entre DUV y EUV",
+          "table": [
+            [
+              "Tecnología",
+              "Longitud de onda y usos"
+            ],
+            [
+              "DUV (ultravioleta profundo)",
+              "Fuentes ArF: 193 nm. Se utiliza para fabricar una amplia variedad de semiconductores."
+            ],
+            [
+              "EUV (ultravioleta extremo)",
+              "13,5 nm. Se utiliza en chips lógicos avanzados y algunas DRAM avanzadas."
+            ]
+          ]
+        },
+        {
+          "h": "Por qué EUV es importante",
+          "text": "Miniaturización: Una longitud de onda menor facilita la formación de patrones más finos.\nMenos etapas: En algunas capas, reduce la necesidad de múltiples exposiciones.\nBarreras tecnológicas: Las fuentes de luz, los espejos, las máscaras y la inspección exigen tecnologías muy avanzadas."
+        }
+      ]
+    },
+    {
+      "title": "La industria de EUV",
+      "subtitle": "Litografía, equipos auxiliares y fabricación de chips",
+      "blocks": [
+        {
+          "h": "ASML / Países Bajos",
+          "text": "Ocupa una posición de monopolio en el suministro comercial de sistemas de litografía EUV."
+        },
+        {
+          "h": "TSMC / Taiwán",
+          "text": "Fabrica en serie semiconductores lógicos de vanguardia."
+        },
+        {
+          "h": "Samsung Electronics / Corea del Sur",
+          "text": "Fabrica semiconductores lógicos avanzados y DRAM."
+        },
+        {
+          "h": "SK hynix / Corea del Sur",
+          "text": "Fabrica DRAM avanzada."
+        },
+        {
+          "h": "Tokyo Electron / Japón",
+          "text": "Suministra equipos auxiliares para fabricar semiconductores, incluidos sistemas de recubrimiento y revelado."
+        },
+        {
+          "h": "Lasertec / Japón",
+          "text": "Suministra sistemas de inspección de máscaras EUV."
+        }
+      ]
+    }
+  ],
+  "pt": [
+    {
+      "title": "O que é EUV?",
+      "subtitle": "Extreme Ultraviolet / Ultravioleta extremo",
+      "blocks": [
+        {
+          "h": "Litografia que permite miniaturizar semicondutores",
+          "text": "EUV é luz ultravioleta extrema com comprimento de onda de 13,5 nm. Ela é usada na litografia para transferir pequenos padrões de circuitos para wafers semicondutores."
+        },
+        {
+          "h": "Comparação entre DUV e EUV",
+          "table": [
+            [
+              "Tecnologia",
+              "Comprimento de onda e usos"
+            ],
+            [
+              "DUV (ultravioleta profundo)",
+              "Fontes ArF: 193 nm. Usada para fabricar uma ampla variedade de semicondutores."
+            ],
+            [
+              "EUV (ultravioleta extremo)",
+              "13,5 nm. Usada em chips lógicos avançados e em algumas DRAMs avançadas."
+            ]
+          ]
+        },
+        {
+          "h": "Por que EUV é importante",
+          "text": "Miniaturização: O comprimento de onda menor facilita a formação de padrões mais finos.\nMenos etapas: Em algumas camadas, reduz a necessidade de exposições múltiplas.\nBarreiras tecnológicas: Fontes de luz, espelhos, máscaras e inspeção exigem tecnologias muito avançadas."
+        }
+      ]
+    },
+    {
+      "title": "A indústria de EUV",
+      "subtitle": "Litografia, equipamentos de apoio e fabricação de chips",
+      "blocks": [
+        {
+          "h": "ASML / Países Baixos",
+          "text": "Ocupa uma posição de monopólio no fornecimento comercial de sistemas de litografia EUV."
+        },
+        {
+          "h": "TSMC / Taiwan",
+          "text": "Produz em massa semicondutores lógicos de ponta."
+        },
+        {
+          "h": "Samsung Electronics / Coreia do Sul",
+          "text": "Fabrica semicondutores lógicos avançados e DRAM."
+        },
+        {
+          "h": "SK hynix / Coreia do Sul",
+          "text": "Fabrica DRAM avançada."
+        },
+        {
+          "h": "Tokyo Electron / Japão",
+          "text": "Fornece equipamentos de apoio à fabricação de semicondutores, incluindo sistemas de revestimento e revelação."
+        },
+        {
+          "h": "Lasertec / Japão",
+          "text": "Fornece sistemas de inspeção de máscaras EUV."
+        }
+      ]
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "什么是EUV？",
+      "subtitle": "Extreme Ultraviolet / 极紫外光",
+      "blocks": [
+        {
+          "h": "支持半导体微缩的光刻技术",
+          "text": "EUV是波长为13.5 nm的极紫外光。它用于光刻，将微细电路图案转移到半导体晶圆上。"
+        },
+        {
+          "h": "DUV与EUV的比较",
+          "table": [
+            [
+              "技术",
+              "波长与用途"
+            ],
+            [
+              "DUV（深紫外光）",
+              "ArF光源的波长为193 nm，广泛用于各类半导体制造。"
+            ],
+            [
+              "EUV（极紫外光）",
+              "波长为13.5 nm，用于先进逻辑芯片及部分先进DRAM的制造。"
+            ]
+          ]
+        },
+        {
+          "h": "EUV为何重要",
+          "text": "微缩：更短的波长，有利于形成更精细的图案。\n减少工序：在部分层中，可以减少需要多次曝光的工序。\n技术壁垒：光源、反射镜、掩模及检测，都需要高度先进的技术。"
+        }
+      ]
+    },
+    {
+      "title": "EUV产业结构",
+      "subtitle": "光刻设备、配套设备与半导体制造企业",
+      "blocks": [
+        {
+          "h": "ASML / 荷兰",
+          "text": "在EUV光刻设备的商业供应领域占据垄断地位。"
+        },
+        {
+          "h": "TSMC / 台湾",
+          "text": "负责最先进逻辑半导体的量产。"
+        },
+        {
+          "h": "Samsung Electronics / 韩国",
+          "text": "制造先进逻辑半导体与DRAM。"
+        },
+        {
+          "h": "SK hynix / 韩国",
+          "text": "制造先进DRAM。"
+        },
+        {
+          "h": "Tokyo Electron / 日本",
+          "text": "供应涂胶、显影设备等半导体制造配套设备。"
+        },
+        {
+          "h": "Lasertec / 日本",
+          "text": "供应EUV掩模检测设备。"
+        }
+      ]
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "什麼是EUV？",
+      "subtitle": "Extreme Ultraviolet / 極紫外光",
+      "blocks": [
+        {
+          "h": "支持半導體微縮的微影技術",
+          "text": "EUV是波長為13.5 nm的極紫外光。它用於微影，將微細電路圖案轉移到半導體晶圓上。"
+        },
+        {
+          "h": "DUV與EUV的比較",
+          "table": [
+            [
+              "技術",
+              "波長與用途"
+            ],
+            [
+              "DUV（深紫外光）",
+              "ArF光源的波長為193 nm，廣泛用於各類半導體製造。"
+            ],
+            [
+              "EUV（極紫外光）",
+              "波長為13.5 nm，用於先進邏輯晶片及部分先進DRAM的製造。"
+            ]
+          ]
+        },
+        {
+          "h": "EUV為何重要",
+          "text": "微縮：更短的波長，有利於形成更精細的圖案。\n減少製程：在部分層中，可以減少需要多次曝光的製程步驟。\n技術門檻：光源、反射鏡、光罩及檢測，都需要高度先進的技術。"
+        }
+      ]
+    },
+    {
+      "title": "EUV產業結構",
+      "subtitle": "微影設備、周邊設備與半導體製造企業",
+      "blocks": [
+        {
+          "h": "ASML / 荷蘭",
+          "text": "在EUV微影設備的商業供應領域占據獨占地位。"
+        },
+        {
+          "h": "TSMC / 台灣",
+          "text": "負責最先進邏輯半導體的量產。"
+        },
+        {
+          "h": "Samsung Electronics / 韓國",
+          "text": "製造先進邏輯半導體與DRAM。"
+        },
+        {
+          "h": "SK hynix / 韓國",
+          "text": "製造先進DRAM。"
+        },
+        {
+          "h": "Tokyo Electron / 日本",
+          "text": "供應塗布、顯影設備等半導體製造周邊設備。"
+        },
+        {
+          "h": "Lasertec / 日本",
+          "text": "供應EUV光罩檢測設備。"
+        }
+      ]
+    }
+  ]
+}

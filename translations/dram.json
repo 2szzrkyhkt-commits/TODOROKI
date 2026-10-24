@@ -1,0 +1,452 @@
+{
+  "en": [
+    {
+      "title": "What is DRAM?",
+      "subtitle": "Dynamic Random Access Memory / Volatile semiconductor memory",
+      "blocks": [
+        {
+          "h": "01  Basic structure",
+          "text": "DRAM temporarily stores, at high speed, the data processed by CPUs and GPUs. It holds information as electrical charge and requires periodic refresh operations. It is volatile memory: stored data disappear when power is switched off."
+        },
+        {
+          "h": "02  DRAM versus NAND flash",
+          "table": [
+            [
+              "Feature",
+              "DRAM",
+              "NAND"
+            ],
+            [
+              "Main use",
+              "Working memory",
+              "SSDs and storage"
+            ],
+            [
+              "Power off",
+              "Data lost",
+              "Data retained"
+            ],
+            [
+              "Access speed",
+              "Fast",
+              "Slower than DRAM"
+            ],
+            [
+              "Cost per unit of capacity",
+              "Generally higher",
+              "Generally lower"
+            ]
+          ]
+        },
+        {
+          "h": "03  Representative DRAM standards",
+          "text": "DDR5: A main-memory standard for PCs and servers.\nLPDDR5X: A low-power standard for smartphones and thin devices.\nHBM: Stacked DRAM that provides high data-transfer bandwidth."
+        }
+      ]
+    },
+    {
+      "title": "The DRAM industry",
+      "subtitle": "AI demand, major manufacturers and market cycles",
+      "blocks": [
+        {
+          "h": "04  AI and HBM",
+          "text": "Generative AI training and inference require large volumes of data to reach GPUs at high speed. HBM is placed close to the GPU to provide wide memory bandwidth. If data delivery cannot keep up, the GPU’s computing power cannot be fully used.\nAI processing: GPU computation supported by high-speed HBM data delivery."
+        },
+        {
+          "h": "05  Major DRAM manufacturers",
+          "table": [
+            [
+              "Company",
+              "Location",
+              "Activities"
+            ],
+            [
+              "Samsung Electronics",
+              "South Korea",
+              "Broad DRAM and NAND business"
+            ],
+            [
+              "SK hynix",
+              "South Korea",
+              "High-performance memory, including HBM"
+            ],
+            [
+              "Micron Technology",
+              "United States",
+              "DRAM, HBM and NAND"
+            ],
+            [
+              "Nanya Technology",
+              "Taiwan",
+              "Primarily conventional DRAM"
+            ]
+          ]
+        },
+        {
+          "h": "06  Industry characteristics and price cycles",
+          "text": "Oligopoly: Three major companies supply most of the world’s DRAM.\nSupply and demand: Oversupply pushes prices down; tight supply pushes prices up.\nCapital expenditure: Shrinking features and expanding capacity require substantial investment.\nProduction allocation: Expanding HBM output can also affect conventional DRAM supply."
+        }
+      ]
+    }
+  ],
+  "es": [
+    {
+      "title": "¿Qué es la DRAM?",
+      "subtitle": "Dynamic Random Access Memory / Memoria semiconductora volátil",
+      "blocks": [
+        {
+          "h": "01  Estructura básica",
+          "text": "La DRAM almacena temporalmente y a alta velocidad los datos que procesan las CPU y GPU. Conserva la información mediante cargas eléctricas y necesita operaciones periódicas de refresco. Es una memoria volátil: al cortar la alimentación, los datos desaparecen."
+        },
+        {
+          "h": "02  DRAM frente a memoria flash NAND",
+          "table": [
+            [
+              "Característica",
+              "DRAM",
+              "NAND"
+            ],
+            [
+              "Uso principal",
+              "Memoria de trabajo",
+              "SSD y almacenamiento"
+            ],
+            [
+              "Sin alimentación",
+              "Pierde los datos",
+              "Conserva los datos"
+            ],
+            [
+              "Velocidad de acceso",
+              "Alta",
+              "Inferior a la DRAM"
+            ],
+            [
+              "Coste por capacidad",
+              "Suele ser mayor",
+              "Suele ser menor"
+            ]
+          ]
+        },
+        {
+          "h": "03  Estándares representativos de DRAM",
+          "text": "DDR5: Estándar de memoria principal para ordenadores y servidores.\nLPDDR5X: Estándar de bajo consumo para teléfonos y dispositivos delgados.\nHBM: DRAM apilada que ofrece un gran ancho de banda de transferencia."
+        }
+      ]
+    },
+    {
+      "title": "La industria de la DRAM",
+      "subtitle": "Demanda de IA, fabricantes principales y ciclos de mercado",
+      "blocks": [
+        {
+          "h": "04  Relación entre IA y HBM",
+          "text": "El entrenamiento y la inferencia de IA generativa exigen suministrar grandes volúmenes de datos a las GPU a alta velocidad. La HBM se coloca cerca de la GPU para ofrecer un gran ancho de banda. Si el suministro de datos es insuficiente, no se aprovecha toda la capacidad de cálculo de la GPU.\nProcesamiento de IA: cálculo de GPU apoyado por datos de alta velocidad desde la HBM."
+        },
+        {
+          "h": "05  Principales fabricantes de DRAM",
+          "table": [
+            [
+              "Empresa",
+              "Ubicación",
+              "Actividad"
+            ],
+            [
+              "Samsung Electronics",
+              "Corea del Sur",
+              "Amplia oferta de DRAM y NAND"
+            ],
+            [
+              "SK hynix",
+              "Corea del Sur",
+              "Memoria de alto rendimiento, incluida HBM"
+            ],
+            [
+              "Micron Technology",
+              "Estados Unidos",
+              "DRAM, HBM y NAND"
+            ],
+            [
+              "Nanya Technology",
+              "Taiwán",
+              "Principalmente DRAM convencional"
+            ]
+          ]
+        },
+        {
+          "h": "06  Características y ciclos de precios",
+          "text": "Oligopolio: Tres grandes empresas suministran la mayor parte de la DRAM mundial.\nOferta y demanda: El exceso de oferta baja los precios; la escasez los eleva.\nInversión: La miniaturización y la ampliación de capacidad exigen grandes inversiones.\nDistribución de la producción: Aumentar la fabricación de HBM también puede afectar a la oferta de DRAM convencional."
+        }
+      ]
+    }
+  ],
+  "pt": [
+    {
+      "title": "O que é DRAM?",
+      "subtitle": "Dynamic Random Access Memory / Memória semicondutora volátil",
+      "blocks": [
+        {
+          "h": "01  Estrutura básica",
+          "text": "A DRAM armazena temporariamente, em alta velocidade, os dados processados por CPUs e GPUs. Ela mantém informações como cargas elétricas e precisa de operações periódicas de atualização. É uma memória volátil: os dados desaparecem quando a energia é desligada."
+        },
+        {
+          "h": "02  DRAM e memória flash NAND",
+          "table": [
+            [
+              "Característica",
+              "DRAM",
+              "NAND"
+            ],
+            [
+              "Uso principal",
+              "Memória de trabalho",
+              "SSDs e armazenamento"
+            ],
+            [
+              "Sem energia",
+              "Perde os dados",
+              "Mantém os dados"
+            ],
+            [
+              "Velocidade de acesso",
+              "Alta",
+              "Menor que a DRAM"
+            ],
+            [
+              "Custo por capacidade",
+              "Geralmente maior",
+              "Geralmente menor"
+            ]
+          ]
+        },
+        {
+          "h": "03  Padrões representativos de DRAM",
+          "text": "DDR5: Padrão de memória principal para computadores e servidores.\nLPDDR5X: Padrão de baixo consumo para smartphones e dispositivos finos.\nHBM: DRAM empilhada que oferece alta largura de banda para transferência de dados."
+        }
+      ]
+    },
+    {
+      "title": "A indústria de DRAM",
+      "subtitle": "Demanda de IA, principais fabricantes e ciclos de mercado",
+      "blocks": [
+        {
+          "h": "04  A relação entre IA e HBM",
+          "text": "O treinamento e a inferência de IA generativa exigem grandes volumes de dados chegando às GPUs em alta velocidade. A HBM fica próxima à GPU para oferecer ampla largura de banda. Quando o fornecimento de dados não acompanha a demanda, a capacidade de cálculo da GPU não é totalmente aproveitada.\nProcessamento de IA: cálculo da GPU apoiado pelo fornecimento rápido de dados da HBM."
+        },
+        {
+          "h": "05  Principais fabricantes de DRAM",
+          "table": [
+            [
+              "Empresa",
+              "Localização",
+              "Atividades"
+            ],
+            [
+              "Samsung Electronics",
+              "Coreia do Sul",
+              "Ampla atuação em DRAM e NAND"
+            ],
+            [
+              "SK hynix",
+              "Coreia do Sul",
+              "Memória de alto desempenho, incluindo HBM"
+            ],
+            [
+              "Micron Technology",
+              "Estados Unidos",
+              "DRAM, HBM e NAND"
+            ],
+            [
+              "Nanya Technology",
+              "Taiwan",
+              "Principalmente DRAM convencional"
+            ]
+          ]
+        },
+        {
+          "h": "06  Características e ciclos de preços",
+          "text": "Oligopólio: Três grandes empresas fornecem a maior parte da DRAM mundial.\nOferta e demanda: Excesso de oferta reduz preços; escassez os eleva.\nInvestimento: A miniaturização e a expansão de capacidade exigem grandes investimentos.\nAlocação da produção: A expansão da HBM também pode afetar a oferta de DRAM convencional."
+        }
+      ]
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "什么是DRAM？",
+      "subtitle": "Dynamic Random Access Memory / 易失性半导体存储器",
+      "blocks": [
+        {
+          "h": "01  DRAM的基本结构",
+          "text": "DRAM用于临时、高速存储CPU和GPU处理的数据。它通过电荷保存信息，需要定期刷新。DRAM属于易失性存储器，断电后保存的数据会消失。"
+        },
+        {
+          "h": "02  DRAM与NAND闪存的比较",
+          "table": [
+            [
+              "比较项目",
+              "DRAM",
+              "NAND"
+            ],
+            [
+              "主要用途",
+              "工作内存",
+              "SSD与数据存储"
+            ],
+            [
+              "断电后",
+              "数据消失",
+              "数据保留"
+            ],
+            [
+              "访问速度",
+              "高速",
+              "慢于DRAM"
+            ],
+            [
+              "单位容量成本",
+              "通常较高",
+              "通常较低"
+            ]
+          ]
+        },
+        {
+          "h": "03  代表性DRAM标准",
+          "text": "DDR5：用于个人电脑与服务器的主存标准。\nLPDDR5X：用于智能手机及轻薄设备的低功耗标准。\nHBM：通过堆叠DRAM，实现高数据传输带宽。"
+        }
+      ]
+    },
+    {
+      "title": "DRAM产业结构",
+      "subtitle": "AI需求、主要厂商与市场周期",
+      "blocks": [
+        {
+          "h": "04  AI与HBM的关系",
+          "text": "生成式AI的训练与推理，需要向GPU高速提供大量数据。HBM部署在GPU附近，以提供较大的内存带宽。如果数据供应跟不上，就无法充分发挥GPU的计算能力。\nAI处理：GPU运算，由HBM高速供给数据。"
+        },
+        {
+          "h": "05  DRAM主要厂商",
+          "table": [
+            [
+              "企业",
+              "所在地",
+              "主要业务"
+            ],
+            [
+              "Samsung Electronics",
+              "韩国",
+              "广泛布局DRAM与NAND"
+            ],
+            [
+              "SK hynix",
+              "韩国",
+              "包括HBM的高性能存储器"
+            ],
+            [
+              "Micron Technology",
+              "美国",
+              "DRAM、HBM与NAND"
+            ],
+            [
+              "Nanya Technology",
+              "台湾",
+              "以通用DRAM为主"
+            ]
+          ]
+        },
+        {
+          "h": "06  产业特征与价格波动",
+          "text": "寡头结构：全球大部分DRAM由三家大型企业供应。\n供需周期：供给过剩时价格下跌，供应紧张时价格上涨。\n资本支出：制程微缩与产能扩张需要巨额投资。\n产能分配：扩大HBM产量，也可能影响通用DRAM的供应量。"
+        }
+      ]
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "什麼是DRAM？",
+      "subtitle": "Dynamic Random Access Memory / 揮發性半導體記憶體",
+      "blocks": [
+        {
+          "h": "01  DRAM的基本結構",
+          "text": "DRAM用於暫時、高速儲存CPU與GPU處理的資料。它透過電荷保存資訊，需要定期更新。DRAM屬於揮發性記憶體，斷電後儲存的資料會消失。"
+        },
+        {
+          "h": "02  DRAM與NAND快閃記憶體的比較",
+          "table": [
+            [
+              "比較項目",
+              "DRAM",
+              "NAND"
+            ],
+            [
+              "主要用途",
+              "工作記憶體",
+              "SSD與資料儲存"
+            ],
+            [
+              "斷電後",
+              "資料消失",
+              "資料保留"
+            ],
+            [
+              "存取速度",
+              "高速",
+              "慢於DRAM"
+            ],
+            [
+              "單位容量成本",
+              "通常較高",
+              "通常較低"
+            ]
+          ]
+        },
+        {
+          "h": "03  代表性DRAM標準",
+          "text": "DDR5：用於個人電腦與伺服器的主記憶體標準。\nLPDDR5X：用於智慧型手機及輕薄裝置的低功耗標準。\nHBM：透過堆疊DRAM，實現高資料傳輸頻寬。"
+        }
+      ]
+    },
+    {
+      "title": "DRAM產業結構",
+      "subtitle": "AI需求、主要廠商與市場循環",
+      "blocks": [
+        {
+          "h": "04  AI與HBM的關係",
+          "text": "生成式AI的訓練與推論，需要向GPU高速提供大量資料。HBM配置於GPU附近，以提供較大的記憶體頻寬。如果資料供應跟不上，就無法充分發揮GPU的運算能力。\nAI處理：GPU運算，由HBM高速供給資料。"
+        },
+        {
+          "h": "05  DRAM主要廠商",
+          "table": [
+            [
+              "企業",
+              "所在地",
+              "主要業務"
+            ],
+            [
+              "Samsung Electronics",
+              "韓國",
+              "廣泛布局DRAM與NAND"
+            ],
+            [
+              "SK hynix",
+              "韓國",
+              "包括HBM的高效能記憶體"
+            ],
+            [
+              "Micron Technology",
+              "美國",
+              "DRAM、HBM與NAND"
+            ],
+            [
+              "Nanya Technology",
+              "台灣",
+              "以通用DRAM為主"
+            ]
+          ]
+        },
+        {
+          "h": "06  產業特徵與價格波動",
+          "text": "寡占結構：全球大部分DRAM由三家大型企業供應。\n供需循環：供給過剩時價格下跌，供應緊張時價格上漲。\n資本支出：製程微縮與產能擴張需要巨額投資。\n產能分配：擴大HBM產量，也可能影響通用DRAM的供應量。"
+        }
+      ]
+    }
+  ]
+}
