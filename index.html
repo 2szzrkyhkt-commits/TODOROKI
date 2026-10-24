@@ -121,6 +121,7 @@ a {
 }
 @media(prefers-reduced-motion:reduce){.site-header a{transition:none}}
 
+.locale-switch{display:inline-flex;align-items:center;flex-shrink:0;gap:3px;border:1px solid #78612e;border-radius:7px;padding:3px;color:#f4d77b;font-size:12px;font-weight:800;letter-spacing:.05em}.locale-switch span,.locale-switch a{padding:6px 7px;border-radius:4px;line-height:1.4}.locale-switch span{background:#d4af37;color:#080808}.locale-switch a{color:#f4d77b}.locale-switch a:hover{background:#292111;text-decoration:none}.locale-switch a:focus-visible{outline:2px solid #fff;outline-offset:2px}@media(max-width:600px){.site-header .brand-row{gap:8px}.site-header .logo{font-size:19px;letter-spacing:.09em}.site-header .account-link{padding:6px 8px;font-size:11px}.locale-switch{font-size:11px}.locale-switch span,.locale-switch a{padding:5px 5px}}
 /* 表紙 */
 
 .hero {
@@ -419,6 +420,7 @@ footer {
         <a href="#about">TODOROKIについて</a>
         <a href="#social">SNS</a>
     </nav>
+    <nav class="locale-switch" aria-label="Language / 言語切替"><span aria-current="page">JP</span><a href="/en/" lang="en" aria-label="English">EN</a><a href="/es/" lang="es" aria-label="Español">ES</a><a href="/pt/" lang="pt" aria-label="Português">PT</a></nav>
     <a class="account-link" href="/login.html">
       <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="6" r="3"/><path d="M4 18v-2a6 6 0 0 1 12 0v2"/></svg>
       ログイン
