@@ -1,0 +1,302 @@
+{
+  "en": [
+    {
+      "title": "What happens to stocks when rates rise?",
+      "subtitle": "How higher interest rates reach the stock market",
+      "blocks": [
+        {
+          "h": "Higher rates can put downward pressure on stocks",
+          "text": "Rising interest rates affect the present value of future earnings, companies’ borrowing costs and the appeal of stocks relative to bonds and deposits."
+        },
+        {
+          "h": "The economy and earnings also matter",
+          "text": "Stocks can rise even while interest rates are increasing if economic activity or corporate earnings are strong."
+        },
+        {
+          "h": "The key question",
+          "text": "Why are interest rates rising?"
+        }
+      ]
+    },
+    {
+      "title": "Why higher rates can weigh on stocks",
+      "subtitle": "Four mechanisms that affect share prices",
+      "blocks": [
+        {
+          "h": "01  Lower theoretical equity values",
+          "text": "A higher discount rate reduces the present value of future earnings. Stocks whose value depends heavily on profits far in the future tend to be more sensitive."
+        },
+        {
+          "h": "02  Bonds and deposits become relatively attractive",
+          "text": "When yields on newly purchased bonds and similar assets rise, money may shift from stocks into bonds or deposits."
+        },
+        {
+          "h": "03  Higher financing costs for companies",
+          "text": "Interest costs rise on floating-rate borrowing and when loans are refinanced. Profits at companies that rely heavily on debt can come under pressure."
+        },
+        {
+          "h": "04  Slower consumption and investment",
+          "text": "Higher borrowing burdens can restrain household spending and business investment. Slower sales and profit growth can put downward pressure on stocks."
+        }
+      ]
+    },
+    {
+      "title": "Not every stock has to fall",
+      "subtitle": "Industry characteristics and the reason rates rise change the response",
+      "blocks": [
+        {
+          "h": "Companies that can face headwinds",
+          "text": "Growth stocks and high-P/E stocks: future earnings may receive lower valuations.\nProperty businesses and highly indebted companies: rising borrowing rates can add pressure.\nThe size of the impact depends on growth rates and borrowing terms."
+        },
+        {
+          "h": "Companies that may benefit",
+          "text": "Banks: higher lending rates may improve interest margins.\nInsurers: returns on newly invested funds may improve.\nHowever, falling prices of existing bond holdings and higher credit costs also matter."
+        },
+        {
+          "h": "The reason for higher rates matters",
+          "text": "Economic expansion: earnings may rise and stocks may advance.\nInflation restraint: tighter conditions may weigh on demand and profits.\nThe response also depends on whether a rate hike was already expected. Interest rates alone do not determine stock-price direction."
+        }
+      ]
+    }
+  ],
+  "es": [
+    {
+      "title": "¿Qué ocurre con las acciones si suben los tipos?",
+      "subtitle": "Cómo se transmite la subida de tipos al mercado bursátil",
+      "blocks": [
+        {
+          "h": "Los tipos más altos pueden presionar las acciones",
+          "text": "La subida de tipos afecta al valor actual de los beneficios futuros, al coste del crédito empresarial y al atractivo de las acciones frente a bonos y depósitos."
+        },
+        {
+          "h": "También importan la economía y los beneficios",
+          "text": "Las acciones pueden subir aunque aumenten los tipos si la actividad económica o los beneficios empresariales son sólidos."
+        },
+        {
+          "h": "La pregunta clave",
+          "text": "¿Por qué están subiendo los tipos?"
+        }
+      ]
+    },
+    {
+      "title": "Por qué los tipos pueden lastrar las acciones",
+      "subtitle": "Cuatro mecanismos que afectan a las cotizaciones",
+      "blocks": [
+        {
+          "h": "01  Menor valor teórico de las acciones",
+          "text": "Un tipo de descuento mayor reduce el valor actual de los beneficios futuros. Las acciones que dependen mucho de beneficios lejanos suelen ser más sensibles."
+        },
+        {
+          "h": "02  Bonos y depósitos ganan atractivo relativo",
+          "text": "Cuando sube la rentabilidad de bonos de nueva compra y activos similares, el dinero puede pasar de las acciones a bonos o depósitos."
+        },
+        {
+          "h": "03  Mayor coste de financiación empresarial",
+          "text": "Aumentan los intereses de los préstamos variables y al refinanciar deuda. Los beneficios de las empresas muy dependientes del crédito pueden verse presionados."
+        },
+        {
+          "h": "04  Menor consumo e inversión",
+          "text": "Una mayor carga financiera puede frenar el gasto de los hogares y la inversión empresarial. Si se ralentizan las ventas y los beneficios, las acciones pueden sufrir presión bajista."
+        }
+      ]
+    },
+    {
+      "title": "No todas las acciones tienen que caer",
+      "subtitle": "La respuesta depende del sector y del motivo de la subida de tipos",
+      "blocks": [
+        {
+          "h": "Empresas que pueden sufrir presión",
+          "text": "Acciones de crecimiento y con PER alto: los beneficios futuros pueden recibir valoraciones menores.\nInmobiliarias y empresas muy endeudadas: suben las cargas financieras.\nEl impacto depende del crecimiento y de las condiciones de financiación."
+        },
+        {
+          "h": "Empresas que pueden beneficiarse",
+          "text": "Bancos: los tipos de los préstamos pueden mejorar el margen de intereses.\nAseguradoras: puede mejorar la rentabilidad del dinero recién invertido.\nTambién importan las pérdidas de valor de los bonos en cartera y el aumento del coste del riesgo de crédito."
+        },
+        {
+          "h": "Importa el motivo de la subida",
+          "text": "Expansión económica: los beneficios pueden crecer y las acciones subir.\nControl de la inflación: el endurecimiento puede frenar demanda y beneficios.\nLa reacción también depende de si la subida ya estaba prevista. Los tipos por sí solos no determinan las cotizaciones."
+        }
+      ]
+    }
+  ],
+  "pt": [
+    {
+      "title": "O que acontece com as ações quando os juros sobem?",
+      "subtitle": "Como a alta de juros chega ao mercado acionário",
+      "blocks": [
+        {
+          "h": "Juros maiores podem pressionar as ações",
+          "text": "A alta de juros afeta o valor presente dos lucros futuros, o custo do crédito empresarial e a atratividade das ações em relação a títulos e depósitos."
+        },
+        {
+          "h": "A economia e os lucros também importam",
+          "text": "As ações podem subir mesmo com juros em alta se a atividade econômica ou os lucros das empresas forem fortes."
+        },
+        {
+          "h": "A pergunta principal",
+          "text": "Por que os juros estão subindo?"
+        }
+      ]
+    },
+    {
+      "title": "Por que os juros podem pesar sobre as ações",
+      "subtitle": "Quatro mecanismos que afetam os preços das ações",
+      "blocks": [
+        {
+          "h": "01  Menor valor teórico das ações",
+          "text": "Uma taxa de desconto maior reduz o valor presente dos lucros futuros. Ações cujo valor depende muito de lucros distantes tendem a ser mais sensíveis."
+        },
+        {
+          "h": "02  Títulos e depósitos ganham atratividade relativa",
+          "text": "Quando sobem os rendimentos de títulos recém-comprados e ativos semelhantes, o dinheiro pode migrar das ações para títulos ou depósitos."
+        },
+        {
+          "h": "03  Maior custo de financiamento empresarial",
+          "text": "Aumentam os juros de dívidas com taxas variáveis e na hora de refinanciar empréstimos. Empresas muito dependentes de dívida podem ter seus lucros pressionados."
+        },
+        {
+          "h": "04  Menor consumo e investimento",
+          "text": "O maior peso das dívidas pode conter gastos das famílias e investimentos das empresas. A desaceleração das vendas e dos lucros pode pressionar as ações para baixo."
+        }
+      ]
+    },
+    {
+      "title": "Nem todas as ações precisam cair",
+      "subtitle": "O setor e o motivo da alta dos juros mudam a reação",
+      "blocks": [
+        {
+          "h": "Empresas que podem enfrentar dificuldades",
+          "text": "Ações de crescimento e com P/L alto: lucros futuros podem receber avaliações menores.\nImobiliárias e empresas muito endividadas: juros maiores podem elevar os encargos.\nO impacto depende do crescimento e das condições dos empréstimos."
+        },
+        {
+          "h": "Empresas que podem se beneficiar",
+          "text": "Bancos: juros maiores nos empréstimos podem melhorar a margem financeira.\nSeguradoras: o retorno dos novos recursos investidos pode melhorar.\nTambém importam a queda de valor dos títulos já em carteira e o aumento dos custos com perdas de crédito."
+        },
+        {
+          "h": "O motivo da alta dos juros importa",
+          "text": "Expansão econômica: os lucros podem crescer e as ações subir.\nControle da inflação: condições mais restritivas podem reduzir demanda e lucros.\nA reação também depende de a alta já ser esperada. Os juros, sozinhos, não determinam a direção das ações."
+        }
+      ]
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "利率上升时，股价会怎样？",
+      "subtitle": "梳理利率上升向股市传导的机制",
+      "blocks": [
+        {
+          "h": "加息容易给股价带来下行压力",
+          "text": "利率上升会影响未来利润的现值、企业借款负担，以及股票相对于债券和存款的吸引力。"
+        },
+        {
+          "h": "经济与企业盈利也很重要",
+          "text": "如果经济或企业盈利强劲，即使利率上升，股价也可能上涨。"
+        },
+        {
+          "h": "应关注的问题",
+          "text": "利率为什么会上升？"
+        }
+      ]
+    },
+    {
+      "title": "为什么股价容易承压？",
+      "subtitle": "影响股价的四种机制",
+      "blocks": [
+        {
+          "h": "01  股票的理论价值容易下降",
+          "text": "贴现率上升时，未来利润的现值下降。越依赖遥远未来利润预期的股票，往往越容易受到影响。"
+        },
+        {
+          "h": "02  债券与存款的相对吸引力提高",
+          "text": "新购入债券等资产的收益率上升时，资金可能从股票转向债券或存款。"
+        },
+        {
+          "h": "03  企业融资成本上升",
+          "text": "浮动利率借款及债务再融资时的利息负担增加。对借款依赖较高的企业，利润容易承压。"
+        },
+        {
+          "h": "04  消费与投资容易放缓",
+          "text": "家庭和企业借款负担增加，可能抑制消费和投资。如果收入与利润增长放缓，就可能压低股价。"
+        }
+      ]
+    },
+    {
+      "title": "并不是所有股票都会下跌",
+      "subtitle": "行业特点与利率上升原因会改变市场反应",
+      "blocks": [
+        {
+          "h": "容易面临压力的企业",
+          "text": "成长股、高市盈率股票：未来利润估值容易下降。\n房地产与高负债企业：借款利率上升容易增加负担。\n影响程度取决于增长率与借款条件。"
+        },
+        {
+          "h": "可能受益的企业",
+          "text": "银行：贷款利率上升等因素可能改善净息差。\n保险公司：新资金的投资收益率可能改善。\n但也要考虑持有债券价格下跌及信用成本上升。"
+        },
+        {
+          "h": "利率上升的背景很重要",
+          "text": "经济扩张推动利率上升：企业利润可能增长，股价也可能上涨。\n为抑制通胀而提高利率：可能压低需求与利润。\n市场反应还取决于加息是否已在预期之中。利率本身不能决定股价方向。"
+        }
+      ]
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "利率上升時，股價會怎樣？",
+      "subtitle": "梳理利率上升向股市傳導的機制",
+      "blocks": [
+        {
+          "h": "升息容易給股價帶來下行壓力",
+          "text": "利率上升會影響未來利潤的現值、企業借款負擔，以及股票相對於債券和存款的吸引力。"
+        },
+        {
+          "h": "經濟與企業獲利也很重要",
+          "text": "如果經濟或企業獲利強勁，即使利率上升，股價也可能上漲。"
+        },
+        {
+          "h": "應關注的問題",
+          "text": "利率為什麼會上升？"
+        }
+      ]
+    },
+    {
+      "title": "為什麼股價容易承壓？",
+      "subtitle": "影響股價的四種機制",
+      "blocks": [
+        {
+          "h": "01  股票的理論價值容易下降",
+          "text": "折現率上升時，未來利潤的現值下降。越依賴遙遠未來利潤預期的股票，往往越容易受到影響。"
+        },
+        {
+          "h": "02  債券與存款的相對吸引力提高",
+          "text": "新購入債券等資產的殖利率上升時，資金可能從股票轉向債券或存款。"
+        },
+        {
+          "h": "03  企業融資成本上升",
+          "text": "浮動利率借款及債務再融資時的利息負擔增加。對借款依賴較高的企業，獲利容易承壓。"
+        },
+        {
+          "h": "04  消費與投資容易放緩",
+          "text": "家庭和企業借款負擔增加，可能抑制消費和投資。如果營收與獲利成長放緩，就可能壓低股價。"
+        }
+      ]
+    },
+    {
+      "title": "並不是所有股票都會下跌",
+      "subtitle": "產業特點與利率上升原因會改變市場反應",
+      "blocks": [
+        {
+          "h": "容易面臨壓力的企業",
+          "text": "成長股、高本益比股票：未來利潤估值容易下降。\n房地產與高負債企業：借款利率上升容易增加負擔。\n影響程度取決於成長率與借款條件。"
+        },
+        {
+          "h": "可能受益的企業",
+          "text": "銀行：貸款利率上升等因素可能改善利差。\n保險公司：新資金的投資收益率可能改善。\n但也要考慮持有債券價格下跌及信用成本上升。"
+        },
+        {
+          "h": "利率上升的背景很重要",
+          "text": "經濟擴張推動利率上升：企業獲利可能成長，股價也可能上漲。\n為抑制通膨而提高利率：可能壓低需求與獲利。\n市場反應還取決於升息是否已在預期之中。利率本身不能決定股價方向。"
+        }
+      ]
+    }
+  ]
+}
