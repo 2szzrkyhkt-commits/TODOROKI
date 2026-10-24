@@ -1,0 +1,347 @@
+{
+  "en": [
+    {
+      "title": "Caring about others and protecting information",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "Social preferences × public goods × free riding × information asymmetry"
+        },
+        {
+          "h": "01 People act for more than self-interest",
+          "text": "People consider others' interests, fairness, cooperation and returning favors, as well as their own benefit. They sometimes help others at some cost to themselves. These tendencies are called social preferences: altruism, fairness, reciprocity and conditional cooperation."
+        },
+        {
+          "h": "02 Public goods and free riding",
+          "text": "Pooling information and sharing burdens increases group benefits. But if people can benefit without bearing costs, they have an incentive to take from others without contributing: free riding. If everyone does this, cooperation collapses.\nMutual information contributions → more information → benefits for both.\nContribute nothing → use others' information → free riding."
+        },
+        {
+          "h": "03 Sharing with colleagues",
+          "text": "Trusted colleagues sharing industry trends and ways to work can complement information that no individual could collect alone. Reciprocal sharing creates gains from cooperation: a concrete example of reciprocity."
+        }
+      ]
+    },
+    {
+      "title": "Caring about others and protecting information",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "04 Telling everyone is not always optimal",
+          "text": "Giving information to rivals seeking the same customers or work may improve their decisions and proposals, reducing your informational advantage. Social preferences and unconditional disclosure are different matters."
+        },
+        {
+          "table": [
+            [
+              "Counterparty",
+              "Sharing pattern",
+              "Effect"
+            ],
+            [
+              "Trusted colleagues",
+              "Mutual sharing",
+              "Information can complement each other"
+            ],
+            [
+              "Those who do not reciprocate",
+              "One-way sharing",
+              "Risk of free riding"
+            ],
+            [
+              "Competitors in the same market",
+              "Information leakage",
+              "Your informational advantage may fall"
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            160,
+            110,
+            240
+          ]
+        },
+        {
+          "h": "05 What matters is whom you share with",
+          "text": "Information has value; universal disclosure dilutes scarcity. Weigh the benefits of cooperation against the competitive advantage lost by providing information. Game theory, reciprocity and information asymmetry matter alongside social preferences.\nCooperation creates value; information is also competitive strength. Choosing whom to cooperate with and how much to share is a strategy."
+        }
+      ]
+    }
+  ],
+  "es": [
+    {
+      "title": "Considerar a otros y proteger la información",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "Preferencias sociales × bienes públicos × aprovechamiento gratuito × asimetría informativa"
+        },
+        {
+          "h": "01 No actuamos solo por interés propio",
+          "text": "Las personas consideran también el beneficio ajeno, la equidad, la cooperación y la devolución de favores. A veces ayudan aunque les cueste algo. Estas tendencias se llaman preferencias sociales: altruismo, equidad, reciprocidad y cooperación condicional."
+        },
+        {
+          "h": "02 Bienes públicos y aprovechamiento gratuito",
+          "text": "Compartir información y cargas aumenta el beneficio colectivo. Pero beneficiarse sin asumir costes incentiva recibir de otros sin aportar: el aprovechamiento gratuito. Si todos actúan así, la cooperación se derrumba.\nAportes mutuos → más información → beneficio para ambos.\nNo aportar → usar información ajena → aprovechamiento gratuito."
+        },
+        {
+          "h": "03 Compartir entre compañeros",
+          "text": "Colegas de confianza que comparten tendencias sectoriales y métodos de trabajo complementan información que uno solo no podría reunir. Si ambas partes corresponden, cooperar genera beneficios: es un ejemplo de reciprocidad."
+        }
+      ]
+    },
+    {
+      "title": "Considerar a otros y proteger la información",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "04 Contárselo a todos no siempre es óptimo",
+          "text": "Dar información a rivales que buscan los mismos clientes o trabajos puede mejorar sus decisiones y propuestas y reducir nuestra ventaja informativa. Tener preferencias sociales y divulgar sin condiciones son cuestiones distintas."
+        },
+        {
+          "table": [
+            [
+              "Interlocutor",
+              "Patrón",
+              "Efecto"
+            ],
+            [
+              "Colegas de confianza",
+              "Intercambio mutuo",
+              "Facilita complementar información"
+            ],
+            [
+              "Quien no corresponde",
+              "Intercambio unilateral",
+              "Posible aprovechamiento gratuito"
+            ],
+            [
+              "Rivales del mismo mercado",
+              "Fuga de información",
+              "Puede reducir la ventaja propia"
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            160,
+            110,
+            240
+          ]
+        },
+        {
+          "h": "05 Importa con quién compartir",
+          "text": "La información vale; divulgarla a todos reduce su escasez. Hay que sopesar el beneficio de cooperar y la ventaja competitiva que se pierde al compartir. Además de preferencias sociales, importan la teoría de juegos, la reciprocidad y la asimetría informativa.\nCooperar crea valor; la información también es fuerza competitiva. Elegir con quién cooperar y hasta dónde compartir es estratégico."
+        }
+      ]
+    }
+  ],
+  "pt": [
+    {
+      "title": "Considerar os outros e proteger informações",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "Preferências sociais × bens públicos × carona × assimetria de informação"
+        },
+        {
+          "h": "01 Não agimos só por interesse próprio",
+          "text": "As pessoas consideram interesses alheios, justiça, cooperação e retribuição, além do próprio benefício. Às vezes ajudam mesmo arcando com algum prejuízo. Essas tendências são preferências sociais: altruísmo, equidade, reciprocidade e cooperação condicional."
+        },
+        {
+          "h": "02 Bens públicos e efeito carona",
+          "text": "Reunir informações e dividir encargos amplia o benefício coletivo. Porém, receber benefícios sem pagar custos incentiva não contribuir e apenas receber dos outros: o efeito carona. Se todos fizerem isso, a cooperação se desfaz.\nContribuições mútuas → mais informação → benefício para ambos.\nNão contribuir → usar informação alheia → efeito carona."
+        },
+        {
+          "h": "03 Compartilhar entre colegas",
+          "text": "Colegas de confiança podem compartilhar tendências do setor e práticas de trabalho, complementando informações que ninguém reuniria sozinho. Quando ambos retribuem, cooperar gera ganhos: um exemplo de reciprocidade."
+        }
+      ]
+    },
+    {
+      "title": "Considerar os outros e proteger informações",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "04 Contar a todos nem sempre é ideal",
+          "text": "Passar informações a concorrentes que buscam os mesmos clientes ou trabalhos pode melhorar suas decisões e propostas e reduzir sua vantagem informacional. Preferências sociais e divulgação incondicional são questões distintas."
+        },
+        {
+          "table": [
+            [
+              "Interlocutor",
+              "Padrão",
+              "Efeito"
+            ],
+            [
+              "Colegas de confiança",
+              "Troca mútua",
+              "Facilita complementar informações"
+            ],
+            [
+              "Quem não retribui",
+              "Troca unilateral",
+              "Possível efeito carona"
+            ],
+            [
+              "Rivais no mesmo mercado",
+              "Vazamento",
+              "Pode reduzir a vantagem própria"
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            160,
+            110,
+            240
+          ]
+        },
+        {
+          "h": "05 Importa com quem compartilhar",
+          "text": "A informação tem valor; divulgá-la a todos reduz sua escassez. Considere o ganho da cooperação e a vantagem competitiva perdida ao informar. Além das preferências sociais, importam teoria dos jogos, reciprocidade e assimetria de informação.\nCooperar cria valor; informação também é força competitiva. Escolher com quem cooperar e até onde compartilhar é estratégia."
+        }
+      ]
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "顾及他人与保护信息的合理性",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "社会偏好 × 公共品 × 搭便车 × 信息不对称"
+        },
+        {
+          "h": "01 人不只为自身利益行动",
+          "text": "人们除自身利益外，还考虑他人利益、公平、合作与回报。有时即使自己略有损失，也会帮助他人。这些倾向称为社会偏好，包括利他性、公平性、互惠性和有条件合作。"
+        },
+        {
+          "h": "02 公共品与搭便车",
+          "text": "大家共同提供信息、承担负担，能增加群体整体利益。但若不承担成本也能获益，就会产生“不付出，只接受他人贡献”的搭便车动机。若人人如此，合作本身就会瓦解。\n相互提供信息 → 信息增加 → 双方获益。\n自己不提供 → 利用他人信息 → 搭便车。"
+        },
+        {
+          "h": "03 同事之间的信息共享",
+          "text": "可信赖的同事分享行业趋势和工作方法，可以补足个人无法独自收集的信息。彼此回馈信息，便能产生合作收益，这是互惠性的具体例子。"
+        }
+      ]
+    },
+    {
+      "title": "顾及他人与保护信息的合理性",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "04 并非告诉所有人都最优",
+          "text": "向争夺相同客户或工作的竞争者提供信息，可能提高对方判断、提案的准确度，降低自身的信息优势。存在社会偏好与无条件公开信息是两回事。"
+        },
+        {
+          "table": [
+            [
+              "对象",
+              "共享方式",
+              "影响"
+            ],
+            [
+              "可信赖的同事",
+              "相互共享",
+              "容易互补信息"
+            ],
+            [
+              "不回馈信息的人",
+              "单向共享",
+              "可能被搭便车"
+            ],
+            [
+              "同市场竞争者",
+              "信息流出",
+              "可能降低自身信息优势"
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            160,
+            110,
+            240
+          ]
+        },
+        {
+          "h": "05 关键在于与谁共享",
+          "text": "信息有价值，向所有人公开会稀释其稀缺性。因此要同时考虑合作收益，以及提供信息所损失的竞争优势。除社会偏好外，博弈论、互惠性、信息不对称的视角也很重要。\n合作创造价值，但信息也是竞争力。“与谁合作、共享到什么程度”本身就是战略。"
+        }
+      ]
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "顧及他人與保護資訊的合理性",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "社會偏好 × 公共財 × 搭便車 × 資訊不對稱"
+        },
+        {
+          "h": "01 人不只為自身利益行動",
+          "text": "人們除自身利益外，還考慮他人利益、公平、合作與回報。有時即使自己略有損失，也會幫助他人。這些傾向稱為社會偏好，包括利他性、公平性、互惠性和有條件合作。"
+        },
+        {
+          "h": "02 公共財與搭便車",
+          "text": "大家共同提供資訊、承擔負擔，能增加群體整體利益。但若不承擔成本也能獲益，就會產生「不付出，只接受他人貢獻」的搭便車動機。若人人如此，合作本身就會瓦解。\n相互提供資訊 → 資訊增加 → 雙方獲益。\n自己不提供 → 利用他人資訊 → 搭便車。"
+        },
+        {
+          "h": "03 同事之間的資訊共享",
+          "text": "可信賴的同事分享產業趨勢和工作方法，可以補足個人無法獨自蒐集的資訊。彼此回饋資訊，便能產生合作收益，這是互惠性的具體例子。"
+        }
+      ]
+    },
+    {
+      "title": "顧及他人與保護資訊的合理性",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "04 並非告訴所有人都最優",
+          "text": "向爭取相同客戶或工作的競爭者提供資訊，可能提高對方判斷、提案的準確度，降低自身的資訊優勢。存在社會偏好與無條件公開資訊是兩回事。"
+        },
+        {
+          "table": [
+            [
+              "對象",
+              "共享方式",
+              "影響"
+            ],
+            [
+              "可信賴的同事",
+              "相互共享",
+              "容易互補資訊"
+            ],
+            [
+              "不回饋資訊的人",
+              "單向共享",
+              "可能被搭便車"
+            ],
+            [
+              "同市場競爭者",
+              "資訊流出",
+              "可能降低自身資訊優勢"
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            160,
+            110,
+            240
+          ]
+        },
+        {
+          "h": "05 關鍵在於與誰共享",
+          "text": "資訊有價值，向所有人公開會稀釋其稀缺性。因此要同時考慮合作收益，以及提供資訊所損失的競爭優勢。除社會偏好外，賽局理論、互惠性、資訊不對稱的視角也很重要。\n合作創造價值，但資訊也是競爭力。「與誰合作、共享到什麼程度」本身就是策略。"
+        }
+      ]
+    }
+  ]
+}

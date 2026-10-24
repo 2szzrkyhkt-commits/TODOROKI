@@ -1,0 +1,452 @@
+{
+  "en": [
+    {
+      "title": "What is dots?",
+      "subtitle": "AI that keeps work moving beyond the conversation | 2026.10.23 / dots GUIDE",
+      "blocks": [
+        {
+          "h": "An always-on agent",
+          "text": "dots is an OpenAI AI agent for entrusting ongoing work. Powered by GPT-6 Astra, it works using a dedicated cloud computer and browser."
+        },
+        {
+          "h": "What changes?",
+          "text": "Share a goal and the information it needs, and it tracks progress and considers the next task. It continues working between conversations and tells the user about results and matters requiring a decision."
+        },
+        {
+          "h": "The cloud and your PC",
+          "text": "Cloud work can continue even when your own device is switched off. Handling files on your PC requires a separate connection: keep the PC online and the ChatGPT app open."
+        },
+        {
+          "text": "From “answering questions” to “entrusting ongoing work.”"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Capabilities and different roles",
+      "subtitle": "Research, organize, create and follow up | 2026.10.23 / dots GUIDE",
+      "blocks": [
+        {
+          "h": "Main uses",
+          "text": "Information gathering, data analysis, document creation, software development and more. Available information and actions depend on connected apps and granted permissions."
+        },
+        {
+          "h": "Relationship with Chat, Work and Codex",
+          "text": "Chat suits dialogue and explanation; Work suits research, file creation and similar tasks; Codex suits writing, modifying and verifying code. dots follows ongoing responsibilities and delegates work to Work or Codex as needed."
+        },
+        {
+          "h": "Example: managing article updates",
+          "text": "Compare published articles with new information and identify areas needing changes. A possible workflow is to prepare proposed revisions and draft materials, then have a person review and publish them. This is an operational example that assumes the necessary connections and settings."
+        },
+        {
+          "text": "Its strength is connecting multiple tasks to an ongoing goal."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Eligibility and getting started",
+      "subtitle": "Begin with one responsibility | 2026.10.23 / dots GUIDE",
+      "blocks": [
+        {
+          "h": "Eligible accounts",
+          "text": "As checked on October 23, 2026, rollout is gradual. Official guidance names Pro 100, 200 and 500, Business Premium and Enterprise. Conditions depend on age, region and administrator settings; eligibility does not guarantee immediate availability."
+        },
+        {
+          "h": "Creation and connections",
+          "text": "Create it in the ChatGPT mobile app, desktop app or a PC browser. Set a name and appearance, then connect the necessary plugins. Smartphone web browsers are unsupported. Connecting your own PC is optional."
+        },
+        {
+          "h": "Check usage",
+          "text": "Conversations with a dot and tasks delegated to Work or Codex are treated differently for usage allowances. Delegated tasks count toward each product’s usage limits: “always on” does not mean all work is unlimited. Check the terms on the subscription screen."
+        },
+        {
+          "text": "Eligibility changes; check the latest eligible plans and usage allowances before subscribing."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Delegation and oversight",
+      "subtitle": "Define deliverables, scope and reporting conditions | 2026.10.23 / dots GUIDE",
+      "blocks": [
+        {
+          "h": "Four things to communicate",
+          "text": "State the purpose, reference information, finished deliverable and situations requiring your decision. Start with a small responsibility and give feedback after reviewing the result."
+        },
+        {
+          "h": "Example request",
+          "text": "“Check the specified official announcements and list possible updates to existing articles. Include reasons for changes and proposed revisions, and report every Monday at 9 a.m. Japan time. Proceed with publication after review.” Specifying the scope and period also makes management easier."
+        },
+        {
+          "h": "Review and stopping",
+          "text": "Permissions and automatic review apply; some actions require approval or direct user action. People should check important results. Check pausing, stopping delegated tasks and disabling recurring runs separately; stopping does not undo changes already made."
+        },
+        {
+          "text": "Measure the benefit by “work time saved” and “effort needed to review.”"
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "es": [
+    {
+      "title": "¿Qué es dots?",
+      "subtitle": "Una IA que sigue trabajando más allá de la conversación | 2026.10.23 / GUÍA dots",
+      "blocks": [
+        {
+          "h": "Un agente siempre activo",
+          "text": "dots es un agente de IA de OpenAI al que se puede encargar trabajo continuo. Utiliza GPT-6 Astra y trabaja con un ordenador y un navegador dedicados en la nube."
+        },
+        {
+          "h": "¿Qué cambia?",
+          "text": "Al compartir el objetivo y la información necesaria, sigue el progreso y piensa en la siguiente tarea. Trabaja entre conversaciones e informa de los resultados y los asuntos que requieren una decisión del usuario."
+        },
+        {
+          "h": "La nube y el ordenador propio",
+          "text": "El trabajo en la nube puede continuar aunque el dispositivo esté apagado. Para manejar archivos del ordenador propio hace falta una conexión adicional: el ordenador debe estar en línea y la aplicación ChatGPT, abierta."
+        },
+        {
+          "text": "De «responder preguntas» a «encargarse de trabajo continuo»."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Capacidades y diferencias de función",
+      "subtitle": "Investigar, organizar, crear y hacer seguimiento | 2026.10.23 / GUÍA dots",
+      "blocks": [
+        {
+          "h": "Usos principales",
+          "text": "Recopilar información, analizar datos, crear documentos, desarrollar software y más. La información y las operaciones disponibles dependen de las aplicaciones conectadas y los permisos concedidos."
+        },
+        {
+          "h": "Relación con Chat, Work y Codex",
+          "text": "Chat se adapta al diálogo y las explicaciones; Work, a la investigación y la creación de archivos; Codex, a escribir, modificar y verificar código. dots sigue responsabilidades continuas y delega tareas en Work o Codex cuando es necesario."
+        },
+        {
+          "h": "Ejemplo: gestionar actualizaciones de artículos",
+          "text": "Comparar artículos publicados con información nueva e identificar qué necesita cambios. Un posible proceso consiste en preparar propuestas de revisión y borradores, para que una persona revise el contenido y lo publique. Es un ejemplo de uso que presupone las conexiones y configuraciones necesarias."
+        },
+        {
+          "text": "Su fortaleza es vincular varias tareas con un objetivo continuo."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Condiciones y primeros pasos",
+      "subtitle": "Empezar con una sola responsabilidad | 2026.10.23 / GUÍA dots",
+      "blocks": [
+        {
+          "h": "Cuentas que pueden usarlo",
+          "text": "Según la comprobación del 23 de octubre de 2026, se ofrece de forma gradual. La información oficial incluye Pro 100, 200 y 500, Business Premium y Enterprise. Hay condiciones de edad, región y configuración del administrador; cumplirlas no implica que aparezca de inmediato."
+        },
+        {
+          "h": "Creación y conexiones",
+          "text": "Se crea desde la aplicación móvil o de escritorio de ChatGPT, o desde un navegador de PC. Se configuran nombre y apariencia y se conectan los plugins necesarios. No admite navegadores web de smartphones. Conectar el ordenador propio es opcional."
+        },
+        {
+          "h": "Comprobar el consumo",
+          "text": "Las conversaciones con un dot y las tareas delegadas en Work o Codex reciben un tratamiento distinto en los cupos. Las tareas delegadas cuentan para los límites de cada producto: «siempre activo» no significa que todo el trabajo sea ilimitado. Consultar las condiciones en la pantalla de suscripción."
+        },
+        {
+          "text": "Las condiciones cambian: comprobar los planes admitidos y los cupos vigentes antes de contratar."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Cómo delegar y supervisar",
+      "subtitle": "Definir entregables, alcance y condiciones de informe | 2026.10.23 / GUÍA dots",
+      "blocks": [
+        {
+          "h": "Cuatro elementos del encargo",
+          "text": "Indicar el propósito, la información de referencia, el entregable terminado y las situaciones que requieren una decisión propia. Empezar con una tarea pequeña y comunicar correcciones tras revisar el resultado."
+        },
+        {
+          "h": "Ejemplo de encargo",
+          "text": "«Revisa los anuncios oficiales indicados y enumera posibles actualizaciones de los artículos existentes. Resume los motivos y las propuestas de revisión e informa cada lunes a las 9:00, hora de Japón. Publica después de la revisión». Especificar también el alcance y el período facilita la gestión."
+        },
+        {
+          "h": "Revisión y detención",
+          "text": "Se aplican permisos y revisión automática; algunas operaciones requieren aprobación o intervención del usuario. Una persona debe revisar los resultados importantes. Comprobar por separado la pausa, la detención de tareas delegadas y la desactivación de ejecuciones periódicas. Detener no revierte los cambios ya realizados."
+        },
+        {
+          "text": "Medir el beneficio por el «tiempo de trabajo ahorrado» y el «esfuerzo de revisión»."
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "pt": [
+    {
+      "title": "O que é dots?",
+      "subtitle": "IA que faz o trabalho avançar além da conversa | 2026.10.23 / GUIA dots",
+      "blocks": [
+        {
+          "h": "Um agente sempre ativo",
+          "text": "dots é um agente de IA da OpenAI para delegar trabalho contínuo. Com GPT-6 Astra, trabalha usando um computador e um navegador dedicados na nuvem."
+        },
+        {
+          "h": "O que muda?",
+          "text": "Ao receber o objetivo e as informações necessárias, acompanha o progresso e considera a próxima tarefa. Continua trabalhando entre conversas e informa o usuário sobre resultados e pontos que exigem decisão."
+        },
+        {
+          "h": "A nuvem e seu PC",
+          "text": "O trabalho na nuvem pode continuar mesmo com seu dispositivo desligado. Para lidar com arquivos do seu PC, é necessária uma conexão separada: mantenha o PC on-line e o aplicativo ChatGPT aberto."
+        },
+        {
+          "text": "De “responder perguntas” a “assumir trabalho contínuo”."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Capacidades e diferenças de função",
+      "subtitle": "Pesquisar, organizar, criar e acompanhar | 2026.10.23 / GUIA dots",
+      "blocks": [
+        {
+          "h": "Principais usos",
+          "text": "Coleta de informações, análise de dados, criação de documentos, desenvolvimento de software e outros. As informações e operações disponíveis dependem dos aplicativos conectados e das permissões concedidas."
+        },
+        {
+          "h": "Relação com Chat, Work e Codex",
+          "text": "Chat é adequado para diálogo e explicações; Work, para pesquisas e criação de arquivos; Codex, para escrever, modificar e verificar código. dots acompanha responsabilidades contínuas e delega tarefas ao Work ou Codex conforme necessário."
+        },
+        {
+          "h": "Exemplo: gerenciar atualizações de artigos",
+          "text": "Comparar artigos publicados com novas informações e identificar trechos que precisam mudar. Um possível fluxo é preparar propostas de revisão e rascunhos de materiais, para que uma pessoa confira o conteúdo e publique. É um exemplo de operação que pressupõe as conexões e configurações necessárias."
+        },
+        {
+          "text": "Sua força é ligar várias tarefas a um objetivo contínuo."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Condições e primeiros passos",
+      "subtitle": "Comece com uma responsabilidade | 2026.10.23 / GUIA dots",
+      "blocks": [
+        {
+          "h": "Contas elegíveis",
+          "text": "Na verificação de 23 de outubro de 2026, a disponibilização era gradual. A orientação oficial inclui Pro 100, 200 e 500, Business Premium e Enterprise. Há condições de idade, região e configurações do administrador; ser elegível não garante exibição imediata."
+        },
+        {
+          "h": "Criação e conexões",
+          "text": "Crie no aplicativo móvel ou desktop do ChatGPT, ou em um navegador de PC. Defina nome e aparência e conecte os plugins necessários. Navegadores web de smartphones não são compatíveis. Conectar seu PC é opcional."
+        },
+        {
+          "h": "Confira o uso",
+          "text": "Conversas com um dot e tarefas delegadas ao Work ou Codex têm tratamento diferente nas franquias. As tarefas delegadas contam nos limites de cada produto: “sempre ativo” não significa trabalho ilimitado. Consulte as condições na tela de assinatura."
+        },
+        {
+          "text": "As condições mudam: confira os planos elegíveis e as franquias atuais antes de contratar."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Como delegar e supervisionar",
+      "subtitle": "Defina entregáveis, escopo e condições de relatório | 2026.10.23 / GUIA dots",
+      "blocks": [
+        {
+          "h": "Quatro elementos do pedido",
+          "text": "Informe o objetivo, as informações de referência, o entregável a concluir e as situações que exigem sua decisão. Comece com uma tarefa pequena e indique ajustes após conferir o resultado."
+        },
+        {
+          "h": "Exemplo de pedido",
+          "text": "“Confira os anúncios oficiais indicados e liste possíveis atualizações dos artigos existentes. Reúna os motivos e as propostas de revisão e informe toda segunda-feira às 9h, horário do Japão. Publique após a revisão.” Especificar escopo e período também facilita a gestão."
+        },
+        {
+          "h": "Verificação e interrupção",
+          "text": "Aplicam-se permissões e revisão automática; algumas ações exigem aprovação ou intervenção do usuário. Uma pessoa deve verificar resultados importantes. Confira separadamente a pausa, a interrupção de tarefas delegadas e a desativação de execuções recorrentes. Interromper não desfaz alterações já feitas."
+        },
+        {
+          "text": "Meça o benefício pelo “tempo de trabalho economizado” e pelo “esforço de revisão”."
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "dots是什么？",
+      "subtitle": "让工作在对话之外继续推进的AI | 2026.10.23 / dots指南",
+      "blocks": [
+        {
+          "h": "持续运行的智能体",
+          "text": "dots是OpenAI推出的AI智能体，用于承接持续性工作。它搭载GPT-6 Astra，使用专属云端计算机和浏览器执行任务。"
+        },
+        {
+          "h": "会带来什么变化？",
+          "text": "分享目标与所需信息后，它会跟踪进度，考虑下一步工作。在对话间隙也继续推进任务，并向用户报告结果及需要作出判断的事项。"
+        },
+        {
+          "h": "云端与自己的PC",
+          "text": "即使关闭自己的设备，云端工作仍可继续。如需处理自己PC中的文件等，则需要另行连接，并保持PC在线、ChatGPT应用开启。"
+        },
+        {
+          "text": "从“回答问题”转向“承接持续性工作”。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "能做什么？各自角色有何不同？",
+      "subtitle": "调查、整理、制作、跟进 | 2026.10.23 / dots指南",
+      "blocks": [
+        {
+          "h": "主要用途",
+          "text": "信息收集、数据分析、资料制作、软件开发等。可用的信息和可执行的操作，取决于已连接的应用与授予的权限。"
+        },
+        {
+          "h": "与Chat、Work、Codex的关系",
+          "text": "Chat适合对话与解释；Work适合调查、文件制作等工作；Codex适合编写、修改、验证代码。dots跟进持续负责的业务，必要时将任务委派给Work或Codex。"
+        },
+        {
+          "h": "应用示例：文章更新管理",
+          "text": "比较已发布文章与新信息，找出需要修改的部分。可采用先准备修改建议和资料草稿，再由人审核内容后发布的流程。这只是运用示例，前提是完成必要的连接与设置。"
+        },
+        {
+          "text": "优势在于将多项任务与持续性目标联系起来。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "使用条件与入门方式",
+      "subtitle": "先从一项负责的业务开始 | 2026.10.23 / dots指南",
+      "blocks": [
+        {
+          "h": "可使用的账户",
+          "text": "截至2026年10月23日确认时，仍在逐步推出。官方说明的对象为Pro 100、200、500、Business Premium和Enterprise。年龄、地区、管理员设置均有条件限制，即使符合条件，也不一定立即显示。"
+        },
+        {
+          "h": "创建与连接",
+          "text": "可通过ChatGPT手机应用、桌面应用或PC浏览器创建。设置名称和外观，连接必要插件。不支持手机网页浏览器。是否连接自己的PC可自行选择。"
+        },
+        {
+          "h": "确认使用额度",
+          "text": "与dot对话和委派给Work、Codex的工作，在额度计算方式上不同。后者计入各产品的使用上限，因此不能将“持续运行”理解为“所有工作无限量”。应在订阅页面确认条件。"
+        },
+        {
+          "text": "使用条件会变化，订阅前请确认最新适用对象与使用额度。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "如何有效委派与管理",
+      "subtitle": "明确成果、范围及报告条件 | 2026.10.23 / dots指南",
+      "blocks": [
+        {
+          "h": "委派时说明四点",
+          "text": "说明目的、参考信息、需要完成的成果，以及哪些场景需要自己的判断。先委派小规模业务，查看结果后反馈修改意见。"
+        },
+        {
+          "h": "委派语句示例",
+          "text": "“检查指定的官方公告，列出既有文章的候选更新项目。整理修改原因和修改建议，每周一日本时间上午9点报告。经确认后再发布。”同时指定对象范围和期间，会更便于管理。"
+        },
+        {
+          "h": "审核与停止",
+          "text": "权限和自动审核机制会适用，某些工作可能需要批准或本人操作。重要结果应由人确认。应分别确认暂停、停止已委派任务、取消定期执行；停止不会撤销已经完成的修改。"
+        },
+        {
+          "text": "用“减少的工作时间”和“审核所需精力”衡量导入效果。"
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "dots是什麼？",
+      "subtitle": "讓工作在對話之外持續推進的AI | 2026.10.23 / dots指南",
+      "blocks": [
+        {
+          "h": "持續運作的代理",
+          "text": "dots是OpenAI推出的AI代理，用於承接持續性工作。它搭載GPT-6 Astra，使用專屬雲端電腦和瀏覽器執行任務。"
+        },
+        {
+          "h": "會帶來什麼變化？",
+          "text": "分享目標與所需資訊後，它會追蹤進度，考慮下一步工作。在對話間隙也繼續推進任務，並向使用者報告結果及需要作出判斷的事項。"
+        },
+        {
+          "h": "雲端與自己的PC",
+          "text": "即使關閉自己的裝置，雲端工作仍可繼續。如需處理自己PC中的檔案等，則需要另行連線，並保持PC連線、ChatGPT應用程式開啟。"
+        },
+        {
+          "text": "從「回答問題」轉向「承接持續性工作」。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "能做什麼？各自角色有何不同？",
+      "subtitle": "調查、整理、製作、跟進 | 2026.10.23 / dots指南",
+      "blocks": [
+        {
+          "h": "主要用途",
+          "text": "資訊蒐集、資料分析、資料製作、軟體開發等。可用的資訊和可執行的操作，取決於已連接的應用程式與授予的權限。"
+        },
+        {
+          "h": "與Chat、Work、Codex的關係",
+          "text": "Chat適合對話與解釋；Work適合調查、檔案製作等工作；Codex適合編寫、修改、驗證程式碼。dots跟進持續負責的業務，必要時將任務委派給Work或Codex。"
+        },
+        {
+          "h": "應用範例：文章更新管理",
+          "text": "比較已發布文章與新資訊，找出需要修改的部分。可採用先準備修改建議和資料草稿，再由人審核內容後發布的流程。這只是運用範例，前提是完成必要的連接與設定。"
+        },
+        {
+          "text": "優勢在於將多項任務與持續性目標連結起來。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "使用條件與入門方式",
+      "subtitle": "先從一項負責的業務開始 | 2026.10.23 / dots指南",
+      "blocks": [
+        {
+          "h": "可使用的帳戶",
+          "text": "截至2026年10月23日確認時，仍在逐步推出。官方說明的對象為Pro 100、200、500、Business Premium和Enterprise。年齡、地區、管理員設定均有條件限制，即使符合條件，也不一定立即顯示。"
+        },
+        {
+          "h": "建立與連接",
+          "text": "可透過ChatGPT手機應用程式、桌面應用程式或PC瀏覽器建立。設定名稱和外觀，連接必要外掛程式。不支援手機網頁瀏覽器。是否連接自己的PC可自行選擇。"
+        },
+        {
+          "h": "確認使用額度",
+          "text": "與dot對話和委派給Work、Codex的工作，在額度計算方式上不同。後者計入各產品的使用上限，因此不能將「持續運作」理解為「所有工作無限量」。應在訂閱頁面確認條件。"
+        },
+        {
+          "text": "使用條件會變化，訂閱前請確認最新適用對象與使用額度。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "如何有效委派與管理",
+      "subtitle": "明確成果、範圍及報告條件 | 2026.10.23 / dots指南",
+      "blocks": [
+        {
+          "h": "委派時說明四點",
+          "text": "說明目的、參考資訊、需要完成的成果，以及哪些場景需要自己的判斷。先委派小規模業務，查看結果後回饋修改意見。"
+        },
+        {
+          "h": "委派語句範例",
+          "text": "「檢查指定的官方公告，列出既有文章的候選更新項目。整理修改原因和修改建議，每週一日本時間上午9點報告。經確認後再發布。」同時指定對象範圍和期間，會更便於管理。"
+        },
+        {
+          "h": "審核與停止",
+          "text": "權限和自動審核機制會適用，某些工作可能需要批准或本人操作。重要結果應由人確認。應分別確認暫停、停止已委派任務、取消定期執行；停止不會撤銷已經完成的修改。"
+        },
+        {
+          "text": "用「減少的工作時間」和「審核所需精力」衡量導入效果。"
+        }
+      ],
+      "dense": false
+    }
+  ]
+}

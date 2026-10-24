@@ -1,0 +1,512 @@
+{
+  "en": [
+    {
+      "title": "What is responsible proactive fiscal policy?",
+      "subtitle": "POLICY | How does government fund its investment?",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "Promote growth investment while safeguarding fiscal sustainability",
+          "text": "The Basic Policy 2026 declares the first year of “responsible proactive fiscal policy.” It seeks both economic growth and fiscal sustainability through investment in AI and semiconductors, GX (green transformation), disaster prevention and infrastructure."
+        },
+        {
+          "h": "",
+          "text": "Proactive fiscal policy does not mean unlimited government bond issuance. Attention is also needed to the debt-to-GDP ratio, interest rates, government debt-servicing costs and market confidence."
+        },
+        {
+          "h": "",
+          "text": "Focus on both investment effectiveness and the fiscal burden."
+        }
+      ]
+    },
+    {
+      "title": "Where does the funding come from?",
+      "subtitle": "01 / GENERAL ACCOUNT REVENUE | Initial FY2026 budget: about ¥122.3 trillion",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "Tax and stamp revenue",
+          "text": "¥83.7 trillion / 68.5%"
+        },
+        {
+          "h": "Government bond proceeds",
+          "text": "¥29.6 trillion / 24.2%"
+        },
+        {
+          "h": "Other revenue",
+          "text": "¥9.0 trillion / 7.4%"
+        },
+        {
+          "h": "",
+          "text": "Amounts and percentages are rounded. Percentages do not sum to 100%."
+        },
+        {
+          "h": "Construction bonds",
+          "text": "Government bonds issued to fund expenditures permitted by the Public Finance Act, including public works, capital subscriptions and loans."
+        },
+        {
+          "h": "Special deficit-financing bonds",
+          "text": "Issued under special legislation to cover expenditure shortfalls that taxes and other revenue cannot fund. They are not exclusively for investment."
+        },
+        {
+          "h": "",
+          "text": "After bonds are issued, repayment and interest payments still need to be met."
+        }
+      ]
+    },
+    {
+      "title": "The Fiscal Investment and Loan Program route",
+      "subtitle": "02 / SUPPORTING INVESTMENT | Loans and investment through a mechanism separate from the general account",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "",
+          "text": "The Fiscal Investment and Loan Program uses funding raised through FILP bonds and other means to support long-term, large-scale projects required for policy purposes."
+        },
+        {
+          "h": "Funding route",
+          "text": "Markets → raise funds with FILP bonds → government\nGovernment → policy financial institutions and others → loans to projects"
+        },
+        {
+          "h": "",
+          "text": "Principal and interest repayments from borrowers and other receipts fund repayment and interest on FILP bonds. FILP bonds differ in nature from special deficit-financing bonds covering general-account shortfalls."
+        },
+        {
+          "h": "Bonds also support specific fields",
+          "text": "GX Economy Transition Bonds and bonds for advanced semiconductor and AI-related technologies support upfront investment in particular fields. Repayment funding is designed under each scheme."
+        },
+        {
+          "h": "",
+          "text": "FILP is not simply added to general-account revenue."
+        }
+      ]
+    },
+    {
+      "title": "Investment effectiveness and fiscal burden",
+      "subtitle": "03 / ASSESSING POLICY | What is funded, and what results does it generate?",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "",
+          "text": "If investment raises productivity and supply capacity and increases private investment, nominal GDP and tax revenue, it can help push down the debt-to-GDP ratio.\nIf expected benefits fail to materialize while debt and interest burdens grow, fiscal sustainability can deteriorate. It depends on interest rates and the fiscal balance as well as growth."
+        },
+        {
+          "h": "Five perspectives for checking policy results",
+          "text": "1. Does it increase future productivity and supply capacity?\n2. Can it attract private investment?\n3. Does it expand GDP and tax revenue?\n4. Can debt-servicing costs be managed when interest rates rise?\n5. Can the debt-to-GDP ratio be steadily reduced?"
+        },
+        {
+          "h": "",
+          "text": "Can economic growth and fiscal sustainability be achieved together?"
+        }
+      ]
+    }
+  ],
+  "es": [
+    {
+      "title": "¿Qué es una política fiscal expansiva responsable?",
+      "subtitle": "POLÍTICA | ¿Con qué recursos invierte el Gobierno?",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "Impulsar inversión para crecer y preservar la sostenibilidad fiscal",
+          "text": "Las Directrices Básicas 2026 proclaman el primer año de la «política fiscal expansiva responsable». Buscan combinar crecimiento y sostenibilidad fiscal invirtiendo en IA, semiconductores, GX (transformación verde), prevención de desastres e infraestructura."
+        },
+        {
+          "h": "",
+          "text": "Una política fiscal expansiva no significa emitir deuda pública sin límite. También hay que vigilar deuda/PIB, tipos de interés, costes del servicio de la deuda y confianza del mercado."
+        },
+        {
+          "h": "",
+          "text": "El foco está tanto en los efectos de la inversión como en la carga fiscal."
+        }
+      ]
+    },
+    {
+      "title": "¿De dónde vienen los recursos?",
+      "subtitle": "01 / INGRESOS DE LA CUENTA GENERAL | Presupuesto inicial del ejercicio 2026: unos ¥122,3 billones",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "Impuestos e ingresos por timbres",
+          "text": "¥83,7 billones / 68,5%"
+        },
+        {
+          "h": "Ingresos por emisión de deuda",
+          "text": "¥29,6 billones / 24,2%"
+        },
+        {
+          "h": "Otros ingresos",
+          "text": "¥9,0 billones / 7,4%"
+        },
+        {
+          "h": "",
+          "text": "Importes y porcentajes redondeados. Los porcentajes no suman exactamente 100%."
+        },
+        {
+          "h": "Bonos de construcción",
+          "text": "Deuda emitida para financiar gastos permitidos por la Ley de Finanzas Públicas, como obras públicas, aportaciones de capital y préstamos."
+        },
+        {
+          "h": "Bonos especiales para financiar déficit",
+          "text": "Se emiten mediante leyes especiales para cubrir gastos no financiables con impuestos y otros ingresos. No se destinan exclusivamente a inversión."
+        },
+        {
+          "h": "",
+          "text": "Tras emitir bonos, sigue siendo necesario atender amortizaciones e intereses."
+        }
+      ]
+    },
+    {
+      "title": "La vía del Programa de Inversión y Préstamo Fiscal",
+      "subtitle": "02 / APOYO A LA INVERSIÓN | Préstamos e inversión mediante un mecanismo distinto de la cuenta general",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "",
+          "text": "El Programa de Inversión y Préstamo Fiscal (FILP) utiliza fondos captados con bonos FILP y otros instrumentos para apoyar proyectos de gran escala y largo plazo necesarios para la política pública."
+        },
+        {
+          "h": "Circuito de financiación",
+          "text": "Mercado → captación con bonos FILP → Gobierno\nGobierno → entidades financieras públicas y otras → préstamos a proyectos"
+        },
+        {
+          "h": "",
+          "text": "Las devoluciones de principal e intereses de los prestatarios y otros recursos se destinan a amortizar bonos FILP y pagar sus intereses. Difieren de los bonos especiales que cubren déficits de la cuenta general."
+        },
+        {
+          "h": "También hay bonos para sectores específicos",
+          "text": "Los bonos de transición económica GX y de tecnologías avanzadas de semiconductores e IA apoyan inversiones iniciales específicas. Cada sistema diseña sus fuentes de amortización."
+        },
+        {
+          "h": "",
+          "text": "El FILP no se suma sin más a los ingresos de la cuenta general."
+        }
+      ]
+    },
+    {
+      "title": "Efectos de la inversión y carga fiscal",
+      "subtitle": "03 / EVALUAR POLÍTICAS | ¿En qué se gasta y qué resultados genera?",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "",
+          "text": "Si la inversión eleva productividad y capacidad de oferta, e impulsa inversión privada, PIB nominal e impuestos, puede contribuir a reducir deuda/PIB.\nSi no logra los efectos previstos y crecen deuda e intereses, puede empeorar la sostenibilidad fiscal. Además del crecimiento, influyen los tipos de interés y el saldo fiscal."
+        },
+        {
+          "h": "Cinco perspectivas para comprobar resultados",
+          "text": "1. ¿Eleva productividad y capacidad de oferta futuras?\n2. ¿Atrae inversión privada?\n3. ¿Amplía PIB e ingresos fiscales?\n4. ¿Permite gestionar el servicio de la deuda si suben los tipos?\n5. ¿Reduce de forma estable deuda/PIB?"
+        },
+        {
+          "h": "",
+          "text": "¿Pueden combinarse crecimiento económico y sostenibilidad fiscal?"
+        }
+      ]
+    }
+  ],
+  "pt": [
+    {
+      "title": "O que é uma política fiscal expansionista responsável?",
+      "subtitle": "POLÍTICA | Com que recursos o governo investe?",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "Promover investimentos para crescer e preservar a sustentabilidade fiscal",
+          "text": "As Diretrizes Básicas de 2026 anunciam o primeiro ano da “política fiscal expansionista responsável”. A proposta busca crescimento econômico e sustentabilidade fiscal com investimentos em IA, semicondutores, GX (transformação verde), prevenção de desastres e infraestrutura."
+        },
+        {
+          "h": "",
+          "text": "Política fiscal expansionista não significa emitir títulos públicos sem limite. Também é necessário observar dívida/PIB, juros, custos do serviço da dívida e confiança do mercado."
+        },
+        {
+          "h": "",
+          "text": "O foco está nos efeitos do investimento e no ônus fiscal."
+        }
+      ]
+    },
+    {
+      "title": "De onde vêm os recursos?",
+      "subtitle": "01 / RECEITAS DA CONTA GERAL | Orçamento inicial do exercício de 2026: cerca de ¥122,3 trilhões",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "Receitas tributárias e de selos",
+          "text": "¥83,7 trilhões / 68,5%"
+        },
+        {
+          "h": "Receitas de emissão de títulos",
+          "text": "¥29,6 trilhões / 24,2%"
+        },
+        {
+          "h": "Outras receitas",
+          "text": "¥9,0 trilhões / 7,4%"
+        },
+        {
+          "h": "",
+          "text": "Valores e percentuais arredondados. A soma dos percentuais não é exatamente 100%."
+        },
+        {
+          "h": "Títulos de construção",
+          "text": "Títulos emitidos para financiar despesas autorizadas pela Lei de Finanças Públicas, como obras públicas, aportes de capital e empréstimos."
+        },
+        {
+          "h": "Títulos especiais para financiar déficit",
+          "text": "Emitidos com base em leis especiais para cobrir despesas não financiadas por tributos e outras receitas. Não são exclusivos para investimentos."
+        },
+        {
+          "h": "",
+          "text": "Após a emissão, ainda é preciso pagar principal e juros."
+        }
+      ]
+    },
+    {
+      "title": "A via do Programa de Investimento e Empréstimo Fiscal",
+      "subtitle": "02 / APOIO AO INVESTIMENTO | Empréstimos e investimentos por mecanismo separado da conta geral",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "",
+          "text": "O Programa de Investimento e Empréstimo Fiscal (FILP) usa recursos captados com títulos FILP e outros meios para apoiar projetos de longo prazo e grande escala necessários à política pública."
+        },
+        {
+          "h": "Fluxo de recursos",
+          "text": "Mercado → captação com títulos FILP → governo\nGoverno → instituições financeiras de política pública e outras → empréstimos a projetos"
+        },
+        {
+          "h": "",
+          "text": "Pagamentos de principal e juros dos tomadores e outras receitas são destinados à amortização e aos juros dos títulos FILP. Eles diferem dos títulos especiais que cobrem insuficiências da conta geral."
+        },
+        {
+          "h": "Há títulos para setores específicos",
+          "text": "Títulos de Transição Econômica GX e títulos de tecnologias avançadas de semicondutores e IA apoiam investimentos iniciais em áreas específicas. Cada sistema define as fontes de amortização."
+        },
+        {
+          "h": "",
+          "text": "O FILP não deve ser simplesmente somado às receitas da conta geral."
+        }
+      ]
+    },
+    {
+      "title": "Efeitos do investimento e ônus fiscal",
+      "subtitle": "03 / AVALIAR POLÍTICAS | Onde se aplica e que resultados gera?",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "",
+          "text": "Se o investimento elevar produtividade e capacidade de oferta, ampliando investimento privado, PIB nominal e arrecadação, pode contribuir para reduzir dívida/PIB.\nSe os efeitos esperados não ocorrerem e aumentarem dívida e juros, a sustentabilidade fiscal pode piorar. Ela depende também dos juros e do saldo fiscal, além do crescimento."
+        },
+        {
+          "h": "Cinco perspectivas para verificar resultados",
+          "text": "1. Aumenta produtividade e capacidade de oferta futuras?\n2. Atrai investimento privado?\n3. Amplia PIB e arrecadação?\n4. Permite controlar o serviço da dívida quando os juros sobem?\n5. Reduz de forma estável dívida/PIB?"
+        },
+        {
+          "h": "",
+          "text": "É possível conciliar crescimento econômico e sustentabilidade fiscal?"
+        }
+      ]
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "什么是负责任的积极财政？",
+      "subtitle": "政策机制 | 政府以什么资金进行投资？",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "推进增长投资，同时守住财政可持续性",
+          "text": "《骨太方针2026》提出“负责任的积极财政”元年。通过推进AI、半导体、GX（绿色转型）、防灾和基础设施等投资，力求兼顾经济增长与财政可持续性。"
+        },
+        {
+          "h": "",
+          "text": "积极财政并不意味着无限制发行国债。还必须关注债务余额占GDP之比、利率、国债费用和市场信任。"
+        },
+        {
+          "h": "",
+          "text": "焦点在于投资效果与财政负担两方面。"
+        }
+      ]
+    },
+    {
+      "title": "财源从哪里来？",
+      "subtitle": "01 / 一般会计财源 | 2026财年初始预算规模：约122.3万亿日元",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "税收与印花收入",
+          "text": "83.7万亿日元 / 68.5%"
+        },
+        {
+          "h": "公债金",
+          "text": "29.6万亿日元 / 24.2%"
+        },
+        {
+          "h": "其他收入",
+          "text": "9.0万亿日元 / 7.4%"
+        },
+        {
+          "h": "",
+          "text": "金额和比例均经四舍五入，比例合计不等于100%。"
+        },
+        {
+          "h": "建设国债",
+          "text": "为公共工程费、出资和贷款等《财政法》允许的支出筹集资金而发行的国债。"
+        },
+        {
+          "h": "特例国债（赤字国债）",
+          "text": "依据特例法发行，以填补税收等不足以支付财政支出的缺口。并非投资专用。"
+        },
+        {
+          "h": "",
+          "text": "发行国债后，仍须应对偿还本金与支付利息。"
+        }
+      ]
+    },
+    {
+      "title": "财政投融资这条路径",
+      "subtitle": "02 / 支撑投资的机制 | 通过一般会计以外的机制进行融资与投资",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "",
+          "text": "财政投融资利用财政投融资债等筹措的资金，支持政策上必要的长期、大规模项目等。"
+        },
+        {
+          "h": "资金路径",
+          "text": "市场 → 通过财政投融资债筹资 → 政府\n政府 → 政策性金融机构等 → 向项目贷款"
+        },
+        {
+          "h": "",
+          "text": "借款方偿还的本息等，用于偿还财政投融资债及支付利息。财政投融资债与填补一般会计缺口的特例国债性质不同。"
+        },
+        {
+          "h": "也有支持特定领域的国债",
+          "text": "GX经济转型债、先进半导体及人工智能相关技术债等，支持特定领域的前期投资。各项制度分别设计偿还财源。"
+        },
+        {
+          "h": "",
+          "text": "财政投融资不能简单加到一般会计收入之上。"
+        }
+      ]
+    },
+    {
+      "title": "投资效果与财政负担",
+      "subtitle": "03 / 看待政策的视角 | 资金用在哪里，产生什么成果？",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "",
+          "text": "若投资提高生产率和供给能力，带动民间投资、名义GDP与税收增加，就可能推动债务余额占GDP之比下降。\n另一方面，若预期效果未能实现，而债务与利息负担增加，财政可持续性可能恶化。除了增长，还受利率和财政收支影响。"
+        },
+        {
+          "h": "确认政策成果的五个视角",
+          "text": "1. 能否提高未来生产率与供给能力？\n2. 能否吸引民间投资？\n3. 能否扩大GDP与税收？\n4. 利率上升时能否管理国债费用？\n5. 能否稳定降低债务余额占GDP之比？"
+        },
+        {
+          "h": "",
+          "text": "能否兼顾经济增长与财政可持续性？"
+        }
+      ]
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "什麼是負責任的積極財政？",
+      "subtitle": "政策機制 | 政府以什麼資金進行投資？",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "推進成長投資，同時守住財政永續性",
+          "text": "《骨太方針2026》提出「負責任的積極財政」元年。透過推進AI、半導體、GX（綠色轉型）、防災和基礎建設等投資，力求兼顧經濟成長與財政永續性。"
+        },
+        {
+          "h": "",
+          "text": "積極財政並不意味著無限制發行國債。還必須關注債務餘額占GDP之比、利率、國債費用和市場信任。"
+        },
+        {
+          "h": "",
+          "text": "焦點在於投資效果與財政負擔兩方面。"
+        }
+      ]
+    },
+    {
+      "title": "財源從哪裡來？",
+      "subtitle": "01 / 一般會計財源 | 2026會計年度初始預算規模：約122.3兆日圓",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "稅收與印花收入",
+          "text": "83.7兆日圓 / 68.5%"
+        },
+        {
+          "h": "公債金",
+          "text": "29.6兆日圓 / 24.2%"
+        },
+        {
+          "h": "其他收入",
+          "text": "9.0兆日圓 / 7.4%"
+        },
+        {
+          "h": "",
+          "text": "金額和比例均經四捨五入，比例合計不等於100%。"
+        },
+        {
+          "h": "建設國債",
+          "text": "為公共工程費、出資和貸款等《財政法》允許的支出籌集資金而發行的國債。"
+        },
+        {
+          "h": "特例國債（赤字國債）",
+          "text": "依據特例法發行，以填補稅收等不足以支付財政支出的缺口。並非投資專用。"
+        },
+        {
+          "h": "",
+          "text": "發行國債後，仍須應對償還本金與支付利息。"
+        }
+      ]
+    },
+    {
+      "title": "財政投融資這條路徑",
+      "subtitle": "02 / 支撐投資的機制 | 透過一般會計以外的機制進行融資與投資",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "",
+          "text": "財政投融資利用財政投融資債等籌措的資金，支持政策上必要的長期、大規模計畫等。"
+        },
+        {
+          "h": "資金路徑",
+          "text": "市場 → 透過財政投融資債籌資 → 政府\n政府 → 政策性金融機構等 → 向計畫貸款"
+        },
+        {
+          "h": "",
+          "text": "借款方償還的本息等，用於償還財政投融資債及支付利息。財政投融資債與填補一般會計缺口的特例國債性質不同。"
+        },
+        {
+          "h": "也有支持特定領域的國債",
+          "text": "GX經濟轉型債、先進半導體及人工智慧相關技術債等，支持特定領域的前期投資。各項制度分別設計償還財源。"
+        },
+        {
+          "h": "",
+          "text": "財政投融資不能簡單加到一般會計收入之上。"
+        }
+      ]
+    },
+    {
+      "title": "投資效果與財政負擔",
+      "subtitle": "03 / 看待政策的視角 | 資金用在哪裡，產生什麼成果？",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "",
+          "text": "若投資提高生產力和供給能力，帶動民間投資、名目GDP與稅收增加，就可能推動債務餘額占GDP之比下降。\n另一方面，若預期效果未能實現，而債務與利息負擔增加，財政永續性可能惡化。除了成長，還受利率和財政收支影響。"
+        },
+        {
+          "h": "確認政策成果的五個視角",
+          "text": "1. 能否提高未來生產力與供給能力？\n2. 能否吸引民間投資？\n3. 能否擴大GDP與稅收？\n4. 利率上升時能否管理國債費用？\n5. 能否穩定降低債務餘額占GDP之比？"
+        },
+        {
+          "h": "",
+          "text": "能否兼顧經濟成長與財政永續性？"
+        }
+      ]
+    }
+  ]
+}

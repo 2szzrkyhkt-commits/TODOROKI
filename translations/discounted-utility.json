@@ -1,0 +1,202 @@
+{
+  "en": [
+    {
+      "title": "Why can we resist smoking now for future health?",
+      "subtitle": "From discounted utility theory to preference reversal",
+      "blocks": [
+        {
+          "h": "",
+          "text": "People do not value future benefits at their full amount: they discount them over time and convert them into “present value.”"
+        },
+        {
+          "h": "Discounted utility theory",
+          "text": "Smoking provides the utility of “feeling good right now.” The health benefits of quitting, however, appear in the future. People discount that future utility over time and compare it with present utility when deciding.\nPresent value = future utility ÷ (1 + r)^t\nr: rate of time preference; t: time until the future benefit."
+        },
+        {
+          "h": "What is the rate of time preference?",
+          "text": "A higher rate puts greater weight on “now rather than later.” Heavily discounting future health makes an immediate cigarette more attractive. With a low rate, future health retains a high present value, making it easier to resist current pleasure.\nHigh rate: prioritize a cigarette now; heavily discount future health.\nLow rate: prioritize future health; find it easier to resist present pleasure."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "Why does the intention to quit collapse?",
+      "subtitle": "As the moment approaches, the valuation of utility itself changes",
+      "blocks": [
+        {
+          "h": "Preference reversal",
+          "text": "Today you may think, “I will quit next month. Health matters more.” But next month, with a cigarette right in front of you, this can become “It is fine to smoke just today.”\nIn the distant future, choose “health” → temptation comes close → choose “a cigarette now.”"
+        },
+        {
+          "h": "Time inconsistency",
+          "text": "The earlier plan to quit does not match the actual choice when that moment arrives. This loss of consistency in decision-making as time passes is called time inconsistency."
+        },
+        {
+          "h": "The overall process",
+          "text": "Large utility from future health → discount by the rate of time preference → convert to present value and compare with immediate pleasure → as temptation approaches, present pleasure becomes relatively stronger → preference reversal → time inconsistency.\nPeople who can resist now for future health do not discount that future health very heavily."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "es": [
+    {
+      "title": "¿Por qué podemos resistir al cigarrillo ahora por la salud futura?",
+      "subtitle": "De la utilidad descontada a la inversión de preferencias",
+      "blocks": [
+        {
+          "h": "",
+          "text": "Las personas no valoran íntegramente los beneficios futuros: los descuentan según el tiempo y los convierten en «valor presente»."
+        },
+        {
+          "h": "Teoría de la utilidad descontada",
+          "text": "Fumar aporta la utilidad de «sentirse bien ahora mismo». Los beneficios de salud al dejarlo aparecen en el futuro. Al decidir, las personas descuentan esa utilidad futura según el tiempo y la comparan con la actual.\nValor presente = utilidad futura ÷ (1 + r)^t\nr: tasa de preferencia temporal; t: tiempo hasta el beneficio futuro."
+        },
+        {
+          "h": "¿Qué es la tasa de preferencia temporal?",
+          "text": "Una tasa alta da más peso al presente que al futuro. Descontar mucho la salud futura facilita elegir el cigarrillo inmediato. Con una tasa baja, la salud futura conserva un alto valor presente y resulta más fácil renunciar al placer actual.\nTasa alta: priorizar el cigarrillo actual; descontar mucho la salud futura.\nTasa baja: priorizar la salud futura; resistir mejor el placer actual."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "¿Por qué se desmorona la intención de dejar de fumar?",
+      "subtitle": "Al acercarse el momento, cambia la propia valoración de la utilidad",
+      "blocks": [
+        {
+          "h": "Inversión de preferencias",
+          "text": "Hoy puedes pensar: «Dejaré de fumar el mes que viene. La salud importa más». Pero al llegar ese mes, con un cigarrillo delante, puedes cambiar a «Por hoy puedo fumar».\nEn el futuro lejano, elegir «salud» → la tentación se acerca → elegir «un cigarrillo ahora»."
+        },
+        {
+          "h": "Inconsistencia temporal",
+          "text": "El plan previo de dejar de fumar no coincide con la elección real cuando llega ese momento. Esta falta de coherencia de las decisiones con el paso del tiempo se llama inconsistencia temporal."
+        },
+        {
+          "h": "El proceso completo",
+          "text": "Gran utilidad de la salud futura → descontar según la tasa de preferencia temporal → convertir a valor presente y comparar con el placer inmediato → al acercarse la tentación, el placer actual gana fuerza relativa → inversión de preferencias → inconsistencia temporal.\nQuienes resisten hoy por su salud futura no descuentan mucho esa salud."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "pt": [
+    {
+      "title": "Por que conseguimos resistir ao cigarro agora pela saúde futura?",
+      "subtitle": "Da teoria da utilidade descontada à reversão de preferências",
+      "blocks": [
+        {
+          "h": "",
+          "text": "As pessoas não avaliam integralmente os benefícios futuros: descontam-nos pelo tempo e os convertem em “valor presente”."
+        },
+        {
+          "h": "Teoria da utilidade descontada",
+          "text": "Fumar proporciona a utilidade de “sentir prazer agora”. Já os benefícios para a saúde ao parar aparecem no futuro. As pessoas descontam essa utilidade futura pelo tempo e a comparam com a utilidade presente para decidir.\nValor presente = utilidade futura ÷ (1 + r)^t\nr: taxa de preferência temporal; t: tempo até o benefício futuro."
+        },
+        {
+          "h": "O que é a taxa de preferência temporal?",
+          "text": "Uma taxa alta atribui mais peso ao presente que ao futuro. Descontar muito a saúde futura favorece a escolha do cigarro imediato. Com taxa baixa, a saúde futura mantém alto valor presente, facilitando resistir ao prazer atual.\nTaxa alta: priorizar o cigarro agora; descontar muito a saúde futura.\nTaxa baixa: priorizar a saúde futura; resistir mais facilmente ao prazer atual."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "Por que a intenção de parar de fumar desmorona?",
+      "subtitle": "Quando o momento se aproxima, a própria avaliação da utilidade muda",
+      "blocks": [
+        {
+          "h": "Reversão de preferências",
+          "text": "Hoje você pode pensar: “Vou parar no mês que vem. A saúde é mais importante”. Mas, no mês seguinte, com o cigarro à sua frente, isso pode virar “Só hoje não faz mal”.\nNo futuro distante, escolher “saúde” → a tentação se aproxima → escolher “um cigarro agora”."
+        },
+        {
+          "h": "Inconsistência temporal",
+          "text": "O plano anterior de parar de fumar não coincide com a escolha real quando chega o momento. Essa perda de coerência nas decisões ao longo do tempo chama-se inconsistência temporal."
+        },
+        {
+          "h": "O processo completo",
+          "text": "Grande utilidade da saúde futura → descontar pela taxa de preferência temporal → converter em valor presente e comparar com o prazer imediato → com a aproximação da tentação, o prazer atual ganha força relativa → reversão de preferências → inconsistência temporal.\nQuem resiste agora pela saúde futura não desconta muito essa saúde."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "为什么能为了将来的健康，现在忍住不抽烟？",
+      "subtitle": "从折扣效用理论到“偏好反转”",
+      "blocks": [
+        {
+          "h": "",
+          "text": "人们不会直接按原值评价未来利益，而会按时间折扣，换算成“现在的价值”。"
+        },
+        {
+          "h": "折扣效用理论",
+          "text": "抽烟能获得“马上感觉舒服”的效用，而戒烟带来的健康利益要到未来才出现。人们按时间折扣未来的效用，与当前效用比较后作出决定。\n现值 = 未来效用 ÷ (1 + r)^t\nr：时间偏好率；t：距离未来的时间。"
+        },
+        {
+          "h": "什么是时间偏好率？",
+          "text": "时间偏好率越高，越看重“现在而非将来”。由于大幅折扣未来健康，更容易选择眼前的一支烟。反之，时间偏好率低，就能在现在较高地评价未来健康，因此更容易忍住当前的快乐。\n时间偏好率高：重视现在抽一支烟；大幅折扣未来健康。\n时间偏好率低：重视未来健康；更容易忍住眼前的快乐。"
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "为什么“打算戒烟”的计划会崩溃？",
+      "subtitle": "时间临近时，对效用的评价本身会改变",
+      "blocks": [
+        {
+          "h": "偏好反转",
+          "text": "今天的自己会想：“下个月开始戒烟，健康更重要。”但到了下个月，香烟就在眼前时，可能又变成“今天抽一下也没关系”。\n在遥远的未来选择“健康” → 诱惑来到眼前 → 选择“现在抽一支烟”。"
+        },
+        {
+          "h": "时间不一致性",
+          "text": "之前的自己制定的“戒烟”计划，与到了那个时点实际作出的选择不一致。像这样，决策随时间推移失去一致性的现象，叫作时间不一致性。"
+        },
+        {
+          "h": "整体流程",
+          "text": "未来健康带来的巨大效用 → 按时间偏好率折扣 → 换算成现值，与眼前的快乐比较 → 诱惑临近，当前快乐相对变强 → 偏好反转 → 时间不一致性。\n能为了未来健康现在忍耐的人，不会对未来健康作“过大的折扣”。"
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "為什麼能為了將來的健康，現在忍住不抽菸？",
+      "subtitle": "從折扣效用理論到「偏好反轉」",
+      "blocks": [
+        {
+          "h": "",
+          "text": "人們不會直接按原值評價未來利益，而會按時間折扣，換算成「現在的價值」。"
+        },
+        {
+          "h": "折扣效用理論",
+          "text": "抽菸能獲得「馬上感覺舒服」的效用，而戒菸帶來的健康利益要到未來才出現。人們按時間折扣未來的效用，與當前效用比較後作出決定。\n現值 = 未來效用 ÷ (1 + r)^t\nr：時間偏好率；t：距離未來的時間。"
+        },
+        {
+          "h": "什麼是時間偏好率？",
+          "text": "時間偏好率越高，越看重「現在而非將來」。由於大幅折扣未來健康，更容易選擇眼前的一支菸。反之，時間偏好率低，就能在現在較高地評價未來健康，因此更容易忍住當前的快樂。\n時間偏好率高：重視現在抽一支菸；大幅折扣未來健康。\n時間偏好率低：重視未來健康；更容易忍住眼前的快樂。"
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "為什麼「打算戒菸」的計畫會崩潰？",
+      "subtitle": "時間臨近時，對效用的評價本身會改變",
+      "blocks": [
+        {
+          "h": "偏好反轉",
+          "text": "今天的自己會想：「下個月開始戒菸，健康更重要。」但到了下個月，香菸就在眼前時，可能又變成「今天抽一下也沒關係」。\n在遙遠的未來選擇「健康」 → 誘惑來到眼前 → 選擇「現在抽一支菸」。"
+        },
+        {
+          "h": "時間不一致性",
+          "text": "之前的自己制定的「戒菸」計畫，與到了那個時點實際作出的選擇不一致。像這樣，決策隨時間推移失去一致性的現象，叫作時間不一致性。"
+        },
+        {
+          "h": "整體流程",
+          "text": "未來健康帶來的巨大效用 → 按時間偏好率折扣 → 換算成現值，與眼前的快樂比較 → 誘惑臨近，當前快樂相對變強 → 偏好反轉 → 時間不一致性。\n能為了未來健康現在忍耐的人，不會對未來健康作「過大的折扣」。"
+        }
+      ],
+      "dense": true
+    }
+  ]
+}

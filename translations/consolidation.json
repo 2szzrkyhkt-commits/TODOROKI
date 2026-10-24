@@ -1,0 +1,422 @@
+{
+  "en": [
+    {
+      "title": "What is consolidation?",
+      "subtitle": "BUSINESS / INDUSTRY | Bringing companies or businesses together",
+      "blocks": [
+        {
+          "text": "Consolidation brings dispersed companies, businesses or functions together to expand scale or improve management efficiency."
+        },
+        {
+          "h": "Meaning for companies and industries",
+          "text": "“Industry consolidation” refers to companies in the same industry coming together through M&A (mergers and acquisitions) or business integration, concentrating management resources."
+        },
+        {
+          "h": "What integration aims to achieve",
+          "text": "Combine factories, people, technology and funds to reduce duplication and improve competitiveness. A reduction in the number of companies is one possible result."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Why consolidate?",
+      "subtitle": "WHY CONSOLIDATE | Alongside scale, the aim is to reduce duplication of resources",
+      "blocks": [
+        {
+          "h": "01 Reduce costs",
+          "text": "Rationalize overlapping factories, logistics, sales and administrative functions to reduce fixed costs."
+        },
+        {
+          "h": "02 Strengthen R&D",
+          "text": "Bring together dispersed people, technology and funding to facilitate large-scale research, development and capital investment."
+        },
+        {
+          "h": "03 Improve price-negotiating power",
+          "text": "Larger procurement volumes and sales scale may increase bargaining power with business partners."
+        },
+        {
+          "h": "04 Scale to compete with major overseas firms",
+          "text": "Concentrate capital and business foundations to prepare for overseas expansion and international competition."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Integration and corporate value",
+      "subtitle": "CORPORATE VALUE | Results appear in post-integration earnings and capital efficiency",
+      "blocks": [
+        {
+          "h": "Corporate value may change",
+          "text": "If industry restructuring eases excessive competition and improves margins or capital efficiency, market valuation may change."
+        },
+        {
+          "h": "An announcement is distinct from results",
+          "text": "The focus is whether actual improvements appear in post-integration revenue, margins, return on invested capital (ROIC), free cash flow and similar measures."
+        },
+        {
+          "h": "Factors that obstruct benefits",
+          "text": "Integration costs, differences in corporate cultures, overpriced acquisitions and antitrust issues can prevent expected benefits. Greater scale alone does not necessarily improve earnings power."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Another meaning in stock markets",
+      "subtitle": "STOCK MARKET | Consolidation can refer to sideways trading or price stabilization",
+      "blocks": [
+        {
+          "h": "Share-price consolidation",
+          "text": "Buying and selling balance within a price range, and prices move sideways. This may occur after an advance or decline."
+        },
+        {
+          "h": "The next direction is not determined",
+          "text": "After sideways trading, prices can break above or below the range. The term “price stabilization” does not guarantee a rise."
+        },
+        {
+          "h": "Meaning depends on context",
+          "text": "Companies and industries: integration, concentration and industry restructuring."
+        },
+        {
+          "text": "Stock-price charts: sideways trading and price stabilization."
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "es": [
+    {
+      "title": "¿Qué es la consolidación?",
+      "subtitle": "EMPRESA / INDUSTRIA | Integrar y concentrar empresas o negocios",
+      "blocks": [
+        {
+          "text": "Agrupa empresas, negocios o funciones dispersos para ampliar la escala o mejorar la eficiencia de gestión."
+        },
+        {
+          "h": "Significado empresarial y sectorial",
+          "text": "La «consolidación de un sector» es el proceso por el que empresas del mismo sector se agrupan mediante fusiones y adquisiciones (M&A) o integración de negocios, concentrando recursos empresariales."
+        },
+        {
+          "h": "Qué se busca con la integración",
+          "text": "Combinar fábricas, personal, tecnología y fondos para reducir duplicaciones y mejorar la competitividad. La disminución del número de empresas es uno de sus posibles resultados."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "¿Por qué integrar?",
+      "subtitle": "MOTIVOS | Además de ampliar la escala, se busca reducir recursos duplicados",
+      "blocks": [
+        {
+          "h": "01 Reducir costes",
+          "text": "Reorganizar duplicaciones en fábricas, logística, ventas y administración para reducir costes fijos."
+        },
+        {
+          "h": "02 Reforzar la I+D",
+          "text": "Reunir personal, tecnología y fondos dispersos para facilitar grandes proyectos de investigación, desarrollo e inversión en instalaciones."
+        },
+        {
+          "h": "03 Mejorar la negociación de precios",
+          "text": "Un mayor volumen de compras y ventas puede aumentar el poder negociador frente a los socios comerciales."
+        },
+        {
+          "h": "04 Alcanzar escala para competir con grandes empresas extranjeras",
+          "text": "Concentrar capital y bases de negocio para afrontar la expansión exterior y la competencia internacional."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Integración y valor empresarial",
+      "subtitle": "VALOR EMPRESARIAL | Los efectos aparecen en la rentabilidad y la eficiencia del capital posteriores",
+      "blocks": [
+        {
+          "h": "Posibles cambios de valor",
+          "text": "Si la reorganización sectorial reduce la competencia excesiva y mejora márgenes y eficiencia del capital, la valoración del mercado puede cambiar."
+        },
+        {
+          "h": "Anuncio y resultados son distintos",
+          "text": "La cuestión es si mejoran realmente las ventas, los márgenes, la rentabilidad del capital invertido (ROIC), el flujo de caja libre y otras métricas tras la integración."
+        },
+        {
+          "h": "Factores que impiden los beneficios",
+          "text": "Los costes de integración, las diferencias culturales, las adquisiciones caras y los problemas de competencia pueden frustrar los efectos esperados. Aumentar la escala no garantiza mayor capacidad de generar beneficios."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Otro significado en bolsa",
+      "subtitle": "MERCADO BURSÁTIL | Puede aludir a un movimiento lateral o estabilización del precio",
+      "blocks": [
+        {
+          "h": "Consolidación de la cotización",
+          "text": "Compradores y vendedores se equilibran dentro de un rango y el precio se mueve lateralmente. Puede ocurrir después de una subida o una caída."
+        },
+        {
+          "h": "La dirección posterior no está fijada",
+          "text": "Tras el movimiento lateral, el precio puede romper el rango al alza o a la baja. Hablar de «estabilización» no garantiza una subida."
+        },
+        {
+          "h": "El significado depende del contexto",
+          "text": "Empresas y sectores: integración, concentración y reorganización sectorial."
+        },
+        {
+          "text": "Gráficos bursátiles: movimiento lateral y estabilización del precio."
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "pt": [
+    {
+      "title": "O que é consolidação?",
+      "subtitle": "NEGÓCIOS / INDÚSTRIA | Integrar e concentrar empresas ou negócios",
+      "blocks": [
+        {
+          "text": "Reúne empresas, negócios ou funções dispersos para ampliar a escala ou melhorar a eficiência da gestão."
+        },
+        {
+          "h": "Significado nas empresas e nos setores",
+          "text": "“Consolidação do setor” é o movimento em que empresas de um mesmo setor se unem por fusões e aquisições (M&A) ou integração de negócios, concentrando recursos empresariais."
+        },
+        {
+          "h": "O que a integração busca",
+          "text": "Combinar fábricas, pessoas, tecnologia e recursos financeiros para reduzir duplicações e melhorar a competitividade. A redução no número de empresas é um dos possíveis resultados."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Por que integrar?",
+      "subtitle": "MOTIVOS | Além de ampliar a escala, busca-se reduzir recursos duplicados",
+      "blocks": [
+        {
+          "h": "01 Redução de custos",
+          "text": "Reorganizar sobreposições em fábricas, logística, vendas e administração para reduzir custos fixos."
+        },
+        {
+          "h": "02 Fortalecimento de P&D",
+          "text": "Reunir pessoas, tecnologia e capital dispersos para facilitar projetos de grande porte de pesquisa, desenvolvimento e investimento em instalações."
+        },
+        {
+          "h": "03 Maior poder de negociação de preços",
+          "text": "Maior volume de compras e vendas pode elevar o poder de negociação com parceiros comerciais."
+        },
+        {
+          "h": "04 Escala para competir com grandes empresas estrangeiras",
+          "text": "Concentrar capital e bases de negócios para se preparar para expansão no exterior e competição internacional."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Integração e valor da empresa",
+      "subtitle": "VALOR CORPORATIVO | Os efeitos aparecem nos lucros e na eficiência do capital após a integração",
+      "blocks": [
+        {
+          "h": "O valor pode mudar",
+          "text": "Se a reorganização setorial reduzir a concorrência excessiva e melhorar margens ou eficiência do capital, a avaliação do mercado poderá mudar."
+        },
+        {
+          "h": "Anúncio e resultado são diferentes",
+          "text": "O foco é verificar melhorias reais nas receitas, margens, retorno sobre o capital investido (ROIC), fluxo de caixa livre e outras métricas após a integração."
+        },
+        {
+          "h": "Fatores que impedem os benefícios",
+          "text": "Custos de integração, diferenças culturais, aquisições caras e questões concorrenciais podem impedir os efeitos esperados. Escala maior, sozinha, não garante maior capacidade de gerar lucros."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Outro significado na bolsa",
+      "subtitle": "MERCADO ACIONÁRIO | Pode indicar movimento lateral ou estabilização dos preços",
+      "blocks": [
+        {
+          "h": "Consolidação da cotação",
+          "text": "Compras e vendas se equilibram em uma faixa de preços e a cotação anda de lado. Pode ocorrer após uma alta ou queda."
+        },
+        {
+          "h": "A direção seguinte não está definida",
+          "text": "Após a lateralização, o preço pode romper a faixa para cima ou para baixo. A expressão “estabilização” não garante uma alta."
+        },
+        {
+          "h": "O significado depende do contexto",
+          "text": "Empresas e setores: integração, concentração e reorganização setorial."
+        },
+        {
+          "text": "Gráficos de ações: lateralização e estabilização dos preços."
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "什么是整合？",
+      "subtitle": "商业 / 产业 | 将企业或业务合并、集中的理念",
+      "blocks": [
+        {
+          "text": "将分散的企业、业务、职能集中起来，以扩大规模、提高经营效率。"
+        },
+        {
+          "h": "在企业与行业中的含义",
+          "text": "同行业企业通过M&A（合并与收购）或业务整合走到一起，集中经营资源，这种动向称为“行业整合”。"
+        },
+        {
+          "h": "整合旨在实现什么？",
+          "text": "结合工厂、人才、技术、资金等，减少重复配置，提高竞争力。企业数量减少是其结果之一。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "为什么要整合？",
+      "subtitle": "整合的原因 | 除扩大规模，也旨在减少经营资源的重复配置",
+      "blocks": [
+        {
+          "h": "01 降低成本",
+          "text": "整理工厂、物流、销售、管理部门等重复部分，以降低固定成本。"
+        },
+        {
+          "h": "02 强化研发能力",
+          "text": "汇集原本分散的人才、技术、资金，使大规模研发和设备投资更易推进。"
+        },
+        {
+          "h": "03 提高价格谈判能力",
+          "text": "采购量或销售规模扩大，有时可提高与交易对手的议价能力。"
+        },
+        {
+          "h": "04 达到与海外巨头竞争的规模",
+          "text": "集中资本和业务基础，完善应对海外拓展与国际竞争的体制。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "整合与企业价值的关系",
+      "subtitle": "企业价值 | 整合效果体现在实施后的收益和资本效率上",
+      "blocks": [
+        {
+          "h": "企业价值可能改变",
+          "text": "行业重组若缓解过度竞争，改善利润率和资本效率，市场评价可能改变。"
+        },
+        {
+          "h": "整合公告与实际成果不同",
+          "text": "焦点在于整合后的销售额、利润率、投入资本回报率（ROIC）、自由现金流等是否出现实际改善。"
+        },
+        {
+          "h": "阻碍效果的因素",
+          "text": "整合费用、企业文化差异、收购价格过高、反垄断法问题等，可能妨碍预期效果。规模扩大不一定就提高盈利能力。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "在股市中还有另一含义",
+      "subtitle": "股票市场 | Consolidation也可指股价的“盘整、筑底企稳”",
+      "blocks": [
+        {
+          "h": "股价盘整",
+          "text": "买卖力量在一定价格区间内均衡，股价横向运行。有时发生于上涨或下跌之后。"
+        },
+        {
+          "h": "后续方向并未确定",
+          "text": "盘整后可能向上突破区间，也可能向下突破。仅凭“筑底企稳”的说法，并不能保证上涨。"
+        },
+        {
+          "h": "含义随语境而变",
+          "text": "企业、行业语境：整合、集中、行业重组。"
+        },
+        {
+          "text": "股价图表语境：盘整、价格企稳。"
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "什麼是整合？",
+      "subtitle": "商業 / 產業 | 將企業或業務合併、集中的理念",
+      "blocks": [
+        {
+          "text": "將分散的企業、業務、職能集中起來，以擴大規模、提高經營效率。"
+        },
+        {
+          "h": "在企業與產業中的含義",
+          "text": "同產業企業透過M&A（合併與收購）或業務整合走到一起，集中經營資源，這種動向稱為「產業整合」。"
+        },
+        {
+          "h": "整合旨在實現什麼？",
+          "text": "結合工廠、人才、技術、資金等，減少重複配置，提高競爭力。企業數量減少是其結果之一。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "為什麼要整合？",
+      "subtitle": "整合的原因 | 除擴大規模，也旨在減少經營資源的重複配置",
+      "blocks": [
+        {
+          "h": "01 降低成本",
+          "text": "整理工廠、物流、銷售、管理部門等重複部分，以降低固定成本。"
+        },
+        {
+          "h": "02 強化研發能力",
+          "text": "匯集原本分散的人才、技術、資金，使大規模研發和設備投資更易推進。"
+        },
+        {
+          "h": "03 提高價格談判能力",
+          "text": "採購量或銷售規模擴大，有時可提高與交易對手的議價能力。"
+        },
+        {
+          "h": "04 達到與海外巨頭競爭的規模",
+          "text": "集中資本和業務基礎，完善應對海外拓展與國際競爭的體制。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "整合與企業價值的關係",
+      "subtitle": "企業價值 | 整合效果體現在實施後的收益和資本效率上",
+      "blocks": [
+        {
+          "h": "企業價值可能改變",
+          "text": "產業重組若緩解過度競爭，改善利潤率和資本效率，市場評價可能改變。"
+        },
+        {
+          "h": "整合公告與實際成果不同",
+          "text": "焦點在於整合後的營收、利潤率、投入資本報酬率（ROIC）、自由現金流等是否出現實際改善。"
+        },
+        {
+          "h": "阻礙效果的因素",
+          "text": "整合費用、企業文化差異、收購價格過高、反壟斷法問題等，可能妨礙預期效果。規模擴大不一定就提高獲利能力。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "在股市中還有另一含義",
+      "subtitle": "股票市場 | Consolidation也可指股價的「盤整、築底企穩」",
+      "blocks": [
+        {
+          "h": "股價盤整",
+          "text": "買賣力量在一定價格區間內均衡，股價橫向運行。有時發生於上漲或下跌之後。"
+        },
+        {
+          "h": "後續方向並未確定",
+          "text": "盤整後可能向上突破區間，也可能向下突破。僅憑「築底企穩」的說法，並不能保證上漲。"
+        },
+        {
+          "h": "含義隨語境而變",
+          "text": "企業、產業語境：整合、集中、產業重組。"
+        },
+        {
+          "text": "股價圖表語境：盤整、價格企穩。"
+        }
+      ],
+      "dense": false
+    }
+  ]
+}

@@ -1,0 +1,537 @@
+{
+  "en": [
+    {
+      "title": "Semiconductor basics: controlling electricity",
+      "subtitle": "How diodes, transistors and MOSFETs work | SEMICONDUCTOR BASICS",
+      "blocks": [
+        {
+          "text": "Smartphones, cars, factories and AI data centers do not run on computing chips alone. They need components that condition current and voltage, amplify signals and switch electricity."
+        },
+        {
+          "h": "01 Diode",
+          "text": "A component that conducts current in one direction and makes reverse flow difficult. Main roles: rectification, reverse-current prevention and circuit protection. Typical uses: power supplies, chargers and automotive circuits."
+        },
+        {
+          "h": "02 Transistor",
+          "text": "A general term for components that control current using electrical signals. Main roles: signal amplification and switching current on/off. Typical uses: CPUs, communications circuits, sensors and control circuits."
+        },
+        {
+          "h": "03 MOSFET",
+          "text": "A type of transistor that controls current with voltage applied to a gate. Main roles: switching, signal processing and power conversion. Typical uses: integrated circuits, server power supplies, automotive power supplies and inverters."
+        },
+        {
+          "h": "Classification point",
+          "text": "MOSFETs are included within transistors. These are not three separate classifications at the same level."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "How do the three components work?",
+      "subtitle": "Conduct in one direction; control with a signal; switch with voltage",
+      "blocks": [
+        {
+          "h": "Diode | A check valve for current",
+          "text": "Used for “rectification,” extracting current that flows in one direction from alternating current. Rectification alone leaves ripple in the output; a stable DC supply also needs smoothing and voltage regulation."
+        },
+        {
+          "text": "AC → rectification → smoothing and voltage regulation → stable DC"
+        },
+        {
+          "h": "Transistor | Amplification and switching",
+          "text": "A small input signal controls the output current. Analog circuits amplify signals; digital circuits use on/off states for logic operations. The energy needed for amplification comes from the power supply."
+        },
+        {
+          "h": "MOSFET | Gate voltage controls current",
+          "text": "A MOSFET is a type of field-effect transistor. Gate voltage controls current between source and drain. Steady-state gate current is small, but switching requires charging and discharging the gate."
+        },
+        {
+          "h": "From tiny logic devices to power conversion",
+          "text": "Some MOSFETs process signals inside integrated circuits; power MOSFETs handle large amounts of power. Speed and losses depend on material, voltage rating, structure and drive conditions."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Where are they needed?",
+      "subtitle": "Their shared role is to convert and control electricity into a form suited to its use",
+      "blocks": [
+        {
+          "h": "AI data centers | Fine voltage conversion",
+          "text": "Inside servers, they produce the low-voltage, high-current supplies needed by GPUs and other devices. MOSFETs and power-management ICs handle power conversion; reducing conversion losses lowers heat and power consumption."
+        },
+        {
+          "h": "EVs and hybrids | Electricity drives motors",
+          "text": "Inverters convert battery DC into AC suited to motor operation. Power semiconductors are also used in chargers and DC-DC converters. SiC MOSFETs are used in high-voltage power conversion and other applications."
+        },
+        {
+          "h": "Solar and batteries | Connecting to the grid",
+          "text": "Power conditioners and other equipment convert DC from solar panels or storage batteries into AC and adjust voltage and frequency. Semiconductor control is essential to produce electricity suited to the application."
+        },
+        {
+          "h": "Factories and robots | Precise motion control",
+          "text": "Inverters and servo drives control motor speed and torque. Power semiconductors supply the required power appropriately."
+        },
+        {
+          "h": "Material differences",
+          "text": "Si is silicon; SiC is silicon carbide; GaN is gallium nitride. Their properties differ, so materials are selected according to the application."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "How should supply and demand be assessed?",
+      "subtitle": "Check product-specific conditions rather than treating all “chip shortages” as one",
+      "blocks": [
+        {
+          "h": "Even MOSFETs are not always interchangeable",
+          "text": "Voltage rating, current capability, losses, heat dissipation and packaging differ. One type may be in short supply while another has spare capacity. Demand growth alone does not establish a universal shortage."
+        },
+        {
+          "h": "More production needs equipment and manufacturing expertise",
+          "text": "Power semiconductors also use production equipment for 200 mm wafers and other sizes. Wafer diameter and process node, which indicates circuit miniaturization, are separate measures. Supply depends on process and equipment capacity for each product."
+        },
+        {
+          "h": "For SiC, material quality and yield matter too",
+          "text": "Crystal and wafer quality, processing technology and manufacturing yield affect SiC capacity and cost. Even after expanding factories, process improvements are needed to achieve stable mass production."
+        },
+        {
+          "h": "Automotive products take time to evaluate and qualify",
+          "text": "Automotive components require high reliability. Even similar products cannot necessarily be substituted without evaluation or design changes."
+        },
+        {
+          "text": "Condition, amplify and switch electricity: these basic functions support computing, communications and electrification."
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "es": [
+    {
+      "title": "Semiconductores para controlar la electricidad",
+      "subtitle": "Funcionamiento y función de diodos, transistores y MOSFET | FUNDAMENTOS",
+      "blocks": [
+        {
+          "text": "Smartphones, automóviles, fábricas y centros de datos de IA no funcionan solo con chips de cálculo. Necesitan componentes que acondicionen corriente y tensión, amplifiquen señales y conmuten electricidad."
+        },
+        {
+          "h": "01 Diodo",
+          "text": "Permite el paso de corriente en un sentido y dificulta el sentido contrario. Funciones: rectificación, prevención de corriente inversa y protección de circuitos. Usos típicos: fuentes de alimentación, cargadores y circuitos de automóviles."
+        },
+        {
+          "h": "02 Transistor",
+          "text": "Nombre general de los componentes que controlan corriente mediante señales eléctricas. Funciones: amplificar señales y activar o desactivar corriente. Usos típicos: CPU, circuitos de comunicación, sensores y circuitos de control."
+        },
+        {
+          "h": "03 MOSFET",
+          "text": "Tipo de transistor que controla corriente mediante la tensión aplicada a la puerta. Funciones: conmutación, procesamiento de señales y conversión de energía. Usos típicos: circuitos integrados, fuentes de servidores y vehículos e inversores."
+        },
+        {
+          "h": "Clasificación",
+          "text": "El MOSFET pertenece a los transistores. No son tres categorías independientes del mismo nivel."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "¿Cómo funcionan los tres componentes?",
+      "subtitle": "Conducir en un sentido, controlar con señales y conmutar con tensión",
+      "blocks": [
+        {
+          "h": "Diodo | Válvula antirretorno de corriente",
+          "text": "Se usa para «rectificar»: extraer de una corriente alterna una corriente que fluye en un solo sentido. La rectificación deja ondulación en la salida; una fuente de continua estable necesita también filtrado y regulación de tensión."
+        },
+        {
+          "text": "CA → rectificación → filtrado y regulación de tensión → CC estable"
+        },
+        {
+          "h": "Transistor | Amplificación y conmutación",
+          "text": "Una pequeña señal de entrada controla la corriente de salida. En circuitos analógicos amplifica señales; en digitales usa estados de encendido/apagado para operaciones lógicas. La energía de amplificación procede de la fuente de alimentación."
+        },
+        {
+          "h": "MOSFET | Control por tensión de puerta",
+          "text": "Es un transistor de efecto de campo. La tensión de puerta controla la corriente entre fuente y drenador. La corriente de puerta en régimen estable es pequeña, pero conmutar exige cargar y descargar la puerta."
+        },
+        {
+          "h": "Desde lógica diminuta hasta conversión de potencia",
+          "text": "Hay MOSFET que procesan señales en circuitos integrados y MOSFET de potencia que manejan grandes potencias. Velocidad y pérdidas dependen del material, tensión nominal, estructura y condiciones de accionamiento."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "¿Dónde se necesitan?",
+      "subtitle": "Su función común es convertir y controlar la electricidad para adecuarla al uso",
+      "blocks": [
+        {
+          "h": "Centros de datos de IA | Conversión precisa de tensión",
+          "text": "Dentro de los servidores generan la baja tensión y alta corriente que necesitan GPU y otros dispositivos. MOSFET y circuitos de gestión de energía realizan la conversión; reducir sus pérdidas disminuye calor y consumo."
+        },
+        {
+          "h": "Vehículos eléctricos e híbridos | Mover motores con electricidad",
+          "text": "El inversor convierte la continua de la batería en alterna adecuada para el motor. Cargadores y convertidores CC-CC también usan semiconductores de potencia. Los MOSFET de SiC se usan, entre otros, en conversión de alta tensión."
+        },
+        {
+          "h": "Solar y baterías | Conexión a la red",
+          "text": "Los acondicionadores de potencia y otros equipos convierten la continua de paneles o baterías en alterna y ajustan tensión y frecuencia. El control por semiconductores es esencial para adecuar la electricidad al uso."
+        },
+        {
+          "h": "Fábricas y robots | Control preciso del movimiento",
+          "text": "Inversores y servoaccionamientos controlan velocidad y par del motor. Los semiconductores de potencia suministran adecuadamente la energía necesaria."
+        },
+        {
+          "h": "Diferencias de material",
+          "text": "Si es silicio; SiC, carburo de silicio; GaN, nitruro de galio. Sus propiedades difieren y se eligen según la aplicación."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "¿Cómo evaluar oferta y demanda?",
+      "subtitle": "Comprobar condiciones por producto, sin agrupar toda «escasez de chips»",
+      "blocks": [
+        {
+          "h": "Los MOSFET no siempre son intercambiables",
+          "text": "Difieren en tensión nominal, corriente admisible, pérdidas, disipación y encapsulado. Un tipo puede escasear mientras otro tiene capacidad sobrante. Más demanda no basta para afirmar escasez generalizada."
+        },
+        {
+          "h": "Ampliar producción exige equipos y tecnología",
+          "text": "Los semiconductores de potencia también utilizan instalaciones para obleas de 200 mm y otros tamaños. El diámetro de oblea y la generación del proceso de miniaturización son indicadores distintos. La oferta depende de la capacidad de procesos y equipos para cada producto."
+        },
+        {
+          "h": "En SiC también importan material y rendimiento",
+          "text": "La calidad del cristal y la oblea, el procesamiento y el rendimiento de fabricación determinan capacidad y costes. Incluso ampliando fábricas, hacen falta mejoras de proceso para una producción masiva estable."
+        },
+        {
+          "h": "La automoción requiere evaluación y certificación",
+          "text": "Sus componentes exigen alta fiabilidad. Aunque existan productos similares, no siempre pueden sustituirse sin evaluación o cambios de diseño."
+        },
+        {
+          "text": "Acondicionar, amplificar y conmutar electricidad: estas funciones básicas sostienen cálculo, comunicaciones y electrificación."
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "pt": [
+    {
+      "title": "Semicondutores para controlar eletricidade",
+      "subtitle": "Como funcionam diodos, transistores e MOSFETs | FUNDAMENTOS",
+      "blocks": [
+        {
+          "text": "Smartphones, automóveis, fábricas e data centers de IA não funcionam apenas com chips de cálculo. Precisam de componentes que condicionem corrente e tensão, amplifiquem sinais e comutem eletricidade."
+        },
+        {
+          "h": "01 Diodo",
+          "text": "Conduz corrente em um sentido e dificulta o fluxo contrário. Funções: retificação, prevenção de corrente reversa e proteção de circuitos. Usos típicos: fontes de alimentação, carregadores e circuitos automotivos."
+        },
+        {
+          "h": "02 Transistor",
+          "text": "Termo geral para componentes que controlam corrente por sinais elétricos. Funções: amplificar sinais e ligar/desligar corrente. Usos típicos: CPUs, circuitos de comunicação, sensores e circuitos de controle."
+        },
+        {
+          "h": "03 MOSFET",
+          "text": "Tipo de transistor que controla corrente pela tensão aplicada à porta. Funções: comutação, processamento de sinais e conversão de energia. Usos típicos: circuitos integrados, fontes de servidores e automotivas e inversores."
+        },
+        {
+          "h": "Classificação",
+          "text": "MOSFETs estão incluídos nos transistores. Não são três categorias independentes no mesmo nível."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Como os três componentes funcionam?",
+      "subtitle": "Conduzir em um sentido, controlar por sinal e comutar por tensão",
+      "blocks": [
+        {
+          "h": "Diodo | Válvula de retenção da corrente",
+          "text": "É usado na “retificação”: extrair da corrente alternada uma corrente que flui em um único sentido. A retificação deixa ondulações na saída; uma fonte CC estável também precisa de filtragem e regulação de tensão."
+        },
+        {
+          "text": "CA → retificação → filtragem e regulação de tensão → CC estável"
+        },
+        {
+          "h": "Transistor | Amplificação e comutação",
+          "text": "Um pequeno sinal de entrada controla a corrente de saída. Em circuitos analógicos amplifica sinais; em digitais usa estados ligado/desligado para operações lógicas. A energia para amplificação vem da fonte de alimentação."
+        },
+        {
+          "h": "MOSFET | Controle pela tensão de porta",
+          "text": "É um transistor de efeito de campo. A tensão de porta controla a corrente entre fonte e dreno. A corrente de porta em regime permanente é pequena, mas a comutação exige carregar e descarregar a porta."
+        },
+        {
+          "h": "Da lógica minúscula à conversão de potência",
+          "text": "Alguns MOSFETs processam sinais em circuitos integrados; MOSFETs de potência lidam com grandes potências. Velocidade e perdas dependem do material, tensão nominal, estrutura e condições de acionamento."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Onde são necessários?",
+      "subtitle": "A função comum é converter e controlar a eletricidade para adequá-la ao uso",
+      "blocks": [
+        {
+          "h": "Data centers de IA | Conversão precisa de tensão",
+          "text": "Dentro dos servidores, produzem a baixa tensão e alta corrente exigidas por GPUs e outros dispositivos. MOSFETs e CIs de gerenciamento de energia fazem a conversão; reduzir perdas diminui calor e consumo."
+        },
+        {
+          "h": "Elétricos e híbridos | Acionar motores com eletricidade",
+          "text": "Inversores convertem a CC da bateria em CA adequada ao motor. Carregadores e conversores CC-CC também usam semicondutores de potência. MOSFETs de SiC são usados, entre outras aplicações, na conversão de alta tensão."
+        },
+        {
+          "h": "Solar e baterias | Conexão à rede",
+          "text": "Condicionadores de energia e outros equipamentos convertem a CC de painéis solares ou baterias em CA e ajustam tensão e frequência. O controle por semicondutores é essencial para adequar a eletricidade ao uso."
+        },
+        {
+          "h": "Fábricas e robôs | Controle preciso de movimento",
+          "text": "Inversores e servoacionamentos controlam velocidade e torque do motor. Semicondutores de potência fornecem adequadamente a energia necessária."
+        },
+        {
+          "h": "Diferenças de material",
+          "text": "Si é silício; SiC, carbeto de silício; GaN, nitreto de gálio. As propriedades diferem, e os materiais são escolhidos conforme a aplicação."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Como avaliar oferta e demanda?",
+      "subtitle": "Verifique as condições por produto, sem tratar toda “falta de chips” como uma só",
+      "blocks": [
+        {
+          "h": "MOSFETs nem sempre são intercambiáveis",
+          "text": "Tensão nominal, corrente suportada, perdas, dissipação térmica e encapsulamento diferem. Um tipo pode estar em falta enquanto outro tem capacidade disponível. Aumento de demanda não basta para concluir que há escassez generalizada."
+        },
+        {
+          "h": "Ampliar a produção exige equipamentos e tecnologia",
+          "text": "Semicondutores de potência também usam instalações para wafers de 200 mm e outros tamanhos. Diâmetro do wafer e geração do processo de miniaturização são indicadores diferentes. A oferta depende da capacidade dos processos e equipamentos de cada produto."
+        },
+        {
+          "h": "No SiC, material e rendimento também importam",
+          "text": "Qualidade de cristais e wafers, tecnologia de processamento e rendimento de fabricação afetam capacidade e custo. Mesmo ampliando fábricas, são necessárias melhorias de processo para produção em massa estável."
+        },
+        {
+          "h": "Produtos automotivos exigem avaliação e certificação",
+          "text": "Precisam de alta confiabilidade. Mesmo produtos semelhantes nem sempre podem ser substituídos sem avaliação ou alterações no projeto."
+        },
+        {
+          "text": "Condicionar, amplificar e comutar eletricidade: essas funções básicas sustentam computação, comunicação e eletrificação."
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "控制电力的半导体基础",
+      "subtitle": "二极管、晶体管、MOSFET的原理与作用 | 半导体基础",
+      "blocks": [
+        {
+          "text": "智能手机、汽车、工厂、AI数据中心，并非仅靠计算芯片就能运转。还需要调节电流电压、放大信号、切换电力的元件。"
+        },
+        {
+          "h": "01 二极管",
+          "text": "让电流沿一个方向流动，而反向不易流动的元件。主要作用：整流、防止反向电流、保护电路。典型用途：电源、充电器、汽车电路。"
+        },
+        {
+          "h": "02 晶体管",
+          "text": "用电信号控制电流的元件总称。主要作用：信号放大、电流开关。典型用途：CPU、通信电路、传感器、控制电路。"
+        },
+        {
+          "h": "03 MOSFET",
+          "text": "通过施加于栅极的电压控制电流，是晶体管的一种。主要作用：开关、信号处理、电力转换。典型用途：集成电路、服务器电源、车载电源、逆变器。"
+        },
+        {
+          "h": "分类要点",
+          "text": "MOSFET包含于晶体管之中，三者并非同一层级的独立分类。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "这三种元件如何工作？",
+      "subtitle": "单向导通、用信号控制、用电压切换",
+      "blocks": [
+        {
+          "h": "二极管 | 电流的“止回阀”",
+          "text": "用于“整流”，即从交流中提取单向流动的电流。但只整流的输出仍有脉动，稳定直流电源还需平滑滤波和电压调节。"
+        },
+        {
+          "text": "交流 → 整流 → 平滑滤波、电压调节 → 稳定直流"
+        },
+        {
+          "h": "晶体管 | 放大与开关",
+          "text": "以较小输入信号控制输出侧电流。模拟电路中放大信号，数字电路中利用开关状态进行逻辑运算。放大所需能量由电源供给。"
+        },
+        {
+          "h": "MOSFET | 以栅极电压控制电流",
+          "text": "MOSFET是场效应晶体管的一种。栅极电压控制源极与漏极之间流动的电流。稳态栅极电流较小，但切换时需要对栅极充放电。"
+        },
+        {
+          "h": "从微小逻辑元件到电力转换",
+          "text": "MOSFET既有在集成电路内处理信号的类型，也有处理大功率的功率MOSFET。速度和损耗随材料、耐压、结构、驱动条件而变。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "哪些场景需要？",
+      "subtitle": "共同作用是将电力转换、控制为适合用途的形式",
+      "blocks": [
+        {
+          "h": "AI数据中心 | 精细转换电压",
+          "text": "服务器内部需生成GPU等所需的低电压、大电流电源。MOSFET、电源管理IC等承担电力转换，降低转换损耗有助减少发热与耗电。"
+        },
+        {
+          "h": "电动车、混合动力车 | 用电驱动电机",
+          "text": "逆变器将电池直流转换为适合电机驱动的交流。充电器和DC-DC转换器也使用功率半导体。SiC MOSFET用于高电压电力转换等领域。"
+        },
+        {
+          "h": "光伏、储能电池 | 接入电网",
+          "text": "通过电力调节设备等，将光伏面板、储能电池的直流转换为交流，并调节电压、频率。要生成符合用途的电力，离不开半导体控制。"
+        },
+        {
+          "h": "工厂、机器人 | 精密控制运动",
+          "text": "逆变器和伺服驱动器控制电机速度、转矩。功率半导体负责适当地提供所需电力。"
+        },
+        {
+          "h": "材料差异",
+          "text": "Si是硅，SiC是碳化硅，GaN是氮化镓。各材料特性不同，应按用途选用。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "如何看待供给与需求？",
+      "subtitle": "不要将“半导体短缺”笼统看待，应确认各产品的条件",
+      "blocks": [
+        {
+          "h": "即使同为MOSFET，也不一定可替代",
+          "text": "耐压、可承受电流、损耗、散热性能、封装等不同。某品种供给不足时，另一品种可能仍有余力。不能仅因需求增加就判断全面短缺。"
+        },
+        {
+          "h": "增产需要设备与制造技术",
+          "text": "功率半导体也使用200mm等晶圆制造设备。但晶圆直径与代表电路微缩程度的制程世代是不同指标。供给能力取决于适用于各产品的工序和设备能力。"
+        },
+        {
+          "h": "SiC还需重视材料和良率",
+          "text": "晶体、晶圆品质、加工技术及制造良率影响SiC产能与成本。即使增建工厂，要实现稳定量产仍需改善工艺。"
+        },
+        {
+          "h": "车规产品的评估认证耗时",
+          "text": "汽车零部件要求高可靠性。即使存在类似产品，也未必无需评估或更改设计就能替换。"
+        },
+        {
+          "text": "调节、放大、切换电力。这些基本功能支撑计算、通信与电动化。"
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "控制電力的半導體基礎",
+      "subtitle": "二極體、電晶體、MOSFET的原理與作用 | 半導體基礎",
+      "blocks": [
+        {
+          "text": "智慧型手機、汽車、工廠、AI資料中心，並非僅靠計算晶片就能運轉。還需要調節電流電壓、放大訊號、切換電力的元件。"
+        },
+        {
+          "h": "01 二極體",
+          "text": "讓電流沿一個方向流動，而反向不易流動的元件。主要作用：整流、防止反向電流、保護電路。典型用途：電源、充電器、汽車電路。"
+        },
+        {
+          "h": "02 電晶體",
+          "text": "用電訊號控制電流的元件總稱。主要作用：訊號放大、電流開關。典型用途：CPU、通訊電路、感測器、控制電路。"
+        },
+        {
+          "h": "03 MOSFET",
+          "text": "透過施加於閘極的電壓控制電流，是電晶體的一種。主要作用：切換、訊號處理、電力轉換。典型用途：積體電路、伺服器電源、車載電源、逆變器。"
+        },
+        {
+          "h": "分類要點",
+          "text": "MOSFET包含於電晶體之中，三者並非同一層級的獨立分類。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "這三種元件如何工作？",
+      "subtitle": "單向導通、用訊號控制、用電壓切換",
+      "blocks": [
+        {
+          "h": "二極體 | 電流的「止回閥」",
+          "text": "用於「整流」，即從交流中提取單向流動的電流。但只整流的輸出仍有脈動，穩定直流電源還需平滑濾波和電壓調節。"
+        },
+        {
+          "text": "交流 → 整流 → 平滑濾波、電壓調節 → 穩定直流"
+        },
+        {
+          "h": "電晶體 | 放大與開關",
+          "text": "以較小輸入訊號控制輸出側電流。類比電路中放大訊號，數位電路中利用開關狀態進行邏輯運算。放大所需能量由電源供給。"
+        },
+        {
+          "h": "MOSFET | 以閘極電壓控制電流",
+          "text": "MOSFET是場效應電晶體的一種。閘極電壓控制源極與汲極之間流動的電流。穩態閘極電流較小，但切換時需要對閘極充放電。"
+        },
+        {
+          "h": "從微小邏輯元件到電力轉換",
+          "text": "MOSFET既有在積體電路內處理訊號的類型，也有處理大功率的功率MOSFET。速度和損耗隨材料、耐壓、結構、驅動條件而變。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "哪些場景需要？",
+      "subtitle": "共同作用是將電力轉換、控制為適合用途的形式",
+      "blocks": [
+        {
+          "h": "AI資料中心 | 精細轉換電壓",
+          "text": "伺服器內部需產生GPU等所需的低電壓、大電流電源。MOSFET、電源管理IC等承擔電力轉換，降低轉換損耗有助減少發熱與耗電。"
+        },
+        {
+          "h": "電動車、油電混合車 | 用電驅動馬達",
+          "text": "逆變器將電池直流轉換為適合馬達驅動的交流。充電器和DC-DC轉換器也使用功率半導體。SiC MOSFET用於高電壓電力轉換等領域。"
+        },
+        {
+          "h": "太陽能、儲能電池 | 接入電網",
+          "text": "透過電力調節設備等，將太陽能板、儲能電池的直流轉換為交流，並調節電壓、頻率。要產生符合用途的電力，離不開半導體控制。"
+        },
+        {
+          "h": "工廠、機器人 | 精密控制運動",
+          "text": "逆變器和伺服驅動器控制馬達速度、轉矩。功率半導體負責適當地提供所需電力。"
+        },
+        {
+          "h": "材料差異",
+          "text": "Si是矽，SiC是碳化矽，GaN是氮化鎵。各材料特性不同，應按用途選用。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "如何看待供給與需求？",
+      "subtitle": "不要將「半導體短缺」籠統看待，應確認各產品的條件",
+      "blocks": [
+        {
+          "h": "即使同為MOSFET，也不一定可替代",
+          "text": "耐壓、可承受電流、損耗、散熱性能、封裝等不同。某品種供給不足時，另一品種可能仍有餘力。不能僅因需求增加就判斷全面短缺。"
+        },
+        {
+          "h": "增產需要設備與製造技術",
+          "text": "功率半導體也使用200mm等晶圓製造設備。但晶圓直徑與代表電路微縮程度的製程世代是不同指標。供給能力取決於適用於各產品的工序和設備能力。"
+        },
+        {
+          "h": "SiC還需重視材料和良率",
+          "text": "晶體、晶圓品質、加工技術及製造良率影響SiC產能與成本。即使增建工廠，要實現穩定量產仍需改善製程。"
+        },
+        {
+          "h": "車規產品的評估認證耗時",
+          "text": "汽車零組件要求高可靠性。即使存在類似產品，也未必無需評估或更改設計就能替換。"
+        },
+        {
+          "text": "調節、放大、切換電力。這些基本功能支撐計算、通訊與電動化。"
+        }
+      ],
+      "dense": false
+    }
+  ]
+}

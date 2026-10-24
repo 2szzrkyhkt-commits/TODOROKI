@@ -1,0 +1,432 @@
+{
+  "en": [
+    {
+      "title": "What is a quantum computer?",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "QUANTUM COMPUTING | Fundamentals | As of September 24, 2026"
+        },
+        {
+          "text": "A next-generation computer that uses quantum-mechanical properties in computation itself. Working differently from conventional machines, it is expected to solve certain problems efficiently."
+        },
+        {
+          "h": "Conventional versus quantum",
+          "text": "A conventional bit is either “0” or “1”. A quantum bit uses superposition of “0” and “1”."
+        },
+        {
+          "h": "Three properties behind computation",
+          "text": "Superposition: represents multiple states in a superposition.\nEntanglement: states of multiple qubits are strongly related.\nInterference: probability amplitudes reinforce or cancel each other, making the desired answer more likely."
+        },
+        {
+          "h": "What is expected?",
+          "text": "Drug discovery, new materials, quantum-chemistry simulation, logistics and production-planning optimization, and financial computation. Research targets some problems whose computational workload grows rapidly on conventional machines. This is not a universal PC that speeds up every calculation."
+        }
+      ]
+    },
+    {
+      "title": "Japan's listed quantum-computing companies",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "Hardware and physical-machine R&D | As of September 24, 2026"
+        },
+        {
+          "h": "Fujitsu / 6702 | Superconducting hardware and software",
+          "text": "Jointly developed a 256-qubit superconducting quantum computer with RIKEN. Plans to install and make a 1,000-qubit machine available in fiscal 2026. Targets more than 10,000 physical qubits around fiscal 2030."
+        },
+        {
+          "h": "NTT / 9432 | Photonic quantum computing",
+          "text": "Joint research with OptQC. Targets a 10,000-qubit-class machine by fiscal 2027 and a fault-tolerant million-qubit-class machine by fiscal 2030. Applies optical communications and IOWN technologies to quantum computation."
+        },
+        {
+          "h": "Hitachi / 6501 | Silicon qubits",
+          "text": "Participates in JST's Moonshot R&D program. Works toward 100-qubit devices by fiscal 2028 and 1,000-qubit devices by fiscal 2030. Compatibility with existing semiconductor technology is a feature."
+        },
+        {
+          "h": "NEC / 6701 | Superconducting and quantum annealing",
+          "text": "Develops quantum annealing machines using superconducting parametron devices. Also researches superconducting-circuit integration, connected to future fault-tolerant general-purpose quantum computers."
+        },
+        {
+          "text": "Toshiba also researches superconducting quantum computers, but is excluded from this listed-company roster because it is unlisted."
+        }
+      ]
+    },
+    {
+      "title": "Four points for reading the quantum theme",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "Separate technology from business | As of September 24, 2026"
+        },
+        {
+          "h": "1 Check the computing approach",
+          "text": "Superconducting, photonic, silicon and neutral-atom approaches require different equipment and materials. Compare companies' R&D with these differences in mind."
+        },
+        {
+          "h": "2 Separate the computer from supporting technology",
+          "text": "The computer, controls, cooling, optical components and software have different roles. Also distinguish quantum cryptography, which serves a different purpose from quantum computation."
+        },
+        {
+          "h": "3 Do not compare qubit counts alone",
+          "text": "Error rates, fidelity, error correction and connectivity between qubits matter too. Examine the accuracy and scale at which useful computation can run."
+        },
+        {
+          "h": "4 Assess the distance to practical use and sales",
+          "text": "Research results and sales contributions are separate. Check progress against development targets and the quantum business's share of total company performance."
+        },
+        {
+          "h": "Japanese companies use different approaches",
+          "text": "Fujitsu: superconducting; NTT: photonic; Hitachi: silicon; NEC: superconducting and quantum annealing. No dominant approach is established; several may coexist for different uses."
+        }
+      ]
+    }
+  ],
+  "es": [
+    {
+      "title": "¿Qué es un ordenador cuántico?",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "COMPUTACIÓN CUÁNTICA | Fundamentos | A 24 de septiembre de 2026"
+        },
+        {
+          "text": "Ordenador de nueva generación que usa propiedades de la mecánica cuántica en el propio cálculo. Su funcionamiento distinto del convencional promete resolver ciertos problemas con eficiencia."
+        },
+        {
+          "h": "Convencional frente a cuántico",
+          "text": "El bit convencional toma “0” o “1”. El bit cuántico utiliza la superposición de “0” y “1”."
+        },
+        {
+          "h": "Tres propiedades del cálculo",
+          "text": "Superposición: representa varios estados superpuestos.\nEntrelazamiento: los estados de varios cúbits están fuertemente relacionados.\nInterferencia: las amplitudes de probabilidad se refuerzan o cancelan para favorecer la respuesta buscada."
+        },
+        {
+          "h": "¿Qué se espera?",
+          "text": "Fármacos, nuevos materiales, simulación de química cuántica, optimización logística y de producción, y cálculos financieros. Se estudian algunos problemas cuyo coste computacional crece rápidamente en equipos convencionales. No es un PC universal que acelere todo cálculo."
+        }
+      ]
+    },
+    {
+      "title": "Empresas japonesas cotizadas de computación cuántica",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "I+D de equipos físicos y hardware | A 24 de septiembre de 2026"
+        },
+        {
+          "h": "Fujitsu / 6702 | Superconductores, hardware y software",
+          "text": "Codesarrolló con RIKEN un equipo superconductor de 256 cúbits. Prevé instalar y poner a disposición uno de 1.000 cúbits en el ejercicio 2026. Busca superar 10.000 cúbits físicos hacia el ejercicio 2030."
+        },
+        {
+          "h": "NTT / 9432 | Computación fotónica",
+          "text": "Investiga con OptQC. Aspira a 10.000 cúbits para el ejercicio 2027 y a un millón con tolerancia a fallos para el ejercicio 2030. Aplica comunicaciones ópticas e IOWN al cálculo cuántico."
+        },
+        {
+          "h": "Hitachi / 6501 | Cúbits de silicio",
+          "text": "Participa en el programa Moonshot de I+D de JST. Desarrolla dispositivos de 100 cúbits para el ejercicio 2028 y de 1.000 para 2030. Destaca su compatibilidad con la tecnología de semiconductores existente."
+        },
+        {
+          "h": "NEC / 6701 | Superconductores y recocido cuántico",
+          "text": "Desarrolla máquinas de recocido cuántico con dispositivos parametrones superconductores. También investiga integrar circuitos superconductores para futuros ordenadores universales tolerantes a fallos."
+        },
+        {
+          "text": "Toshiba también investiga ordenadores superconductores, pero se excluye de esta lista por no cotizar."
+        }
+      ]
+    },
+    {
+      "title": "Cuatro puntos para analizar el tema cuántico",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "Separar tecnología y negocio | A 24 de septiembre de 2026"
+        },
+        {
+          "h": "1 Comprobar el método de cálculo",
+          "text": "Superconductores, fotónica, silicio y átomos neutros requieren equipos y materiales distintos. Comparar la I+D teniendo presentes esas diferencias."
+        },
+        {
+          "h": "2 Separar equipo y tecnologías auxiliares",
+          "text": "Ordenador, control, refrigeración, óptica y software cumplen funciones distintas. La criptografía cuántica tiene otro uso y debe distinguirse de la computación."
+        },
+        {
+          "h": "3 No comparar solo el número de cúbits",
+          "text": "Importan errores, fidelidad, corrección de errores y conectividad. Comprobar la precisión y escala con que puede realizar cálculos útiles."
+        },
+        {
+          "h": "4 Medir la distancia al uso práctico y a las ventas",
+          "text": "Resultados de investigación y ventas son asuntos distintos. Revisar objetivos de desarrollo y peso del negocio cuántico en los resultados totales."
+        },
+        {
+          "h": "Japón también sigue varios métodos",
+          "text": "Fujitsu: superconductores; NTT: fotónica; Hitachi: silicio; NEC: superconductores y recocido cuántico. No se ha definido el método dominante; varios podrían coexistir según el uso."
+        }
+      ]
+    }
+  ],
+  "pt": [
+    {
+      "title": "O que é um computador quântico?",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "COMPUTAÇÃO QUÂNTICA | Fundamentos | Em 24 de setembro de 2026"
+        },
+        {
+          "text": "Computador de nova geração que usa propriedades da mecânica quântica no próprio cálculo. Com funcionamento diferente do convencional, pode resolver certos problemas com eficiência."
+        },
+        {
+          "h": "Convencional e quântico",
+          "text": "O bit convencional assume “0” ou “1”. O bit quântico utiliza a superposição de “0” e “1”."
+        },
+        {
+          "h": "Três propriedades do cálculo",
+          "text": "Superposição: representa vários estados em superposição.\nEmaranhamento: estados de vários qubits são fortemente relacionados.\nInterferência: amplitudes de probabilidade se reforçam ou se cancelam para favorecer a resposta desejada."
+        },
+        {
+          "h": "O que se espera?",
+          "text": "Fármacos, novos materiais, simulação de química quântica, otimização logística e de produção e cálculos financeiros. Pesquisam-se alguns problemas cuja carga computacional cresce rapidamente em máquinas convencionais. Não é um PC universal que acelera todo cálculo."
+        }
+      ]
+    },
+    {
+      "title": "Empresas japonesas listadas de computação quântica",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "P&D de máquinas e hardware | Em 24 de setembro de 2026"
+        },
+        {
+          "h": "Fujitsu / 6702 | Supercondutores, hardware e software",
+          "text": "Codesenvolveu com o RIKEN um computador supercondutor de 256 qubits. Prevê instalar e disponibilizar um de 1.000 qubits no ano fiscal de 2026. Busca mais de 10.000 qubits físicos por volta do ano fiscal de 2030."
+        },
+        {
+          "h": "NTT / 9432 | Computação fotônica",
+          "text": "Pesquisa conjunta com a OptQC. Meta de 10.000 qubits até o ano fiscal de 2027 e um milhão, com tolerância a falhas, até 2030. Aplica comunicação óptica e IOWN à computação quântica."
+        },
+        {
+          "h": "Hitachi / 6501 | Qubits de silício",
+          "text": "Participa do programa Moonshot de P&D da JST. Desenvolve dispositivos de 100 qubits até o ano fiscal de 2028 e de 1.000 até 2030. Destaca-se a compatibilidade com semicondutores existentes."
+        },
+        {
+          "h": "NEC / 6701 | Supercondutores e recozimento quântico",
+          "text": "Desenvolve máquinas de recozimento quântico com dispositivos parametron supercondutores. Também pesquisa integração de circuitos supercondutores para futuros computadores universais tolerantes a falhas."
+        },
+        {
+          "text": "A Toshiba também pesquisa computadores supercondutores, mas não consta na lista porque não é listada em bolsa."
+        }
+      ]
+    },
+    {
+      "title": "Quatro pontos para analisar o tema quântico",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "Separar tecnologia e negócio | Em 24 de setembro de 2026"
+        },
+        {
+          "h": "1 Verifique a abordagem de cálculo",
+          "text": "Supercondutores, fótons, silício e átomos neutros exigem equipamentos e materiais distintos. Compare P&D considerando essas diferenças."
+        },
+        {
+          "h": "2 Separe o computador das tecnologias de apoio",
+          "text": "Computador, controle, refrigeração, óptica e software têm funções diferentes. Criptografia quântica tem outra aplicação e deve ser distinguida da computação."
+        },
+        {
+          "h": "3 Não compare só o número de qubits",
+          "text": "Taxa de erro, fidelidade, correção de erros e conectividade importam. Verifique a precisão e a escala de cálculos úteis."
+        },
+        {
+          "h": "4 Avalie a distância até uso prático e vendas",
+          "text": "Resultados de pesquisa e contribuição às vendas são coisas distintas. Verifique metas de desenvolvimento e participação do negócio quântico nos resultados totais."
+        },
+        {
+          "h": "O Japão também segue abordagens distintas",
+          "text": "Fujitsu: supercondutores; NTT: fótons; Hitachi: silício; NEC: supercondutores e recozimento quântico. Não há abordagem dominante definida; várias podem coexistir conforme a aplicação."
+        }
+      ]
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "什么是量子计算机",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "量子计算｜基础知识｜截至2026年9月24日"
+        },
+        {
+          "text": "把量子力学的性质直接用于计算的新一代计算机。运作机制不同于传统计算机，有望高效解决特定问题。"
+        },
+        {
+          "h": "传统计算机与量子计算机",
+          "text": "传统比特处于“0”或“1”状态。量子比特利用“0”与“1”的叠加。"
+        },
+        {
+          "h": "支持计算的三种性质",
+          "text": "叠加：将多个状态表示为叠加态。\n量子纠缠：多个量子比特的状态强烈关联。\n干涉：使概率幅相互增强或抵消，提高得到目标答案的可能性。"
+        },
+        {
+          "h": "有何期待",
+          "text": "药物研发、新材料、量子化学模拟、物流与生产计划优化、金融计算等。研究用于传统计算机计算量急增的部分问题，并非能加速一切计算的万能个人电脑。"
+        }
+      ]
+    },
+    {
+      "title": "日本上市量子计算相关企业",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "实体设备、硬件研发｜截至2026年9月24日"
+        },
+        {
+          "h": "富士通 / 6702｜超导型，硬件与软件",
+          "text": "与理化学研究所共同开发256量子比特超导量子计算机。计划2026财年设置并开放1,000量子比特机，争取2030财年前后超过1万物理量子比特。"
+        },
+        {
+          "h": "NTT / 9432｜光量子型",
+          "text": "与OptQC共同研究光量子计算机。目标截至2027财年末达到1万量子比特级，截至2030财年末达到具容错能力的100万量子比特级。将光通信及IOWN技术用于量子计算。"
+        },
+        {
+          "h": "日立制作所 / 6501｜硅量子比特",
+          "text": "参与JST登月型研发项目，致力于截至2028财年末开发100量子比特、截至2030财年末开发1,000量子比特规模器件。特点是与现有半导体技术兼容。"
+        },
+        {
+          "h": "NEC / 6701｜超导、量子退火",
+          "text": "研发使用超导参量振荡器元件的量子退火机，也研究超导电路集成，以衔接未来具容错能力的通用量子计算机。"
+        },
+        {
+          "text": "东芝也研究超导量子计算机，但因未上市，未列入本上市公司名单。"
+        }
+      ]
+    },
+    {
+      "title": "观察量子主题的四个要点",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "区分技术与业务｜截至2026年9月24日"
+        },
+        {
+          "h": "1 确认计算路线",
+          "text": "超导、光、硅、中性原子等路线所需设备和材料不同。应理解路线差异后比较各企业研发。"
+        },
+        {
+          "h": "2 区分主机与周边技术",
+          "text": "主机、控制设备、冷却设备、光学部件、软件各有不同作用。量子密码也应视为用途不同于量子计算的技术。"
+        },
+        {
+          "h": "3 不只比较量子比特数量",
+          "text": "错误率、保真度、纠错、量子比特连接性也很重要。应确认能以何种精度与规模进行有用计算。"
+        },
+        {
+          "h": "4 看距实用化和销售还有多远",
+          "text": "研究成果与销售贡献是两回事。除开发目标达成情况外，还要看量子业务占整体业绩的比例。"
+        },
+        {
+          "h": "日本企业的开发路线也不同",
+          "text": "富士通采用超导，NTT采用光，日立采用硅，NEC从事超导与量子退火。主流路线尚未确定，多种路线也可能按用途共存。"
+        }
+      ]
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "什麼是量子電腦",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "量子計算｜基礎知識｜截至2026年9月24日"
+        },
+        {
+          "text": "把量子力學的性質直接用於計算的新一代電腦。運作機制不同於傳統電腦，有望高效解決特定問題。"
+        },
+        {
+          "h": "傳統電腦與量子電腦",
+          "text": "傳統位元處於「0」或「1」狀態。量子位元利用「0」與「1」的疊加。"
+        },
+        {
+          "h": "支援計算的三種性質",
+          "text": "疊加：將多個狀態表示為疊加態。\n量子糾纏：多個量子位元的狀態強烈關聯。\n干涉：使機率幅相互增強或抵消，提高得到目標答案的可能性。"
+        },
+        {
+          "h": "有何期待",
+          "text": "藥物研發、新材料、量子化學模擬、物流與生產計畫最佳化、金融計算等。研究用於傳統電腦計算量急增的部分問題，並非能加速一切計算的萬能個人電腦。"
+        }
+      ]
+    },
+    {
+      "title": "日本上市量子計算相關企業",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "實體設備、硬體研發｜截至2026年9月24日"
+        },
+        {
+          "h": "富士通 / 6702｜超導型，硬體與軟體",
+          "text": "與理化學研究所共同開發256量子位元超導量子電腦。計畫2026會計年度設置並開放1,000量子位元機，爭取2030會計年度前後超過1萬物理量子位元。"
+        },
+        {
+          "h": "NTT / 9432｜光量子型",
+          "text": "與OptQC共同研究光量子電腦。目標截至2027會計年度末達到1萬量子位元級，截至2030會計年度末達到具容錯能力的100萬量子位元級。將光通訊及IOWN技術用於量子計算。"
+        },
+        {
+          "h": "日立製作所 / 6501｜矽量子位元",
+          "text": "參與JST登月型研發計畫，致力於截至2028會計年度末開發100量子位元、截至2030會計年度末開發1,000量子位元規模元件。特點是與現有半導體技術相容。"
+        },
+        {
+          "h": "NEC / 6701｜超導、量子退火",
+          "text": "研發使用超導參量振盪器元件的量子退火機，也研究超導電路整合，以銜接未來具容錯能力的通用量子電腦。"
+        },
+        {
+          "text": "東芝也研究超導量子電腦，但因未上市，未列入本上市公司名單。"
+        }
+      ]
+    },
+    {
+      "title": "觀察量子主題的四個要點",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "區分技術與業務｜截至2026年9月24日"
+        },
+        {
+          "h": "1 確認計算路線",
+          "text": "超導、光、矽、中性原子等路線所需設備和材料不同。應理解路線差異後比較各企業研發。"
+        },
+        {
+          "h": "2 區分主機與周邊技術",
+          "text": "主機、控制設備、冷卻設備、光學元件、軟體各有不同作用。量子密碼也應視為用途不同於量子計算的技術。"
+        },
+        {
+          "h": "3 不只比較量子位元數量",
+          "text": "錯誤率、保真度、糾錯、量子位元連接性也很重要。應確認能以何種精度與規模進行有用計算。"
+        },
+        {
+          "h": "4 看距實用化和銷售還有多遠",
+          "text": "研究成果與銷售貢獻是兩回事。除開發目標達成情況外，還要看量子業務占整體業績的比例。"
+        },
+        {
+          "h": "日本企業的開發路線也不同",
+          "text": "富士通採用超導，NTT採用光，日立採用矽，NEC從事超導與量子退火。主流路線尚未確定，多種路線也可能按用途共存。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "en": [
+    {
+      "title": "Interest coverage ratio",
+      "subtitle": "INVESTMENT / ECONOMY / BUSINESS",
+      "blocks": [
+        {
+          "text": "Meaning of the indicator\nMeasures how many times profit covers interest payments. Calculation example: operating profit ÷ interest expense."
+        },
+        {
+          "text": "Indicative levels\n1×: little headroom. 3×: watch for falling profits. 5×: some headroom. 10× or more: substantial capacity."
+        },
+        {
+          "text": "Cautions\nDefinitions may differ between documents. Even a high ratio does not resolve the separate issue of repaying loan principal."
+        },
+        {
+          "text": "Also examine\nOperating cash flow, cash, outstanding debt and repayment dates. Consider rising interest rates and falling profits."
+        },
+        {
+          "text": "TODOROKI | Investment and economics: numbers before intuition."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    }
+  ],
+  "es": [
+    {
+      "title": "Ratio de cobertura de intereses",
+      "subtitle": "INVERSIÓN / ECONOMÍA / EMPRESA",
+      "blocks": [
+        {
+          "text": "Significado del indicador\nMide cuántas veces el beneficio cubre los intereses pagados. Ejemplo de cálculo: beneficio operativo ÷ gastos por intereses."
+        },
+        {
+          "text": "Niveles orientativos\n1×: escaso margen. 3×: vigilar las caídas del beneficio. 5×: cierto margen. 10× o más: amplia capacidad."
+        },
+        {
+          "text": "Precauciones\nLa definición puede variar según el documento. Una ratio alta tampoco resuelve la cuestión separada de devolver el principal de la deuda."
+        },
+        {
+          "text": "Otros datos que examinar\nFlujo de caja operativo, efectivo, deuda pendiente y vencimientos. Contemplar subidas de tipos y caídas del beneficio."
+        },
+        {
+          "text": "TODOROKI | Inversión y economía: los números antes que la intuición."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    }
+  ],
+  "pt": [
+    {
+      "title": "Índice de cobertura de juros",
+      "subtitle": "INVESTIMENTO / ECONOMIA / NEGÓCIOS",
+      "blocks": [
+        {
+          "text": "Significado do indicador\nMede quantas vezes o lucro cobre os juros pagos. Exemplo de cálculo: lucro operacional ÷ despesas com juros."
+        },
+        {
+          "text": "Níveis indicativos\n1×: pouca folga. 3×: atenção à queda dos lucros. 5×: alguma folga. 10× ou mais: ampla capacidade."
+        },
+        {
+          "text": "Cuidados\nA definição pode variar entre documentos. Mesmo um índice alto não resolve a questão distinta do pagamento do principal da dívida."
+        },
+        {
+          "text": "Examinar também\nFluxo de caixa operacional, caixa, saldo da dívida e vencimentos. Considerar aumentos dos juros e queda dos lucros."
+        },
+        {
+          "text": "TODOROKI | Investimento e economia: números antes da intuição."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "利息保障倍数",
+      "subtitle": "投资 / 经济 / 商业",
+      "blocks": [
+        {
+          "text": "指标含义\n衡量利润是支付利息的多少倍。计算示例：营业利润 ÷ 利息支出。"
+        },
+        {
+          "text": "倍数参考\n1倍：余地很小。3倍：留意利润下降。5倍：有一定余地。10倍以上：偿付能力较充裕。"
+        },
+        {
+          "text": "注意事项\n不同资料对指标的定义可能不同。即使倍数很高，偿还借款本金仍是另一个问题。"
+        },
+        {
+          "text": "同时查看\n经营现金流、现金、借款余额、还款期限。还应考虑利率上升和利润减少的情况。"
+        },
+        {
+          "text": "TODOROKI | 投资与经济，重数字而非直觉。"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "利息保障倍數",
+      "subtitle": "投資 / 經濟 / 商業",
+      "blocks": [
+        {
+          "text": "指標含義\n衡量利潤是支付利息的多少倍。計算示例：營業利潤 ÷ 利息支出。"
+        },
+        {
+          "text": "倍數參考\n1倍：餘地很小。3倍：留意利潤下降。5倍：有一定餘地。10倍以上：償付能力較充裕。"
+        },
+        {
+          "text": "注意事項\n不同資料對指標的定義可能不同。即使倍數很高，償還借款本金仍是另一個問題。"
+        },
+        {
+          "text": "同時查看\n營運現金流、現金、借款餘額、還款期限。還應考慮利率上升和利潤減少的情況。"
+        },
+        {
+          "text": "TODOROKI | 投資與經濟，重數字而非直覺。"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    }
+  ]
+}

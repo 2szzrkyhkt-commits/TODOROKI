@@ -1,0 +1,392 @@
+{
+  "en": [
+    {
+      "title": "What is GPT-6 Astra?",
+      "subtitle": "An AI model supporting complex work | 2026.10.23 / Science & Technology",
+      "blocks": [
+        {
+          "h": "01 From reasoning to finished work",
+          "text": "Astra is an OpenAI AI model. It is designed for complex reasoning, research, programming, document creation and similar tasks."
+        },
+        {
+          "h": "02 Working with tools",
+          "text": "It can combine search, file processing, code execution and browser operations to advance work with multiple steps."
+        },
+        {
+          "h": "03 Distinguish model from service",
+          "text": "Astra is the model that performs processing. The functions actually available depend on the service, connected tools and permissions.\nSpecify not only what to think about, but what to complete."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "What work can it do?",
+      "subtitle": "Research, compare, create | 2026.10.23 / Science & Technology",
+      "blocks": [
+        {
+          "h": "01 Research and comparison",
+          "text": "Organize issues from multiple sources and identify similarities, differences and unverified points. Also check when information applies and consult primary sources."
+        },
+        {
+          "h": "02 Tables and documents",
+          "text": "Organize data into tables and charts and create explanatory text and materials. Calculations and PDF output require compatible tools."
+        },
+        {
+          "h": "03 Software development",
+          "text": "Supports writing and modifying code, testing and review. Reads the existing structure and helps verify behavior after changes.\nThese are examples of work that can be delegated. Verify the correctness of results separately."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Astra and dots: the difference",
+      "subtitle": "A model and an agent that works continuously | 2026.10.23",
+      "blocks": [
+        {
+          "h": "01 Astra is the model: the “brain”",
+          "text": "It reads text and materials, reasons and chooses the next operation. The model name alone does not determine the functions of the environment in which it is used."
+        },
+        {
+          "h": "02 dots handles continuing work",
+          "text": "According to its official description, dots uses GPT-6 Astra. It tracks progress between conversations and leads into the next task or report as circumstances require."
+        },
+        {
+          "h": "03 Cloud and local PC are separate",
+          "text": "dots can continue cloud work when the local PC is off. Using content on the local PC requires a connection, the PC to be online and other conditions.\nResults depend on the environment and how Astra’s capabilities are used."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "How to ask for useful results",
+      "subtitle": "Align purpose, inputs and completion criteria | 2026.10.23",
+      "blocks": [
+        {
+          "h": "01 Specify the finished form",
+          "text": "Instead of only “research this,” specify the subject, audience and format: for example, “check official materials and organize them in four pages for beginners.”"
+        },
+        {
+          "h": "02 Define the scope delegated",
+          "text": "Specify sources to use, deadlines, update frequency and how publication or sending should be handled. Account access requires connection and permissions."
+        },
+        {
+          "h": "03 Verify important details",
+          "text": "AI can make mistakes. Check numbers, proper names, dates, links and behavior. Verify current information through search or original sources.\nAvailability and limits vary by plan, region, account and rollout status."
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "es": [
+    {
+      "title": "¿Qué es GPT-6 Astra?",
+      "subtitle": "Un modelo de IA para trabajos complejos | 2026.10.23 / Ciencia y tecnología",
+      "blocks": [
+        {
+          "h": "01 Del razonamiento a los entregables",
+          "text": "Astra es un modelo de IA de OpenAI. Está diseñado para razonamiento complejo, investigación, programación, creación de documentos y tareas similares."
+        },
+        {
+          "h": "02 Trabajar con herramientas",
+          "text": "Puede combinar búsquedas, procesamiento de archivos, ejecución de código y operaciones del navegador para avanzar en trabajos de varias etapas."
+        },
+        {
+          "h": "03 Distinguir modelo y servicio",
+          "text": "Astra es el modelo que realiza el procesamiento. Las funciones disponibles dependen del servicio, las herramientas conectadas y los permisos.\nIndicar no solo qué debe pensar, sino qué debe completar."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "¿Para qué trabajos sirve?",
+      "subtitle": "Investigar, comparar y crear | 2026.10.23 / Ciencia y tecnología",
+      "blocks": [
+        {
+          "h": "01 Investigación y comparación",
+          "text": "Organiza los temas a partir de varias fuentes e identifica coincidencias, diferencias y cuestiones sin verificar. También comprueba la fecha de la información y las fuentes primarias."
+        },
+        {
+          "h": "02 Tablas y documentos",
+          "text": "Organiza datos en tablas y gráficos y crea explicaciones y materiales. Los cálculos y la salida en PDF requieren herramientas compatibles."
+        },
+        {
+          "h": "03 Desarrollo de software",
+          "text": "Ayuda a escribir y modificar código, realizar pruebas y revisiones. Interpreta la estructura existente y facilita comprobar el funcionamiento tras los cambios.\nSon ejemplos de tareas delegables. La exactitud de los resultados debe verificarse por separado."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Diferencias entre Astra y dots",
+      "subtitle": "Un modelo y un agente que trabaja continuamente | 2026.10.23",
+      "blocks": [
+        {
+          "h": "01 Astra es el modelo: el «cerebro»",
+          "text": "Lee textos y materiales, razona y elige la siguiente operación. El nombre del modelo por sí solo no determina las funciones del entorno donde se utiliza."
+        },
+        {
+          "h": "02 dots gestiona tareas continuas",
+          "text": "Según su descripción oficial, dots incorpora GPT-6 Astra. Sigue el progreso entre conversaciones y da paso a la siguiente tarea o informe según la situación."
+        },
+        {
+          "h": "03 La nube y el PC local son distintos",
+          "text": "dots puede continuar el trabajo en la nube con el PC local apagado. Usar el contenido del PC local requiere conexión, que el PC esté en línea y otras condiciones.\nEl resultado depende del entorno y de cómo se utilicen las capacidades de Astra."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Cómo pedir resultados útiles",
+      "subtitle": "Definir objetivo, materiales y criterios de finalización | 2026.10.23",
+      "blocks": [
+        {
+          "h": "01 Concretar el resultado final",
+          "text": "Además de «investiga», indica el tema, el público y el formato: por ejemplo, «consulta fuentes oficiales y organízalas en cuatro páginas para principiantes»."
+        },
+        {
+          "h": "02 Definir el alcance delegado",
+          "text": "Especifica las fuentes, los plazos, la frecuencia de actualización y cómo gestionar la publicación o el envío. Acceder a cuentas requiere conexión y permisos."
+        },
+        {
+          "h": "03 Verificar lo importante",
+          "text": "La IA puede equivocarse. Comprueba cifras, nombres propios, fechas, enlaces y funcionamiento. Verifica la información actual mediante búsquedas o fuentes originales.\nLa disponibilidad y los límites varían según plan, región, cuenta y estado del despliegue."
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "pt": [
+    {
+      "title": "O que é GPT-6 Astra?",
+      "subtitle": "Um modelo de IA para trabalhos complexos | 2026.10.23 / Ciência e tecnologia",
+      "blocks": [
+        {
+          "h": "01 Do raciocínio à criação de entregas",
+          "text": "Astra é um modelo de IA da OpenAI. Foi projetado para raciocínio complexo, pesquisa, programação, criação de documentos e tarefas semelhantes."
+        },
+        {
+          "h": "02 Trabalhar com ferramentas",
+          "text": "Pode combinar busca, processamento de arquivos, execução de código e operações no navegador para avançar em trabalhos com várias etapas."
+        },
+        {
+          "h": "03 Distinguir modelo e serviço",
+          "text": "Astra é o modelo que realiza o processamento. As funções disponíveis dependem do serviço, das ferramentas conectadas e das permissões.\nIndique não só sobre o que pensar, mas o que concluir."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Em quais trabalhos pode ser usado?",
+      "subtitle": "Pesquisar, comparar e criar | 2026.10.23 / Ciência e tecnologia",
+      "blocks": [
+        {
+          "h": "01 Pesquisa e comparação",
+          "text": "Organiza questões a partir de várias fontes e identifica semelhanças, diferenças e pontos não verificados. Também verifica a data das informações e as fontes primárias."
+        },
+        {
+          "h": "02 Tabelas e documentos",
+          "text": "Organiza dados em tabelas e gráficos e cria textos explicativos e materiais. Cálculos e saída em PDF exigem ferramentas compatíveis."
+        },
+        {
+          "h": "03 Desenvolvimento de software",
+          "text": "Apoia a criação e alteração de código, testes e revisão. Lê a estrutura existente e ajuda a verificar o funcionamento após mudanças.\nSão exemplos de trabalhos que podem ser delegados. Verifique separadamente a correção dos resultados."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "A diferença entre Astra e dots",
+      "subtitle": "Um modelo e um agente que trabalha continuamente | 2026.10.23",
+      "blocks": [
+        {
+          "h": "01 Astra é o modelo: o “cérebro”",
+          "text": "Lê textos e materiais, raciocina e escolhe a próxima operação. O nome do modelo por si só não determina as funções do ambiente em que é usado."
+        },
+        {
+          "h": "02 dots cuida de trabalhos contínuos",
+          "text": "Segundo a descrição oficial, dots incorpora GPT-6 Astra. Acompanha o progresso entre conversas e encaminha a próxima tarefa ou relatório conforme a situação."
+        },
+        {
+          "h": "03 Nuvem e PC local são separados",
+          "text": "dots pode continuar o trabalho na nuvem com o PC local desligado. Usar o conteúdo do PC local exige conexão, que o PC esteja online e outras condições.\nOs resultados dependem do ambiente e de como as capacidades de Astra são usadas."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Como pedir resultados úteis",
+      "subtitle": "Alinhar objetivo, materiais e critérios de conclusão | 2026.10.23",
+      "blocks": [
+        {
+          "h": "01 Especifique a forma final",
+          "text": "Além de “pesquise”, indique o assunto, o público e o formato: por exemplo, “verifique materiais oficiais e organize-os em quatro páginas para iniciantes”."
+        },
+        {
+          "h": "02 Defina o escopo delegado",
+          "text": "Especifique fontes, prazos, frequência de atualização e como tratar publicação ou envio. O acesso a contas exige conexão e permissões."
+        },
+        {
+          "h": "03 Verifique os pontos importantes",
+          "text": "A IA pode errar. Confira números, nomes próprios, datas, links e funcionamento. Verifique informações atuais por busca ou fontes originais.\nDisponibilidade e limites variam conforme plano, região, conta e situação de oferta."
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "什么是GPT-6 Astra？",
+      "subtitle": "支持复杂工作的AI模型 | 2026.10.23 / 科学技术",
+      "blocks": [
+        {
+          "h": "01 从推理到成果制作",
+          "text": "Astra是OpenAI的AI模型，针对复杂推理、调查、编程、文档制作等任务而设计。"
+        },
+        {
+          "h": "02 结合工具工作",
+          "text": "可结合搜索、文件处理、代码执行与浏览器操作等，推进包含多个步骤的工作。"
+        },
+        {
+          "h": "03 区分模型与服务",
+          "text": "Astra是承担处理的模型。实际可用功能随所用服务、连接的工具和权限而变化。\n除了告诉它“思考什么”，也要说明“完成什么”。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "可以用于哪些工作？",
+      "subtitle": "调查、比较、制作 | 2026.10.23 / 科学技术",
+      "blocks": [
+        {
+          "h": "01 调查与比较",
+          "text": "从多份资料整理论点，归纳共同点、差异与待确认事项。也要核实信息时点及一手资料。"
+        },
+        {
+          "h": "02 表格与文档制作",
+          "text": "整理数据并制作表格、图表、说明文字与资料。计算处理与PDF输出需要相应工具。"
+        },
+        {
+          "h": "03 软件开发",
+          "text": "支持代码编写与修改、测试及审查。读取既有结构，进而验证修改后的运行情况。\n这些是“可以交付的工作”示例。结果是否正确，仍需另行核实。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Astra与dots的区别",
+      "subtitle": "模型与持续工作的智能体 | 2026.10.23",
+      "blocks": [
+        {
+          "h": "01 Astra是相当于“大脑”的模型",
+          "text": "负责阅读文字与资料、推理、选择下一步处理。仅凭模型名称，无法确定使用环境具备的功能。"
+        },
+        {
+          "h": "02 dots是承担持续业务的机制",
+          "text": "官方说明称其搭载GPT-6 Astra。在对话间隔期间也追踪进展，根据情况衔接下一项工作或报告。"
+        },
+        {
+          "h": "03 云端与本地电脑不同",
+          "text": "dots的云端工作可在本地电脑关机时继续。使用本地电脑内部内容，则需要连接、电脑在线等条件。\n在哪种环境、如何使用Astra的能力，会影响成果。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "如何提出有助于产生成果的请求",
+      "subtitle": "明确目的、材料与完成条件 | 2026.10.23",
+      "blocks": [
+        {
+          "h": "01 具体说明成品形式",
+          "text": "不要只说“调查一下”，而应说明对象、读者与形式，例如“核实官方资料，整理为面向初学者的4页内容”。"
+        },
+        {
+          "h": "02 明确交付范围",
+          "text": "明确所用资料、期限、更新频率，以及公开发布或发送的处理方式。访问账号需要连接与权限。"
+        },
+        {
+          "h": "03 验证重要部分",
+          "text": "AI可能出错。核对数字、专有名词、日期、链接及运行情况。最新信息应通过搜索或原始资料确认。\n是否可用及使用上限，随套餐、地区、账号与提供情况而异。"
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "什麼是GPT-6 Astra？",
+      "subtitle": "支援複雜工作的AI模型 | 2026.10.23 / 科學技術",
+      "blocks": [
+        {
+          "h": "01 從推理到成果製作",
+          "text": "Astra是OpenAI的AI模型，針對複雜推理、調查、程式設計、文件製作等任務而設計。"
+        },
+        {
+          "h": "02 結合工具工作",
+          "text": "可結合搜尋、檔案處理、程式碼執行與瀏覽器操作等，推進包含多個步驟的工作。"
+        },
+        {
+          "h": "03 區分模型與服務",
+          "text": "Astra是承擔處理的模型。實際可用功能隨所用服務、連接的工具和權限而變化。\n除了告訴它「思考什麼」，也要說明「完成什麼」。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "可以用於哪些工作？",
+      "subtitle": "調查、比較、製作 | 2026.10.23 / 科學技術",
+      "blocks": [
+        {
+          "h": "01 調查與比較",
+          "text": "從多份資料整理論點，歸納共同點、差異與待確認事項。也要核實資訊時點及第一手資料。"
+        },
+        {
+          "h": "02 表格與文件製作",
+          "text": "整理資料並製作表格、圖表、說明文字與文件。計算處理與PDF輸出需要相應工具。"
+        },
+        {
+          "h": "03 軟體開發",
+          "text": "支援程式碼撰寫與修改、測試及審查。讀取既有結構，進而驗證修改後的運作情況。\n這些是「可以交付的工作」示例。結果是否正確，仍需另行核實。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Astra與dots的差別",
+      "subtitle": "模型與持續工作的代理程式 | 2026.10.23",
+      "blocks": [
+        {
+          "h": "01 Astra是相當於「大腦」的模型",
+          "text": "負責閱讀文字與資料、推理、選擇下一步處理。僅憑模型名稱，無法確定使用環境具備的功能。"
+        },
+        {
+          "h": "02 dots是承擔持續業務的機制",
+          "text": "官方說明稱其搭載GPT-6 Astra。在對話間隔期間也追蹤進展，依情況銜接下一項工作或報告。"
+        },
+        {
+          "h": "03 雲端與本機電腦不同",
+          "text": "dots的雲端工作可在本機電腦關機時繼續。使用本機電腦內部內容，則需要連接、電腦在線等條件。\n在哪種環境、如何使用Astra的能力，會影響成果。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "如何提出有助於產生成果的請求",
+      "subtitle": "明確目的、材料與完成條件 | 2026.10.23",
+      "blocks": [
+        {
+          "h": "01 具體說明成品形式",
+          "text": "不要只說「調查一下」，而應說明對象、讀者與形式，例如「核實官方資料，整理為面向初學者的4頁內容」。"
+        },
+        {
+          "h": "02 明確交付範圍",
+          "text": "明確所用資料、期限、更新頻率，以及公開發布或傳送的處理方式。存取帳號需要連接與權限。"
+        },
+        {
+          "h": "03 驗證重要部分",
+          "text": "AI可能出錯。核對數字、專有名詞、日期、連結及運作情況。最新資訊應透過搜尋或原始資料確認。\n是否可用及使用上限，隨方案、地區、帳號與提供情況而異。"
+        }
+      ],
+      "dense": false
+    }
+  ]
+}

@@ -1,0 +1,642 @@
+{
+  "en": [
+    {
+      "title": "What is a data breach?",
+      "subtitle": "01 / RISK | Personal data, trade secrets or technical information reaching unauthorized parties",
+      "blocks": [
+        {
+          "h": "Main routes of leakage",
+          "text": "External attacks: phishing, unauthorized access, exploitation of vulnerabilities and data theft accompanying ransomware attacks."
+        },
+        {
+          "h": "Human factors inside the organization",
+          "text": "Misdirected email, lost devices, unauthorized removal of information, excessive access rights and inadequate management."
+        },
+        {
+          "h": "Cloud and generative AI use",
+          "text": "Incorrect public-access settings in the cloud, poorly managed sharing links and entering confidential information without checking service terms or internal rules."
+        },
+        {
+          "h": "Impact on business: direct losses",
+          "text": "Investigation and recovery costs, operational shutdowns, customer support, compensation for damages and more."
+        },
+        {
+          "h": "Medium- and long-term losses",
+          "text": "Reduced trust among customers and business partners, lost contracts and weaker competitiveness from leaked technology."
+        },
+        {
+          "text": "Data breaches result from everyday operating mistakes as well as external attacks."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Key systems to prevent leakage",
+      "subtitle": "02 / DEFENSE | Defense in depth combines authentication, communications, endpoints, data and monitoring",
+      "blocks": [
+        {
+          "h": "DLP | Data loss prevention",
+          "text": "Identifies confidential information and detects or restricts email transmission, copying to external media and cloud uploads according to settings."
+        },
+        {
+          "h": "EDR / XDR | Threat detection and response",
+          "text": "EDR monitors endpoint behavior. XDR analyzes information across endpoints, email, identities and other sources, supporting investigation and containment."
+        },
+        {
+          "h": "IAM / MFA | Identity, access rights and multifactor authentication",
+          "text": "IAM manages identities and access permissions. MFA uses multiple authentication factors to reduce unauthorized logins after a password leak."
+        },
+        {
+          "h": "SASE / ZTNA | Protecting communications and access",
+          "text": "SASE integrates networking and security functions. ZTNA verifies users and devices and controls connections to required resources."
+        },
+        {
+          "h": "SIEM / SOC | Log analysis and monitoring operations",
+          "text": "SIEM aggregates and analyzes logs. SOC is an organization or function responsible for monitoring, analysis and response; their roles differ."
+        },
+        {
+          "text": "The scope and effectiveness of each function depend on the product, settings and operating structure."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Major companies and focus areas",
+      "subtitle": "03 / COMPANIES | Representative related companies; listing order indicates neither ranking nor market share",
+      "blocks": [
+        {
+          "h": "Japanese companies",
+          "text": "Digital Arts: web and email filtering, data-leakage prevention."
+        },
+        {
+          "text": "Trend Micro: endpoint and server protection, threat detection and response."
+        },
+        {
+          "text": "FFRI Security: threat analysis, Japanese-developed endpoint defense products."
+        },
+        {
+          "text": "Soliton Systems: authentication, access control and endpoint security."
+        },
+        {
+          "text": "HENNGE: authentication and access management for cloud services."
+        },
+        {
+          "h": "Overseas companies",
+          "text": "Palo Alto Networks: network protection, SASE and data protection."
+        },
+        {
+          "text": "CrowdStrike: endpoint defense, threat detection and response, data protection."
+        },
+        {
+          "text": "Zscaler: zero-trust connectivity and cloud-based data protection."
+        },
+        {
+          "text": "Microsoft: identity management through Entra, threat protection through Defender, data protection and governance through Purview."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Operations that protect information",
+      "subtitle": "04 / OPERATIONS | Combine products with day-to-day management and incident response",
+      "blocks": [
+        {
+          "h": "Identify assets and information",
+          "text": "Inventory devices, systems and storage locations; classify information by confidentiality. Clarify who can access which information."
+        },
+        {
+          "h": "Maintain basic safeguards",
+          "text": "Multifactor authentication, least-privilege access, applying updates, checking email and sharing settings, and continuous employee education."
+        },
+        {
+          "h": "Rules for generative AI",
+          "text": "Define which information may be entered, which services are permitted and the conditions for data retention and training use. Understand the scope of monitoring and control."
+        },
+        {
+          "h": "Detection and initial response",
+          "text": "Monitor suspicious actions and communications, and identify contacts and responsible staff. Investigate the impact of incidents, contain damage and preserve evidence."
+        },
+        {
+          "h": "Recovery and prevention of recurrence",
+          "text": "Verify backups and restoration procedures to prepare for business recovery. Analyze incident causes and review permissions, settings and operating rules."
+        },
+        {
+          "text": "Backups prepare for recovery; they do not prevent the information leak itself."
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "es": [
+    {
+      "title": "¿Qué es una filtración de información?",
+      "subtitle": "01 / RIESGO | Datos personales, secretos comerciales o información técnica que llegan a personas no autorizadas",
+      "blocks": [
+        {
+          "h": "Principales vías de fuga",
+          "text": "Ataques externos: phishing, acceso no autorizado, explotación de vulnerabilidades y robo de datos durante ataques de ransomware."
+        },
+        {
+          "h": "Factores humanos internos",
+          "text": "Correos enviados al destinatario equivocado, dispositivos perdidos, extracción no autorizada de información, permisos de acceso excesivos y deficiencias de gestión."
+        },
+        {
+          "h": "Uso de la nube y de IA generativa",
+          "text": "Errores de configuración de acceso público en la nube, enlaces compartidos mal gestionados e introducción de información confidencial sin revisar las condiciones de uso o las normas internas."
+        },
+        {
+          "h": "Impacto empresarial: pérdidas directas",
+          "text": "Gastos de investigación y recuperación, interrupción de operaciones, atención a clientes, indemnizaciones y otros."
+        },
+        {
+          "h": "Pérdidas a medio y largo plazo",
+          "text": "Pérdida de confianza de clientes y socios, pérdida de contratos y menor competitividad por la fuga de tecnología."
+        },
+        {
+          "text": "Las filtraciones también se producen por errores cotidianos de operación, además de ataques externos."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Sistemas principales para prevenir fugas",
+      "subtitle": "02 / DEFENSA | Defensa en profundidad: autenticación, comunicaciones, terminales, datos y supervisión",
+      "blocks": [
+        {
+          "h": "DLP | Prevención de pérdida de datos",
+          "text": "Identifica información confidencial y, según la configuración, detecta o restringe el envío por correo, la copia a medios externos y la carga a la nube."
+        },
+        {
+          "h": "EDR / XDR | Detección y respuesta a amenazas",
+          "text": "EDR supervisa el comportamiento de los terminales. XDR analiza conjuntamente información de terminales, correo, identidades y otras fuentes para apoyar la investigación y la contención."
+        },
+        {
+          "h": "IAM / MFA | Identidades, permisos y autenticación multifactor",
+          "text": "IAM gestiona identidades y permisos de acceso. MFA utiliza varios factores de autenticación para reducir los accesos no autorizados tras una filtración de contraseñas."
+        },
+        {
+          "h": "SASE / ZTNA | Protección de comunicaciones y acceso",
+          "text": "SASE integra funciones de red y seguridad. ZTNA verifica usuarios y dispositivos y controla la conexión con los recursos necesarios."
+        },
+        {
+          "h": "SIEM / SOC | Análisis de registros y operaciones de supervisión",
+          "text": "SIEM reúne y analiza registros. SOC es la organización o función encargada de supervisar, analizar y responder; sus funciones son distintas."
+        },
+        {
+          "text": "El alcance y la eficacia dependen del producto, la configuración y la organización operativa."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Empresas principales y sus áreas",
+      "subtitle": "03 / EMPRESAS | Ejemplos representativos; el orden no indica clasificación ni cuota de mercado",
+      "blocks": [
+        {
+          "h": "Empresas japonesas",
+          "text": "Digital Arts: filtrado web y de correo, prevención de fugas de información."
+        },
+        {
+          "text": "Trend Micro: protección de terminales y servidores, detección y respuesta a amenazas."
+        },
+        {
+          "text": "FFRI Security: análisis de amenazas y productos de defensa de terminales desarrollados en Japón."
+        },
+        {
+          "text": "Soliton Systems: autenticación, control de acceso y seguridad de terminales."
+        },
+        {
+          "text": "HENNGE: autenticación y gestión de acceso a servicios en la nube."
+        },
+        {
+          "h": "Empresas extranjeras",
+          "text": "Palo Alto Networks: protección de redes, SASE y protección de datos."
+        },
+        {
+          "text": "CrowdStrike: defensa de terminales, detección y respuesta a amenazas y protección de datos."
+        },
+        {
+          "text": "Zscaler: conexiones de confianza cero y protección de datos en la nube."
+        },
+        {
+          "text": "Microsoft: gestión de identidades con Entra, protección contra amenazas con Defender y protección y gobierno de datos con Purview."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Operaciones para proteger la información",
+      "subtitle": "04 / OPERACIONES | Complementar los productos con gestión cotidiana y respuesta a incidentes",
+      "blocks": [
+        {
+          "h": "Inventario de activos e información",
+          "text": "Identificar terminales, sistemas y ubicaciones de almacenamiento; clasificar la información según su confidencialidad. Aclarar quién puede acceder a cada información."
+        },
+        {
+          "h": "Mantener las medidas básicas",
+          "text": "Autenticación multifactor, permisos mínimos, aplicación de actualizaciones, revisión del correo y de las opciones de uso compartido y formación continua del personal."
+        },
+        {
+          "h": "Normas para la IA generativa",
+          "text": "Definir qué información puede introducirse, qué servicios se permiten y las condiciones de conservación de datos y de uso para entrenamiento. Conocer también el alcance de la supervisión y el control."
+        },
+        {
+          "h": "Detección y respuesta inicial",
+          "text": "Supervisar operaciones y comunicaciones sospechosas y definir contactos y responsables. Investigar el alcance del incidente, contener su expansión y preservar pruebas."
+        },
+        {
+          "h": "Recuperación y prevención de recurrencias",
+          "text": "Verificar copias de seguridad y procedimientos de restauración para preparar la recuperación del negocio. Analizar las causas y revisar permisos, configuraciones y normas operativas."
+        },
+        {
+          "text": "Las copias de seguridad preparan la recuperación; no impiden la fuga de información en sí."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "pt": [
+    {
+      "title": "O que é vazamento de informações?",
+      "subtitle": "01 / RISCO | Dados pessoais, segredos comerciais ou informações técnicas nas mãos de pessoas não autorizadas",
+      "blocks": [
+        {
+          "h": "Principais vias de vazamento",
+          "text": "Ataques externos: phishing, acesso não autorizado, exploração de vulnerabilidades e roubo de dados durante ataques de ransomware."
+        },
+        {
+          "h": "Fatores humanos internos",
+          "text": "E-mails enviados ao destinatário errado, perda de dispositivos, retirada indevida de informações, permissões excessivas e falhas de gestão."
+        },
+        {
+          "h": "Uso da nuvem e da IA generativa",
+          "text": "Erros nas configurações de acesso público da nuvem, links de compartilhamento mal gerenciados e inserção de informações confidenciais sem conferir os termos de uso ou as regras internas."
+        },
+        {
+          "h": "Impacto nos negócios: perdas diretas",
+          "text": "Custos de investigação e recuperação, paralisação, atendimento aos clientes, indenizações e outros."
+        },
+        {
+          "h": "Perdas de médio e longo prazo",
+          "text": "Queda da confiança de clientes e parceiros, perda de contratos e redução da competitividade por vazamento de tecnologia."
+        },
+        {
+          "text": "Vazamentos também surgem de erros operacionais cotidianos, além de ataques externos."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Principais sistemas de prevenção",
+      "subtitle": "02 / DEFESA | Defesa em camadas combina autenticação, comunicações, dispositivos, dados e monitoramento",
+      "blocks": [
+        {
+          "h": "DLP | Prevenção contra perda de dados",
+          "text": "Identifica informações confidenciais e, conforme a configuração, detecta ou restringe o envio por e-mail, a cópia para mídias externas e o upload para a nuvem."
+        },
+        {
+          "h": "EDR / XDR | Detecção e resposta a ameaças",
+          "text": "EDR monitora o comportamento dos dispositivos. XDR analisa informações de dispositivos, e-mail, identidades e outras fontes em conjunto, apoiando investigação e contenção."
+        },
+        {
+          "h": "IAM / MFA | Identidades, permissões e autenticação multifator",
+          "text": "IAM gerencia identidades e permissões de acesso. MFA utiliza vários fatores de autenticação para reduzir logins indevidos após um vazamento de senhas."
+        },
+        {
+          "h": "SASE / ZTNA | Proteção de comunicações e acesso",
+          "text": "SASE integra funções de rede e segurança. ZTNA verifica usuários e dispositivos e controla conexões aos recursos necessários."
+        },
+        {
+          "h": "SIEM / SOC | Análise de logs e operação de monitoramento",
+          "text": "SIEM reúne e analisa logs. SOC é a organização ou função responsável por monitorar, analisar e responder; seus papéis são diferentes."
+        },
+        {
+          "text": "O alcance e a eficácia variam conforme o produto, as configurações e a estrutura operacional."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Principais empresas e suas áreas",
+      "subtitle": "03 / EMPRESAS | Exemplos representativos; a ordem não indica classificação nem participação de mercado",
+      "blocks": [
+        {
+          "h": "Empresas japonesas",
+          "text": "Digital Arts: filtragem web e de e-mail, prevenção de vazamentos."
+        },
+        {
+          "text": "Trend Micro: proteção de dispositivos e servidores, detecção e resposta a ameaças."
+        },
+        {
+          "text": "FFRI Security: análise de ameaças e produtos de defesa de dispositivos desenvolvidos no Japão."
+        },
+        {
+          "text": "Soliton Systems: autenticação, controle de acesso e segurança de dispositivos."
+        },
+        {
+          "text": "HENNGE: autenticação e gestão de acesso a serviços em nuvem."
+        },
+        {
+          "h": "Empresas estrangeiras",
+          "text": "Palo Alto Networks: proteção de redes, SASE e proteção de dados."
+        },
+        {
+          "text": "CrowdStrike: defesa de dispositivos, detecção e resposta a ameaças, proteção de dados."
+        },
+        {
+          "text": "Zscaler: conexões de confiança zero e proteção de dados em nuvem."
+        },
+        {
+          "text": "Microsoft: gestão de identidades com Entra, proteção contra ameaças com Defender e proteção e governança de dados com Purview."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Operação para proteger informações",
+      "subtitle": "04 / OPERAÇÕES | Além de produtos, preparar a gestão diária e a resposta a incidentes",
+      "blocks": [
+        {
+          "h": "Conhecer ativos e informações",
+          "text": "Identificar dispositivos, sistemas e locais de armazenamento; classificar informações por confidencialidade. Definir quem pode acessar quais informações."
+        },
+        {
+          "h": "Manter medidas básicas",
+          "text": "Autenticação multifator, privilégio mínimo, aplicação de atualizações, revisão de e-mails e configurações de compartilhamento, educação contínua dos funcionários."
+        },
+        {
+          "h": "Regras de IA generativa",
+          "text": "Definir informações permitidas, serviços autorizados e condições de retenção de dados e uso em treinamento. Conhecer também o alcance do monitoramento e do controle."
+        },
+        {
+          "h": "Detecção e resposta inicial",
+          "text": "Monitorar ações e comunicações suspeitas e definir contatos e responsáveis. Investigar o impacto, conter a expansão do incidente e preservar evidências."
+        },
+        {
+          "h": "Recuperação e prevenção de recorrência",
+          "text": "Verificar backups e procedimentos de restauração para preparar a recuperação do negócio. Analisar as causas e rever permissões, configurações e regras operacionais."
+        },
+        {
+          "text": "Backups preparam a recuperação; não impedem o vazamento em si."
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "什么是信息泄露？",
+      "subtitle": "01 / 风险 | 个人信息、商业秘密、技术信息流向未经授权的对象",
+      "blocks": [
+        {
+          "h": "主要泄露途径",
+          "text": "外部攻击：钓鱼、非法访问、利用漏洞，以及勒索软件攻击伴随的数据窃取。"
+        },
+        {
+          "h": "内部人为因素",
+          "text": "邮件误发、设备遗失、违规携出信息、访问权限过大、管理不完善。"
+        },
+        {
+          "h": "云端与生成式AI的使用",
+          "text": "云端公开设置错误、共享链接管理不当，以及未确认使用条款或公司内部规则就输入机密信息。"
+        },
+        {
+          "h": "对企业活动的影响：直接损失",
+          "text": "调查与恢复费用、业务中断、客户应对、损害赔偿等。"
+        },
+        {
+          "h": "中长期损失",
+          "text": "客户和合作伙伴信任下降、失去合同、技术外泄导致竞争力下降。"
+        },
+        {
+          "text": "信息泄露不仅源于外部攻击，也会由日常操作失误引发。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "防止泄露的主要系统",
+      "subtitle": "02 / 防御 | 结合认证、通信、终端、数据与监控的“纵深防御”",
+      "blocks": [
+        {
+          "h": "DLP | 数据防泄漏",
+          "text": "识别机密信息，根据设置检测或限制邮件发送、复制到外部介质、上传至云端等行为。"
+        },
+        {
+          "h": "EDR / XDR | 威胁检测与响应",
+          "text": "EDR监控终端行为。XDR跨终端、邮件、身份等来源分析信息，协助调查与遏制威胁。"
+        },
+        {
+          "h": "IAM / MFA | 身份、权限管理与多因素认证",
+          "text": "IAM管理身份和访问权限。MFA使用多种认证因素，降低密码泄露后的非法登录风险。"
+        },
+        {
+          "h": "SASE / ZTNA | 通信与访问保护",
+          "text": "SASE整合网络与安全功能。ZTNA验证用户和设备，控制对所需资源的连接。"
+        },
+        {
+          "h": "SIEM / SOC | 日志分析与监控运营",
+          "text": "SIEM是集中收集、分析日志的机制。SOC是负责监控、分析和响应的组织或职能，两者角色不同。"
+        },
+        {
+          "text": "各功能的覆盖范围与效果，因产品、设置和运营体制而异。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "主要企业与主要领域",
+      "subtitle": "03 / 企业 | 列举代表性相关企业，顺序不代表排名或市场份额",
+      "blocks": [
+        {
+          "h": "日本企业",
+          "text": "Digital Arts：网页、邮件过滤及信息防泄漏。"
+        },
+        {
+          "text": "Trend Micro：终端、服务器保护及威胁检测与响应。"
+        },
+        {
+          "text": "FFRI Security：威胁分析及日本国产终端防御产品。"
+        },
+        {
+          "text": "Soliton Systems：认证、访问控制及终端安全防护。"
+        },
+        {
+          "text": "HENNGE：云服务的认证与访问管理。"
+        },
+        {
+          "h": "海外企业",
+          "text": "Palo Alto Networks：网络保护、SASE及数据保护。"
+        },
+        {
+          "text": "CrowdStrike：终端防御、威胁检测与响应及数据保护。"
+        },
+        {
+          "text": "Zscaler：零信任连接、云端数据保护。"
+        },
+        {
+          "text": "Microsoft：通过Entra进行身份管理，通过Defender应对威胁，通过Purview保护和治理数据。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "保护信息的运营机制",
+      "subtitle": "04 / 运营 | 除引入产品外，还需完善日常管理与事故应对",
+      "blocks": [
+        {
+          "h": "掌握资产与信息",
+          "text": "掌握终端、系统、存储位置，并按机密程度分类信息。明确谁能访问哪些信息。"
+        },
+        {
+          "h": "持续落实基本措施",
+          "text": "多因素认证、最小权限、安装更新、检查邮件与共享设置、持续员工培训。"
+        },
+        {
+          "h": "生成式AI使用规则",
+          "text": "梳理可输入的信息、允许使用的服务，以及数据保存、用于训练的条件。同时了解监控和控制能覆盖的范围。"
+        },
+        {
+          "h": "检测与初期响应",
+          "text": "监控可疑操作和通信，明确联系人与负责人。事故发生时调查影响范围，防止扩大并保全证据。"
+        },
+        {
+          "h": "恢复与防止再次发生",
+          "text": "验证备份和还原流程，为业务恢复作准备。分析事故原因，重新审视权限、设置和运营规则。"
+        },
+        {
+          "text": "备份用于恢复准备，无法阻止信息泄露本身。"
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "什麼是資訊外洩？",
+      "subtitle": "01 / 風險 | 個人資料、商業秘密、技術資訊流向未經授權的對象",
+      "blocks": [
+        {
+          "h": "主要外洩途徑",
+          "text": "外部攻擊：網路釣魚、非法存取、利用漏洞，以及勒索軟體攻擊伴隨的資料竊取。"
+        },
+        {
+          "h": "內部人為因素",
+          "text": "郵件誤寄、裝置遺失、違規攜出資訊、存取權限過大、管理不完善。"
+        },
+        {
+          "h": "雲端與生成式AI的使用",
+          "text": "雲端公開設定錯誤、共用連結管理不當，以及未確認使用條款或公司內部規則就輸入機密資訊。"
+        },
+        {
+          "h": "對企業活動的影響：直接損失",
+          "text": "調查與復原費用、業務中斷、客戶應對、損害賠償等。"
+        },
+        {
+          "h": "中長期損失",
+          "text": "客戶和合作夥伴信任下降、失去合約、技術外洩導致競爭力下降。"
+        },
+        {
+          "text": "資訊外洩不僅源於外部攻擊，也會由日常操作失誤引發。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "防止外洩的主要系統",
+      "subtitle": "02 / 防禦 | 結合認證、通訊、端點、資料與監控的「縱深防禦」",
+      "blocks": [
+        {
+          "h": "DLP | 資料外洩防護",
+          "text": "識別機密資訊，根據設定偵測或限制郵件傳送、複製到外部媒體、上傳至雲端等行為。"
+        },
+        {
+          "h": "EDR / XDR | 威脅偵測與回應",
+          "text": "EDR監控端點行為。XDR跨端點、郵件、身分等來源分析資訊，協助調查與遏制威脅。"
+        },
+        {
+          "h": "IAM / MFA | 身分、權限管理與多因素驗證",
+          "text": "IAM管理身分和存取權限。MFA使用多種驗證因素，降低密碼外洩後的非法登入風險。"
+        },
+        {
+          "h": "SASE / ZTNA | 通訊與存取保護",
+          "text": "SASE整合網路與安全功能。ZTNA驗證使用者和裝置，控制對所需資源的連線。"
+        },
+        {
+          "h": "SIEM / SOC | 日誌分析與監控營運",
+          "text": "SIEM是集中收集、分析日誌的機制。SOC是負責監控、分析和回應的組織或職能，兩者角色不同。"
+        },
+        {
+          "text": "各功能的涵蓋範圍與效果，因產品、設定和營運體制而異。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "主要企業與主要領域",
+      "subtitle": "03 / 企業 | 列舉代表性相關企業，順序不代表排名或市占率",
+      "blocks": [
+        {
+          "h": "日本企業",
+          "text": "Digital Arts：網頁、郵件過濾及資訊外洩防護。"
+        },
+        {
+          "text": "Trend Micro：端點、伺服器保護及威脅偵測與回應。"
+        },
+        {
+          "text": "FFRI Security：威脅分析及日本國產端點防禦產品。"
+        },
+        {
+          "text": "Soliton Systems：認證、存取控制及端點安全防護。"
+        },
+        {
+          "text": "HENNGE：雲端服務的認證與存取管理。"
+        },
+        {
+          "h": "海外企業",
+          "text": "Palo Alto Networks：網路保護、SASE及資料保護。"
+        },
+        {
+          "text": "CrowdStrike：端點防禦、威脅偵測與回應及資料保護。"
+        },
+        {
+          "text": "Zscaler：零信任連線、雲端資料保護。"
+        },
+        {
+          "text": "Microsoft：透過Entra進行身分管理，透過Defender應對威脅，透過Purview保護和治理資料。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "保護資訊的營運機制",
+      "subtitle": "04 / 營運 | 除導入產品外，還需完善日常管理與事故應對",
+      "blocks": [
+        {
+          "h": "掌握資產與資訊",
+          "text": "掌握端點、系統、儲存位置，並按機密程度分類資訊。明確誰能存取哪些資訊。"
+        },
+        {
+          "h": "持續落實基本措施",
+          "text": "多因素驗證、最小權限、安裝更新、檢查郵件與共用設定、持續員工培訓。"
+        },
+        {
+          "h": "生成式AI使用規則",
+          "text": "梳理可輸入的資訊、允許使用的服務，以及資料保存、用於訓練的條件。同時了解監控和控制能涵蓋的範圍。"
+        },
+        {
+          "h": "偵測與初期回應",
+          "text": "監控可疑操作和通訊，明確聯絡人與負責人。事故發生時調查影響範圍，防止擴大並保全證據。"
+        },
+        {
+          "h": "復原與防止再次發生",
+          "text": "驗證備份和還原流程，為業務復原作準備。分析事故原因，重新檢視權限、設定和營運規則。"
+        },
+        {
+          "text": "備份用於復原準備，無法阻止資訊外洩本身。"
+        }
+      ],
+      "dense": false
+    }
+  ]
+}

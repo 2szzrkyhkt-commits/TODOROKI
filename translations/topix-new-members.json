@@ -1,0 +1,1112 @@
+{
+  "en": [
+    {
+      "title": "35 new TOPIX constituents",
+      "subtitle": "Where will index money go? Top 10 by potential buying scale",
+      "blocks": [
+        {
+          "h": "",
+          "text": "Announced October 7, 2026.\nNew inclusion October 30.\nThe focus is on companies previously outside TOPIX: 23 Standard Market companies + 12 Growth Market companies."
+        },
+        {
+          "h": "Ranking basis",
+          "text": "The ranking uses estimated free-float market capitalization as of August as a proxy for considering the absolute amount of index-tracking buying. It does not rank expected share-price gains."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "01 | Complete list of 35 additions",
+      "subtitle": "A path into TOPIX now opens to Standard and Growth.",
+      "dense": true,
+      "blocks": [
+        {
+          "table": [
+            [
+              "STANDARD 23",
+              "STANDARD (continued) / GROWTH 12"
+            ],
+            [
+              "1723 Nippon Dengi",
+              "7716 Nakanishi"
+            ],
+            [
+              "1965 Techno Ryowa",
+              "7906 Yonex"
+            ],
+            [
+              "2702 McDonald’s Holdings Japan",
+              "8117 Central Automotive Products"
+            ],
+            [
+              "2782 Seria",
+              "8508 J Trust"
+            ],
+            [
+              "2805 S&B Foods",
+              "9436 Okinawa Cellular Telephone"
+            ],
+            [
+              "4107 Ise Chemicals",
+              "GROWTH | 141A Trial Holdings"
+            ],
+            [
+              "4816 Toei Animation",
+              "GROWTH | 186A Astroscale Holdings"
+            ],
+            [
+              "4966 C. Uyemura & Co.",
+              "GROWTH | 215A Timee"
+            ],
+            [
+              "5161 Nishikawa Rubber",
+              "GROWTH | 2160 GNI Group"
+            ],
+            [
+              "6227 AI Mechatec",
+              "GROWTH | 290A Synspective"
+            ],
+            [
+              "6366 Chiyoda",
+              "GROWTH | 4478 freee"
+            ],
+            [
+              "6736 Sun Corporation",
+              "GROWTH | 4588 Oncolys BioPharma"
+            ],
+            [
+              "6777 santec Holdings",
+              "GROWTH | 485A PowerX"
+            ],
+            [
+              "6834 Seikoh Giken",
+              "GROWTH | 581A GO"
+            ],
+            [
+              "6890 Ferrotec Holdings",
+              "GROWTH | 593A Tier IV"
+            ],
+            [
+              "6960 Fukuda Denshi",
+              "GROWTH | 6613 QD Laser"
+            ],
+            [
+              "7287 Nippon Seiki",
+              "GROWTH | 7806 MTG"
+            ],
+            [
+              "7564 Workman",
+              ""
+            ]
+          ],
+          "widths": [
+            255,
+            255
+          ],
+          "compact": true
+        },
+        {
+          "text": "All 35 companies are currently outside TOPIX. Inclusion conditions include liquidity criteria such as an annual trading-value turnover ratio of at least 0.2, and a free-float market-cap criterion."
+        }
+      ]
+    },
+    {
+      "title": "02 | Top 10 by buying-demand scale",
+      "subtitle": "A larger free-float market cap tends to mean a larger TOPIX weight and more absolute index buying, other things equal.",
+      "dense": true,
+      "blocks": [
+        {
+          "table": [
+            [
+              "#",
+              "Code / Company",
+              "Free float* (JPY 100m)",
+              "Focus"
+            ],
+            [
+              "1",
+              "2702 McDonald’s Holdings Japan",
+              "6,917",
+              "S | Among the largest absolute buying demand"
+            ],
+            [
+              "2",
+              "6890 Ferrotec Holdings",
+              "4,378",
+              "S | Second-largest estimated free-float market cap in this table"
+            ],
+            [
+              "3",
+              "7716 Nakanishi",
+              "1,758",
+              "A | Large scale; Standard Market"
+            ],
+            [
+              "4",
+              "2782 Seria",
+              "1,755",
+              "A | Large scale; high name recognition"
+            ],
+            [
+              "5",
+              "6960 Fukuda Denshi",
+              "1,565",
+              "A | Also watch the ratio to trading activity"
+            ],
+            [
+              "6",
+              "4966 C. Uyemura & Co.",
+              "1,532",
+              "A | Among the largest free floats"
+            ],
+            [
+              "7",
+              "4816 Toei Animation",
+              "1,520",
+              "A | Index buying + popular theme"
+            ],
+            [
+              "8",
+              "9436 Okinawa Cellular Telephone",
+              "1,497",
+              "A | Stable earnings model"
+            ],
+            [
+              "9",
+              "581A GO",
+              "1,459",
+              "A | Among the Growth leaders"
+            ],
+            [
+              "10",
+              "2160 GNI Group",
+              "1,373",
+              "A | Among the Growth leaders"
+            ]
+          ],
+          "widths": [
+            34,
+            179,
+            105,
+            192
+          ],
+          "compact": true
+        },
+        {
+          "text": "* QUICK estimates based on August averages; these do not equal actual index weights or buying demand.\nTwo standouts: McDonald’s Holdings Japan is about JPY 691.7bn and Ferrotec Holdings about JPY 437.8bn. Together they represent an estimated 24% of the 35-company total of about JPY 4.66tn. These two are the initial focus in absolute amounts."
+        }
+      ]
+    },
+    {
+      "title": "03 | Where should you focus?",
+      "subtitle": "",
+      "blocks": [
+        {
+          "h": "For index buying alone",
+          "text": "Prioritize 2702 McDonald’s Holdings Japan and 6890 Ferrotec Holdings. Their outstanding free-float market caps make large absolute passive inflows more likely."
+        },
+        {
+          "h": "For share-price impact",
+          "text": "The key is expected buying divided by usual trading value, rather than buying amount alone. Low-liquidity stocks may react strongly even to smaller buying amounts."
+        },
+        {
+          "h": "Event dates",
+          "text": "TOPIX inclusion is October 30. Index-tracking portfolios need to adjust at the previous business day’s close, so supply and demand may particularly concentrate at the October 29 close."
+        },
+        {
+          "h": "Conclusion",
+          "text": "New inclusion does not mean buy everything. Combine: ① free-float market cap; ② average daily trading value; ③ price gains already reflecting the event; ④ underlying business value.\nNext examine “buying-impact days”: rank the 35 by how many days of normal trading value the TOPIX buying equals, to get closer to a true supply-demand ranking."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "es": [
+    {
+      "title": "35 nuevas incorporaciones al TOPIX",
+      "subtitle": "¿Adónde irá el dinero indexado? Top 10 por escala de compras",
+      "blocks": [
+        {
+          "h": "",
+          "text": "Anuncio: 7 de octubre de 2026.\nIncorporación: 30 de octubre.\nLos protagonistas son empresas hasta ahora fuera del TOPIX: 23 del mercado Standard + 12 del Growth."
+        },
+        {
+          "h": "Base de la clasificación",
+          "text": "La clasificación usa estimaciones de capitalización de libre circulación de agosto como indicador aproximado del importe absoluto de las compras indexadas. No clasifica las subidas de cotización previstas."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "01 | Lista completa de 35 incorporaciones",
+      "subtitle": "Se abre al Standard y al Growth una vía de acceso al TOPIX.",
+      "dense": true,
+      "blocks": [
+        {
+          "table": [
+            [
+              "STANDARD 23",
+              "STANDARD (continúa) / GROWTH 12"
+            ],
+            [
+              "1723 Nippon Dengi",
+              "7716 Nakanishi"
+            ],
+            [
+              "1965 Techno Ryowa",
+              "7906 Yonex"
+            ],
+            [
+              "2702 McDonald’s Holdings Japan",
+              "8117 Central Automotive Products"
+            ],
+            [
+              "2782 Seria",
+              "8508 J Trust"
+            ],
+            [
+              "2805 S&B Foods",
+              "9436 Okinawa Cellular Telephone"
+            ],
+            [
+              "4107 Ise Chemicals",
+              "GROWTH | 141A Trial Holdings"
+            ],
+            [
+              "4816 Toei Animation",
+              "GROWTH | 186A Astroscale Holdings"
+            ],
+            [
+              "4966 C. Uyemura & Co.",
+              "GROWTH | 215A Timee"
+            ],
+            [
+              "5161 Nishikawa Rubber",
+              "GROWTH | 2160 GNI Group"
+            ],
+            [
+              "6227 AI Mechatec",
+              "GROWTH | 290A Synspective"
+            ],
+            [
+              "6366 Chiyoda",
+              "GROWTH | 4478 freee"
+            ],
+            [
+              "6736 Sun Corporation",
+              "GROWTH | 4588 Oncolys BioPharma"
+            ],
+            [
+              "6777 santec Holdings",
+              "GROWTH | 485A PowerX"
+            ],
+            [
+              "6834 Seikoh Giken",
+              "GROWTH | 581A GO"
+            ],
+            [
+              "6890 Ferrotec Holdings",
+              "GROWTH | 593A Tier IV"
+            ],
+            [
+              "6960 Fukuda Denshi",
+              "GROWTH | 6613 QD Laser"
+            ],
+            [
+              "7287 Nippon Seiki",
+              "GROWTH | 7806 MTG"
+            ],
+            [
+              "7564 Workman",
+              ""
+            ]
+          ],
+          "widths": [
+            255,
+            255
+          ],
+          "compact": true
+        },
+        {
+          "text": "Las 35 empresas están actualmente fuera del TOPIX. Los requisitos incluyen criterios de liquidez, como una rotación anual por valor negociado de al menos 0,2, y un criterio de capitalización de libre circulación."
+        }
+      ]
+    },
+    {
+      "title": "02 | Top 10 por escala de demanda",
+      "subtitle": "Una mayor capitalización de libre circulación suele implicar mayor peso en TOPIX y más compras indexadas absolutas, a igualdad de condiciones.",
+      "dense": true,
+      "blocks": [
+        {
+          "table": [
+            [
+              "#",
+              "Código / Empresa",
+              "Libre circulación* (100 M JPY)",
+              "Atención"
+            ],
+            [
+              "1",
+              "2702 McDonald’s Holdings Japan",
+              "6,917",
+              "S | Demanda absoluta de compras de las mayores"
+            ],
+            [
+              "2",
+              "6890 Ferrotec Holdings",
+              "4,378",
+              "S | Segunda mayor capitalización estimada de libre circulación de esta tabla"
+            ],
+            [
+              "3",
+              "7716 Nakanishi",
+              "1,758",
+              "A | Gran escala; Standard"
+            ],
+            [
+              "4",
+              "2782 Seria",
+              "1,755",
+              "A | Gran escala; marca conocida"
+            ],
+            [
+              "5",
+              "6960 Fukuda Denshi",
+              "1,565",
+              "A | Vigilar también la proporción con negociación"
+            ],
+            [
+              "6",
+              "4966 C. Uyemura & Co.",
+              "1,532",
+              "A | Libre circulación entre las mayores"
+            ],
+            [
+              "7",
+              "4816 Toei Animation",
+              "1,520",
+              "A | Compras indexadas + temática popular"
+            ],
+            [
+              "8",
+              "9436 Okinawa Cellular Telephone",
+              "1,497",
+              "A | Modelo de beneficios estables"
+            ],
+            [
+              "9",
+              "581A GO",
+              "1,459",
+              "A | Entre las mayores del Growth"
+            ],
+            [
+              "10",
+              "2160 GNI Group",
+              "1,373",
+              "A | Entre las mayores del Growth"
+            ]
+          ],
+          "widths": [
+            34,
+            179,
+            105,
+            192
+          ],
+          "compact": true
+        },
+        {
+          "text": "* Estimaciones de QUICK basadas en promedios de agosto; no equivalen a los pesos reales ni a la demanda de compra.\nDos empresas destacan: McDonald’s Holdings Japan ronda 691.700 millones JPY y Ferrotec Holdings, 437.800 millones. Juntas representan cerca del 24% del total estimado de 4,66 billones JPY de las 35. Son el primer foco por importe absoluto."
+        }
+      ]
+    },
+    {
+      "title": "03 | ¿Dónde centrarse?",
+      "subtitle": "",
+      "blocks": [
+        {
+          "h": "Solo por compras indexadas",
+          "text": "Priorizar 2702 McDonald’s Holdings Japan y 6890 Ferrotec Holdings. Sus destacadas capitalizaciones de libre circulación favorecen mayores entradas pasivas absolutas."
+        },
+        {
+          "h": "Por impacto en la cotización",
+          "text": "La clave es el importe previsto de compras dividido por el valor negociado habitual, más que el importe por sí solo. En valores poco líquidos, compras menores pueden tener gran impacto."
+        },
+        {
+          "h": "Fechas del evento",
+          "text": "La incorporación es el 30 de octubre. Las carteras indexadas deben ajustarse al cierre del día hábil anterior, por lo que la oferta y demanda pueden concentrarse especialmente al cierre del 29 de octubre."
+        },
+        {
+          "h": "Conclusión",
+          "text": "Nueva incorporación no significa comprar todo. Combinar: ① capitalización de libre circulación; ② valor negociado diario medio; ③ subidas que ya descuentan el evento; ④ valor empresarial subyacente.\nDespués, estudiar los «días de impacto de compra»: ordenar las 35 según cuántos días de negociación habitual representan las compras TOPIX acerca a una clasificación real de oferta y demanda."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "pt": [
+    {
+      "title": "35 novas integrantes do TOPIX",
+      "subtitle": "Para onde irá o dinheiro indexado? Top 10 por escala de compras",
+      "blocks": [
+        {
+          "h": "",
+          "text": "Anúncio: 7 de outubro de 2026.\nInclusão: 30 de outubro.\nO foco são empresas até então fora do TOPIX: 23 do mercado Standard + 12 do Growth."
+        },
+        {
+          "h": "Base da classificação",
+          "text": "A classificação usa estimativas da capitalização de ações em circulação livre de agosto como indicador aproximado do valor absoluto das compras indexadas. Não é uma classificação de altas esperadas das ações."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "01 | Lista completa das 35 inclusões",
+      "subtitle": "Abre-se agora ao Standard e ao Growth um caminho para o TOPIX.",
+      "dense": true,
+      "blocks": [
+        {
+          "table": [
+            [
+              "STANDARD 23",
+              "STANDARD (continuação) / GROWTH 12"
+            ],
+            [
+              "1723 Nippon Dengi",
+              "7716 Nakanishi"
+            ],
+            [
+              "1965 Techno Ryowa",
+              "7906 Yonex"
+            ],
+            [
+              "2702 McDonald’s Holdings Japan",
+              "8117 Central Automotive Products"
+            ],
+            [
+              "2782 Seria",
+              "8508 J Trust"
+            ],
+            [
+              "2805 S&B Foods",
+              "9436 Okinawa Cellular Telephone"
+            ],
+            [
+              "4107 Ise Chemicals",
+              "GROWTH | 141A Trial Holdings"
+            ],
+            [
+              "4816 Toei Animation",
+              "GROWTH | 186A Astroscale Holdings"
+            ],
+            [
+              "4966 C. Uyemura & Co.",
+              "GROWTH | 215A Timee"
+            ],
+            [
+              "5161 Nishikawa Rubber",
+              "GROWTH | 2160 GNI Group"
+            ],
+            [
+              "6227 AI Mechatec",
+              "GROWTH | 290A Synspective"
+            ],
+            [
+              "6366 Chiyoda",
+              "GROWTH | 4478 freee"
+            ],
+            [
+              "6736 Sun Corporation",
+              "GROWTH | 4588 Oncolys BioPharma"
+            ],
+            [
+              "6777 santec Holdings",
+              "GROWTH | 485A PowerX"
+            ],
+            [
+              "6834 Seikoh Giken",
+              "GROWTH | 581A GO"
+            ],
+            [
+              "6890 Ferrotec Holdings",
+              "GROWTH | 593A Tier IV"
+            ],
+            [
+              "6960 Fukuda Denshi",
+              "GROWTH | 6613 QD Laser"
+            ],
+            [
+              "7287 Nippon Seiki",
+              "GROWTH | 7806 MTG"
+            ],
+            [
+              "7564 Workman",
+              ""
+            ]
+          ],
+          "widths": [
+            255,
+            255
+          ],
+          "compact": true
+        },
+        {
+          "text": "As 35 empresas estão atualmente fora do TOPIX. Os requisitos incluem critérios de liquidez, como giro anual por valor negociado de pelo menos 0,2, e um critério de capitalização em circulação livre."
+        }
+      ]
+    },
+    {
+      "title": "02 | Top 10 por escala de demanda",
+      "subtitle": "Maior capitalização em circulação livre tende a significar maior peso no TOPIX e mais compras indexadas absolutas, mantidas as demais condições.",
+      "dense": true,
+      "blocks": [
+        {
+          "table": [
+            [
+              "#",
+              "Código / Empresa",
+              "Circulação livre* (JPY 100 mi)",
+              "Destaque"
+            ],
+            [
+              "1",
+              "2702 McDonald’s Holdings Japan",
+              "6,917",
+              "S | Demanda absoluta de compra entre as maiores"
+            ],
+            [
+              "2",
+              "6890 Ferrotec Holdings",
+              "4,378",
+              "S | Segunda maior capitalização estimada em circulação livre desta tabela"
+            ],
+            [
+              "3",
+              "7716 Nakanishi",
+              "1,758",
+              "A | Grande escala; Standard"
+            ],
+            [
+              "4",
+              "2782 Seria",
+              "1,755",
+              "A | Grande escala; nome conhecido"
+            ],
+            [
+              "5",
+              "6960 Fukuda Denshi",
+              "1,565",
+              "A | Observar também a proporção com as negociações"
+            ],
+            [
+              "6",
+              "4966 C. Uyemura & Co.",
+              "1,532",
+              "A | Circulação livre entre as maiores"
+            ],
+            [
+              "7",
+              "4816 Toei Animation",
+              "1,520",
+              "A | Compra indexada + tema popular"
+            ],
+            [
+              "8",
+              "9436 Okinawa Cellular Telephone",
+              "1,497",
+              "A | Lucros estáveis"
+            ],
+            [
+              "9",
+              "581A GO",
+              "1,459",
+              "A | Entre as maiores do Growth"
+            ],
+            [
+              "10",
+              "2160 GNI Group",
+              "1,373",
+              "A | Entre as maiores do Growth"
+            ]
+          ],
+          "widths": [
+            34,
+            179,
+            105,
+            192
+          ],
+          "compact": true
+        },
+        {
+          "text": "* Estimativas da QUICK baseadas nas médias de agosto; não equivalem aos pesos reais do índice nem à demanda de compra.\nDuas se destacam: McDonald’s Holdings Japan, cerca de JPY 691,7 bilhões, e Ferrotec Holdings, cerca de JPY 437,8 bilhões. Juntas representam estimados 24% do total de cerca de JPY 4,66 trilhões das 35. São o foco inicial em valores absolutos."
+        }
+      ]
+    },
+    {
+      "title": "03 | Onde concentrar a atenção?",
+      "subtitle": "",
+      "blocks": [
+        {
+          "h": "Apenas pelas compras indexadas",
+          "text": "Priorize 2702 McDonald’s Holdings Japan e 6890 Ferrotec Holdings. Suas capitalizações em circulação livre destacadas favorecem maiores entradas passivas absolutas."
+        },
+        {
+          "h": "Pelo impacto no preço",
+          "text": "O importante é a compra prevista dividida pelo valor normalmente negociado, mais que a compra isolada. Ações pouco líquidas podem sofrer forte impacto mesmo com compras menores."
+        },
+        {
+          "h": "Datas do evento",
+          "text": "A inclusão é em 30 de outubro. Carteiras indexadas precisam se ajustar no fechamento do dia útil anterior; oferta e demanda podem se concentrar especialmente no fechamento de 29 de outubro."
+        },
+        {
+          "h": "Conclusão",
+          "text": "Nova inclusão não significa comprar todas. Combine: ① capitalização em circulação livre; ② valor médio diário negociado; ③ alta já precificada; ④ valor intrínseco da empresa.\nDepois, examine os “dias de impacto de compra”: ordenar as 35 pelo número de dias de negociação normal equivalente à compra TOPIX aproxima a classificação da verdadeira oferta e demanda."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "TOPIX新纳入35只股票",
+      "subtitle": "指数资金流向何处？买入需求“规模”焦点TOP10",
+      "blocks": [
+        {
+          "h": "",
+          "text": "2026年10月7日公布。\n10月30日新纳入。\n本次主角是此前未在TOPIX中的Standard市场23家公司 + Growth市场12家公司。"
+        },
+        {
+          "h": "排名依据",
+          "text": "排名采用8月时点的自由流通市值估算，作为衡量指数跟踪买盘绝对金额的替代指标，并非预测股价涨幅的排名。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "01 | 新纳入35只股票完整名单",
+      "subtitle": "本次起Standard及Growth市场也有了进入TOPIX的路径。",
+      "dense": true,
+      "blocks": [
+        {
+          "table": [
+            [
+              "STANDARD 23",
+              "STANDARD（续）/ GROWTH 12"
+            ],
+            [
+              "1723 日本电技",
+              "7716 中西"
+            ],
+            [
+              "1965 Techno Ryowa",
+              "7906 尤尼克斯"
+            ],
+            [
+              "2702 日本麦当劳控股",
+              "8117 中央自动车工业"
+            ],
+            [
+              "2782 Seria",
+              "8508 J Trust"
+            ],
+            [
+              "2805 爱思必食品",
+              "9436 冲绳蜂窝电话"
+            ],
+            [
+              "4107 伊势化学工业",
+              "GROWTH | 141A Trial控股"
+            ],
+            [
+              "4816 东映动画",
+              "GROWTH | 186A Astroscale控股"
+            ],
+            [
+              "4966 上村工业",
+              "GROWTH | 215A Timee"
+            ],
+            [
+              "5161 西川橡胶工业",
+              "GROWTH | 2160 GNI集团"
+            ],
+            [
+              "6227 AI Mechatec",
+              "GROWTH | 290A Synspective"
+            ],
+            [
+              "6366 千代田化工建设",
+              "GROWTH | 4478 freee"
+            ],
+            [
+              "6736 Sun电子",
+              "GROWTH | 4588 Oncolys BioPharma"
+            ],
+            [
+              "6777 santec Holdings",
+              "GROWTH | 485A PowerX"
+            ],
+            [
+              "6834 精工技研",
+              "GROWTH | 581A GO"
+            ],
+            [
+              "6890 Ferrotec控股",
+              "GROWTH | 593A Tier IV"
+            ],
+            [
+              "6960 福田电子",
+              "GROWTH | 6613 QD Laser"
+            ],
+            [
+              "7287 日本精机",
+              "GROWTH | 7806 MTG"
+            ],
+            [
+              "7564 Workman",
+              ""
+            ]
+          ],
+          "widths": [
+            255,
+            255
+          ],
+          "compact": true
+        },
+        {
+          "text": "35家公司目前均未纳入TOPIX。新纳入条件包括年成交金额周转率0.2以上等流动性标准，以及自由流通市值标准。"
+        }
+      ]
+    },
+    {
+      "title": "02 | 买入需求“规模”焦点TOP10",
+      "subtitle": "其他条件相同时，自由流通市值越大，TOPIX权重及指数跟踪资金的绝对买入金额通常也越大。",
+      "dense": true,
+      "blocks": [
+        {
+          "table": [
+            [
+              "#",
+              "代码 / 公司",
+              "自由流通市值*（亿日元）",
+              "关注"
+            ],
+            [
+              "1",
+              "2702 日本麦当劳控股",
+              "6,917",
+              "S | 最大级别的绝对买入需求"
+            ],
+            [
+              "2",
+              "6890 Ferrotec控股",
+              "4,378",
+              "S | 本表估算自由流通市值第二大"
+            ],
+            [
+              "3",
+              "7716 中西",
+              "1,758",
+              "A | 规模大、Standard市场"
+            ],
+            [
+              "4",
+              "2782 Seria",
+              "1,755",
+              "A | 规模大、知名度高"
+            ],
+            [
+              "5",
+              "6960 福田电子",
+              "1,565",
+              "A | 也关注与成交的比率"
+            ],
+            [
+              "6",
+              "4966 上村工业",
+              "1,532",
+              "A | 自由流通规模居前"
+            ],
+            [
+              "7",
+              "4816 东映动画",
+              "1,520",
+              "A | 指数买盘＋热门题材"
+            ],
+            [
+              "8",
+              "9436 冲绳蜂窝电话",
+              "1,497",
+              "A | 收益稳定型"
+            ],
+            [
+              "9",
+              "581A GO",
+              "1,459",
+              "A | Growth市场前列"
+            ],
+            [
+              "10",
+              "2160 GNI集团",
+              "1,373",
+              "A | Growth市场前列"
+            ]
+          ],
+          "widths": [
+            34,
+            179,
+            105,
+            192
+          ],
+          "compact": true
+        },
+        {
+          "text": "* QUICK基于8月平均值估算，与实际指数权重、买入需求金额不一致。\n突出的两家公司：日本麦当劳控股约6,917亿日元，Ferrotec控股约4,378亿日元。估算这两家占35家公司合计约4.66万亿日元的约24%。就绝对金额而言，首先以这两家为中心。"
+        }
+      ]
+    },
+    {
+      "title": "03 | 那么应关注哪里？",
+      "subtitle": "",
+      "blocks": [
+        {
+          "h": "仅看指数买盘",
+          "text": "优先关注2702日本麦当劳控股、6890 Ferrotec控股。自由流通市值突出，被动资金绝对金额往往更大。"
+        },
+        {
+          "h": "若看股价影响",
+          "text": "关键是预计买入金额 ÷ 平时成交金额，而非买入额本身。流动性低的股票，即使买入额较小，也可能对股价造成较大冲击。"
+        },
+        {
+          "h": "事件日期",
+          "text": "10月30日纳入TOPIX。指数跟踪运作需按前一营业日收盘价调整，因此10月29日收盘时供需尤其容易集中。"
+        },
+        {
+          "h": "结论",
+          "text": "“新纳入”不等于“全部买入”。结合四项：①自由流通市值；②日均成交金额；③股价已反映的上涨；④本来的企业价值。\n下一步应看“买盘影响天数”。按TOPIX买盘相当于平时多少天的成交金额对35只股票重新排序，才能更接近真正的供需排名。"
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "TOPIX新納入35檔股票",
+      "subtitle": "指數資金流向何處？買入需求「規模」焦點TOP10",
+      "blocks": [
+        {
+          "h": "",
+          "text": "2026年10月7日公布。\n10月30日新納入。\n本次主角是此前未在TOPIX中的Standard市場23家公司 + Growth市場12家公司。"
+        },
+        {
+          "h": "排名依據",
+          "text": "排名採用8月時點的自由流通市值估算，作為衡量指數追蹤買盤絕對金額的替代指標，並非預測股價漲幅的排名。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "01 | 新納入35檔股票完整名單",
+      "subtitle": "本次起Standard及Growth市場也有了進入TOPIX的途徑。",
+      "dense": true,
+      "blocks": [
+        {
+          "table": [
+            [
+              "STANDARD 23",
+              "STANDARD（續）/ GROWTH 12"
+            ],
+            [
+              "1723 日本電技",
+              "7716 中西"
+            ],
+            [
+              "1965 Techno Ryowa",
+              "7906 尤尼克斯"
+            ],
+            [
+              "2702 日本麥當勞控股",
+              "8117 中央自動車工業"
+            ],
+            [
+              "2782 Seria",
+              "8508 J Trust"
+            ],
+            [
+              "2805 愛思必食品",
+              "9436 沖繩蜂窩電話"
+            ],
+            [
+              "4107 伊勢化學工業",
+              "GROWTH | 141A Trial控股"
+            ],
+            [
+              "4816 東映動畫",
+              "GROWTH | 186A Astroscale控股"
+            ],
+            [
+              "4966 上村工業",
+              "GROWTH | 215A Timee"
+            ],
+            [
+              "5161 西川橡膠工業",
+              "GROWTH | 2160 GNI集團"
+            ],
+            [
+              "6227 AI Mechatec",
+              "GROWTH | 290A Synspective"
+            ],
+            [
+              "6366 千代田化工建設",
+              "GROWTH | 4478 freee"
+            ],
+            [
+              "6736 Sun電子",
+              "GROWTH | 4588 Oncolys BioPharma"
+            ],
+            [
+              "6777 santec Holdings",
+              "GROWTH | 485A PowerX"
+            ],
+            [
+              "6834 精工技研",
+              "GROWTH | 581A GO"
+            ],
+            [
+              "6890 Ferrotec控股",
+              "GROWTH | 593A Tier IV"
+            ],
+            [
+              "6960 福田電子",
+              "GROWTH | 6613 QD Laser"
+            ],
+            [
+              "7287 日本精機",
+              "GROWTH | 7806 MTG"
+            ],
+            [
+              "7564 Workman",
+              ""
+            ]
+          ],
+          "widths": [
+            255,
+            255
+          ],
+          "compact": true
+        },
+        {
+          "text": "35家公司目前均未納入TOPIX。新納入條件包括年成交金額週轉率0.2以上等流動性標準，以及自由流通市值標準。"
+        }
+      ]
+    },
+    {
+      "title": "02 | 買入需求「規模」焦點TOP10",
+      "subtitle": "其他條件相同時，自由流通市值越大，TOPIX權重及指數追蹤資金的絕對買入金額通常也越大。",
+      "dense": true,
+      "blocks": [
+        {
+          "table": [
+            [
+              "#",
+              "代碼 / 公司",
+              "自由流通市值*（億日圓）",
+              "關注"
+            ],
+            [
+              "1",
+              "2702 日本麥當勞控股",
+              "6,917",
+              "S | 最大級別的絕對買入需求"
+            ],
+            [
+              "2",
+              "6890 Ferrotec控股",
+              "4,378",
+              "S | 本表估算自由流通市值第二大"
+            ],
+            [
+              "3",
+              "7716 中西",
+              "1,758",
+              "A | 規模大、Standard市場"
+            ],
+            [
+              "4",
+              "2782 Seria",
+              "1,755",
+              "A | 規模大、知名度高"
+            ],
+            [
+              "5",
+              "6960 福田電子",
+              "1,565",
+              "A | 也關注與成交的比率"
+            ],
+            [
+              "6",
+              "4966 上村工業",
+              "1,532",
+              "A | 自由流通規模居前"
+            ],
+            [
+              "7",
+              "4816 東映動畫",
+              "1,520",
+              "A | 指數買盤＋熱門題材"
+            ],
+            [
+              "8",
+              "9436 沖繩蜂窩電話",
+              "1,497",
+              "A | 收益穩定型"
+            ],
+            [
+              "9",
+              "581A GO",
+              "1,459",
+              "A | Growth市場前列"
+            ],
+            [
+              "10",
+              "2160 GNI集團",
+              "1,373",
+              "A | Growth市場前列"
+            ]
+          ],
+          "widths": [
+            34,
+            179,
+            105,
+            192
+          ],
+          "compact": true
+        },
+        {
+          "text": "* QUICK基於8月平均值估算，與實際指數權重、買入需求金額不一致。\n突出的兩家公司：日本麥當勞控股約6,917億日圓，Ferrotec控股約4,378億日圓。估算這兩家占35家公司合計約4.66兆日圓的約24%。就絕對金額而言，首先以這兩家為中心。"
+        }
+      ]
+    },
+    {
+      "title": "03 | 那麼應關注哪裡？",
+      "subtitle": "",
+      "blocks": [
+        {
+          "h": "僅看指數買盤",
+          "text": "優先關注2702日本麥當勞控股、6890 Ferrotec控股。自由流通市值突出，被動資金絕對金額往往更大。"
+        },
+        {
+          "h": "若看股價影響",
+          "text": "關鍵是預計買入金額 ÷ 平時成交金額，而非買入額本身。流動性低的股票，即使買入額較小，也可能對股價造成較大衝擊。"
+        },
+        {
+          "h": "事件日期",
+          "text": "10月30日納入TOPIX。指數追蹤運作需按前一營業日收盤價調整，因此10月29日收盤時供需尤其容易集中。"
+        },
+        {
+          "h": "結論",
+          "text": "「新納入」不等於「全部買入」。結合四項：①自由流通市值；②日均成交金額；③股價已反映的上漲；④本來的企業價值。\n下一步應看「買盤影響天數」。按TOPIX買盤相當於平時多少天的成交金額對35檔股票重新排序，才能更接近真正的供需排名。"
+        }
+      ],
+      "dense": true
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "en": [
+    {
+      "title": "Outlook for Switch 2 semiconductor stocks",
+      "subtitle": "SWITCH 2 | Semiconductor suppliers | As of September 23, 2026",
+      "blocks": [
+        {
+          "h": "",
+          "text": "Switch 2 sales alone make it difficult to predict major chipmakers’ share prices. Main drivers are AI demand for NVIDIA and memory market conditions for Micron and SK hynix. They have connections with Nintendo, but Switch 2’s profit contribution is undisclosed."
+        },
+        {
+          "h": "Components and scope of confirmation",
+          "text": "NVIDIA / NVDA: computing chip; officially confirmed by Nintendo and NVIDIA.\nMicron / MU: LPDDR5 memory; confirmed in units examined by teardown.\nSK hynix / 000660: UFS storage; confirmed in teardown units.\nRenesas / 6723: power-management IC; confirmed in teardown units.\nROHM / 6963: power-conversion IC; confirmed in teardown units.\nMediaTek / 2454: wireless communications chip; confirmed in teardown units."
+        },
+        {
+          "h": "What teardown does and does not reveal",
+          "text": "It identifies parts in the units examined. Confirmation in some units does not mean adoption in every unit or exclusive supply. It cannot establish procurement contract values.\nOrder for reviewing share prices: 1. Global demand and profit forecasts; 2. Each company’s main business; 3. Expectations priced into the shares; 4. Switch 2 sales and component costs."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "Upside and downside conditions by stock",
+      "subtitle": "Outlook horizon: six months to one year | As of September 23, 2026",
+      "blocks": [
+        {
+          "h": "NVIDIA / NVDA",
+          "text": "Continued AI revenue growth and supply of next-generation products are tailwinds. Slower customer capital spending or results below market expectations are headwinds. Switch 2 supply is part of gaming; the AI business has greater influence."
+        },
+        {
+          "h": "Micron / MU",
+          "text": "Focus on selling prices, volumes and margins for LPDDR5, HBM and other products. A memory-price decline caused by supply growth is a headwind. Overall memory supply and demand matter more than Switch 2 demand."
+        },
+        {
+          "h": "SK hynix / 000660",
+          "text": "UFS adoption is confirmed by teardown. HBM and DRAM orders and prices are important for the share price. Continued AI investment helps, but watch for fiercer competition and worsening supply-demand conditions from increased production."
+        },
+        {
+          "h": "Renesas / 6723 · ROHM / 6963",
+          "text": "Their connection is power IC adoption. Share prices depend on automotive and industrial demand, inventories and profitability improvement. Strong console sales alone do not establish a large change in company-wide profit."
+        },
+        {
+          "h": "MediaTek / 2454",
+          "text": "The connection is wireless chip adoption. Focus on its core smartphone SoCs and growth in communications and AI businesses. Its console supply share is unknown."
+        },
+        {
+          "h": "For Nintendo, also examine component costs",
+          "text": "If a stronger memory market raises component prices, Nintendo faces higher costs. Review unit sales, software sales, selling prices and margins together."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "es": [
+    {
+      "title": "Perspectivas de las acciones de semiconductores de Switch 2",
+      "subtitle": "SWITCH 2 | Proveedores de semiconductores | 23 de septiembre de 2026",
+      "blocks": [
+        {
+          "h": "",
+          "text": "Las ventas de Switch 2 por sí solas no permiten predecir fácilmente las cotizaciones de los grandes fabricantes. Los principales factores son la demanda de IA para NVIDIA y el mercado de memorias para Micron y SK hynix. Tienen vínculos con Nintendo, pero no se conoce la contribución de Switch 2 a los beneficios."
+        },
+        {
+          "h": "Componentes y alcance de la confirmación",
+          "text": "NVIDIA / NVDA: chip de cálculo; confirmado oficialmente por Nintendo y NVIDIA.\nMicron / MU: memoria LPDDR5; confirmada en unidades desmontadas.\nSK hynix / 000660: almacenamiento UFS; confirmado en unidades desmontadas.\nRenesas / 6723: IC de gestión de energía; confirmado en unidades desmontadas.\nROHM / 6963: IC de conversión de energía; confirmado en unidades desmontadas.\nMediaTek / 2454: chip de comunicación inalámbrica; confirmado en unidades desmontadas."
+        },
+        {
+          "h": "Qué revela un desmontaje y qué no",
+          "text": "Identifica piezas en las unidades examinadas. Verlas en algunas unidades no significa adopción en todas ni suministro exclusivo. Tampoco permite conocer el valor de los contratos de compra.\nOrden para analizar cotizaciones: 1. Demanda mundial y previsiones de beneficios; 2. Negocio principal; 3. Expectativas ya descontadas; 4. Ventas de Switch 2 y coste de componentes."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "Condiciones alcistas y bajistas por acción",
+      "subtitle": "Horizonte: de seis meses a un año | 23 de septiembre de 2026",
+      "blocks": [
+        {
+          "h": "NVIDIA / NVDA",
+          "text": "El crecimiento de ingresos de IA y el suministro de próximos productos favorecen. La desaceleración de inversiones de clientes o resultados inferiores a lo esperado perjudican. Switch 2 forma parte de videojuegos; el negocio de IA influye más."
+        },
+        {
+          "h": "Micron / MU",
+          "text": "Importan precios de venta, volúmenes y márgenes de LPDDR5, HBM y otros productos. La caída de precios por mayor oferta perjudica. La oferta y demanda global de memorias importan más que Switch 2."
+        },
+        {
+          "h": "SK hynix / 000660",
+          "text": "El desmontaje confirma UFS. Para la cotización importan pedidos y precios de HBM y DRAM. La continuidad de inversión en IA favorece, pero hay que vigilar competencia y deterioro del equilibrio de mercado por más producción."
+        },
+        {
+          "h": "Renesas / 6723 · ROHM / 6963",
+          "text": "Su vínculo es la adopción de IC de energía. Las cotizaciones dependen de demanda automotriz e industrial, inventarios y mejora de rentabilidad. Las buenas ventas de consolas no bastan para inferir un gran cambio del beneficio total."
+        },
+        {
+          "h": "MediaTek / 2454",
+          "text": "Su vínculo es el chip inalámbrico. Importan los SoC de teléfonos, su negocio principal, y el crecimiento en comunicaciones e IA. Se desconoce la proporción de suministro para consolas."
+        },
+        {
+          "h": "Para Nintendo, mirar también los costes",
+          "text": "Si mejora el mercado de memorias y suben los componentes, Nintendo afronta más costes. Revisar conjuntamente unidades vendidas, software, precios de venta y márgenes."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "pt": [
+    {
+      "title": "Perspectivas das ações de semicondutores do Switch 2",
+      "subtitle": "SWITCH 2 | Fornecedores de semicondutores | 23 de setembro de 2026",
+      "blocks": [
+        {
+          "h": "",
+          "text": "Só as vendas do Switch 2 dificultam prever as cotações das grandes fabricantes. Os principais fatores são a demanda de IA para NVIDIA e o mercado de memórias para Micron e SK hynix. Há ligação com a Nintendo, mas a contribuição do Switch 2 ao lucro não foi divulgada."
+        },
+        {
+          "h": "Componentes e alcance da confirmação",
+          "text": "NVIDIA / NVDA: chip de computação; confirmado oficialmente por Nintendo e NVIDIA.\nMicron / MU: memória LPDDR5; confirmada em unidades desmontadas.\nSK hynix / 000660: armazenamento UFS; confirmado em unidades desmontadas.\nRenesas / 6723: IC de gerenciamento de energia; confirmado em unidades desmontadas.\nROHM / 6963: IC de conversão de energia; confirmado em unidades desmontadas.\nMediaTek / 2454: chip de comunicação sem fio; confirmado em unidades desmontadas."
+        },
+        {
+          "h": "O que a desmontagem revela e o que não revela",
+          "text": "Identifica peças nas unidades examinadas. Confirmar algumas unidades não significa adoção em todas nem fornecimento exclusivo. Não revela valores de contratos de compra.\nOrdem para analisar cotações: 1. Demanda global e previsões de lucro; 2. Negócio principal de cada empresa; 3. Expectativas embutidas na cotação; 4. Vendas do Switch 2 e custos de componentes."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "Condições de alta e baixa por ação",
+      "subtitle": "Horizonte: seis meses a um ano | 23 de setembro de 2026",
+      "blocks": [
+        {
+          "h": "NVIDIA / NVDA",
+          "text": "Crescimento da receita de IA e oferta dos próximos produtos favorecem. Menor investimento dos clientes ou resultados abaixo das expectativas prejudicam. Switch 2 integra o segmento de jogos; o negócio de IA tem maior influência."
+        },
+        {
+          "h": "Micron / MU",
+          "text": "O foco está em preços de venda, volumes e margens de LPDDR5, HBM e outros produtos. Queda de preços por maior oferta prejudica. A oferta e demanda geral de memórias importam mais que o Switch 2."
+        },
+        {
+          "h": "SK hynix / 000660",
+          "text": "A desmontagem confirma UFS. Pedidos e preços de HBM e DRAM importam para a cotação. Investimento contínuo em IA favorece, mas é preciso observar concorrência e piora da oferta e demanda por maior produção."
+        },
+        {
+          "h": "Renesas / 6723 · ROHM / 6963",
+          "text": "A ligação é a adoção de ICs de energia. As cotações dependem da demanda automotiva e industrial, estoques e melhora da rentabilidade. Boas vendas de consoles não bastam para indicar grande mudança no lucro total."
+        },
+        {
+          "h": "MediaTek / 2454",
+          "text": "A ligação é o chip sem fio. O foco é nos SoCs de smartphones, negócio principal, e no crescimento em comunicações e IA. A participação do fornecimento para consoles é desconhecida."
+        },
+        {
+          "h": "Para a Nintendo, observar também os custos",
+          "text": "Se a melhora do mercado de memórias elevar preços dos componentes, a Nintendo enfrenta mais custos. Analisar juntos unidades vendidas, software, preços de venda e margens."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "Switch 2相关半导体股票展望",
+      "subtitle": "SWITCH 2 | 半导体供应商 | 截至2026年9月23日",
+      "blocks": [
+        {
+          "h": "",
+          "text": "仅凭Switch 2销售情况，很难预测半导体大厂股价。主要因素是NVIDIA的AI需求，以及Micron、SK hynix的内存行情。它们与任天堂有关联，但Switch 2对利润的贡献比例尚未明确。"
+        },
+        {
+          "h": "部件作用与采用确认范围",
+          "text": "NVIDIA / NVDA：运算芯片；任天堂与NVIDIA官方确认。\nMicron / MU：LPDDR5内存；在拆解调查的样机中确认。\nSK hynix / 000660：UFS存储；在拆解调查的样机中确认。\n瑞萨 / 6723：电源管理IC；在拆解调查的样机中确认。\n罗姆 / 6963：电源转换IC；在拆解调查的样机中确认。\nMediaTek / 2454：无线通信芯片；在拆解调查的样机中确认。"
+        },
+        {
+          "h": "拆解能知道与不能知道的事",
+          "text": "拆解只能确认被调查样机中的部件。部分样机的确认，不等于全机型采用或独家供应，也无法确认采购合同金额。\n观察股价的顺序：1. 全球需求与利润预测；2. 各公司的主力业务；3. 股价已计入的预期；4. Switch 2销售和部件成本。"
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "各股上涨与下跌的条件",
+      "subtitle": "展望期限：半年至一年 | 截至2026年9月23日",
+      "blocks": [
+        {
+          "h": "NVIDIA / NVDA",
+          "text": "AI收入增长和下一代产品供应若能持续，是利好。客户资本开支放缓，或财报低于市场预期，是利空。Switch 2属于游戏业务的一部分，AI业务影响更大。"
+        },
+        {
+          "h": "Micron / MU",
+          "text": "焦点在LPDDR5、HBM等的售价、销量与利润率。若供应增加导致内存价格回落，则是利空。比起Switch 2需求，整个内存市场的供需更重要。"
+        },
+        {
+          "h": "SK hynix / 000660",
+          "text": "拆解确认采用了其UFS。观察股价时，HBM、DRAM订单与价格更重要。AI投资持续是利好，但需注意竞争加剧或扩产导致供需恶化。"
+        },
+        {
+          "h": "瑞萨 / 6723 · 罗姆 / 6963",
+          "text": "关联是电源IC的采用。股价取决于车载、工业需求，库存及盈利能力改善。不能仅凭游戏机畅销，就判断全公司利润将大幅变化。"
+        },
+        {
+          "h": "MediaTek / 2454",
+          "text": "关联是无线通信芯片的采用。焦点在主力智能手机SoC及通信、AI业务的增长。游戏机供货占比不明。"
+        },
+        {
+          "h": "对任天堂的影响也要看部件成本",
+          "text": "内存行情改善若推高部件价格，会增加任天堂的成本负担。应结合销量、软件销售、售价和利润率一起确认。"
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "Switch 2相關半導體股票展望",
+      "subtitle": "SWITCH 2 | 半導體供應商 | 截至2026年9月23日",
+      "blocks": [
+        {
+          "h": "",
+          "text": "僅憑Switch 2銷售情況，很難預測半導體大廠股價。主要因素是NVIDIA的AI需求，以及Micron、SK hynix的記憶體行情。它們與任天堂有關聯，但Switch 2對利潤的貢獻比例尚未明確。"
+        },
+        {
+          "h": "零組件作用與採用確認範圍",
+          "text": "NVIDIA / NVDA：運算晶片；任天堂與NVIDIA官方確認。\nMicron / MU：LPDDR5記憶體；在拆解調查的樣機中確認。\nSK hynix / 000660：UFS儲存；在拆解調查的樣機中確認。\n瑞薩 / 6723：電源管理IC；在拆解調查的樣機中確認。\n羅姆 / 6963：電源轉換IC；在拆解調查的樣機中確認。\nMediaTek / 2454：無線通訊晶片；在拆解調查的樣機中確認。"
+        },
+        {
+          "h": "拆解能知道與不能知道的事",
+          "text": "拆解只能確認被調查樣機中的零組件。部分樣機的確認，不等於全機型採用或獨家供應，也無法確認採購合約金額。\n觀察股價的順序：1. 全球需求與利潤預測；2. 各公司的主力業務；3. 股價已計入的預期；4. Switch 2銷售和零組件成本。"
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "各股上漲與下跌的條件",
+      "subtitle": "展望期限：半年至一年 | 截至2026年9月23日",
+      "blocks": [
+        {
+          "h": "NVIDIA / NVDA",
+          "text": "AI收入成長和下一代產品供應若能持續，是利多。客戶資本支出放緩，或財報低於市場預期，是利空。Switch 2屬於遊戲業務的一部分，AI業務影響更大。"
+        },
+        {
+          "h": "Micron / MU",
+          "text": "焦點在LPDDR5、HBM等的售價、銷量與利潤率。若供應增加導致記憶體價格回落，則是利空。比起Switch 2需求，整個記憶體市場的供需更重要。"
+        },
+        {
+          "h": "SK hynix / 000660",
+          "text": "拆解確認採用了其UFS。觀察股價時，HBM、DRAM訂單與價格更重要。AI投資持續是利多，但需注意競爭加劇或擴產導致供需惡化。"
+        },
+        {
+          "h": "瑞薩 / 6723 · 羅姆 / 6963",
+          "text": "關聯是電源IC的採用。股價取決於車載、工業需求，庫存及獲利能力改善。不能僅憑遊戲機暢銷，就判斷全公司利潤將大幅變化。"
+        },
+        {
+          "h": "MediaTek / 2454",
+          "text": "關聯是無線通訊晶片的採用。焦點在主力智慧型手機SoC及通訊、AI業務的成長。遊戲機供貨占比不明。"
+        },
+        {
+          "h": "對任天堂的影響也要看零組件成本",
+          "text": "記憶體行情改善若推高零組件價格，會增加任天堂的成本負擔。應結合銷量、軟體銷售、售價和利潤率一起確認。"
+        }
+      ],
+      "dense": true
+    }
+  ]
+}

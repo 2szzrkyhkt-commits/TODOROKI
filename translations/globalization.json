@@ -1,0 +1,552 @@
+{
+  "en": [
+    {
+      "title": "What is globalization?",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "GLOBALIZATION | 1/4"
+        },
+        {
+          "text": "Goods, money, people, information and technology move across borders, integrating the world's economies."
+        },
+        {
+          "h": "Global division of labor",
+          "text": "Research in Japan, parts in Taiwan, production in Vietnam and sales in the US. Companies can choose optimal locations across the whole world, rather than within one country."
+        },
+        {
+          "h": "The market itself expands",
+          "text": "Customers can number billions worldwide, rather than only 100 million at home. Strong companies can grow beyond domestic-market limits."
+        },
+        {
+          "h": "The essence",
+          "text": "Think of globalization as a system combining the world's most efficient locations, people and capital."
+        }
+      ]
+    },
+    {
+      "title": "Why do companies go global?",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "WHY GLOBALIZE? | 2/4"
+        },
+        {
+          "text": "The biggest benefit is not only lower costs: it is the ability to expand scale rapidly."
+        },
+        {
+          "h": "1 Economies of scale",
+          "text": "More production spreads R&D, equipment and logistics costs over more products."
+        },
+        {
+          "h": "2 Combine strengths",
+          "text": "Combining countries' technology, talent, resources, manufacturing capability and sales networks can improve competitiveness beyond what one country alone can achieve."
+        },
+        {
+          "h": "3 Capture growing markets",
+          "text": "Even firms in countries with shrinking populations can retain growth potential through overseas demand. Companies that win global share gain access to enormous markets."
+        }
+      ]
+    },
+    {
+      "title": "Globalization has weaknesses",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "THE OTHER SIDE | 3/4"
+        },
+        {
+          "text": "Pursuing efficiency too far can transmit problems from elsewhere in the world to domestic companies."
+        },
+        {
+          "h": "Supply-chain concentration",
+          "text": "Depending on one country or company for crucial parts can halt all production after disasters, pandemics, war or export restrictions."
+        },
+        {
+          "h": "Geopolitical and tariff risks",
+          "text": "International conflict directly affects business. Low overseas production costs alone no longer suffice for decisions."
+        },
+        {
+          "h": "Currency risk",
+          "text": "More overseas sales increase exposure to exchange-rate fluctuations. Yen appreciation or depreciation can greatly change some companies' profits."
+        },
+        {
+          "h": "Efficiency versus safety",
+          "text": "The cheapest supply chain is not necessarily the strongest."
+        }
+      ]
+    },
+    {
+      "title": "Safety will also create value",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "NEXT GLOBALIZATION | 4/4"
+        },
+        {
+          "text": "Globalization is not ending. It is shifting from efficiency above all toward globalization that includes economic security."
+        },
+        {
+          "h": "Previously",
+          "text": "“Produce in the cheapest country” → prioritize cost and efficiency."
+        },
+        {
+          "h": "Going forward",
+          "text": "“Produce where operations will not stop, even at somewhat higher cost” → friendly countries, dispersed production sites, reshoring and securing crucial technology."
+        },
+        {
+          "h": "What investors should examine",
+          "text": "Look beyond overseas sales to supply chains, manufacturing locations, crucial materials, currency sensitivity and geopolitical risk."
+        },
+        {
+          "h": "Conclusion",
+          "text": "Companies that compete globally are strong. Companies that avoid excessive global dependence are stronger still. Future competitiveness depends on efficiency × safety."
+        }
+      ]
+    }
+  ],
+  "es": [
+    {
+      "title": "¿Qué es la globalización?",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "GLOBALIZACIÓN | 1/4"
+        },
+        {
+          "text": "Bienes, dinero, personas, información y tecnología cruzan fronteras e integran las economías del mundo."
+        },
+        {
+          "h": "División mundial del trabajo",
+          "text": "Investigación en Japón, piezas en Taiwán, producción en Vietnam y ventas en EE. UU. Las empresas eligen lugares óptimos en todo el mundo, más allá de un solo país."
+        },
+        {
+          "h": "El mercado también se amplía",
+          "text": "Los clientes pueden ser miles de millones en el mundo, no solo 100 millones nacionales. Las empresas fuertes crecen más allá del límite del mercado interno."
+        },
+        {
+          "h": "La esencia",
+          "text": "La globalización combina los lugares, las personas y el capital más eficientes del mundo."
+        }
+      ]
+    },
+    {
+      "title": "¿Por qué salir al mundo?",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "¿POR QUÉ GLOBALIZARSE? | 2/4"
+        },
+        {
+          "text": "La mayor ventaja no es solo ahorrar costes: es ampliar rápidamente la escala."
+        },
+        {
+          "h": "1 Economías de escala",
+          "text": "Producir más permite repartir I+D, equipos y logística entre más productos."
+        },
+        {
+          "h": "2 Combinar fortalezas",
+          "text": "Combinar tecnología, talento, recursos, fabricación y redes comerciales de distintos países mejora la competitividad frente a operar en uno solo."
+        },
+        {
+          "h": "3 Captar mercados en crecimiento",
+          "text": "Incluso en países con población decreciente, la demanda exterior conserva oportunidades de crecimiento. Ganar cuota mundial abre un mercado enorme."
+        }
+      ]
+    },
+    {
+      "title": "La globalización tiene debilidades",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "LA OTRA CARA | 3/4"
+        },
+        {
+          "text": "Excederse buscando eficiencia puede transmitir a las empresas nacionales problemas surgidos en cualquier parte del mundo."
+        },
+        {
+          "h": "Concentración del suministro",
+          "text": "Depender de un solo país o proveedor para piezas clave puede parar toda la producción por desastres, pandemias, guerras o restricciones de exportación."
+        },
+        {
+          "h": "Geopolítica y aranceles",
+          "text": "Los conflictos entre países afectan directamente al negocio. Ya no basta decidir producir fuera porque sea barato."
+        },
+        {
+          "h": "Riesgo cambiario",
+          "text": "Más ventas exteriores implican más exposición al cambio. Un yen fuerte o débil puede variar mucho los beneficios de algunas empresas."
+        },
+        {
+          "h": "Eficiencia y seguridad: una disyuntiva",
+          "text": "La cadena más barata no es necesariamente la más sólida."
+        }
+      ]
+    },
+    {
+      "title": "La seguridad también creará valor",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "PRÓXIMA GLOBALIZACIÓN | 4/4"
+        },
+        {
+          "text": "La globalización no termina: pasa de priorizar la eficiencia a incorporar la seguridad económica."
+        },
+        {
+          "h": "Antes",
+          "text": "“Producir en el país más barato” → primar coste y eficiencia."
+        },
+        {
+          "h": "En adelante",
+          "text": "“Producir donde no se pare, aunque cueste algo más” → países amigos, dispersión de centros, retorno de producción y protección de tecnologías clave."
+        },
+        {
+          "h": "Qué debe examinar el inversor",
+          "text": "Además de ventas exteriores: cadena de suministro, centros productivos, materiales clave, sensibilidad cambiaria y riesgo geopolítico."
+        },
+        {
+          "h": "Conclusión",
+          "text": "Las empresas que compiten globalmente son fuertes; las que evitan depender demasiado del mundo son aún más fuertes. La próxima competitividad será eficiencia × seguridad."
+        }
+      ]
+    }
+  ],
+  "pt": [
+    {
+      "title": "O que é globalização?",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "GLOBALIZAÇÃO | 1/4"
+        },
+        {
+          "text": "Bens, dinheiro, pessoas, informações e tecnologia cruzam fronteiras, integrando as economias do mundo."
+        },
+        {
+          "h": "Divisão mundial do trabalho",
+          "text": "Pesquisa no Japão, peças em Taiwan, produção no Vietnã e vendas nos EUA. As empresas escolhem os melhores lugares no mundo inteiro, além de um só país."
+        },
+        {
+          "h": "O próprio mercado cresce",
+          "text": "Os clientes podem ser bilhões no mundo, não apenas 100 milhões no mercado interno. Empresas fortes crescem além dos limites domésticos."
+        },
+        {
+          "h": "A essência",
+          "text": "Globalização é um sistema que combina os lugares, as pessoas e o capital mais eficientes do mundo."
+        }
+      ]
+    },
+    {
+      "title": "Por que as empresas vão para o mundo?",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "POR QUE GLOBALIZAR? | 2/4"
+        },
+        {
+          "text": "A maior vantagem não é só cortar custos: é ampliar rapidamente a escala."
+        },
+        {
+          "h": "1 Economias de escala",
+          "text": "Mais produção distribui gastos de P&D, equipamentos e logística por mais produtos."
+        },
+        {
+          "h": "2 Combinar competências",
+          "text": "Combinar tecnologia, talentos, recursos, fabricação e redes de vendas dos países aumenta a competitividade em relação a operar em um só."
+        },
+        {
+          "h": "3 Capturar mercados em expansão",
+          "text": "Mesmo empresas em países com população em queda podem crescer obtendo demanda externa. Conquistar participação global abre um mercado enorme."
+        }
+      ]
+    },
+    {
+      "title": "A globalização tem fragilidades",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "O OUTRO LADO | 3/4"
+        },
+        {
+          "text": "Buscar eficiência em excesso transmite às empresas nacionais problemas surgidos em qualquer parte do mundo."
+        },
+        {
+          "h": "Concentração do fornecimento",
+          "text": "Depender de um só país ou fornecedor para peças críticas pode interromper toda a produção por desastres, pandemias, guerra ou restrições de exportação."
+        },
+        {
+          "h": "Geopolítica e tarifas",
+          "text": "Conflitos entre países afetam diretamente os negócios. Já não basta produzir fora porque é barato."
+        },
+        {
+          "h": "Risco cambial",
+          "text": "Mais vendas externas ampliam a exposição ao câmbio. A valorização ou desvalorização do iene altera muito os lucros de algumas empresas."
+        },
+        {
+          "h": "Eficiência e segurança têm contrapartidas",
+          "text": "A cadeia mais barata não é necessariamente a mais resistente."
+        }
+      ]
+    },
+    {
+      "title": "Segurança também criará valor",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "PRÓXIMA GLOBALIZAÇÃO | 4/4"
+        },
+        {
+          "text": "A globalização não acaba: muda da prioridade absoluta à eficiência para incluir a segurança econômica."
+        },
+        {
+          "h": "Antes",
+          "text": "“Produzir no país mais barato” → prioridade a custo e eficiência."
+        },
+        {
+          "h": "Daqui em diante",
+          "text": "“Produzir onde não pare, mesmo custando um pouco mais” → países amigos, dispersão de fábricas, retorno da produção e proteção de tecnologias críticas."
+        },
+        {
+          "h": "O que o investidor deve examinar",
+          "text": "Além das vendas externas: cadeia de fornecimento, fábricas, materiais críticos, sensibilidade cambial e risco geopolítico."
+        },
+        {
+          "h": "Conclusão",
+          "text": "Empresas capazes de competir globalmente são fortes; as que evitam depender demais do mundo são ainda mais fortes. A próxima competitividade será eficiência × segurança."
+        }
+      ]
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "什么是全球化",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "全球化 | 1/4"
+        },
+        {
+          "text": "商品、资金、人员、信息、技术跨越国界流动，使世界经济逐渐一体化。"
+        },
+        {
+          "h": "全球分工",
+          "text": "在日本研发、台湾生产零部件、越南制造、美国销售。企业可以在整个世界，而非仅一国内选择最优地点。"
+        },
+        {
+          "h": "市场本身扩大",
+          "text": "客户不再限于国内1亿人，而可面向全球数十亿人。实力越强的企业越能突破国内市场上限成长。"
+        },
+        {
+          "h": "核心",
+          "text": "可以把全球化理解为组合世界上效率最高的地点、人才和资本的机制。"
+        }
+      ]
+    },
+    {
+      "title": "企业为何走向世界",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "为何全球化？ | 2/4"
+        },
+        {
+          "text": "最大优点不只是降低成本，而是能迅速扩大规模。"
+        },
+        {
+          "h": "1 规模经济",
+          "text": "产量增加，可把研发、设备、物流等成本分摊到更多产品上。"
+        },
+        {
+          "h": "2 组合优势",
+          "text": "技术、人才、资源、制造能力、销售网络：结合各国强项，比仅在一国完成更具竞争力。"
+        },
+        {
+          "h": "3 把握增长市场",
+          "text": "即使企业所在国人口减少，只要获得海外需求，仍能保留成长空间。取得全球份额的企业将面对巨大市场。"
+        }
+      ]
+    },
+    {
+      "title": "全球化也有弱点",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "另一面 | 3/4"
+        },
+        {
+          "text": "过度追求效率，会让世界某处发生的问题连锁波及本国企业。"
+        },
+        {
+          "h": "供应链集中风险",
+          "text": "关键零部件依赖一国或一家企业，可能因灾害、传染病、战争、出口限制等导致整个生产停摆。"
+        },
+        {
+          "h": "地缘政治与关税风险",
+          "text": "国家间冲突直接影响企业经营。已经不能仅凭海外成本低就决定生产地点。"
+        },
+        {
+          "h": "汇率风险",
+          "text": "海外销售越多，受汇率波动影响越大。有些企业的利润会随日元升值、贬值而大幅变化。"
+        },
+        {
+          "h": "效率与安全的权衡",
+          "text": "最便宜的供应链，未必最强韧。"
+        }
+      ]
+    },
+    {
+      "title": "今后安全也将成为价值",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "下一阶段全球化 | 4/4"
+        },
+        {
+          "text": "全球化并非结束，而是从效率优先转向包含经济安全保障的全球化。"
+        },
+        {
+          "h": "过去",
+          "text": "“在最便宜的国家生产” → 成本与效率优先。"
+        },
+        {
+          "h": "今后",
+          "text": "“即使稍贵，也在不会停摆的地方生产” → 友好国家、分散生产基地、回归国内、保护关键技术。"
+        },
+        {
+          "h": "投资者应关注",
+          "text": "不只看海外销售规模，也要看供应链、制造基地、关键材料、汇率敏感度与地缘政治风险。"
+        },
+        {
+          "h": "结论",
+          "text": "能在全球竞争的企业很强；不过度依赖全球的企业更强。下一阶段的竞争力取决于效率×安全。"
+        }
+      ]
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "什麼是全球化",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "全球化 | 1/4"
+        },
+        {
+          "text": "商品、資金、人員、資訊、技術跨越國界流動，使世界經濟逐漸一體化。"
+        },
+        {
+          "h": "全球分工",
+          "text": "在日本研發、台灣生產零組件、越南製造、美國銷售。企業可以在整個世界，而非僅一國內選擇最優地點。"
+        },
+        {
+          "h": "市場本身擴大",
+          "text": "客戶不再限於國內1億人，而可面向全球數十億人。實力越強的企業越能突破國內市場上限成長。"
+        },
+        {
+          "h": "核心",
+          "text": "可以把全球化理解為組合世界上效率最高的地點、人才和資本的機制。"
+        }
+      ]
+    },
+    {
+      "title": "企業為何走向世界",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "為何全球化？ | 2/4"
+        },
+        {
+          "text": "最大優點不只是降低成本，而是能迅速擴大規模。"
+        },
+        {
+          "h": "1 規模經濟",
+          "text": "產量增加，可把研發、設備、物流等成本分攤到更多產品上。"
+        },
+        {
+          "h": "2 組合優勢",
+          "text": "技術、人才、資源、製造能力、銷售網路：結合各國強項，比僅在一國完成更具競爭力。"
+        },
+        {
+          "h": "3 把握成長市場",
+          "text": "即使企業所在國人口減少，只要獲得海外需求，仍能保留成長空間。取得全球市佔的企業將面對巨大市場。"
+        }
+      ]
+    },
+    {
+      "title": "全球化也有弱點",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "另一面 | 3/4"
+        },
+        {
+          "text": "過度追求效率，會讓世界某處發生的問題連鎖波及本國企業。"
+        },
+        {
+          "h": "供應鏈集中風險",
+          "text": "關鍵零組件依賴一國或一家企業，可能因災害、傳染病、戰爭、出口限制等導致整體生產停擺。"
+        },
+        {
+          "h": "地緣政治與關稅風險",
+          "text": "國家間衝突直接影響企業經營。已經不能僅憑海外成本低就決定生產地點。"
+        },
+        {
+          "h": "匯率風險",
+          "text": "海外銷售越多，受匯率波動影響越大。有些企業的利潤會隨日圓升值、貶值而大幅變化。"
+        },
+        {
+          "h": "效率與安全的權衡",
+          "text": "最便宜的供應鏈，未必最強韌。"
+        }
+      ]
+    },
+    {
+      "title": "今後安全也將成為價值",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "下一階段全球化 | 4/4"
+        },
+        {
+          "text": "全球化並非結束，而是從效率優先轉向包含經濟安全保障的全球化。"
+        },
+        {
+          "h": "過去",
+          "text": "「在最便宜的國家生產」 → 成本與效率優先。"
+        },
+        {
+          "h": "今後",
+          "text": "「即使稍貴，也在不會停擺的地方生產」 → 友好國家、分散生產基地、回歸國內、保護關鍵技術。"
+        },
+        {
+          "h": "投資者應關注",
+          "text": "不只看海外銷售規模，也要看供應鏈、製造基地、關鍵材料、匯率敏感度與地緣政治風險。"
+        },
+        {
+          "h": "結論",
+          "text": "能在全球競爭的企業很強；不過度依賴全球的企業更強。下一階段的競爭力取決於效率×安全。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "en": [
+    {
+      "title": "Success learning: learning from successful examples",
+      "subtitle": "INVESTMENT / ECONOMY / BUSINESS",
+      "blocks": [
+        {
+          "h": "Make success a learning resource",
+          "text": "Analyze successful examples and extract factors that can be reproduced. This is not a strictly standardized academic term."
+        },
+        {
+          "h": "Five practical steps",
+          "text": "Select a case → break down actions, decisions and environment → choose reproducible elements → put them into practice → verify and revise."
+        },
+        {
+          "h": "Applications to investing and side businesses",
+          "text": "Analyze investors’ decision criteria and risk management. Break down customer acquisition, sales and cost structures in side businesses."
+        },
+        {
+          "h": "Pitfalls",
+          "text": "Do not underestimate luck or historical context. Beware of survivorship bias and compare with failures too.\nTODOROKI | Investment and economics: numbers before intuition."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "es": [
+    {
+      "title": "Aprendizaje del éxito: aprender de casos exitosos",
+      "subtitle": "INVERSIÓN / ECONOMÍA / EMPRESA",
+      "blocks": [
+        {
+          "h": "Convertir el éxito en material de aprendizaje",
+          "text": "Analizar casos exitosos y extraer factores reproducibles. No es un término académico estrictamente unificado."
+        },
+        {
+          "h": "Cinco pasos prácticos",
+          "text": "Elegir un caso → descomponer acciones, decisiones y entorno → seleccionar elementos reproducibles → ponerlos en práctica → verificar y corregir."
+        },
+        {
+          "h": "Aplicación a inversiones y negocios secundarios",
+          "text": "Analizar los criterios de decisión y la gestión del riesgo de los inversores. Descomponer la captación de clientes, las ventas y la estructura de costes de un negocio secundario."
+        },
+        {
+          "h": "Riesgos",
+          "text": "No subestimar la suerte ni el contexto histórico. Cuidarse del sesgo de supervivencia y comparar también con fracasos.\nTODOROKI | Inversión y economía: cifras antes que intuición."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "pt": [
+    {
+      "title": "Aprendizado com o sucesso: aprender com casos bem-sucedidos",
+      "subtitle": "INVESTIMENTO / ECONOMIA / NEGÓCIOS",
+      "blocks": [
+        {
+          "h": "Transformar o sucesso em material de estudo",
+          "text": "Analisar casos bem-sucedidos e extrair fatores que possam ser reproduzidos. Não é um termo acadêmico estritamente padronizado."
+        },
+        {
+          "h": "Cinco etapas práticas",
+          "text": "Selecionar um caso → decompor ações, decisões e ambiente → escolher elementos reproduzíveis → colocar em prática → verificar e corrigir."
+        },
+        {
+          "h": "Aplicação a investimentos e negócios paralelos",
+          "text": "Analisar os critérios de decisão e a gestão de riscos dos investidores. Decompor a captação de clientes, as vendas e a estrutura de custos dos negócios paralelos."
+        },
+        {
+          "h": "Armadilhas",
+          "text": "Não subestimar a sorte nem o contexto histórico. Atenção ao viés de sobrevivência; comparar também com fracassos.\nTODOROKI | Investimento e economia: números antes da intuição."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "成功学习：从成功案例中学习",
+      "subtitle": "投资 / 经济 / 商业",
+      "blocks": [
+        {
+          "h": "以成功为教材",
+          "text": "分析成功案例，提取可以复现的因素。这不是一个有严格统一定义的学术术语。"
+        },
+        {
+          "h": "实践的五个步骤",
+          "text": "选择案例 → 分解行动、判断和环境 → 选择可复现的要素 → 实践 → 验证与修正。"
+        },
+        {
+          "h": "在投资与副业中的应用",
+          "text": "分析投资者的判断标准与风险管理。分解副业的获客、销售和成本结构。"
+        },
+        {
+          "h": "陷阱",
+          "text": "不要低估运气与时代背景的影响。警惕幸存者偏差，也要与失败案例比较。\nTODOROKI | 投资与经济，重数字而非感觉。"
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "成功學習：從成功案例中學習",
+      "subtitle": "投資 / 經濟 / 商業",
+      "blocks": [
+        {
+          "h": "以成功為教材",
+          "text": "分析成功案例，提取可以重現的因素。這不是一個有嚴格統一定義的學術術語。"
+        },
+        {
+          "h": "實踐的五個步驟",
+          "text": "選擇案例 → 分解行動、判斷和環境 → 選擇可重現的要素 → 實踐 → 驗證與修正。"
+        },
+        {
+          "h": "在投資與副業中的應用",
+          "text": "分析投資者的判斷標準與風險管理。分解副業的獲客、銷售和成本結構。"
+        },
+        {
+          "h": "陷阱",
+          "text": "不要低估運氣與時代背景的影響。警惕倖存者偏差，也要與失敗案例比較。\nTODOROKI | 投資與經濟，重數字而非感覺。"
+        }
+      ],
+      "dense": true
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "en": [
+    {
+      "title": "The Martingale strategy",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "How it works and capital-management risk"
+        },
+        {
+          "h": "What is Martingale?",
+          "text": "A staking method that generally doubles the stake after every loss. The example assumes a 50% win probability and net winnings equal to the stake."
+        },
+        {
+          "h": "How stakes grow",
+          "text": "First stake: ¥1,000 → ¥2,000 → ¥4,000 → ¥8,000. Four consecutive losses total ¥15,000. Winning the next ¥16,000 stake produces a net profit of ¥1,000."
+        },
+        {
+          "h": "Risk from consecutive losses",
+          "text": "After n consecutive losses, cumulative loss = initial stake × (2ⁿ − 1). Seven consecutive losses mean a ¥127,000 loss; the next stake is ¥128,000. Capital constraints or stake limits can prevent continuation."
+        },
+        {
+          "h": "Points for investing",
+          "text": "Increasing the stake does not improve a trade's expected value. This differs from averaging down in shares, but additional capital committed after losses deserves care. Set an acceptable loss and capital ceiling in advance."
+        }
+      ]
+    }
+  ],
+  "es": [
+    {
+      "title": "La estrategia Martingala",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "Funcionamiento y riesgos de gestión del capital"
+        },
+        {
+          "h": "¿Qué es la Martingala?",
+          "text": "Método que, por regla general, duplica la apuesta tras cada pérdida. El ejemplo supone un 50% de probabilidad de ganar y una ganancia neta igual a la apuesta."
+        },
+        {
+          "h": "Cómo crecen las apuestas",
+          "text": "Apuesta inicial: ¥1.000 → ¥2.000 → ¥4.000 → ¥8.000. Cuatro pérdidas consecutivas suman ¥15.000. Ganar la siguiente apuesta de ¥16.000 deja una ganancia neta de ¥1.000."
+        },
+        {
+          "h": "Riesgo de pérdidas consecutivas",
+          "text": "Tras n pérdidas consecutivas, pérdida acumulada = apuesta inicial × (2ⁿ − 1). Siete pérdidas implican perder ¥127.000; la siguiente apuesta es de ¥128.000. Los límites del capital o de las apuestas pueden impedir continuar."
+        },
+        {
+          "h": "Aspectos para la inversión",
+          "text": "Aumentar la apuesta no mejora el valor esperado de la operación. Difiere de promediar a la baja en acciones, pero conviene vigilar los aportes adicionales tras perder. Definir de antemano la pérdida tolerable y el límite de capital es importante."
+        }
+      ]
+    }
+  ],
+  "pt": [
+    {
+      "title": "A estratégia Martingale",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "Funcionamento e riscos da gestão do capital"
+        },
+        {
+          "h": "O que é Martingale?",
+          "text": "Método de alocação que, em regra, dobra a aposta após cada perda. O exemplo pressupõe probabilidade de vitória de 50% e ganho líquido igual à aposta."
+        },
+        {
+          "h": "Como as apostas crescem",
+          "text": "Aposta inicial: ¥1.000 → ¥2.000 → ¥4.000 → ¥8.000. Quatro perdas seguidas totalizam ¥15.000. Vencer a aposta seguinte de ¥16.000 gera lucro líquido de ¥1.000."
+        },
+        {
+          "h": "Risco das perdas consecutivas",
+          "text": "Após n perdas seguidas, perda acumulada = aposta inicial × (2ⁿ − 1). Sete perdas representam prejuízo de ¥127.000; a aposta seguinte é de ¥128.000. Limites de capital ou de aposta podem impedir a continuidade."
+        },
+        {
+          "h": "Pontos para investir",
+          "text": "Aumentar a aposta não melhora o valor esperado da operação. É diferente de reduzir o preço médio de ações, mas exige cuidado com aportes após perdas. É importante definir antes a perda tolerável e o limite de capital."
+        }
+      ]
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "马丁格尔法",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "运作机制与资金管理风险"
+        },
+        {
+          "h": "什么是马丁格尔法",
+          "text": "原则上每次亏损后将投注金额翻倍的资金分配法。以下例子假设胜率为50%，获胜的净收益等于投注金额。"
+        },
+        {
+          "h": "投注金额如何增加",
+          "text": "首次1,000日元 → 2,000日元 → 4,000日元 → 8,000日元。连续输4次累计亏损15,000日元。下一次投注16,000日元并获胜，扣除此前亏损后净赚1,000日元。"
+        },
+        {
+          "h": "连败风险",
+          "text": "连续输n次后的累计亏损＝首次金额×（2^n−1）。连输7次亏损127,000日元，下一次需投注128,000日元。资金有限或投注上限可能使策略无法继续。"
+        },
+        {
+          "h": "投资时的思考",
+          "text": "增加投注并不能改善交易的期望值。虽然不同于股票补仓摊低成本，但亏损后追加投入仍需谨慎。事先确定可承受亏损和资金上限十分重要。"
+        }
+      ]
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "馬丁格爾法",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "運作機制與資金管理風險"
+        },
+        {
+          "h": "什麼是馬丁格爾法",
+          "text": "原則上每次虧損後將投注金額翻倍的資金分配法。以下例子假設勝率為50%，獲勝的淨收益等於投注金額。"
+        },
+        {
+          "h": "投注金額如何增加",
+          "text": "首次1,000日圓 → 2,000日圓 → 4,000日圓 → 8,000日圓。連續輸4次累計虧損15,000日圓。下一次投注16,000日圓並獲勝，扣除此前虧損後淨賺1,000日圓。"
+        },
+        {
+          "h": "連敗風險",
+          "text": "連續輸n次後的累計虧損＝首次金額×（2^n−1）。連輸7次虧損127,000日圓，下一次需投注128,000日圓。資金有限或投注上限可能使策略無法繼續。"
+        },
+        {
+          "h": "投資時的思考",
+          "text": "增加投注並不能改善交易的期望值。雖然不同於股票加碼攤低成本，但虧損後追加投入仍需謹慎。事先確定可承受虧損和資金上限十分重要。"
+        }
+      ]
+    }
+  ]
+}

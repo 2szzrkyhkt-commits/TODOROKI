@@ -1,0 +1,387 @@
+{
+  "en": [
+    {
+      "title": "Calm alone. Mistaken in a crowd.",
+      "subtitle": "MASS PSYCHOLOGY | What is crowd psychology?",
+      "blocks": [
+        {
+          "text": "When people think alone, they can compare information, weigh gains and losses, and judge calmly."
+        },
+        {
+          "text": "But when many people start moving in the same direction, the mere fact that “everyone is doing it” becomes a basis for judgment."
+        },
+        {
+          "h": "The majority is not necessarily right.",
+          "text": "A group whose judgments are not independent amplifies the same mistakes."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Why do crowds make bad judgments?",
+      "subtitle": "WHY CROWDS FAIL",
+      "blocks": [
+        {
+          "h": "01 Conformity",
+          "text": "We feel anxious about judging differently from those around us."
+        },
+        {
+          "h": "02 Social proof",
+          "text": "The more people choose something, the more likely it feels correct."
+        },
+        {
+          "h": "03 FOMO",
+          "text": "Fear of being left behind overpowers calm judgment."
+        },
+        {
+          "h": "04 Emotional contagion",
+          "text": "Enthusiasm and fear spread from person to person."
+        },
+        {
+          "h": "05 Diffusion of responsibility",
+          "text": "“Everyone else is doing the same” weakens our sense of responsibility for our judgments."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "The stock market reflects crowd psychology",
+      "subtitle": "MARKET PSYCHOLOGY",
+      "blocks": [
+        {
+          "text": "01 You judge for yourself that a stock is expensive."
+        },
+        {
+          "text": "02 Others begin buying, and the price rises."
+        },
+        {
+          "text": "03 Fear of missing out emerges."
+        },
+        {
+          "text": "04 You mistake “it is rising” for “it is right.”"
+        },
+        {
+          "text": "05 Buying attracts more buying, accelerating enthusiasm."
+        },
+        {
+          "text": "06 A single trigger reverses the process: selling attracts more selling."
+        },
+        {
+          "text": "What matters is not simply moving against the crowd. It is judging by your own standards, independently of the crowd."
+        },
+        {
+          "text": "Market emotion is something to use, rather than something that controls you."
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "es": [
+    {
+      "title": "A solas, calma. En grupo, errores.",
+      "subtitle": "PSICOLOGÍA DE MASAS | ¿Qué es la psicología de masas?",
+      "blocks": [
+        {
+          "text": "Al pensar por cuenta propia, podemos comparar información, sopesar ganancias y pérdidas y juzgar con calma."
+        },
+        {
+          "text": "Pero cuando muchas personas avanzan en la misma dirección, el mero hecho de que «todos lo hacen» se convierte en criterio de juicio."
+        },
+        {
+          "h": "La mayoría no equivale a tener razón.",
+          "text": "Un grupo cuyos juicios no son independientes amplifica los mismos errores."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "¿Por qué los grupos juzgan mal?",
+      "subtitle": "POR QUÉ FALLAN LAS MULTITUDES",
+      "blocks": [
+        {
+          "h": "01 Conformidad",
+          "text": "Sentimos inquietud al juzgar de forma distinta a quienes nos rodean."
+        },
+        {
+          "h": "02 Prueba social",
+          "text": "Cuantas más personas eligen algo, más correcto nos parece."
+        },
+        {
+          "h": "03 FOMO",
+          "text": "El miedo a quedarse atrás supera al juicio sereno."
+        },
+        {
+          "h": "04 Contagio emocional",
+          "text": "Tanto el entusiasmo como el miedo se propagan entre personas."
+        },
+        {
+          "h": "05 Difusión de responsabilidad",
+          "text": "«Todos hacen lo mismo» debilita la responsabilidad que sentimos por nuestras decisiones."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "La bolsa refleja la psicología de masas",
+      "subtitle": "PSICOLOGÍA DEL MERCADO",
+      "blocks": [
+        {
+          "text": "01 Por tu cuenta, juzgas que una acción está cara."
+        },
+        {
+          "text": "02 Los demás comienzan a comprar y la cotización sube."
+        },
+        {
+          "text": "03 Surge el miedo a perder la oportunidad."
+        },
+        {
+          "text": "04 Confundes «está subiendo» con «es correcto»."
+        },
+        {
+          "text": "05 Las compras atraen más compras y se acelera el entusiasmo."
+        },
+        {
+          "text": "06 Basta un detonante para que ahora las ventas atraigan más ventas."
+        },
+        {
+          "text": "Lo importante no es simplemente actuar en contra de la multitud, sino juzgar con criterios propios e independientes de ella."
+        },
+        {
+          "text": "Las emociones del mercado son algo que aprovechar, sin dejar que nos dominen."
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "pt": [
+    {
+      "title": "Sozinho, calma. Em grupo, erros.",
+      "subtitle": "PSICOLOGIA DAS MASSAS | O que é psicologia das massas?",
+      "blocks": [
+        {
+          "text": "Ao pensar sozinho, é possível comparar informações, pesar ganhos e perdas e julgar com calma."
+        },
+        {
+          "text": "Mas quando muitas pessoas começam a seguir na mesma direção, o simples fato de que “todo mundo faz” vira critério de julgamento."
+        },
+        {
+          "h": "Maioria não significa estar certo.",
+          "text": "Um grupo cujos julgamentos não são independentes amplifica os mesmos erros."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Por que grupos julgam mal?",
+      "subtitle": "POR QUE AS MULTIDÕES FALHAM",
+      "blocks": [
+        {
+          "h": "01 Conformidade",
+          "text": "Sentimos insegurança ao julgar de modo diferente das pessoas ao redor."
+        },
+        {
+          "h": "02 Prova social",
+          "text": "Quanto mais pessoas escolhem algo, mais correto isso parece."
+        },
+        {
+          "h": "03 FOMO",
+          "text": "O medo de ficar para trás supera o julgamento sereno."
+        },
+        {
+          "h": "04 Contágio emocional",
+          "text": "Tanto a euforia quanto o medo se espalham de pessoa para pessoa."
+        },
+        {
+          "h": "05 Difusão de responsabilidade",
+          "text": "“Todos fazem o mesmo” enfraquece o senso de responsabilidade pelas decisões."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "A bolsa reflete a psicologia das massas",
+      "subtitle": "PSICOLOGIA DO MERCADO",
+      "blocks": [
+        {
+          "text": "01 Você avalia por conta própria que uma ação está cara."
+        },
+        {
+          "text": "02 As pessoas ao redor começam a comprar e o preço sobe."
+        },
+        {
+          "text": "03 Surge o medo de perder a oportunidade."
+        },
+        {
+          "text": "04 Você confunde “está subindo” com “está certo”."
+        },
+        {
+          "text": "05 Compras atraem mais compras e aceleram a euforia."
+        },
+        {
+          "text": "06 Basta um gatilho para que, agora, vendas atraiam mais vendas."
+        },
+        {
+          "text": "O importante não é simplesmente agir contra a multidão, mas julgar pelos próprios critérios, de forma independente dela."
+        },
+        {
+          "text": "As emoções do mercado são algo a utilizar, sem deixar que dominem você."
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "独处时冷静，群体中出错。",
+      "subtitle": "大众心理 | 什么是大众心理？",
+      "blocks": [
+        {
+          "text": "人独自思考时，可以比较信息、衡量利弊，冷静作出判断。"
+        },
+        {
+          "text": "但当许多人开始朝同一方向行动时，“大家都这样做”这个事实本身，就变成了判断依据。"
+        },
+        {
+          "h": "多数派不等于正确。",
+          "text": "判断不独立的群体，会放大同样的错误。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "为什么群体会判断失误？",
+      "subtitle": "群体失误的原因",
+      "blocks": [
+        {
+          "h": "01 从众",
+          "text": "与周围人作出不同判断，会让人感到不安。"
+        },
+        {
+          "h": "02 社会认同",
+          "text": "选择的人越多，越容易觉得它是正确的。"
+        },
+        {
+          "h": "03 FOMO（错失恐惧）",
+          "text": "害怕只有自己被落下，压倒了冷静判断。"
+        },
+        {
+          "h": "04 情绪传染",
+          "text": "狂热与恐惧，都会在人与人之间传播。"
+        },
+        {
+          "h": "05 责任分散",
+          "text": "“大家都一样”的想法，削弱对自身判断的责任感。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "股票市场是大众心理的缩影",
+      "subtitle": "市场心理",
+      "blocks": [
+        {
+          "text": "01 自己原本判断“估值过高”。"
+        },
+        {
+          "text": "02 周围人开始买入，股价上涨。"
+        },
+        {
+          "text": "03 产生害怕错过行情的恐惧。"
+        },
+        {
+          "text": "04 误以为“在上涨就等于正确”。"
+        },
+        {
+          "text": "05 买入吸引更多买入，狂热加速。"
+        },
+        {
+          "text": "06 只需一个契机，就反过来变成卖出引发更多卖出。"
+        },
+        {
+          "text": "重要的不是简单地“与大众反着做”，而是独立于大众，按自己的标准判断。"
+        },
+        {
+          "text": "市场情绪应为自己所用，不应支配自己。"
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "獨處時冷靜，群體中出錯。",
+      "subtitle": "大眾心理 | 什麼是大眾心理？",
+      "blocks": [
+        {
+          "text": "人獨自思考時，可以比較資訊、衡量利弊，冷靜作出判斷。"
+        },
+        {
+          "text": "但當許多人開始朝同一方向行動時，「大家都這樣做」這個事實本身，就變成了判斷依據。"
+        },
+        {
+          "h": "多數派不等於正確。",
+          "text": "判斷不獨立的群體，會放大同樣的錯誤。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "為什麼群體會判斷失誤？",
+      "subtitle": "群體失誤的原因",
+      "blocks": [
+        {
+          "h": "01 從眾",
+          "text": "與周圍人作出不同判斷，會讓人感到不安。"
+        },
+        {
+          "h": "02 社會認同",
+          "text": "選擇的人越多，越容易覺得它是正確的。"
+        },
+        {
+          "h": "03 FOMO（錯失恐懼）",
+          "text": "害怕只有自己被落下，壓倒了冷靜判斷。"
+        },
+        {
+          "h": "04 情緒傳染",
+          "text": "狂熱與恐懼，都會在人與人之間傳播。"
+        },
+        {
+          "h": "05 責任分散",
+          "text": "「大家都一樣」的想法，削弱對自身判斷的責任感。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "股票市場是大眾心理的縮影",
+      "subtitle": "市場心理",
+      "blocks": [
+        {
+          "text": "01 自己原本判斷「估值過高」。"
+        },
+        {
+          "text": "02 周圍人開始買進，股價上漲。"
+        },
+        {
+          "text": "03 產生害怕錯過行情的恐懼。"
+        },
+        {
+          "text": "04 誤以為「在上漲就等於正確」。"
+        },
+        {
+          "text": "05 買進吸引更多買進，狂熱加速。"
+        },
+        {
+          "text": "06 只需一個契機，就反過來變成賣出引發更多賣出。"
+        },
+        {
+          "text": "重要的不是簡單地「與大眾反著做」，而是獨立於大眾，按自己的標準判斷。"
+        },
+        {
+          "text": "市場情緒應為自己所用，不應支配自己。"
+        }
+      ],
+      "dense": false
+    }
+  ]
+}

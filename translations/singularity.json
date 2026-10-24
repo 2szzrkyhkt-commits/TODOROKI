@@ -1,0 +1,147 @@
+{
+  "en": [
+    {
+      "title": "What is the singularity?",
+      "subtitle": "FUTURE OF INTELLIGENCE | SINGULARITY / CONCEPT NOTE",
+      "blocks": [
+        {
+          "h": "",
+          "text": "The hypothesis that AI surpasses human intellectual abilities and accelerates social change."
+        },
+        {
+          "h": "01 Why some think it is near",
+          "text": "Computing capacity and AI performance are improving, and AI is used in R&D itself. Technology may generate the next technology, further accelerating progress."
+        },
+        {
+          "h": "02 What could change",
+          "text": "Work: some intellectual work, as well as routine tasks, is automated.\nMedicine: diagnosis and drug discovery may become faster.\nDaily life: ways of learning, creating and making decisions change."
+        },
+        {
+          "h": "03 What remains unknown",
+          "text": "It is uncertain whether high performance leads to humanlike understanding. Neither the timing nor the speed of widespread adoption can be fully predicted. Unequal benefits, safety and employment transitions require measures."
+        },
+        {
+          "h": "Perspective to retain",
+          "text": "Treat it as a hypothesis for thinking and preparing, rather than an inevitable future. Assess technological progress separately from society’s ability to use it well."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "es": [
+    {
+      "title": "¿Qué es la singularidad?",
+      "subtitle": "FUTURE OF INTELLIGENCE | SINGULARITY / CONCEPT NOTE",
+      "blocks": [
+        {
+          "h": "",
+          "text": "La hipótesis de que la IA supera las capacidades intelectuales humanas y acelera el cambio social."
+        },
+        {
+          "h": "01 Por qué se considera cercana",
+          "text": "Aumentan la capacidad de cálculo y el rendimiento de la IA, que se usa también en la propia I+D. La tecnología podría generar nuevas tecnologías y acelerar aún más el progreso."
+        },
+        {
+          "h": "02 Qué podría cambiar",
+          "text": "Trabajo: se automatizan tareas rutinarias y parte del trabajo intelectual.\nMedicina: el diagnóstico y el desarrollo de fármacos podrían acelerarse.\nVida cotidiana: cambian las formas de aprender, crear y decidir."
+        },
+        {
+          "h": "03 Lo que aún no se sabe",
+          "text": "No se sabe si un alto rendimiento supone comprensión semejante a la humana. No se pueden predecir por completo ni la fecha ni la velocidad de difusión social. La desigualdad de beneficios, la seguridad y la transición laboral requieren medidas."
+        },
+        {
+          "h": "Perspectiva clave",
+          "text": "Es una hipótesis para reflexionar y prepararse, no un futuro inevitable. Evaluar por separado el avance tecnológico y la capacidad social de aprovecharlo."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "pt": [
+    {
+      "title": "O que é a singularidade?",
+      "subtitle": "FUTURE OF INTELLIGENCE | SINGULARITY / CONCEPT NOTE",
+      "blocks": [
+        {
+          "h": "",
+          "text": "A hipótese de que a IA supera as capacidades intelectuais humanas e acelera mudanças sociais."
+        },
+        {
+          "h": "01 Por que alguns a consideram próxima",
+          "text": "A capacidade computacional e o desempenho da IA crescem, e a IA é usada na própria P&D. A tecnologia pode gerar a próxima tecnologia, acelerando ainda mais o progresso."
+        },
+        {
+          "h": "02 O que pode mudar",
+          "text": "Trabalho: tarefas rotineiras e parte do trabalho intelectual são automatizadas.\nMedicina: diagnóstico e descoberta de fármacos podem se acelerar.\nCotidiano: mudam as formas de aprender, criar e decidir."
+        },
+        {
+          "h": "03 O que ainda não se sabe",
+          "text": "Não está claro se alto desempenho leva a uma compreensão semelhante à humana. Nem a data nem a velocidade de adoção ampla podem ser totalmente previstas. Benefícios desiguais, segurança e transição de empregos exigem medidas."
+        },
+        {
+          "h": "Perspectiva essencial",
+          "text": "É uma hipótese para refletir e se preparar, não um futuro inevitável. Avalie separadamente o progresso tecnológico e a capacidade social de usá-lo bem."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "什么是奇点？",
+      "subtitle": "FUTURE OF INTELLIGENCE | SINGULARITY / CONCEPT NOTE",
+      "blocks": [
+        {
+          "h": "",
+          "text": "一种假说：AI超越人类智力，社会变化随之加速。"
+        },
+        {
+          "h": "01 为什么认为它“临近”",
+          "text": "计算能力与AI性能不断提高，AI也被用于研发本身。技术可能产生下一项技术，进一步加快进步速度。"
+        },
+        {
+          "h": "02 可能改变什么",
+          "text": "工作：除常规业务外，部分智力工作也将自动化。\n医疗：诊断与新药研发速度可能加快。\n生活：学习、创作与决策方式不断变化。"
+        },
+        {
+          "h": "03 仍不清楚的事情",
+          "text": "高性能是否意味着“像人类一样理解”，尚无定论。实现时间与社会广泛普及的速度，也无法完全预测。利益分配不均、安全与就业转型需要对策。"
+        },
+        {
+          "h": "应掌握的视角",
+          "text": "将其视为帮助思考与准备的假说，而非“必然发生的未来”。分别看待技术进步与社会能否善用技术。"
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "什麼是奇點？",
+      "subtitle": "FUTURE OF INTELLIGENCE | SINGULARITY / CONCEPT NOTE",
+      "blocks": [
+        {
+          "h": "",
+          "text": "一種假說：AI超越人類智力，社會變化隨之加速。"
+        },
+        {
+          "h": "01 為什麼認為它「臨近」",
+          "text": "運算能力與AI效能不斷提高，AI也被用於研發本身。技術可能產生下一項技術，進一步加快進步速度。"
+        },
+        {
+          "h": "02 可能改變什麼",
+          "text": "工作：除例行業務外，部分智力工作也將自動化。\n醫療：診斷與新藥研發速度可能加快。\n生活：學習、創作與決策方式不斷變化。"
+        },
+        {
+          "h": "03 仍不清楚的事情",
+          "text": "高效能是否意味著「像人類一樣理解」，尚無定論。實現時間與社會廣泛普及的速度，也無法完全預測。利益分配不均、安全與就業轉型需要對策。"
+        },
+        {
+          "h": "應掌握的視角",
+          "text": "將其視為幫助思考與準備的假說，而非「必然發生的未來」。分別看待技術進步與社會能否善用技術。"
+        }
+      ],
+      "dense": true
+    }
+  ]
+}

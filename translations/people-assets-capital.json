@@ -1,0 +1,397 @@
+{
+  "en": [
+    {
+      "title": "The three resources that drive a company",
+      "subtitle": "BUSINESS BASICS | Merely possessing people, assets and capital does not create corporate value",
+      "blocks": [
+        {
+          "text": "PEOPLE × ASSETS × CAPITAL"
+        },
+        {
+          "text": "A company's strength is not determined by the quantity of its resources alone. What matters is how it combines the three and how efficiently it converts them into profit and cash."
+        },
+        {
+          "text": "Resources → productivity → profit → reinvestment → corporate value"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "What are people, assets and capital?",
+      "subtitle": "THREE RESOURCES",
+      "blocks": [
+        {
+          "text": "PEOPLE\nManagers and employees; engineers and sales capabilities; knowledge, experience and organizational strength. The quality of people determines resource allocation and execution."
+        },
+        {
+          "text": "ASSETS\nFactories and equipment; products and raw materials; technology, patents and brands. Equipment and technology form a basis for competitive advantage."
+        },
+        {
+          "text": "CAPITAL\nCash and capital; borrowing capacity; investment funds and creditworthiness. Funds can be reallocated to people, equipment, M&A and R&D."
+        },
+        {
+          "text": "Today, “information” is sometimes added as a fourth management resource."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "How resources are used makes the difference",
+      "subtitle": "CAPITAL ALLOCATION | Two companies with the same ¥10 billion may have different values ten years later",
+      "blocks": [
+        {
+          "text": "Strong companies\nHire excellent people; invest in high-return businesses; reduce unnecessary assets; select R&D and M&A carefully; reinvest profits."
+        },
+        {
+          "text": "Weak companies\nLeave surplus funds idle; preserve low-return businesses; get little benefit from capital expenditure; fail to use people's abilities; fail to turn profits into growth."
+        },
+        {
+          "text": "“Many assets” ≠ “a good company”\nCompanies that can reinvest capital at high returns are more likely to benefit from compounding."
+        },
+        {
+          "text": "Examine margins, ROE, ROIC, operating cash flow, reinvestment destinations and management's capital allocation."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "Investors assess conversion efficiency",
+      "subtitle": "INVESTMENT VIEW",
+      "blocks": [
+        {
+          "text": "PEOPLE: Is management allocating capital correctly?\nASSETS: Are equipment, technology and brands generating profits?\nCAPITAL: Is cash used appropriately for growth investment, shareholder returns and M&A?"
+        },
+        {
+          "text": "The ultimate question\nHow many yen of value can be created from one yen of capital?"
+        },
+        {
+          "text": "The ability to turn people, assets and capital into profit and cash defines corporate quality."
+        },
+        {
+          "text": "A good company is one that can multiply its resources, rather than simply possess them."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    }
+  ],
+  "es": [
+    {
+      "title": "Los tres recursos que mueven una empresa",
+      "subtitle": "FUNDAMENTOS EMPRESARIALES | Poseer personas, activos y capital no basta para crear valor",
+      "blocks": [
+        {
+          "text": "PERSONAS × ACTIVOS × CAPITAL"
+        },
+        {
+          "text": "La fortaleza empresarial no depende solo de la cantidad de recursos. Importa cómo combina los tres y con qué eficiencia los transforma en beneficios y efectivo."
+        },
+        {
+          "text": "Recursos → productividad → beneficios → reinversión → valor empresarial"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "¿Qué son personas, activos y capital?",
+      "subtitle": "TRES RECURSOS",
+      "blocks": [
+        {
+          "text": "PERSONAS\nDirectivos y empleados; ingenieros y capacidad comercial; conocimiento, experiencia y fuerza organizativa. Su calidad determina la asignación de recursos y la ejecución."
+        },
+        {
+          "text": "ACTIVOS\nFábricas y equipos; productos y materias primas; tecnología, patentes y marcas. Los equipos y la tecnología son una base de ventaja competitiva."
+        },
+        {
+          "text": "CAPITAL\nEfectivo y capital; capacidad de endeudamiento; fondos de inversión y solvencia crediticia. Puede reasignarse a personas, equipos, adquisiciones e I+D."
+        },
+        {
+          "text": "Actualmente, a veces se añade la “información” como cuarto recurso de gestión."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "La diferencia está en cómo se usan",
+      "subtitle": "ASIGNACIÓN DE CAPITAL | Dos empresas con los mismos 10.000 millones de yenes pueden valer distinto dentro de diez años",
+      "blocks": [
+        {
+          "text": "Empresas fuertes\nContratan talento excelente; invierten en negocios rentables; reducen activos innecesarios; seleccionan I+D y adquisiciones; reinvierten beneficios."
+        },
+        {
+          "text": "Empresas débiles\nDejan fondos ociosos; conservan negocios poco rentables; obtienen poco efecto de la inversión en equipos; desaprovechan el talento; no convierten beneficios en crecimiento."
+        },
+        {
+          "text": "“Muchos activos” ≠ “buena empresa”\nCuanto mayor sea la rentabilidad a la que se reinvierte el capital, más fácil será beneficiarse del interés compuesto."
+        },
+        {
+          "text": "Observar márgenes, ROE, ROIC, flujo de caja operativo, destino de la reinversión y asignación del capital por los directivos."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "El inversor evalúa la eficiencia de conversión",
+      "subtitle": "VISIÓN INVERSORA",
+      "blocks": [
+        {
+          "text": "PERSONAS: ¿Asigna bien el capital la dirección?\nACTIVOS: ¿Generan beneficios equipos, tecnología y marcas?\nCAPITAL: ¿Se usa bien el efectivo para crecimiento, remuneración al accionista y adquisiciones?"
+        },
+        {
+          "text": "La pregunta final\n¿Cuántos yenes de valor genera un yen de capital?"
+        },
+        {
+          "text": "La capacidad de transformar personas, activos y capital en beneficios y efectivo define la calidad empresarial."
+        },
+        {
+          "text": "Una buena empresa puede multiplicar sus recursos, además de poseerlos."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    }
+  ],
+  "pt": [
+    {
+      "title": "Os três recursos que movem uma empresa",
+      "subtitle": "FUNDAMENTOS EMPRESARIAIS | Apenas possuir pessoas, ativos e capital não cria valor empresarial",
+      "blocks": [
+        {
+          "text": "PESSOAS × ATIVOS × CAPITAL"
+        },
+        {
+          "text": "A força de uma empresa não depende apenas da quantidade de recursos. Importa como combina os três e com que eficiência os transforma em lucro e caixa."
+        },
+        {
+          "text": "Recursos → produtividade → lucro → reinvestimento → valor empresarial"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "O que são pessoas, ativos e capital?",
+      "subtitle": "TRÊS RECURSOS",
+      "blocks": [
+        {
+          "text": "PESSOAS\nGestores e funcionários; engenheiros e força comercial; conhecimento, experiência e força organizacional. Sua qualidade determina alocação de recursos e execução."
+        },
+        {
+          "text": "ATIVOS\nFábricas e equipamentos; produtos e matérias-primas; tecnologia, patentes e marcas. Equipamentos e tecnologia formam a base de vantagem competitiva."
+        },
+        {
+          "text": "CAPITAL\nCaixa e capital; capacidade de endividamento; recursos de investimento e capacidade de crédito. Pode ser realocado a pessoas, equipamentos, M&A e P&D."
+        },
+        {
+          "text": "Hoje, às vezes se acrescenta a “informação” como quarto recurso de gestão."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "A diferença está na forma de usar",
+      "subtitle": "ALOCAÇÃO DE CAPITAL | Duas empresas com os mesmos 10 bilhões de ienes podem valer diferente em dez anos",
+      "blocks": [
+        {
+          "text": "Empresas fortes\nContratam ótimos profissionais; investem em negócios de alto retorno; reduzem ativos desnecessários; selecionam P&D e M&A; reinvestem lucros."
+        },
+        {
+          "text": "Empresas fracas\nDeixam recursos ociosos; preservam negócios de baixo retorno; obtêm pouco efeito do investimento em equipamentos; não aproveitam talentos; não convertem lucros em crescimento."
+        },
+        {
+          "text": "“Muitos ativos” ≠ “boa empresa”\nEmpresas capazes de reinvestir capital a retornos elevados têm mais condições de aproveitar os juros compostos."
+        },
+        {
+          "text": "Examinar margens, ROE, ROIC, fluxo de caixa operacional, destinos do reinvestimento e alocação de capital pelos gestores."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "Investidores avaliam a eficiência de conversão",
+      "subtitle": "VISÃO DO INVESTIDOR",
+      "blocks": [
+        {
+          "text": "PESSOAS: A gestão aloca corretamente o capital?\nATIVOS: Equipamentos, tecnologia e marcas geram lucro?\nCAPITAL: O caixa é usado adequadamente em crescimento, retorno aos acionistas e M&A?"
+        },
+        {
+          "text": "A pergunta final\nQuantos ienes de valor são gerados por um iene de capital?"
+        },
+        {
+          "text": "A capacidade de transformar pessoas, ativos e capital em lucro e caixa define a qualidade empresarial."
+        },
+        {
+          "text": "Uma boa empresa consegue multiplicar seus recursos, além de apenas possuí-los."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "驱动企业的三种资源",
+      "subtitle": "商业基础 | 仅仅“拥有”人才、资产和资本，并不等于企业价值",
+      "blocks": [
+        {
+          "text": "人才 × 资产 × 资本"
+        },
+        {
+          "text": "企业的实力不仅取决于资源数量。重要的是如何组合三者，以及能多高效地将其转化为利润和现金。"
+        },
+        {
+          "text": "资源 → 生产率 → 利润 → 再投资 → 企业价值"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "人才、资产、资本是什么？",
+      "subtitle": "三种资源",
+      "blocks": [
+        {
+          "text": "人才\n经营者与员工；工程师与销售能力；知识、经验及组织能力。人才素质影响资源配置与执行力。"
+        },
+        {
+          "text": "资产\n工厂与设备；产品与原材料；技术、专利及品牌。设备和技术是创造竞争优势的基础。"
+        },
+        {
+          "text": "资本\n现金与资本；借款能力；投资资金与信用能力。资金可以重新配置到人才、设备、并购和研发。"
+        },
+        {
+          "text": "现代也有加入“信息”，将其视为四种经营资源的观点。"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "差距来自“使用方式”",
+      "subtitle": "资本配置 | 即使同样拥有100亿日元，企业十年后的价值也未必相同",
+      "blocks": [
+        {
+          "text": "强企业\n招聘优秀人才；投资高回报业务；减少不必要资产；精选研发与并购；将利润再投资。"
+        },
+        {
+          "text": "弱企业\n让剩余资金闲置；保留低回报业务；设备投资成效有限；人才未被充分利用；利润未能带来增长。"
+        },
+        {
+          "text": "“资产多” ≠ “好公司”\n能够以高收益率再投资资本的企业，越容易发挥复利效应。"
+        },
+        {
+          "text": "应观察利润率、ROE、ROIC、经营现金流、再投资去向及经营者的资本配置。"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "投资者要看“转化效率”",
+      "subtitle": "投资视角",
+      "blocks": [
+        {
+          "text": "人才：经营者是否正确配置资本？\n资产：设备、技术和品牌是否创造利润？\n资本：现金是否妥善用于成长投资、股东回报及并购？"
+        },
+        {
+          "text": "最终要问的问题\n每1日元资本，能创造多少日元价值？"
+        },
+        {
+          "text": "将人才、资产和资本转化为利润与现金的能力，构成企业的质量。"
+        },
+        {
+          "text": "好公司不只是“拥有资源的公司”，而是“能让资源增殖的公司”。"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "驅動企業的三種資源",
+      "subtitle": "商業基礎 | 僅僅「擁有」人才、資產和資本，並不等於企業價值",
+      "blocks": [
+        {
+          "text": "人才 × 資產 × 資本"
+        },
+        {
+          "text": "企業的實力不僅取決於資源數量。重要的是如何組合三者，以及能多有效率地將其轉化為利潤和現金。"
+        },
+        {
+          "text": "資源 → 生產力 → 利潤 → 再投資 → 企業價值"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "人才、資產、資本是什麼？",
+      "subtitle": "三種資源",
+      "blocks": [
+        {
+          "text": "人才\n經營者與員工；工程師與銷售能力；知識、經驗及組織能力。人才素質影響資源配置與執行力。"
+        },
+        {
+          "text": "資產\n工廠與設備；產品與原材料；技術、專利及品牌。設備和技術是創造競爭優勢的基礎。"
+        },
+        {
+          "text": "資本\n現金與資本；借款能力；投資資金與信用能力。資金可以重新配置到人才、設備、併購和研發。"
+        },
+        {
+          "text": "現代也有加入「資訊」，將其視為四種經營資源的觀點。"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "差距來自「使用方式」",
+      "subtitle": "資本配置 | 即使同樣擁有100億日圓，企業十年後的價值也未必相同",
+      "blocks": [
+        {
+          "text": "強企業\n招聘優秀人才；投資高回報業務；減少不必要資產；精選研發與併購；將利潤再投資。"
+        },
+        {
+          "text": "弱企業\n讓剩餘資金閒置；保留低回報業務；設備投資成效有限；人才未被充分利用；利潤未能帶來成長。"
+        },
+        {
+          "text": "「資產多」 ≠ 「好公司」\n能夠以高收益率再投資資本的企業，越容易發揮複利效應。"
+        },
+        {
+          "text": "應觀察利潤率、ROE、ROIC、營運現金流、再投資去向及經營者的資本配置。"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "投資者要看「轉化效率」",
+      "subtitle": "投資視角",
+      "blocks": [
+        {
+          "text": "人才：經營者是否正確配置資本？\n資產：設備、技術和品牌是否創造利潤？\n資本：現金是否妥善用於成長投資、股東回報及併購？"
+        },
+        {
+          "text": "最終要問的問題\n每1日圓資本，能創造多少日圓價值？"
+        },
+        {
+          "text": "將人才、資產和資本轉化為利潤與現金的能力，構成企業的品質。"
+        },
+        {
+          "text": "好公司不只是「擁有資源的公司」，而是「能讓資源增殖的公司」。"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    }
+  ]
+}

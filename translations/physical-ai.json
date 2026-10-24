@@ -1,0 +1,717 @@
+{
+  "en": [
+    {
+      "title": "What is physical AI?",
+      "subtitle": "TECHNOLOGY / PHYSICAL AI | AI perceives the real world, decides and drives machine actions",
+      "blocks": [
+        {
+          "h": "",
+          "text": "Physical AI is a technology field that connects AI with robots, vehicles, factory equipment and other machines to operate in the real world. Sensors gather information; AI decisions are passed to controllers and motors."
+        },
+        {
+          "h": "Perceive → decide → act",
+          "text": "Perceive: cameras and sensors identify the surrounding situation.\nDecide: AI models interpret the situation and determine the next action.\nAct: controllers drive motors and machines.\nThe system perceives changes after acting and repeats judgment and control. Safety, response speed and precision support use in real environments."
+        },
+        {
+          "h": "The range of related industries",
+          "text": "Connections extend beyond robots and components to semiconductors for computing, communications, electricity and other infrastructure. The degree of connection varies by company and business."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "Japanese companies and physical AI",
+      "subtitle": "Separate robots and components from industries supporting computing infrastructure",
+      "blocks": [
+        {
+          "table": [
+            [
+              "Field",
+              "Company / securities code",
+              "Business connection"
+            ],
+            [
+              "Robots",
+              "Kawasaki Heavy Industries (7012)",
+              "Industrial robots and automation equipment: machinery motion."
+            ],
+            [
+              "Precision reducers",
+              "Harmonic Drive Systems (6324)",
+              "Precision reducers used in robot joints and elsewhere; support high-precision motion."
+            ],
+            [
+              "Precision reducers",
+              "Nabtesco (6268)",
+              "Precision reducers for industrial robots; support joint drives."
+            ],
+            [
+              "Power / infrastructure",
+              "Mitsubishi Heavy Industries (7011)",
+              "Power-generation equipment and gas turbines; indirect connection through electricity supply supporting AI computing."
+            ],
+            [
+              "Industrial / social infrastructure",
+              "Hitachi (6501)",
+              "AI, control, power and industrial systems; factory and infrastructure automation."
+            ],
+            [
+              "Semiconductor equipment",
+              "Tokyo Electron (8035)",
+              "Equipment for making semiconductors; part of the supply chain supporting AI computing infrastructure."
+            ],
+            [
+              "Advanced semiconductors",
+              "Rapidus",
+              "Aims to establish domestic production of advanced logic chips; connection on the computing side."
+            ],
+            [
+              "AI / communications infrastructure",
+              "GMO Internet Group (9449)",
+              "AI and internet infrastructure; surrounding infrastructure rather than robots themselves."
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            130,
+            145,
+            235
+          ]
+        },
+        {
+          "h": "",
+          "text": "These are connections between each company’s business and technology fields; they do not indicate physical AI’s contribution to earnings."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "Technologies and industries supporting physical AI",
+      "subtitle": "Look beyond finished products to supply chains for perception, decisions and control",
+      "blocks": [
+        {
+          "table": [
+            [
+              "Role",
+              "Main technology / equipment",
+              "Required performance"
+            ],
+            [
+              "Brain",
+              "AI chips / AI models",
+              "Computing performance / energy efficiency"
+            ],
+            [
+              "Computing / communications foundation",
+              "Data centers / power / communications",
+              "Stable supply / communications quality"
+            ],
+            [
+              "Senses",
+              "Cameras / sensors / recognition",
+              "Accuracy of information acquisition / adaptation to the environment"
+            ],
+            [
+              "Nerves",
+              "Controllers / software",
+              "Response speed / safety"
+            ],
+            [
+              "Muscles / joints",
+              "Motors / reducers / actuators",
+              "Precision / durability / mass production"
+            ],
+            [
+              "Body",
+              "Robots / vehicles / industrial machines",
+              "Real-world operation / task performance"
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            130,
+            190,
+            190
+          ]
+        },
+        {
+          "h": "Combine technologies from chips to machine motion",
+          "text": "Practical deployment requires not only AI’s decision-making ability, but components, control systems and infrastructure for accurate and safe movement in the real world."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "es": [
+    {
+      "title": "¿Qué es la IA física?",
+      "subtitle": "TECNOLOGÍA / IA FÍSICA | Percibir el mundo real, decidir y mover máquinas",
+      "blocks": [
+        {
+          "h": "",
+          "text": "La IA física es un campo tecnológico que conecta la IA con robots, vehículos, equipos de fábrica y otras máquinas para operar en el mundo real. Los sensores recogen información y las decisiones de IA se transmiten a controladores y motores."
+        },
+        {
+          "h": "Percibir → decidir → actuar",
+          "text": "Percibir: cámaras y sensores captan el entorno.\nDecidir: los modelos de IA interpretan la situación y determinan la siguiente acción.\nActuar: los controladores accionan motores y máquinas.\nTras actuar, el sistema percibe los cambios y repite decisión y control. Seguridad, velocidad de respuesta y precisión permiten su uso en entornos reales."
+        },
+        {
+          "h": "Amplitud de las industrias relacionadas",
+          "text": "Los vínculos van más allá de robots y componentes: abarcan semiconductores de cálculo, comunicaciones, electricidad y otras infraestructuras. Su intensidad varía según la empresa y el negocio."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "Empresas japonesas e IA física",
+      "subtitle": "Separar robots y componentes de las industrias que apoyan el cálculo",
+      "blocks": [
+        {
+          "table": [
+            [
+              "Área",
+              "Empresa / código bursátil",
+              "Conexión con el negocio"
+            ],
+            [
+              "Robots",
+              "Kawasaki Heavy Industries (7012)",
+              "Robots industriales y equipos de automatización: movimiento de máquinas."
+            ],
+            [
+              "Reductores de precisión",
+              "Harmonic Drive Systems (6324)",
+              "Reductores usados en articulaciones de robots, entre otros; permiten movimientos precisos."
+            ],
+            [
+              "Reductores de precisión",
+              "Nabtesco (6268)",
+              "Reductores para robots industriales; accionamiento de articulaciones."
+            ],
+            [
+              "Energía / infraestructura",
+              "Mitsubishi Heavy Industries (7011)",
+              "Equipos de generación y turbinas de gas; vínculo indirecto mediante electricidad para el cálculo de IA."
+            ],
+            [
+              "Infraestructura industrial / social",
+              "Hitachi (6501)",
+              "IA, control, energía y sistemas industriales; automatización de fábricas e infraestructuras."
+            ],
+            [
+              "Equipos de semiconductores",
+              "Tokyo Electron (8035)",
+              "Equipos para fabricar semiconductores; parte de la cadena que sostiene la infraestructura de cálculo de IA."
+            ],
+            [
+              "Semiconductores avanzados",
+              "Rapidus",
+              "Busca producir chips lógicos avanzados en Japón; vínculo del lado del cálculo."
+            ],
+            [
+              "Infraestructura de IA / comunicaciones",
+              "GMO Internet Group (9449)",
+              "Infraestructura de IA e internet; infraestructura circundante, distinta del robot."
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            130,
+            145,
+            235
+          ]
+        },
+        {
+          "h": "",
+          "text": "Se muestran vínculos entre negocios y tecnologías; no indican contribuciones de la IA física a los resultados."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "Tecnologías e industrias que sostienen la IA física",
+      "subtitle": "Mirar más allá del producto: cadenas de percepción, decisión y control",
+      "blocks": [
+        {
+          "table": [
+            [
+              "Función",
+              "Tecnología / equipos principales",
+              "Rendimiento requerido"
+            ],
+            [
+              "Cerebro",
+              "Chips de IA / modelos de IA",
+              "Capacidad de cálculo / eficiencia energética"
+            ],
+            [
+              "Base de cálculo / comunicaciones",
+              "Centros de datos / energía / comunicaciones",
+              "Suministro estable / calidad de comunicación"
+            ],
+            [
+              "Sentidos",
+              "Cámaras / sensores / reconocimiento",
+              "Precisión de captación / adaptación al entorno"
+            ],
+            [
+              "Nervios",
+              "Controladores / software",
+              "Velocidad de respuesta / seguridad"
+            ],
+            [
+              "Músculos / articulaciones",
+              "Motores / reductores / actuadores",
+              "Precisión / durabilidad / producción en masa"
+            ],
+            [
+              "Cuerpo",
+              "Robots / vehículos / máquinas industriales",
+              "Operación real / rendimiento de trabajo"
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            130,
+            190,
+            190
+          ]
+        },
+        {
+          "h": "Combinar tecnologías desde chips hasta movimiento",
+          "text": "La aplicación práctica requiere, además de la capacidad de decisión de la IA, componentes, control e infraestructura para moverse con precisión y seguridad en el mundo real."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "pt": [
+    {
+      "title": "O que é IA física?",
+      "subtitle": "TECNOLOGIA / IA FÍSICA | Perceber o mundo real, decidir e mover máquinas",
+      "blocks": [
+        {
+          "h": "",
+          "text": "IA física é uma área tecnológica que conecta IA a robôs, veículos, equipamentos industriais e outras máquinas para atuar no mundo real. Sensores obtêm informações, e decisões da IA são transmitidas a controladores e motores."
+        },
+        {
+          "h": "Perceber → decidir → agir",
+          "text": "Perceber: câmeras e sensores captam o ambiente.\nDecidir: modelos de IA interpretam a situação e determinam a próxima ação.\nAgir: controladores acionam motores e máquinas.\nApós agir, o sistema percebe as mudanças e repete decisão e controle. Segurança, velocidade de resposta e precisão sustentam o uso em ambientes reais."
+        },
+        {
+          "h": "Amplitude dos setores relacionados",
+          "text": "As conexões vão além de robôs e peças: incluem semicondutores de computação, comunicações, energia e outras infraestruturas. O grau de relação varia por empresa e negócio."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "Empresas japonesas e IA física",
+      "subtitle": "Separar robôs e peças dos setores que sustentam a computação",
+      "blocks": [
+        {
+          "table": [
+            [
+              "Área",
+              "Empresa / código de negociação",
+              "Conexão com o negócio"
+            ],
+            [
+              "Robôs",
+              "Kawasaki Heavy Industries (7012)",
+              "Robôs industriais e equipamentos de automação: movimento das máquinas."
+            ],
+            [
+              "Redutores de precisão",
+              "Harmonic Drive Systems (6324)",
+              "Redutores usados em juntas de robôs e outras aplicações; movimentos de alta precisão."
+            ],
+            [
+              "Redutores de precisão",
+              "Nabtesco (6268)",
+              "Redutores para robôs industriais; acionamento das juntas."
+            ],
+            [
+              "Energia / infraestrutura",
+              "Mitsubishi Heavy Industries (7011)",
+              "Equipamentos de geração e turbinas a gás; conexão indireta pela energia que sustenta a computação de IA."
+            ],
+            [
+              "Infraestrutura industrial / social",
+              "Hitachi (6501)",
+              "IA, controle, energia e sistemas industriais; automação de fábricas e infraestrutura."
+            ],
+            [
+              "Equipamentos de semicondutores",
+              "Tokyo Electron (8035)",
+              "Equipamentos de fabricação de semicondutores; parte da cadeia que sustenta a computação de IA."
+            ],
+            [
+              "Semicondutores avançados",
+              "Rapidus",
+              "Busca produzir chips lógicos avançados no Japão; conexão pelo lado da computação."
+            ],
+            [
+              "Infraestrutura de IA / comunicações",
+              "GMO Internet Group (9449)",
+              "Infraestrutura de IA e internet; infraestrutura periférica, distinta dos robôs."
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            130,
+            145,
+            235
+          ]
+        },
+        {
+          "h": "",
+          "text": "São conexões entre negócios e tecnologias; não indicam a contribuição da IA física aos resultados."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "Tecnologias e setores que sustentam a IA física",
+      "subtitle": "Olhar além do produto: cadeias de percepção, decisão e controle",
+      "blocks": [
+        {
+          "table": [
+            [
+              "Função",
+              "Tecnologias / equipamentos principais",
+              "Desempenho exigido"
+            ],
+            [
+              "Cérebro",
+              "Chips de IA / modelos de IA",
+              "Capacidade de cálculo / eficiência energética"
+            ],
+            [
+              "Base de computação / comunicações",
+              "Data centers / energia / comunicações",
+              "Fornecimento estável / qualidade da comunicação"
+            ],
+            [
+              "Sentidos",
+              "Câmeras / sensores / reconhecimento",
+              "Precisão na aquisição / adaptação ao ambiente"
+            ],
+            [
+              "Nervos",
+              "Controladores / software",
+              "Velocidade de resposta / segurança"
+            ],
+            [
+              "Músculos / juntas",
+              "Motores / redutores / atuadores",
+              "Precisão / durabilidade / produção em massa"
+            ],
+            [
+              "Corpo",
+              "Robôs / veículos / máquinas industriais",
+              "Operação real / desempenho das tarefas"
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            130,
+            190,
+            190
+          ]
+        },
+        {
+          "h": "Combinar tecnologias de chips a movimentos",
+          "text": "A aplicação prática exige, além da capacidade decisória da IA, componentes, controle e infraestrutura para movimentos precisos e seguros no mundo real."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "什么是物理AI？",
+      "subtitle": "技术 / 物理AI | AI感知现实世界、判断并驱动机械动作的技术",
+      "blocks": [
+        {
+          "h": "",
+          "text": "物理AI是将AI与机器人、车辆、工厂设备等结合，使其在现实世界中运行的技术领域。传感器获取信息，将AI的判断传递给控制装置和电机。"
+        },
+        {
+          "h": "感知 → 判断 → 行动",
+          "text": "感知：通过摄像头和传感器把握周围状况。\n判断：AI模型解读状况，决定下一步动作。\n行动：通过控制装置驱动电机和机械。\n动作后再次感知变化，反复进行判断与控制。安全性、响应速度和精密性支撑真实环境中的应用。"
+        },
+        {
+          "h": "相关产业的延伸",
+          "text": "除机器人本体与零部件外，也涉及承担计算的半导体、通信、电力等周边基础设施。不过，关联程度因企业和业务而异。"
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "日本企业与物理AI的关联",
+      "subtitle": "区分机器人、零部件与支撑计算基础设施的周边产业",
+      "blocks": [
+        {
+          "table": [
+            [
+              "领域",
+              "企业 / 证券代码",
+              "业务关联"
+            ],
+            [
+              "机器人",
+              "川崎重工业（7012）",
+              "工业机器人与自动化设备，承担机械动作。"
+            ],
+            [
+              "精密减速器",
+              "Harmonic Drive Systems（6324）",
+              "用于机器人关节等的精密减速器，支撑高精度动作。"
+            ],
+            [
+              "精密减速器",
+              "纳博特斯克（6268）",
+              "面向工业机器人的精密减速器，支撑关节驱动。"
+            ],
+            [
+              "电力 / 基础设施",
+              "三菱重工业（7011）",
+              "发电设备和燃气轮机。通过支持AI计算的电力供应形成间接关联。"
+            ],
+            [
+              "工业 / 社会基础设施",
+              "日立制作所（6501）",
+              "AI、控制、电力与工业系统，与工厂和基础设施自动化有关。"
+            ],
+            [
+              "半导体制造设备",
+              "东京电子（8035）",
+              "制造半导体的设备，是支持AI计算基础设施的供应链的一环。"
+            ],
+            [
+              "先进半导体",
+              "Rapidus",
+              "以先进逻辑半导体的日本本土化为目标，关联在计算基础设施侧。"
+            ],
+            [
+              "AI / 通信基础设施",
+              "GMO Internet Group（9449）",
+              "AI与互联网基础设施，属于与机器人本体不同的周边基础设施。"
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            130,
+            145,
+            235
+          ]
+        },
+        {
+          "h": "",
+          "text": "本表展示各企业业务与技术领域的关联，并不表示物理AI对业绩的贡献。"
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "支撑物理AI的技术与产业",
+      "subtitle": "不仅看成品，也看支撑感知、判断与控制的供应链",
+      "blocks": [
+        {
+          "table": [
+            [
+              "角色",
+              "主要技术与设备",
+              "所需性能"
+            ],
+            [
+              "大脑",
+              "AI半导体 / AI模型",
+              "计算性能 / 低功耗"
+            ],
+            [
+              "计算与通信基础",
+              "数据中心 / 电力 / 通信",
+              "稳定供应 / 通信质量"
+            ],
+            [
+              "感官",
+              "摄像头 / 传感器 / 识别技术",
+              "信息采集精度 / 环境适应"
+            ],
+            [
+              "神经",
+              "控制装置 / 软件",
+              "响应速度 / 安全性"
+            ],
+            [
+              "肌肉与关节",
+              "电机 / 减速器 / 执行器",
+              "精密性 / 耐久性 / 量产能力"
+            ],
+            [
+              "身体",
+              "机器人 / 车辆 / 工业机械",
+              "真实环境中的运行 / 作业性能"
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            130,
+            190,
+            190
+          ]
+        },
+        {
+          "h": "从半导体到机械动作，组合多项技术",
+          "text": "物理AI实用化不仅需要AI的判断能力，也需要能在现实世界准确、安全运行的零部件、控制与基础设施。"
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "什麼是實體AI？",
+      "subtitle": "技術 / 實體AI | AI感知現實世界、判斷並驅動機械動作的技術",
+      "blocks": [
+        {
+          "h": "",
+          "text": "實體AI是將AI與機器人、車輛、工廠設備等結合，使其在現實世界中運作的技術領域。感測器獲取資訊，將AI的判斷傳遞給控制裝置和馬達。"
+        },
+        {
+          "h": "感知 → 判斷 → 行動",
+          "text": "感知：透過攝影機和感測器掌握周圍狀況。\n判斷：AI模型解讀狀況，決定下一步動作。\n行動：透過控制裝置驅動馬達和機械。\n動作後再次感知變化，反覆進行判斷與控制。安全性、反應速度和精密性支撐真實環境中的應用。"
+        },
+        {
+          "h": "相關產業的延伸",
+          "text": "除機器人本體與零組件外，也涉及承擔計算的半導體、通訊、電力等周邊基礎設施。不過，關聯程度因企業和業務而異。"
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "日本企業與實體AI的關聯",
+      "subtitle": "區分機器人、零組件與支撐計算基礎設施的周邊產業",
+      "blocks": [
+        {
+          "table": [
+            [
+              "領域",
+              "企業 / 證券代碼",
+              "業務關聯"
+            ],
+            [
+              "機器人",
+              "川崎重工業（7012）",
+              "工業機器人與自動化設備，承擔機械動作。"
+            ],
+            [
+              "精密減速機",
+              "Harmonic Drive Systems（6324）",
+              "用於機器人關節等的精密減速機，支撐高精度動作。"
+            ],
+            [
+              "精密減速機",
+              "納博特斯克（6268）",
+              "面向工業機器人的精密減速機，支撐關節驅動。"
+            ],
+            [
+              "電力 / 基礎設施",
+              "三菱重工業（7011）",
+              "發電設備和燃氣渦輪機。透過支援AI計算的電力供應形成間接關聯。"
+            ],
+            [
+              "工業 / 社會基礎設施",
+              "日立製作所（6501）",
+              "AI、控制、電力與工業系統，與工廠和基礎設施自動化有關。"
+            ],
+            [
+              "半導體製造設備",
+              "東京威力科創（8035）",
+              "製造半導體的設備，是支援AI計算基礎設施的供應鏈的一環。"
+            ],
+            [
+              "先進半導體",
+              "Rapidus",
+              "以先進邏輯半導體的日本本土化為目標，關聯在計算基礎設施側。"
+            ],
+            [
+              "AI / 通訊基礎設施",
+              "GMO Internet Group（9449）",
+              "AI與網際網路基礎設施，屬於與機器人本體不同的周邊基礎設施。"
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            130,
+            145,
+            235
+          ]
+        },
+        {
+          "h": "",
+          "text": "本表展示各企業業務與技術領域的關聯，並不表示實體AI對業績的貢獻。"
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "支撐實體AI的技術與產業",
+      "subtitle": "不僅看成品，也看支撐感知、判斷與控制的供應鏈",
+      "blocks": [
+        {
+          "table": [
+            [
+              "角色",
+              "主要技術與設備",
+              "所需性能"
+            ],
+            [
+              "大腦",
+              "AI半導體 / AI模型",
+              "計算性能 / 低功耗"
+            ],
+            [
+              "計算與通訊基礎",
+              "資料中心 / 電力 / 通訊",
+              "穩定供應 / 通訊品質"
+            ],
+            [
+              "感官",
+              "攝影機 / 感測器 / 識別技術",
+              "資訊採集精度 / 環境適應"
+            ],
+            [
+              "神經",
+              "控制裝置 / 軟體",
+              "反應速度 / 安全性"
+            ],
+            [
+              "肌肉與關節",
+              "馬達 / 減速機 / 致動器",
+              "精密性 / 耐久性 / 量產能力"
+            ],
+            [
+              "身體",
+              "機器人 / 車輛 / 工業機械",
+              "真實環境中的運作 / 作業性能"
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            130,
+            190,
+            190
+          ]
+        },
+        {
+          "h": "從半導體到機械動作，組合多項技術",
+          "text": "實體AI實用化不僅需要AI的判斷能力，也需要能在現實世界準確、安全運作的零組件、控制與基礎設施。"
+        }
+      ],
+      "dense": true
+    }
+  ]
+}

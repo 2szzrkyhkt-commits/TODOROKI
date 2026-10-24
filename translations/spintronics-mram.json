@@ -1,0 +1,297 @@
+{
+  "en": [
+    {
+      "title": "01 | How spintronics works",
+      "subtitle": "Using electrons’ charge and spin",
+      "blocks": [
+        {
+          "h": "",
+          "text": "Spin is related to an electron’s magnetic properties. MRAM, a representative example, is memory that retains stored information when power is turned off."
+        },
+        {
+          "h": "Memory element: MTJ (magnetic tunnel junction)",
+          "text": "Magnetic layer | ultrathin insulating film | magnetic layer. Uses the “tunneling effect,” in which electrons pass through the insulating film. Resistance changes according to the magnetization directions of the two magnetic layers."
+        },
+        {
+          "h": "From writing to reading",
+          "text": "① Current or other means changes one layer’s magnetization to write 0 and 1.\n② Parallel magnetization gives low resistance; antiparallel gives high resistance.\n③ This resistance difference is used to read 0 and 1.\nNo current is needed to retain the record, helping reduce power use."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "02 | Japanese research institutions and companies",
+      "subtitle": "Connecting basic research, manufacturing equipment and products",
+      "blocks": [
+        {
+          "h": "Basic research | AIST and Tohoku University",
+          "text": "AIST developed MTJs using magnesium oxide (MgO). Tohoku University also advances research on magnetic materials and spin control. Japanese research contributes to MRAM’s foundational technology."
+        },
+        {
+          "h": "Manufacturing equipment | Canon Anelva and Tokyo Electron",
+          "text": "Magnetic materials and insulating films are stacked in extremely thin, uniform layers. Canon Anelva offers deposition and processing equipment for MRAM. Tokyo Electron offers deposition equipment for STT-MRAM."
+        },
+        {
+          "h": "Products | Renesas Electronics and TDK",
+          "text": "Renesas commercializes microcontrollers with embedded MRAM. TDK offers sensors using the TMR (tunnel magnetoresistance) effect. MRAM stores information; magnetic sensors detect magnetic fields."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "03 | Commercialization: progress and challenges",
+      "subtitle": "Fields reaching products, and fields still in R&D",
+      "blocks": [
+        {
+          "h": "Areas moving into practical use",
+          "text": "Microcontrollers with embedded MRAM and TMR magnetic sensors are already commercial products. MRAM retains data after power is off. Some Renesas microcontrollers adopt TSMC’s MRAM technology."
+        },
+        {
+          "h": "Technology and manufacturing challenges",
+          "text": "Challenges include larger capacity, manufacturing cost and lower write power. Speed, retention and endurance must be balanced for each use. Thin-film uniformity and mass-production yield are also important."
+        },
+        {
+          "h": "Next-generation technology and wider applications",
+          "text": "Faster next-generation MRAM and computing applications are under R&D. Performance and cost determine how it is used alongside existing memory. It has not been decided that it will replace all DRAM."
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "es": [
+    {
+      "title": "01 | Cómo funciona la espintrónica",
+      "subtitle": "Utilizar la carga y el espín del electrón",
+      "blocks": [
+        {
+          "h": "",
+          "text": "El espín está relacionado con las propiedades magnéticas del electrón. La MRAM, un ejemplo representativo, conserva la información almacenada al cortar la alimentación."
+        },
+        {
+          "h": "Elemento de memoria: MTJ (unión túnel magnética)",
+          "text": "Capa magnética | película aislante ultrafina | capa magnética. Utiliza el «efecto túnel», por el que los electrones atraviesan el aislante. La resistencia cambia según las direcciones de magnetización de ambas capas."
+        },
+        {
+          "h": "De escritura a lectura",
+          "text": "① Una corriente u otro medio cambia la magnetización de una capa para escribir 0 y 1.\n② Magnetizaciones paralelas producen baja resistencia; antiparalelas, alta resistencia.\n③ Esa diferencia permite leer 0 y 1.\nNo hace falta corriente para retener el registro, lo que ayuda a ahorrar energía."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "02 | Instituciones de investigación y empresas japonesas",
+      "subtitle": "Conectar investigación básica, equipos de fabricación y productos",
+      "blocks": [
+        {
+          "h": "Investigación básica | AIST y Universidad de Tohoku",
+          "text": "AIST desarrolló MTJ con óxido de magnesio (MgO). La Universidad de Tohoku también impulsa investigaciones de materiales magnéticos y control del espín. La investigación japonesa contribuye a la tecnología fundamental de MRAM."
+        },
+        {
+          "h": "Equipos | Canon Anelva y Tokyo Electron",
+          "text": "Se apilan materiales magnéticos y aislantes en capas extremadamente finas y uniformes. Canon Anelva ofrece equipos de deposición y procesamiento para MRAM. Tokyo Electron ofrece equipos de deposición para STT-MRAM."
+        },
+        {
+          "h": "Productos | Renesas Electronics y TDK",
+          "text": "Renesas comercializa microcontroladores con MRAM integrada. TDK ofrece sensores que usan TMR (magnetorresistencia túnel). La MRAM almacena información; los sensores magnéticos detectan campos magnéticos."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "03 | Comercialización: avances y retos",
+      "subtitle": "Áreas con productos y áreas aún en I+D",
+      "blocks": [
+        {
+          "h": "Áreas de uso práctico",
+          "text": "Los microcontroladores con MRAM integrada y los sensores magnéticos TMR ya son productos comerciales. La MRAM retiene datos sin alimentación. Algunos microcontroladores de Renesas adoptan la tecnología MRAM de TSMC."
+        },
+        {
+          "h": "Retos tecnológicos y de fabricación",
+          "text": "Los retos incluyen mayor capacidad, costes de fabricación y menor energía de escritura. Hay que equilibrar velocidad, retención y resistencia según el uso. También importan la uniformidad de películas finas y el rendimiento de producción en serie."
+        },
+        {
+          "h": "Próxima generación y ampliación de aplicaciones",
+          "text": "Se investigan MRAM de próxima generación más rápidas y aplicaciones al cálculo. Prestaciones y costes determinan su uso junto a memorias existentes. No está decidido que sustituya toda la DRAM."
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "pt": [
+    {
+      "title": "01 | Como funciona a spintrônica",
+      "subtitle": "Usar a carga e o spin dos elétrons",
+      "blocks": [
+        {
+          "h": "",
+          "text": "O spin se relaciona às propriedades magnéticas do elétron. A MRAM, um exemplo representativo, mantém as informações armazenadas mesmo sem energia."
+        },
+        {
+          "h": "Elemento de memória: MTJ (junção de túnel magnético)",
+          "text": "Camada magnética | filme isolante ultrafino | camada magnética. Usa o “efeito túnel”, pelo qual elétrons atravessam o isolante. A resistência muda conforme as direções de magnetização das duas camadas."
+        },
+        {
+          "h": "Da gravação à leitura",
+          "text": "① Corrente ou outro meio altera a magnetização de uma camada para gravar 0 e 1.\n② Magnetizações paralelas produzem baixa resistência; antiparalelas, alta resistência.\n③ Essa diferença permite ler 0 e 1.\nNão é necessária corrente para manter o registro, ajudando a economizar energia."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "02 | Instituições de pesquisa e empresas japonesas",
+      "subtitle": "Conectar pesquisa básica, equipamentos de fabricação e produtos",
+      "blocks": [
+        {
+          "h": "Pesquisa básica | AIST e Universidade de Tohoku",
+          "text": "A AIST desenvolveu MTJs com óxido de magnésio (MgO). A Universidade de Tohoku também promove pesquisa de materiais magnéticos e controle de spin. A pesquisa japonesa contribui à tecnologia fundamental da MRAM."
+        },
+        {
+          "h": "Equipamentos | Canon Anelva e Tokyo Electron",
+          "text": "Materiais magnéticos e filmes isolantes são empilhados em camadas extremamente finas e uniformes. A Canon Anelva oferece equipamentos de deposição e processamento para MRAM. A Tokyo Electron oferece equipamentos de deposição para STT-MRAM."
+        },
+        {
+          "h": "Produtos | Renesas Electronics e TDK",
+          "text": "A Renesas comercializa microcontroladores com MRAM integrada. A TDK oferece sensores que usam TMR (magnetorresistência de túnel). A MRAM armazena informações; sensores magnéticos detectam campos magnéticos."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "03 | Comercialização: avanços e desafios",
+      "subtitle": "Áreas com produtos e áreas ainda em P&D",
+      "blocks": [
+        {
+          "h": "Áreas em uso prático",
+          "text": "Microcontroladores com MRAM integrada e sensores magnéticos TMR já são produtos comerciais. A MRAM mantém dados após desligar a energia. Alguns microcontroladores da Renesas adotam a tecnologia MRAM da TSMC."
+        },
+        {
+          "h": "Desafios tecnológicos e de fabricação",
+          "text": "Os desafios incluem maior capacidade, custo de fabricação e menor energia de gravação. É preciso equilibrar velocidade, retenção e durabilidade conforme o uso. Uniformidade dos filmes finos e rendimento na produção em massa também importam."
+        },
+        {
+          "h": "Próxima geração e ampliação de aplicações",
+          "text": "Estão em P&D MRAMs de próxima geração mais rápidas e aplicações em computação. Desempenho e custo determinam seu uso junto às memórias existentes. Não está definido que substituirá toda a DRAM."
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "01 | 自旋电子学的原理",
+      "subtitle": "利用电子“电荷”与“自旋”的技术",
+      "blocks": [
+        {
+          "h": "",
+          "text": "自旋与电子具有的磁性性质有关。代表性应用MRAM是一种断电后仍保留记录的存储器。"
+        },
+        {
+          "h": "存储元件MTJ（磁性隧道结）",
+          "text": "磁性层 | 极薄绝缘膜 | 磁性层。利用电子穿过绝缘膜的“隧穿效应”。两层磁性层的磁化方向决定电阻变化。"
+        },
+        {
+          "h": "从写入到读取",
+          "text": "①通过电流等改变其中一层的磁化，写入0与1。\n②磁化方向平行时为低电阻，反平行时为高电阻。\n③利用电阻差读取0与1。\n保持记录不需通电，有助于降低功耗。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "02 | 日本研究机构与企业",
+      "subtitle": "连接基础研究、制造设备与产品的技术",
+      "blocks": [
+        {
+          "h": "基础研究 | 产业技术综合研究所、东北大学",
+          "text": "产综研开发了采用氧化镁（MgO）的MTJ。东北大学也推进磁性材料与自旋控制研究。日本研究成果为MRAM的基础技术作出贡献。"
+        },
+        {
+          "h": "制造设备 | 佳能Anelva、东京电子",
+          "text": "以极薄、均匀的方式堆叠磁性材料与绝缘膜。佳能Anelva提供MRAM用薄膜沉积及加工设备。东京电子提供STT-MRAM用薄膜沉积设备。"
+        },
+        {
+          "h": "产品 | 瑞萨电子、TDK",
+          "text": "瑞萨将内置MRAM的微控制器产品化。TDK提供利用TMR（隧道磁阻）效应的传感器。MRAM用于存储信息，磁传感器用于检测磁场。"
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "03 | 实用化现状与课题",
+      "subtitle": "产品化推进的领域与仍在研发的领域",
+      "blocks": [
+        {
+          "h": "实用化推进的领域",
+          "text": "内置MRAM的微控制器及TMR磁传感器已产品化。MRAM断电后仍可保持数据。瑞萨部分微控制器采用TSMC的MRAM技术。"
+        },
+        {
+          "h": "技术与制造课题",
+          "text": "课题包括扩大容量、制造成本与改善写入功耗。需按用途兼顾速度、记录保持与耐久性。薄膜均匀性与量产良率也很重要。"
+        },
+        {
+          "h": "下一代技术与用途扩展",
+          "text": "正在研发更高速的下一代MRAM及运算应用。与既有存储器如何分工，取决于性能及成本。尚未确定其会全面替代DRAM。"
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "01 | 自旋電子學的原理",
+      "subtitle": "利用電子「電荷」與「自旋」的技術",
+      "blocks": [
+        {
+          "h": "",
+          "text": "自旋與電子具有的磁性性質有關。代表性應用MRAM是一種斷電後仍保留記錄的記憶體。"
+        },
+        {
+          "h": "記憶元件MTJ（磁性穿隧接面）",
+          "text": "磁性層 | 極薄絕緣膜 | 磁性層。利用電子穿過絕緣膜的「穿隧效應」。兩層磁性層的磁化方向決定電阻變化。"
+        },
+        {
+          "h": "從寫入到讀取",
+          "text": "①透過電流等改變其中一層的磁化，寫入0與1。\n②磁化方向平行時為低電阻，反平行時為高電阻。\n③利用電阻差讀取0與1。\n保持記錄不需通電，有助於降低功耗。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "02 | 日本研究機構與企業",
+      "subtitle": "連接基礎研究、製造設備與產品的技術",
+      "blocks": [
+        {
+          "h": "基礎研究 | 產業技術綜合研究所、東北大學",
+          "text": "產綜研開發了採用氧化鎂（MgO）的MTJ。東北大學也推進磁性材料與自旋控制研究。日本研究成果為MRAM的基礎技術作出貢獻。"
+        },
+        {
+          "h": "製造設備 | 佳能Anelva、東京威力科創",
+          "text": "以極薄、均勻的方式堆疊磁性材料與絕緣膜。佳能Anelva提供MRAM用薄膜沉積及加工設備。東京威力科創提供STT-MRAM用薄膜沉積設備。"
+        },
+        {
+          "h": "產品 | 瑞薩電子、TDK",
+          "text": "瑞薩將內建MRAM的微控制器產品化。TDK提供利用TMR（穿隧磁阻）效應的感測器。MRAM用於儲存資訊，磁感測器用於偵測磁場。"
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "03 | 實用化現況與課題",
+      "subtitle": "產品化推進的領域與仍在研發的領域",
+      "blocks": [
+        {
+          "h": "實用化推進的領域",
+          "text": "內建MRAM的微控制器及TMR磁感測器已產品化。MRAM斷電後仍可保持資料。瑞薩部分微控制器採用TSMC的MRAM技術。"
+        },
+        {
+          "h": "技術與製造課題",
+          "text": "課題包括擴大容量、製造成本與改善寫入功耗。需按用途兼顧速度、記錄保持與耐久性。薄膜均勻性與量產良率也很重要。"
+        },
+        {
+          "h": "下一代技術與用途擴展",
+          "text": "正在研發更高速的下一代MRAM及運算應用。與既有記憶體如何分工，取決於效能及成本。尚未確定其會全面取代DRAM。"
+        }
+      ],
+      "dense": false
+    }
+  ]
+}

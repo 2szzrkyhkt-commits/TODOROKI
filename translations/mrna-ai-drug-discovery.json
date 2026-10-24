@@ -1,0 +1,412 @@
+{
+  "en": [
+    {
+      "title": "What are mRNA and AI drug discovery?",
+      "subtitle": "How the technologies work and related companies",
+      "blocks": [
+        {
+          "h": "Two technologies changing drug development",
+          "text": "mRNA is a molecule that conveys instructions for making specific proteins in the body. Research uses this property for infectious-disease vaccines and applications in cancer, rare diseases and other conditions."
+        },
+        {
+          "h": "What is AI drug discovery?",
+          "text": "Using AI to support the search for disease-related targets and the design and prediction of molecules that may become drug candidates. Combined with researchers’ experiments and clinical trials, it aims to make development more efficient."
+        },
+        {
+          "h": "These are different technologies",
+          "text": "mRNA is one technological platform for medicines. AI drug discovery is a method supporting R&D across many kinds of medicines, not just mRNA products.\nThe focus is on how development time, success rates and costs actually change."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "01 | Expanding mRNA applications",
+      "subtitle": "From infectious-disease vaccines toward therapeutic applications",
+      "blocks": [
+        {
+          "h": "Moderna",
+          "text": "Alongside its infectious-disease vaccine business, Moderna is pursuing R&D applying mRNA to cancer, rare diseases and other conditions. Beyond vaccines, clinical trials are important for verifying efficacy and safety."
+        },
+        {
+          "h": "BioNTech",
+          "text": "Develops mRNA-based cancer immunotherapies as well as antibody-drug conjugates (ADCs) and other technologies. It aims to expand cancer treatment options by combining multiple technologies."
+        },
+        {
+          "h": "Maravai LifeSciences",
+          "text": "Supplies reagents and technologies needed for research and manufacturing. Unlike companies selling finished medicines, it supports development of mRNA medicines and other products.\nDrug developers and companies supporting research and manufacturing have different business structures and ways of generating revenue."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "02 | How AI changes drug discovery",
+      "subtitle": "Toward R&D linking molecular design and experiments",
+      "blocks": [
+        {
+          "h": "Isomorphic Labs",
+          "text": "An AI drug discovery company under Alphabet. In May 2026 it announced a US$2.1 billion funding round. Alongside AI model development, it is expanding its capacity to apply the technology to drug design and development."
+        },
+        {
+          "h": "Eli Lilly × NVIDIA",
+          "text": "In January 2026 they announced a joint AI drug discovery research hub. The companies outlined plans to invest a combined total of up to US$1 billion over five years in personnel, research, computing infrastructure and related areas."
+        },
+        {
+          "h": "The R&D cycle",
+          "text": "Design candidates with AI → validate through experiments → collect data → improve the model.\nAccelerating this cycle is the aim of combining AI with experimental facilities.\nBetter prediction accuracy does not automatically mean drug approval or success of the development process as a whole."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "03 | Companies and industry structure",
+      "subtitle": "From developing technology to commercializing medicines",
+      "blocks": [
+        {
+          "h": "mRNA technology",
+          "text": "Moderna / BioNTech\nAccumulate design technology and clinical data, aiming for commercialization."
+        },
+        {
+          "h": "Drug discovery AI",
+          "text": "Isomorphic Labs\nApplies molecular design and predictive models in R&D."
+        },
+        {
+          "h": "Pharmaceuticals and AI infrastructure",
+          "text": "Eli Lilly / NVIDIA\nConnect pharmaceutical knowledge and computing infrastructure with R&D."
+        },
+        {
+          "h": "Research and manufacturing support",
+          "text": "Maravai LifeSciences\nSupplies reagents and technologies necessary for development and manufacturing.\nTechnological progress, clinical trial results and commercialization are distinct stages. Distinguishing each company’s role makes the whole industry easier to understand."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "es": [
+    {
+      "title": "¿Qué son el ARNm y el descubrimiento de fármacos con IA?",
+      "subtitle": "Cómo funcionan las tecnologías y empresas relacionadas",
+      "blocks": [
+        {
+          "h": "Dos tecnologías que transforman el desarrollo farmacéutico",
+          "text": "El ARNm es una molécula que transmite instrucciones para fabricar proteínas específicas en el organismo. Se aprovecha esta propiedad en vacunas contra enfermedades infecciosas y se investigan aplicaciones en cáncer, enfermedades raras y otras afecciones."
+        },
+        {
+          "h": "¿Qué es el descubrimiento de fármacos con IA?",
+          "text": "Utilizar IA para apoyar la búsqueda de dianas relacionadas con enfermedades y el diseño y la predicción de moléculas candidatas a fármacos. Se combina con experimentos de investigadores y ensayos clínicos para mejorar la eficiencia del desarrollo."
+        },
+        {
+          "h": "Son tecnologías distintas",
+          "text": "El ARNm es una de las plataformas tecnológicas para medicamentos. El descubrimiento con IA es un método que apoya la I+D de muchos tipos de fármacos, no solo los de ARNm.\nLa clave es cómo cambian realmente los plazos, las tasas de éxito y los costes."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "01 | Ampliación de los usos del ARNm",
+      "subtitle": "De las vacunas contra infecciones a aplicaciones terapéuticas",
+      "blocks": [
+        {
+          "h": "Moderna",
+          "text": "Además de su negocio de vacunas contra infecciones, investiga aplicaciones del ARNm al cáncer, las enfermedades raras y otras afecciones. En usos distintos de las vacunas, es importante comprobar eficacia y seguridad mediante ensayos clínicos."
+        },
+        {
+          "h": "BioNTech",
+          "text": "Desarrolla inmunoterapias contra el cáncer con ARNm, además de conjugados anticuerpo-fármaco (ADC) y otras tecnologías. Busca ampliar las opciones de tratamiento combinando varias tecnologías."
+        },
+        {
+          "h": "Maravai LifeSciences",
+          "text": "Suministra reactivos y tecnologías necesarios para investigación y fabricación. A diferencia de las empresas que venden medicamentos terminados, apoya el desarrollo de fármacos de ARNm y otros productos.\nLas empresas que desarrollan fármacos y las que apoyan investigación y fabricación tienen modelos de negocio y fuentes de ingresos diferentes."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "02 | Cómo cambia la IA el descubrimiento de fármacos",
+      "subtitle": "Hacia una I+D que conecte diseño molecular y experimentos",
+      "blocks": [
+        {
+          "h": "Isomorphic Labs",
+          "text": "Empresa de descubrimiento de fármacos con IA de Alphabet. En mayo de 2026 anunció una financiación de 2.100 millones de dólares. Además de desarrollar modelos de IA, amplía su capacidad para aplicarlos al diseño y desarrollo de fármacos."
+        },
+        {
+          "h": "Eli Lilly × NVIDIA",
+          "text": "En enero de 2026 anunciaron un centro conjunto de investigación de fármacos con IA. Plantearon invertir conjuntamente hasta 1.000 millones de dólares en cinco años en personal, investigación, infraestructura informática y áreas relacionadas."
+        },
+        {
+          "h": "El ciclo de I+D",
+          "text": "Diseñar candidatos con IA → verificar con experimentos → recopilar datos → mejorar el modelo.\nAcelerar este ciclo es el objetivo de combinar IA e instalaciones experimentales.\nUna mayor precisión predictiva no implica automáticamente la aprobación de medicamentos ni el éxito del desarrollo en su conjunto."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "03 | Empresas y estructura industrial",
+      "subtitle": "Del desarrollo tecnológico a la comercialización de medicamentos",
+      "blocks": [
+        {
+          "h": "Tecnología de ARNm",
+          "text": "Moderna / BioNTech\nAcumulan tecnología de diseño y datos clínicos con vistas a comercializar productos."
+        },
+        {
+          "h": "IA para descubrir fármacos",
+          "text": "Isomorphic Labs\nAplica diseño molecular y modelos predictivos a la I+D."
+        },
+        {
+          "h": "Farmacéutica e infraestructura de IA",
+          "text": "Eli Lilly / NVIDIA\nVinculan el conocimiento farmacéutico y la infraestructura informática con la I+D."
+        },
+        {
+          "h": "Apoyo a investigación y fabricación",
+          "text": "Maravai LifeSciences\nSuministra reactivos y tecnologías necesarios para el desarrollo y la fabricación.\nEl avance tecnológico, los resultados clínicos y la comercialización son etapas distintas. Diferenciar las funciones de cada empresa facilita comprender toda la industria."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "pt": [
+    {
+      "title": "O que são mRNA e descoberta de fármacos com IA?",
+      "subtitle": "Como funcionam as tecnologias e empresas relacionadas",
+      "blocks": [
+        {
+          "h": "Duas tecnologias que transformam o desenvolvimento de medicamentos",
+          "text": "O mRNA é uma molécula que transmite instruções para produzir proteínas específicas no organismo. Essa propriedade é usada em vacinas contra doenças infecciosas e pesquisada para câncer, doenças raras e outras condições."
+        },
+        {
+          "h": "O que é a descoberta de fármacos com IA?",
+          "text": "Usar IA para apoiar a busca de alvos ligados a doenças e o desenho e a previsão de moléculas candidatas a medicamentos. Em conjunto com experimentos de pesquisadores e ensaios clínicos, busca tornar o desenvolvimento mais eficiente."
+        },
+        {
+          "h": "São tecnologias diferentes",
+          "text": "O mRNA é uma das plataformas tecnológicas de medicamentos. A descoberta com IA é um método de apoio à P&D de vários tipos de medicamentos, não apenas os de mRNA.\nO foco é como prazos, taxas de sucesso e custos realmente mudam."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "01 | Expansão dos usos do mRNA",
+      "subtitle": "De vacinas contra infecções a aplicações terapêuticas",
+      "blocks": [
+        {
+          "h": "Moderna",
+          "text": "Além de seu negócio de vacinas contra infecções, desenvolve pesquisas de aplicação do mRNA ao câncer, doenças raras e outras condições. Nos usos além das vacinas, os ensaios clínicos são importantes para verificar eficácia e segurança."
+        },
+        {
+          "h": "BioNTech",
+          "text": "Desenvolve imunoterapias contra o câncer com mRNA, além de conjugados anticorpo-fármaco (ADC) e outras tecnologias. Busca ampliar as opções de tratamento combinando diversas tecnologias."
+        },
+        {
+          "h": "Maravai LifeSciences",
+          "text": "Fornece reagentes e tecnologias necessários à pesquisa e à fabricação. Diferentemente das empresas que vendem medicamentos acabados, apoia o desenvolvimento de medicamentos de mRNA e outros produtos.\nDesenvolvedoras de medicamentos e empresas de apoio à pesquisa e fabricação têm estruturas de negócio e formas de gerar receita distintas."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "02 | Como a IA muda a descoberta de fármacos",
+      "subtitle": "Rumo à P&D que conecta desenho molecular e experimentos",
+      "blocks": [
+        {
+          "h": "Isomorphic Labs",
+          "text": "Empresa de descoberta de fármacos com IA da Alphabet. Em maio de 2026, anunciou captação de US$ 2,1 bilhões. Além de desenvolver modelos de IA, amplia sua estrutura para aplicar a tecnologia ao desenho e desenvolvimento de medicamentos."
+        },
+        {
+          "h": "Eli Lilly × NVIDIA",
+          "text": "Em janeiro de 2026, anunciaram um centro conjunto de pesquisa de fármacos com IA. Apresentaram planos de investir, juntas, até US$ 1 bilhão em cinco anos em pessoal, pesquisa, infraestrutura computacional e áreas relacionadas."
+        },
+        {
+          "h": "O ciclo de P&D",
+          "text": "Desenhar candidatos com IA → validar em experimentos → coletar dados → melhorar o modelo.\nAcelerar esse ciclo é o objetivo de combinar IA e instalações experimentais.\nMaior precisão de previsão não significa automaticamente aprovação de medicamentos nem sucesso do desenvolvimento como um todo."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "03 | Empresas e estrutura industrial",
+      "subtitle": "Do desenvolvimento tecnológico à comercialização de medicamentos",
+      "blocks": [
+        {
+          "h": "Tecnologia de mRNA",
+          "text": "Moderna / BioNTech\nAcumulam tecnologia de desenho e dados clínicos, visando à comercialização."
+        },
+        {
+          "h": "IA para descoberta de fármacos",
+          "text": "Isomorphic Labs\nAplica desenho molecular e modelos preditivos à P&D."
+        },
+        {
+          "h": "Indústria farmacêutica e infraestrutura de IA",
+          "text": "Eli Lilly / NVIDIA\nConectam conhecimento farmacêutico e infraestrutura computacional à P&D."
+        },
+        {
+          "h": "Apoio à pesquisa e à fabricação",
+          "text": "Maravai LifeSciences\nFornece reagentes e tecnologias necessários ao desenvolvimento e à fabricação.\nAvanço tecnológico, resultados de ensaios clínicos e comercialização são etapas distintas. Separar os papéis das empresas facilita compreender o setor como um todo."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "什么是mRNA与AI药物研发？",
+      "subtitle": "技术原理与相关企业",
+      "blocks": [
+        {
+          "h": "改变药物开发的两项技术",
+          "text": "mRNA是传递在体内制造特定蛋白质所需信息的分子。利用这一特性，除了传染病疫苗，也在推进癌症、罕见病等领域的应用研究。"
+        },
+        {
+          "h": "什么是AI药物研发？",
+          "text": "使用AI支持寻找与疾病有关的靶点，以及设计、预测可能成为候选药物的分子。与研究人员的实验和临床试验相结合，以提高开发效率为目标。"
+        },
+        {
+          "h": "两者并非同一种技术",
+          "text": "mRNA是药物的一种技术平台。AI药物研发是支持多种药物研究开发的方法，对象并不限于mRNA药物。\n焦点在于：开发周期、成功率与成本实际上会如何变化。"
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "01 | mRNA用途的拓展",
+      "subtitle": "从传染病疫苗走向治疗应用",
+      "blocks": [
+        {
+          "h": "Moderna（莫德纳）",
+          "text": "除传染病疫苗业务外，正推进将mRNA技术应用于癌症、罕见病等领域的研发。疫苗以外的用途，重要的是通过临床试验验证有效性与安全性。"
+        },
+        {
+          "h": "BioNTech（百欧恩泰）",
+          "text": "除基于mRNA的癌症免疫疗法，也开发抗体药物偶联物（ADC）等。通过组合多种技术，力求拓展癌症治疗选择。"
+        },
+        {
+          "h": "Maravai LifeSciences",
+          "text": "供应研发与制造所需的试剂和技术。与销售成品药的企业不同，其角色是支持mRNA药物等产品的开发。\n药物开发企业与支持研发、制造的企业，在业务机制与收入产生方式上有所不同。"
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "02 | AI改变药物研发流程",
+      "subtitle": "走向连接分子设计与实验的研发",
+      "blocks": [
+        {
+          "h": "Isomorphic Labs",
+          "text": "Alphabet旗下的AI药物研发企业。2026年5月宣布融资21亿美元。除了开发AI模型，也在扩大将技术应用于药物设计与开发的体系。"
+        },
+        {
+          "h": "Eli Lilly × NVIDIA",
+          "text": "2026年1月宣布共同设立AI药物研发研究基地。两家公司计划在5年内向人才、研究、计算基础设施等累计投入最多10亿美元。"
+        },
+        {
+          "h": "研发流程",
+          "text": "用AI设计候选分子 → 实验验证 → 收集数据 → 改善模型。\n加快这一循环，是结合AI与实验设施的目的。\n预测精度提高，并不直接意味着药物获得批准或整个开发过程成功。"
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "03 | 相关企业与产业结构",
+      "subtitle": "从技术开发到药物产品化",
+      "blocks": [
+        {
+          "h": "mRNA技术",
+          "text": "Moderna / BioNTech\n积累设计技术与临床数据，以实现产品化为目标。"
+        },
+        {
+          "h": "药物研发AI",
+          "text": "Isomorphic Labs\n将分子设计与预测模型用于研究开发。"
+        },
+        {
+          "h": "制药与AI基础设施",
+          "text": "Eli Lilly / NVIDIA\n将制药知识与计算基础设施连接到研发。"
+        },
+        {
+          "h": "研发与制造支持",
+          "text": "Maravai LifeSciences\n供应开发与制造所需的试剂和技术。\n技术进步、临床试验成果与商业化是不同阶段。区分各企业的角色，更容易把握整个产业。"
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "什麼是mRNA與AI藥物研發？",
+      "subtitle": "技術原理與相關企業",
+      "blocks": [
+        {
+          "h": "改變藥物開發的兩項技術",
+          "text": "mRNA是傳遞在體內製造特定蛋白質所需資訊的分子。利用這一特性，除了傳染病疫苗，也在推進癌症、罕見疾病等領域的應用研究。"
+        },
+        {
+          "h": "什麼是AI藥物研發？",
+          "text": "使用AI支援尋找與疾病有關的標的，以及設計、預測可能成為候選藥物的分子。與研究人員的實驗和臨床試驗相結合，以提高開發效率為目標。"
+        },
+        {
+          "h": "兩者並非同一種技術",
+          "text": "mRNA是藥物的一種技術平台。AI藥物研發是支援多種藥物研究開發的方法，對象並不限於mRNA藥物。\n焦點在於：開發週期、成功率與成本實際上會如何變化。"
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "01 | mRNA用途的拓展",
+      "subtitle": "從傳染病疫苗走向治療應用",
+      "blocks": [
+        {
+          "h": "Moderna（莫德納）",
+          "text": "除傳染病疫苗業務外，正推進將mRNA技術應用於癌症、罕見疾病等領域的研發。疫苗以外的用途，重要的是透過臨床試驗驗證有效性與安全性。"
+        },
+        {
+          "h": "BioNTech（百歐恩泰）",
+          "text": "除基於mRNA的癌症免疫療法，也開發抗體藥物複合體（ADC）等。透過組合多種技術，力求拓展癌症治療選擇。"
+        },
+        {
+          "h": "Maravai LifeSciences",
+          "text": "供應研發與製造所需的試劑和技術。與銷售成品藥的企業不同，其角色是支援mRNA藥物等產品的開發。\n藥物開發企業與支援研發、製造的企業，在業務機制與收入產生方式上有所不同。"
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "02 | AI改變藥物研發流程",
+      "subtitle": "走向連接分子設計與實驗的研發",
+      "blocks": [
+        {
+          "h": "Isomorphic Labs",
+          "text": "Alphabet旗下的AI藥物研發企業。2026年5月宣布融資21億美元。除了開發AI模型，也在擴大將技術應用於藥物設計與開發的體系。"
+        },
+        {
+          "h": "Eli Lilly × NVIDIA",
+          "text": "2026年1月宣布共同設立AI藥物研發研究基地。兩家公司計畫在5年內向人才、研究、計算基礎設施等累計投入最多10億美元。"
+        },
+        {
+          "h": "研發流程",
+          "text": "用AI設計候選分子 → 實驗驗證 → 收集資料 → 改善模型。\n加快這一循環，是結合AI與實驗設施的目的。\n預測精度提高，並不直接意味著藥物獲得批准或整個開發過程成功。"
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "03 | 相關企業與產業結構",
+      "subtitle": "從技術開發到藥物產品化",
+      "blocks": [
+        {
+          "h": "mRNA技術",
+          "text": "Moderna / BioNTech\n累積設計技術與臨床資料，以實現產品化為目標。"
+        },
+        {
+          "h": "藥物研發AI",
+          "text": "Isomorphic Labs\n將分子設計與預測模型用於研究開發。"
+        },
+        {
+          "h": "製藥與AI基礎設施",
+          "text": "Eli Lilly / NVIDIA\n將製藥知識與計算基礎設施連接到研發。"
+        },
+        {
+          "h": "研發與製造支援",
+          "text": "Maravai LifeSciences\n供應開發與製造所需的試劑和技術。\n技術進步、臨床試驗成果與商業化是不同階段。區分各企業的角色，更容易掌握整個產業。"
+        }
+      ],
+      "dense": true
+    }
+  ]
+}
