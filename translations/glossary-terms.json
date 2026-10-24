@@ -1,0 +1,4327 @@
+{
+  "en": {
+    "categories": {
+      "科学・技術": "Science & Technology",
+      "投資基礎": "Investing Basics",
+      "投資指標": "Valuation & Ratios",
+      "財務・会計": "Finance & Accounting",
+      "企業経営": "Business & Management",
+      "株式市場": "Stock Market",
+      "産業・技術": "Industry & Technology",
+      "経済・金融": "Economics & Finance"
+    },
+    "terms": [
+      {
+        "id": "term-processor",
+        "category": "科学・技術",
+        "title": "Processor",
+        "definition": "A device that performs calculations and controls equipment. CPUs are a common example; MPU usually means microprocessor. GPUs are also processors.",
+        "formula": "",
+        "example": "",
+        "note": "",
+        "aliases": [
+          "プロセッサー",
+          "Processor"
+        ]
+      },
+      {
+        "id": "term-tse-prime",
+        "category": "投資基礎",
+        "title": "TSE Prime Market",
+        "definition": "The Tokyo Stock Exchange segment for companies with scale, liquidity and higher corporate governance standards suitable for many institutional investors.",
+        "formula": "",
+        "example": "",
+        "note": "Prime, Standard and Growth are market segments, not rankings of quality or cheapness.",
+        "aliases": [
+          "東証P（プライム市場）",
+          "TSE Prime Market"
+        ]
+      },
+      {
+        "id": "term-tse-standard",
+        "category": "投資基礎",
+        "title": "TSE Standard Market",
+        "definition": "The Tokyo Stock Exchange segment for companies with a certain level of liquidity and the basic governance standards expected of listed companies.",
+        "formula": "",
+        "example": "",
+        "note": "Market segments do not rank companies by quality or valuation.",
+        "aliases": [
+          "東証S（スタンダード市場）",
+          "TSE Standard Market"
+        ]
+      },
+      {
+        "id": "term-tse-growth",
+        "category": "投資基礎",
+        "title": "TSE Growth Market",
+        "definition": "The Tokyo Stock Exchange segment for companies with high growth potential. Limited operating track records can entail relatively high risk.",
+        "formula": "",
+        "example": "",
+        "note": "The segment does not guarantee growth or indicate whether a share is cheap.",
+        "aliases": [
+          "東証G（グロース市場）",
+          "TSE Growth Market"
+        ]
+      },
+      {
+        "id": "term-40",
+        "category": "投資基礎",
+        "title": "Screening",
+        "definition": "Narrowing a list of securities using specified criteria.",
+        "formula": "",
+        "example": "",
+        "note": "A way to find candidates, not a substitute for company analysis.",
+        "aliases": [
+          "スクリーニング",
+          "Screening",
+          "Screening"
+        ]
+      },
+      {
+        "id": "term-0",
+        "category": "投資指標",
+        "title": "P/E ratio (PER)",
+        "definition": "Share price relative to earnings per common share.",
+        "formula": "Share price ÷ EPS",
+        "example": "¥1,500 ÷ ¥100 = 15×.",
+        "note": "Compare peers and historical levels. Usually not meaningful for loss-making companies.",
+        "aliases": [
+          "PER",
+          "P/E ratio (PER)",
+          "P/E ratio"
+        ]
+      },
+      {
+        "id": "term-4",
+        "category": "投資指標",
+        "title": "Earnings per share (EPS)",
+        "definition": "Profit attributable to each common share.",
+        "formula": "Net income attributable to common shareholders ÷ weighted-average common shares",
+        "example": "¥1 billion ÷ 10 million shares = ¥100.",
+        "note": "Used in P/E and earnings growth analysis. Adjust for stock splits.",
+        "aliases": [
+          "EPS",
+          "Earnings per share (EPS)",
+          "EPS"
+        ]
+      },
+      {
+        "id": "term-16",
+        "category": "投資指標",
+        "title": "Earnings yield",
+        "definition": "Earnings as a percentage of the share price; the reciprocal of a positive P/E.",
+        "formula": "EPS ÷ share price × 100 = 100 ÷ positive P/E",
+        "example": "A P/E of 20× implies 5%.",
+        "note": "A comparison input for bond yields and the cost of capital.",
+        "aliases": [
+          "益回り",
+          "Earnings yield"
+        ]
+      },
+      {
+        "id": "term-15",
+        "category": "投資指標",
+        "title": "Shiller P/E (CAPE)",
+        "definition": "Valuation using average inflation-adjusted earnings over ten years.",
+        "formula": "Real index level ÷ average real EPS over ten years",
+        "example": "Smooths earnings fluctuations over the business cycle.",
+        "note": "For long-term market valuation, not short-term timing. Labels such as below 10×, 10–20× and above 20× are not universal thresholds; country, period and interest rates matter.",
+        "aliases": [
+          "Shiller PER",
+          "Shiller P/E (CAPE)"
+        ]
+      },
+      {
+        "id": "term-1",
+        "category": "投資指標",
+        "title": "P/B ratio (PBR)",
+        "definition": "Share price relative to book value per common share.",
+        "formula": "Share price ÷ BPS",
+        "example": "¥1,200 ÷ ¥1,000 = 1.2×.",
+        "note": "Check asset quality and ROE. Below 1× does not by itself prove undervaluation.",
+        "aliases": [
+          "PBR",
+          "P/B ratio (PBR)",
+          "P/B ratio"
+        ]
+      },
+      {
+        "id": "term-5",
+        "category": "投資指標",
+        "title": "Book value per share (BPS)",
+        "definition": "Net assets attributable to each common share.",
+        "formula": "Equity attributable to common shareholders ÷ common shares at period-end",
+        "example": "¥10 billion ÷ 10 million shares = ¥1,000.",
+        "note": "Used in P/B. Check goodwill and asset valuations.",
+        "aliases": [
+          "BPS",
+          "Book value per share (BPS)"
+        ]
+      },
+      {
+        "id": "term-14",
+        "category": "投資指標",
+        "title": "Graham P/E × P/B product",
+        "definition": "A combined valuation measure multiplying P/E by P/B.",
+        "formula": "P/E × P/B",
+        "example": "15 × 1.5 = 22.5.",
+        "note": "Graham's traditional guideline of 22.5 is not a universal rule.",
+        "aliases": [
+          "ミックス係数",
+          "Graham P/E × P/B product"
+        ]
+      },
+      {
+        "id": "term-2",
+        "category": "投資指標",
+        "title": "Return on equity (ROE)",
+        "definition": "Profitability relative to shareholders' equity.",
+        "formula": "Net income ÷ average equity × 100",
+        "example": "¥2 billion ÷ ¥10 billion × 100 = 20%.",
+        "note": "Leverage and a smaller equity base can raise ROE. Assess alongside ROA.",
+        "aliases": [
+          "ROE",
+          "Return on equity (ROE)",
+          "ROE"
+        ]
+      },
+      {
+        "id": "term-3",
+        "category": "投資指標",
+        "title": "Return on assets (ROA)",
+        "definition": "Profitability relative to the company's total assets.",
+        "formula": "Net income ÷ average total assets × 100",
+        "example": "¥1 billion ÷ ¥20 billion × 100 = 5%.",
+        "note": "Compare with industry asset structures in mind.",
+        "aliases": [
+          "ROA",
+          "Return on assets (ROA)",
+          "ROA"
+        ]
+      },
+      {
+        "id": "term-11",
+        "category": "投資指標",
+        "title": "EV/EBITDA",
+        "definition": "Enterprise value relative to EBITDA.",
+        "formula": "EV ÷ EBITDA; EV ≈ market capitalization + interest-bearing debt − cash and cash equivalents",
+        "example": "¥30 billion ÷ ¥3 billion = 10×.",
+        "note": "Consider capital expenditure and lease liabilities separately.",
+        "aliases": [
+          "EV/EBITDA倍率",
+          "EV/EBITDA"
+        ]
+      },
+      {
+        "id": "term-10",
+        "category": "投資指標",
+        "title": "Price-to-cash-flow ratio (PCFR)",
+        "definition": "Share price relative to cash flow per share.",
+        "formula": "Share price ÷ cash flow per share",
+        "example": "¥2,000 ÷ ¥200 = 10×.",
+        "note": "Check whether cash flow means operating cash flow or an alternative approximation.",
+        "aliases": [
+          "PCFR",
+          "Price-to-cash-flow ratio (PCFR)"
+        ]
+      },
+      {
+        "id": "term-9",
+        "category": "財務・会計",
+        "title": "Operating cash flow",
+        "definition": "Cash generated or used by core operating activities.",
+        "formula": "Operating activities section of the cash flow statement",
+        "example": "Positive operating cash flow still needs to be assessed against capital expenditure.",
+        "note": "Compare profit with cash generation and examine long-term stability.",
+        "aliases": [
+          "営業キャッシュフロー",
+          "Operating cash flow",
+          "Operating cash flow"
+        ]
+      },
+      {
+        "id": "term-cf-0",
+        "category": "財務・会計",
+        "title": "Investing cash flow",
+        "definition": "Cash movements from investments. Purchases of equipment or securities usually reduce cash; disposals usually increase it.",
+        "formula": "Investing activities section of the cash flow statement",
+        "example": "¥3 billion spent and ¥0.5 billion recovered gives −¥2.5 billion, with no other items.",
+        "note": "Negative is not automatically bad. Distinguish growth investment from maintenance and compare with operating cash flow.",
+        "aliases": [
+          "投資キャッシュフロー",
+          "Investing cash flow"
+        ]
+      },
+      {
+        "id": "term-cf-1",
+        "category": "財務・会計",
+        "title": "Financing cash flow",
+        "definition": "Cash movements from borrowing, repayments, share issues, dividends and other financing activities.",
+        "formula": "Financing activities section of the cash flow statement",
+        "example": "Borrow ¥2 billion, repay ¥1 billion and pay ¥0.3 billion dividends: +¥0.7 billion.",
+        "note": "Positive may reflect fund raising; negative may reflect repayments or shareholder returns. The sign alone does not indicate quality.",
+        "aliases": [
+          "財務キャッシュフロー",
+          "Financing cash flow",
+          "Financial cash flow"
+        ]
+      },
+      {
+        "id": "term-cf-2",
+        "category": "財務・会計",
+        "title": "Free cash flow",
+        "definition": "Cash remaining after investment needs; definitions vary by company and method.",
+        "formula": "Common shortcut: operating CF + investing CF; alternative: operating CF − capital expenditure",
+        "example": "¥5 billion operating CF + (−¥3 billion investing CF) = ¥2 billion.",
+        "note": "Indicates capacity for dividends, debt repayment and growth. Asset sales and M&A can distort the shortcut.",
+        "aliases": [
+          "フリーキャッシュフロー",
+          "Free cash flow",
+          "Free cash flow"
+        ]
+      },
+      {
+        "id": "term-6",
+        "category": "財務・会計",
+        "title": "Current ratio",
+        "definition": "A measure of short-term payment capacity.",
+        "formula": "Current assets ÷ current liabilities × 100",
+        "example": "¥20 billion ÷ ¥10 billion × 100 = 200%.",
+        "note": "Check how readily receivables and inventory can become cash.",
+        "aliases": [
+          "流動比率",
+          "Current ratio",
+          "Current ratio"
+        ]
+      },
+      {
+        "id": "term-7",
+        "category": "財務・会計",
+        "title": "Debt-to-equity ratio (D/E)",
+        "definition": "Interest-bearing debt relative to equity.",
+        "formula": "Interest-bearing debt ÷ equity",
+        "example": "¥6 billion ÷ ¥10 billion = 0.6×.",
+        "note": "Assess debt burdens and industry characteristics.",
+        "aliases": [
+          "D/Eレシオ",
+          "Debt-to-equity ratio (D/E)",
+          "Debt-to-equity ratio"
+        ]
+      },
+      {
+        "id": "term-8",
+        "category": "財務・会計",
+        "title": "Interest coverage ratio",
+        "definition": "How many times business earnings cover interest expense.",
+        "formula": "(Operating profit + interest and dividend income) ÷ interest expense",
+        "example": "¥1.2 billion ÷ ¥0.2 billion = 6×.",
+        "note": "Definitions differ between sources; confirm the calculation basis.",
+        "aliases": [
+          "インタレスト・カバレッジ・レシオ",
+          "Interest coverage ratio"
+        ]
+      },
+      {
+        "id": "term-13",
+        "category": "投資指標",
+        "title": "Dividend payout ratio",
+        "definition": "The proportion of earnings paid as dividends.",
+        "formula": "Annual dividend per share ÷ EPS × 100",
+        "example": "¥40 ÷ ¥100 × 100 = 40%.",
+        "note": "An unusually high payout warrants a sustainability check.",
+        "aliases": [
+          "配当性向",
+          "Dividend payout ratio",
+          "Payout ratio"
+        ]
+      },
+      {
+        "id": "term-12",
+        "category": "投資指標",
+        "title": "Dividend on equity (DOE)",
+        "definition": "Annual dividends relative to shareholders' equity.",
+        "formula": "Total annual dividends ÷ average equity × 100",
+        "example": "¥0.3 billion ÷ ¥10 billion × 100 = 3%.",
+        "note": "Helps explain dividend policy when earnings fluctuate.",
+        "aliases": [
+          "DOE",
+          "Dividend on equity (DOE)"
+        ]
+      },
+      {
+        "id": "term-39",
+        "category": "投資基礎",
+        "title": "Income return",
+        "definition": "Income received while holding an asset, such as dividends or interest.",
+        "formula": "",
+        "example": "",
+        "note": "Consider principal price movements as well as yield.",
+        "aliases": [
+          "インカムゲイン",
+          "Income return"
+        ]
+      },
+      {
+        "id": "term-38",
+        "category": "投資基礎",
+        "title": "Capital gain",
+        "definition": "Profit from selling an asset above its acquisition cost.",
+        "formula": "Sale proceeds − acquisition cost − transaction costs",
+        "example": "",
+        "note": "Allow for taxes and fees.",
+        "aliases": [
+          "キャピタルゲイン",
+          "Capital gain"
+        ]
+      },
+      {
+        "id": "term-22",
+        "category": "企業経営",
+        "title": "Share buyback",
+        "definition": "A company's purchase of its own outstanding shares.",
+        "formula": "",
+        "example": "",
+        "note": "Check whether shares are cancelled, the effect on capital efficiency and available funds.",
+        "aliases": [
+          "自社株買い",
+          "Share buyback",
+          "Share buyback"
+        ]
+      },
+      {
+        "id": "term-mbo",
+        "category": "企業経営",
+        "title": "Management buyout (MBO)",
+        "definition": "Management acquires its company's shares or business, often with lenders or investment funds. A listed company may seek to go private.",
+        "formula": "",
+        "example": "Management teams with a fund and launches a tender offer to acquire public shares.",
+        "note": "Offer price affects the share price. Ownership, management intentions, business value and financing matter, but prediction is difficult. Offers may fail or change terms. Related: TOB, buybacks and enterprise value.",
+        "aliases": [
+          "MBO",
+          "Management buyout (MBO)",
+          "MBO"
+        ]
+      },
+      {
+        "id": "term-21",
+        "category": "株式市場",
+        "title": "Tender offer (TOB)",
+        "definition": "An offer to acquire shares outside regular exchange trading under publicly announced conditions.",
+        "formula": "",
+        "example": "",
+        "note": "Check price, completion conditions and withdrawal risk.",
+        "aliases": [
+          "TOB",
+          "Tender offer (TOB)",
+          "TOB / Tender offer"
+        ]
+      },
+      {
+        "id": "term-23",
+        "category": "企業経営",
+        "title": "Stock options",
+        "definition": "Rights to acquire shares under specified conditions.",
+        "formula": "",
+        "example": "",
+        "note": "Check dilution and exercise terms.",
+        "aliases": [
+          "ストックオプション",
+          "Stock options"
+        ]
+      },
+      {
+        "id": "term-24",
+        "category": "企業経営",
+        "title": "Investor relations (IR)",
+        "definition": "Company information disclosed to investors.",
+        "formula": "",
+        "example": "",
+        "note": "Read earnings releases, securities reports and presentation materials.",
+        "aliases": [
+          "IR情報",
+          "Investor relations (IR)"
+        ]
+      },
+      {
+        "id": "term-25",
+        "category": "企業経営",
+        "title": "Japanese earnings summary (Kessan Tanshin)",
+        "definition": "A listed company's timely summary of financial results.",
+        "formula": "",
+        "example": "",
+        "note": "Review earnings, financial position and outlook, then use the securities report for detail.",
+        "aliases": [
+          "決算短信",
+          "Japanese earnings summary (Kessan Tanshin)"
+        ]
+      },
+      {
+        "id": "term-26",
+        "category": "企業経営",
+        "title": "Annual report",
+        "definition": "A report covering a company's annual activities and performance.",
+        "formula": "",
+        "example": "",
+        "note": "Useful for understanding strategy, business structure and management policy.",
+        "aliases": [
+          "アニュアルレポート",
+          "Annual report"
+        ]
+      },
+      {
+        "id": "term-41",
+        "category": "投資基礎",
+        "title": "Kaisha Shikiho",
+        "definition": "A Japanese company-information publication summarizing businesses and financial performance.",
+        "formula": "",
+        "example": "",
+        "note": "Distinguish the publication's forecasts from company guidance.",
+        "aliases": [
+          "四季報",
+          "Kaisha Shikiho"
+        ]
+      },
+      {
+        "id": "term-27",
+        "category": "株式市場",
+        "title": "Market consensus",
+        "definition": "Market expectations aggregated from analyst forecasts and similar estimates.",
+        "formula": "",
+        "example": "",
+        "note": "Differences between actual results and expectations can affect prices.",
+        "aliases": [
+          "コンセンサス",
+          "Market consensus"
+        ]
+      },
+      {
+        "id": "term-29",
+        "category": "株式市場",
+        "title": "Earnings surprise",
+        "definition": "Results that differ substantially from market expectations.",
+        "formula": "",
+        "example": "",
+        "note": "Even good results can trigger a price fall if expectations were higher.",
+        "aliases": [
+          "サプライズ決算",
+          "Earnings surprise"
+        ]
+      },
+      {
+        "id": "term-28",
+        "category": "株式市場",
+        "title": "Catalyst",
+        "definition": "An event that can change a stock's valuation, such as a dividend increase, asset sale, ownership change, removal of takeover defenses or listing change.",
+        "formula": "",
+        "example": "",
+        "note": "An event does not guarantee a rise. Assess likelihood and what is already priced in.",
+        "aliases": [
+          "カタリスト",
+          "Catalyst"
+        ]
+      },
+      {
+        "id": "term-17",
+        "category": "株式市場",
+        "title": "TOPIX",
+        "definition": "The Tokyo Stock Price Index, representing broad movements in Japanese equities.",
+        "formula": "",
+        "example": "",
+        "note": "Used as a benchmark for Japanese equity funds.",
+        "aliases": [
+          "TOPIX",
+          "TOPIX"
+        ]
+      },
+      {
+        "id": "term-18",
+        "category": "株式市場",
+        "title": "Nikkei 225",
+        "definition": "A price-weighted index of 225 stocks calculated by Nikkei.",
+        "formula": "",
+        "example": "",
+        "note": "Higher-priced constituent shares have greater influence.",
+        "aliases": [
+          "日経平均株価",
+          "Nikkei 225"
+        ]
+      },
+      {
+        "id": "term-19",
+        "category": "株式市場",
+        "title": "Exchange-traded fund (ETF)",
+        "definition": "A fund listed and traded on an exchange.",
+        "formula": "",
+        "example": "",
+        "note": "Check management fees, benchmark and bid–ask spreads.",
+        "aliases": [
+          "ETF",
+          "Exchange-traded fund (ETF)",
+          "ETF"
+        ]
+      },
+      {
+        "id": "term-20",
+        "category": "株式市場",
+        "title": "Initial public offering (IPO)",
+        "definition": "A company's first public share offering and stock market listing.",
+        "formula": "",
+        "example": "",
+        "note": "Read the prospectus and examine supply, demand and lock-up terms.",
+        "aliases": [
+          "IPO",
+          "Initial public offering (IPO)"
+        ]
+      },
+      {
+        "id": "term-50",
+        "category": "株式市場",
+        "title": "Cyclical stocks",
+        "definition": "Shares in businesses whose performance is sensitive to the economic cycle.",
+        "formula": "",
+        "example": "",
+        "note": "Consider earnings peaks and troughs across the cycle.",
+        "aliases": [
+          "景気敏感株",
+          "Cyclical stocks"
+        ]
+      },
+      {
+        "id": "term-49",
+        "category": "企業経営",
+        "title": "Commodity companies",
+        "definition": "Companies linked to goods such as oil, metals or grains.",
+        "formula": "",
+        "example": "",
+        "note": "Check how commodity prices affect earnings.",
+        "aliases": [
+          "コモディティ企業",
+          "Commodity companies"
+        ]
+      },
+      {
+        "id": "term-51",
+        "category": "産業・技術",
+        "title": "Semiconductors",
+        "definition": "Materials with controllable electrical properties and electronic components made from them.",
+        "formula": "",
+        "example": "",
+        "note": "Distinguish design, manufacturing, equipment and materials businesses.",
+        "aliases": [
+          "半導体",
+          "Semiconductors"
+        ]
+      },
+      {
+        "id": "term-47",
+        "category": "株式市場",
+        "title": "Thematic stocks",
+        "definition": "Stocks attracting attention through a policy, technology or social theme.",
+        "formula": "",
+        "example": "",
+        "note": "Separate publicity from actual earnings contributions.",
+        "aliases": [
+          "テーマ株",
+          "Thematic stocks"
+        ]
+      },
+      {
+        "id": "term-48",
+        "category": "株式市場",
+        "title": "Speculative stocks (shite-kabu)",
+        "definition": "Japanese term for shares whose prices may move sharply on speculative trading or particular market narratives.",
+        "formula": "",
+        "example": "",
+        "note": "Watch for abrupt price changes and reduced liquidity.",
+        "aliases": [
+          "仕手株",
+          "Speculative stocks (shite-kabu)"
+        ]
+      },
+      {
+        "id": "term-30",
+        "category": "株式市場",
+        "title": "Volatility",
+        "definition": "The magnitude of price fluctuations.",
+        "formula": "Standard deviation of returns is a common measure.",
+        "example": "",
+        "note": "Used to assess price fluctuation risk.",
+        "aliases": [
+          "ボラティリティ",
+          "Volatility"
+        ]
+      },
+      {
+        "id": "term-37",
+        "category": "株式市場",
+        "title": "Oscillators",
+        "definition": "Technical indicators of market momentum or overbought and oversold conditions.",
+        "formula": "",
+        "example": "",
+        "note": "Do not base trades solely on an indicator such as RSI.",
+        "aliases": [
+          "オシレーター",
+          "Oscillators"
+        ]
+      },
+      {
+        "id": "term-31",
+        "category": "株式市場",
+        "title": "Volume-weighted average price (VWAP)",
+        "definition": "The average execution price weighted by traded volume.",
+        "formula": "Σ(execution price × volume) ÷ Σvolume",
+        "example": "100 shares at ¥100 and 300 at ¥110 give ¥107.5.",
+        "note": "Used to assess intraday execution and compare with market prices.",
+        "aliases": [
+          "VWAP",
+          "Volume-weighted average price (VWAP)"
+        ]
+      },
+      {
+        "id": "term-45",
+        "category": "株式市場",
+        "title": "Time and sales / order book",
+        "definition": "Time and sales records executed trades; the order book shows quoted prices and quantities.",
+        "formula": "",
+        "example": "",
+        "note": "Useful for short-term supply and demand, but beware of misleading orders.",
+        "aliases": [
+          "歩み値・板読み",
+          "Time and sales / order book"
+        ]
+      },
+      {
+        "id": "term-44",
+        "category": "株式市場",
+        "title": "Order types",
+        "definition": "Instructions such as market, limit and stop orders.",
+        "formula": "",
+        "example": "",
+        "note": "Choose between execution priority and price control to suit the purpose.",
+        "aliases": [
+          "注文種別",
+          "Order types"
+        ]
+      },
+      {
+        "id": "term-46",
+        "category": "株式市場",
+        "title": "Daily price limits",
+        "definition": "Exchange-defined upper and lower limits for a day's price movements.",
+        "formula": "",
+        "example": "",
+        "note": "Reaching a limit does not guarantee execution.",
+        "aliases": [
+          "ストップ高・ストップ安",
+          "Daily price limits"
+        ]
+      },
+      {
+        "id": "term-32",
+        "category": "株式市場",
+        "title": "Outstanding margin longs and shorts",
+        "definition": "Unsettled long and short positions in margin trading.",
+        "formula": "",
+        "example": "",
+        "note": "A supply-and-demand indicator, not a forecast of future price movements.",
+        "aliases": [
+          "信用買残・信用売残",
+          "Outstanding margin longs and shorts"
+        ]
+      },
+      {
+        "id": "term-33",
+        "category": "株式市場",
+        "title": "Margin long/short ratio",
+        "definition": "Outstanding margin long positions relative to outstanding margin short positions.",
+        "formula": "Outstanding margin longs ÷ outstanding margin shorts",
+        "example": "1 million shares ÷ 0.2 million shares = 5×.",
+        "note": "Use consistent dates and reporting coverage.",
+        "aliases": [
+          "貸借倍率",
+          "Margin long/short ratio"
+        ]
+      },
+      {
+        "id": "term-43",
+        "category": "株式市場",
+        "title": "Physical settlement of margin positions",
+        "definition": "Genbiki pays for a margin long and receives the shares; genwatashi delivers owned shares to settle a margin short.",
+        "formula": "",
+        "example": "",
+        "note": "Check settlement fees, interest and stock borrowing charges.",
+        "aliases": [
+          "現引・現渡",
+          "Physical settlement of margin positions"
+        ]
+      },
+      {
+        "id": "term-42",
+        "category": "株式市場",
+        "title": "Ex-dividend date",
+        "definition": "The first trading day on which a buyer is no longer entitled to the relevant dividend or shareholder benefit.",
+        "formula": "",
+        "example": "",
+        "note": "Do not confuse it with the last trading day carrying entitlement.",
+        "aliases": [
+          "権利落ち日",
+          "Ex-dividend date"
+        ]
+      },
+      {
+        "id": "term-34",
+        "category": "経済・金融",
+        "title": "Inflation",
+        "definition": "A sustained rise in the general price level.",
+        "formula": "",
+        "example": "",
+        "note": "Consider effects on real interest rates and purchasing power.",
+        "aliases": [
+          "インフレ",
+          "Inflation",
+          "Inflation"
+        ]
+      },
+      {
+        "id": "term-35",
+        "category": "経済・金融",
+        "title": "Deflation",
+        "definition": "A sustained fall in the general price level.",
+        "formula": "",
+        "example": "",
+        "note": "Examine effects on demand, wages and business profits.",
+        "aliases": [
+          "デフレ",
+          "Deflation"
+        ]
+      },
+      {
+        "id": "term-36",
+        "category": "経済・金融",
+        "title": "Rising interest rates",
+        "definition": "An increase in financing costs or discount rates.",
+        "formula": "",
+        "example": "",
+        "note": "Assess debt servicing and the present value of future earnings.",
+        "aliases": [
+          "金利上昇",
+          "Rising interest rates"
+        ]
+      },
+      {
+        "id": "term-extra-margin-of-safety",
+        "category": "投資基礎",
+        "title": "Margin of safety",
+        "definition": "The gap between conservative estimated intrinsic value and market price."
+      },
+      {
+        "id": "term-extra-intrinsic-value",
+        "category": "投資基礎",
+        "title": "Intrinsic value",
+        "definition": "An estimate of a business’s economic worth based on future benefits and risks."
+      },
+      {
+        "id": "term-extra-equity-ratio",
+        "category": "財務・会計",
+        "title": "Equity ratio",
+        "definition": "Shareholders' equity divided by total assets; a measure of financial structure."
+      },
+      {
+        "id": "term-extra-dividend-yield",
+        "category": "投資指標",
+        "title": "Dividend yield",
+        "definition": "Annual dividend per share divided by the share price; not a guaranteed return."
+      },
+      {
+        "id": "term-extra-capital-allocation",
+        "category": "企業経営",
+        "title": "Capital allocation",
+        "definition": "Management's decisions on using cash for operations, investment, acquisitions or shareholder returns."
+      },
+      {
+        "id": "term-extra-real-interest-rate",
+        "category": "経済・金融",
+        "title": "Real interest rate",
+        "definition": "An interest rate adjusted for inflation; approximately nominal rate minus inflation."
+      },
+      {
+        "id": "term-extra-compound-interest",
+        "category": "経済・金融",
+        "title": "Compound interest",
+        "definition": "Growth resulting when accumulated returns also earn returns; losses can compound too."
+      },
+      {
+        "id": "term-extra-market-capitalization",
+        "category": "株式市場",
+        "title": "Market capitalization",
+        "definition": "Share price multiplied by shares outstanding, with share-count definitions varying."
+      },
+      {
+        "id": "term-extra-enterprise-value",
+        "category": "投資指標",
+        "title": "Enterprise value",
+        "definition": "A valuation measure often calculated as market capitalization plus debt minus cash, subject to adjustments."
+      }
+    ]
+  },
+  "es": {
+    "categories": {
+      "科学・技術": "Ciencia y tecnología",
+      "投資基礎": "Fundamentos de inversión",
+      "投資指標": "Valoración e indicadores",
+      "財務・会計": "Finanzas y contabilidad",
+      "企業経営": "Empresas y gestión",
+      "株式市場": "Mercado bursátil",
+      "産業・技術": "Industria y tecnología",
+      "経済・金融": "Economía y finanzas"
+    },
+    "terms": [
+      {
+        "id": "term-processor",
+        "category": "科学・技術",
+        "title": "Procesador",
+        "definition": "Dispositivo que realiza cálculos y controla equipos. La CPU es un ejemplo; MPU suele significar microprocesador. Las GPU también son procesadores.",
+        "formula": "",
+        "example": "",
+        "note": "",
+        "aliases": [
+          "プロセッサー",
+          "Processor"
+        ]
+      },
+      {
+        "id": "term-tse-prime",
+        "category": "投資基礎",
+        "title": "Mercado Prime de la Bolsa de Tokio",
+        "definition": "Segmento para empresas con tamaño, liquidez y un nivel de gobierno corporativo adecuado para muchos inversores institucionales.",
+        "formula": "",
+        "example": "",
+        "note": "Prime, Standard y Growth son segmentos, no una clasificación de calidad ni de valoración.",
+        "aliases": [
+          "東証P（プライム市場）",
+          "TSE Prime Market"
+        ]
+      },
+      {
+        "id": "term-tse-standard",
+        "category": "投資基礎",
+        "title": "Mercado Standard de la Bolsa de Tokio",
+        "definition": "Segmento para empresas con cierta liquidez y las normas básicas de gobierno corporativo de una sociedad cotizada.",
+        "formula": "",
+        "example": "",
+        "note": "El segmento no determina si una empresa es mejor ni si sus acciones están baratas.",
+        "aliases": [
+          "東証S（スタンダード市場）",
+          "TSE Standard Market"
+        ]
+      },
+      {
+        "id": "term-tse-growth",
+        "category": "投資基礎",
+        "title": "Mercado Growth de la Bolsa de Tokio",
+        "definition": "Segmento para empresas con elevado potencial de crecimiento. Un historial operativo limitado puede implicar mayor riesgo.",
+        "formula": "",
+        "example": "",
+        "note": "No garantiza crecimiento ni indica una valoración barata.",
+        "aliases": [
+          "東証G（グロース市場）",
+          "TSE Growth Market"
+        ]
+      },
+      {
+        "id": "term-40",
+        "category": "投資基礎",
+        "title": "Selección por filtros",
+        "definition": "Reducción de una lista de valores aplicando criterios concretos.",
+        "formula": "",
+        "example": "",
+        "note": "Sirve para encontrar candidatos; no sustituye el análisis empresarial.",
+        "aliases": [
+          "スクリーニング",
+          "Screening",
+          "Selección por filtros"
+        ]
+      },
+      {
+        "id": "term-0",
+        "category": "投資指標",
+        "title": "Ratio precio/beneficio (PER)",
+        "definition": "Precio de la acción en relación con el beneficio por acción ordinaria.",
+        "formula": "Precio ÷ BPA",
+        "example": "¥1.500 ÷ ¥100 = 15 veces.",
+        "note": "Comparar con empresas similares y datos históricos. Suele carecer de utilidad con pérdidas.",
+        "aliases": [
+          "PER",
+          "P/E ratio (PER)",
+          "PER"
+        ]
+      },
+      {
+        "id": "term-4",
+        "category": "投資指標",
+        "title": "Beneficio por acción (BPA / EPS)",
+        "definition": "Beneficio atribuible a cada acción ordinaria.",
+        "formula": "Beneficio neto atribuible a accionistas ordinarios ÷ media ponderada de acciones ordinarias",
+        "example": "¥1.000 millones ÷ 10 millones de acciones = ¥100.",
+        "note": "Se usa en el PER y el análisis del crecimiento. Ajustar por desdoblamientos.",
+        "aliases": [
+          "EPS",
+          "Earnings per share (EPS)",
+          "BPA (EPS)"
+        ]
+      },
+      {
+        "id": "term-16",
+        "category": "投資指標",
+        "title": "Rentabilidad del beneficio",
+        "definition": "Beneficio como porcentaje del precio; inversa de un PER positivo.",
+        "formula": "BPA ÷ precio × 100 = 100 ÷ PER positivo",
+        "example": "Un PER de 20 equivale al 5%.",
+        "note": "Permite comparaciones con rentabilidades de bonos y coste de capital.",
+        "aliases": [
+          "益回り",
+          "Earnings yield"
+        ]
+      },
+      {
+        "id": "term-15",
+        "category": "投資指標",
+        "title": "PER de Shiller (CAPE)",
+        "definition": "Valoración basada en el beneficio real medio de diez años.",
+        "formula": "Nivel real del índice ÷ BPA real medio de diez años",
+        "example": "Suaviza las fluctuaciones de beneficios del ciclo económico.",
+        "note": "Se utiliza para valoración a largo plazo, no para decidir operaciones a corto plazo. Los rangos inferiores a 10, de 10–20 y superiores a 20 no son umbrales universales: dependen del país, época y tipos de interés.",
+        "aliases": [
+          "Shiller PER",
+          "Shiller P/E (CAPE)"
+        ]
+      },
+      {
+        "id": "term-1",
+        "category": "投資指標",
+        "title": "Ratio precio/valor contable (PBR)",
+        "definition": "Precio respecto al valor contable por acción ordinaria.",
+        "formula": "Precio ÷ valor contable por acción",
+        "example": "¥1.200 ÷ ¥1.000 = 1,2 veces.",
+        "note": "Revisar activos y ROE. Estar por debajo de 1 no basta para demostrar infravaloración.",
+        "aliases": [
+          "PBR",
+          "P/B ratio (PBR)",
+          "P/B"
+        ]
+      },
+      {
+        "id": "term-5",
+        "category": "投資指標",
+        "title": "Valor contable por acción (BPS)",
+        "definition": "Patrimonio neto atribuible a cada acción ordinaria.",
+        "formula": "Patrimonio atribuible a accionistas ordinarios ÷ acciones ordinarias al cierre",
+        "example": "¥10.000 millones ÷ 10 millones de acciones = ¥1.000.",
+        "note": "Se usa en el PBR. Revisar fondo de comercio y valoración de activos.",
+        "aliases": [
+          "BPS",
+          "Book value per share (BPS)"
+        ]
+      },
+      {
+        "id": "term-14",
+        "category": "投資指標",
+        "title": "Producto PER × PBR de Graham",
+        "definition": "Indicador que multiplica el PER por el PBR.",
+        "formula": "PER × PBR",
+        "example": "15 × 1,5 = 22,5.",
+        "note": "La referencia tradicional de Graham de 22,5 no es una regla universal.",
+        "aliases": [
+          "ミックス係数",
+          "Graham P/E × P/B product"
+        ]
+      },
+      {
+        "id": "term-2",
+        "category": "投資指標",
+        "title": "Rentabilidad sobre patrimonio (ROE)",
+        "definition": "Eficiencia para generar beneficios con el patrimonio de los accionistas.",
+        "formula": "Beneficio neto ÷ patrimonio medio × 100",
+        "example": "¥2.000 millones ÷ ¥10.000 millones × 100 = 20%.",
+        "note": "El endeudamiento y una base patrimonial menor pueden elevarlo. Combinar con ROA.",
+        "aliases": [
+          "ROE",
+          "Return on equity (ROE)",
+          "ROE"
+        ]
+      },
+      {
+        "id": "term-3",
+        "category": "投資指標",
+        "title": "Rentabilidad sobre activos (ROA)",
+        "definition": "Rentabilidad relativa a los activos totales.",
+        "formula": "Beneficio neto ÷ activos totales medios × 100",
+        "example": "¥1.000 millones ÷ ¥20.000 millones × 100 = 5%.",
+        "note": "Comparar teniendo en cuenta la estructura de activos del sector.",
+        "aliases": [
+          "ROA",
+          "Return on assets (ROA)",
+          "ROA"
+        ]
+      },
+      {
+        "id": "term-11",
+        "category": "投資指標",
+        "title": "EV/EBITDA",
+        "definition": "Valor de empresa en relación con el EBITDA.",
+        "formula": "EV ÷ EBITDA; EV ≈ capitalización + deuda con intereses − efectivo y equivalentes",
+        "example": "¥30.000 millones ÷ ¥3.000 millones = 10 veces.",
+        "note": "Considerar por separado inversión en activos y pasivos por arrendamientos.",
+        "aliases": [
+          "EV/EBITDA倍率",
+          "EV/EBITDA"
+        ]
+      },
+      {
+        "id": "term-10",
+        "category": "投資指標",
+        "title": "Precio/flujo de caja (PCFR)",
+        "definition": "Precio relativo al flujo de caja por acción.",
+        "formula": "Precio ÷ flujo de caja por acción",
+        "example": "¥2.000 ÷ ¥200 = 10 veces.",
+        "note": "Comprobar si se usa flujo operativo u otra aproximación.",
+        "aliases": [
+          "PCFR",
+          "Price-to-cash-flow ratio (PCFR)"
+        ]
+      },
+      {
+        "id": "term-9",
+        "category": "財務・会計",
+        "title": "Flujo de caja operativo",
+        "definition": "Efectivo generado o utilizado por la actividad principal.",
+        "formula": "Importe de actividades operativas en el estado de flujos de efectivo",
+        "example": "Un flujo operativo positivo no elimina la necesidad de revisar la inversión en activos.",
+        "note": "Comparar beneficio y efectivo, y su estabilidad a largo plazo.",
+        "aliases": [
+          "営業キャッシュフロー",
+          "Operating cash flow",
+          "Flujo de caja operativo"
+        ]
+      },
+      {
+        "id": "term-cf-0",
+        "category": "財務・会計",
+        "title": "Flujo de caja de inversión",
+        "definition": "Movimientos de efectivo por inversiones. Comprar equipos o valores suele consumir efectivo; venderlos suele aportarlo.",
+        "formula": "Importe de actividades de inversión en el estado de flujos de efectivo",
+        "example": "Desembolso de ¥3.000 millones y cobro de ¥500 millones: −¥2.500 millones, sin otras partidas.",
+        "note": "Un valor negativo no es necesariamente malo. Distinguir crecimiento y mantenimiento, y comparar con el flujo operativo.",
+        "aliases": [
+          "投資キャッシュフロー",
+          "Investing cash flow"
+        ]
+      },
+      {
+        "id": "term-cf-1",
+        "category": "財務・会計",
+        "title": "Flujo de caja de financiación",
+        "definition": "Efectivo por préstamos, amortizaciones, emisiones de acciones, dividendos y otras operaciones de financiación.",
+        "formula": "Importe de actividades de financiación en el estado de flujos de efectivo",
+        "example": "Préstamo de ¥2.000 millones, devolución de ¥1.000 millones y dividendos de ¥300 millones: +¥700 millones.",
+        "note": "Positivo puede indicar captación de fondos; negativo, amortización o remuneración al accionista. El signo no basta para valorarlo.",
+        "aliases": [
+          "財務キャッシュフロー",
+          "Financing cash flow",
+          "Flujo de caja de financiación"
+        ]
+      },
+      {
+        "id": "term-cf-2",
+        "category": "財務・会計",
+        "title": "Flujo de caja libre",
+        "definition": "Efectivo disponible tras las necesidades de inversión; su definición varía.",
+        "formula": "Fórmula simplificada: flujo operativo + flujo de inversión; alternativa: flujo operativo − inversión en activos",
+        "example": "¥5.000 millones + (−¥3.000 millones) = ¥2.000 millones.",
+        "note": "Indica capacidad para dividendos, deuda y crecimiento. Ventas de activos y adquisiciones pueden alterar la fórmula simplificada.",
+        "aliases": [
+          "フリーキャッシュフロー",
+          "Free cash flow",
+          "Flujo de caja libre"
+        ]
+      },
+      {
+        "id": "term-6",
+        "category": "財務・会計",
+        "title": "Ratio corriente",
+        "definition": "Indicador de capacidad de pago a corto plazo.",
+        "formula": "Activo corriente ÷ pasivo corriente × 100",
+        "example": "¥20.000 millones ÷ ¥10.000 millones × 100 = 200%.",
+        "note": "Revisar la facilidad para convertir cuentas por cobrar e inventarios en efectivo.",
+        "aliases": [
+          "流動比率",
+          "Current ratio",
+          "Ratio corriente"
+        ]
+      },
+      {
+        "id": "term-7",
+        "category": "財務・会計",
+        "title": "Deuda sobre patrimonio (D/E)",
+        "definition": "Deuda con intereses respecto al patrimonio neto.",
+        "formula": "Deuda con intereses ÷ patrimonio neto",
+        "example": "¥6.000 millones ÷ ¥10.000 millones = 0,6 veces.",
+        "note": "Analizar la carga de deuda y las características del sector.",
+        "aliases": [
+          "D/Eレシオ",
+          "Debt-to-equity ratio (D/E)",
+          "Deuda sobre patrimonio"
+        ]
+      },
+      {
+        "id": "term-8",
+        "category": "財務・会計",
+        "title": "Cobertura de intereses",
+        "definition": "Número de veces que los resultados cubren los intereses pagados.",
+        "formula": "(Beneficio operativo + intereses y dividendos cobrados) ÷ gastos por intereses",
+        "example": "¥1.200 millones ÷ ¥200 millones = 6 veces.",
+        "note": "Las definiciones varían; comprobar la base de cálculo.",
+        "aliases": [
+          "インタレスト・カバレッジ・レシオ",
+          "Interest coverage ratio"
+        ]
+      },
+      {
+        "id": "term-13",
+        "category": "投資指標",
+        "title": "Ratio de reparto de dividendos",
+        "definition": "Proporción del beneficio distribuida como dividendos.",
+        "formula": "Dividendo anual por acción ÷ BPA × 100",
+        "example": "¥40 ÷ ¥100 × 100 = 40%.",
+        "note": "Una proporción muy alta exige revisar su sostenibilidad.",
+        "aliases": [
+          "配当性向",
+          "Dividend payout ratio",
+          "Ratio de reparto"
+        ]
+      },
+      {
+        "id": "term-12",
+        "category": "投資指標",
+        "title": "Dividendos sobre patrimonio (DOE)",
+        "definition": "Dividendos anuales respecto al patrimonio neto.",
+        "formula": "Dividendos anuales totales ÷ patrimonio medio × 100",
+        "example": "¥300 millones ÷ ¥10.000 millones × 100 = 3%.",
+        "note": "Ayuda a entender la política de dividendos cuando fluctúan los beneficios.",
+        "aliases": [
+          "DOE",
+          "Dividend on equity (DOE)"
+        ]
+      },
+      {
+        "id": "term-39",
+        "category": "投資基礎",
+        "title": "Rentas de una inversión",
+        "definition": "Ingresos recibidos durante la tenencia, como dividendos e intereses.",
+        "formula": "",
+        "example": "",
+        "note": "Examinar también la variación del valor del capital invertido.",
+        "aliases": [
+          "インカムゲイン",
+          "Income return"
+        ]
+      },
+      {
+        "id": "term-38",
+        "category": "投資基礎",
+        "title": "Plusvalía",
+        "definition": "Beneficio obtenido al vender un activo por encima de su coste.",
+        "formula": "Importe de venta − coste de adquisición − costes de transacción",
+        "example": "",
+        "note": "Considerar impuestos y comisiones.",
+        "aliases": [
+          "キャピタルゲイン",
+          "Capital gain"
+        ]
+      },
+      {
+        "id": "term-22",
+        "category": "企業経営",
+        "title": "Recompra de acciones",
+        "definition": "Compra por una empresa de sus propias acciones en circulación.",
+        "formula": "",
+        "example": "",
+        "note": "Revisar su posterior amortización, eficiencia del capital y recursos disponibles.",
+        "aliases": [
+          "自社株買い",
+          "Share buyback",
+          "Recompra de acciones"
+        ]
+      },
+      {
+        "id": "term-mbo",
+        "category": "企業経営",
+        "title": "Compra por la dirección (MBO)",
+        "definition": "La dirección adquiere acciones o negocios de su empresa, a menudo con bancos o fondos. Una cotizada puede buscar excluirse de bolsa.",
+        "formula": "",
+        "example": "La dirección y un fondo lanzan una oferta pública para adquirir las acciones del público.",
+        "note": "El precio ofertado afecta a la cotización. Revisar accionariado, intención directiva, valor y financiación; predecir una operación es difícil. Puede fracasar o cambiar condiciones. Relacionado: TOB, recompras y valor de empresa.",
+        "aliases": [
+          "MBO",
+          "Management buyout (MBO)",
+          "MBO"
+        ]
+      },
+      {
+        "id": "term-21",
+        "category": "株式市場",
+        "title": "Oferta pública de adquisición (TOB / OPA)",
+        "definition": "Oferta para adquirir acciones fuera de la negociación bursátil ordinaria con condiciones anunciadas públicamente.",
+        "formula": "",
+        "example": "",
+        "note": "Comprobar precio, condiciones de éxito y riesgo de retirada.",
+        "aliases": [
+          "TOB",
+          "Tender offer (TOB)",
+          "OPA / Oferta pública"
+        ]
+      },
+      {
+        "id": "term-23",
+        "category": "企業経営",
+        "title": "Opciones sobre acciones",
+        "definition": "Derechos a adquirir acciones bajo condiciones determinadas.",
+        "formula": "",
+        "example": "",
+        "note": "Revisar dilución y requisitos de ejercicio.",
+        "aliases": [
+          "ストックオプション",
+          "Stock options"
+        ]
+      },
+      {
+        "id": "term-24",
+        "category": "企業経営",
+        "title": "Relaciones con inversores (IR)",
+        "definition": "Información empresarial divulgada para los inversores.",
+        "formula": "",
+        "example": "",
+        "note": "Consultar resultados, informes de valores y presentaciones.",
+        "aliases": [
+          "IR情報",
+          "Investor relations (IR)"
+        ]
+      },
+      {
+        "id": "term-25",
+        "category": "企業経営",
+        "title": "Resumen de resultados japonés (Kessan Tanshin)",
+        "definition": "Documento de una cotizada japonesa que comunica un resumen temprano de sus resultados.",
+        "formula": "",
+        "example": "",
+        "note": "Revisar resultados, situación financiera y perspectivas, y ampliar detalles en el informe de valores.",
+        "aliases": [
+          "決算短信",
+          "Japanese earnings summary (Kessan Tanshin)"
+        ]
+      },
+      {
+        "id": "term-26",
+        "category": "企業経営",
+        "title": "Informe anual",
+        "definition": "Documento que resume la actividad y los resultados anuales de una empresa.",
+        "formula": "",
+        "example": "",
+        "note": "Ayuda a comprender estrategia, estructura del negocio y políticas de gestión.",
+        "aliases": [
+          "アニュアルレポート",
+          "Annual report"
+        ]
+      },
+      {
+        "id": "term-41",
+        "category": "投資基礎",
+        "title": "Kaisha Shikiho",
+        "definition": "Publicación japonesa de información sobre empresas, sus negocios y resultados.",
+        "formula": "",
+        "example": "",
+        "note": "Distinguir sus previsiones de las publicadas por la propia empresa.",
+        "aliases": [
+          "四季報",
+          "Kaisha Shikiho"
+        ]
+      },
+      {
+        "id": "term-27",
+        "category": "株式市場",
+        "title": "Consenso de mercado",
+        "definition": "Expectativas de mercado agregadas a partir de previsiones de analistas y otras estimaciones.",
+        "formula": "",
+        "example": "",
+        "note": "La diferencia entre resultados y expectativas puede afectar a las cotizaciones.",
+        "aliases": [
+          "コンセンサス",
+          "Market consensus"
+        ]
+      },
+      {
+        "id": "term-29",
+        "category": "株式市場",
+        "title": "Sorpresa en resultados",
+        "definition": "Resultados que se desvían mucho de las expectativas del mercado.",
+        "formula": "",
+        "example": "",
+        "note": "Incluso unos buenos resultados pueden provocar caídas si se esperaba más.",
+        "aliases": [
+          "サプライズ決算",
+          "Earnings surprise"
+        ]
+      },
+      {
+        "id": "term-28",
+        "category": "株式市場",
+        "title": "Catalizador",
+        "definition": "Acontecimiento que puede cambiar la valoración: aumento de dividendos, venta de activos, cambios accionariales, retirada de defensas antiopa o cambios de cotización.",
+        "formula": "",
+        "example": "",
+        "note": "No garantiza subidas. Evaluar probabilidad y cuánto está ya descontado.",
+        "aliases": [
+          "カタリスト",
+          "Catalyst"
+        ]
+      },
+      {
+        "id": "term-17",
+        "category": "株式市場",
+        "title": "TOPIX",
+        "definition": "Índice de precios de la Bolsa de Tokio, representativo de la evolución amplia de las acciones japonesas.",
+        "formula": "",
+        "example": "",
+        "note": "Referencia para comparar fondos de renta variable japonesa.",
+        "aliases": [
+          "TOPIX",
+          "TOPIX"
+        ]
+      },
+      {
+        "id": "term-18",
+        "category": "株式市場",
+        "title": "Nikkei 225",
+        "definition": "Índice ponderado por precio de 225 acciones, calculado por Nikkei.",
+        "formula": "",
+        "example": "",
+        "note": "Las acciones con precios unitarios altos tienen más influencia.",
+        "aliases": [
+          "日経平均株価",
+          "Nikkei 225"
+        ]
+      },
+      {
+        "id": "term-19",
+        "category": "株式市場",
+        "title": "Fondo cotizado (ETF)",
+        "definition": "Fondo que cotiza y se negocia en bolsa.",
+        "formula": "",
+        "example": "",
+        "note": "Revisar comisiones de gestión, índice seguido y diferencial de compra y venta.",
+        "aliases": [
+          "ETF",
+          "Exchange-traded fund (ETF)",
+          "ETF"
+        ]
+      },
+      {
+        "id": "term-20",
+        "category": "株式市場",
+        "title": "Salida a bolsa (IPO)",
+        "definition": "Primera oferta pública de acciones e incorporación de una empresa al mercado bursátil.",
+        "formula": "",
+        "example": "",
+        "note": "Revisar folleto, oferta y demanda y periodos de bloqueo de ventas.",
+        "aliases": [
+          "IPO",
+          "Initial public offering (IPO)"
+        ]
+      },
+      {
+        "id": "term-50",
+        "category": "株式市場",
+        "title": "Acciones cíclicas",
+        "definition": "Acciones de empresas sensibles al ciclo económico.",
+        "formula": "",
+        "example": "",
+        "note": "Considerar máximos y mínimos de beneficios durante el ciclo.",
+        "aliases": [
+          "景気敏感株",
+          "Cyclical stocks"
+        ]
+      },
+      {
+        "id": "term-49",
+        "category": "企業経営",
+        "title": "Empresas de materias primas",
+        "definition": "Empresas vinculadas al petróleo, metales, cereales y otros productos básicos.",
+        "formula": "",
+        "example": "",
+        "note": "Examinar cómo los precios de las materias primas afectan a los resultados.",
+        "aliases": [
+          "コモディティ企業",
+          "Commodity companies"
+        ]
+      },
+      {
+        "id": "term-51",
+        "category": "産業・技術",
+        "title": "Semiconductores",
+        "definition": "Materiales con propiedades eléctricas controlables y componentes electrónicos fabricados con ellos.",
+        "formula": "",
+        "example": "",
+        "note": "Distinguir diseño, fabricación, equipos y materiales.",
+        "aliases": [
+          "半導体",
+          "Semiconductors"
+        ]
+      },
+      {
+        "id": "term-47",
+        "category": "株式市場",
+        "title": "Acciones temáticas",
+        "definition": "Valores que atraen atención por una política, tecnología o tendencia social.",
+        "formula": "",
+        "example": "",
+        "note": "Separar popularidad y contribución real a los beneficios.",
+        "aliases": [
+          "テーマ株",
+          "Thematic stocks"
+        ]
+      },
+      {
+        "id": "term-48",
+        "category": "株式市場",
+        "title": "Acciones especulativas (shite-kabu)",
+        "definition": "Término japonés para valores cuyos precios pueden moverse bruscamente por especulación o determinadas expectativas.",
+        "formula": "",
+        "example": "",
+        "note": "Vigilar movimientos extremos y pérdida de liquidez.",
+        "aliases": [
+          "仕手株",
+          "Speculative stocks (shite-kabu)"
+        ]
+      },
+      {
+        "id": "term-30",
+        "category": "株式市場",
+        "title": "Volatilidad",
+        "definition": "Magnitud de las fluctuaciones de precio.",
+        "formula": "La desviación típica de las rentabilidades es una medida habitual.",
+        "example": "",
+        "note": "Sirve para evaluar el riesgo de variación de precios.",
+        "aliases": [
+          "ボラティリティ",
+          "Volatility"
+        ]
+      },
+      {
+        "id": "term-37",
+        "category": "株式市場",
+        "title": "Osciladores",
+        "definition": "Indicadores técnicos de impulso o de sobrecompra y sobreventa.",
+        "formula": "",
+        "example": "",
+        "note": "No decidir una operación solo con indicadores como el RSI.",
+        "aliases": [
+          "オシレーター",
+          "Oscillators"
+        ]
+      },
+      {
+        "id": "term-31",
+        "category": "株式市場",
+        "title": "Precio medio ponderado por volumen (VWAP)",
+        "definition": "Precio medio de ejecución ponderado por el volumen negociado.",
+        "formula": "Σ(precio de ejecución × volumen) ÷ Σvolumen",
+        "example": "100 acciones a ¥100 y 300 a ¥110 dan ¥107,5.",
+        "note": "Referencia para evaluar la ejecución intradía y comparar precios.",
+        "aliases": [
+          "VWAP",
+          "Volume-weighted average price (VWAP)"
+        ]
+      },
+      {
+        "id": "term-45",
+        "category": "株式市場",
+        "title": "Registro de operaciones y libro de órdenes",
+        "definition": "El registro muestra operaciones ejecutadas; el libro recoge precios y cantidades de órdenes.",
+        "formula": "",
+        "example": "",
+        "note": "Ayudan a observar oferta y demanda a corto plazo, pero puede haber órdenes engañosas.",
+        "aliases": [
+          "歩み値・板読み",
+          "Time and sales / order book"
+        ]
+      },
+      {
+        "id": "term-44",
+        "category": "株式市場",
+        "title": "Tipos de órdenes",
+        "definition": "Instrucciones como órdenes de mercado, limitadas y de stop.",
+        "formula": "",
+        "example": "",
+        "note": "Elegir entre prioridad de ejecución y control de precio según el objetivo.",
+        "aliases": [
+          "注文種別",
+          "Order types"
+        ]
+      },
+      {
+        "id": "term-46",
+        "category": "株式市場",
+        "title": "Límites diarios de precio",
+        "definition": "Máximo y mínimo de variación diaria fijados por la bolsa.",
+        "formula": "",
+        "example": "",
+        "note": "Alcanzar un límite no garantiza la ejecución de una orden.",
+        "aliases": [
+          "ストップ高・ストップ安",
+          "Daily price limits"
+        ]
+      },
+      {
+        "id": "term-32",
+        "category": "株式市場",
+        "title": "Saldos de compras y ventas a crédito",
+        "definition": "Posiciones largas y cortas de operaciones a crédito pendientes de liquidar.",
+        "formula": "",
+        "example": "",
+        "note": "Orientan sobre oferta y demanda, pero no determinan el movimiento futuro del precio.",
+        "aliases": [
+          "信用買残・信用売残",
+          "Outstanding margin longs and shorts"
+        ]
+      },
+      {
+        "id": "term-33",
+        "category": "株式市場",
+        "title": "Ratio de posiciones largas/cortas a crédito",
+        "definition": "Relación entre posiciones compradoras y vendedoras a crédito pendientes.",
+        "formula": "Saldo de compras a crédito ÷ saldo de ventas a crédito",
+        "example": "1 millón de acciones ÷ 0,2 millones = 5 veces.",
+        "note": "Usar fechas y cobertura estadística comparables.",
+        "aliases": [
+          "貸借倍率",
+          "Margin long/short ratio"
+        ]
+      },
+      {
+        "id": "term-43",
+        "category": "株式市場",
+        "title": "Liquidación física de posiciones a crédito",
+        "definition": "Genbiki consiste en pagar una compra a crédito y recibir las acciones; genwatashi entrega acciones propias para liquidar una venta a crédito.",
+        "formula": "",
+        "example": "",
+        "note": "Comprobar comisiones, intereses y costes del préstamo de acciones.",
+        "aliases": [
+          "現引・現渡",
+          "Physical settlement of margin positions"
+        ]
+      },
+      {
+        "id": "term-42",
+        "category": "株式市場",
+        "title": "Fecha exdividendo",
+        "definition": "Primer día de negociación en que una compra ya no da derecho al dividendo o beneficio para accionistas correspondiente.",
+        "formula": "",
+        "example": "",
+        "note": "No confundir con el último día de negociación con derecho.",
+        "aliases": [
+          "権利落ち日",
+          "Ex-dividend date"
+        ]
+      },
+      {
+        "id": "term-34",
+        "category": "経済・金融",
+        "title": "Inflación",
+        "definition": "Subida sostenida del nivel general de precios.",
+        "formula": "",
+        "example": "",
+        "note": "Considerar los efectos sobre tipos reales y poder adquisitivo.",
+        "aliases": [
+          "インフレ",
+          "Inflation",
+          "Inflación"
+        ]
+      },
+      {
+        "id": "term-35",
+        "category": "経済・金融",
+        "title": "Deflación",
+        "definition": "Caída sostenida del nivel general de precios.",
+        "formula": "",
+        "example": "",
+        "note": "Examinar efectos sobre demanda, salarios y beneficios empresariales.",
+        "aliases": [
+          "デフレ",
+          "Deflation"
+        ]
+      },
+      {
+        "id": "term-36",
+        "category": "経済・金融",
+        "title": "Subida de tipos de interés",
+        "definition": "Aumento del coste de financiación o de la tasa de descuento.",
+        "formula": "",
+        "example": "",
+        "note": "Examinar carga de deuda y valor actual de beneficios futuros.",
+        "aliases": [
+          "金利上昇",
+          "Rising interest rates"
+        ]
+      },
+      {
+        "id": "term-extra-margin-of-safety",
+        "category": "投資基礎",
+        "title": "Margen de seguridad",
+        "definition": "Diferencia entre el valor intrínseco estimado prudentemente y el precio."
+      },
+      {
+        "id": "term-extra-intrinsic-value",
+        "category": "投資基礎",
+        "title": "Valor intrínseco",
+        "definition": "Estimación del valor económico de una empresa."
+      },
+      {
+        "id": "term-extra-equity-ratio",
+        "category": "財務・会計",
+        "title": "Ratio de patrimonio",
+        "definition": "Patrimonio neto dividido por activos totales; describe la estructura financiera."
+      },
+      {
+        "id": "term-extra-dividend-yield",
+        "category": "投資指標",
+        "title": "Rentabilidad por dividendo",
+        "definition": "Dividendo anual por acción dividido por su precio; no es una rentabilidad garantizada."
+      },
+      {
+        "id": "term-extra-capital-allocation",
+        "category": "企業経営",
+        "title": "Asignación de capital",
+        "definition": "Decisiones de la dirección sobre inversión, adquisiciones, deuda y retribución al accionista."
+      },
+      {
+        "id": "term-extra-real-interest-rate",
+        "category": "経済・金融",
+        "title": "Tipo de interés real",
+        "definition": "Tipo de interés ajustado por inflación; aproximadamente tipo nominal menos inflación."
+      },
+      {
+        "id": "term-extra-compound-interest",
+        "category": "経済・金融",
+        "title": "Interés compuesto",
+        "definition": "Crecimiento cuando los rendimientos acumulados también generan rendimientos."
+      },
+      {
+        "id": "term-extra-market-capitalization",
+        "category": "株式市場",
+        "title": "Capitalización bursátil",
+        "definition": "Precio de la acción multiplicado por el número de acciones en circulación."
+      },
+      {
+        "id": "term-extra-enterprise-value",
+        "category": "投資指標",
+        "title": "Valor de empresa",
+        "definition": "Medida de valoración que suele sumar deuda a la capitalización y restar efectivo, con ajustes."
+      }
+    ]
+  },
+  "pt": {
+    "categories": {
+      "科学・技術": "Ciência e tecnologia",
+      "投資基礎": "Fundamentos de investimento",
+      "投資指標": "Avaliação e indicadores",
+      "財務・会計": "Finanças e contabilidade",
+      "企業経営": "Empresas e gestão",
+      "株式市場": "Mercado de ações",
+      "産業・技術": "Indústria e tecnologia",
+      "経済・金融": "Economia e finanças"
+    },
+    "terms": [
+      {
+        "id": "term-processor",
+        "category": "科学・技術",
+        "title": "Processador",
+        "definition": "Dispositivo que realiza cálculos e controla equipamentos. A CPU é um exemplo; MPU geralmente significa microprocessador. GPUs também são processadores.",
+        "formula": "",
+        "example": "",
+        "note": "",
+        "aliases": [
+          "プロセッサー",
+          "Processor"
+        ]
+      },
+      {
+        "id": "term-tse-prime",
+        "category": "投資基礎",
+        "title": "Mercado Prime da Bolsa de Tóquio",
+        "definition": "Segmento para empresas com porte, liquidez e padrões elevados de governança adequados a muitos investidores institucionais.",
+        "formula": "",
+        "example": "",
+        "note": "Prime, Standard e Growth são segmentos, não classificações de qualidade ou preço.",
+        "aliases": [
+          "東証P（プライム市場）",
+          "TSE Prime Market"
+        ]
+      },
+      {
+        "id": "term-tse-standard",
+        "category": "投資基礎",
+        "title": "Mercado Standard da Bolsa de Tóquio",
+        "definition": "Segmento para empresas com certa liquidez e os padrões básicos de governança esperados de companhias listadas.",
+        "formula": "",
+        "example": "",
+        "note": "O segmento não determina se uma empresa é melhor ou se sua ação está barata.",
+        "aliases": [
+          "東証S（スタンダード市場）",
+          "TSE Standard Market"
+        ]
+      },
+      {
+        "id": "term-tse-growth",
+        "category": "投資基礎",
+        "title": "Mercado Growth da Bolsa de Tóquio",
+        "definition": "Segmento para empresas com alto potencial de crescimento. Um histórico operacional limitado pode trazer risco relativamente elevado.",
+        "formula": "",
+        "example": "",
+        "note": "Não garante crescimento nem indica uma ação barata.",
+        "aliases": [
+          "東証G（グロース市場）",
+          "TSE Growth Market"
+        ]
+      },
+      {
+        "id": "term-40",
+        "category": "投資基礎",
+        "title": "Triagem de ações",
+        "definition": "Redução de uma lista de ativos por critérios específicos.",
+        "formula": "",
+        "example": "",
+        "note": "Serve para encontrar candidatos, não substitui a análise da empresa.",
+        "aliases": [
+          "スクリーニング",
+          "Screening",
+          "Triagem de ações"
+        ]
+      },
+      {
+        "id": "term-0",
+        "category": "投資指標",
+        "title": "Preço/lucro (P/L ou PER)",
+        "definition": "Preço da ação em relação ao lucro por ação ordinária.",
+        "formula": "Preço ÷ LPA",
+        "example": "¥1.500 ÷ ¥100 = 15 vezes.",
+        "note": "Compare empresas semelhantes e níveis históricos. Geralmente não é útil com prejuízo.",
+        "aliases": [
+          "PER",
+          "P/E ratio (PER)",
+          "P/L"
+        ]
+      },
+      {
+        "id": "term-4",
+        "category": "投資指標",
+        "title": "Lucro por ação (LPA / EPS)",
+        "definition": "Lucro atribuível a cada ação ordinária.",
+        "formula": "Lucro líquido atribuível aos acionistas ordinários ÷ média ponderada de ações ordinárias",
+        "example": "¥1 bilhão ÷ 10 milhões de ações = ¥100.",
+        "note": "Usado no P/L e na análise de crescimento. Ajuste por desdobramentos.",
+        "aliases": [
+          "EPS",
+          "Earnings per share (EPS)",
+          "LPA (EPS)"
+        ]
+      },
+      {
+        "id": "term-16",
+        "category": "投資指標",
+        "title": "Rendimento do lucro",
+        "definition": "Lucro como percentual do preço; inverso de um P/L positivo.",
+        "formula": "LPA ÷ preço × 100 = 100 ÷ P/L positivo",
+        "example": "P/L de 20 implica 5%.",
+        "note": "Ajuda a comparar com rendimentos de títulos e custo de capital.",
+        "aliases": [
+          "益回り",
+          "Earnings yield"
+        ]
+      },
+      {
+        "id": "term-15",
+        "category": "投資指標",
+        "title": "P/L de Shiller (CAPE)",
+        "definition": "Avaliação baseada na média de lucros reais de dez anos.",
+        "formula": "Nível real do índice ÷ LPA real médio de dez anos",
+        "example": "Suaviza oscilações de lucros do ciclo econômico.",
+        "note": "Usado na avaliação de longo prazo, não no timing de curto prazo. Faixas abaixo de 10, entre 10–20 e acima de 20 não são limites universais: país, época e juros importam.",
+        "aliases": [
+          "Shiller PER",
+          "Shiller P/E (CAPE)"
+        ]
+      },
+      {
+        "id": "term-1",
+        "category": "投資指標",
+        "title": "Preço/valor patrimonial (P/VP ou PBR)",
+        "definition": "Preço em relação ao valor patrimonial por ação ordinária.",
+        "formula": "Preço ÷ VPA",
+        "example": "¥1.200 ÷ ¥1.000 = 1,2 vez.",
+        "note": "Verifique ativos e ROE. Abaixo de 1 não comprova, por si só, subavaliação.",
+        "aliases": [
+          "PBR",
+          "P/B ratio (PBR)",
+          "P/VP"
+        ]
+      },
+      {
+        "id": "term-5",
+        "category": "投資指標",
+        "title": "Valor patrimonial por ação (VPA / BPS)",
+        "definition": "Patrimônio líquido atribuível a cada ação ordinária.",
+        "formula": "Patrimônio atribuível aos acionistas ordinários ÷ ações ordinárias ao fim do período",
+        "example": "¥10 bilhões ÷ 10 milhões de ações = ¥1.000.",
+        "note": "Usado no P/VP. Examine ágio por expectativa de rentabilidade e avaliação dos ativos.",
+        "aliases": [
+          "BPS",
+          "Book value per share (BPS)"
+        ]
+      },
+      {
+        "id": "term-14",
+        "category": "投資指標",
+        "title": "Produto P/L × P/VP de Graham",
+        "definition": "Indicador que multiplica P/L por P/VP.",
+        "formula": "P/L × P/VP",
+        "example": "15 × 1,5 = 22,5.",
+        "note": "A referência tradicional de Graham de 22,5 não é uma regra universal.",
+        "aliases": [
+          "ミックス係数",
+          "Graham P/E × P/B product"
+        ]
+      },
+      {
+        "id": "term-2",
+        "category": "投資指標",
+        "title": "Retorno sobre patrimônio (ROE)",
+        "definition": "Eficiência na geração de lucro com o patrimônio dos acionistas.",
+        "formula": "Lucro líquido ÷ patrimônio médio × 100",
+        "example": "¥2 bilhões ÷ ¥10 bilhões × 100 = 20%.",
+        "note": "Alavancagem e menor base patrimonial podem elevar o indicador. Use junto com ROA.",
+        "aliases": [
+          "ROE",
+          "Return on equity (ROE)",
+          "ROE"
+        ]
+      },
+      {
+        "id": "term-3",
+        "category": "投資指標",
+        "title": "Retorno sobre ativos (ROA)",
+        "definition": "Rentabilidade em relação aos ativos totais.",
+        "formula": "Lucro líquido ÷ ativos totais médios × 100",
+        "example": "¥1 bilhão ÷ ¥20 bilhões × 100 = 5%.",
+        "note": "Compare considerando a estrutura de ativos do setor.",
+        "aliases": [
+          "ROA",
+          "Return on assets (ROA)",
+          "ROA"
+        ]
+      },
+      {
+        "id": "term-11",
+        "category": "投資指標",
+        "title": "EV/EBITDA",
+        "definition": "Valor da firma em relação ao EBITDA.",
+        "formula": "EV ÷ EBITDA; EV ≈ valor de mercado + dívida com juros − caixa e equivalentes",
+        "example": "¥30 bilhões ÷ ¥3 bilhões = 10 vezes.",
+        "note": "Considere separadamente investimentos em ativos e passivos de arrendamento.",
+        "aliases": [
+          "EV/EBITDA倍率",
+          "EV/EBITDA"
+        ]
+      },
+      {
+        "id": "term-10",
+        "category": "投資指標",
+        "title": "Preço/fluxo de caixa (PCFR)",
+        "definition": "Preço em relação ao fluxo de caixa por ação.",
+        "formula": "Preço ÷ fluxo de caixa por ação",
+        "example": "¥2.000 ÷ ¥200 = 10 vezes.",
+        "note": "Confirme se o cálculo usa fluxo operacional ou outra aproximação.",
+        "aliases": [
+          "PCFR",
+          "Price-to-cash-flow ratio (PCFR)"
+        ]
+      },
+      {
+        "id": "term-9",
+        "category": "財務・会計",
+        "title": "Fluxo de caixa operacional",
+        "definition": "Caixa gerado ou consumido pela atividade principal.",
+        "formula": "Valor das atividades operacionais na demonstração dos fluxos de caixa",
+        "example": "Fluxo operacional positivo não elimina a análise dos investimentos em ativos.",
+        "note": "Compare lucro e geração de caixa e observe a estabilidade de longo prazo.",
+        "aliases": [
+          "営業キャッシュフロー",
+          "Operating cash flow",
+          "Fluxo de caixa operacional"
+        ]
+      },
+      {
+        "id": "term-cf-0",
+        "category": "財務・会計",
+        "title": "Fluxo de caixa de investimento",
+        "definition": "Movimentações de caixa de investimentos. Comprar equipamentos ou títulos normalmente consome caixa; vendê-los normalmente gera caixa.",
+        "formula": "Valor das atividades de investimento na demonstração dos fluxos de caixa",
+        "example": "Saída de ¥3 bilhões e entrada de ¥0,5 bilhão: −¥2,5 bilhões, sem outras movimentações.",
+        "note": "Negativo não significa necessariamente ruim. Distinga expansão e manutenção e compare com o fluxo operacional.",
+        "aliases": [
+          "投資キャッシュフロー",
+          "Investing cash flow"
+        ]
+      },
+      {
+        "id": "term-cf-1",
+        "category": "財務・会計",
+        "title": "Fluxo de caixa de financiamento",
+        "definition": "Caixa de empréstimos, amortizações, emissão de ações, dividendos e outras atividades de financiamento.",
+        "formula": "Valor das atividades de financiamento na demonstração dos fluxos de caixa",
+        "example": "Captar ¥2 bilhões, amortizar ¥1 bilhão e pagar ¥0,3 bilhão em dividendos: +¥0,7 bilhão.",
+        "note": "Positivo pode indicar captação; negativo, amortização ou distribuição. O sinal não basta para avaliar qualidade.",
+        "aliases": [
+          "財務キャッシュフロー",
+          "Financing cash flow",
+          "Fluxo de caixa de financiamento"
+        ]
+      },
+      {
+        "id": "term-cf-2",
+        "category": "財務・会計",
+        "title": "Fluxo de caixa livre",
+        "definition": "Caixa restante após as necessidades de investimento; a definição varia por empresa e método.",
+        "formula": "Atalho comum: fluxo operacional + fluxo de investimento; alternativa: fluxo operacional − investimento em ativos",
+        "example": "¥5 bilhões + (−¥3 bilhões) = ¥2 bilhões.",
+        "note": "Indica capacidade para dividendos, dívida e crescimento. Vendas de ativos e aquisições podem distorcer o atalho.",
+        "aliases": [
+          "フリーキャッシュフロー",
+          "Free cash flow",
+          "Fluxo de caixa livre"
+        ]
+      },
+      {
+        "id": "term-6",
+        "category": "財務・会計",
+        "title": "Liquidez corrente",
+        "definition": "Indicador de capacidade de pagamento de curto prazo.",
+        "formula": "Ativo circulante ÷ passivo circulante × 100",
+        "example": "¥20 bilhões ÷ ¥10 bilhões × 100 = 200%.",
+        "note": "Verifique a conversão de recebíveis e estoques em caixa.",
+        "aliases": [
+          "流動比率",
+          "Current ratio",
+          "Liquidez corrente"
+        ]
+      },
+      {
+        "id": "term-7",
+        "category": "財務・会計",
+        "title": "Dívida/patrimônio (D/E)",
+        "definition": "Dívida com juros em relação ao patrimônio líquido.",
+        "formula": "Dívida com juros ÷ patrimônio líquido",
+        "example": "¥6 bilhões ÷ ¥10 bilhões = 0,6 vez.",
+        "note": "Analise o peso da dívida e as características do setor.",
+        "aliases": [
+          "D/Eレシオ",
+          "Debt-to-equity ratio (D/E)",
+          "Dívida sobre patrimônio"
+        ]
+      },
+      {
+        "id": "term-8",
+        "category": "財務・会計",
+        "title": "Cobertura de juros",
+        "definition": "Quantas vezes o resultado cobre os juros pagos.",
+        "formula": "(Lucro operacional + juros e dividendos recebidos) ÷ despesa de juros",
+        "example": "¥1,2 bilhão ÷ ¥0,2 bilhão = 6 vezes.",
+        "note": "As definições variam; confirme a base de cálculo.",
+        "aliases": [
+          "インタレスト・カバレッジ・レシオ",
+          "Interest coverage ratio"
+        ]
+      },
+      {
+        "id": "term-13",
+        "category": "投資指標",
+        "title": "Índice de distribuição de dividendos",
+        "definition": "Parcela do lucro distribuída em dividendos.",
+        "formula": "Dividendo anual por ação ÷ LPA × 100",
+        "example": "¥40 ÷ ¥100 × 100 = 40%.",
+        "note": "Uma proporção muito elevada exige verificar a sustentabilidade.",
+        "aliases": [
+          "配当性向",
+          "Dividend payout ratio",
+          "Índice de distribuição"
+        ]
+      },
+      {
+        "id": "term-12",
+        "category": "投資指標",
+        "title": "Dividendos sobre patrimônio (DOE)",
+        "definition": "Dividendos anuais em relação ao patrimônio líquido.",
+        "formula": "Dividendos anuais totais ÷ patrimônio médio × 100",
+        "example": "¥0,3 bilhão ÷ ¥10 bilhões × 100 = 3%.",
+        "note": "Ajuda a entender a política de dividendos quando o lucro oscila.",
+        "aliases": [
+          "DOE",
+          "Dividend on equity (DOE)"
+        ]
+      },
+      {
+        "id": "term-39",
+        "category": "投資基礎",
+        "title": "Renda de investimentos",
+        "definition": "Rendimentos recebidos durante a posse de um ativo, como dividendos e juros.",
+        "formula": "",
+        "example": "",
+        "note": "Considere também a oscilação do valor do principal.",
+        "aliases": [
+          "インカムゲイン",
+          "Income return"
+        ]
+      },
+      {
+        "id": "term-38",
+        "category": "投資基礎",
+        "title": "Ganho de capital",
+        "definition": "Lucro ao vender um ativo acima do custo de aquisição.",
+        "formula": "Valor da venda − custo de aquisição − custos da operação",
+        "example": "",
+        "note": "Considere impostos e taxas.",
+        "aliases": [
+          "キャピタルゲイン",
+          "Capital gain"
+        ]
+      },
+      {
+        "id": "term-22",
+        "category": "企業経営",
+        "title": "Recompra de ações",
+        "definition": "Compra, pela empresa, de suas próprias ações em circulação.",
+        "formula": "",
+        "example": "",
+        "note": "Verifique eventual cancelamento, eficiência do capital e recursos disponíveis.",
+        "aliases": [
+          "自社株買い",
+          "Share buyback",
+          "Recompra de ações"
+        ]
+      },
+      {
+        "id": "term-mbo",
+        "category": "企業経営",
+        "title": "Aquisição pela administração (MBO)",
+        "definition": "Gestores compram ações ou negócios da própria empresa, muitas vezes com bancos ou fundos. Uma companhia listada pode buscar fechar o capital.",
+        "formula": "",
+        "example": "A administração se associa a um fundo e lança uma oferta para adquirir ações do público.",
+        "note": "O preço ofertado afeta a cotação. Analise acionistas, intenção dos gestores, valor e financiamento; prever a operação é difícil. A oferta pode fracassar ou mudar condições. Relacionado: TOB, recompra e valor da firma.",
+        "aliases": [
+          "MBO",
+          "Management buyout (MBO)",
+          "MBO"
+        ]
+      },
+      {
+        "id": "term-21",
+        "category": "株式市場",
+        "title": "Oferta pública de aquisição (TOB / OPA)",
+        "definition": "Oferta para adquirir ações fora da negociação normal em bolsa sob condições divulgadas publicamente.",
+        "formula": "",
+        "example": "",
+        "note": "Verifique preço, condições de conclusão e risco de retirada.",
+        "aliases": [
+          "TOB",
+          "Tender offer (TOB)",
+          "OPA / Oferta pública"
+        ]
+      },
+      {
+        "id": "term-23",
+        "category": "企業経営",
+        "title": "Opções de ações",
+        "definition": "Direitos de adquirir ações sob condições determinadas.",
+        "formula": "",
+        "example": "",
+        "note": "Verifique diluição e condições de exercício.",
+        "aliases": [
+          "ストックオプション",
+          "Stock options"
+        ]
+      },
+      {
+        "id": "term-24",
+        "category": "企業経営",
+        "title": "Relações com investidores (RI / IR)",
+        "definition": "Informações empresariais divulgadas aos investidores.",
+        "formula": "",
+        "example": "",
+        "note": "Consulte resultados, relatórios de valores mobiliários e apresentações.",
+        "aliases": [
+          "IR情報",
+          "Investor relations (IR)"
+        ]
+      },
+      {
+        "id": "term-25",
+        "category": "企業経営",
+        "title": "Resumo de resultados japonês (Kessan Tanshin)",
+        "definition": "Documento de companhia listada japonesa com divulgação rápida do resumo dos resultados.",
+        "formula": "",
+        "example": "",
+        "note": "Examine desempenho, situação financeira e perspectivas; complete a leitura com o relatório de valores mobiliários.",
+        "aliases": [
+          "決算短信",
+          "Japanese earnings summary (Kessan Tanshin)"
+        ]
+      },
+      {
+        "id": "term-26",
+        "category": "企業経営",
+        "title": "Relatório anual",
+        "definition": "Relatório das atividades e dos resultados anuais de uma empresa.",
+        "formula": "",
+        "example": "",
+        "note": "Ajuda a compreender estratégia, estrutura de negócios e políticas de gestão.",
+        "aliases": [
+          "アニュアルレポート",
+          "Annual report"
+        ]
+      },
+      {
+        "id": "term-41",
+        "category": "投資基礎",
+        "title": "Kaisha Shikiho",
+        "definition": "Publicação japonesa com informações sobre empresas, negócios e desempenho financeiro.",
+        "formula": "",
+        "example": "",
+        "note": "Distinga as previsões da publicação das projeções divulgadas pela própria companhia.",
+        "aliases": [
+          "四季報",
+          "Kaisha Shikiho"
+        ]
+      },
+      {
+        "id": "term-27",
+        "category": "株式市場",
+        "title": "Consenso de mercado",
+        "definition": "Expectativas de mercado agregadas a partir de previsões de analistas e outras estimativas.",
+        "formula": "",
+        "example": "",
+        "note": "Diferenças entre resultados e expectativas podem afetar as cotações.",
+        "aliases": [
+          "コンセンサス",
+          "Market consensus"
+        ]
+      },
+      {
+        "id": "term-29",
+        "category": "株式市場",
+        "title": "Surpresa nos resultados",
+        "definition": "Resultados que diferem muito das expectativas de mercado.",
+        "formula": "",
+        "example": "",
+        "note": "Mesmo bons resultados podem provocar queda se as expectativas eram maiores.",
+        "aliases": [
+          "サプライズ決算",
+          "Earnings surprise"
+        ]
+      },
+      {
+        "id": "term-28",
+        "category": "株式市場",
+        "title": "Catalisador",
+        "definition": "Evento que pode mudar a avaliação da ação: aumento de dividendos, venda de ativos, mudança acionária, retirada de defesas contra aquisição ou alteração de listagem.",
+        "formula": "",
+        "example": "",
+        "note": "Não garante alta. Avalie probabilidade e o que já está no preço.",
+        "aliases": [
+          "カタリスト",
+          "Catalyst"
+        ]
+      },
+      {
+        "id": "term-17",
+        "category": "株式市場",
+        "title": "TOPIX",
+        "definition": "Índice de preços da Bolsa de Tóquio que representa movimentos amplos das ações japonesas.",
+        "formula": "",
+        "example": "",
+        "note": "Referência para comparar fundos de ações japonesas.",
+        "aliases": [
+          "TOPIX",
+          "TOPIX"
+        ]
+      },
+      {
+        "id": "term-18",
+        "category": "株式市場",
+        "title": "Nikkei 225",
+        "definition": "Índice de 225 ações ponderado por preço, calculado pela Nikkei.",
+        "formula": "",
+        "example": "",
+        "note": "Ações com maior preço unitário têm mais influência.",
+        "aliases": [
+          "日経平均株価",
+          "Nikkei 225"
+        ]
+      },
+      {
+        "id": "term-19",
+        "category": "株式市場",
+        "title": "Fundo negociado em bolsa (ETF)",
+        "definition": "Fundo listado e negociado em bolsa.",
+        "formula": "",
+        "example": "",
+        "note": "Verifique taxa de administração, índice seguido e diferença entre compra e venda.",
+        "aliases": [
+          "ETF",
+          "Exchange-traded fund (ETF)",
+          "ETF"
+        ]
+      },
+      {
+        "id": "term-20",
+        "category": "株式市場",
+        "title": "Oferta pública inicial (IPO)",
+        "definition": "Primeira oferta pública de ações e entrada de uma empresa no mercado acionário.",
+        "formula": "",
+        "example": "",
+        "note": "Leia o prospecto e examine oferta, demanda e restrições de venda.",
+        "aliases": [
+          "IPO",
+          "Initial public offering (IPO)"
+        ]
+      },
+      {
+        "id": "term-50",
+        "category": "株式市場",
+        "title": "Ações cíclicas",
+        "definition": "Ações de empresas sensíveis ao ciclo econômico.",
+        "formula": "",
+        "example": "",
+        "note": "Considere picos e vales dos lucros ao longo do ciclo.",
+        "aliases": [
+          "景気敏感株",
+          "Cyclical stocks"
+        ]
+      },
+      {
+        "id": "term-49",
+        "category": "企業経営",
+        "title": "Empresas de commodities",
+        "definition": "Empresas ligadas a petróleo, metais, grãos e outros produtos básicos.",
+        "formula": "",
+        "example": "",
+        "note": "Verifique o efeito dos preços das commodities sobre os lucros.",
+        "aliases": [
+          "コモディティ企業",
+          "Commodity companies"
+        ]
+      },
+      {
+        "id": "term-51",
+        "category": "産業・技術",
+        "title": "Semicondutores",
+        "definition": "Materiais com propriedades elétricas controláveis e componentes eletrônicos feitos com eles.",
+        "formula": "",
+        "example": "",
+        "note": "Distinga projeto, fabricação, equipamentos e materiais.",
+        "aliases": [
+          "半導体",
+          "Semiconductors"
+        ]
+      },
+      {
+        "id": "term-47",
+        "category": "株式市場",
+        "title": "Ações temáticas",
+        "definition": "Ações que recebem atenção por uma política, tecnologia ou tendência social.",
+        "formula": "",
+        "example": "",
+        "note": "Separe popularidade de contribuição efetiva para os resultados.",
+        "aliases": [
+          "テーマ株",
+          "Thematic stocks"
+        ]
+      },
+      {
+        "id": "term-48",
+        "category": "株式市場",
+        "title": "Ações especulativas (shite-kabu)",
+        "definition": "Termo japonês para ações que podem variar fortemente por especulação ou narrativas específicas do mercado.",
+        "formula": "",
+        "example": "",
+        "note": "Observe oscilações bruscas e redução de liquidez.",
+        "aliases": [
+          "仕手株",
+          "Speculative stocks (shite-kabu)"
+        ]
+      },
+      {
+        "id": "term-30",
+        "category": "株式市場",
+        "title": "Volatilidade",
+        "definition": "Magnitude das oscilações de preço.",
+        "formula": "O desvio padrão dos retornos é uma medida comum.",
+        "example": "",
+        "note": "Usada para avaliar o risco de flutuação dos preços.",
+        "aliases": [
+          "ボラティリティ",
+          "Volatility"
+        ]
+      },
+      {
+        "id": "term-37",
+        "category": "株式市場",
+        "title": "Osciladores",
+        "definition": "Indicadores técnicos de impulso ou de condições de sobrecompra e sobrevenda.",
+        "formula": "",
+        "example": "",
+        "note": "Não decida uma operação apenas por um indicador, como o RSI.",
+        "aliases": [
+          "オシレーター",
+          "Oscillators"
+        ]
+      },
+      {
+        "id": "term-31",
+        "category": "株式市場",
+        "title": "Preço médio ponderado por volume (VWAP)",
+        "definition": "Preço médio de execução ponderado pelo volume negociado.",
+        "formula": "Σ(preço de execução × volume) ÷ Σvolume",
+        "example": "100 ações a ¥100 e 300 a ¥110 resultam em ¥107,5.",
+        "note": "Referência para avaliar execução intradiária e comparar preços.",
+        "aliases": [
+          "VWAP",
+          "Volume-weighted average price (VWAP)"
+        ]
+      },
+      {
+        "id": "term-45",
+        "category": "株式市場",
+        "title": "Histórico de negócios e livro de ofertas",
+        "definition": "O histórico registra negócios executados; o livro mostra preços e quantidades das ordens.",
+        "formula": "",
+        "example": "",
+        "note": "Ajudam a observar oferta e demanda no curto prazo, mas podem existir ordens enganosas.",
+        "aliases": [
+          "歩み値・板読み",
+          "Time and sales / order book"
+        ]
+      },
+      {
+        "id": "term-44",
+        "category": "株式市場",
+        "title": "Tipos de ordens",
+        "definition": "Instruções como ordens a mercado, limitadas e de stop.",
+        "formula": "",
+        "example": "",
+        "note": "Escolha entre prioridade de execução e controle do preço conforme o objetivo.",
+        "aliases": [
+          "注文種別",
+          "Order types"
+        ]
+      },
+      {
+        "id": "term-46",
+        "category": "株式市場",
+        "title": "Limites diários de preço",
+        "definition": "Limites superior e inferior de oscilação diária definidos pela bolsa.",
+        "formula": "",
+        "example": "",
+        "note": "Atingir um limite não garante execução.",
+        "aliases": [
+          "ストップ高・ストップ安",
+          "Daily price limits"
+        ]
+      },
+      {
+        "id": "term-32",
+        "category": "株式市場",
+        "title": "Posições compradas e vendidas a margem",
+        "definition": "Saldos de posições longas e curtas ainda não liquidadas em operações a margem.",
+        "formula": "",
+        "example": "",
+        "note": "Indicam oferta e demanda, mas não determinam o preço futuro.",
+        "aliases": [
+          "信用買残・信用売残",
+          "Outstanding margin longs and shorts"
+        ]
+      },
+      {
+        "id": "term-33",
+        "category": "株式市場",
+        "title": "Razão entre compras e vendas a margem",
+        "definition": "Relação entre posições compradas e vendidas a margem em aberto.",
+        "formula": "Posições compradas a margem ÷ posições vendidas a margem",
+        "example": "1 milhão de ações ÷ 0,2 milhão = 5 vezes.",
+        "note": "Use datas e abrangência estatística consistentes.",
+        "aliases": [
+          "貸借倍率",
+          "Margin long/short ratio"
+        ]
+      },
+      {
+        "id": "term-43",
+        "category": "株式市場",
+        "title": "Liquidação física de posições a margem",
+        "definition": "Genbiki paga uma compra a margem e recebe as ações; genwatashi entrega ações próprias para liquidar uma venda a margem.",
+        "formula": "",
+        "example": "",
+        "note": "Confira taxas de liquidação, juros e custos de empréstimo de ações.",
+        "aliases": [
+          "現引・現渡",
+          "Physical settlement of margin positions"
+        ]
+      },
+      {
+        "id": "term-42",
+        "category": "株式市場",
+        "title": "Data ex-dividendo",
+        "definition": "Primeiro pregão em que a compra já não dá direito ao dividendo ou benefício aos acionistas correspondente.",
+        "formula": "",
+        "example": "",
+        "note": "Não confunda com o último pregão com direito.",
+        "aliases": [
+          "権利落ち日",
+          "Ex-dividend date"
+        ]
+      },
+      {
+        "id": "term-34",
+        "category": "経済・金融",
+        "title": "Inflação",
+        "definition": "Aumento persistente do nível geral de preços.",
+        "formula": "",
+        "example": "",
+        "note": "Considere efeitos nos juros reais e no poder de compra.",
+        "aliases": [
+          "インフレ",
+          "Inflation",
+          "Inflação"
+        ]
+      },
+      {
+        "id": "term-35",
+        "category": "経済・金融",
+        "title": "Deflação",
+        "definition": "Queda persistente do nível geral de preços.",
+        "formula": "",
+        "example": "",
+        "note": "Examine efeitos sobre demanda, salários e lucros empresariais.",
+        "aliases": [
+          "デフレ",
+          "Deflation"
+        ]
+      },
+      {
+        "id": "term-36",
+        "category": "経済・金融",
+        "title": "Alta de juros",
+        "definition": "Aumento do custo de financiamento ou da taxa de desconto.",
+        "formula": "",
+        "example": "",
+        "note": "Avalie o serviço da dívida e o valor presente dos lucros futuros.",
+        "aliases": [
+          "金利上昇",
+          "Rising interest rates"
+        ]
+      },
+      {
+        "id": "term-extra-margin-of-safety",
+        "category": "投資基礎",
+        "title": "Margem de segurança",
+        "definition": "Diferença entre o valor intrínseco estimado de forma conservadora e o preço."
+      },
+      {
+        "id": "term-extra-intrinsic-value",
+        "category": "投資基礎",
+        "title": "Valor intrínseco",
+        "definition": "Estimativa do valor econômico de uma empresa."
+      },
+      {
+        "id": "term-extra-equity-ratio",
+        "category": "財務・会計",
+        "title": "Índice de patrimônio",
+        "definition": "Patrimônio líquido dividido pelo total de ativos; indica a estrutura financeira."
+      },
+      {
+        "id": "term-extra-dividend-yield",
+        "category": "投資指標",
+        "title": "Dividend yield",
+        "definition": "Dividendo anual por ação dividido pelo preço da ação; não é retorno garantido."
+      },
+      {
+        "id": "term-extra-capital-allocation",
+        "category": "企業経営",
+        "title": "Alocação de capital",
+        "definition": "Decisões sobre investimentos, aquisições, dívida e retorno aos acionistas."
+      },
+      {
+        "id": "term-extra-real-interest-rate",
+        "category": "経済・金融",
+        "title": "Juro real",
+        "definition": "Taxa de juros ajustada pela inflação; aproximadamente juro nominal menos inflação."
+      },
+      {
+        "id": "term-extra-compound-interest",
+        "category": "経済・金融",
+        "title": "Juros compostos",
+        "definition": "Crescimento quando rendimentos acumulados também geram novos rendimentos."
+      },
+      {
+        "id": "term-extra-market-capitalization",
+        "category": "株式市場",
+        "title": "Valor de mercado",
+        "definition": "Preço por ação multiplicado pela quantidade de ações em circulação."
+      },
+      {
+        "id": "term-extra-enterprise-value",
+        "category": "投資指標",
+        "title": "Valor da firma",
+        "definition": "Métrica que costuma somar dívida ao valor de mercado e subtrair caixa, com ajustes."
+      }
+    ]
+  },
+  "zh-Hans": {
+    "categories": {
+      "科学・技術": "科学与技术",
+      "投資基礎": "投资基础",
+      "投資指標": "估值与指标",
+      "財務・会計": "财务与会计",
+      "企業経営": "企业经营",
+      "株式市場": "股票市场",
+      "産業・技術": "产业与技术",
+      "経済・金融": "经济与金融"
+    },
+    "terms": [
+      {
+        "id": "term-processor",
+        "category": "科学・技術",
+        "title": "处理器",
+        "definition": "执行数据运算、设备控制等任务的装置。CPU是典型例子，MPU通常指微处理器，GPU也是处理器的一种。",
+        "formula": "",
+        "example": "",
+        "note": "",
+        "aliases": [
+          "プロセッサー",
+          "Processor"
+        ]
+      },
+      {
+        "id": "term-tse-prime",
+        "category": "投資基礎",
+        "title": "东证Prime市场",
+        "definition": "东京证券交易所的市场板块，面向具备规模、流动性及较高公司治理水平、适合众多机构投资者投资的企业。",
+        "formula": "",
+        "example": "",
+        "note": "Prime、Standard、Growth是市场分类，不是企业优劣或股价便宜程度的排名。",
+        "aliases": [
+          "東証P（プライム市場）",
+          "TSE Prime Market"
+        ]
+      },
+      {
+        "id": "term-tse-standard",
+        "category": "投資基礎",
+        "title": "东证Standard市场",
+        "definition": "东京证券交易所的市场板块，面向具备一定流动性及上市公司基本治理水平的企业。",
+        "formula": "",
+        "example": "",
+        "note": "市场分类不代表企业优劣，也不直接说明估值高低。",
+        "aliases": [
+          "東証S（スタンダード市場）",
+          "TSE Standard Market"
+        ]
+      },
+      {
+        "id": "term-tse-growth",
+        "category": "投資基礎",
+        "title": "东证Growth市场",
+        "definition": "东京证券交易所面向高成长潜力企业的市场板块。经营实绩较少的企业可能具有相对较高风险。",
+        "formula": "",
+        "example": "",
+        "note": "该分类不保证增长，也不意味着股价便宜。",
+        "aliases": [
+          "東証G（グロース市場）",
+          "TSE Growth Market"
+        ]
+      },
+      {
+        "id": "term-40",
+        "category": "投資基礎",
+        "title": "股票筛选",
+        "definition": "按指定条件缩小候选股票范围。",
+        "formula": "",
+        "example": "",
+        "note": "用于寻找候选对象，不能替代企业分析。",
+        "aliases": [
+          "スクリーニング",
+          "Screening",
+          "股票筛选"
+        ]
+      },
+      {
+        "id": "term-0",
+        "category": "投資指標",
+        "title": "市盈率（PER）",
+        "definition": "股价相对于每股普通股收益的倍数。",
+        "formula": "股价 ÷ 每股收益（EPS）",
+        "example": "1,500日元 ÷ 100日元 = 15倍。",
+        "note": "与同行和历史水平比较；亏损企业通常不适用。",
+        "aliases": [
+          "PER",
+          "P/E ratio (PER)",
+          "市盈率（PER）"
+        ]
+      },
+      {
+        "id": "term-4",
+        "category": "投資指標",
+        "title": "每股收益（EPS）",
+        "definition": "归属于每股普通股的利润。",
+        "formula": "归属于普通股股东的净利润 ÷ 加权平均普通股股数",
+        "example": "10亿日元 ÷ 1,000万股 = 100日元。",
+        "note": "用于市盈率和利润增长分析，注意拆股调整。",
+        "aliases": [
+          "EPS",
+          "Earnings per share (EPS)",
+          "每股收益（EPS）"
+        ]
+      },
+      {
+        "id": "term-16",
+        "category": "投資指標",
+        "title": "盈利收益率",
+        "definition": "每股收益占股价的比例，是正市盈率的倒数。",
+        "formula": "EPS ÷ 股价 × 100；正市盈率时也等于100 ÷ PER",
+        "example": "市盈率20倍对应5%。",
+        "note": "可作为与债券收益率、资本成本比较的参考。",
+        "aliases": [
+          "益回り",
+          "Earnings yield"
+        ]
+      },
+      {
+        "id": "term-15",
+        "category": "投資指標",
+        "title": "席勒市盈率（CAPE）",
+        "definition": "以过去十年经通胀调整的平均利润进行估值的指标。",
+        "formula": "实际股价指数水平 ÷ 过去十年实际EPS平均值",
+        "example": "比普通市盈率更能平滑经济周期造成的利润波动。",
+        "note": "主要用于市场长期估值，不适合短线择时。低于10倍、10—20倍、高于20倍等划分不是通用标准，合理水平取决于国家、时期及利率环境。",
+        "aliases": [
+          "Shiller PER",
+          "Shiller P/E (CAPE)"
+        ]
+      },
+      {
+        "id": "term-1",
+        "category": "投資指標",
+        "title": "市净率（PBR）",
+        "definition": "股价相对于每股普通股净资产的倍数。",
+        "formula": "股价 ÷ 每股净资产（BPS）",
+        "example": "1,200日元 ÷ 1,000日元 = 1.2倍。",
+        "note": "同时检查资产质量和ROE；低于1倍不等于必然低估。",
+        "aliases": [
+          "PBR",
+          "P/B ratio (PBR)",
+          "市净率（PBR）"
+        ]
+      },
+      {
+        "id": "term-5",
+        "category": "投資指標",
+        "title": "每股净资产（BPS）",
+        "definition": "归属于每股普通股的净资产。",
+        "formula": "归属于普通股股东的净资产 ÷ 期末普通股股数",
+        "example": "100亿日元 ÷ 1,000万股 = 1,000日元。",
+        "note": "用于市净率计算，注意商誉与资产估值。",
+        "aliases": [
+          "BPS",
+          "Book value per share (BPS)"
+        ]
+      },
+      {
+        "id": "term-14",
+        "category": "投資指標",
+        "title": "格雷厄姆市盈率与市净率乘积",
+        "definition": "将PER与PBR相乘的估值指标。",
+        "formula": "PER × PBR",
+        "example": "15 × 1.5 = 22.5。",
+        "note": "格雷厄姆传统参考值22.5不是万能标准。",
+        "aliases": [
+          "ミックス係数",
+          "Graham P/E × P/B product"
+        ]
+      },
+      {
+        "id": "term-2",
+        "category": "投資指標",
+        "title": "净资产收益率（ROE）",
+        "definition": "衡量利用股东权益创造利润的效率。",
+        "formula": "净利润 ÷ 平均股东权益 × 100",
+        "example": "20亿日元 ÷ 100亿日元 × 100 = 20%。",
+        "note": "杠杆或权益基数缩小也可能推高ROE，应结合ROA分析。",
+        "aliases": [
+          "ROE",
+          "Return on equity (ROE)",
+          "净资产收益率（ROE）"
+        ]
+      },
+      {
+        "id": "term-3",
+        "category": "投資指標",
+        "title": "总资产收益率（ROA）",
+        "definition": "相对于企业全部资产的盈利能力。",
+        "formula": "净利润 ÷ 平均总资产 × 100",
+        "example": "10亿日元 ÷ 200亿日元 × 100 = 5%。",
+        "note": "比较时考虑行业资产结构差异。",
+        "aliases": [
+          "ROA",
+          "Return on assets (ROA)",
+          "总资产收益率（ROA）"
+        ]
+      },
+      {
+        "id": "term-11",
+        "category": "投資指標",
+        "title": "EV/EBITDA倍数",
+        "definition": "企业价值相对于EBITDA的倍数。",
+        "formula": "EV ÷ EBITDA；EV约等于市值＋有息负债－现金及现金等价物等",
+        "example": "300亿日元 ÷ 30亿日元 = 10倍。",
+        "note": "另行考虑资本开支和租赁负债影响。",
+        "aliases": [
+          "EV/EBITDA倍率",
+          "EV/EBITDA"
+        ]
+      },
+      {
+        "id": "term-10",
+        "category": "投資指標",
+        "title": "股价现金流倍数（PCFR）",
+        "definition": "股价相对于每股现金流的倍数。",
+        "formula": "股价 ÷ 每股现金流",
+        "example": "2,000日元 ÷ 200日元 = 10倍。",
+        "note": "确认现金流采用经营现金流还是其他简化口径。",
+        "aliases": [
+          "PCFR",
+          "Price-to-cash-flow ratio (PCFR)"
+        ]
+      },
+      {
+        "id": "term-9",
+        "category": "財務・会計",
+        "title": "经营活动现金流",
+        "definition": "主营经营活动带来的现金流入与流出。",
+        "formula": "现金流量表中的经营活动现金流金额",
+        "example": "即使经营现金流持续为正，也要另查资本开支负担。",
+        "note": "比较利润与现金变动，并观察长期稳定性。",
+        "aliases": [
+          "営業キャッシュフロー",
+          "Operating cash flow",
+          "经营活动现金流"
+        ]
+      },
+      {
+        "id": "term-cf-0",
+        "category": "財務・会計",
+        "title": "投资活动现金流",
+        "definition": "投资活动产生的现金变动。购买设备或证券通常流出，出售通常流入。",
+        "formula": "现金流量表中的投资活动现金流金额",
+        "example": "购置设备支出30亿日元，出售资产收入5亿日元，无其他项目时为−25亿日元。",
+        "note": "负数不一定是坏事。区分扩张投资与维护更新，并结合经营现金流分析。",
+        "aliases": [
+          "投資キャッシュフロー",
+          "Investing cash flow"
+        ]
+      },
+      {
+        "id": "term-cf-1",
+        "category": "財務・会計",
+        "title": "筹资活动现金流",
+        "definition": "借款、还款、发行股票、分红等筹资及股东回报带来的现金变动。",
+        "formula": "现金流量表中的筹资活动现金流金额",
+        "example": "借款20亿日元、还款10亿日元、分红3亿日元，无其他项目时为＋7亿日元。",
+        "note": "正数可能来自筹资，负数可能来自还款或股东回报，不能只看正负判断好坏。",
+        "aliases": [
+          "財務キャッシュフロー",
+          "Financing cash flow",
+          "筹资活动现金流"
+        ]
+      },
+      {
+        "id": "term-cf-2",
+        "category": "財務・会計",
+        "title": "自由现金流",
+        "definition": "扣除投资需要后较可自由支配的现金，定义因企业及分析方法而异。",
+        "formula": "常用简式：经营现金流＋投资现金流；另一口径：经营现金流－资本开支",
+        "example": "经营现金流50亿日元＋投资现金流−30亿日元 = 20亿日元。",
+        "note": "用于观察分红、还债、成长投资余力。资产出售或并购可能影响简式结果，应确认口径。",
+        "aliases": [
+          "フリーキャッシュフロー",
+          "Free cash flow",
+          "自由现金流"
+        ]
+      },
+      {
+        "id": "term-6",
+        "category": "財務・会計",
+        "title": "流动比率",
+        "definition": "衡量短期偿债能力的指标。",
+        "formula": "流动资产 ÷ 流动负债 × 100",
+        "example": "200亿日元 ÷ 100亿日元 × 100 = 200%。",
+        "note": "检查应收账款和存货的变现能力。",
+        "aliases": [
+          "流動比率",
+          "Current ratio",
+          "流动比率"
+        ]
+      },
+      {
+        "id": "term-7",
+        "category": "財務・会計",
+        "title": "负债权益比（D/E）",
+        "definition": "有息负债相对于股东权益的比例。",
+        "formula": "有息负债 ÷ 股东权益",
+        "example": "60亿日元 ÷ 100亿日元 = 0.6倍。",
+        "note": "结合债务负担与行业特点判断。",
+        "aliases": [
+          "D/Eレシオ",
+          "Debt-to-equity ratio (D/E)",
+          "负债权益比"
+        ]
+      },
+      {
+        "id": "term-8",
+        "category": "財務・会計",
+        "title": "利息保障倍数",
+        "definition": "经营收益等能够覆盖利息支出的倍数。",
+        "formula": "（营业利润＋利息与股息收入）÷ 利息支出",
+        "example": "12亿日元 ÷ 2亿日元 = 6倍。",
+        "note": "不同资料可能采用不同定义，应确认计算口径。",
+        "aliases": [
+          "インタレスト・カバレッジ・レシオ",
+          "Interest coverage ratio"
+        ]
+      },
+      {
+        "id": "term-13",
+        "category": "投資指標",
+        "title": "股息支付率",
+        "definition": "利润中用于分红的比例。",
+        "formula": "全年每股股息 ÷ EPS × 100",
+        "example": "40日元 ÷ 100日元 × 100 = 40%。",
+        "note": "过高时需检查分红可持续性。",
+        "aliases": [
+          "配当性向",
+          "Dividend payout ratio",
+          "股息支付率"
+        ]
+      },
+      {
+        "id": "term-12",
+        "category": "投資指標",
+        "title": "净资产分红率（DOE）",
+        "definition": "全年股息总额占股东权益的比例。",
+        "formula": "全年股息总额 ÷ 平均股东权益 × 100",
+        "example": "3亿日元 ÷ 100亿日元 × 100 = 3%。",
+        "note": "有助理解利润波动时的分红政策。",
+        "aliases": [
+          "DOE",
+          "Dividend on equity (DOE)"
+        ]
+      },
+      {
+        "id": "term-39",
+        "category": "投資基礎",
+        "title": "持有收益",
+        "definition": "持有资产期间获得的股息、利息等收入。",
+        "formula": "",
+        "example": "",
+        "note": "除收益率外，也要关注本金价格变动。",
+        "aliases": [
+          "インカムゲイン",
+          "Income return"
+        ]
+      },
+      {
+        "id": "term-38",
+        "category": "投資基礎",
+        "title": "资本利得",
+        "definition": "出售资产所得的增值收益。",
+        "formula": "出售金额－取得成本－交易费用等",
+        "example": "",
+        "note": "考虑税费影响。",
+        "aliases": [
+          "キャピタルゲイン",
+          "Capital gain"
+        ]
+      },
+      {
+        "id": "term-22",
+        "category": "企業経営",
+        "title": "股份回购",
+        "definition": "企业买入自己已发行的股份。",
+        "formula": "",
+        "example": "",
+        "note": "检查是否注销、资本效率及资金余力。",
+        "aliases": [
+          "自社株買い",
+          "Share buyback",
+          "股份回购"
+        ]
+      },
+      {
+        "id": "term-mbo",
+        "category": "企業経営",
+        "title": "管理层收购（MBO）",
+        "definition": "企业管理层在银行、投资基金等协助下收购本公司股份或业务。上市企业有时以私有化为目的。",
+        "formula": "",
+        "example": "管理层与基金合作，通过公开要约收购取得公众股东股份，寻求退市。",
+        "note": "收购价会影响股价。事前可观察股权结构、管理层意向、企业价值与融资能力，但预测困难，存在要约失败或条件变更风险。相关：TOB、回购、企业价值。",
+        "aliases": [
+          "MBO",
+          "Management buyout (MBO)",
+          "管理层收购（MBO）"
+        ]
+      },
+      {
+        "id": "term-21",
+        "category": "株式市場",
+        "title": "公开要约收购（TOB）",
+        "definition": "公开收购条件，在常规交易所交易之外收购股份的机制。",
+        "formula": "",
+        "example": "",
+        "note": "检查价格、成立条件及撤回风险。",
+        "aliases": [
+          "TOB",
+          "Tender offer (TOB)",
+          "公开要约收购（TOB）"
+        ]
+      },
+      {
+        "id": "term-23",
+        "category": "企業経営",
+        "title": "股票期权",
+        "definition": "按指定条件取得股份的权利。",
+        "formula": "",
+        "example": "",
+        "note": "检查股权稀释和行权条件。",
+        "aliases": [
+          "ストックオプション",
+          "Stock options"
+        ]
+      },
+      {
+        "id": "term-24",
+        "category": "企業経営",
+        "title": "投资者关系（IR）",
+        "definition": "企业向投资者披露的信息。",
+        "formula": "",
+        "example": "",
+        "note": "查阅业绩公告、有价证券报告及说明材料。",
+        "aliases": [
+          "IR情報",
+          "Investor relations (IR)"
+        ]
+      },
+      {
+        "id": "term-25",
+        "category": "企業経営",
+        "title": "日本业绩快报（决算短信）",
+        "definition": "日本上市公司及时披露业绩概要的文件。",
+        "formula": "",
+        "example": "",
+        "note": "了解业绩、财务状况和展望，并用有价证券报告补充细节。",
+        "aliases": [
+          "決算短信",
+          "Japanese earnings summary (Kessan Tanshin)"
+        ]
+      },
+      {
+        "id": "term-26",
+        "category": "企業経営",
+        "title": "年度报告",
+        "definition": "总结企业全年活动与经营业绩的报告。",
+        "formula": "",
+        "example": "",
+        "note": "有助理解战略、业务结构与经营方针。",
+        "aliases": [
+          "アニュアルレポート",
+          "Annual report"
+        ]
+      },
+      {
+        "id": "term-41",
+        "category": "投資基礎",
+        "title": "公司四季报（Kaisha Shikiho）",
+        "definition": "汇总日本企业经营情况、业绩等信息的出版物。",
+        "formula": "",
+        "example": "",
+        "note": "区分出版物预测与公司自行披露的数据或指引。",
+        "aliases": [
+          "四季報",
+          "Kaisha Shikiho"
+        ]
+      },
+      {
+        "id": "term-27",
+        "category": "株式市場",
+        "title": "市场一致预期",
+        "definition": "汇总分析师预测等形成的市场预期。",
+        "formula": "",
+        "example": "",
+        "note": "实际结果与预期的差异可能影响股价反应。",
+        "aliases": [
+          "コンセンサス",
+          "Market consensus"
+        ]
+      },
+      {
+        "id": "term-29",
+        "category": "株式市場",
+        "title": "业绩意外",
+        "definition": "显著偏离市场预期的经营业绩。",
+        "formula": "",
+        "example": "",
+        "note": "即使业绩较好，若低于事前预期，股价也可能下跌。",
+        "aliases": [
+          "サプライズ決算",
+          "Earnings surprise"
+        ]
+      },
+      {
+        "id": "term-28",
+        "category": "株式市場",
+        "title": "催化剂",
+        "definition": "可能改变股票估值的事件，例如增派股息、出售资产、大股东变化、取消反收购措施或上市安排变更。",
+        "formula": "",
+        "example": "",
+        "note": "不保证上涨，应检查实现可能性与市场已计价程度。",
+        "aliases": [
+          "カタリスト",
+          "Catalyst"
+        ]
+      },
+      {
+        "id": "term-17",
+        "category": "株式市場",
+        "title": "东证股价指数（TOPIX）",
+        "definition": "反映日本股票市场广泛走势的东京证券交易所股价指数。",
+        "formula": "",
+        "example": "",
+        "note": "用作日本股票基金的比较基准。",
+        "aliases": [
+          "TOPIX",
+          "TOPIX"
+        ]
+      },
+      {
+        "id": "term-18",
+        "category": "株式市場",
+        "title": "日经225指数",
+        "definition": "由日本经济新闻社计算、包含225只股票的价格加权指数。",
+        "formula": "",
+        "example": "",
+        "note": "单股价格较高的成分股影响更大。",
+        "aliases": [
+          "日経平均株価",
+          "Nikkei 225"
+        ]
+      },
+      {
+        "id": "term-19",
+        "category": "株式市場",
+        "title": "交易所交易基金（ETF）",
+        "definition": "在交易所上市买卖的基金。",
+        "formula": "",
+        "example": "",
+        "note": "检查管理费、跟踪对象和买卖价差。",
+        "aliases": [
+          "ETF",
+          "Exchange-traded fund (ETF)",
+          "交易所交易基金（ETF）"
+        ]
+      },
+      {
+        "id": "term-20",
+        "category": "株式市場",
+        "title": "首次公开发行（IPO）",
+        "definition": "企业首次公开发行股票并进入股票市场。",
+        "formula": "",
+        "example": "",
+        "note": "查阅招股说明书，分析供需与限售安排。",
+        "aliases": [
+          "IPO",
+          "Initial public offering (IPO)"
+        ]
+      },
+      {
+        "id": "term-50",
+        "category": "株式市場",
+        "title": "周期股",
+        "definition": "经营业绩容易受到经济周期影响的行业或公司股票。",
+        "formula": "",
+        "example": "",
+        "note": "结合周期判断利润高峰与低谷。",
+        "aliases": [
+          "景気敏感株",
+          "Cyclical stocks"
+        ]
+      },
+      {
+        "id": "term-49",
+        "category": "企業経営",
+        "title": "大宗商品企业",
+        "definition": "涉及原油、金属、谷物等通用商品的企业。",
+        "formula": "",
+        "example": "",
+        "note": "检查商品价格对利润的影响。",
+        "aliases": [
+          "コモディティ企業",
+          "Commodity companies"
+        ]
+      },
+      {
+        "id": "term-51",
+        "category": "産業・技術",
+        "title": "半导体",
+        "definition": "电学性质可控制的材料，以及利用这些材料制成的电子元件。",
+        "formula": "",
+        "example": "",
+        "note": "区分设计、制造、设备、材料等业务环节。",
+        "aliases": [
+          "半導体",
+          "Semiconductors"
+        ]
+      },
+      {
+        "id": "term-47",
+        "category": "株式市場",
+        "title": "主题股",
+        "definition": "因特定政策、技术或社会话题而受到关注的股票。",
+        "formula": "",
+        "example": "",
+        "note": "区分话题热度与实际业绩贡献。",
+        "aliases": [
+          "テーマ株",
+          "Thematic stocks"
+        ]
+      },
+      {
+        "id": "term-48",
+        "category": "株式市場",
+        "title": "投机股（仕手株）",
+        "definition": "日本市场用语，指可能因投机交易或特定市场预期而出现剧烈价格波动的股票。",
+        "formula": "",
+        "example": "",
+        "note": "注意价格突变与流动性下降。",
+        "aliases": [
+          "仕手株",
+          "Speculative stocks (shite-kabu)"
+        ]
+      },
+      {
+        "id": "term-30",
+        "category": "株式市場",
+        "title": "波动率",
+        "definition": "价格波动幅度的概念。",
+        "formula": "收益率的标准差是一种常用衡量方式。",
+        "example": "",
+        "note": "用于判断价格波动风险。",
+        "aliases": [
+          "ボラティリティ",
+          "Volatility"
+        ]
+      },
+      {
+        "id": "term-37",
+        "category": "株式市場",
+        "title": "震荡指标",
+        "definition": "衡量行情强弱、超买或超卖状态的技术指标统称。",
+        "formula": "",
+        "example": "",
+        "note": "不要仅凭RSI等单一指标决定交易。",
+        "aliases": [
+          "オシレーター",
+          "Oscillators"
+        ]
+      },
+      {
+        "id": "term-31",
+        "category": "株式市場",
+        "title": "成交量加权平均价（VWAP）",
+        "definition": "按成交量加权计算的平均成交价格。",
+        "formula": "Σ（成交价格 × 成交量）÷ Σ成交量",
+        "example": "100股成交价100日元，300股成交价110日元，结果为107.5日元。",
+        "note": "用于评估日内执行价格并与市场价格比较。",
+        "aliases": [
+          "VWAP",
+          "Volume-weighted average price (VWAP)"
+        ]
+      },
+      {
+        "id": "term-45",
+        "category": "株式市場",
+        "title": "逐笔成交与订单簿",
+        "definition": "逐笔成交记录已完成交易；订单簿显示委托价格与数量。",
+        "formula": "",
+        "example": "",
+        "note": "可参考短期供需，但要警惕误导性挂单。",
+        "aliases": [
+          "歩み値・板読み",
+          "Time and sales / order book"
+        ]
+      },
+      {
+        "id": "term-44",
+        "category": "株式市場",
+        "title": "订单类型",
+        "definition": "市价单、限价单、止损触发单等委托方式。",
+        "formula": "",
+        "example": "",
+        "note": "按目的选择成交优先还是价格控制。",
+        "aliases": [
+          "注文種別",
+          "Order types"
+        ]
+      },
+      {
+        "id": "term-46",
+        "category": "株式市場",
+        "title": "涨停与跌停",
+        "definition": "交易所规定的单日价格变动上限与下限。",
+        "formula": "",
+        "example": "",
+        "note": "达到价格限制并不保证订单成交。",
+        "aliases": [
+          "ストップ高・ストップ安",
+          "Daily price limits"
+        ]
+      },
+      {
+        "id": "term-32",
+        "category": "株式市場",
+        "title": "融资买入与融券卖出余额",
+        "definition": "信用交易中尚未结清的多头、空头仓位余额。",
+        "formula": "",
+        "example": "",
+        "note": "可参考供需，但不能据此确定未来价格。",
+        "aliases": [
+          "信用買残・信用売残",
+          "Outstanding margin longs and shorts"
+        ]
+      },
+      {
+        "id": "term-33",
+        "category": "株式市場",
+        "title": "融资融券多空余额比",
+        "definition": "未结清融资买入余额相对于融券卖出余额的比例。",
+        "formula": "融资买入余额 ÷ 融券卖出余额",
+        "example": "100万股 ÷ 20万股 = 5倍。",
+        "note": "统一统计口径和日期。",
+        "aliases": [
+          "貸借倍率",
+          "Margin long/short ratio"
+        ]
+      },
+      {
+        "id": "term-43",
+        "category": "株式市場",
+        "title": "信用交易实物结算（现引／现渡）",
+        "definition": "现引是支付信用买入款项、取得现股；现渡是交付持有的现股以结清信用卖出。",
+        "formula": "",
+        "example": "",
+        "note": "检查结算费用、利息和借券费用。",
+        "aliases": [
+          "現引・現渡",
+          "Physical settlement of margin positions"
+        ]
+      },
+      {
+        "id": "term-42",
+        "category": "株式市場",
+        "title": "除权息交易日",
+        "definition": "买入股票后不再享有相应股息或股东优惠的首个交易日。",
+        "formula": "",
+        "example": "",
+        "note": "不要与最后一个附带该权利的交易日混淆。",
+        "aliases": [
+          "権利落ち日",
+          "Ex-dividend date"
+        ]
+      },
+      {
+        "id": "term-34",
+        "category": "経済・金融",
+        "title": "通货膨胀",
+        "definition": "整体物价水平持续上涨。",
+        "formula": "",
+        "example": "",
+        "note": "考虑实际利率及购买力的变化。",
+        "aliases": [
+          "インフレ",
+          "Inflation",
+          "通货膨胀"
+        ]
+      },
+      {
+        "id": "term-35",
+        "category": "経済・金融",
+        "title": "通货紧缩",
+        "definition": "整体物价水平持续下降。",
+        "formula": "",
+        "example": "",
+        "note": "观察需求、工资与企业利润的变化。",
+        "aliases": [
+          "デフレ",
+          "Deflation"
+        ]
+      },
+      {
+        "id": "term-36",
+        "category": "経済・金融",
+        "title": "利率上升",
+        "definition": "融资成本或折现率提高。",
+        "formula": "",
+        "example": "",
+        "note": "检查债务负担和未来利润现值的变化。",
+        "aliases": [
+          "金利上昇",
+          "Rising interest rates"
+        ]
+      },
+      {
+        "id": "term-extra-margin-of-safety",
+        "category": "投資基礎",
+        "title": "安全边际",
+        "definition": "保守估算的内在价值与市场价格之间的差距。"
+      },
+      {
+        "id": "term-extra-intrinsic-value",
+        "category": "投資基礎",
+        "title": "内在价值",
+        "definition": "根据未来收益和风险估算的企业经济价值。"
+      },
+      {
+        "id": "term-extra-equity-ratio",
+        "category": "財務・会計",
+        "title": "权益比率",
+        "definition": "股东权益除以总资产，用于观察资本结构。"
+      },
+      {
+        "id": "term-extra-dividend-yield",
+        "category": "投資指標",
+        "title": "股息率",
+        "definition": "每股年度股息除以股价，并不代表保证收益。"
+      },
+      {
+        "id": "term-extra-capital-allocation",
+        "category": "企業経営",
+        "title": "资本配置",
+        "definition": "管理层对投资、收购、偿债和股东回报等资金用途的决策。"
+      },
+      {
+        "id": "term-extra-real-interest-rate",
+        "category": "経済・金融",
+        "title": "实际利率",
+        "definition": "扣除通胀影响后的利率，粗略等于名义利率减去通胀率。"
+      },
+      {
+        "id": "term-extra-compound-interest",
+        "category": "経済・金融",
+        "title": "复利",
+        "definition": "已有收益继续产生收益的累积过程，亏损也可能累积。"
+      },
+      {
+        "id": "term-extra-market-capitalization",
+        "category": "株式市場",
+        "title": "市值",
+        "definition": "股价乘以流通在外股份数，股数口径可能不同。"
+      },
+      {
+        "id": "term-extra-enterprise-value",
+        "category": "投資指標",
+        "title": "企业价值（EV）",
+        "definition": "常以市值加债务减现金计算，并根据具体情况调整。"
+      }
+    ]
+  },
+  "zh-Hant": {
+    "categories": {
+      "科学・技術": "科學與技術",
+      "投資基礎": "投資基礎",
+      "投資指標": "估值與指標",
+      "財務・会計": "財務與會計",
+      "企業経営": "企業經營",
+      "株式市場": "股票市場",
+      "産業・技術": "產業與技術",
+      "経済・金融": "經濟與金融"
+    },
+    "terms": [
+      {
+        "id": "term-processor",
+        "category": "科学・技術",
+        "title": "處理器",
+        "definition": "執行資料運算、設備控制等工作的裝置。CPU是典型例子，MPU通常指微處理器，GPU也是處理器的一種。",
+        "formula": "",
+        "example": "",
+        "note": "",
+        "aliases": [
+          "プロセッサー",
+          "Processor"
+        ]
+      },
+      {
+        "id": "term-tse-prime",
+        "category": "投資基礎",
+        "title": "東證Prime市場",
+        "definition": "東京證券交易所的市場板塊，面向具備規模、流動性及較高公司治理水準，適合眾多機構投資人投資的企業。",
+        "formula": "",
+        "example": "",
+        "note": "Prime、Standard、Growth是市場分類，不是企業優劣或股價便宜程度的排名。",
+        "aliases": [
+          "東証P（プライム市場）",
+          "TSE Prime Market"
+        ]
+      },
+      {
+        "id": "term-tse-standard",
+        "category": "投資基礎",
+        "title": "東證Standard市場",
+        "definition": "東京證券交易所的市場板塊，面向具備一定流動性及上市公司基本治理水準的企業。",
+        "formula": "",
+        "example": "",
+        "note": "市場分類不代表企業優劣，也不直接說明估值高低。",
+        "aliases": [
+          "東証S（スタンダード市場）",
+          "TSE Standard Market"
+        ]
+      },
+      {
+        "id": "term-tse-growth",
+        "category": "投資基礎",
+        "title": "東證Growth市場",
+        "definition": "東京證券交易所面向高成長潛力企業的市場板塊。經營實績較少的企業可能具有相對較高風險。",
+        "formula": "",
+        "example": "",
+        "note": "該分類不保證成長，也不意味股價便宜。",
+        "aliases": [
+          "東証G（グロース市場）",
+          "TSE Growth Market"
+        ]
+      },
+      {
+        "id": "term-40",
+        "category": "投資基礎",
+        "title": "選股篩選",
+        "definition": "按指定條件縮小候選股票範圍。",
+        "formula": "",
+        "example": "",
+        "note": "用於尋找候選對象，不能取代企業分析。",
+        "aliases": [
+          "スクリーニング",
+          "Screening",
+          "選股篩選"
+        ]
+      },
+      {
+        "id": "term-0",
+        "category": "投資指標",
+        "title": "本益比（PER）",
+        "definition": "股價相對於每股普通股盈餘的倍數。",
+        "formula": "股價 ÷ 每股盈餘（EPS）",
+        "example": "1,500日圓 ÷ 100日圓 = 15倍。",
+        "note": "與同業及歷史水準比較；虧損企業通常不適用。",
+        "aliases": [
+          "PER",
+          "P/E ratio (PER)",
+          "本益比（PER）"
+        ]
+      },
+      {
+        "id": "term-4",
+        "category": "投資指標",
+        "title": "每股盈餘（EPS）",
+        "definition": "歸屬於每股普通股的獲利。",
+        "formula": "歸屬於普通股股東的淨利 ÷ 加權平均普通股股數",
+        "example": "10億日圓 ÷ 1,000萬股 = 100日圓。",
+        "note": "用於本益比及獲利成長分析，注意股票分割調整。",
+        "aliases": [
+          "EPS",
+          "Earnings per share (EPS)",
+          "每股盈餘（EPS）"
+        ]
+      },
+      {
+        "id": "term-16",
+        "category": "投資指標",
+        "title": "盈餘殖利率",
+        "definition": "每股盈餘占股價的比例，是正本益比的倒數。",
+        "formula": "EPS ÷ 股價 × 100；正本益比時亦等於100 ÷ PER",
+        "example": "本益比20倍對應5%。",
+        "note": "可作為與債券殖利率、資金成本比較的參考。",
+        "aliases": [
+          "益回り",
+          "Earnings yield"
+        ]
+      },
+      {
+        "id": "term-15",
+        "category": "投資指標",
+        "title": "席勒本益比（CAPE）",
+        "definition": "以過去十年經通膨調整的平均獲利進行估值的指標。",
+        "formula": "實質股價指數水準 ÷ 過去十年實質EPS平均值",
+        "example": "比一般本益比更能平滑景氣循環造成的獲利波動。",
+        "note": "主要用於市場長期估值，不適合短線擇時。低於10倍、10—20倍、高於20倍等區分不是通用標準，合理水準取決於國家、時期及利率環境。",
+        "aliases": [
+          "Shiller PER",
+          "Shiller P/E (CAPE)"
+        ]
+      },
+      {
+        "id": "term-1",
+        "category": "投資指標",
+        "title": "股價淨值比（PBR）",
+        "definition": "股價相對於每股普通股淨值的倍數。",
+        "formula": "股價 ÷ 每股淨值（BPS）",
+        "example": "1,200日圓 ÷ 1,000日圓 = 1.2倍。",
+        "note": "同時檢查資產品質與ROE；低於1倍不等於必然低估。",
+        "aliases": [
+          "PBR",
+          "P/B ratio (PBR)",
+          "股價淨值比（PBR）"
+        ]
+      },
+      {
+        "id": "term-5",
+        "category": "投資指標",
+        "title": "每股淨值（BPS）",
+        "definition": "歸屬於每股普通股的淨資產。",
+        "formula": "歸屬於普通股股東的權益 ÷ 期末普通股股數",
+        "example": "100億日圓 ÷ 1,000萬股 = 1,000日圓。",
+        "note": "用於股價淨值比計算，注意商譽與資產評價。",
+        "aliases": [
+          "BPS",
+          "Book value per share (BPS)"
+        ]
+      },
+      {
+        "id": "term-14",
+        "category": "投資指標",
+        "title": "葛拉漢本益比與股價淨值比乘積",
+        "definition": "將PER與PBR相乘的估值指標。",
+        "formula": "PER × PBR",
+        "example": "15 × 1.5 = 22.5。",
+        "note": "葛拉漢傳統參考值22.5不是萬用標準。",
+        "aliases": [
+          "ミックス係数",
+          "Graham P/E × P/B product"
+        ]
+      },
+      {
+        "id": "term-2",
+        "category": "投資指標",
+        "title": "股東權益報酬率（ROE）",
+        "definition": "衡量利用股東權益創造獲利的效率。",
+        "formula": "淨利 ÷ 平均股東權益 × 100",
+        "example": "20億日圓 ÷ 100億日圓 × 100 = 20%。",
+        "note": "槓桿或權益基數縮小也可能推高ROE，應搭配ROA分析。",
+        "aliases": [
+          "ROE",
+          "Return on equity (ROE)",
+          "股東權益報酬率（ROE）"
+        ]
+      },
+      {
+        "id": "term-3",
+        "category": "投資指標",
+        "title": "資產報酬率（ROA）",
+        "definition": "相對於企業全部資產的獲利能力。",
+        "formula": "淨利 ÷ 平均總資產 × 100",
+        "example": "10億日圓 ÷ 200億日圓 × 100 = 5%。",
+        "note": "比較時考慮產業資產結構差異。",
+        "aliases": [
+          "ROA",
+          "Return on assets (ROA)",
+          "資產報酬率（ROA）"
+        ]
+      },
+      {
+        "id": "term-11",
+        "category": "投資指標",
+        "title": "EV/EBITDA倍數",
+        "definition": "企業價值相對於EBITDA的倍數。",
+        "formula": "EV ÷ EBITDA；EV約等於市值＋有息負債－現金及約當現金等",
+        "example": "300億日圓 ÷ 30億日圓 = 10倍。",
+        "note": "另行考慮資本支出與租賃負債的影響。",
+        "aliases": [
+          "EV/EBITDA倍率",
+          "EV/EBITDA"
+        ]
+      },
+      {
+        "id": "term-10",
+        "category": "投資指標",
+        "title": "股價現金流量比（PCFR）",
+        "definition": "股價相對於每股現金流量的倍數。",
+        "formula": "股價 ÷ 每股現金流量",
+        "example": "2,000日圓 ÷ 200日圓 = 10倍。",
+        "note": "確認現金流量採用營業現金流或其他簡化口徑。",
+        "aliases": [
+          "PCFR",
+          "Price-to-cash-flow ratio (PCFR)"
+        ]
+      },
+      {
+        "id": "term-9",
+        "category": "財務・会計",
+        "title": "營業活動現金流",
+        "definition": "主要營運活動帶來的現金流入與流出。",
+        "formula": "現金流量表中的營業活動現金流金額",
+        "example": "即使營業現金流持續為正，也要另查資本支出負擔。",
+        "note": "比較獲利與現金變動，並觀察長期穩定性。",
+        "aliases": [
+          "営業キャッシュフロー",
+          "Operating cash flow",
+          "營業活動現金流"
+        ]
+      },
+      {
+        "id": "term-cf-0",
+        "category": "財務・会計",
+        "title": "投資活動現金流",
+        "definition": "投資活動產生的現金變動。購買設備或證券通常流出，出售通常流入。",
+        "formula": "現金流量表中的投資活動現金流金額",
+        "example": "購置設備支出30億日圓，出售資產收入5億日圓，無其他項目時為−25億日圓。",
+        "note": "負數不一定是壞事。區分擴張投資與維護更新，並搭配營業現金流分析。",
+        "aliases": [
+          "投資キャッシュフロー",
+          "Investing cash flow"
+        ]
+      },
+      {
+        "id": "term-cf-1",
+        "category": "財務・会計",
+        "title": "籌資活動現金流",
+        "definition": "借款、還款、發行股票、配息等籌資及股東回報帶來的現金變動。",
+        "formula": "現金流量表中的籌資活動現金流金額",
+        "example": "借款20億日圓、還款10億日圓、配息3億日圓，無其他項目時為＋7億日圓。",
+        "note": "正數可能來自籌資，負數可能來自還款或股東回報，不能只看正負判斷好壞。",
+        "aliases": [
+          "財務キャッシュフロー",
+          "Financing cash flow",
+          "籌資活動現金流"
+        ]
+      },
+      {
+        "id": "term-cf-2",
+        "category": "財務・会計",
+        "title": "自由現金流",
+        "definition": "扣除投資需要後較可自由運用的現金，定義因企業及分析方法而異。",
+        "formula": "常用簡式：營業現金流＋投資現金流；另一口徑：營業現金流－資本支出",
+        "example": "營業現金流50億日圓＋投資現金流−30億日圓 = 20億日圓。",
+        "note": "用於觀察配息、還債與成長投資餘力。資產出售或併購可能影響簡式結果，應確認口徑。",
+        "aliases": [
+          "フリーキャッシュフロー",
+          "Free cash flow",
+          "自由現金流"
+        ]
+      },
+      {
+        "id": "term-6",
+        "category": "財務・会計",
+        "title": "流動比率",
+        "definition": "衡量短期償債能力的指標。",
+        "formula": "流動資產 ÷ 流動負債 × 100",
+        "example": "200億日圓 ÷ 100億日圓 × 100 = 200%。",
+        "note": "檢查應收帳款與存貨的變現能力。",
+        "aliases": [
+          "流動比率",
+          "Current ratio",
+          "流動比率"
+        ]
+      },
+      {
+        "id": "term-7",
+        "category": "財務・会計",
+        "title": "負債權益比（D/E）",
+        "definition": "有息負債相對於股東權益的比例。",
+        "formula": "有息負債 ÷ 股東權益",
+        "example": "60億日圓 ÷ 100億日圓 = 0.6倍。",
+        "note": "搭配債務負擔與產業特性判斷。",
+        "aliases": [
+          "D/Eレシオ",
+          "Debt-to-equity ratio (D/E)",
+          "負債權益比"
+        ]
+      },
+      {
+        "id": "term-8",
+        "category": "財務・会計",
+        "title": "利息保障倍數",
+        "definition": "營運收益等能夠涵蓋利息支出的倍數。",
+        "formula": "（營業利益＋利息與股利收入）÷ 利息支出",
+        "example": "12億日圓 ÷ 2億日圓 = 6倍。",
+        "note": "不同資料可能採用不同定義，應確認計算口徑。",
+        "aliases": [
+          "インタレスト・カバレッジ・レシオ",
+          "Interest coverage ratio"
+        ]
+      },
+      {
+        "id": "term-13",
+        "category": "投資指標",
+        "title": "股息支付率",
+        "definition": "獲利中用於配息的比例。",
+        "formula": "全年每股股息 ÷ EPS × 100",
+        "example": "40日圓 ÷ 100日圓 × 100 = 40%。",
+        "note": "過高時需檢查配息的可持續性。",
+        "aliases": [
+          "配当性向",
+          "Dividend payout ratio",
+          "股息支付率"
+        ]
+      },
+      {
+        "id": "term-12",
+        "category": "投資指標",
+        "title": "股東權益配息率（DOE）",
+        "definition": "全年股息總額占股東權益的比例。",
+        "formula": "全年股息總額 ÷ 平均股東權益 × 100",
+        "example": "3億日圓 ÷ 100億日圓 × 100 = 3%。",
+        "note": "有助理解獲利波動時的配息政策。",
+        "aliases": [
+          "DOE",
+          "Dividend on equity (DOE)"
+        ]
+      },
+      {
+        "id": "term-39",
+        "category": "投資基礎",
+        "title": "持有收益",
+        "definition": "持有資產期間獲得的股息、利息等收入。",
+        "formula": "",
+        "example": "",
+        "note": "除殖利率外，也要關注本金價格變動。",
+        "aliases": [
+          "インカムゲイン",
+          "Income return"
+        ]
+      },
+      {
+        "id": "term-38",
+        "category": "投資基礎",
+        "title": "資本利得",
+        "definition": "出售資產所得的增值收益。",
+        "formula": "出售金額－取得成本－交易費用等",
+        "example": "",
+        "note": "考慮稅費影響。",
+        "aliases": [
+          "キャピタルゲイン",
+          "Capital gain"
+        ]
+      },
+      {
+        "id": "term-22",
+        "category": "企業経営",
+        "title": "庫藏股買回",
+        "definition": "企業買入自己已發行的股份。",
+        "formula": "",
+        "example": "",
+        "note": "檢查是否註銷、資本效率及資金餘力。",
+        "aliases": [
+          "自社株買い",
+          "Share buyback",
+          "庫藏股買回"
+        ]
+      },
+      {
+        "id": "term-mbo",
+        "category": "企業経営",
+        "title": "管理層收購（MBO）",
+        "definition": "企業管理階層在銀行、投資基金等協助下收購本公司股份或業務。上市企業有時以私有化為目的。",
+        "formula": "",
+        "example": "管理階層與基金合作，透過公開收購取得公眾股東股份，尋求下市。",
+        "note": "收購價會影響股價。事前可觀察股權結構、管理階層意向、企業價值與融資能力，但預測困難，存在收購失敗或條件變更風險。相關：TOB、庫藏股買回、企業價值。",
+        "aliases": [
+          "MBO",
+          "Management buyout (MBO)",
+          "管理層收購（MBO）"
+        ]
+      },
+      {
+        "id": "term-21",
+        "category": "株式市場",
+        "title": "公開收購（TOB）",
+        "definition": "公開收購條件，在一般交易所交易之外收購股份的機制。",
+        "formula": "",
+        "example": "",
+        "note": "檢查價格、成立條件與撤回風險。",
+        "aliases": [
+          "TOB",
+          "Tender offer (TOB)",
+          "公開收購（TOB）"
+        ]
+      },
+      {
+        "id": "term-23",
+        "category": "企業経営",
+        "title": "認股選擇權",
+        "definition": "按指定條件取得股份的權利。",
+        "formula": "",
+        "example": "",
+        "note": "檢查股權稀釋與行使條件。",
+        "aliases": [
+          "ストックオプション",
+          "Stock options"
+        ]
+      },
+      {
+        "id": "term-24",
+        "category": "企業経営",
+        "title": "投資人關係（IR）",
+        "definition": "企業向投資人揭露的資訊。",
+        "formula": "",
+        "example": "",
+        "note": "查閱財報公告、有價證券報告與說明資料。",
+        "aliases": [
+          "IR情報",
+          "Investor relations (IR)"
+        ]
+      },
+      {
+        "id": "term-25",
+        "category": "企業経営",
+        "title": "日本財報摘要（決算短信）",
+        "definition": "日本上市公司及時揭露財報概要的文件。",
+        "formula": "",
+        "example": "",
+        "note": "了解業績、財務狀況與展望，並用有價證券報告補充細節。",
+        "aliases": [
+          "決算短信",
+          "Japanese earnings summary (Kessan Tanshin)"
+        ]
+      },
+      {
+        "id": "term-26",
+        "category": "企業経営",
+        "title": "年度報告",
+        "definition": "總結企業全年活動與經營業績的報告。",
+        "formula": "",
+        "example": "",
+        "note": "有助理解策略、業務結構與經營方針。",
+        "aliases": [
+          "アニュアルレポート",
+          "Annual report"
+        ]
+      },
+      {
+        "id": "term-41",
+        "category": "投資基礎",
+        "title": "公司四季報（Kaisha Shikiho）",
+        "definition": "彙整日本企業經營情況、業績等資訊的出版物。",
+        "formula": "",
+        "example": "",
+        "note": "區分出版物預測與公司自行揭露的數據或展望。",
+        "aliases": [
+          "四季報",
+          "Kaisha Shikiho"
+        ]
+      },
+      {
+        "id": "term-27",
+        "category": "株式市場",
+        "title": "市場共識",
+        "definition": "彙整分析師預測等形成的市場預期。",
+        "formula": "",
+        "example": "",
+        "note": "實際結果與預期的差異可能影響股價反應。",
+        "aliases": [
+          "コンセンサス",
+          "Market consensus"
+        ]
+      },
+      {
+        "id": "term-29",
+        "category": "株式市場",
+        "title": "財報驚喜或意外",
+        "definition": "顯著偏離市場預期的經營業績。",
+        "formula": "",
+        "example": "",
+        "note": "即使業績較好，若低於事前預期，股價也可能下跌。",
+        "aliases": [
+          "サプライズ決算",
+          "Earnings surprise"
+        ]
+      },
+      {
+        "id": "term-28",
+        "category": "株式市場",
+        "title": "催化劑",
+        "definition": "可能改變股票估值的事件，例如提高股息、出售資產、大股東變化、取消反收購措施或上市安排變更。",
+        "formula": "",
+        "example": "",
+        "note": "不保證上漲，應檢查實現可能性與市場已反映程度。",
+        "aliases": [
+          "カタリスト",
+          "Catalyst"
+        ]
+      },
+      {
+        "id": "term-17",
+        "category": "株式市場",
+        "title": "東證股價指數（TOPIX）",
+        "definition": "反映日本股票市場廣泛走勢的東京證券交易所股價指數。",
+        "formula": "",
+        "example": "",
+        "note": "用作日本股票基金的比較基準。",
+        "aliases": [
+          "TOPIX",
+          "TOPIX"
+        ]
+      },
+      {
+        "id": "term-18",
+        "category": "株式市場",
+        "title": "日經225指數",
+        "definition": "由日本經濟新聞社計算、包含225檔股票的價格加權指數。",
+        "formula": "",
+        "example": "",
+        "note": "單股價格較高的成分股影響較大。",
+        "aliases": [
+          "日経平均株価",
+          "Nikkei 225"
+        ]
+      },
+      {
+        "id": "term-19",
+        "category": "株式市場",
+        "title": "交易所交易基金（ETF）",
+        "definition": "在交易所上市買賣的基金。",
+        "formula": "",
+        "example": "",
+        "note": "檢查管理費、追蹤標的與買賣價差。",
+        "aliases": [
+          "ETF",
+          "Exchange-traded fund (ETF)",
+          "交易所交易基金（ETF）"
+        ]
+      },
+      {
+        "id": "term-20",
+        "category": "株式市場",
+        "title": "首次公開發行（IPO）",
+        "definition": "企業首次公開發行股票並進入股票市場。",
+        "formula": "",
+        "example": "",
+        "note": "查閱公開說明書，分析供需與閉鎖期安排。",
+        "aliases": [
+          "IPO",
+          "Initial public offering (IPO)"
+        ]
+      },
+      {
+        "id": "term-50",
+        "category": "株式市場",
+        "title": "景氣循環股",
+        "definition": "經營業績容易受到景氣循環影響的產業或公司股票。",
+        "formula": "",
+        "example": "",
+        "note": "搭配景氣循環判斷獲利高峰與低谷。",
+        "aliases": [
+          "景気敏感株",
+          "Cyclical stocks"
+        ]
+      },
+      {
+        "id": "term-49",
+        "category": "企業経営",
+        "title": "大宗商品企業",
+        "definition": "涉及原油、金屬、穀物等通用商品的企業。",
+        "formula": "",
+        "example": "",
+        "note": "檢查商品價格對獲利的影響。",
+        "aliases": [
+          "コモディティ企業",
+          "Commodity companies"
+        ]
+      },
+      {
+        "id": "term-51",
+        "category": "産業・技術",
+        "title": "半導體",
+        "definition": "電學性質可控制的材料，以及利用這些材料製成的電子元件。",
+        "formula": "",
+        "example": "",
+        "note": "區分設計、製造、設備、材料等業務環節。",
+        "aliases": [
+          "半導体",
+          "Semiconductors"
+        ]
+      },
+      {
+        "id": "term-47",
+        "category": "株式市場",
+        "title": "題材股",
+        "definition": "因特定政策、技術或社會話題而受到關注的股票。",
+        "formula": "",
+        "example": "",
+        "note": "區分話題熱度與實際業績貢獻。",
+        "aliases": [
+          "テーマ株",
+          "Thematic stocks"
+        ]
+      },
+      {
+        "id": "term-48",
+        "category": "株式市場",
+        "title": "投機股（仕手株）",
+        "definition": "日本市場用語，指可能因投機交易或特定市場預期而出現劇烈價格波動的股票。",
+        "formula": "",
+        "example": "",
+        "note": "注意價格突變與流動性下降。",
+        "aliases": [
+          "仕手株",
+          "Speculative stocks (shite-kabu)"
+        ]
+      },
+      {
+        "id": "term-30",
+        "category": "株式市場",
+        "title": "波動率",
+        "definition": "價格波動幅度的概念。",
+        "formula": "報酬率的標準差是一種常用衡量方式。",
+        "example": "",
+        "note": "用於判斷價格波動風險。",
+        "aliases": [
+          "ボラティリティ",
+          "Volatility"
+        ]
+      },
+      {
+        "id": "term-37",
+        "category": "株式市場",
+        "title": "震盪指標",
+        "definition": "衡量行情強弱、超買或超賣狀態的技術指標統稱。",
+        "formula": "",
+        "example": "",
+        "note": "不要僅憑RSI等單一指標決定交易。",
+        "aliases": [
+          "オシレーター",
+          "Oscillators"
+        ]
+      },
+      {
+        "id": "term-31",
+        "category": "株式市場",
+        "title": "成交量加權平均價（VWAP）",
+        "definition": "按成交量加權計算的平均成交價格。",
+        "formula": "Σ（成交價格 × 成交量）÷ Σ成交量",
+        "example": "100股成交價100日圓，300股成交價110日圓，結果為107.5日圓。",
+        "note": "用於評估日內執行價格並與市場價格比較。",
+        "aliases": [
+          "VWAP",
+          "Volume-weighted average price (VWAP)"
+        ]
+      },
+      {
+        "id": "term-45",
+        "category": "株式市場",
+        "title": "逐筆成交與委託簿",
+        "definition": "逐筆成交記錄已完成交易；委託簿顯示委託價格與數量。",
+        "formula": "",
+        "example": "",
+        "note": "可參考短期供需，但要警惕誤導性掛單。",
+        "aliases": [
+          "歩み値・板読み",
+          "Time and sales / order book"
+        ]
+      },
+      {
+        "id": "term-44",
+        "category": "株式市場",
+        "title": "委託單類型",
+        "definition": "市價單、限價單、停損觸發單等委託方式。",
+        "formula": "",
+        "example": "",
+        "note": "按目的選擇成交優先或價格控制。",
+        "aliases": [
+          "注文種別",
+          "Order types"
+        ]
+      },
+      {
+        "id": "term-46",
+        "category": "株式市場",
+        "title": "漲停與跌停",
+        "definition": "交易所規定的單日價格變動上限與下限。",
+        "formula": "",
+        "example": "",
+        "note": "達到價格限制並不保證委託成交。",
+        "aliases": [
+          "ストップ高・ストップ安",
+          "Daily price limits"
+        ]
+      },
+      {
+        "id": "term-32",
+        "category": "株式市場",
+        "title": "融資買入與融券賣出餘額",
+        "definition": "信用交易中尚未結清的多頭、空頭部位餘額。",
+        "formula": "",
+        "example": "",
+        "note": "可參考供需，但不能據此確定未來價格。",
+        "aliases": [
+          "信用買残・信用売残",
+          "Outstanding margin longs and shorts"
+        ]
+      },
+      {
+        "id": "term-33",
+        "category": "株式市場",
+        "title": "融資融券多空餘額比",
+        "definition": "未結清融資買入餘額相對於融券賣出餘額的比例。",
+        "formula": "融資買入餘額 ÷ 融券賣出餘額",
+        "example": "100萬股 ÷ 20萬股 = 5倍。",
+        "note": "統一統計口徑與日期。",
+        "aliases": [
+          "貸借倍率",
+          "Margin long/short ratio"
+        ]
+      },
+      {
+        "id": "term-43",
+        "category": "株式市場",
+        "title": "信用交易實物結算（現引／現渡）",
+        "definition": "現引是支付信用買入款項、取得現股；現渡是交付持有的現股以結清信用賣出。",
+        "formula": "",
+        "example": "",
+        "note": "檢查結算費用、利息與借券費用。",
+        "aliases": [
+          "現引・現渡",
+          "Physical settlement of margin positions"
+        ]
+      },
+      {
+        "id": "term-42",
+        "category": "株式市場",
+        "title": "除權息交易日",
+        "definition": "買入股票後不再享有相應股息或股東優惠的首個交易日。",
+        "formula": "",
+        "example": "",
+        "note": "不要與最後一個附帶該權利的交易日混淆。",
+        "aliases": [
+          "権利落ち日",
+          "Ex-dividend date"
+        ]
+      },
+      {
+        "id": "term-34",
+        "category": "経済・金融",
+        "title": "通貨膨脹",
+        "definition": "整體物價水準持續上漲。",
+        "formula": "",
+        "example": "",
+        "note": "考慮實質利率與購買力的變化。",
+        "aliases": [
+          "インフレ",
+          "Inflation",
+          "通貨膨脹"
+        ]
+      },
+      {
+        "id": "term-35",
+        "category": "経済・金融",
+        "title": "通貨緊縮",
+        "definition": "整體物價水準持續下降。",
+        "formula": "",
+        "example": "",
+        "note": "觀察需求、工資與企業獲利的變化。",
+        "aliases": [
+          "デフレ",
+          "Deflation"
+        ]
+      },
+      {
+        "id": "term-36",
+        "category": "経済・金融",
+        "title": "利率上升",
+        "definition": "融資成本或折現率提高。",
+        "formula": "",
+        "example": "",
+        "note": "檢查債務負擔與未來獲利現值的變化。",
+        "aliases": [
+          "金利上昇",
+          "Rising interest rates"
+        ]
+      },
+      {
+        "id": "term-extra-margin-of-safety",
+        "category": "投資基礎",
+        "title": "安全邊際",
+        "definition": "保守估算的內在價值與市價之間的差距。"
+      },
+      {
+        "id": "term-extra-intrinsic-value",
+        "category": "投資基礎",
+        "title": "內在價值",
+        "definition": "根據未來收益與風險估算的企業經濟價值。"
+      },
+      {
+        "id": "term-extra-equity-ratio",
+        "category": "財務・会計",
+        "title": "權益比率",
+        "definition": "股東權益除以總資產，用於觀察資本結構。"
+      },
+      {
+        "id": "term-extra-dividend-yield",
+        "category": "投資指標",
+        "title": "股息殖利率",
+        "definition": "每股年度股息除以股價，並不代表保證報酬。"
+      },
+      {
+        "id": "term-extra-capital-allocation",
+        "category": "企業経営",
+        "title": "資本配置",
+        "definition": "管理層對投資、收購、償債和股東回報等資金用途的決策。"
+      },
+      {
+        "id": "term-extra-real-interest-rate",
+        "category": "経済・金融",
+        "title": "實質利率",
+        "definition": "扣除通膨影響後的利率，粗略等於名目利率減去通膨率。"
+      },
+      {
+        "id": "term-extra-compound-interest",
+        "category": "経済・金融",
+        "title": "複利",
+        "definition": "已有報酬繼續產生報酬的累積過程，虧損也可能累積。"
+      },
+      {
+        "id": "term-extra-market-capitalization",
+        "category": "株式市場",
+        "title": "市值",
+        "definition": "股價乘以流通在外股數，股數口徑可能不同。"
+      },
+      {
+        "id": "term-extra-enterprise-value",
+        "category": "投資指標",
+        "title": "企業價值（EV）",
+        "definition": "常以市值加債務減現金計算，並依具體情況調整。"
+      }
+    ]
+  }
+}
