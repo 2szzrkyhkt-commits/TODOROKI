@@ -1,0 +1,642 @@
+{
+  "en": [
+    {
+      "title": "What is the SOX Index?",
+      "subtitle": "A leading stock index tracking semiconductor-related shares",
+      "blocks": [
+        {
+          "h": "Semiconductor-related companies listed in the US",
+          "text": "SOX refers to the PHLX Semiconductor Sector Index. It tracks major semiconductor-related companies listed on US markets."
+        },
+        {
+          "h": "From chipmakers to production equipment",
+          "text": "The index includes chip design and manufacturing businesses as well as related companies such as semiconductor equipment suppliers."
+        },
+        {
+          "h": "A guide to the sector’s market direction",
+          "text": "It helps indicate whether semiconductor-related stocks are being bought or sold as a group. It does not cover every semiconductor company worldwide."
+        },
+        {
+          "h": "Constituents and weights",
+          "text": "The constituent companies and their weights change through periodic reviews and other adjustments."
+        }
+      ]
+    },
+    {
+      "title": "Why markets watch the SOX Index",
+      "subtitle": "Reflecting semiconductor demand and market expectations",
+      "blocks": [
+        {
+          "h": "Where semiconductors are used",
+          "text": "AI and data centers, smartphones, PCs, vehicles, industrial machinery, communications equipment, game consoles, defense and space."
+        },
+        {
+          "h": "Reasons the index may rise",
+          "text": "Expectations of growing demand, improving corporate results and recovering capital expenditure can support semiconductor-related shares."
+        },
+        {
+          "h": "Reasons the index may fall",
+          "text": "Slower demand, inventory adjustments, rising interest rates and weaker earnings outlooks can contribute to declines."
+        },
+        {
+          "h": "Limits of interpretation",
+          "text": "Movements in the SOX Index alone cannot establish the state of the whole economy or the underlying reality of semiconductor demand."
+        }
+      ]
+    },
+    {
+      "title": "The link with Japanese chip stocks",
+      "subtitle": "US market movements can affect investor sentiment in Japan",
+      "blocks": [
+        {
+          "h": "Japanese companies often viewed as related",
+          "table": [
+            [
+              "Company",
+              "Business"
+            ],
+            [
+              "Tokyo Electron",
+              "Semiconductor production equipment"
+            ],
+            [
+              "Advantest",
+              "Semiconductor test equipment"
+            ],
+            [
+              "DISCO",
+              "Cutting, grinding and polishing equipment"
+            ],
+            [
+              "Lasertec",
+              "Semiconductor inspection and measurement"
+            ]
+          ]
+        },
+        {
+          "h": "Effects on the next trading day",
+          "text": "Large moves in the SOX Index or major semiconductor shares in the US may affect sentiment toward semiconductor-related stocks in Tokyo on the next trading day."
+        },
+        {
+          "h": "They do not always move in the same direction",
+          "text": "Japanese stocks are also affected by exchange rates, broad market conditions, company earnings and orders, and valuations. A rise in the SOX Index does not guarantee a rise in Japanese chip stocks."
+        }
+      ]
+    },
+    {
+      "title": "Reading SOX alongside other indicators",
+      "subtitle": "Understanding what each source of information tells you",
+      "blocks": [
+        {
+          "h": "Indicators and information",
+          "table": [
+            [
+              "Indicator or information",
+              "Main insight"
+            ],
+            [
+              "SOX Index",
+              "Direction of US-listed semiconductor-related shares"
+            ],
+            [
+              "Major semiconductor stocks",
+              "Company-specific earnings expectations and share-price strength"
+            ],
+            [
+              "NASDAQ Composite",
+              "US stock trends with a large technology component"
+            ],
+            [
+              "US interest rates",
+              "The valuation environment for growth stocks and others"
+            ],
+            [
+              "USD/JPY",
+              "Exchange-rate effects on Japanese companies’ earnings"
+            ],
+            [
+              "Company results and orders",
+              "Business conditions that an index alone cannot show"
+            ]
+          ]
+        },
+        {
+          "h": "What the SOX Index represents",
+          "text": "The index reflects the market’s valuation of semiconductor-related stocks. It does not directly represent corporate earnings themselves or movements in the Japanese stock market as a whole."
+        }
+      ]
+    }
+  ],
+  "es": [
+    {
+      "title": "¿Qué es el índice SOX?",
+      "subtitle": "Un índice de referencia para las acciones de semiconductores",
+      "blocks": [
+        {
+          "h": "Empresas del sector cotizadas en EE. UU.",
+          "text": "SOX es la denominación abreviada del PHLX Semiconductor Sector Index. Refleja la evolución bursátil de grandes empresas relacionadas con semiconductores cotizadas en Estados Unidos."
+        },
+        {
+          "h": "Desde fabricantes hasta equipos de producción",
+          "text": "Incluye empresas de diseño y fabricación de chips, además de compañías relacionadas, como proveedores de equipos para fabricar semiconductores."
+        },
+        {
+          "h": "Una guía de la dirección bursátil del sector",
+          "text": "Permite observar si las acciones del sector se compran o se venden en conjunto. No incluye a todas las empresas de semiconductores del mundo."
+        },
+        {
+          "h": "Componentes y ponderaciones",
+          "text": "Las empresas integrantes y sus pesos cambian mediante revisiones periódicas y otros ajustes."
+        }
+      ]
+    },
+    {
+      "title": "Por qué se observa el índice SOX",
+      "subtitle": "Refleja la demanda de semiconductores y las expectativas",
+      "blocks": [
+        {
+          "h": "Dónde se utilizan los semiconductores",
+          "text": "IA y centros de datos, teléfonos, ordenadores, vehículos, maquinaria industrial, equipos de comunicación, consolas, defensa y espacio."
+        },
+        {
+          "h": "Motivos por los que puede subir",
+          "text": "Las expectativas de mayor demanda, mejores resultados empresariales y recuperación de la inversión pueden impulsar las acciones del sector."
+        },
+        {
+          "h": "Motivos por los que puede bajar",
+          "text": "La menor demanda, los ajustes de inventario, las subidas de tipos y el deterioro de las previsiones de beneficios pueden contribuir a las caídas."
+        },
+        {
+          "h": "Límites de interpretación",
+          "text": "Los movimientos del SOX por sí solos no permiten determinar el estado de toda la economía ni la situación real de la demanda de semiconductores."
+        }
+      ]
+    },
+    {
+      "title": "Relación con las acciones japonesas",
+      "subtitle": "El mercado estadounidense puede influir en el ánimo inversor japonés",
+      "blocks": [
+        {
+          "h": "Empresas japonesas que suelen relacionarse",
+          "table": [
+            [
+              "Empresa",
+              "Actividad"
+            ],
+            [
+              "Tokyo Electron",
+              "Equipos de fabricación de semiconductores"
+            ],
+            [
+              "Advantest",
+              "Equipos de prueba de semiconductores"
+            ],
+            [
+              "DISCO",
+              "Equipos de corte, rectificado y pulido"
+            ],
+            [
+              "Lasertec",
+              "Inspección y medición de semiconductores"
+            ]
+          ]
+        },
+        {
+          "h": "Efectos en la siguiente sesión",
+          "text": "Un gran movimiento del SOX o de las principales acciones del sector en EE. UU. puede afectar al ánimo inversor en las acciones de semiconductores de Tokio durante la sesión siguiente."
+        },
+        {
+          "h": "No siempre se mueven en la misma dirección",
+          "text": "También influyen el tipo de cambio, el mercado general, los resultados y pedidos de cada empresa y su valoración. Una subida del SOX no garantiza una subida de las acciones japonesas del sector."
+        }
+      ]
+    },
+    {
+      "title": "SOX y otros indicadores",
+      "subtitle": "Qué información aporta cada uno",
+      "blocks": [
+        {
+          "h": "Indicadores e información",
+          "table": [
+            [
+              "Indicador o información",
+              "Qué permite observar"
+            ],
+            [
+              "Índice SOX",
+              "Dirección de las acciones del sector cotizadas en EE. UU."
+            ],
+            [
+              "Principales acciones del sector",
+              "Expectativas de beneficios y fortaleza bursátil de cada empresa"
+            ],
+            [
+              "NASDAQ Composite",
+              "Evolución de acciones estadounidenses con gran presencia tecnológica"
+            ],
+            [
+              "Tipos de interés de EE. UU.",
+              "Entorno de valoración de acciones de crecimiento y otras"
+            ],
+            [
+              "USD/JPY",
+              "Efecto del cambio sobre los resultados de las empresas japonesas"
+            ],
+            [
+              "Resultados y pedidos",
+              "Situación empresarial que el índice por sí solo no muestra"
+            ]
+          ]
+        },
+        {
+          "h": "Qué representa el SOX",
+          "text": "Refleja la valoración bursátil de las acciones relacionadas con semiconductores. No representa directamente los beneficios empresariales ni los movimientos de toda la bolsa japonesa."
+        }
+      ]
+    }
+  ],
+  "pt": [
+    {
+      "title": "O que é o Índice SOX?",
+      "subtitle": "Um índice de referência para ações de semicondutores",
+      "blocks": [
+        {
+          "h": "Empresas do setor listadas nos EUA",
+          "text": "SOX é a designação abreviada do PHLX Semiconductor Sector Index. Ele acompanha grandes empresas relacionadas a semicondutores listadas nos mercados dos Estados Unidos."
+        },
+        {
+          "h": "De fabricantes a equipamentos de produção",
+          "text": "Inclui empresas de projeto e fabricação de chips, além de negócios relacionados, como fornecedores de equipamentos para produzir semicondutores."
+        },
+        {
+          "h": "Uma referência para a direção do setor",
+          "text": "Ajuda a observar se as ações do setor estão sendo compradas ou vendidas em conjunto. Não inclui todas as empresas de semicondutores do mundo."
+        },
+        {
+          "h": "Componentes e pesos",
+          "text": "As empresas integrantes e seus pesos mudam por meio de revisões periódicas e outros ajustes."
+        }
+      ]
+    },
+    {
+      "title": "Por que o mercado acompanha o SOX",
+      "subtitle": "Demanda de semicondutores e expectativas do mercado",
+      "blocks": [
+        {
+          "h": "Onde os semicondutores são usados",
+          "text": "IA e centros de dados, smartphones, computadores, veículos, máquinas industriais, equipamentos de comunicação, consoles, defesa e espaço."
+        },
+        {
+          "h": "Motivos para a alta do índice",
+          "text": "Expectativas de maior demanda, melhores resultados empresariais e recuperação do investimento podem impulsionar as ações do setor."
+        },
+        {
+          "h": "Motivos para a queda do índice",
+          "text": "Demanda mais fraca, ajustes de estoques, alta de juros e piora das perspectivas de lucro podem contribuir para quedas."
+        },
+        {
+          "h": "Limites de interpretação",
+          "text": "Os movimentos do SOX, isoladamente, não permitem determinar a situação de toda a economia nem a realidade da demanda por semicondutores."
+        }
+      ]
+    },
+    {
+      "title": "Relação com as ações japonesas",
+      "subtitle": "O mercado dos EUA pode influenciar o sentimento no Japão",
+      "blocks": [
+        {
+          "h": "Empresas japonesas frequentemente relacionadas",
+          "table": [
+            [
+              "Empresa",
+              "Atividade"
+            ],
+            [
+              "Tokyo Electron",
+              "Equipamentos de produção de semicondutores"
+            ],
+            [
+              "Advantest",
+              "Equipamentos de teste de semicondutores"
+            ],
+            [
+              "DISCO",
+              "Equipamentos de corte, desbaste e polimento"
+            ],
+            [
+              "Lasertec",
+              "Inspeção e medição de semicondutores"
+            ]
+          ]
+        },
+        {
+          "h": "Efeitos no pregão seguinte",
+          "text": "Grandes movimentos do SOX ou das principais ações do setor nos EUA podem afetar o sentimento dos investidores em ações de semicondutores em Tóquio no pregão seguinte."
+        },
+        {
+          "h": "Nem sempre se movem na mesma direção",
+          "text": "Também influenciam o câmbio, o mercado em geral, os resultados e pedidos de cada empresa e as avaliações das ações. Uma alta do SOX não garante a alta das ações japonesas do setor."
+        }
+      ]
+    },
+    {
+      "title": "SOX e outros indicadores",
+      "subtitle": "O que cada informação permite compreender",
+      "blocks": [
+        {
+          "h": "Indicadores e informações",
+          "table": [
+            [
+              "Indicador ou informação",
+              "Principal leitura"
+            ],
+            [
+              "Índice SOX",
+              "Direção das ações do setor listadas nos EUA"
+            ],
+            [
+              "Principais ações do setor",
+              "Expectativas de lucro e força das ações de cada empresa"
+            ],
+            [
+              "NASDAQ Composite",
+              "Tendências das ações americanas com grande presença tecnológica"
+            ],
+            [
+              "Juros dos EUA",
+              "Ambiente de avaliação de ações de crescimento e outras"
+            ],
+            [
+              "USD/JPY",
+              "Efeito do câmbio sobre os resultados das empresas japonesas"
+            ],
+            [
+              "Resultados e pedidos",
+              "Situação empresarial que o índice sozinho não mostra"
+            ]
+          ]
+        },
+        {
+          "h": "O que o SOX representa",
+          "text": "Reflete a avaliação de mercado das ações relacionadas a semicondutores. Não representa diretamente os lucros empresariais nem os movimentos de todo o mercado acionário japonês."
+        }
+      ]
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "什么是SOX指数？",
+      "subtitle": "反映半导体相关股票走势的代表性股价指数",
+      "blocks": [
+        {
+          "h": "由美国上市半导体相关企业构成",
+          "text": "SOX是PHLX Semiconductor Sector Index的简称，反映在美国市场上市的主要半导体相关企业的股价走势。"
+        },
+        {
+          "h": "从芯片制造商到制造设备企业",
+          "text": "除半导体设计、制造企业外，也涵盖半导体制造设备供应商等相关企业。"
+        },
+        {
+          "h": "观察行业整体方向的指标",
+          "text": "它有助于了解半导体相关股票整体上受到买入还是卖出。但它并不覆盖全球所有半导体企业。"
+        },
+        {
+          "h": "成分股与权重",
+          "text": "指数的成分股及各股权重，会随着定期调整等发生变化。"
+        }
+      ]
+    },
+    {
+      "title": "SOX指数为何受到关注？",
+      "subtitle": "反映半导体需求与市场预期",
+      "blocks": [
+        {
+          "h": "半导体的主要应用领域",
+          "text": "AI与数据中心、智能手机、个人电脑、汽车、工业机械、通信设备、游戏机、国防及航天等。"
+        },
+        {
+          "h": "指数上涨的背景",
+          "text": "需求扩大、企业业绩改善及资本支出复苏等预期，可能推动半导体相关股票上涨。"
+        },
+        {
+          "h": "指数下跌的背景",
+          "text": "需求放缓、库存调整、利率上升及盈利预期恶化等，可能成为下跌因素。"
+        },
+        {
+          "h": "解读的局限",
+          "text": "不能仅凭SOX指数的涨跌，就断言整体经济状况或半导体需求的实际情况。"
+        }
+      ]
+    },
+    {
+      "title": "与日本半导体股的关系",
+      "subtitle": "美国市场走势可能影响日本市场的投资情绪",
+      "blocks": [
+        {
+          "h": "日本市场常被视为相关的企业",
+          "table": [
+            [
+              "企业",
+              "业务领域"
+            ],
+            [
+              "Tokyo Electron",
+              "半导体制造设备"
+            ],
+            [
+              "Advantest",
+              "半导体测试设备"
+            ],
+            [
+              "DISCO",
+              "切割、研磨与抛光设备"
+            ],
+            [
+              "Lasertec",
+              "半导体检测与测量相关业务"
+            ]
+          ]
+        },
+        {
+          "h": "对下一个交易日的影响",
+          "text": "当美国市场的SOX指数或主要半导体股出现较大波动时，可能影响下一个交易日东京市场对半导体相关股票的投资情绪。"
+        },
+        {
+          "h": "并不一定同向波动",
+          "text": "日本股票还受汇率、整体市场状况、各公司业绩与订单，以及估值高低等因素影响。SOX指数上涨，并不保证日本半导体股也会上涨。"
+        }
+      ]
+    },
+    {
+      "title": "SOX指数与相关指标的解读",
+      "subtitle": "区分各类信息所反映的内容",
+      "blocks": [
+        {
+          "h": "指标与信息",
+          "table": [
+            [
+              "指标或信息",
+              "主要反映内容"
+            ],
+            [
+              "SOX指数",
+              "美国上市半导体相关股票的方向"
+            ],
+            [
+              "主要半导体股",
+              "各企业的盈利预期与股价强弱"
+            ],
+            [
+              "纳斯达克综合指数",
+              "包含较多科技股的美国股票走势"
+            ],
+            [
+              "美国利率",
+              "影响成长股等估值的环境"
+            ],
+            [
+              "美元兑日元汇率",
+              "汇率对日本企业业绩的影响"
+            ],
+            [
+              "各公司业绩与订单",
+              "仅凭指数无法了解的企业状况"
+            ]
+          ]
+        },
+        {
+          "h": "SOX指数反映的范围",
+          "text": "SOX指数反映市场对半导体相关股票的评价，并不直接代表企业盈利本身，也不直接代表日本股市整体的走势。"
+        }
+      ]
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "什麼是SOX指數？",
+      "subtitle": "反映半導體相關股票走勢的代表性股價指數",
+      "blocks": [
+        {
+          "h": "由美國上市半導體相關企業構成",
+          "text": "SOX是PHLX Semiconductor Sector Index的簡稱，反映在美國市場上市的主要半導體相關企業的股價走勢。"
+        },
+        {
+          "h": "從晶片製造商到製造設備企業",
+          "text": "除半導體設計、製造企業外，也涵蓋半導體製造設備供應商等相關企業。"
+        },
+        {
+          "h": "觀察產業整體方向的指標",
+          "text": "它有助於了解半導體相關股票整體上受到買進還是賣出。但它並不涵蓋全球所有半導體企業。"
+        },
+        {
+          "h": "成分股與權重",
+          "text": "指數的成分股及各股權重，會隨著定期調整等發生變化。"
+        }
+      ]
+    },
+    {
+      "title": "SOX指數為何受到關注？",
+      "subtitle": "反映半導體需求與市場預期",
+      "blocks": [
+        {
+          "h": "半導體的主要應用領域",
+          "text": "AI與資料中心、智慧型手機、個人電腦、汽車、工業機械、通訊設備、遊戲機、國防及航太等。"
+        },
+        {
+          "h": "指數上漲的背景",
+          "text": "需求擴大、企業業績改善及資本支出復甦等預期，可能推動半導體相關股票上漲。"
+        },
+        {
+          "h": "指數下跌的背景",
+          "text": "需求放緩、庫存調整、利率上升及獲利預期惡化等，可能成為下跌因素。"
+        },
+        {
+          "h": "解讀的侷限",
+          "text": "不能僅憑SOX指數的漲跌，就斷言整體經濟狀況或半導體需求的實際情況。"
+        }
+      ]
+    },
+    {
+      "title": "與日本半導體股的關係",
+      "subtitle": "美國市場走勢可能影響日本市場的投資情緒",
+      "blocks": [
+        {
+          "h": "日本市場常被視為相關的企業",
+          "table": [
+            [
+              "企業",
+              "業務領域"
+            ],
+            [
+              "Tokyo Electron",
+              "半導體製造設備"
+            ],
+            [
+              "Advantest",
+              "半導體測試設備"
+            ],
+            [
+              "DISCO",
+              "切割、研磨與拋光設備"
+            ],
+            [
+              "Lasertec",
+              "半導體檢測與量測相關業務"
+            ]
+          ]
+        },
+        {
+          "h": "對下一個交易日的影響",
+          "text": "當美國市場的SOX指數或主要半導體股出現較大波動時，可能影響下一個交易日東京市場對半導體相關股票的投資情緒。"
+        },
+        {
+          "h": "並不一定同向波動",
+          "text": "日本股票還受匯率、整體市場狀況、各公司業績與訂單，以及估值高低等因素影響。SOX指數上漲，並不保證日本半導體股也會上漲。"
+        }
+      ]
+    },
+    {
+      "title": "SOX指數與相關指標的解讀",
+      "subtitle": "區分各類資訊所反映的內容",
+      "blocks": [
+        {
+          "h": "指標與資訊",
+          "table": [
+            [
+              "指標或資訊",
+              "主要反映內容"
+            ],
+            [
+              "SOX指數",
+              "美國上市半導體相關股票的方向"
+            ],
+            [
+              "主要半導體股",
+              "各企業的獲利預期與股價強弱"
+            ],
+            [
+              "那斯達克綜合指數",
+              "包含較多科技股的美國股票走勢"
+            ],
+            [
+              "美國利率",
+              "影響成長股等估值的環境"
+            ],
+            [
+              "美元兌日圓匯率",
+              "匯率對日本企業業績的影響"
+            ],
+            [
+              "各公司業績與訂單",
+              "僅憑指數無法了解的企業狀況"
+            ]
+          ]
+        },
+        {
+          "h": "SOX指數反映的範圍",
+          "text": "SOX指數反映市場對半導體相關股票的評價，並不直接代表企業獲利本身，也不直接代表日本股市整體的走勢。"
+        }
+      ]
+    }
+  ]
+}

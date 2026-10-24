@@ -1,0 +1,342 @@
+{
+  "en": [
+    {
+      "title": "NAND flash memory",
+      "subtitle": "Storage and market structure in the AI era",
+      "blocks": [
+        {
+          "h": "01  Market structure",
+          "table": [
+            [
+              "Factor",
+              "Overview"
+            ],
+            [
+              "Main uses",
+              "SSDs, smartphones and USB drives. Non-volatile memory retains data without power."
+            ],
+            [
+              "Demand drivers",
+              "Growing demand for AI data-center SSDs and enterprise storage."
+            ],
+            [
+              "Price cycles",
+              "Prices tend to rise when supply is tight and fall during oversupply."
+            ],
+            [
+              "Technology competition",
+              "More layers in 3D NAND, improved yields and lower manufacturing costs."
+            ]
+          ]
+        },
+        {
+          "h": "02  Key market indicators",
+          "text": "Quarter-on-quarter changes in NAND contract prices and inventory levels.\nThe sales mix and shipped capacity of data-center SSDs.\nManufacturers’ capital-spending plans and factory utilization.\nOperating cash flow, capital expenditure and depreciation."
+        }
+      ]
+    },
+    {
+      "title": "Four related Japanese companies",
+      "subtitle": "Business areas and exposure to the NAND market",
+      "blocks": [
+        {
+          "h": "03  Business characteristics",
+          "text": "Tokyo Electron / 8035 - Semiconductor production equipment. Exposed to chipmakers’ investment cycles across NAND and other segments.\n\nSCREEN Holdings / 7735 - Cleaning equipment. Supports increasingly sophisticated chip production; affected by changes in manufacturers’ investment and equipment demand.\n\nDISCO / 6146 - Precision processing equipment. Strengths in wafer cutting, grinding and polishing. Earnings do not move directly in line with NAND prices.\n\nKioxia Holdings / 285A - NAND flash manufacturing. Selling prices, shipment volumes and production costs directly affect profitability."
+        },
+        {
+          "h": "04  Perspectives for evaluating companies",
+          "table": [
+            [
+              "Approach",
+              "Focus"
+            ],
+            [
+              "Graham",
+              "10-year average earnings, current ratio and margin of safety"
+            ],
+            [
+              "Buffett",
+              "Owner earnings, competitive advantage and capital efficiency"
+            ],
+            [
+              "Munger",
+              "The relationship between business quality and price"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "es": [
+    {
+      "title": "Memoria flash NAND",
+      "subtitle": "Almacenamiento y estructura de mercado en la era de la IA",
+      "blocks": [
+        {
+          "h": "01  Estructura del mercado",
+          "table": [
+            [
+              "Factor",
+              "Descripción"
+            ],
+            [
+              "Usos principales",
+              "SSD, teléfonos y memorias USB. La memoria no volátil conserva los datos sin alimentación."
+            ],
+            [
+              "Impulso de la demanda",
+              "Mayor demanda de SSD para centros de datos de IA y almacenamiento empresarial."
+            ],
+            [
+              "Ciclos de precios",
+              "Los precios suelen subir con una oferta ajustada y bajar cuando existe exceso de oferta."
+            ],
+            [
+              "Competencia tecnológica",
+              "Más capas de NAND 3D, mejor rendimiento de fabricación y menores costes."
+            ]
+          ]
+        },
+        {
+          "h": "02  Indicadores clave del mercado",
+          "text": "Variación trimestral de los precios de contrato de NAND y niveles de inventario.\nProporción de ventas y capacidad enviada de SSD para centros de datos.\nPlanes de inversión de los fabricantes y utilización de fábricas.\nFlujo de caja operativo, inversión en activos y depreciación."
+        }
+      ]
+    },
+    {
+      "title": "Cuatro empresas japonesas relacionadas",
+      "subtitle": "Áreas de negocio y exposición al mercado NAND",
+      "blocks": [
+        {
+          "h": "03  Características empresariales",
+          "text": "Tokyo Electron / 8035 - Equipos de fabricación de semiconductores. Depende del ciclo de inversión de los fabricantes, tanto en NAND como en otros segmentos.\n\nSCREEN Holdings / 7735 - Equipos de limpieza. Participa en procesos de fabricación más avanzados; depende de la inversión y la demanda de equipos.\n\nDISCO / 6146 - Equipos de procesamiento de precisión. Destaca en corte, rectificado y pulido de obleas. Sus resultados no siguen directamente los precios de NAND.\n\nKioxia Holdings / 285A - Fabricación de memoria flash NAND. Los precios de venta, los volúmenes enviados y los costes de producción afectan directamente a su rentabilidad."
+        },
+        {
+          "h": "04  Perspectivas de evaluación empresarial",
+          "table": [
+            [
+              "Enfoque",
+              "Aspectos centrales"
+            ],
+            [
+              "Graham",
+              "Beneficio medio de 10 años, ratio corriente y margen de seguridad"
+            ],
+            [
+              "Buffett",
+              "Beneficios del propietario, ventaja competitiva y eficiencia del capital"
+            ],
+            [
+              "Munger",
+              "Relación entre calidad del negocio y precio"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "pt": [
+    {
+      "title": "Memória flash NAND",
+      "subtitle": "Armazenamento e estrutura de mercado na era da IA",
+      "blocks": [
+        {
+          "h": "01  Estrutura do mercado",
+          "table": [
+            [
+              "Fator",
+              "Visão geral"
+            ],
+            [
+              "Usos principais",
+              "SSDs, smartphones e unidades USB. Memória não volátil mantém dados sem energia."
+            ],
+            [
+              "Impulso à demanda",
+              "Crescimento da demanda por SSDs para centros de dados de IA e armazenamento empresarial."
+            ],
+            [
+              "Ciclos de preços",
+              "Preços tendem a subir com oferta restrita e cair quando há excesso de oferta."
+            ],
+            [
+              "Competição tecnológica",
+              "Mais camadas em NAND 3D, maior rendimento de fabricação e menores custos."
+            ]
+          ]
+        },
+        {
+          "h": "02  Indicadores principais do mercado",
+          "text": "Variação trimestral dos preços contratuais de NAND e níveis de estoque.\nParticipação nas vendas e capacidade enviada de SSDs para centros de dados.\nPlanos de investimento dos fabricantes e utilização das fábricas.\nFluxo de caixa operacional, investimento em ativos e depreciação."
+        }
+      ]
+    },
+    {
+      "title": "Quatro empresas japonesas relacionadas",
+      "subtitle": "Áreas de atuação e exposição ao mercado NAND",
+      "blocks": [
+        {
+          "h": "03  Características dos negócios",
+          "text": "Tokyo Electron / 8035 - Equipamentos de produção de semicondutores. Exposta ao ciclo de investimento dos fabricantes, em NAND e em outros segmentos.\n\nSCREEN Holdings / 7735 - Equipamentos de limpeza. Atua em processos de fabricação mais sofisticados; depende do investimento dos fabricantes e da demanda por equipamentos.\n\nDISCO / 6146 - Equipamentos de processamento de precisão. Forte em corte, desbaste e polimento de wafers. Seus resultados não acompanham diretamente os preços de NAND.\n\nKioxia Holdings / 285A - Fabricação de memória flash NAND. Preços de venda, volumes enviados e custos de produção afetam diretamente a rentabilidade."
+        },
+        {
+          "h": "04  Perspectivas para avaliar empresas",
+          "table": [
+            [
+              "Abordagem",
+              "Foco"
+            ],
+            [
+              "Graham",
+              "Lucro médio de 10 anos, liquidez corrente e margem de segurança"
+            ],
+            [
+              "Buffett",
+              "Lucro do proprietário, vantagem competitiva e eficiência do capital"
+            ],
+            [
+              "Munger",
+              "Relação entre qualidade do negócio e preço"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "NAND闪存",
+      "subtitle": "AI时代的数据存储与市场结构",
+      "blocks": [
+        {
+          "h": "01  市场结构",
+          "table": [
+            [
+              "因素",
+              "概要"
+            ],
+            [
+              "主要用途",
+              "SSD、智能手机、USB存储器等。属于断电后仍能保留数据的非易失性存储器。"
+            ],
+            [
+              "需求推动因素",
+              "AI数据中心SSD与企业级存储需求增长。"
+            ],
+            [
+              "价格波动",
+              "供应紧张时价格容易上涨，供给过剩时价格容易下跌。"
+            ],
+            [
+              "技术竞争",
+              "3D NAND增加堆叠层数、提升良率及降低制造成本。"
+            ]
+          ]
+        },
+        {
+          "h": "02  影响市场的主要指标",
+          "text": "NAND合约价格的环比变动与库存水平。\n数据中心SSD的销售占比及出货容量。\n厂商资本支出计划与工厂产能利用率。\n经营现金流、资本支出及折旧费用。"
+        }
+      ]
+    },
+    {
+      "title": "四家日本相关企业比较",
+      "subtitle": "业务领域及NAND行情的影响方式",
+      "blocks": [
+        {
+          "h": "03  各企业的业务特征",
+          "text": "Tokyo Electron / 8035 - 半导体制造设备。受半导体厂商资本支出周期影响，涵盖NAND以外的领域。\n\nSCREEN Holdings / 7735 - 清洗设备。参与半导体制造工艺升级，受厂商资本支出与设备需求变动影响。\n\nDISCO / 6146 - 精密加工设备。在晶圆切割、研磨和抛光技术方面具有优势，业绩并不与NAND价格直接联动。\n\nKioxia Holdings / 285A - NAND闪存制造。NAND销售价格、出货量及制造成本的变化直接影响盈利。"
+        },
+        {
+          "h": "04  企业评价视角",
+          "table": [
+            [
+              "方法",
+              "关注点"
+            ],
+            [
+              "格雷厄姆",
+              "10年平均利润、流动比率及安全边际"
+            ],
+            [
+              "巴菲特",
+              "所有者收益、竞争优势及资本效率"
+            ],
+            [
+              "芒格",
+              "业务质量与价格之间的关系"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "NAND快閃記憶體",
+      "subtitle": "AI時代的資料儲存與市場結構",
+      "blocks": [
+        {
+          "h": "01  市場結構",
+          "table": [
+            [
+              "因素",
+              "概要"
+            ],
+            [
+              "主要用途",
+              "SSD、智慧型手機、USB隨身碟等。屬於斷電後仍能保留資料的非揮發性記憶體。"
+            ],
+            [
+              "需求推動因素",
+              "AI資料中心SSD與企業級儲存需求成長。"
+            ],
+            [
+              "價格波動",
+              "供應緊張時價格容易上漲，供給過剩時價格容易下跌。"
+            ],
+            [
+              "技術競爭",
+              "3D NAND增加堆疊層數、提升良率及降低製造成本。"
+            ]
+          ]
+        },
+        {
+          "h": "02  影響市場的主要指標",
+          "text": "NAND合約價格的季增減變化與庫存水準。\n資料中心SSD的銷售占比及出貨容量。\n廠商資本支出計畫與工廠產能利用率。\n營業現金流、資本支出及折舊費用。"
+        }
+      ]
+    },
+    {
+      "title": "四家日本相關企業比較",
+      "subtitle": "業務領域及NAND行情的影響方式",
+      "blocks": [
+        {
+          "h": "03  各企業的業務特徵",
+          "text": "Tokyo Electron / 8035 - 半導體製造設備。受半導體廠商資本支出循環影響，涵蓋NAND以外的領域。\n\nSCREEN Holdings / 7735 - 清洗設備。參與半導體製程升級，受廠商資本支出與設備需求變動影響。\n\nDISCO / 6146 - 精密加工設備。在晶圓切割、研磨和拋光技術方面具有優勢，業績並不與NAND價格直接連動。\n\nKioxia Holdings / 285A - NAND快閃記憶體製造。NAND銷售價格、出貨量及製造成本的變化直接影響獲利。"
+        },
+        {
+          "h": "04  企業評價視角",
+          "table": [
+            [
+              "方法",
+              "關注重點"
+            ],
+            [
+              "葛拉漢",
+              "10年平均獲利、流動比率及安全邊際"
+            ],
+            [
+              "巴菲特",
+              "業主盈餘、競爭優勢及資本效率"
+            ],
+            [
+              "孟格",
+              "業務品質與價格之間的關係"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}
