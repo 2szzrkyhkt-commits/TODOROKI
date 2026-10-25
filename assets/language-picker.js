@@ -9,7 +9,27 @@ const current=reader&&locales.some(pair=>pair[0]===readerLang)?readerLang:(prefi
 let slug=current==='ja'?(parts[0]||''):(parts[1]||'');
 if(slug==='index')slug='';
 function destination(lang){if(lang==='ja')return supported.has(slug)?'/'+slug: '/';if(supported.has(slug))return '/'+lang+'/'+slug;if(slug==='japanese-stocks'&&lang!=='ja')return '/'+lang+'/japanese-stocks';return '/'+lang+'/';}
-function changeLanguage(lang){const target=destination(lang);const samePage=(slug===''||supported.has(slug)||(lang!=='ja'&&slug==='japanese-stocks'));
+const pdfNames={"米国中間選挙と株価の関係.pdf":"us-midterm-elections.pdf","DRAMとは何か_半導体メモリの仕組み.pdf":"dram.pdf","EUVとは何か_半導体の微細化を支える技術.pdf":"euv.pdf","NANDフラッシュメモリとは_市場構造と関連企業.pdf":"nand.pdf","SOX指数とは_半導体株と日本株の関係.pdf":"sox.pdf","マネーサプライとは何か_お金の量と経済の関係.pdf":"money-supply.pdf","ビッグマック指数から見る円とドル.pdf":"big-mac-index.pdf","FRBとは_米国金融政策と株価・為替の関係.pdf":"fed.pdf","金利上昇と株価の関係_株価に影響する4つの仕組み.pdf":"rising-rates.pdf","graham_7_criteria.pdf":"graham-criteria.pdf","graham_earnings_power.pdf":"graham-earnings.pdf","マーチンゲール法_仕組みと資金管理のリスク.pdf":"martingale.pdf","貸借倍率_信用需給と株価の読み方.pdf":"margin-ratio.pdf","半導体の種類_材料と用途から理解する.pdf":"semiconductor-types.pdf","エヌビディアはどんな企業か.pdf":"nvidia.pdf","インタレストカバレッジレシオ_利息支払能力の見方.pdf":"interest-coverage.pdf","サクセスラーニング_成功事例から学ぶ方法.pdf":"success-learning.pdf","ToDoリスト_行動を管理する基本.pdf":"todo-list.pdf","MBOを狙う_企業価値と株価の差を読む.pdf":"mbo.pdf","dotsとは何か_常時稼働AIの仕組みと使い方.pdf":"dots.pdf","GPT-6_Astraとは_特徴と活用法.pdf":"gpt6-astra.pdf","PHPの重大な脆弱性と対策_PHP2Shell.pdf":"php-security.pdf","割引効用理論_黒金_改訂版.pdf":"discounted-utility.pdf","社会的選好と情報共有_仕事仲間の協力_改訂版.pdf":"social-preferences.pdf","欲望が経済を動かす_消費と購買心理.pdf":"consumer-desire.pdf","情報漏洩の仕組みと対策_主要システムと関連企業.pdf":"data-security.pdf","TOPIX_new_members_35_TOP10_black_gold.pdf":"topix-new-members.pdf","inflation_capital_cost_best_owner_black_gold.pdf":"capital-cost-best-owner.pdf","mRNAとAI創薬とは_技術の仕組みと関連企業.pdf":"mrna-ai-drug-discovery.pdf","japan_rate_hike_black_gold.pdf":"japan-rate-hikes.pdf","責任ある積極財政とは_政府投資の財源と財政の持続可能性.pdf":"fiscal-sustainability.pdf","nikkei_100k_black_gold.pdf":"nikkei-100k.pdf","高市政権の戦略17分野_官民投資と成長戦略.pdf":"strategic-sectors.pdf","tax_cuts_schroeder_reform_black_gold.pdf":"schroeder-reforms.pdf","AI時代の現場技能と価格決定力_適正価格をつくる仕組み.pdf":"skills-pricing-power.pdf","グローバル化_黒金PDF.pdf":"globalization.pdf","blue_collar_wages.pdf":"blue-collar-wages.pdf","consolidation.pdf":"consolidation.pdf","robot_hand_technology.pdf":"robotic-hands.pdf","russia_ukraine_war.pdf":"russia-ukraine.pdf","mammal_attachment_infidelity.pdf":"attachment-infidelity.pdf","spacex_starship_japan.pdf":"spacex-starship.pdf","デフレとインフレ_資産格差_黒金4枚.pdf":"inflation-wealth-gap.pdf","diode_transistor_mosfet.pdf":"diodes-transistors.pdf","spintronics_mram.pdf":"spintronics-mram.pdf","ヒト・モノ・カネ_企業価値の源泉_黒金.pdf":"people-assets-capital.pdf","physical_ai.pdf":"physical-ai.pdf","japan_stock_megatrends.pdf":"japan-equity-megatrends.pdf","企業も自習だけでは伸びない_黒金4枚.pdf":"corporate-learning.pdf","japan_companies_top10_20260929.pdf":"japan-companies-comparison.pdf","singularity.pdf":"singularity.pdf","japan_stock_theme_map.pdf":"japan-theme-map.pdf","Switch2関連半導体株の見通し_2026年9月23日.pdf":"switch2-semiconductors.pdf","quantum_computer_japan.pdf":"quantum-computing.pdf","半導体設計を担う日本企業_関連5銘柄.pdf":"japanese-chip-design.pdf","大衆心理_群集が判断を狂わせる理由_黒金.pdf":"crowd-psychology.pdf","成功体験が人と企業を弱くする理由_黒金.pdf":"success-trap.pdf","日本企業_M&A産業再編_黒金4P.pdf":"japan-ma.pdf","日本企業_資本の使い方_黒金_X4枚版.pdf":"capital-allocation.pdf","経営者の世代交代_黒金.pdf":"leadership-succession.pdf"};
+function filterState(){const source=new URLSearchParams(location.search),state=new URLSearchParams();for(const key of ['q','category'])if(source.get(key))state.set(key,source.get(key));return state;}
+async function changeLanguage(lang){let target=destination(lang);
+const state=filterState();
+if(reader){
+ target=(lang==='ja'?'/':'/'+lang+'/')+'pdf-library'+(state.size?'?'+state:'');
+ try{
+  const source=new URL(new URLSearchParams(location.search).get('file')||'',location.origin);
+  const path=decodeURIComponent(source.pathname),name=path.split('/').pop();
+  const original=path.startsWith('/pdf/')&&path.split('/').length===3?name:Object.keys(pdfNames).find(key=>pdfNames[key]===name);
+  const file=lang==='ja'?(original?'/pdf/'+original:null):(original&&pdfNames[original]?'/pdf/'+lang+'/'+pdfNames[original]:null);
+  const response=await fetch('/assets/pdf-catalog.json');if(!response.ok)throw new Error('catalog');
+  const catalog=await response.json();
+  if(source.origin===location.origin&&file&&Object.hasOwn(catalog,file)){
+   state.set('file',file);state.set('lang',lang);target='/pdf-viewer.html?'+state;
+  }
+ }catch(e){}
+ location.assign(target);return;
+}
+if(slug==='pdf-library'&&state.size)target+='?'+state;
+const samePage=(slug===''||supported.has(slug)||(lang!=='ja'&&slug==='japanese-stocks'));
 if(!samePage){location.assign(target);return;}
 const ratio=window.scrollY/Math.max(1,document.documentElement.scrollHeight-window.innerHeight);
 try{sessionStorage.setItem('todoroki-language-scroll',JSON.stringify({target:target,ratio:ratio,from:Date.now()}));}catch(e){}
