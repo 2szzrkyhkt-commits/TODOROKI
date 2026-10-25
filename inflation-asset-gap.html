@@ -146,7 +146,7 @@
 html{scroll-behavior:smooth}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
-</head>
+<link rel="stylesheet" href="/assets/navigation.css"></head>
 <body>
   <header>
     <a class="logo" href="index.html">TODOROKI</a>
@@ -157,7 +157,7 @@ html{scroll-behavior:smooth}
       <a href="/business-list">ビジネス</a>
       <a href="/pdf-library">PDFライブラリー</a>
     </nav>
-  </header>
+  <nav class="todoroki-context-nav" aria-label="テーマ"><a href="/">トップ</a><a href="/#themes">テーマ</a><a href="/economy-list.html">経済</a><a href="/glossary.html">用語辞典</a><a href="/pdf-library.html">PDF資料</a></nav></header>
 
   <main id="article-top">
     <div class="category">ECONOMY / INFLATION</div>
@@ -291,7 +291,7 @@ html{scroll-behavior:smooth}
 
   <footer>
     &copy; 2026 TODOROKI
-  </footer>
+  <nav class="todoroki-info-nav" aria-label="TODOROKI"><a href="/about.html">このサイトについて</a><a href="/privacy.html">プライバシー</a><a href="/contact.html">お問い合わせ</a></nav></footer>
 <script defer src="/assets/share-article.js"></script>
 </body>
 </html>
