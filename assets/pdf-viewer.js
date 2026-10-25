@@ -19,7 +19,7 @@
   get('home').href = base;
   get('back').href = base + 'pdf-library.html' + (state.size ? '?' + state : '');
   document.querySelectorAll('header a[href]').forEach(link => {
-    const path = new URL(link.href, location.origin).pathname.replace(/\\.html$/, '');
+    const path = new URL(link.href, location.origin).pathname.replace(/\.html$/, '').replace(/\/$/, '');
     if (path === base + 'pdf-library') link.href = get('back').href;
   });
   ['back','download','help','direct','article','status'].forEach((id,i) => get(id).textContent = t[i]);
