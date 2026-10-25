@@ -167,6 +167,7 @@ const categorySelect = document.getElementById("category");
 let files = [];
 
 const titleMap = {
+"ヒューリスティックとバイアス_投資判断の心理と対策.pdf": "ヒューリスティックとバイアス｜投資判断の心理と対策",
 "安くしても買われない理由_株価と信頼と成長期待.pdf": "安くしても買われない理由｜株価と信頼・成長期待",
 "マーチンゲール法_仕組みと資金管理のリスク.pdf": "マーチンゲール法｜仕組みと資金管理のリスク",
 "貸借倍率_信用需給と株価の読み方.pdf": "貸借倍率｜信用需給と株価の読み方",
@@ -269,6 +270,7 @@ function getTitle(name) {
 }
 
 function category(name) {
+  if (/ヒューリスティックとバイアス/.test(name)) return "経済・金融";
   name = name.normalize("NFC");
   const n = name.toLowerCase();
   if (/russia_ukraine_war/i.test(n)) return "政治・社会";
