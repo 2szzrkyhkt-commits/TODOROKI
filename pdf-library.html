@@ -395,6 +395,18 @@ function searchText(name) {
   return normalizeSearch(name + " " + title + " " + related);
 }
 
+// 関連する基礎解説へ誘導。リンク先が確認できた記事のみ使用する。
+const relatedArticles = [
+  { test: /グレアム|graham|MBO|貸借倍率|インタレストカバレッジ|日本企業10社|TOPIX|株式|投資基準/i, href: "/investment", label: "投資の基礎を読む" },
+  { test: /インフレ|デフレ|資産格差/i, href: "/inflation", label: "インフレの解説を読む" },
+  { test: /金利|FRB/i, href: "/interest-rate", label: "金利の解説を読む" },
+  { test: /M&A|資本配分|産業再編/i, href: "/business-ma", label: "M&Aの解説を読む" }
+];
+function getRelatedArticle(name) {
+  const text = name + " " + getTitle(name);
+  return relatedArticles.find(item => item.test.test(text)) || null;
+}
+
 function render() {
   const queries = search.value.trim().split(/\s+/).filter(Boolean).map(normalizeSearch);
   const cat = categorySelect.value;
@@ -440,7 +452,16 @@ function render() {
     dl.textContent = "保存 ↓";
 
     actions.append(view, dl);
-    card.append(tag, h, actions);
+    const related = getRelatedArticle(f.name);
+    if (related) {
+      const articleLink = document.createElement("a");
+      articleLink.href = related.href;
+      articleLink.textContent = related.label + " →";
+      articleLink.style.cssText = "display:inline-block;margin-top:14px;color:#eee0b6;font-size:13px;text-decoration:underline;text-underline-offset:4px";
+      card.append(tag, h, actions, articleLink);
+    } else {
+      card.append(tag, h, actions);
+    }
     grid.append(card);
   }
 
