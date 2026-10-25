@@ -6,7 +6,7 @@ const parts=location.pathname.replace(/\/$/,'').replace(/\.html$/,'').split('/')
 const current=prefixes.includes(parts[0])?parts[0]:'ja';
 let slug=current==='ja'?(parts[0]||''):(parts[1]||'');
 if(slug==='index')slug='';
-function destination(lang){if(lang==='ja')return supported.has(slug)?'/'+slug: '/';if(supported.has(slug))return '/'+lang+'/'+slug+'.html';if(slug==='japanese-stocks'&&lang!=='ja')return '/'+lang+'/japanese-stocks.html';return '/'+lang+'/';}
+function destination(lang){if(lang==='ja')return supported.has(slug)?'/'+slug: '/';if(supported.has(slug))return '/'+lang+'/'+slug;if(slug==='japanese-stocks'&&lang!=='ja')return '/'+lang+'/japanese-stocks';return '/'+lang+'/';}
 function changeLanguage(lang){const target=destination(lang);const samePage=(slug===''||supported.has(slug)||(lang!=='ja'&&slug==='japanese-stocks'));
 if(!samePage){location.assign(target);return;}
 const ratio=window.scrollY/Math.max(1,document.documentElement.scrollHeight-window.innerHeight);
