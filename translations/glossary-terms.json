@@ -8,7 +8,8 @@
       "企業経営": "Business & Management",
       "株式市場": "Stock Market",
       "産業・技術": "Industry & Technology",
-      "経済・金融": "Economics & Finance"
+      "経済・金融": "Economics & Finance",
+      "行動経済学": "Behavioral Economics"
     },
     "terms": [
       {
@@ -861,6 +862,259 @@
         "category": "投資指標",
         "title": "Enterprise value",
         "definition": "A valuation measure often calculated as market capitalization plus debt minus cash, subject to adjustments."
+      },
+      {
+        "id": "term-deductive-reasoning",
+        "category": "経済・金融",
+        "title": "Deductive reasoning",
+        "definition": "Deriving a conclusion logically from premises. If the premises are true and the argument is valid, the conclusion must be true.",
+        "note": "Example: All overdue cases must be reported; case A is overdue; therefore A must be reported. Check the truth of the premises separately from logical validity.",
+        "aliases": [
+          "演繹法",
+          "Deductive reasoning"
+        ]
+      },
+      {
+        "id": "term-inductive-reasoning",
+        "category": "経済・金融",
+        "title": "Inductive reasoning",
+        "definition": "Inferring broader patterns or rules from individual observations. The conclusion is not guaranteed to be true.",
+        "note": "Example: Productive mornings suggest that morning work suits you. Check sample size, bias, counterexamples and changing conditions; revise with new evidence.",
+        "aliases": [
+          "帰納法",
+          "Inductive reasoning"
+        ]
+      },
+      {
+        "id": "term-behavioral-finance",
+        "category": "経済・金融",
+        "title": "Behavioral finance",
+        "definition": "The study of how investor cognition, emotions and behavior relate to trading and market prices, including limits to arbitrage.",
+        "note": "Example: Investigating the tendency to postpone realizing losses while taking gains early. Examine your own biases without attributing every market movement to psychology.",
+        "aliases": [
+          "行動ファイナンス",
+          "Behavioral finance"
+        ]
+      },
+      {
+        "id": "term-neuroeconomics",
+        "category": "経済・金融",
+        "title": "Neuroeconomics",
+        "definition": "A field combining economics, psychology and neuroscience to study valuation, learning and choice.",
+        "note": "Example: Measuring brain activity during decisions involving rewards or risk. Brain activity alone cannot establish personal intentions or predict stock prices.",
+        "aliases": [
+          "神経経済学",
+          "Neuroeconomics"
+        ]
+      },
+      {
+        "id": "term-experimental-economics",
+        "category": "経済・金融",
+        "title": "Experimental economics",
+        "definition": "Testing economic behavior, theoretical predictions and institutions through experiments with specified incentives, information and trading rules.",
+        "note": "Example: Comparing price formation under different auction formats. Study when predictions hold as well as when they fail; generalize cautiously.",
+        "aliases": [
+          "実験経済学",
+          "Experimental economics"
+        ]
+      },
+      {
+        "id": "term-dictator-game",
+        "category": "経済・金融",
+        "title": "Dictator game",
+        "definition": "An experimental task in which one participant allocates resources and the recipient has no veto.",
+        "note": "Example: Deciding how much of ¥1,000 to give another person. It studies distribution preferences and altruism; anonymity and experimental conditions affect results.",
+        "aliases": [
+          "独裁者ゲーム",
+          "Dictator game"
+        ]
+      },
+      {
+        "id": "term-ultimatum-game",
+        "category": "経済・金融",
+        "title": "Ultimatum game",
+        "definition": "One participant proposes a split; acceptance implements it, while rejection leaves both participants with zero.",
+        "note": "Example: Proposing a split of ¥1,000 for another person to accept or reject. Responses to fairness depend on the population and experimental conditions.",
+        "aliases": [
+          "最後通牒ゲーム",
+          "Ultimatum game"
+        ]
+      },
+      {
+        "id": "term-prisoners-dilemma",
+        "category": "経済・金融",
+        "title": "Prisoner’s dilemma",
+        "definition": "A game in which individually advantageous choices can leave both players worse off than mutual cooperation.",
+        "note": "In the standard one-shot game, defection dominates when only individual monetary payoffs count. Repetition, relationships and social preferences can change cooperation; defection is not rational in every situation.",
+        "aliases": [
+          "囚人のジレンマ",
+          "Prisoner’s dilemma"
+        ]
+      },
+      {
+        "id": "term-regret-aversion",
+        "category": "投資基礎",
+        "title": "Regret aversion",
+        "definition": "Avoiding anticipated regret can influence a decision.",
+        "note": "Example: Being unable to sell because you imagine the price rising afterward. Record the evidence available when deciding, rather than judging only by the outcome of an alternative.",
+        "aliases": [
+          "後悔回避",
+          "Regret aversion"
+        ]
+      },
+      {
+        "id": "term-herd-behavior",
+        "category": "投資基礎",
+        "title": "Herd behavior (herding)",
+        "definition": "Following others’ actions rather than your own information or judgment.",
+        "note": "Example: Buying because a stock is popular on social media, then selling with the crowd in a decline. Others’ actions may contain information, but popularity alone is insufficient.",
+        "aliases": [
+          "群集心理（ハーディング）",
+          "Herd behavior (herding)"
+        ]
+      },
+      {
+        "id": "term-status-quo",
+        "category": "投資基礎",
+        "title": "Status quo bias",
+        "definition": "A tendency to retain the current situation or default even when changing may offer benefits.",
+        "note": "Example: Keeping an investment after its original rationale fails. Compare holding, selling and alternatives, including costs and taxes.",
+        "aliases": [
+          "現状維持バイアス",
+          "Status quo bias"
+        ]
+      },
+      {
+        "id": "term-fomo",
+        "category": "投資基礎",
+        "title": "FOMO (fear of missing out)",
+        "definition": "Anxiety about missing opportunities or gains enjoyed by others.",
+        "note": "Example: Chasing a surging stock without checking the evidence. FOMO may relate to regret aversion, but the terms are not synonymous.",
+        "aliases": [
+          "FOMO（取り残される恐怖）",
+          "FOMO (fear of missing out)"
+        ]
+      },
+      {
+        "id": "term-heuristic",
+        "category": "行動経済学",
+        "title": "Heuristic",
+        "definition": "A way of simplifying complex judgments using experience or salient cues. Useful under limited time or information, but sometimes produces systematic bias.",
+        "note": "Example: Using a high price as a cue for quality. Price alone does not establish quality.",
+        "aliases": [
+          "ヒューリスティック",
+          "Heuristic"
+        ]
+      },
+      {
+        "id": "term-cognitive-bias",
+        "category": "行動経済学",
+        "title": "Cognitive bias",
+        "definition": "A systematic tendency in information processing or judgment, distinct from a random error. Motivation and emotion, as well as heuristics, can contribute.",
+        "note": "Example: Giving extra weight to favorable information about a stock you want to buy.",
+        "aliases": [
+          "認知バイアス",
+          "Cognitive bias"
+        ]
+      },
+      {
+        "id": "term-behavioral-economics",
+        "category": "行動経済学",
+        "title": "Behavioral economics",
+        "definition": "The study of actual economic decisions using psychological findings, experiments and observations, including cognitive limits, emotions, self-control and concern for others.",
+        "note": "Example: Testing whether presenting the same amount as a gain or a loss changes choices.",
+        "aliases": [
+          "行動経済学",
+          "Behavioral economics"
+        ]
+      },
+      {
+        "id": "term-representativeness",
+        "category": "行動経済学",
+        "title": "Representativeness heuristic",
+        "definition": "Judging probability or group membership by similarity to a typical image or example, potentially neglecting base rates and small samples.",
+        "note": "Example: Expecting a company to keep growing merely because it resembles a past high-growth business.",
+        "aliases": [
+          "代表性ヒューリスティック",
+          "Representativeness heuristic"
+        ]
+      },
+      {
+        "id": "term-anchoring",
+        "category": "行動経済学",
+        "title": "Anchoring",
+        "definition": "An initial number or reference can exert excessive influence on later estimates and judgments.",
+        "note": "Example: Treating a ¥600 stock as cheap because it previously traded at ¥1,000. Also examine current earnings, assets and prospects.",
+        "aliases": [
+          "アンカリング",
+          "Anchoring"
+        ]
+      },
+      {
+        "id": "term-confirmation-bias",
+        "category": "行動経済学",
+        "title": "Confirmation bias",
+        "definition": "A tendency to seek or emphasize evidence supporting your beliefs and discount opposing evidence.",
+        "note": "Example: Reading only bullish commentary while overlooking weak earnings. Write down disconfirming evidence and conditions for changing your view in advance.",
+        "aliases": [
+          "確証バイアス",
+          "Confirmation bias"
+        ]
+      },
+      {
+        "id": "term-availability",
+        "category": "行動経済学",
+        "title": "Availability heuristic",
+        "definition": "Judging frequency or probability by how easily examples come to mind or can be imagined.",
+        "note": "Example: Overestimating investment success after repeatedly seeing success stories online. Check the full sample and failures too.",
+        "aliases": [
+          "利用可能性ヒューリスティック",
+          "Availability heuristic"
+        ]
+      },
+      {
+        "id": "term-overconfidence",
+        "category": "行動経済学",
+        "title": "Overconfidence bias",
+        "definition": "Overestimating your knowledge, forecast accuracy or ability relative to others.",
+        "note": "Example: Increasing investments or borrowing after a few successes. Record forecasts and outcomes, and manage maximum losses.",
+        "aliases": [
+          "過信バイアス",
+          "Overconfidence bias"
+        ]
+      },
+      {
+        "id": "term-bayesian-learning",
+        "category": "科学・技術",
+        "title": "Bayesian learning",
+        "definition": "Updating the probability of a hypothesis as new evidence arrives: posterior probability is proportional to likelihood multiplied by prior probability.",
+        "note": "Example: Update hypotheses about the proportion of red balls in a bag after each draw. The posterior becomes the next prior. Results depend on priors, model assumptions and data quality; do not count the same evidence twice.",
+        "aliases": [
+          "ベイズ学習",
+          "Bayesian learning"
+        ]
+      },
+      {
+        "id": "term-nash-equilibrium",
+        "category": "経済・金融",
+        "title": "Nash equilibrium",
+        "definition": "A combination of strategies in which no participant can improve their payoff by changing only their own strategy, given the others’ strategies. Each is a best response to the others.",
+        "note": "Example: Both firms earn 3 at high prices and 1 at low prices; if only one cuts its price, it earns 4 and the other 0. Both choosing low prices is an equilibrium. Equilibria need not be collectively best and may be multiple; information, rules and repetition matter.",
+        "aliases": [
+          "ナッシュ均衡",
+          "Nash equilibrium"
+        ]
+      },
+      {
+        "id": "term-homo-economicus",
+        "category": "経済・金融",
+        "title": "Homo economicus (economic agent)",
+        "definition": "A simplified economic model of a person who acts rationally to maximize their own benefit or utility, sometimes described as extremely rational, self-controlled and self-interested.",
+        "note": "Example: Comparing price, quality and future benefits without yielding to immediate temptation. Real people exhibit biases, limited self-control and concern for others; behavioral economics studies these differences.",
+        "aliases": [
+          "ホモ・エコノミカス（経済人）",
+          "Homo economicus (economic agent)"
+        ]
       }
     ]
   },
@@ -873,7 +1127,8 @@
       "企業経営": "Empresas y gestión",
       "株式市場": "Mercado bursátil",
       "産業・技術": "Industria y tecnología",
-      "経済・金融": "Economía y finanzas"
+      "経済・金融": "Economía y finanzas",
+      "行動経済学": "Economía conductual"
     },
     "terms": [
       {
@@ -1726,6 +1981,259 @@
         "category": "投資指標",
         "title": "Valor de empresa",
         "definition": "Medida de valoración que suele sumar deuda a la capitalización y restar efectivo, con ajustes."
+      },
+      {
+        "id": "term-deductive-reasoning",
+        "category": "経済・金融",
+        "title": "Razonamiento deductivo",
+        "definition": "Derivar una conclusión lógicamente de unas premisas. Si las premisas son verdaderas y el razonamiento válido, la conclusión debe ser verdadera.",
+        "note": "Ejemplo: Los casos atrasados se notifican; A está atrasado; por tanto, A se notifica. Comprueba por separado las premisas y la validez lógica.",
+        "aliases": [
+          "演繹法",
+          "Deductive reasoning"
+        ]
+      },
+      {
+        "id": "term-inductive-reasoning",
+        "category": "経済・金融",
+        "title": "Razonamiento inductivo",
+        "definition": "Inferir patrones o reglas generales a partir de observaciones particulares, sin garantizar que la conclusión sea verdadera.",
+        "note": "Ejemplo: Varias mañanas productivas sugieren que trabajar por la mañana te conviene. Revisa tamaño y sesgos de la muestra, contraejemplos y cambios del entorno.",
+        "aliases": [
+          "帰納法",
+          "Inductive reasoning"
+        ]
+      },
+      {
+        "id": "term-behavioral-finance",
+        "category": "経済・金融",
+        "title": "Finanzas conductuales",
+        "definition": "Estudian cómo la cognición, las emociones y la conducta del inversor se relacionan con las operaciones y los precios, incluidos los límites al arbitraje.",
+        "note": "Ejemplo: Investigar por qué se aplazan pérdidas y se realizan ganancias pronto. Revisa tus sesgos sin atribuir todos los movimientos a la psicología.",
+        "aliases": [
+          "行動ファイナンス",
+          "Behavioral finance"
+        ]
+      },
+      {
+        "id": "term-neuroeconomics",
+        "category": "経済・金融",
+        "title": "Neuroeconomía",
+        "definition": "Integra economía, psicología y neurociencia para estudiar la valoración, el aprendizaje y la elección.",
+        "note": "Ejemplo: Medir la actividad cerebral al elegir entre recompensas o riesgos. Esa actividad por sí sola no determina intenciones ni predice cotizaciones.",
+        "aliases": [
+          "神経経済学",
+          "Neuroeconomics"
+        ]
+      },
+      {
+        "id": "term-experimental-economics",
+        "category": "経済・金融",
+        "title": "Economía experimental",
+        "definition": "Contrasta conductas, predicciones teóricas e instituciones mediante experimentos con incentivos, información y reglas definidos.",
+        "note": "Ejemplo: Comparar la formación de precios en distintos tipos de subasta. Examina cuándo se cumplen las predicciones y generaliza con cautela.",
+        "aliases": [
+          "実験経済学",
+          "Experimental economics"
+        ]
+      },
+      {
+        "id": "term-dictator-game",
+        "category": "経済・金融",
+        "title": "Juego del dictador",
+        "definition": "Tarea experimental en la que una persona decide el reparto de recursos y la receptora no puede rechazarlo.",
+        "note": "Ejemplo: Decidir cuánto de 1.000 yenes dar a otra persona. Estudia preferencias distributivas y altruismo; el anonimato y las condiciones influyen.",
+        "aliases": [
+          "独裁者ゲーム",
+          "Dictator game"
+        ]
+      },
+      {
+        "id": "term-ultimatum-game",
+        "category": "経済・金融",
+        "title": "Juego del ultimátum",
+        "definition": "Una persona propone un reparto: si la otra acepta, se ejecuta; si rechaza, ambas reciben cero.",
+        "note": "Ejemplo: Aceptar o rechazar un reparto de 1.000 yenes. Las reacciones a la equidad varían según el grupo y las condiciones.",
+        "aliases": [
+          "最後通牒ゲーム",
+          "Ultimatum game"
+        ]
+      },
+      {
+        "id": "term-prisoners-dilemma",
+        "category": "経済・金融",
+        "title": "Dilema del prisionero",
+        "definition": "Juego donde las decisiones individualmente ventajosas pueden dejar a ambos peor que la cooperación mutua.",
+        "note": "En el juego estándar de una sola ronda, no cooperar domina si solo cuentan los pagos monetarios propios. La repetición, las relaciones y las preferencias sociales cambian el análisis; no siempre es racional no cooperar.",
+        "aliases": [
+          "囚人のジレンマ",
+          "Prisoner’s dilemma"
+        ]
+      },
+      {
+        "id": "term-regret-aversion",
+        "category": "投資基礎",
+        "title": "Aversión al arrepentimiento",
+        "definition": "El deseo de evitar un arrepentimiento futuro puede influir en las decisiones.",
+        "note": "Ejemplo: No vender por imaginar una subida posterior. Registra las razones disponibles al decidir, en vez de juzgar solo por la alternativa.",
+        "aliases": [
+          "後悔回避",
+          "Regret aversion"
+        ]
+      },
+      {
+        "id": "term-herd-behavior",
+        "category": "投資基礎",
+        "title": "Comportamiento de rebaño",
+        "definition": "Seguir las acciones de otros en lugar de la información o el criterio propios.",
+        "note": "Ejemplo: Comprar por popularidad en redes y vender con todos durante una caída. Las acciones ajenas pueden informar, pero la popularidad no basta.",
+        "aliases": [
+          "群集心理（ハーディング）",
+          "Herd behavior (herding)"
+        ]
+      },
+      {
+        "id": "term-status-quo",
+        "category": "投資基礎",
+        "title": "Sesgo del statu quo",
+        "definition": "Tendencia a mantener la situación actual o la opción predeterminada aunque cambiar pueda resultar beneficioso.",
+        "note": "Ejemplo: Mantener una inversión cuya tesis ya falló. Compara mantener, vender y alternativas, incluidos costes e impuestos.",
+        "aliases": [
+          "現状維持バイアス",
+          "Status quo bias"
+        ]
+      },
+      {
+        "id": "term-fomo",
+        "category": "投資基礎",
+        "title": "FOMO (miedo a quedarse fuera)",
+        "definition": "Ansiedad por perder oportunidades o beneficios que otros disfrutan.",
+        "note": "Ejemplo: Comprar tras una subida sin verificar los fundamentos. Puede relacionarse con la aversión al arrepentimiento, pero no es sinónimo.",
+        "aliases": [
+          "FOMO（取り残される恐怖）",
+          "FOMO (fear of missing out)"
+        ]
+      },
+      {
+        "id": "term-heuristic",
+        "category": "行動経済学",
+        "title": "Heurística",
+        "definition": "Forma de simplificar decisiones complejas mediante experiencia o señales destacadas. Es útil con tiempo o información limitados, pero puede generar sesgos sistemáticos.",
+        "note": "Ejemplo: Usar un precio alto como señal de calidad. El precio por sí solo no demuestra calidad.",
+        "aliases": [
+          "ヒューリスティック",
+          "Heuristic"
+        ]
+      },
+      {
+        "id": "term-cognitive-bias",
+        "category": "行動経済学",
+        "title": "Sesgo cognitivo",
+        "definition": "Desviación sistemática al procesar información o juzgar, distinta de un error aleatorio. También intervienen motivaciones y emociones.",
+        "note": "Ejemplo: Dar mayor peso a información favorable sobre una acción que deseas comprar.",
+        "aliases": [
+          "認知バイアス",
+          "Cognitive bias"
+        ]
+      },
+      {
+        "id": "term-behavioral-economics",
+        "category": "行動経済学",
+        "title": "Economía conductual",
+        "definition": "Estudia las decisiones económicas reales mediante psicología, experimentos y observaciones, incluyendo límites cognitivos, emociones, autocontrol y consideración por otros.",
+        "note": "Ejemplo: Comprobar si presentar una misma cantidad como ganancia o pérdida cambia la elección.",
+        "aliases": [
+          "行動経済学",
+          "Behavioral economics"
+        ]
+      },
+      {
+        "id": "term-representativeness",
+        "category": "行動経済学",
+        "title": "Heurística de representatividad",
+        "definition": "Juzgar probabilidades o pertenencia a un grupo por semejanza con una imagen típica, pudiendo ignorar tasas base y muestras pequeñas.",
+        "note": "Ejemplo: Esperar crecimiento continuado solo porque una empresa se parece a otra que creció mucho.",
+        "aliases": [
+          "代表性ヒューリスティック",
+          "Representativeness heuristic"
+        ]
+      },
+      {
+        "id": "term-anchoring",
+        "category": "行動経済学",
+        "title": "Anclaje",
+        "definition": "Un número o referencia inicial influye excesivamente en estimaciones y juicios posteriores.",
+        "note": "Ejemplo: Considerar barata una acción a 600 yenes porque antes valía 1.000. Revisa beneficios, activos y perspectivas actuales.",
+        "aliases": [
+          "アンカリング",
+          "Anchoring"
+        ]
+      },
+      {
+        "id": "term-confirmation-bias",
+        "category": "行動経済学",
+        "title": "Sesgo de confirmación",
+        "definition": "Tendencia a buscar o valorar más las pruebas favorables a las propias creencias y restar peso a las contrarias.",
+        "note": "Ejemplo: Leer solo comentarios alcistas e ignorar resultados débiles. Define antes las pruebas contrarias y cuándo cambiar de opinión.",
+        "aliases": [
+          "確証バイアス",
+          "Confirmation bias"
+        ]
+      },
+      {
+        "id": "term-availability",
+        "category": "行動経済学",
+        "title": "Heurística de disponibilidad",
+        "definition": "Juzgar frecuencias o probabilidades según la facilidad de recordar o imaginar ejemplos.",
+        "note": "Ejemplo: Sobreestimar el éxito inversor tras ver repetidas historias positivas en redes. Examina la muestra completa y los fracasos.",
+        "aliases": [
+          "利用可能性ヒューリスティック",
+          "Availability heuristic"
+        ]
+      },
+      {
+        "id": "term-overconfidence",
+        "category": "行動経済学",
+        "title": "Sesgo de exceso de confianza",
+        "definition": "Sobrevalorar los conocimientos, la precisión de las previsiones o la capacidad frente a otros.",
+        "note": "Ejemplo: Aumentar inversión o deuda tras pocos éxitos. Registra previsiones y resultados y controla las pérdidas máximas.",
+        "aliases": [
+          "過信バイアス",
+          "Overconfidence bias"
+        ]
+      },
+      {
+        "id": "term-bayesian-learning",
+        "category": "科学・技術",
+        "title": "Aprendizaje bayesiano",
+        "definition": "Actualiza la probabilidad de una hipótesis con nueva evidencia: probabilidad posterior proporcional a verosimilitud por probabilidad previa.",
+        "note": "Ejemplo: Actualizar hipótesis sobre la proporción de bolas rojas de una bolsa tras cada extracción. La posterior pasa a ser la previa siguiente. Importan el modelo, la previa y la calidad de los datos; no dupliques evidencias.",
+        "aliases": [
+          "ベイズ学習",
+          "Bayesian learning"
+        ]
+      },
+      {
+        "id": "term-nash-equilibrium",
+        "category": "経済・金融",
+        "title": "Equilibrio de Nash",
+        "definition": "Combinación de estrategias donde nadie mejora su pago cambiando solo su propia estrategia dadas las de los demás; cada estrategia es una mejor respuesta.",
+        "note": "Ejemplo: Dos empresas ganan 3 con precios altos y 1 con bajos; si solo una baja, gana 4 y la otra 0. Ambas con precios bajos forman un equilibrio. No tiene que ser el mejor resultado colectivo y puede haber varios; importan información, reglas y repetición.",
+        "aliases": [
+          "ナッシュ均衡",
+          "Nash equilibrium"
+        ]
+      },
+      {
+        "id": "term-homo-economicus",
+        "category": "経済・金融",
+        "title": "Homo economicus",
+        "definition": "Modelo simplificado de persona que actúa racionalmente para maximizar su beneficio o utilidad; a veces se describe como extremadamente racional, autocontrolada e interesada en sí misma.",
+        "note": "Ejemplo: Comparar precio, calidad y beneficios futuros sin ceder a tentaciones inmediatas. Las personas reales tienen sesgos, autocontrol limitado y consideración por otros; la economía conductual estudia estas diferencias.",
+        "aliases": [
+          "ホモ・エコノミカス（経済人）",
+          "Homo economicus (economic agent)"
+        ]
       }
     ]
   },
@@ -1738,7 +2246,8 @@
       "企業経営": "Empresas e gestão",
       "株式市場": "Mercado de ações",
       "産業・技術": "Indústria e tecnologia",
-      "経済・金融": "Economia e finanças"
+      "経済・金融": "Economia e finanças",
+      "行動経済学": "Economia comportamental"
     },
     "terms": [
       {
@@ -2591,6 +3100,259 @@
         "category": "投資指標",
         "title": "Valor da firma",
         "definition": "Métrica que costuma somar dívida ao valor de mercado e subtrair caixa, com ajustes."
+      },
+      {
+        "id": "term-deductive-reasoning",
+        "category": "経済・金融",
+        "title": "Raciocínio dedutivo",
+        "definition": "Derivar uma conclusão logicamente de premissas. Se as premissas forem verdadeiras e o argumento válido, a conclusão será necessariamente verdadeira.",
+        "note": "Exemplo: Casos atrasados devem ser comunicados; A está atrasado; logo A deve ser comunicado. Verifique separadamente as premissas e a validade lógica.",
+        "aliases": [
+          "演繹法",
+          "Deductive reasoning"
+        ]
+      },
+      {
+        "id": "term-inductive-reasoning",
+        "category": "経済・金融",
+        "title": "Raciocínio indutivo",
+        "definition": "Inferir padrões ou regras gerais de observações particulares, sem garantir a verdade da conclusão.",
+        "note": "Exemplo: Manhãs produtivas sugerem que trabalhar de manhã funciona melhor. Confira tamanho e viés da amostra, contraexemplos e mudanças no ambiente.",
+        "aliases": [
+          "帰納法",
+          "Inductive reasoning"
+        ]
+      },
+      {
+        "id": "term-behavioral-finance",
+        "category": "経済・金融",
+        "title": "Finanças comportamentais",
+        "definition": "Estudam como cognição, emoções e comportamento dos investidores se relacionam com negociações e preços, incluindo limites à arbitragem.",
+        "note": "Exemplo: Investigar o adiamento de perdas e a realização precoce de ganhos. Examine seus vieses sem explicar todo movimento pela psicologia.",
+        "aliases": [
+          "行動ファイナンス",
+          "Behavioral finance"
+        ]
+      },
+      {
+        "id": "term-neuroeconomics",
+        "category": "経済・金融",
+        "title": "Neuroeconomia",
+        "definition": "Integra economia, psicologia e neurociência para estudar avaliação, aprendizagem e escolha.",
+        "note": "Exemplo: Medir atividade cerebral durante escolhas envolvendo recompensas ou riscos. Essa atividade isolada não determina intenções nem prevê cotações.",
+        "aliases": [
+          "神経経済学",
+          "Neuroeconomics"
+        ]
+      },
+      {
+        "id": "term-experimental-economics",
+        "category": "経済・金融",
+        "title": "Economia experimental",
+        "definition": "Testa comportamentos, previsões teóricas e instituições com experimentos que definem incentivos, informações e regras.",
+        "note": "Exemplo: Comparar a formação de preços em formatos de leilão diferentes. Examine quando as previsões funcionam e generalize com cuidado.",
+        "aliases": [
+          "実験経済学",
+          "Experimental economics"
+        ]
+      },
+      {
+        "id": "term-dictator-game",
+        "category": "経済・金融",
+        "title": "Jogo do ditador",
+        "definition": "Experimento no qual uma pessoa decide a distribuição de recursos e a receptora não pode recusá-la.",
+        "note": "Exemplo: Decidir quanto de 1.000 ienes dar a alguém. Estuda preferências distributivas e altruísmo; anonimato e condições afetam os resultados.",
+        "aliases": [
+          "独裁者ゲーム",
+          "Dictator game"
+        ]
+      },
+      {
+        "id": "term-ultimatum-game",
+        "category": "経済・金融",
+        "title": "Jogo do ultimato",
+        "definition": "Uma pessoa propõe uma divisão; a aceitação a executa e a recusa deixa ambas com zero.",
+        "note": "Exemplo: Aceitar ou recusar uma divisão de 1.000 ienes. Reações à justiça variam conforme o grupo e as condições.",
+        "aliases": [
+          "最後通牒ゲーム",
+          "Ultimatum game"
+        ]
+      },
+      {
+        "id": "term-prisoners-dilemma",
+        "category": "経済・金融",
+        "title": "Dilema do prisioneiro",
+        "definition": "Jogo em que escolhas individualmente vantajosas podem deixar ambos em situação pior que a cooperação mútua.",
+        "note": "No jogo padrão de rodada única, não cooperar domina se só importarem ganhos monetários próprios. Repetição, relações e preferências sociais mudam a análise; não cooperar nem sempre é racional.",
+        "aliases": [
+          "囚人のジレンマ",
+          "Prisoner’s dilemma"
+        ]
+      },
+      {
+        "id": "term-regret-aversion",
+        "category": "投資基礎",
+        "title": "Aversão ao arrependimento",
+        "definition": "Evitar um arrependimento futuro pode influenciar decisões.",
+        "note": "Exemplo: Não conseguir vender por imaginar uma alta posterior. Registre os fundamentos disponíveis no momento da decisão, em vez de avaliar só a alternativa.",
+        "aliases": [
+          "後悔回避",
+          "Regret aversion"
+        ]
+      },
+      {
+        "id": "term-herd-behavior",
+        "category": "投資基礎",
+        "title": "Comportamento de manada",
+        "definition": "Seguir ações de outras pessoas em vez das próprias informações ou avaliações.",
+        "note": "Exemplo: Comprar por popularidade nas redes e vender com todos na queda. Ações alheias podem informar, mas popularidade não basta.",
+        "aliases": [
+          "群集心理（ハーディング）",
+          "Herd behavior (herding)"
+        ]
+      },
+      {
+        "id": "term-status-quo",
+        "category": "投資基礎",
+        "title": "Viés do status quo",
+        "definition": "Tendência a manter a situação atual ou a opção padrão mesmo quando mudar pode trazer benefícios.",
+        "note": "Exemplo: Manter um investimento cuja tese deixou de valer. Compare manter, vender e alternativas, incluindo custos e impostos.",
+        "aliases": [
+          "現状維持バイアス",
+          "Status quo bias"
+        ]
+      },
+      {
+        "id": "term-fomo",
+        "category": "投資基礎",
+        "title": "FOMO (medo de ficar de fora)",
+        "definition": "Ansiedade por perder oportunidades ou ganhos aproveitados por outros.",
+        "note": "Exemplo: Comprar após uma disparada sem verificar fundamentos. Pode relacionar-se à aversão ao arrependimento, mas não é sinônimo.",
+        "aliases": [
+          "FOMO（取り残される恐怖）",
+          "FOMO (fear of missing out)"
+        ]
+      },
+      {
+        "id": "term-heuristic",
+        "category": "行動経済学",
+        "title": "Heurística",
+        "definition": "Simplificação de julgamentos complexos com experiência ou sinais marcantes. Útil com pouco tempo ou informação, mas pode gerar vieses sistemáticos.",
+        "note": "Exemplo: Usar preço alto como sinal de qualidade. Só o preço não comprova qualidade.",
+        "aliases": [
+          "ヒューリスティック",
+          "Heuristic"
+        ]
+      },
+      {
+        "id": "term-cognitive-bias",
+        "category": "行動経済学",
+        "title": "Viés cognitivo",
+        "definition": "Tendência sistemática no processamento de informações ou julgamento, diferente de erro aleatório. Motivações e emoções também contribuem.",
+        "note": "Exemplo: Dar peso maior a informações favoráveis sobre uma ação que deseja comprar.",
+        "aliases": [
+          "認知バイアス",
+          "Cognitive bias"
+        ]
+      },
+      {
+        "id": "term-behavioral-economics",
+        "category": "行動経済学",
+        "title": "Economia comportamental",
+        "definition": "Estuda decisões econômicas reais com psicologia, experimentos e observações, incluindo limites cognitivos, emoções, autocontrole e consideração pelos outros.",
+        "note": "Exemplo: Testar se apresentar o mesmo valor como ganho ou perda altera escolhas.",
+        "aliases": [
+          "行動経済学",
+          "Behavioral economics"
+        ]
+      },
+      {
+        "id": "term-representativeness",
+        "category": "行動経済学",
+        "title": "Heurística da representatividade",
+        "definition": "Julgar probabilidades ou categorias pela semelhança com um caso típico, podendo ignorar taxas-base e amostras pequenas.",
+        "note": "Exemplo: Esperar crescimento contínuo só porque uma empresa lembra outra que cresceu muito.",
+        "aliases": [
+          "代表性ヒューリスティック",
+          "Representativeness heuristic"
+        ]
+      },
+      {
+        "id": "term-anchoring",
+        "category": "行動経済学",
+        "title": "Ancoragem",
+        "definition": "Um número ou referência inicial influencia excessivamente estimativas e julgamentos posteriores.",
+        "note": "Exemplo: Achar barata uma ação a 600 ienes porque já valeu 1.000. Examine lucros, ativos e perspectivas atuais.",
+        "aliases": [
+          "アンカリング",
+          "Anchoring"
+        ]
+      },
+      {
+        "id": "term-confirmation-bias",
+        "category": "行動経済学",
+        "title": "Viés de confirmação",
+        "definition": "Tendência a buscar ou valorizar evidências favoráveis às próprias crenças e minimizar evidências contrárias.",
+        "note": "Exemplo: Ler apenas análises otimistas e ignorar resultados fracos. Defina antes evidências contrárias e condições para mudar de opinião.",
+        "aliases": [
+          "確証バイアス",
+          "Confirmation bias"
+        ]
+      },
+      {
+        "id": "term-availability",
+        "category": "行動経済学",
+        "title": "Heurística da disponibilidade",
+        "definition": "Julgar frequências ou probabilidades pela facilidade de lembrar ou imaginar exemplos.",
+        "note": "Exemplo: Superestimar sucesso nos investimentos após ver relatos positivos repetidos nas redes. Confira a amostra completa e os fracassos.",
+        "aliases": [
+          "利用可能性ヒューリスティック",
+          "Availability heuristic"
+        ]
+      },
+      {
+        "id": "term-overconfidence",
+        "category": "行動経済学",
+        "title": "Viés de excesso de confiança",
+        "definition": "Superestimar conhecimento, precisão das previsões ou capacidade em relação aos outros.",
+        "note": "Exemplo: Ampliar investimentos ou dívidas após poucos sucessos. Registre previsões e resultados e controle perdas máximas.",
+        "aliases": [
+          "過信バイアス",
+          "Overconfidence bias"
+        ]
+      },
+      {
+        "id": "term-bayesian-learning",
+        "category": "科学・技術",
+        "title": "Aprendizagem bayesiana",
+        "definition": "Atualizar a probabilidade de uma hipótese com novas evidências: probabilidade posterior proporcional à verossimilhança vezes a probabilidade a priori.",
+        "note": "Exemplo: Atualizar hipóteses sobre a proporção de bolas vermelhas após cada retirada. A posterior torna-se a próxima priori. Importam o modelo, a priori e a qualidade dos dados; não conte a mesma evidência duas vezes.",
+        "aliases": [
+          "ベイズ学習",
+          "Bayesian learning"
+        ]
+      },
+      {
+        "id": "term-nash-equilibrium",
+        "category": "経済・金融",
+        "title": "Equilíbrio de Nash",
+        "definition": "Combinação de estratégias em que ninguém melhora seu resultado mudando apenas a própria estratégia, dadas as dos outros; cada uma é uma melhor resposta.",
+        "note": "Exemplo: Duas empresas ganham 3 com preços altos e 1 com baixos; se só uma baixar, ganha 4 e a outra 0. Ambas com preços baixos formam um equilíbrio. Pode haver vários e não precisam ser o melhor resultado coletivo; informação, regras e repetição importam.",
+        "aliases": [
+          "ナッシュ均衡",
+          "Nash equilibrium"
+        ]
+      },
+      {
+        "id": "term-homo-economicus",
+        "category": "経済・金融",
+        "title": "Homo economicus",
+        "definition": "Modelo simplificado de pessoa que age racionalmente para maximizar seu benefício ou utilidade, às vezes descrita como extremamente racional, autocontrolada e voltada ao próprio interesse.",
+        "note": "Exemplo: Comparar preço, qualidade e benefícios futuros sem ceder a tentações imediatas. Pessoas reais têm vieses, autocontrole limitado e consideração pelos outros; a economia comportamental estuda essas diferenças.",
+        "aliases": [
+          "ホモ・エコノミカス（経済人）",
+          "Homo economicus (economic agent)"
+        ]
       }
     ]
   },
@@ -2603,7 +3365,8 @@
       "企業経営": "企业经营",
       "株式市場": "股票市场",
       "産業・技術": "产业与技术",
-      "経済・金融": "经济与金融"
+      "経済・金融": "经济与金融",
+      "行動経済学": "行为经济学"
     },
     "terms": [
       {
@@ -3456,6 +4219,259 @@
         "category": "投資指標",
         "title": "企业价值（EV）",
         "definition": "常以市值加债务减现金计算，并根据具体情况调整。"
+      },
+      {
+        "id": "term-deductive-reasoning",
+        "category": "経済・金融",
+        "title": "演绎推理",
+        "definition": "从前提按逻辑推导结论。前提为真且推理形式有效时，结论必然为真。",
+        "note": "示例：逾期事项必须报告；A事项已逾期；因此必须报告A。应用时应分别检查前提是否正确、推理是否有效。",
+        "aliases": [
+          "演繹法",
+          "Deductive reasoning"
+        ]
+      },
+      {
+        "id": "term-inductive-reasoning",
+        "category": "経済・金融",
+        "title": "归纳推理",
+        "definition": "从个别观察或事例推测一般规律，结论并不保证为真。",
+        "note": "示例：根据早晨工作效率较高的经历，提出自己适合早晨工作的假设。注意样本量、偏差、反例和环境变化，并随新证据修正。",
+        "aliases": [
+          "帰納法",
+          "Inductive reasoning"
+        ]
+      },
+      {
+        "id": "term-behavioral-finance",
+        "category": "経済・金融",
+        "title": "行为金融学",
+        "definition": "研究投资者的认知、情绪与行为如何影响交易和市场价格，也研究套利的局限。",
+        "note": "示例：研究推迟卖出亏损资产、过早兑现盈利的倾向。用于检查自身偏差，但不能把所有市场变化都归因于心理。",
+        "aliases": [
+          "行動ファイナンス",
+          "Behavioral finance"
+        ]
+      },
+      {
+        "id": "term-neuroeconomics",
+        "category": "経済・金融",
+        "title": "神经经济学",
+        "definition": "结合经济学、心理学和神经科学，研究价值评估、学习与选择机制。",
+        "note": "示例：在奖励或风险选择任务中测量脑活动。不能仅凭脑活动断定个人意图或预测股价。",
+        "aliases": [
+          "神経経済学",
+          "Neuroeconomics"
+        ]
+      },
+      {
+        "id": "term-experimental-economics",
+        "category": "経済・金融",
+        "title": "实验经济学",
+        "definition": "通过设定激励、信息和交易规则的实验，检验经济行为、理论预测与市场制度。",
+        "note": "示例：比较不同拍卖方式的价格形成与交易效率。既研究预测失效，也研究其成立条件；推广实验结果需谨慎。",
+        "aliases": [
+          "実験経済学",
+          "Experimental economics"
+        ]
+      },
+      {
+        "id": "term-dictator-game",
+        "category": "経済・金融",
+        "title": "独裁者博弈",
+        "definition": "由一方决定资源分配，接受方没有拒绝权的实验任务。",
+        "note": "示例：决定将1,000日元中的多少分给对方。可研究分配偏好和利他性；匿名程度与实验条件会影响结果。",
+        "aliases": [
+          "独裁者ゲーム",
+          "Dictator game"
+        ]
+      },
+      {
+        "id": "term-ultimatum-game",
+        "category": "経済・金融",
+        "title": "最后通牒博弈",
+        "definition": "一方提出分配方案，对方接受则执行，拒绝则双方所得均为零。",
+        "note": "示例：提出1,000日元的分配方案，由对方接受或拒绝。用于研究公平反应，结果因群体与条件而异。",
+        "aliases": [
+          "最後通牒ゲーム",
+          "Ultimatum game"
+        ]
+      },
+      {
+        "id": "term-prisoners-dilemma",
+        "category": "経済・金融",
+        "title": "囚徒困境",
+        "definition": "各自选择对自己有利的行动，可能使双方都不如相互合作的博弈结构。",
+        "note": "标准单次博弈中，若仅考虑自身金钱收益，背叛是占优策略。重复互动、关系和社会偏好会改变合作的解释，不能说任何情境下背叛都合理。",
+        "aliases": [
+          "囚人のジレンマ",
+          "Prisoner’s dilemma"
+        ]
+      },
+      {
+        "id": "term-regret-aversion",
+        "category": "投資基礎",
+        "title": "后悔厌恶",
+        "definition": "避免将来后悔的心理影响当前选择。",
+        "note": "示例：想到卖出后可能上涨，就无法决定卖出。应记录决策当时的依据，而非只看另一种选择事后的结果。",
+        "aliases": [
+          "後悔回避",
+          "Regret aversion"
+        ]
+      },
+      {
+        "id": "term-herd-behavior",
+        "category": "投資基礎",
+        "title": "羊群行为",
+        "definition": "比起自己的信息或判断，更倾向于跟随他人的行动。",
+        "note": "示例：因社交媒体热度买入，急跌时又跟随大众卖出。他人的行为可能含有信息，但热度不能作为唯一依据。",
+        "aliases": [
+          "群集心理（ハーディング）",
+          "Herd behavior (herding)"
+        ]
+      },
+      {
+        "id": "term-status-quo",
+        "category": "投資基礎",
+        "title": "现状偏差",
+        "definition": "即使改变可能有益，也容易维持现状或默认选项的倾向。",
+        "note": "示例：投资前提已不成立，却因不想改变而继续持有。应综合费用和税收比较持有、卖出及替代方案。",
+        "aliases": [
+          "現状維持バイアス",
+          "Status quo bias"
+        ]
+      },
+      {
+        "id": "term-fomo",
+        "category": "投資基礎",
+        "title": "FOMO（错失恐惧）",
+        "definition": "担心自己错过他人正在享有的机会或收益。",
+        "note": "示例：害怕错过暴涨，未检查依据就追买。它可能与后悔厌恶有关，但两者并非同义词。",
+        "aliases": [
+          "FOMO（取り残される恐怖）",
+          "FOMO (fear of missing out)"
+        ]
+      },
+      {
+        "id": "term-heuristic",
+        "category": "行動経済学",
+        "title": "启发式",
+        "definition": "利用经验法则或显著线索简化复杂判断的方法。在时间或信息有限时有用，但有时会导致系统性偏差。",
+        "note": "示例：以高价作为质量线索。价格本身不能确定质量。",
+        "aliases": [
+          "ヒューリスティック",
+          "Heuristic"
+        ]
+      },
+      {
+        "id": "term-cognitive-bias",
+        "category": "行動経済学",
+        "title": "认知偏差",
+        "definition": "信息处理或判断中出现的系统性偏差，有别于随机错误；除启发式外，动机和情绪也会参与。",
+        "note": "示例：对想买的股票，更重视有利信息。",
+        "aliases": [
+          "認知バイアス",
+          "Cognitive bias"
+        ]
+      },
+      {
+        "id": "term-behavioral-economics",
+        "category": "行動経済学",
+        "title": "行为经济学",
+        "definition": "结合心理学、实验和观察研究实际经济决策，涵盖认知局限、情绪、自制力以及对他人的考虑。",
+        "note": "示例：研究同一金额以收益或损失方式呈现时，选择是否改变。",
+        "aliases": [
+          "行動経済学",
+          "Behavioral economics"
+        ]
+      },
+      {
+        "id": "term-representativeness",
+        "category": "行動経済学",
+        "title": "代表性启发式",
+        "definition": "根据与典型印象或案例的相似程度判断概率或类别，容易忽略基础比率和小样本问题。",
+        "note": "示例：仅因某企业像过去的高增长企业，就预测其将持续同样的增长。",
+        "aliases": [
+          "代表性ヒューリスティック",
+          "Representativeness heuristic"
+        ]
+      },
+      {
+        "id": "term-anchoring",
+        "category": "行動経済学",
+        "title": "锚定效应",
+        "definition": "最初出现的数值或参照点对后续估计和判断产生过度影响。",
+        "note": "示例：因过去股价为1,000日元，就认为现价600日元便宜。还应检查当前盈利、资产和前景。",
+        "aliases": [
+          "アンカリング",
+          "Anchoring"
+        ]
+      },
+      {
+        "id": "term-confirmation-bias",
+        "category": "行動経済学",
+        "title": "确认偏差",
+        "definition": "倾向于寻找或重视支持自身观点的信息，并轻视相反证据。",
+        "note": "示例：只读看涨文章而忽视业绩恶化的财报。提前写下反证和改变判断的条件。",
+        "aliases": [
+          "確証バイアス",
+          "Confirmation bias"
+        ]
+      },
+      {
+        "id": "term-availability",
+        "category": "行動経済学",
+        "title": "可得性启发式",
+        "definition": "依据事例是否容易想起或想象，判断频率或概率。",
+        "note": "示例：反复看到社交媒体上的成功故事，高估投资成功概率。还应检查总体样本和失败案例。",
+        "aliases": [
+          "利用可能性ヒューリスティック",
+          "Availability heuristic"
+        ]
+      },
+      {
+        "id": "term-overconfidence",
+        "category": "行動経済学",
+        "title": "过度自信偏差",
+        "definition": "高估自身知识、预测准确性或相对他人的能力。",
+        "note": "示例：因少数成功就增加投资或借款。记录预测与结果，并控制最大损失。",
+        "aliases": [
+          "過信バイアス",
+          "Overconfidence bias"
+        ]
+      },
+      {
+        "id": "term-bayesian-learning",
+        "category": "科学・技術",
+        "title": "贝叶斯学习",
+        "definition": "随着新信息或观察数据到来，更新假设的概率：后验概率与似然乘以前验概率成正比。",
+        "note": "示例：每次从袋中取球后，更新关于红球比例的假设。后验可作为下一次的先验。结果取决于先验、模型假设与数据质量，不能重复计算同一证据。",
+        "aliases": [
+          "ベイズ学習",
+          "Bayesian learning"
+        ]
+      },
+      {
+        "id": "term-nash-equilibrium",
+        "category": "経済・金融",
+        "title": "纳什均衡",
+        "definition": "在其他参与者策略不变时，任何人都无法仅改变自己的策略来提高收益的策略组合；各方都作出了对其他策略的最佳回应。",
+        "note": "示例：两企业都定高价各赚3，都定低价各赚1；仅一方降价时，其赚4、另一方赚0。双方低价是均衡。均衡未必使整体最优，也可能不止一个；信息、规则与重复互动都会影响结果。",
+        "aliases": [
+          "ナッシュ均衡",
+          "Nash equilibrium"
+        ]
+      },
+      {
+        "id": "term-homo-economicus",
+        "category": "経済・金融",
+        "title": "经济人（Homo economicus）",
+        "definition": "经济模型中以理性行动最大化自身利益或效用的简化人类形象，有时称为超理性、超自制、超利己的经济人。",
+        "note": "示例：不受眼前诱惑影响，比较价格、质量与未来收益。真实的人存在认知偏差、自制困难和对他人的考虑，行为经济学研究这些差异。",
+        "aliases": [
+          "ホモ・エコノミカス（経済人）",
+          "Homo economicus (economic agent)"
+        ]
       }
     ]
   },
@@ -3468,7 +4484,8 @@
       "企業経営": "企業經營",
       "株式市場": "股票市場",
       "産業・技術": "產業與技術",
-      "経済・金融": "經濟與金融"
+      "経済・金融": "經濟與金融",
+      "行動経済学": "行為經濟學"
     },
     "terms": [
       {
@@ -4321,6 +5338,259 @@
         "category": "投資指標",
         "title": "企業價值（EV）",
         "definition": "常以市值加債務減現金計算，並依具體情況調整。"
+      },
+      {
+        "id": "term-deductive-reasoning",
+        "category": "経済・金融",
+        "title": "演繹推理",
+        "definition": "從前提按邏輯推導結論。前提為真且推理形式有效時，結論必然為真。",
+        "note": "範例：逾期事項必須報告；A事項已逾期；因此必須報告A。應分別檢查前提是否正確、推理是否有效。",
+        "aliases": [
+          "演繹法",
+          "Deductive reasoning"
+        ]
+      },
+      {
+        "id": "term-inductive-reasoning",
+        "category": "経済・金融",
+        "title": "歸納推理",
+        "definition": "從個別觀察或事例推測一般規律，結論並不保證為真。",
+        "note": "範例：根據早晨工作效率較高的經歷，提出自己適合早晨工作的假設。注意樣本量、偏差、反例及環境變化，並隨新證據修正。",
+        "aliases": [
+          "帰納法",
+          "Inductive reasoning"
+        ]
+      },
+      {
+        "id": "term-behavioral-finance",
+        "category": "経済・金融",
+        "title": "行為財務學",
+        "definition": "研究投資人的認知、情緒與行為如何影響交易和市場價格，也研究套利的限制。",
+        "note": "範例：研究延後賣出虧損資產、過早實現獲利的傾向。用於檢查自身偏差，但不能把所有市場變化都歸因於心理。",
+        "aliases": [
+          "行動ファイナンス",
+          "Behavioral finance"
+        ]
+      },
+      {
+        "id": "term-neuroeconomics",
+        "category": "経済・金融",
+        "title": "神經經濟學",
+        "definition": "結合經濟學、心理學與神經科學，研究價值評估、學習及選擇機制。",
+        "note": "範例：在獎勵或風險選擇任務中測量腦活動。不能僅憑腦活動斷定個人意圖或預測股價。",
+        "aliases": [
+          "神経経済学",
+          "Neuroeconomics"
+        ]
+      },
+      {
+        "id": "term-experimental-economics",
+        "category": "経済・金融",
+        "title": "實驗經濟學",
+        "definition": "透過設定誘因、資訊及交易規則的實驗，檢驗經濟行為、理論預測與市場制度。",
+        "note": "範例：比較不同拍賣方式的價格形成及交易效率。既研究預測失效，也研究成立條件；推廣實驗結果需謹慎。",
+        "aliases": [
+          "実験経済学",
+          "Experimental economics"
+        ]
+      },
+      {
+        "id": "term-dictator-game",
+        "category": "経済・金融",
+        "title": "獨裁者賽局",
+        "definition": "由一方決定資源分配，接受方沒有拒絕權的實驗任務。",
+        "note": "範例：決定將1,000日圓中的多少分給對方。可研究分配偏好與利他性；匿名程度及實驗條件會影響結果。",
+        "aliases": [
+          "独裁者ゲーム",
+          "Dictator game"
+        ]
+      },
+      {
+        "id": "term-ultimatum-game",
+        "category": "経済・金融",
+        "title": "最後通牒賽局",
+        "definition": "一方提出分配方案，對方接受則執行，拒絕則雙方所得均為零。",
+        "note": "範例：提出1,000日圓的分配方案，由對方接受或拒絕。用於研究公平反應，結果因群體及條件而異。",
+        "aliases": [
+          "最後通牒ゲーム",
+          "Ultimatum game"
+        ]
+      },
+      {
+        "id": "term-prisoners-dilemma",
+        "category": "経済・金融",
+        "title": "囚徒困境",
+        "definition": "各自選擇對自己有利的行動，可能使雙方都不如相互合作的賽局結構。",
+        "note": "標準單次賽局中，若僅考慮自身金錢收益，背叛是優勢策略。重複互動、關係與社會偏好會改變合作的解釋，不能說任何情境下背叛都合理。",
+        "aliases": [
+          "囚人のジレンマ",
+          "Prisoner’s dilemma"
+        ]
+      },
+      {
+        "id": "term-regret-aversion",
+        "category": "投資基礎",
+        "title": "後悔趨避",
+        "definition": "避免將來後悔的心理影響目前選擇。",
+        "note": "範例：想到賣出後可能上漲，就無法決定賣出。應記錄決策當時的依據，而非只看另一種選擇事後的結果。",
+        "aliases": [
+          "後悔回避",
+          "Regret aversion"
+        ]
+      },
+      {
+        "id": "term-herd-behavior",
+        "category": "投資基礎",
+        "title": "羊群行為",
+        "definition": "比起自己的資訊或判斷，更傾向於跟隨他人的行動。",
+        "note": "範例：因社群媒體熱度買進，急跌時又跟隨大眾賣出。他人的行為可能含有資訊，但熱度不能作為唯一依據。",
+        "aliases": [
+          "群集心理（ハーディング）",
+          "Herd behavior (herding)"
+        ]
+      },
+      {
+        "id": "term-status-quo",
+        "category": "投資基礎",
+        "title": "現狀偏誤",
+        "definition": "即使改變可能有益，也容易維持現狀或預設選項的傾向。",
+        "note": "範例：投資前提已不成立，卻因不想改變而繼續持有。應綜合費用及稅負比較持有、賣出與替代方案。",
+        "aliases": [
+          "現状維持バイアス",
+          "Status quo bias"
+        ]
+      },
+      {
+        "id": "term-fomo",
+        "category": "投資基礎",
+        "title": "FOMO（錯失恐懼）",
+        "definition": "擔心自己錯過他人正在享有的機會或收益。",
+        "note": "範例：害怕錯過暴漲，未檢查依據就追買。它可能與後悔趨避有關，但兩者並非同義詞。",
+        "aliases": [
+          "FOMO（取り残される恐怖）",
+          "FOMO (fear of missing out)"
+        ]
+      },
+      {
+        "id": "term-heuristic",
+        "category": "行動経済学",
+        "title": "捷思法（啟發式）",
+        "definition": "利用經驗法則或顯著線索簡化複雜判斷的方法。在時間或資訊有限時有用，但有時會導致系統性偏誤。",
+        "note": "範例：以高價作為品質線索。價格本身不能確定品質。",
+        "aliases": [
+          "ヒューリスティック",
+          "Heuristic"
+        ]
+      },
+      {
+        "id": "term-cognitive-bias",
+        "category": "行動経済学",
+        "title": "認知偏誤",
+        "definition": "資訊處理或判斷中出現的系統性偏差，有別於隨機錯誤；除捷思法外，動機與情緒也會參與。",
+        "note": "範例：對想買的股票，更重視有利資訊。",
+        "aliases": [
+          "認知バイアス",
+          "Cognitive bias"
+        ]
+      },
+      {
+        "id": "term-behavioral-economics",
+        "category": "行動経済学",
+        "title": "行為經濟學",
+        "definition": "結合心理學、實驗與觀察研究實際經濟決策，涵蓋認知限制、情緒、自制力及對他人的考量。",
+        "note": "範例：研究同一金額以收益或損失方式呈現時，選擇是否改變。",
+        "aliases": [
+          "行動経済学",
+          "Behavioral economics"
+        ]
+      },
+      {
+        "id": "term-representativeness",
+        "category": "行動経済学",
+        "title": "代表性捷思法",
+        "definition": "根據與典型印象或案例的相似程度判斷機率或類別，容易忽略基準率及小樣本問題。",
+        "note": "範例：僅因某企業像過去的高成長企業，就預測其將持續同樣的成長。",
+        "aliases": [
+          "代表性ヒューリスティック",
+          "Representativeness heuristic"
+        ]
+      },
+      {
+        "id": "term-anchoring",
+        "category": "行動経済学",
+        "title": "定錨效應",
+        "definition": "最初出現的數值或參照點對後續估計與判斷產生過度影響。",
+        "note": "範例：因過去股價為1,000日圓，就認為現價600日圓便宜。還應檢查目前獲利、資產與前景。",
+        "aliases": [
+          "アンカリング",
+          "Anchoring"
+        ]
+      },
+      {
+        "id": "term-confirmation-bias",
+        "category": "行動経済学",
+        "title": "確認偏誤",
+        "definition": "傾向於尋找或重視支持自身觀點的資訊，並輕忽相反證據。",
+        "note": "範例：只讀看漲文章而忽視業績惡化的財報。事先寫下反證及改變判斷的條件。",
+        "aliases": [
+          "確証バイアス",
+          "Confirmation bias"
+        ]
+      },
+      {
+        "id": "term-availability",
+        "category": "行動経済学",
+        "title": "可得性捷思法",
+        "definition": "依據事例是否容易想起或想像，判斷頻率或機率。",
+        "note": "範例：反覆看到社群媒體上的成功故事，高估投資成功機率。還應檢查整體樣本與失敗案例。",
+        "aliases": [
+          "利用可能性ヒューリスティック",
+          "Availability heuristic"
+        ]
+      },
+      {
+        "id": "term-overconfidence",
+        "category": "行動経済学",
+        "title": "過度自信偏誤",
+        "definition": "高估自身知識、預測準確性或相對他人的能力。",
+        "note": "範例：因少數成功就增加投資或借款。記錄預測與結果，並控制最大損失。",
+        "aliases": [
+          "過信バイアス",
+          "Overconfidence bias"
+        ]
+      },
+      {
+        "id": "term-bayesian-learning",
+        "category": "科学・技術",
+        "title": "貝氏學習",
+        "definition": "隨著新資訊或觀察資料到來，更新假設的機率：後驗機率與概似乘以先驗機率成正比。",
+        "note": "範例：每次從袋中取球後，更新關於紅球比例的假設。後驗可作為下一次的先驗。結果取決於先驗、模型假設及資料品質，不能重複計算同一證據。",
+        "aliases": [
+          "ベイズ学習",
+          "Bayesian learning"
+        ]
+      },
+      {
+        "id": "term-nash-equilibrium",
+        "category": "経済・金融",
+        "title": "納許均衡",
+        "definition": "在其他參與者策略不變時，任何人都無法僅改變自己的策略來提高收益的策略組合；各方都作出了對其他策略的最佳回應。",
+        "note": "範例：兩企業都定高價各賺3，都定低價各賺1；僅一方降價時，其賺4、另一方賺0。雙方低價是均衡。均衡未必使整體最優，也可能不只一個；資訊、規則與重複互動都會影響結果。",
+        "aliases": [
+          "ナッシュ均衡",
+          "Nash equilibrium"
+        ]
+      },
+      {
+        "id": "term-homo-economicus",
+        "category": "経済・金融",
+        "title": "經濟人（Homo economicus）",
+        "definition": "經濟模型中以理性行動最大化自身利益或效用的簡化人類形象，有時稱為超理性、超自制、超利己的經濟人。",
+        "note": "範例：不受眼前誘惑影響，比較價格、品質與未來收益。真實的人存在認知偏誤、自制困難及對他人的考量，行為經濟學研究這些差異。",
+        "aliases": [
+          "ホモ・エコノミカス（経済人）",
+          "Homo economicus (economic agent)"
+        ]
       }
     ]
   }
