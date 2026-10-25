@@ -1,0 +1,24 @@
+/* Shared TODOROKI header, based on the homepage. */
+.site-header{box-sizing:border-box;display:block;position:sticky;top:0;z-index:100;width:100%;max-width:none;min-height:0;margin:0;padding:0;background:rgba(8,8,8,.96);border:0;border-bottom:1px solid rgba(212,175,55,.28);border-radius:0;box-shadow:none;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP",sans-serif;line-height:1.5}
+.site-header::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#d4af37 30%,#f4d77b 50%,#d4af37 70%,transparent)}
+.site-header *{box-sizing:border-box}
+.site-header .wrap{width:min(1080px,92%);max-width:none;margin:auto;padding:0}
+.site-header .brand-row{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:88px}
+.site-header a{text-decoration:none;border:0;background:none;margin:0;padding:0;letter-spacing:normal}
+.site-header .logo{display:inline-block;flex-shrink:0;color:#f4d77b;font-size:24px;font-weight:900;letter-spacing:.18em;line-height:1.2;white-space:nowrap}
+.site-header .desktop-links{display:flex;align-items:center;gap:22px;margin:0 0 0 auto;padding:0}
+.site-header .desktop-links a{font-size:13px;font-weight:400;line-height:1.5;color:#bbb;white-space:nowrap;transition:color .2s}
+.site-header .desktop-links a:hover,.site-header .mobile-links a:hover{color:#f4d77b}
+.site-header .account-link{display:inline-flex;align-items:center;justify-content:center;gap:8px;flex-shrink:0;min-height:40px;padding:7px 15px;border:1px solid #655329;border-radius:5px;color:#f4d77b;font-size:12px;font-weight:600;line-height:1.5;letter-spacing:.04em;transition:background .2s,border-color .2s}
+.site-header .account-link:hover{background:#211c10;border-color:#d4af37}
+.site-header .account-link svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.5}
+.site-header .mobile-links{display:none;margin:0}
+.site-header a:focus-visible{outline:2px solid #f4d77b;outline-offset:4px}
+.site-header .todoroki-language-picker{display:inline-flex;flex-shrink:0;align-items:center;gap:7px;max-width:100%;margin:0;border:1px solid #8b7138;border-radius:8px;padding:5px 10px;background:#15120d;color:#f4d77b;font:600 13px Arial,sans-serif}
+.site-header .todoroki-language-picker select{width:auto;min-width:115px;max-width:160px;margin:0;border:0;border-radius:0;outline:0;padding:5px 2px;background:#15120d;color:#f4f1e8;font:inherit;cursor:pointer}
+.site-header .todoroki-language-picker select:focus-visible{outline:2px solid #f4d77b;outline-offset:3px}
+@media(max-width:1200px){.site-header .brand-row{min-height:72px;gap:16px}.site-header .logo{font-size:23px;letter-spacing:.16em}.site-header .desktop-links{display:none}.site-header .account-link{min-height:38px;padding:6px 12px}.site-header .mobile-links{display:flex;align-items:center;gap:12px;overflow-x:auto;white-space:nowrap;flex-wrap:nowrap;padding:0 4%;border-top:1px solid #211e16;scrollbar-width:none;-webkit-overflow-scrolling:touch}.site-header .mobile-links::-webkit-scrollbar{display:none}.site-header .mobile-links a{display:inline-flex;align-items:center;flex-shrink:0;min-height:48px;padding:0 2px;color:#c5b995;font-size:13px;font-weight:400;line-height:1.5;letter-spacing:.03em}}
+@media(max-width:600px){.site-header .brand-row{gap:8px}.site-header .logo{font-size:19px;letter-spacing:.09em}.site-header .account-link{padding:6px 8px;font-size:11px}.site-header .todoroki-language-picker{padding:3px 7px}.site-header .todoroki-language-picker select{min-width:95px;max-width:125px;font-size:12px}}
+@media(max-width:720px){.site-header .brand-row{gap:7px}.site-header .logo{font-size:clamp(15px,4.2vw,20px)}.site-header .account-link{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.site-header a{transition:none}}
+@media(max-width:380px){.site-header .brand-row{gap:5px}.site-header .logo{font-size:14px;letter-spacing:.07em}.site-header .account-link{padding:6px 5px;font-size:10px;gap:4px}.site-header .todoroki-language-picker{padding:3px 5px;gap:3px}.site-header .todoroki-language-picker select{min-width:75px;max-width:95px;font-size:11px}}

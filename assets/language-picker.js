@@ -3,7 +3,9 @@ const locales=[['ja','日本語'],['en','English'],['es','Español'],['pt','Port
 const prefixes=['en','es','pt','zh-Hant','zh-Hans'];
 const supported=new Set(['investment','price-value','margin-of-safety','investment-list','economy-list','business-list','inflation','interest-rate','inflation-asset-gap','business-ma','mbo-investing','glossary','pdf-library']);
 const parts=location.pathname.replace(/\/$/,'').replace(/\.html$/,'').split('/').filter(Boolean);
-const current=prefixes.includes(parts[0])?parts[0]:'ja';
+const reader=/^pdf-viewer(?:\.html)?$/.test(parts[0]||'');
+const readerLang=new URLSearchParams(location.search).get('lang');
+const current=reader&&locales.some(pair=>pair[0]===readerLang)?readerLang:(prefixes.includes(parts[0])?parts[0]:'ja');
 let slug=current==='ja'?(parts[0]||''):(parts[1]||'');
 if(slug==='index')slug='';
 function destination(lang){if(lang==='ja')return supported.has(slug)?'/'+slug: '/';if(supported.has(slug))return '/'+lang+'/'+slug;if(slug==='japanese-stocks'&&lang!=='ja')return '/'+lang+'/japanese-stocks';return '/'+lang+'/';}

@@ -128,12 +128,34 @@ html{scroll-behavior:smooth}
 .basics-related a:focus-visible{outline:2px solid #fff;outline-offset:4px}
 @media(max-width:600px){.basics-related{padding:20px}}
 </style>
-<link rel="alternate" hreflang="ja" href="https://todoroki-gold.com/investment"><link rel="alternate" hreflang="en" href="https://todoroki-gold.com/en/investment"><link rel="alternate" hreflang="es" href="https://todoroki-gold.com/es/investment"><link rel="alternate" hreflang="pt" href="https://todoroki-gold.com/pt/investment"><link rel="alternate" hreflang="x-default" href="https://todoroki-gold.com/investment"><link rel="stylesheet" href="/assets/navigation.css"></head>
+<link rel="alternate" hreflang="ja" href="https://todoroki-gold.com/investment"><link rel="alternate" hreflang="en" href="https://todoroki-gold.com/en/investment"><link rel="alternate" hreflang="es" href="https://todoroki-gold.com/es/investment"><link rel="alternate" hreflang="pt" href="https://todoroki-gold.com/pt/investment"><link rel="alternate" hreflang="x-default" href="https://todoroki-gold.com/investment"><link rel="stylesheet" href="/assets/navigation.css"><link rel="stylesheet" href="/assets/language-picker.css"><link rel="stylesheet" href="/assets/site-header.css"><script src="/assets/language-picker.js" defer></script></head>
 <body>
-  <header>
-    <a class="brand" href="/">TODOROKI</a>
-    <a class="back" href="/">← トップページへ</a>
-  <nav class="todoroki-context-nav" aria-label="テーマ"><a href="/">トップ</a><a href="/#themes">テーマ</a><a href="/investment-list">投資</a><a href="/glossary">用語辞典</a><a href="/pdf-library">PDF資料</a></nav></header>
+  <header class="site-header">
+  <div class="wrap brand-row">
+    <a class="logo" href="/" aria-label="TODOROKI トップページ">TODOROKI</a>
+    <nav class="desktop-links" aria-label="メインメニュー">
+        <a href="/#articles">記事</a>
+        <a href="/#themes">テーマ</a>
+        <a href="/glossary">用語辞典</a>
+        <a href="/pdf-library">PDF資料</a>
+        <a href="/#about">TODOROKIについて</a>
+        <a href="/#social">SNS</a>
+    </nav>
+    <label class="todoroki-language-picker">🌐 <select data-todoroki-language aria-label="表示言語 / Language"><option value="ja" selected>日本語</option><option value="en">English</option><option value="es">Español</option><option value="pt">Português</option><option value="zh-Hant">繁體中文</option><option value="zh-Hans">简体中文</option></select></label>
+    <a class="account-link" href="/login">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="6" r="3"/><path d="M4 18v-2a6 6 0 0 1 12 0v2"/></svg>
+      ログイン
+    </a>
+  </div>
+  <nav class="mobile-links" aria-label="メインメニュー">
+        <a href="/#articles">記事</a>
+        <a href="/#themes">テーマ</a>
+        <a href="/glossary">用語辞典</a>
+        <a href="/pdf-library">PDF資料</a>
+        <a href="/#about" aria-label="TODOROKIについて">このサイト</a>
+        <a href="/#social">SNS</a>
+  </nav>
+</header>
 
   <main id="article-top">
     <div class="category">INVESTMENT PHILOSOPHY</div>

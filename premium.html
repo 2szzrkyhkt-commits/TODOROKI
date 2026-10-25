@@ -9,9 +9,34 @@
 <style>
 :root{color-scheme:dark;--gold:#d9b76e;--white:#f4f1e8}*{box-sizing:border-box}body{margin:0;background:#080808;color:var(--white);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif;line-height:1.8}a{color:var(--gold);text-underline-offset:5px}.wrap{width:min(980px,92%);margin:auto}header{border-bottom:1px solid #342c1c;background:#0b0b0b}nav{min-height:75px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;padding:14px 0}.logo{font-size:23px;font-weight:900;letter-spacing:.16em;text-decoration:none}.links{display:flex;gap:20px;font-size:14px}main{padding:55px 0 75px}.eyebrow{color:var(--gold);font-size:12px;letter-spacing:.2em}h1{font-size:clamp(30px,6vw,46px);line-height:1.4;margin:14px 0}h2{font-size:25px;line-height:1.5;margin:14px 0}.lead{color:#bbb;max-width:700px}.notice{padding:14px 18px;border:1px solid #66532e;border-radius:10px;color:#e5c681;margin:25px 0}.card{margin-top:32px;border:1px solid #44381f;border-radius:18px;background:linear-gradient(140deg,#19160e,#101010);padding:clamp(22px,5vw,40px)}.tag{color:var(--gold);font-size:12px}.meta{color:#aaa;font-size:14px}.price{font-size:34px;font-weight:700;margin:22px 0}.price small{font-size:14px;font-weight:400;color:#aaa}button,.button{display:inline-block;border:1px solid var(--gold);background:var(--gold);color:#100e08;padding:14px 28px;border-radius:9px;font:inherit;font-weight:700;cursor:pointer;text-decoration:none}button:disabled{cursor:wait;opacity:.6}[hidden]{display:none!important}#message{min-height:1.8em;margin:18px 0;color:#e8d5ae}#account{color:#aaa;font-size:14px;overflow-wrap:anywhere}.steps{margin-top:35px;color:#bbb}.steps h2{font-size:20px;color:var(--white)}footer{border-top:1px solid #342c1c;padding:30px 0;text-align:center;color:#777;font-size:13px}footer a{margin:0 8px}:focus-visible{outline:2px solid #fff;outline-offset:4px}@media(max-width:500px){.links{gap:14px;font-size:13px}.button,button{width:100%;text-align:center}}
 </style>
-<link rel="stylesheet" href="/assets/navigation.css"></head>
+<link rel="stylesheet" href="/assets/navigation.css"><link rel="stylesheet" href="/assets/language-picker.css"><link rel="stylesheet" href="/assets/site-header.css"><script src="/assets/language-picker.js" defer></script></head>
 <body>
-<header><div class="wrap"><nav><a class="logo" href="/">TODOROKI</a><div class="links"><a href="/pdf-library">無料PDF</a><a href="/premium" aria-current="page">有料PDF</a><a href="/login">ログイン</a></div></nav></div><nav class="todoroki-context-nav" aria-label="テーマ"><a href="/">トップ</a><a href="/#themes">テーマ</a><a href="/glossary">用語辞典</a><a href="/pdf-library">PDF資料</a></nav></header>
+<header class="site-header">
+  <div class="wrap brand-row">
+    <a class="logo" href="/" aria-label="TODOROKI トップページ">TODOROKI</a>
+    <nav class="desktop-links" aria-label="メインメニュー">
+        <a href="/#articles">記事</a>
+        <a href="/#themes">テーマ</a>
+        <a href="/glossary">用語辞典</a>
+        <a href="/pdf-library">PDF資料</a>
+        <a href="/#about">TODOROKIについて</a>
+        <a href="/#social">SNS</a>
+    </nav>
+    <label class="todoroki-language-picker">🌐 <select data-todoroki-language aria-label="表示言語 / Language"><option value="ja" selected>日本語</option><option value="en">English</option><option value="es">Español</option><option value="pt">Português</option><option value="zh-Hant">繁體中文</option><option value="zh-Hans">简体中文</option></select></label>
+    <a class="account-link" href="/login">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="6" r="3"/><path d="M4 18v-2a6 6 0 0 1 12 0v2"/></svg>
+      ログイン
+    </a>
+  </div>
+  <nav class="mobile-links" aria-label="メインメニュー">
+        <a href="/#articles">記事</a>
+        <a href="/#themes">テーマ</a>
+        <a href="/glossary">用語辞典</a>
+        <a href="/pdf-library">PDF資料</a>
+        <a href="/#about" aria-label="TODOROKIについて">このサイト</a>
+        <a href="/#social">SNS</a>
+  </nav>
+</header>
 <main class="wrap">
 <p class="eyebrow">TODOROKI PREMIUM</p><h1>数字を手元に。<br>企業をじっくり読み解く。</h1>
 <p class="lead">企業の株価指標と、利益・キャッシュフローの長期推移をまとめたPDF資料です。</p>
