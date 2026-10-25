@@ -34,6 +34,7 @@
     frame.title = item.title;frame.src = url.pathname + '#view=FitH';
     get('document').append(frame); get('status').textContent = '';
     const articles = {
+      'M&Aと資本配分_企業価値を高める再編の見方.pdf':'business-ma.html',
       'MBOを狙う_企業価値と株価の差を読む.pdf':'mbo-investing.html', 'mbo.pdf':'mbo-investing.html',
       '日本企業_M&A産業再編_黒金4P.pdf':'business-ma.html','japan-ma.pdf':'business-ma.html',
       'dotsとは何か_常時稼働AIの仕組みと使い方.pdf':'dots.html',
