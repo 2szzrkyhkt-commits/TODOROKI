@@ -2,162 +2,77 @@
   "en": [
     {
       "title": "The yen, dollar and Big Mac Index",
-      "subtitle": "July 2026 / Comparing prices and exchange rates through one product",
+      "subtitle": "Understanding prices and exchange rates through one product",
       "blocks": [
         {
-          "h": "Japan versus the United States",
-          "table": [
-            [
-              "Market",
-              "Survey price and conversion"
-            ],
-            [
-              "Japan",
-              "JPY 500"
-            ],
-            [
-              "United States",
-              "USD 6.22 × JPY 162.135/USD = approximately JPY 1,008"
-            ]
-          ]
+          "h": "What is the Big Mac Index?",
+          "text": "The Economist devised this indicator to compare Big Mac prices across economies. It offers a simple way to think about purchasing power and exchange rates."
         },
         {
-          "h": "About 2.02 times Japan’s price",
-          "text": "Converted at the survey exchange rate, the US price was about 2.02 times Japan’s. This comparison uses July 2026 survey prices and exchange rates."
+          "h": "Find the rate that equalizes prices",
+          "text": "Japanese price in yen ÷ US price in dollars. This gives an exchange rate that would equalize the price of one product. Compare it with the market rate."
         },
         {
-          "h": "What the index measures",
-          "text": "The Big Mac Index compares national prices to explore currencies’ purchasing power. Even for the same branded product, local wages, rents and taxes affect prices."
-        },
-        {
-          "h": "A limit of the comparison",
-          "text": "This price gap alone cannot establish a fair exchange rate for the yen or dollar."
+          "h": "How to read this guide",
+          "text": "The following pages use hypothetical numbers. They are teaching examples, not observed menu prices, market exchange rates or survey results."
         }
       ]
     },
     {
-      "title": "International prices in yen",
-      "subtitle": "13 selected markets, converted at exchange rates from the same survey",
+      "title": "Converting prices into yen",
+      "subtitle": "Hypothetical example: these are not observed prices or exchange rates",
       "blocks": [
         {
-          "h": "July 2026 comparison",
-          "compact": true,
-          "table": [
-            [
-              "Market",
-              "Price in JPY",
-              "Japan = 100"
-            ],
-            [
-              "Switzerland",
-              "1,466",
-              "293"
-            ],
-            [
-              "Uruguay",
-              "1,449",
-              "290"
-            ],
-            [
-              "Norway",
-              "1,306",
-              "261"
-            ],
-            [
-              "Colombia",
-              "1,298",
-              "260"
-            ],
-            [
-              "Israel",
-              "1,243",
-              "249"
-            ],
-            [
-              "United Kingdom",
-              "1,200",
-              "240"
-            ],
-            [
-              "Euro area",
-              "1,148",
-              "230"
-            ],
-            [
-              "United States",
-              "1,008",
-              "202"
-            ],
-            [
-              "China",
-              "635",
-              "127"
-            ],
-            [
-              "South Korea",
-              "622",
-              "124"
-            ],
-            [
-              "Japan",
-              "500",
-              "100"
-            ],
-            [
-              "Philippines",
-              "444",
-              "89"
-            ],
-            [
-              "Indonesia",
-              "386",
-              "77"
-            ]
-          ]
+          "h": "Assume three numbers",
+          "text": "Japanese price: JPY 600\nUS price: USD 6\nExchange rate: JPY 150 per USD"
         },
         {
-          "h": "Reading the table",
-          "text": "Japan is on the lower-priced side of this comparison in yen terms. Prices are rounded to the nearest yen and index values to whole numbers."
+          "h": "Convert the US price",
+          "text": "USD 6 × JPY 150/USD = JPY 900.\nCompared with JPY 600 in Japan, 900 ÷ 600 = 1.5 times the price."
+        },
+        {
+          "h": "Do not attribute the whole gap to currency",
+          "text": "In this example, the US price is higher in yen terms. Wages, rents, taxes and other local factors can also affect the gap."
         }
       ]
     },
     {
-      "title": "An exchange rate that equalizes prices",
-      "subtitle": "A simple purchasing power parity calculation",
+      "title": "The rate that equalizes prices",
+      "subtitle": "Using the same hypothetical assumptions",
       "blocks": [
         {
-          "h": "Back-calculating from survey prices",
-          "text": "What exchange rate would make a Big Mac cost the same in Japan and the US?\nJPY 500 ÷ USD 6.22 = approximately JPY 80.4 per US dollar.\nSurvey market rate: USD 1 = JPY 162.135."
+          "h": "Simple purchasing power parity",
+          "text": "JPY 600 ÷ USD 6 = JPY 100 per USD.\nAt this rate, the assumed prices are equal."
         },
         {
-          "h": "About 50.4% below the dollar benchmark",
-          "text": "Comparing this simple purchasing power parity rate with the market rate implies that the yen was about 50.4% undervalued against the dollar by this measure.\nCalculation: (80.3859 ÷ 162.135 - 1) × 100."
+          "h": "Compare with the assumed market rate",
+          "text": "(100 ÷ 150 - 1) × 100 ~ -33.3%.\nBy this single-product measure, the yen would be about 33.3% undervalued against the dollar."
         },
         {
-          "h": "Not a fair-value estimate or forecast",
-          "text": "About JPY 80/USD is a comparison based on one product’s price, not a fair exchange rate or a prediction. This simple comparison includes differences in wages, rent and taxes and does not adjust for income levels."
+          "h": "JPY 100/USD is not a fair-value claim",
+          "text": "This illustrates the calculation. It is neither an estimate of current yen undervaluation nor a forecast that the exchange rate will move to 100."
         }
       ]
     },
     {
       "title": "What the index shows - and its limits",
-      "subtitle": "Interpreting the July 2026 comparison",
+      "subtitle": "One product is not a complete measure of living standards",
       "blocks": [
         {
-          "h": "1. Converting yen into dollars",
-          "text": "Japan’s JPY 500 price equals approximately USD 3.08 at the survey exchange rate, below the US price of USD 6.22."
+          "h": "Local costs are part of the price",
+          "text": "Wages, rents, taxes, logistics and competition affect menu prices. A simple price comparison cannot fully adjust for these differences."
         },
         {
-          "h": "2. Local costs also affect prices",
-          "text": "Wages, rents, taxes, logistics and competition influence prices. Exchange rates alone cannot explain the entire gap."
+          "h": "Look beyond a single product",
+          "text": "Income, housing and healthcare also matter. A cheap Big Mac alone does not prove that a country is rich or poor."
         },
         {
-          "h": "3. It is not a measure of overall living standards",
-          "text": "One product cannot measure living standards including wages and housing costs, or the economic strength of a whole country."
+          "h": "Separate comparison from prediction",
+          "text": "Use the index as an introduction to purchasing power, not as an answer to short-term currency or stock-market forecasts."
         },
         {
-          "h": "A visual guide, not a prediction",
-          "text": "It offers an intuitive view of price gaps associated with a weaker yen and stronger dollar. It is not an exchange-rate forecast or a yardstick of national wealth.\nData basis: July 2026. Prices and exchange rates are survey-period values."
+          "h": "Concept reference",
+          "text": "The Economist: The Big Mac index.\nOriginal explanation, diagrams and hypothetical calculations by TODOROKI."
         }
       ]
     }
@@ -165,651 +80,311 @@
   "es": [
     {
       "title": "El yen, el dólar y el índice Big Mac",
-      "subtitle": "Julio de 2026 / Precios y tipos de cambio a través de un producto",
+      "subtitle": "Comprender los precios y el tipo de cambio con un mismo producto",
       "blocks": [
         {
-          "h": "Japón frente a Estados Unidos",
-          "table": [
-            [
-              "Mercado",
-              "Precio de la encuesta y conversión"
-            ],
-            [
-              "Japón",
-              "500 JPY"
-            ],
-            [
-              "Estados Unidos",
-              "6,22 USD × 162,135 JPY/USD = aproximadamente 1.008 JPY"
-            ]
-          ]
+          "h": "¿Qué es el índice Big Mac?",
+          "text": "The Economist ideó este indicador para comparar el precio del Big Mac entre economías. Permite explorar de forma sencilla la relación entre poder adquisitivo y tipo de cambio."
         },
         {
-          "h": "Unas 2,02 veces el precio japonés",
-          "text": "Al convertirlo con el tipo de cambio de la encuesta, el precio estadounidense era unas 2,02 veces el japonés. Se utilizan precios y tipos de cambio de julio de 2026."
+          "h": "Calcular el cambio que iguala los precios",
+          "text": "Precio en Japón en yenes ÷ precio en Estados Unidos en dólares. El resultado es el tipo de cambio que igualaría el precio de ese producto. Después se compara con el cambio de mercado."
         },
         {
-          "h": "Qué mide el índice",
-          "text": "El índice Big Mac compara precios entre países para analizar el poder adquisitivo de las monedas. Incluso en un producto de la misma marca, influyen los salarios, alquileres e impuestos locales."
-        },
-        {
-          "h": "Un límite de la comparación",
-          "text": "Esta diferencia de precios por sí sola no permite determinar un tipo de cambio justo para el yen o el dólar."
+          "h": "Cómo leer esta guía",
+          "text": "Las páginas siguientes usan cifras hipotéticas. Son ejemplos didácticos, no precios observados, tipos de cambio reales ni resultados de una encuesta."
         }
       ]
     },
     {
-      "title": "Precios internacionales en yenes",
-      "subtitle": "13 mercados seleccionados, al tipo de cambio de la misma encuesta",
+      "title": "Convertir los precios a yenes",
+      "subtitle": "Ejemplo hipotético: no son precios ni tipos de cambio observados",
       "blocks": [
         {
-          "h": "Comparación de julio de 2026",
-          "compact": true,
-          "table": [
-            [
-              "Mercado",
-              "Precio en JPY",
-              "Japón = 100"
-            ],
-            [
-              "Suiza",
-              "1.466",
-              "293"
-            ],
-            [
-              "Uruguay",
-              "1.449",
-              "290"
-            ],
-            [
-              "Noruega",
-              "1.306",
-              "261"
-            ],
-            [
-              "Colombia",
-              "1.298",
-              "260"
-            ],
-            [
-              "Israel",
-              "1.243",
-              "249"
-            ],
-            [
-              "Reino Unido",
-              "1.200",
-              "240"
-            ],
-            [
-              "Zona del euro",
-              "1.148",
-              "230"
-            ],
-            [
-              "Estados Unidos",
-              "1.008",
-              "202"
-            ],
-            [
-              "China",
-              "635",
-              "127"
-            ],
-            [
-              "Corea del Sur",
-              "622",
-              "124"
-            ],
-            [
-              "Japón",
-              "500",
-              "100"
-            ],
-            [
-              "Filipinas",
-              "444",
-              "89"
-            ],
-            [
-              "Indonesia",
-              "386",
-              "77"
-            ]
-          ]
+          "h": "Tres supuestos",
+          "text": "Precio en Japón: 600 JPY\nPrecio en Estados Unidos: 6 USD\nTipo de cambio: 150 JPY por USD"
         },
         {
-          "h": "Cómo leer la tabla",
-          "text": "Japón se sitúa entre los mercados más baratos de esta comparación en yenes. Los precios se redondean al yen más cercano y los índices a números enteros."
+          "h": "Conversión del precio estadounidense",
+          "text": "6 USD × 150 JPY/USD = 900 JPY.\nFrente a los 600 JPY de Japón, 900 ÷ 600 = 1,5 veces el precio."
+        },
+        {
+          "h": "La diferencia no se explica solo por la moneda",
+          "text": "En este ejemplo, el precio estadounidense es mayor al convertirlo a yenes. También influyen los salarios, alquileres, impuestos y otros factores locales."
         }
       ]
     },
     {
-      "title": "El cambio que igualaría los precios",
-      "subtitle": "Un cálculo sencillo de paridad del poder adquisitivo",
+      "title": "El cambio que iguala los precios",
+      "subtitle": "Se mantienen los mismos supuestos hipotéticos",
       "blocks": [
         {
-          "h": "Cálculo a partir de los precios de la encuesta",
-          "text": "¿Qué cambio igualaría el precio de un Big Mac en Japón y EE. UU.?\n500 JPY ÷ 6,22 USD = aproximadamente 80,4 JPY por dólar.\nCambio de mercado de la encuesta: 1 USD = 162,135 JPY."
+          "h": "Paridad de poder adquisitivo simple",
+          "text": "600 JPY ÷ 6 USD = 100 JPY por USD.\nA ese tipo de cambio, los precios supuestos coinciden."
         },
         {
-          "h": "Una infravaloración aproximada del 50,4%",
-          "text": "Comparar esta paridad sencilla con el tipo de mercado implica que el yen estaba infravalorado frente al dólar en aproximadamente un 50,4%, según esta medida.\nCálculo: (80,3859 ÷ 162,135 - 1) × 100."
+          "h": "Comparación con el cambio supuesto",
+          "text": "(100 ÷ 150 - 1) × 100 ~ -33,3 %.\nCon esta medida de un solo producto, el yen estaría infravalorado un 33,3 % frente al dólar."
         },
         {
-          "h": "No es un valor justo ni una previsión",
-          "text": "Unos 80 JPY/USD son una referencia basada en un solo producto, no un cambio justo ni una predicción. La comparación incluye diferencias de salarios, alquileres e impuestos y no ajusta por niveles de ingresos."
+          "h": "100 JPY/USD no implica un valor justo",
+          "text": "Es una demostración del cálculo, no una estimación de la infravaloración actual ni una predicción de que el cambio vaya a llegar a 100."
         }
       ]
     },
     {
-      "title": "Qué muestra el índice y sus límites",
-      "subtitle": "Cómo interpretar la comparación de julio de 2026",
+      "title": "Qué muestra el índice y cuáles son sus límites",
+      "subtitle": "Un producto no mide todo el nivel de vida",
       "blocks": [
         {
-          "h": "1. Convertir yenes en dólares",
-          "text": "Los 500 JPY de Japón equivalen a unos 3,08 USD con el cambio de la encuesta, menos que los 6,22 USD de Estados Unidos."
+          "h": "Los costes locales forman parte del precio",
+          "text": "Salarios, alquileres, impuestos, logística y competencia influyen en los precios. Una comparación simple no ajusta por completo estas diferencias."
         },
         {
-          "h": "2. Los costes locales también influyen",
-          "text": "Salarios, alquileres, impuestos, logística y competencia afectan a los precios. El cambio no explica toda la diferencia."
+          "h": "Mirar más allá de un producto",
+          "text": "También importan los ingresos, la vivienda y la sanidad. Un Big Mac barato no demuestra por sí solo que un país sea rico o pobre."
         },
         {
-          "h": "3. No mide el nivel de vida general",
-          "text": "Un solo producto no permite medir el nivel de vida, incluidos salarios y vivienda, ni la fortaleza económica de un país."
+          "h": "Separar comparación y predicción",
+          "text": "El índice ayuda a comprender el poder adquisitivo; no resuelve las previsiones a corto plazo de divisas o de la bolsa."
         },
         {
-          "h": "Una referencia visual, no una predicción",
-          "text": "Permite visualizar diferencias de precios asociadas a un yen débil y un dólar fuerte. No predice el cambio ni mide la riqueza nacional.\nDatos de referencia: julio de 2026. Precios y cambios corresponden a la encuesta."
+          "h": "Referencia del concepto",
+          "text": "The Economist: The Big Mac index.\nExplicación, esquemas y cálculos hipotéticos originales de TODOROKI."
         }
       ]
     }
   ],
   "pt": [
     {
-      "title": "O iene, o dólar e o Índice Big Mac",
-      "subtitle": "Julho de 2026 / Preços e câmbio a partir de um único produto",
+      "title": "O iene, o dólar e o índice Big Mac",
+      "subtitle": "Entenda preços e câmbio por meio de um mesmo produto",
       "blocks": [
         {
-          "h": "Japão e Estados Unidos",
-          "table": [
-            [
-              "Mercado",
-              "Preço da pesquisa e conversão"
-            ],
-            [
-              "Japão",
-              "500 JPY"
-            ],
-            [
-              "Estados Unidos",
-              "6,22 USD × 162,135 JPY/USD = aproximadamente 1.008 JPY"
-            ]
-          ]
+          "h": "O que é o índice Big Mac?",
+          "text": "A The Economist criou este indicador para comparar preços do Big Mac entre economias. É uma forma simples de explorar a relação entre poder de compra e câmbio."
         },
         {
-          "h": "Cerca de 2,02 vezes o preço japonês",
-          "text": "Convertido pelo câmbio da pesquisa, o preço dos EUA era cerca de 2,02 vezes o do Japão. A comparação usa preços e câmbio de julho de 2026."
+          "h": "Encontrar o câmbio que iguala os preços",
+          "text": "Preço no Japão em ienes ÷ preço nos Estados Unidos em dólares. O resultado é a taxa que igualaria o preço desse produto. Depois, ela é comparada com o câmbio de mercado."
         },
         {
-          "h": "O que o índice mede",
-          "text": "O Índice Big Mac compara preços entre países para analisar o poder de compra das moedas. Mesmo para um produto da mesma marca, salários, aluguéis e impostos locais afetam os preços."
-        },
-        {
-          "h": "Um limite da comparação",
-          "text": "Essa diferença de preços, isoladamente, não permite determinar um câmbio justo para o iene ou o dólar."
+          "h": "Como ler este guia",
+          "text": "As próximas páginas usam números hipotéticos. São exemplos didáticos, não preços observados, cotações reais ou resultados de uma pesquisa."
         }
       ]
     },
     {
-      "title": "Preços internacionais em ienes",
-      "subtitle": "13 mercados selecionados, convertidos pelo câmbio da mesma pesquisa",
+      "title": "Converter preços para ienes",
+      "subtitle": "Exemplo hipotético: não são preços nem cotações observados",
       "blocks": [
         {
-          "h": "Comparação de julho de 2026",
-          "compact": true,
-          "table": [
-            [
-              "Mercado",
-              "Preço em JPY",
-              "Japão = 100"
-            ],
-            [
-              "Suíça",
-              "1.466",
-              "293"
-            ],
-            [
-              "Uruguai",
-              "1.449",
-              "290"
-            ],
-            [
-              "Noruega",
-              "1.306",
-              "261"
-            ],
-            [
-              "Colômbia",
-              "1.298",
-              "260"
-            ],
-            [
-              "Israel",
-              "1.243",
-              "249"
-            ],
-            [
-              "Reino Unido",
-              "1.200",
-              "240"
-            ],
-            [
-              "Área do euro",
-              "1.148",
-              "230"
-            ],
-            [
-              "Estados Unidos",
-              "1.008",
-              "202"
-            ],
-            [
-              "China",
-              "635",
-              "127"
-            ],
-            [
-              "Coreia do Sul",
-              "622",
-              "124"
-            ],
-            [
-              "Japão",
-              "500",
-              "100"
-            ],
-            [
-              "Filipinas",
-              "444",
-              "89"
-            ],
-            [
-              "Indonésia",
-              "386",
-              "77"
-            ]
-          ]
+          "h": "Três hipóteses",
+          "text": "Preço no Japão: JPY 600\nPreço nos Estados Unidos: USD 6\nCâmbio: JPY 150 por USD"
         },
         {
-          "h": "Como ler a tabela",
-          "text": "O Japão está entre os mercados de menor preço nesta comparação em ienes. Os preços são arredondados ao iene mais próximo e os índices a números inteiros."
+          "h": "Conversão do preço americano",
+          "text": "USD 6 × JPY 150/USD = JPY 900.\nEm relação aos JPY 600 do Japão, 900 ÷ 600 = 1,5 vez o preço."
+        },
+        {
+          "h": "A diferença não vem apenas da moeda",
+          "text": "Neste exemplo, o preço americano é maior em ienes. Salários, aluguéis, impostos e outros fatores locais também afetam a diferença."
         }
       ]
     },
     {
-      "title": "O câmbio que igualaria os preços",
-      "subtitle": "Um cálculo simples de paridade do poder de compra",
+      "title": "A taxa que iguala os preços",
+      "subtitle": "Mantendo as mesmas hipóteses do exemplo",
       "blocks": [
         {
-          "h": "Calculando a partir dos preços pesquisados",
-          "text": "Qual câmbio faria um Big Mac custar o mesmo no Japão e nos EUA?\n500 JPY ÷ 6,22 USD = aproximadamente 80,4 JPY por dólar.\nCâmbio de mercado da pesquisa: 1 USD = 162,135 JPY."
+          "h": "Paridade simples do poder de compra",
+          "text": "JPY 600 ÷ USD 6 = JPY 100 por USD.\nNessa taxa, os preços hipotéticos são iguais."
         },
         {
-          "h": "Subvalorização de aproximadamente 50,4%",
-          "text": "Comparar essa paridade simples com o câmbio de mercado implica que o iene estava cerca de 50,4% subvalorizado frente ao dólar por essa medida.\nCálculo: (80,3859 ÷ 162,135 - 1) × 100."
+          "h": "Comparação com o câmbio hipotético",
+          "text": "(100 ÷ 150 - 1) × 100 ~ -33,3%.\nPor essa medida de um único produto, o iene estaria cerca de 33,3% subvalorizado em relação ao dólar."
         },
         {
-          "h": "Não é valor justo nem previsão",
-          "text": "Cerca de 80 JPY/USD é uma referência baseada em um só produto, não um câmbio justo ou uma previsão. A comparação inclui diferenças de salários, aluguéis e impostos e não ajusta por níveis de renda."
+          "h": "JPY 100/USD não é uma avaliação de valor justo",
+          "text": "O exemplo demonstra o cálculo. Não estima a subvalorização atual do iene nem prevê que o câmbio vá chegar a 100."
         }
       ]
     },
     {
       "title": "O que o índice mostra e seus limites",
-      "subtitle": "Interpretando a comparação de julho de 2026",
+      "subtitle": "Um produto não mede todo o padrão de vida",
       "blocks": [
         {
-          "h": "1. Convertendo ienes em dólares",
-          "text": "O preço japonês de 500 JPY equivale a cerca de 3,08 USD pelo câmbio da pesquisa, abaixo dos 6,22 USD nos EUA."
+          "h": "Os custos locais fazem parte do preço",
+          "text": "Salários, aluguéis, impostos, logística e concorrência influenciam os preços. Uma comparação simples não ajusta totalmente essas diferenças."
         },
         {
-          "h": "2. Custos locais também afetam os preços",
-          "text": "Salários, aluguéis, impostos, logística e concorrência influenciam os preços. O câmbio não explica toda a diferença."
+          "h": "Olhe além de um único produto",
+          "text": "Renda, moradia e saúde também importam. Um Big Mac barato, por si só, não demonstra que um país seja rico ou pobre."
         },
         {
-          "h": "3. Não mede o padrão de vida geral",
-          "text": "Um produto não mede o padrão de vida, incluindo salários e moradia, nem a força econômica de um país."
+          "h": "Separe comparação de previsão",
+          "text": "Use o índice como introdução ao poder de compra, não como resposta para prever o câmbio ou as ações no curto prazo."
         },
         {
-          "h": "Uma referência visual, não uma previsão",
-          "text": "Ajuda a visualizar diferenças de preços associadas a um iene mais fraco e um dólar mais forte. Não prevê o câmbio nem mede a riqueza nacional.\nBase dos dados: julho de 2026. Preços e câmbio são os valores da pesquisa."
+          "h": "Referência do conceito",
+          "text": "The Economist: The Big Mac index.\nExplicação, esquemas e cálculos hipotéticos originais de TODOROKI."
         }
       ]
     }
   ],
   "zh-Hans": [
     {
-      "title": "从巨无霸指数看日元与美元",
-      "subtitle": "2026年7月 / 通过同一种商品观察价格与汇率",
+      "title": "用巨无霸指数理解日元与美元",
+      "subtitle": "从同一种商品出发，理解价格与汇率",
       "blocks": [
         {
-          "h": "日本与美国的价格",
-          "table": [
-            [
-              "市场",
-              "调查价格与换算"
-            ],
-            [
-              "日本",
-              "500日元"
-            ],
-            [
-              "美国",
-              "6.22美元 × 162.135日元/美元 ≈ 1,008日元"
-            ]
-          ]
+          "h": "什么是巨无霸指数",
+          "text": "《经济学人》提出了这一指标，用于比较不同经济体的巨无霸价格，帮助理解货币购买力与汇率的关系。"
         },
         {
-          "h": "美国约为日本的2.02倍",
-          "text": "按调查时的汇率换算，美国价格约为日本的2.02倍。本比较使用2026年7月的调查价格与汇率。"
+          "h": "计算使价格相同的汇率",
+          "text": "日本价格（日元）÷ 美国价格（美元）。计算结果是使这一商品价格相同的汇率，再将其与市场汇率比较。"
         },
         {
-          "h": "指数反映什么？",
-          "text": "巨无霸指数通过比较各国价格，观察货币购买力。即使是同一品牌的商品，价格也受到当地人工、租金与税制等影响。"
-        },
-        {
-          "h": "比较的局限",
-          "text": "不能仅凭这一价格差，就断定日元或美元的合理汇率。"
+          "h": "本资料的阅读方法",
+          "text": "后续页面采用假设数字来说明计算方法，不是实际售价、市场汇率或调查结果。"
         }
       ]
     },
     {
-      "title": "各市场价格换算成日元",
-      "subtitle": "以同一调查时点汇率比较的13个代表性市场",
+      "title": "用假设数字计算日元价格",
+      "subtitle": "计算示例：并非实际价格或汇率",
       "blocks": [
         {
-          "h": "2026年7月比较",
-          "compact": true,
-          "table": [
-            [
-              "市场",
-              "日元价格",
-              "日本＝100"
-            ],
-            [
-              "瑞士",
-              "1,466",
-              "293"
-            ],
-            [
-              "乌拉圭",
-              "1,449",
-              "290"
-            ],
-            [
-              "挪威",
-              "1,306",
-              "261"
-            ],
-            [
-              "哥伦比亚",
-              "1,298",
-              "260"
-            ],
-            [
-              "以色列",
-              "1,243",
-              "249"
-            ],
-            [
-              "英国",
-              "1,200",
-              "240"
-            ],
-            [
-              "欧元区",
-              "1,148",
-              "230"
-            ],
-            [
-              "美国",
-              "1,008",
-              "202"
-            ],
-            [
-              "中国",
-              "635",
-              "127"
-            ],
-            [
-              "韩国",
-              "622",
-              "124"
-            ],
-            [
-              "日本",
-              "500",
-              "100"
-            ],
-            [
-              "菲律宾",
-              "444",
-              "89"
-            ],
-            [
-              "印度尼西亚",
-              "386",
-              "77"
-            ]
-          ]
+          "h": "设定三个条件",
+          "text": "日本价格：600日元\n美国价格：6美元\n汇率：1美元＝150日元"
         },
         {
-          "h": "如何阅读表格",
-          "text": "在这组日元换算价格的比较中，日本处于价格较低的一侧。金额四舍五入至1日元，指数四舍五入至整数。"
+          "h": "将美国价格换算为日元",
+          "text": "6美元 × 150日元／美元＝900日元。\n与日本的600日元相比，900 ÷ 600＝1.5倍。"
+        },
+        {
+          "h": "价格差不一定全部来自汇率",
+          "text": "在这一假设中，美国价格换算成日元后较高。但工资、店铺租金、税收等当地因素也会影响价格。"
         }
       ]
     },
     {
-      "title": "计算使价格相同的汇率",
-      "subtitle": "简单购买力平价的计算",
+      "title": "计算使两国价格相同的汇率",
+      "subtitle": "继续使用上一页的假设数字",
       "blocks": [
         {
-          "h": "根据调查价格反推",
-          "text": "什么汇率能让日本与美国的巨无霸价格相同？\n500日元 ÷ 6.22美元 ≈ 80.4日元/美元。\n调查时市场汇率：1美元＝162.135日元。"
+          "h": "简单购买力平价",
+          "text": "600日元 ÷ 6美元＝100日元／美元。\n在这一汇率下，假设的两国价格相同。"
         },
         {
-          "h": "按此指标，日元约低估50.4%",
-          "text": "将这一简单购买力平价与市场汇率比较，可算出日元相对美元约低估50.4%。\n计算式：（80.3859 ÷ 162.135 - 1）× 100。"
+          "h": "与假设的市场汇率比较",
+          "text": "（100 ÷ 150 - 1）× 100 ~ -33.3％。\n按这一单一商品的衡量方法，日元相对美元约被低估33.3％。"
         },
         {
-          "h": "不是合理汇率或预测",
-          "text": "约80日元/美元只是基于一种商品价格的比较参考，并非合理汇率或未来预测。此简单比较包含人工、租金、税费等差异，未按收入水平调整。"
+          "h": "100日元不等于合理汇率",
+          "text": "这只是计算示例，不代表当前日元的实际低估程度，也不是汇率将升至100日元的预测。"
         }
       ]
     },
     {
-      "title": "指数能说明什么及其局限",
-      "subtitle": "解读2026年7月的比较",
+      "title": "这个指数能说明什么，有何局限",
+      "subtitle": "区分单一商品价格与整体生活水平",
       "blocks": [
         {
-          "h": "1. 把日元换成美元",
-          "text": "日本的500日元按调查时汇率约合3.08美元，低于美国的6.22美元。"
+          "h": "价格包含当地成本",
+          "text": "工资、租金、税收、物流和竞争环境都会影响价格。简单价格比较无法完全调整这些差异。"
         },
         {
-          "h": "2. 当地成本也影响价格",
-          "text": "人工、租金、税费、物流与竞争环境等均有影响，不能用汇率解释全部差异。"
+          "h": "不能用一种商品衡量生活水平",
+          "text": "收入、住房和医疗成本同样重要。巨无霸价格低，并不能单独证明一个国家富裕或贫穷。"
         },
         {
-          "h": "3. 不等于整体生活购买力",
-          "text": "单一商品无法衡量包含工资、住房成本的生活水平，也无法衡量一个国家的整体经济实力。"
+          "h": "区分比较与预测",
+          "text": "可将这一指数作为理解购买力的入口，但不能把它当作短期汇率或股价预测的答案。"
         },
         {
-          "h": "直观参考，而非预测",
-          "text": "它有助于直观观察日元贬值、美元升值下的价格差，并不是汇率预测工具或国家富裕程度的标尺。\n数据基准：2026年7月。价格与汇率均为调查时点数值。"
+          "h": "概念参考",
+          "text": "The Economist《The Big Mac index》。\n文字、示意与假设数字计算由TODOROKI独立编写。"
         }
       ]
     }
   ],
   "zh-Hant": [
     {
-      "title": "從大麥克指數看日圓與美元",
-      "subtitle": "2026年7月 / 透過同一種商品觀察價格與匯率",
+      "title": "用大麥克指數理解日圓與美元",
+      "subtitle": "從同一種商品出發，理解價格與匯率",
       "blocks": [
         {
-          "h": "日本與美國的價格",
-          "table": [
-            [
-              "市場",
-              "調查價格與換算"
-            ],
-            [
-              "日本",
-              "500日圓"
-            ],
-            [
-              "美國",
-              "6.22美元 × 162.135日圓/美元 ≈ 1,008日圓"
-            ]
-          ]
+          "h": "什麼是大麥克指數",
+          "text": "《經濟學人》提出這項指標，用來比較不同經濟體的大麥克價格，幫助理解貨幣購買力與匯率的關係。"
         },
         {
-          "h": "美國約為日本的2.02倍",
-          "text": "按調查時的匯率換算，美國價格約為日本的2.02倍。本比較使用2026年7月的調查價格與匯率。"
+          "h": "計算使價格相同的匯率",
+          "text": "日本價格（日圓）÷ 美國價格（美元）。計算結果是使這項商品價格相同的匯率，再將其與市場匯率比較。"
         },
         {
-          "h": "指數反映什麼？",
-          "text": "大麥克指數透過比較各國價格，觀察貨幣購買力。即使是同一品牌的商品，價格也受到當地人工、租金與稅制等影響。"
-        },
-        {
-          "h": "比較的侷限",
-          "text": "不能僅憑這一價格差，就斷定日圓或美元的合理匯率。"
+          "h": "本資料的閱讀方法",
+          "text": "後續頁面採用假設數字說明計算方法，並非實際售價、市場匯率或調查結果。"
         }
       ]
     },
     {
-      "title": "各市場價格換算成日圓",
-      "subtitle": "以同一調查時點匯率比較的13個代表性市場",
+      "title": "用假設數字計算日圓價格",
+      "subtitle": "計算範例：並非實際價格或匯率",
       "blocks": [
         {
-          "h": "2026年7月比較",
-          "compact": true,
-          "table": [
-            [
-              "市場",
-              "日圓價格",
-              "日本＝100"
-            ],
-            [
-              "瑞士",
-              "1,466",
-              "293"
-            ],
-            [
-              "烏拉圭",
-              "1,449",
-              "290"
-            ],
-            [
-              "挪威",
-              "1,306",
-              "261"
-            ],
-            [
-              "哥倫比亞",
-              "1,298",
-              "260"
-            ],
-            [
-              "以色列",
-              "1,243",
-              "249"
-            ],
-            [
-              "英國",
-              "1,200",
-              "240"
-            ],
-            [
-              "歐元區",
-              "1,148",
-              "230"
-            ],
-            [
-              "美國",
-              "1,008",
-              "202"
-            ],
-            [
-              "中國",
-              "635",
-              "127"
-            ],
-            [
-              "韓國",
-              "622",
-              "124"
-            ],
-            [
-              "日本",
-              "500",
-              "100"
-            ],
-            [
-              "菲律賓",
-              "444",
-              "89"
-            ],
-            [
-              "印尼",
-              "386",
-              "77"
-            ]
-          ]
+          "h": "設定三個條件",
+          "text": "日本價格：600日圓\n美國價格：6美元\n匯率：1美元＝150日圓"
         },
         {
-          "h": "如何閱讀表格",
-          "text": "在這組日圓換算價格的比較中，日本位於價格較低的一側。金額四捨五入至1日圓，指數四捨五入至整數。"
+          "h": "將美國價格換算為日圓",
+          "text": "6美元 × 150日圓／美元＝900日圓。\n與日本的600日圓相比，900 ÷ 600＝1.5倍。"
+        },
+        {
+          "h": "價差不一定全部來自匯率",
+          "text": "在這項假設中，美國價格換算成日圓後較高。但薪資、店面租金、稅負等當地因素也會影響價格。"
         }
       ]
     },
     {
-      "title": "計算使價格相同的匯率",
-      "subtitle": "簡單購買力平價的計算",
+      "title": "計算使兩國價格相同的匯率",
+      "subtitle": "繼續使用上一頁的假設數字",
       "blocks": [
         {
-          "h": "根據調查價格反推",
-          "text": "什麼匯率能讓日本與美國的大麥克價格相同？\n500日圓 ÷ 6.22美元 ≈ 80.4日圓/美元。\n調查時市場匯率：1美元＝162.135日圓。"
+          "h": "簡單購買力平價",
+          "text": "600日圓 ÷ 6美元＝100日圓／美元。\n在這項匯率下，假設的兩國價格相同。"
         },
         {
-          "h": "按此指標，日圓約低估50.4%",
-          "text": "將這一簡單購買力平價與市場匯率比較，可算出日圓相對美元約低估50.4%。\n計算式：（80.3859 ÷ 162.135 - 1）× 100。"
+          "h": "與假設的市場匯率比較",
+          "text": "（100 ÷ 150 - 1）× 100 ~ -33.3％。\n按這項單一商品的衡量方法，日圓相對美元約被低估33.3％。"
         },
         {
-          "h": "不是合理匯率或預測",
-          "text": "約80日圓/美元只是基於一種商品價格的比較參考，並非合理匯率或未來預測。此簡單比較包含人工、租金、稅費等差異，未按收入水準調整。"
+          "h": "100日圓不等於合理匯率",
+          "text": "這只是計算範例，不代表目前日圓的實際低估程度，也不是匯率將升至100日圓的預測。"
         }
       ]
     },
     {
-      "title": "指數能說明什麼及其侷限",
-      "subtitle": "解讀2026年7月的比較",
+      "title": "這個指數能說明什麼，有何限制",
+      "subtitle": "區分單一商品價格與整體生活水準",
       "blocks": [
         {
-          "h": "1. 把日圓換成美元",
-          "text": "日本的500日圓按調查時匯率約合3.08美元，低於美國的6.22美元。"
+          "h": "價格包含當地成本",
+          "text": "薪資、租金、稅負、物流和競爭環境都會影響價格。簡單價格比較無法完全調整這些差異。"
         },
         {
-          "h": "2. 當地成本也影響價格",
-          "text": "人工、租金、稅費、物流與競爭環境等均有影響，不能用匯率解釋全部差異。"
+          "h": "不能用一種商品衡量生活水準",
+          "text": "所得、住房與醫療成本同樣重要。大麥克價格低，不能單獨證明一個國家富裕或貧窮。"
         },
         {
-          "h": "3. 不等於整體生活購買力",
-          "text": "單一商品無法衡量包含工資、住房成本的生活水準，也無法衡量一個國家的整體經濟實力。"
+          "h": "區分比較與預測",
+          "text": "可將這項指數作為理解購買力的入口，但不能把它當作短期匯率或股價預測的答案。"
         },
         {
-          "h": "直觀參考，而非預測",
-          "text": "它有助於直觀觀察日圓貶值、美元升值下的價格差，並不是匯率預測工具或國家富裕程度的標尺。\n資料基準：2026年7月。價格與匯率均為調查時點數值。"
+          "h": "概念參考",
+          "text": "The Economist《The Big Mac index》。\n文字、示意與假設數字計算由TODOROKI獨立編寫。"
         }
       ]
     }
