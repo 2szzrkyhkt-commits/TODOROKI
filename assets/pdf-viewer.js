@@ -18,6 +18,10 @@
   if (query.get('q')) state.set('q', query.get('q'));
   get('home').href = base;
   get('back').href = base + 'pdf-library.html' + (state.size ? '?' + state : '');
+  document.querySelectorAll('header a[href]').forEach(link => {
+    const path = new URL(link.href, location.origin).pathname.replace(/\\.html$/, '');
+    if (path === base + 'pdf-library') link.href = get('back').href;
+  });
   ['back','download','help','direct','article','status'].forEach((id,i) => get(id).textContent = t[i]);
   try {
     const response = await fetch('/assets/pdf-catalog.json');
