@@ -175,6 +175,7 @@ const categorySelect = document.getElementById("category");
 let files = [];
 
 const titleMap = {
+"リベラルと保守_考え方と違いを読み解く.pdf": "リベラルと保守｜考え方と違いを読み解く",
 "企業会計原則の全体像_3つの原則の役割.pdf": "企業会計原則の全体像｜3つの原則の役割",
 "企業会計の一般原則_7つの基本ルール.pdf": "企業会計の一般原則｜7つの基本ルール",
 "会計公準_企業会計を支える3つの前提.pdf": "会計公準｜企業会計を支える3つの前提",
@@ -284,6 +285,7 @@ function getTitle(name) {
 }
 
 function category(name) {
+  if (/リベラルと保守/.test(name)) return "政治・社会";
   if (/企業会計原則の全体像/.test(name)) return "企業・経営";
   if (/企業会計の一般原則/.test(name)) return "企業・経営";
  if (/プロスペクト理論とナッジ/.test(name)) return "経済・金融";
@@ -370,6 +372,7 @@ function normalizeSearch(text) {
 
 // タイトルに含まれない読み方や関連語を補完する。
 const searchKeywords = [
+ [/リベラルと保守/, "りべらる ほしゅ ほしゅは 自由主義 古典的自由主義 社会的自由主義 左派 右派 さは うは 政治 思想 政策 日本 米国 欧州 liberal conservatism liberalism conservative"],
  [/企業会計原則の全体像/, "きぎょうかいけいげんそく 一般原則 損益計算書原則 貸借対照表原則 注解 財務会計 P/L B/S 収益 費用 利益 資産 負債 純資産 売掛金"],
  [/企業会計の一般原則/, "きぎょうかいけい いっぱんげんそく 真実性 相対的な真実 正規の簿記 誘導法 資本取引 損益取引 資本剰余金 利益剰余金 明瞭性 継続性 保守主義 単一性 二重帳簿 決算書 財務諸表"],
  [/会計公準/, "かいけいこうじゅん 企業実体 継続企業 貨幣評価 会計"],
@@ -429,6 +432,7 @@ function searchText(name) {
 
 // 関連する基礎解説へ誘導。リンク先が確認できた記事のみ使用する。
 const relatedArticles = [
+  { test: /リベラルと保守/, href: "/politics-society", label: "政治・社会の解説を読む" },
   { test: /安くしても買われない理由/, href: "/price-value", label: "価格と価値の解説を読む" },
   { test: /グレアム|graham|MBO|貸借倍率|インタレストカバレッジ|日本企業10社|TOPIX|株式|投資基準/i, href: "/investment", label: "投資の基礎を読む" },
   { test: /インフレ|デフレ|資産格差/i, href: "/inflation", label: "インフレの解説を読む" },
