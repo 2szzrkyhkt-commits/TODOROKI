@@ -459,6 +459,7 @@ footer {
     muted
     loop
     playsinline
+    webkit-playsinline
     preload="auto">
 
     <source
@@ -699,6 +700,7 @@ footer {
         muted
         loop
         playsinline
+        webkit-playsinline
         preload="auto">
 
         <source
@@ -784,5 +786,25 @@ footer {
 
 </footer>
 
+<script>
+/* Retry muted inline autoplay when mobile browsers resume or restore the page. */
+(function(){
+  function resumeHeroVideos(){
+    document.querySelectorAll('.hero-video, .end-video video').forEach(function(video){
+      video.muted = true;
+      video.defaultMuted = true;
+      video.playsInline = true;
+      if(video.paused){
+        var attempt = video.play();
+        if(attempt && typeof attempt.catch === 'function') attempt.catch(function(){});
+      }
+    });
+  }
+  document.addEventListener('DOMContentLoaded', resumeHeroVideos);
+  window.addEventListener('pageshow', resumeHeroVideos);
+  document.addEventListener('visibilitychange', function(){ if(!document.hidden) resumeHeroVideos(); });
+  document.addEventListener('pointerdown', resumeHeroVideos, {once:true, passive:true});
+})();
+</script>
 </body>
 </html>
