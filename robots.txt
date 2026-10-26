@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://todoroki-gold.com/sitemap.xml
+
+Sitemap: https://todoroki-gold.com/sitemap-pdfs.xml
