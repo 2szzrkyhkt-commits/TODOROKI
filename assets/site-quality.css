@@ -1,0 +1,7 @@
+/* Keyboard access and narrow-screen safeguards. */
+.skip-link{position:fixed;top:8px;left:8px;transform:translateY(-180%);z-index:10000;padding:12px 20px;background:#f4d77b;color:#080808;font:700 16px/1.5 system-ui;border-radius:5px}
+.skip-link:focus{transform:none;outline:3px solid white;outline-offset:2px}
+main{min-width:0}main h1,main h2,main h3{overflow-wrap:anywhere}img{max-width:100%}
+:focus-visible{outline:2px solid #f4d77b;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
+.motion-toggle{position:absolute;bottom:16px;right:16px;z-index:3;padding:9px 14px;background:#111;color:#f4d77b;border:1px solid #a58a47;border-radius:6px;font:inherit;font-size:13px;cursor:pointer}

@@ -414,9 +414,9 @@ footer {
 /* Consistent, single-line section headings on desktop and mobile. */
 .section-title{font-size:clamp(15px, 4.2vw, 29px);letter-spacing:0.01em;white-space:nowrap;}
 </style>
-<link rel="stylesheet" href="/assets/language-picker.css"><link rel="stylesheet" href="/assets/site-header.css"><script src="/assets/language-picker.js" defer></script></head>
+<link rel="stylesheet" href="/assets/language-picker.css"><link rel="stylesheet" href="/assets/site-header.css"><script src="/assets/language-picker.js" defer></script><link rel="stylesheet" href="/assets/site-quality.css"></head>
 
-<body id="page-top">
+<body id="page-top"><a class="skip-link" href="#main-content">本文へ移動</a>
 
 <!-- ヘッダー -->
 
@@ -449,7 +449,7 @@ footer {
   </nav>
 </header>
 
-<main>
+<main id="main-content">
 
 <!-- 表紙 -->
 
@@ -800,7 +800,7 @@ footer {
 </div>
 
 
-</footer>
+<p><a href="/site-map">サイトマップ</a></p></footer>
 
 <script>
 /* Retry muted inline autoplay when mobile browsers resume or restore the page. */
@@ -810,7 +810,7 @@ footer {
       video.muted = true;
       video.defaultMuted = true;
       video.playsInline = true;
-      if(video.paused){
+      if(video.paused && video.dataset.motionPaused !== "true"){
         var attempt = video.play();
         if(attempt && typeof attempt.catch === 'function') attempt.catch(function(){});
       }
@@ -822,5 +822,6 @@ footer {
   document.addEventListener('pointerdown', resumeHeroVideos, {once:true, passive:true});
 })();
 </script>
+<script src="/assets/site-motion.js" defer></script>
 </body>
 </html>
