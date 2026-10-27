@@ -149,8 +149,11 @@ function buildTopics(select,container,items,getTag,onSelect){
 let lessonPage=0;const lessonSize=12,search=document.querySelector('#search');
 function renderCards(){
  const v=search.value.trim().toLowerCase();const rows=lessons.filter(x=>(!lessonTopic.value||x.tag===lessonTopic.value)&&(x.title+x.body+x.tag).toLowerCase().includes(v));
- const pages=Math.max(1,Math.ceil(rows.length/lessonSize));lessonPage=Math.min(lessonPage,pages-1);cards.replaceChildren();
- rows.slice(lessonPage*lessonSize,(lessonPage+1)*lessonSize).forEach(x=>{let el=document.createElement('article');el.className='card';let tag=document.createElement('div');tag.className='label';tag.textContent=x.tag;let h=document.createElement('h3');h.textContent=x.title;let p=document.createElement('p');p.textContent=x.body;el.append(tag,h,p);cards.append(el)});
+ // 会計公準の3つの内容を一つの欄にまとめ、検索結果では一致した内容だけを表示する。
+ const displayRows=[];let postulates=null;
+ rows.forEach(x=>{if(x.tag==='会計公準'){if(!postulates){postulates={tag:'会計公準',title:'会計公準',entries:[]};displayRows.push(postulates)}postulates.entries.push(x)}else displayRows.push(x)});
+ const pages=Math.max(1,Math.ceil(displayRows.length/lessonSize));lessonPage=Math.min(lessonPage,pages-1);cards.replaceChildren();
+ displayRows.slice(lessonPage*lessonSize,(lessonPage+1)*lessonSize).forEach(x=>{let el=document.createElement('article');el.className='card';let tag=document.createElement('div');tag.className='label';tag.textContent=x.tag;el.append(tag);if(x.entries){x.entries.forEach(entry=>{let h=document.createElement('h3');h.textContent=entry.title;let p=document.createElement('p');p.textContent=entry.body;el.append(h,p)})}else{let h=document.createElement('h3');h.textContent=x.title;let p=document.createElement('p');p.textContent=x.body;el.append(h,p)}cards.append(el)});
  count.textContent=rows.length+'件の解説'+(rows.length?'':'：別の言葉で検索してください');
  document.querySelector('#lesson-page').textContent=(lessonPage+1)+' / '+pages+'ページ';document.querySelector('#lesson-prev').disabled=lessonPage===0;document.querySelector('#lesson-next').disabled=lessonPage>=pages-1;
 }
