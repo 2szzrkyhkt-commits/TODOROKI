@@ -249,7 +249,7 @@ function renderQuiz(){
  document.querySelector('#quiz-prev').disabled=quizPage===0;document.querySelector('#quiz-next').disabled=quizPage>=pages-1;
  document.querySelector('#result').textContent='回答済み '+n+' / '+qs.length+'問（正解 '+correct+'問）'
 }
-buildTopics(quizTopic,document.querySelector('#quiz-groups'),qs,q=>q.topic,()=>{quizSearch.value='';quizPage=0;renderQuiz()});
+buildTopics(quizTopic,document.querySelector('#quiz-groups'),qs,q=>q.topic,()=>{quizSearch.value='';quizStatus.value='all';retrying.clear();quizPage=0;renderQuiz()});
 quizSearch.addEventListener('input',()=>{quizPage=0;renderQuiz()});quizStatus.addEventListener('change',()=>{retrying.clear();quizPage=0;renderQuiz()});quizTopic.addEventListener('change',()=>{quizPage=0;renderQuiz()});
 document.querySelector('#quiz-prev').addEventListener('click',()=>{quizPage--;renderQuiz();document.querySelector('#quiz').scrollIntoView()});
 document.querySelector('#quiz-next').addEventListener('click',()=>{quizPage++;renderQuiz();document.querySelector('#quiz').scrollIntoView()});
