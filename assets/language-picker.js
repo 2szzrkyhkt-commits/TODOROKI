@@ -1,7 +1,7 @@
 (function(){'use strict';
 const locales=[['ja','日本語'],['en','English'],['es','Español'],['pt','Português'],['zh-Hant','繁體中文'],['zh-Hans','简体中文']];
 const prefixes=['en','es','pt','zh-Hant','zh-Hans'];
-const supported=new Set(['investment','price-value','margin-of-safety','investment-list','economy-list','business-list','inflation','interest-rate','inflation-asset-gap','business-ma','mbo-investing','glossary','pdf-library']);
+const supported=new Set(['anthropic-ipo-ai-safety-2026','investment','price-value','margin-of-safety','investment-list','economy-list','business-list','inflation','interest-rate','inflation-asset-gap','business-ma','mbo-investing','glossary','pdf-library']);
 const parts=location.pathname.replace(/\/$/,'').replace(/\.html$/,'').split('/').filter(Boolean);
 const reader=/^pdf-viewer(?:\.html)?$/.test(parts[0]||'');
 const readerLang=new URLSearchParams(location.search).get('lang');
