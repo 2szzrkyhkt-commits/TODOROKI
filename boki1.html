@@ -214,7 +214,7 @@ search.addEventListener('input',()=>{lessonPage=0;renderCards()});lessonTopic.ad
 document.querySelector('#lesson-prev').addEventListener('click',()=>{lessonPage--;renderCards();count.scrollIntoView({block:'start'})});
 document.querySelector('#lesson-next').addEventListener('click',()=>{lessonPage++;renderCards();count.scrollIntoView({block:'start'})});
 renderCards();document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-view]').forEach(x=>x.classList.toggle('active',x===b));document.querySelector('#learn').hidden=b.dataset.view!=='learn';document.querySelector('#quiz').hidden=b.dataset.view!=='quiz'}));
-const lessonByBody=new Map(lessons.map(x=>[x.body,categoryFor(x)]));qs.forEach((q,i)=>{q.topic=lessonByBody.get(q.ex)||'総論'});
+const lessonByBody=new Map(lessons.map(x=>[x.body,categoryFor(x)]));qs.forEach((q,i)=>{q.topic=lessonByBody.get(q.ex)||(i<4?'研究開発費等':'総論')});
 const quizTopic=document.querySelector('#quiz-topic');
 let chosen={},quizPage=0,retrying=new Set();
 const progressKey='todoroki-boki1-answers-v1';
