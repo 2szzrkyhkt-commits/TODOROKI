@@ -30,6 +30,19 @@
     const url = new URL(query.get('file') || '', location.origin);
     const path = decodeURIComponent(url.pathname);
     if (url.origin !== location.origin || url.search || !Object.hasOwn(catalog,path)) throw new Error('file');
+    if (path === '/pdf/Amazon輸入ビジネス_価格差と相乗り販売.pdf') {
+      const ad = document.createElement('aside');
+      ad.style.cssText = 'margin:24px 0;padding:16px;border:1px solid #67532b;border-radius:6px';
+      const label = document.createElement('p');
+      label.textContent = '広告｜ビジネス・経済の情報収集に';
+      const link = document.createElement('a');
+      link.href = 'https://ad2.trafficgate.net/t/r/205/394/319542_399447';
+      link.target = '_blank'; link.rel = 'sponsored nofollow noopener';
+      const img = document.createElement('img');
+      img.src = 'https://srv2.trafficgate.net/t/b/205/394/319542_399447';
+      img.alt = 'Fujisan.co.jp 雑誌のオンライン書店'; img.style.maxWidth = '100%';
+      link.append(img); ad.append(label, link); get('document').after(ad);
+    }
     const item = catalog[path];
     get('title').textContent = item.title; document.title = item.title + '｜TODOROKI';
     for (const id of ['direct','download']) {get(id).href = url.pathname;get(id).hidden = false;}
