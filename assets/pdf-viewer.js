@@ -48,7 +48,7 @@
     for (const id of ['direct','download']) {get(id).href = url.pathname;get(id).hidden = false;}
     get('download').download = path.split('/').pop();
     const frame = document.createElement('iframe');
-    frame.title = item.title;frame.src = url.pathname + '#view=FitH';
+    frame.title = item.title;frame.src = url.pathname + (path === '/pdf/Amazon輸入ビジネス_価格差と相乗り販売.pdf' ? '?v=2' : '') + '#view=FitH';
     get('document').append(frame); get('status').textContent = '';
     const articles = {
       'M&Aと資本配分_企業価値を高める再編の見方.pdf':'business-ma.html',
