@@ -30,7 +30,7 @@
     const url = new URL(query.get('file') || '', location.origin);
     const path = decodeURIComponent(url.pathname);
     if (url.origin !== location.origin || url.search || !Object.hasOwn(catalog,path)) throw new Error('file');
-    if (path === '/pdf/Amazon輸入ビジネス_価格差と相乗り販売_修正版.pdf') {
+    if (path === '/pdf/Amazon輸入ビジネス_価格差と相乗り販売_閲覧用.pdf') {
       const ad = document.createElement('aside');
       ad.style.cssText = 'margin:24px 0;padding:16px;border:1px solid #67532b;border-radius:6px';
       const label = document.createElement('p');
@@ -48,7 +48,7 @@
     for (const id of ['direct','download']) {get(id).href = url.pathname;get(id).hidden = false;}
     get('download').download = path.split('/').pop();
     const frame = document.createElement('iframe');
-    frame.title = item.title;frame.src = url.pathname + (path === '/pdf/Amazon輸入ビジネス_価格差と相乗り販売_修正版.pdf' ? '?v=2' : '') + '#view=FitH';
+    frame.title = item.title;frame.src = url.pathname + (path === '/pdf/Amazon輸入ビジネス_価格差と相乗り販売_閲覧用.pdf' ? '?v=2' : '') + '#view=FitH';
     get('document').append(frame); get('status').textContent = '';
     const articles = {
       'M&Aと資本配分_企業価値を高める再編の見方.pdf':'business-ma.html',
