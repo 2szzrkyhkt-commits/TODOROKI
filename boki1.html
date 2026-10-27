@@ -140,6 +140,11 @@ const costTopics=['総論','原価・営業量・利益関係分析','全部原�
 const costKey=t=>'工原：'+t;
 function categoryFor(x){
  const t=x.tag||'', title=x.title||'';
+ if(t==='金融商品'&&title==='デリバティブ')return 'デリバティブ取引';
+ if(t==='金融商品'&&title==='ヘッジ会計の考え方')return 'ヘッジ会計';
+ if(t==='商品売買'&&/委託販売|予約販売/.test(title))return '特殊商品売買';
+ if(t==='収益認識'&&/割賦販売/.test(title))return '特殊商品売買';
+ if(t==='工業簿記・総合原価計算'&&/原価の三要素/.test(title))return costKey('費目別計算');
  if(/原価計算・CVP/.test(t))return costKey('原価・営業量・利益関係分析');
  if(/直接原価計算/.test(t))return costKey('全部原価計算と直接原価計算');
  if(/予算実績差異/.test(t))return costKey('予算統制');
