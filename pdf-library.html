@@ -158,10 +158,12 @@ footer{padding:28px;text-align:center;border-top:1px solid #302819;color:#777;fo
 <option value="その他">その他</option>
 </select>
 </div>
-<div id="count" role="status" aria-live="polite">64 件の資料 / 全 64 件</div>
+<div id="count" role="status" aria-live="polite">65 件の資料 / 全 65 件</div>
 <div id="status"></div>
 <div id="grid" class="grid">
 <!-- pdf-discovery:start -->
+<article class="card"><div class="tag">経済・金融</div><h2>資本論｜資本主義の仕組みを読み解く</h2><div class="actions"><a href="/pdf-viewer.html?file=%2Fpdf%2F%25E8%25B3%2587%25E6%259C%25AC%25E8%25AB%2596_%25E8%25B3%2587%25E6%259C%25AC%25E4%25B8%25BB%25E7%25BE%25A9%25E3%2581%25AE%25E4%25BB%2595%25E7%25B5%2584%25E3%2581%25BF%25E3%2582%2592%25E8%25AA%25AD%25E3%2581%25BF%25E8%25A7%25A3%25E3%2581%258F.pdf&amp;lang=ja&amp;category=all&amp;q=" rel="noopener">PDFを見る →</a><a href="/pdf/%E8%B3%87%E6%9C%AC%E8%AB%96_%E8%B3%87%E6%9C%AC%E4%B8%BB%E7%BE%A9%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF%E3%82%92%E8%AA%AD%E3%81%BF%E8%A7%A3%E3%81%8F.pdf" download="資本論_資本主義の仕組みを読み解く.pdf">保存 ↓</a></div></article>
+
 <article class="card"><div class="tag">科学・技術</div><h2>AI時代の現場技能と価格決定力｜適正価格をつくる仕組み</h2><div class="actions"><a href="/pdf-viewer.html?file=%2Fpdf%2FAI%25E6%2599%2582%25E4%25BB%25A3%25E3%2581%25AE%25E7%258F%25BE%25E5%25A0%25B4%25E6%258A%2580%25E8%2583%25BD%25E3%2581%25A8%25E4%25BE%25A1%25E6%25A0%25BC%25E6%25B1%25BA%25E5%25AE%259A%25E5%258A%259B_%25E9%2581%25A9%25E6%25AD%25A3%25E4%25BE%25A1%25E6%25A0%25BC%25E3%2582%2592%25E3%2581%25A4%25E3%2581%258F%25E3%2582%258B%25E4%25BB%2595%25E7%25B5%2584%25E3%2581%25BF.pdf&amp;lang=ja&amp;category=all&amp;q=" rel="noopener">PDFを見る →</a><a href="/pdf/AI%E6%99%82%E4%BB%A3%E3%81%AE%E7%8F%BE%E5%A0%B4%E6%8A%80%E8%83%BD%E3%81%A8%E4%BE%A1%E6%A0%BC%E6%B1%BA%E5%AE%9A%E5%8A%9B_%E9%81%A9%E6%AD%A3%E4%BE%A1%E6%A0%BC%E3%82%92%E3%81%A4%E3%81%8F%E3%82%8B%E4%BB%95%E7%B5%84%E3%81%BF.pdf" download="AI時代の現場技能と価格決定力_適正価格をつくる仕組み.pdf">保存 ↓</a></div></article>
 <article class="card"><div class="tag">経済・金融</div><h2>ブルーカラーの価値と賃金｜学歴・技能・教育投資を考える</h2><div class="actions"><a href="/pdf-viewer.html?file=%2Fpdf%2Fblue_collar_wages.pdf&amp;lang=ja&amp;category=all&amp;q=" rel="noopener">PDFを見る →</a><a href="/pdf/blue_collar_wages.pdf" download="blue_collar_wages.pdf">保存 ↓</a></div></article>
 <article class="card"><div class="tag">科学・技術</div><h2>ダイオード・トランジスタ・MOSFETの基本｜仕組みと役割</h2><div class="actions"><a href="/pdf-viewer.html?file=%2Fpdf%2Fdiode_transistor_mosfet.pdf&amp;lang=ja&amp;category=all&amp;q=" rel="noopener">PDFを見る →</a><a href="/pdf/diode_transistor_mosfet.pdf" download="diode_transistor_mosfet.pdf">保存 ↓</a></div></article>
@@ -242,6 +244,7 @@ const categorySelect = document.getElementById("category");
 let files = [];
 
 const titleMap = {
+"資本論_資本主義の仕組みを読み解く.pdf": "資本論｜資本主義の仕組みを読み解く",
 "リベラルと保守_考え方と違いを読み解く.pdf": "リベラルと保守｜考え方と違いを読み解く",
 "企業会計原則の全体像_3つの原則の役割.pdf": "企業会計原則の全体像｜3つの原則の役割",
 "企業会計の一般原則_7つの基本ルール.pdf": "企業会計の一般原則｜7つの基本ルール",
@@ -352,6 +355,7 @@ function getTitle(name) {
 }
 
 function category(name) {
+  if (/資本論/.test(name)) return "経済・金融";
   if (/リベラルと保守/.test(name)) return "政治・社会";
   if (/企業会計原則の全体像/.test(name)) return "企業・経営";
   if (/企業会計の一般原則/.test(name)) return "企業・経営";
@@ -439,6 +443,7 @@ function normalizeSearch(text) {
 
 // タイトルに含まれない読み方や関連語を補完する。
 const searchKeywords = [
+ [/資本論/, "しほんろん マルクス 剰余価値 労働価値 資本主義"],
  [/リベラルと保守/, "りべらる ほしゅ ほしゅは 自由主義 古典的自由主義 社会的自由主義 左派 右派 さは うは 政治 思想 政策 日本 米国 欧州 liberal conservatism liberalism conservative"],
  [/企業会計原則の全体像/, "きぎょうかいけいげんそく 一般原則 損益計算書原則 貸借対照表原則 注解 財務会計 P/L B/S 収益 費用 利益 資産 負債 純資産 売掛金"],
  [/企業会計の一般原則/, "きぎょうかいけい いっぱんげんそく 真実性 相対的な真実 正規の簿記 誘導法 資本取引 損益取引 資本剰余金 利益剰余金 明瞭性 継続性 保守主義 単一性 二重帳簿 決算書 財務諸表"],
