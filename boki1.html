@@ -137,4 +137,11 @@ function renderQuiz(){
 quizSearch.addEventListener('input',()=>{quizPage=0;renderQuiz()});quizStatus.addEventListener('change',()=>{retrying.clear();quizPage=0;renderQuiz()});quizTopic.addEventListener('change',()=>{quizPage=0;renderQuiz()});
 document.querySelector('#quiz-prev').addEventListener('click',()=>{quizPage--;renderQuiz();document.querySelector('#quiz').scrollIntoView()});
 document.querySelector('#quiz-next').addEventListener('click',()=>{quizPage++;renderQuiz();document.querySelector('#quiz').scrollIntoView()});
-document.querySelector('#reset').addEventListener('click',()=>{chosen={};retrying.clear();quizPage=0;saveAnswers();renderQuiz()});renderQuiz();</script></body></html>
+document.querySelector('#reset').addEventListener('click',()=>{chosen={};retrying.clear();quizPage=0;saveAnswers();renderQuiz()});renderQuiz();</script>
+<aside aria-label="広告：TAC出版" style="max-width:1000px;margin:32px auto;padding:18px 20px;border:1px solid #554526;border-radius:10px;background:#15120d;color:#e8dfc9;line-height:1.8">
+  <p style="font-size:12px;margin:0 0 8px;color:#bfb49a">PR｜アフィリエイト広告</p>
+  <p style="margin:0 0 8px;font-weight:700">簿記の学習をテキストでも深める</p>
+  <p style="margin:0 0 12px;font-size:14px">TAC出版のCyberBookStoreで簿記・会計の参考書を探せます。</p>
+  <a href="https://ad2.trafficgate.net/t/r/22/3670/319542_399447" target="_blank" rel="nofollow sponsored noopener noreferrer" style="color:#e6c66b;text-decoration:underline">TAC出版の書籍を見る →</a>
+</aside>
+</body></html>
