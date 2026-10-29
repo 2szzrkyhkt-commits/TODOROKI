@@ -1,0 +1,590 @@
+{
+  "reviewDate": "2026-10-29",
+  "scope": "一般的な会計上の概念・短い説明を公式基準と対応づけて再掲載。原教材全文との権利照合・許諾取得ではない。固有の図表や長文は戻さない。",
+  "items": [
+    {
+      "oldIndex": 0,
+      "title": "研究と開発",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=82",
+      "section": "定義・研究開発費の処理・ソフトウェア・注解",
+      "changed": false,
+      "questionRestored": false
+    },
+    {
+      "oldIndex": 1,
+      "title": "研究開発費の処理",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=82",
+      "section": "定義・研究開発費の処理・ソフトウェア・注解",
+      "changed": false,
+      "questionRestored": false
+    },
+    {
+      "oldIndex": 2,
+      "title": "研究専用の設備",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=82",
+      "section": "定義・研究開発費の処理・ソフトウェア・注解",
+      "changed": false,
+      "questionRestored": false
+    },
+    {
+      "oldIndex": 3,
+      "title": "自社利用ソフトウェア",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=82",
+      "section": "定義・研究開発費の処理・ソフトウェア・注解",
+      "changed": false,
+      "questionRestored": false
+    },
+    {
+      "oldIndex": 4,
+      "title": "市場販売目的の償却",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=82",
+      "section": "定義・研究開発費の処理・ソフトウェア・注解",
+      "changed": false,
+      "questionRestored": false
+    },
+    {
+      "oldIndex": 9,
+      "title": "継続性の原則",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=39",
+      "section": "4項・17項・21項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 10,
+      "title": "資本取引と損益取引",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81",
+      "section": "第一・一般原則／第二・損益計算書原則／第三・貸借対照表原則・注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 11,
+      "title": "貸借対照表",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81",
+      "section": "第一・一般原則／第二・損益計算書原則／第三・貸借対照表原則・注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 12,
+      "title": "損益計算書",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81",
+      "section": "第一・一般原則／第二・損益計算書原則／第三・貸借対照表原則・注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 13,
+      "title": "流動と固定",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81",
+      "section": "第一・一般原則／第二・損益計算書原則／第三・貸借対照表原則・注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 16,
+      "title": "先入先出法",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=24",
+      "section": "5項・6-2項・7項・34-1項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 17,
+      "title": "移動平均法",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=24",
+      "section": "5項・6-2項・7項・34-1項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 18,
+      "title": "棚卸減耗損",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=24",
+      "section": "5項・6-2項・7項・34-1項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 20,
+      "title": "退職給付債務",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=113",
+      "section": "6～11項・13～24項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 21,
+      "title": "減損の基本",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=83",
+      "section": "二・減損損失の認識と測定／注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 22,
+      "title": "資産除去債務",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=72",
+      "section": "3～9項・13項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 24,
+      "title": "見積りの変更",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=39",
+      "section": "4項・17項・21項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 25,
+      "title": "過去の誤謬の訂正",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=39",
+      "section": "4項・17項・21項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 48,
+      "title": "売上原価の計算",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81",
+      "section": "第一・一般原則／第二・損益計算書原則／第三・貸借対照表原則・注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 49,
+      "title": "総平均法",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=24",
+      "section": "5項・6-2項・7項・34-1項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 50,
+      "title": "商品評価損",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=24",
+      "section": "5項・6-2項・7項・34-1項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 51,
+      "title": "定額法",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81",
+      "section": "第一・一般原則／第二・損益計算書原則／第三・貸借対照表原則・注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 59,
+      "title": "引当金の計上要件",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81",
+      "section": "第一・一般原則／第二・損益計算書原則／第三・貸借対照表原則・注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 66,
+      "title": "勤務費用",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=113",
+      "section": "6～11項・13～24項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 67,
+      "title": "利息費用の計算",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=113",
+      "section": "6～11項・13～24項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 68,
+      "title": "期待運用収益",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=113",
+      "section": "6～11項・13～24項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 69,
+      "title": "数理計算上の差異",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=113",
+      "section": "6～11項・13～24項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 70,
+      "title": "正味売却価額",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=24",
+      "section": "5項・6-2項・7項・34-1項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 73,
+      "title": "減損損失の認識と測定",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=83",
+      "section": "二・減損損失の認識と測定／注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 107,
+      "title": "資産のグルーピング",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=83",
+      "section": "二・減損損失の認識と測定／注解",
+      "changed": true,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 108,
+      "title": "使用価値",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=83",
+      "section": "二・減損損失の認識と測定／注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 109,
+      "title": "正味売却価額",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=83",
+      "section": "二・減損損失の認識と測定／注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 111,
+      "title": "真実性の原則",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81",
+      "section": "第一・一般原則／第二・損益計算書原則／第三・貸借対照表原則・注解",
+      "changed": true,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 112,
+      "title": "正規の簿記の原則",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81",
+      "section": "第一・一般原則／第二・損益計算書原則／第三・貸借対照表原則・注解",
+      "changed": true,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 113,
+      "title": "明瞭性の原則",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81",
+      "section": "第一・一般原則／第二・損益計算書原則／第三・貸借対照表原則・注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 114,
+      "title": "保守主義の原則",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81",
+      "section": "第一・一般原則／第二・損益計算書原則／第三・貸借対照表原則・注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 115,
+      "title": "単一性の原則",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81",
+      "section": "第一・一般原則／第二・損益計算書原則／第三・貸借対照表原則・注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 116,
+      "title": "重要性の原則",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81",
+      "section": "第一・一般原則／第二・損益計算書原則／第三・貸借対照表原則・注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 120,
+      "title": "売上総利益",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81",
+      "section": "第一・一般原則／第二・損益計算書原則／第三・貸借対照表原則・注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 121,
+      "title": "営業利益",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81",
+      "section": "第一・一般原則／第二・損益計算書原則／第三・貸借対照表原則・注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 122,
+      "title": "経常利益",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81",
+      "section": "第一・一般原則／第二・損益計算書原則／第三・貸借対照表原則・注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 125,
+      "title": "前払費用",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81",
+      "section": "第一・一般原則／第二・損益計算書原則／第三・貸借対照表原則・注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 126,
+      "title": "未払費用",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81",
+      "section": "第一・一般原則／第二・損益計算書原則／第三・貸借対照表原則・注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 127,
+      "title": "将来支出の現在価値",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=72",
+      "section": "3～9項・13項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 128,
+      "title": "当初計上の仕訳",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=72",
+      "section": "3～9項・13項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 129,
+      "title": "時の経過による調整",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=72",
+      "section": "3～9項・13項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 130,
+      "title": "除去費用の費用配分",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=72",
+      "section": "3～9項・13項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 131,
+      "title": "履行差額",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=72",
+      "section": "3～9項・13項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 132,
+      "title": "売価還元法",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=24",
+      "section": "5項・6-2項・7項・34-1項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 213,
+      "title": "貸借対照表の総額表示",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81",
+      "section": "第一・一般原則／第二・損益計算書原則／第三・貸借対照表原則・注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 216,
+      "title": "長期保有する棚卸資産",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81",
+      "section": "第一・一般原則／第二・損益計算書原則／第三・貸借対照表原則・注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 217,
+      "title": "残存耐用年数が短い固定資産",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81",
+      "section": "第一・一般原則／第二・損益計算書原則／第三・貸借対照表原則・注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 218,
+      "title": "営業循環と一年基準",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81",
+      "section": "第一・一般原則／第二・損益計算書原則／第三・貸借対照表原則・注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 219,
+      "title": "取得原価を基礎とする考え方",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81",
+      "section": "第一・一般原則／第二・損益計算書原則／第三・貸借対照表原則・注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 220,
+      "title": "費用配分",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81",
+      "section": "第一・一般原則／第二・損益計算書原則／第三・貸借対照表原則・注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 228,
+      "title": "重要性の判断と簡便処理",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81",
+      "section": "第一・一般原則／第二・損益計算書原則／第三・貸借対照表原則・注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 229,
+      "title": "重要性と財務諸表の表示",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81",
+      "section": "第一・一般原則／第二・損益計算書原則／第三・貸借対照表原則・注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 267,
+      "title": "固定資産の取得原価",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81",
+      "section": "第一・一般原則／第二・損益計算書原則／第三・貸借対照表原則・注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 269,
+      "title": "土地と減価償却",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81",
+      "section": "第一・一般原則／第二・損益計算書原則／第三・貸借対照表原則・注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 274,
+      "title": "耐用年数の見積変更",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=39",
+      "section": "4項・17項・21項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 287,
+      "title": "除去に含まれる処分",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=72",
+      "section": "3～9項・13項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 288,
+      "title": "用途変更と遊休",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=72",
+      "section": "3～9項・13項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 289,
+      "title": "除去費用の見積り",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=72",
+      "section": "3～9項・13項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 291,
+      "title": "使用に応じて生じる除去債務",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=72",
+      "section": "3～9項・13項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 292,
+      "title": "除去費用の配分",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=72",
+      "section": "3～9項・13項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 293,
+      "title": "同一期に費用処理する取扱い",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=72",
+      "section": "3～9項・13項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 294,
+      "title": "個別法",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=24",
+      "section": "5項・6-2項・7項・34-1項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 296,
+      "title": "継続記録法と棚卸減耗",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=24",
+      "section": "5項・6-2項・7項・34-1項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 298,
+      "title": "総平均法と移動平均法の違い",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=24",
+      "section": "5項・6-2項・7項・34-1項",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 301,
+      "title": "減損の兆候とは",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=83",
+      "section": "二・減損損失の認識と測定／注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 302,
+      "title": "営業活動の損益・キャッシュフロー",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=83",
+      "section": "二・減損損失の認識と測定／注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 303,
+      "title": "経営環境の悪化と市場価格",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=83",
+      "section": "二・減損損失の認識と測定／注解",
+      "changed": false,
+      "questionRestored": true
+    },
+    {
+      "oldIndex": 310,
+      "title": "原価計算の目的",
+      "sourceUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=156",
+      "section": "1・原価計算の目的",
+      "changed": true,
+      "questionRestored": true
+    }
+  ]
+}

@@ -90,7 +90,7 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     let decodedPath; try { decodedPath = decodeURIComponent(url.pathname).normalize('NFC'); } catch { decodedPath = ''; }
-    if (["/pdf/企業会計の一般原則_7つの基本ルール.pdf", "/pdf/会計公準_企業会計を支える3つの前提.pdf", "/pdf/企業会計原則の全体像_3つの原則の役割.pdf"].includes(decodedPath)) return new Response(null, { status: 302, headers: { Location: '/accounting-materials-update', 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex' } });
+    if (["/pdf/会計公準_企業会計を支える3つの前提.pdf"].includes(decodedPath)) return new Response(null, { status: 302, headers: { Location: '/accounting-materials-update', 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex' } });
     if (["/pdf/japan_companies_top10_20260929.pdf", "/pdf/日本企業10社の比較評価_2026年9月29日時点.pdf", "/pdf/en/japan-companies-comparison.pdf", "/pdf/zh-Hans/japan-companies-comparison.pdf", "/pdf/es/japan-companies-comparison.pdf", "/pdf/zh-Hant/japan-companies-comparison.pdf", "/pdf/pt/japan-companies-comparison.pdf"].includes(decodedPath)) return new Response(null, { status: 302, headers: { Location: '/company-comparison-method', 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex' } });
     if (url.pathname === '/api/privacy/region') {
       if (request.method !== 'GET') return json({ error: 'Method not allowed' }, 405);

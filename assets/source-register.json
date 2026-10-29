@@ -24,12 +24,12 @@
       "file": "/pdf/企業会計の一般原則_7つの基本ルール.pdf",
       "title": "企業会計の一般原則｜7つの基本ルール",
       "lang": "ja",
-      "textCharacters": 1332,
-      "sourceUrls": [],
-      "status": "公開見合わせ：原資料との対応・利用条件の確認が済むまで配信を停止しています。SHA-256は旧版を特定するための記録です。",
-      "sha256": "752919ed1d676f839542d7bf3f11cb0d75d83f222b5dde4cac7437b4f2d4d9c9",
-      "withheld": true,
-      "replacement": "/accounting-materials-update"
+      "textCharacters": 1520,
+      "sourceUrls": [
+        "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81"
+      ],
+      "status": "2026年10月29日改訂・再公開。企業会計原則・同注解に対応する基本事項を独自の説明・例で再構成し、参照箇所を明記。旧版の転載許諾を取得したという意味ではありません。",
+      "sha256": "36108a160714cf4bf21de5de83d2310739fc52f84d07fc37347f3b648629b820"
     },
     {
       "file": "/pdf/欲望が経済を動かす_消費と購買心理.pdf",
@@ -576,12 +576,12 @@
       "file": "/pdf/企業会計原則の全体像_3つの原則の役割.pdf",
       "title": "企業会計原則の全体像｜3つの原則の役割",
       "lang": "ja",
-      "textCharacters": 859,
-      "sourceUrls": [],
-      "status": "公開見合わせ：原資料との対応・利用条件の確認が済むまで配信を停止しています。SHA-256は旧版を特定するための記録です。",
-      "sha256": "a816342427326a074ce65ac570cf00808ad4a7b20335b9c2d2d2d0f0561a7873",
-      "withheld": true,
-      "replacement": "/accounting-materials-update"
+      "textCharacters": 1048,
+      "sourceUrls": [
+        "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=81"
+      ],
+      "status": "2026年10月29日改訂・再公開。企業会計原則・同注解に対応する基本事項を独自の説明・例で再構成し、参照箇所を明記。旧版の転載許諾を取得したという意味ではありません。",
+      "sha256": "9ded64ce54eb2ceef04a65fde9694363d51709f59c514e8566f961e8456dd82e"
     },
     {
       "file": "/pdf/責任ある積極財政とは_政府投資の財源と財政の持続可能性.pdf",
