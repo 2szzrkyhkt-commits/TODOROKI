@@ -22,3 +22,5 @@
 @media(max-width:720px){.site-header .brand-row{gap:7px}.site-header .logo{font-size:clamp(15px,4.2vw,20px)}.site-header .account-link{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.site-header a{transition:none}}
 @media(max-width:380px){.site-header .brand-row{gap:5px}.site-header .logo{font-size:14px;letter-spacing:.07em}.site-header .account-link{padding:6px 5px;font-size:10px;gap:4px}.site-header .todoroki-language-picker{padding:3px 5px;gap:3px}.site-header .todoroki-language-picker select{min-width:75px;max-width:95px;font-size:11px}}
+
+@media(min-width:1201px){.site-header .brand-row{gap:16px}.site-header .desktop-links{gap:12px}.site-header .desktop-links a{font-size:12px}}
