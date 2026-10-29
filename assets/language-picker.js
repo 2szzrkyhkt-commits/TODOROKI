@@ -45,10 +45,14 @@ function addAnalysisLink(){
  const names={en:'Company analysis',es:'Análisis de empresas',pt:'Análise de empresas','zh-Hans':'企业分析工具','zh-Hant':'企業分析工具'};
  const locale=document.documentElement.lang||'ja';
  document.querySelectorAll('.site-header .desktop-links,.site-header .mobile-links').forEach(function(nav){
-  if(nav.querySelector('[data-equity-tool]'))return;
+  const existing=Array.from(nav.querySelectorAll('a')).filter(function(link){
+   const target=new URL(link.href,location.origin);
+   return link.hasAttribute('data-equity-tool')||target.origin===url||(target.origin===location.origin&&target.hash==='#company-analysis');
+  });
+  if(existing.length){const keep=existing.find(function(link){return new URL(link.href,location.origin).hash==='#company-analysis'})||existing[0];existing.forEach(function(link){if(link!==keep)link.remove()});keep.dataset.equityTool='';return;}
   const a=document.createElement('a');a.href=url;a.textContent=names[locale]||'企業分析ツール';a.target='_blank';a.rel='noopener';a.dataset.equityTool='';a.setAttribute('aria-label',a.textContent+' β版（日本語・新しいタブ）');
   const pdf=Array.from(nav.querySelectorAll('a')).find(function(link){return /\/pdf-library(?:\.html)?\/?$/.test(new URL(link.href,location.origin).pathname)});
-  if(pdf)pdf.insertAdjacentElement('afterend',a);else nav.appendChild(a);
+  const study=Array.from(nav.querySelectorAll('a')).find(function(link){return /\/boki1(?:\.html)?\/?$/.test(new URL(link.href,location.origin).pathname)});const anchor=study||pdf;if(anchor)anchor.insertAdjacentElement('afterend',a);else nav.appendChild(a);
  });
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',addAnalysisLink,{once:true});else addAnalysisLink();
