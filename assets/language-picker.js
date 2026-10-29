@@ -39,3 +39,17 @@ try{const saved=JSON.parse(sessionStorage.getItem('todoroki-language-scroll')||'
 if(current==='ja'){document.querySelectorAll('.site-header .desktop-links, .site-header .mobile-links').forEach(function(nav){if(!nav.querySelector('a[href="/boki1"]')){const a=document.createElement('a');a.href='/boki1';a.textContent='簿記を学ぶ';const first=nav.querySelector('a');if(first)first.insertAdjacentElement('afterend',a);else nav.appendChild(a)}})}
 document.querySelectorAll('[data-todoroki-language]').forEach(function(select){select.replaceChildren();locales.forEach(function(pair){const opt=document.createElement('option');opt.value=pair[0];opt.textContent=pair[1];select.appendChild(opt)});select.value=current;select.addEventListener('change',function(){changeLanguage(select.value)})});
 })();
+(function(){'use strict';
+function addAnalysisLink(){
+ const url='https://todoroki-equity-lab.easysquid66.chatgpt.site';
+ const names={en:'Company analysis',es:'Análisis de empresas',pt:'Análise de empresas','zh-Hans':'企业分析工具','zh-Hant':'企業分析工具'};
+ const locale=document.documentElement.lang||'ja';
+ document.querySelectorAll('.site-header .desktop-links,.site-header .mobile-links').forEach(function(nav){
+  if(nav.querySelector('[data-equity-tool]'))return;
+  const a=document.createElement('a');a.href=url;a.textContent=names[locale]||'企業分析ツール';a.target='_blank';a.rel='noopener';a.dataset.equityTool='';a.setAttribute('aria-label',a.textContent+' β版（日本語・新しいタブ）');
+  const pdf=Array.from(nav.querySelectorAll('a')).find(function(link){return /\/pdf-library(?:\.html)?\/?$/.test(new URL(link.href,location.origin).pathname)});
+  if(pdf)pdf.insertAdjacentElement('afterend',a);else nav.appendChild(a);
+ });
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',addAnalysisLink,{once:true});else addAnalysisLink();
+})();
