@@ -26,8 +26,10 @@
       "lang": "ja",
       "textCharacters": 1332,
       "sourceUrls": [],
-      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
-      "sha256": "752919ed1d676f839542d7bf3f11cb0d75d83f222b5dde4cac7437b4f2d4d9c9"
+      "status": "公開見合わせ：原資料との対応・利用条件の確認が済むまで配信を停止しています。SHA-256は旧版を特定するための記録です。",
+      "sha256": "752919ed1d676f839542d7bf3f11cb0d75d83f222b5dde4cac7437b4f2d4d9c9",
+      "withheld": true,
+      "replacement": "/accounting-materials-update"
     },
     {
       "file": "/pdf/欲望が経済を動かす_消費と購買心理.pdf",
@@ -197,8 +199,10 @@
       "lang": "ja",
       "textCharacters": 721,
       "sourceUrls": [],
-      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
-      "sha256": "f8cca5bf27f7af534a31065711efdbc77625cbc2cdf5439e3d66323879a3c516"
+      "status": "公開見合わせ：原資料との対応・利用条件の確認が済むまで配信を停止しています。SHA-256は旧版を特定するための記録です。",
+      "sha256": "f8cca5bf27f7af534a31065711efdbc77625cbc2cdf5439e3d66323879a3c516",
+      "withheld": true,
+      "replacement": "/accounting-materials-update"
     },
     {
       "file": "/pdf/quantum_computer_japan.pdf",
@@ -570,8 +574,10 @@
       "lang": "ja",
       "textCharacters": 859,
       "sourceUrls": [],
-      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
-      "sha256": "a816342427326a074ce65ac570cf00808ad4a7b20335b9c2d2d2d0f0561a7873"
+      "status": "公開見合わせ：原資料との対応・利用条件の確認が済むまで配信を停止しています。SHA-256は旧版を特定するための記録です。",
+      "sha256": "a816342427326a074ce65ac570cf00808ad4a7b20335b9c2d2d2d0f0561a7873",
+      "withheld": true,
+      "replacement": "/accounting-materials-update"
     },
     {
       "file": "/pdf/責任ある積極財政とは_政府投資の財源と財政の持続可能性.pdf",

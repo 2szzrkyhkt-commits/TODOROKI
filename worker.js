@@ -89,6 +89,8 @@ async function toolGate(request, env, path) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    let decodedPath; try { decodedPath = decodeURIComponent(url.pathname).normalize('NFC'); } catch { decodedPath = ''; }
+    if (["/pdf/企業会計の一般原則_7つの基本ルール.pdf", "/pdf/会計公準_企業会計を支える3つの前提.pdf", "/pdf/企業会計原則の全体像_3つの原則の役割.pdf"].includes(decodedPath)) return new Response(null, { status: 302, headers: { Location: '/accounting-materials-update', 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex' } });
     if (url.pathname === '/api/privacy/region') {
       if (request.method !== 'GET') return json({ error: 'Method not allowed' }, 405);
       const restricted = new Set(['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IS','IE','IT','LV','LI','LT','LU','MT','NL','NO','PL','PT','RO','SK','SI','ES','SE','GB','CH']);
