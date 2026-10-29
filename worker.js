@@ -44,7 +44,11 @@ async function limit(db, key, seconds, maximum) {
 }
 
 const TOOL_AUDIENCE = 'todoroki-us-economy-data';
-const TOOL_URL = 'https://todoroki-us-economy-data.easysquid66.chatgpt.site';
+const TOOLS = {
+us: {aud: TOOL_AUDIENCE, url:'https://todoroki-us-economy-data.easysquid66.chatgpt.site'},
+jp: {aud: 'todoroki-economy-data', url:'https://todoroki-economy-data.easysquid66.chatgpt.site'},
+equity: {aud: 'todoroki-equity-lab', url:'https://todoroki-equity-lab.easysquid66.chatgpt.site'}
+};
 const b64u = value => btoa(String.fromCharCode(...encoder.encode(JSON.stringify(value)))).replaceAll('+','-').replaceAll('/','_').replace(/=+$/,'');
 function unb64u(value) { return JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(value.replaceAll('-','+').replaceAll('_','/')), c=>c.charCodeAt(0)))); }
 async function toolFingerprint(secret, ua) { return sign(secret, 'tool-fingerprint-v1:' + ua); }
@@ -55,27 +59,28 @@ async function checkToolToken(secret, token) {
   const key=await crypto.subtle.importKey('raw',encoder.encode(secret),{name:'HMAC',hash:'SHA-256'},false,['verify']);
   const bytes=Uint8Array.from(parts[1].match(/../g), x=>parseInt(x,16));
   if(!await crypto.subtle.verify('HMAC',key,bytes,encoder.encode('tool-gate-v1:'+parts[0])))return null;
-  try {const p=unb64u(parts[0]);return p.aud===TOOL_AUDIENCE&&Number.isInteger(p.exp)&&p.exp>now()&&p.exp<=now()+1805?p:null;}catch{return null;}
+  try {const p=unb64u(parts[0]);return Object.values(TOOLS).some(t=>t.aud===p.aud)&&Number.isInteger(p.exp)&&p.exp>now()&&p.exp<=now()+1805?p:null;}catch{return null;}
 }
 async function toolGate(request, env, path) {
   const back=()=>new Response(null,{status:303,headers:{Location:ORIGIN+'/#company-analysis','Cache-Control':'no-store','Referrer-Policy':'no-referrer'}});
   if(!env.AUTH_SECRET||env.AUTH_SECRET.length<40)return json({error:'ツールの入場設定を確認してください。'},503);
-  if(path==='/api/tools/us') {
+  const tool = TOOLS[path.slice('/api/tools/'.length)];
+  if(tool) {
     if(request.method!=='GET')return json({error:'Method not allowed'},405);
     let ref;try{ref=new URL(request.headers.get('Referer')||'');}catch{return back();}
     if(ref.origin!==ORIGIN||!['same-origin','none',''].includes(request.headers.get('Sec-Fetch-Site')||''))return back();
     const fp=await toolFingerprint(env.AUTH_SECRET,request.headers.get('User-Agent')||'');
-    const token=await toolToken(env.AUTH_SECRET,{aud:TOOL_AUDIENCE,kind:'entry',iat:now(),exp:now()+60,fp,nonce:crypto.randomUUID()});
-    return new Response(null,{status:303,headers:{Location:TOOL_URL+'/enter?t='+token,'Cache-Control':'no-store','Referrer-Policy':'no-referrer','X-Robots-Tag':'noindex, nofollow'}});
+    const token=await toolToken(env.AUTH_SECRET,{aud:tool.aud,kind:'entry',iat:now(),exp:now()+60,fp,nonce:crypto.randomUUID()});
+    return new Response(null,{status:303,headers:{Location:tool.url+'/enter?t='+token,'Cache-Control':'no-store','Referrer-Policy':'no-referrer','X-Robots-Tag':'noindex, nofollow'}});
   }
   if(path==='/api/tools/verify') {
     if(request.method!=='POST')return json({error:'Method not allowed'},405);
     let input;try{input=await body(request);}catch{return json({valid:false},400);}
     const p=await checkToolToken(env.AUTH_SECRET,input?.token);
-    if(!p||!['entry','session'].includes(p.kind)||p.kind!==input.kind||typeof input.ua!=='string'||input.ua.length>700)return json({valid:false},403);
+    if(!p||p.aud!==(input.aud||TOOL_AUDIENCE)||!['entry','session'].includes(p.kind)||p.kind!==input.kind||typeof input.ua!=='string'||input.ua.length>700)return json({valid:false},403);
     const fp=await toolFingerprint(env.AUTH_SECRET,input.ua);
     if(p.fp!==fp)return json({valid:false},403);
-    if(p.kind==='entry')return json({valid:true,session:await toolToken(env.AUTH_SECRET,{aud:TOOL_AUDIENCE,kind:'session',iat:now(),exp:now()+1800,fp,nonce:crypto.randomUUID()}),expires:now()+1800});
+    if(p.kind==='entry')return json({valid:true,session:await toolToken(env.AUTH_SECRET,{aud:p.aud,kind:'session',iat:now(),exp:now()+1800,fp,nonce:crypto.randomUUID()}),expires:now()+1800});
     return json({valid:true,expires:p.exp});
   }
   return json({error:'Not found'},404);
