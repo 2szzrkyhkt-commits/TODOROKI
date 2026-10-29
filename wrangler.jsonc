@@ -16,8 +16,5 @@
       "database_name": "todoroki-members",
       "database_id": "1c5c2222-a57e-4098-bbb3-878774c676d6"
     }
-  ],
-  "vars": {
-    "SALES_ENABLED": "false"
-  }
+  ]
 }
