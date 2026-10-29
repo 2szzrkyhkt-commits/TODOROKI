@@ -136,8 +136,10 @@
       "lang": "ja",
       "textCharacters": 726,
       "sourceUrls": [],
-      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。 独自評価の配点・全計算根拠は未収録です。評価点を現在の買い推奨順位として扱わないでください。",
-      "sha256": "87b0948a30116b968387523160a040f124a32229968f56b7469a6edfecd47913"
+      "status": "公開見合わせ（2026年10月29日）：評価点の配点・根拠資料との対応を再現できる状態になるまで公開を停止しています。違法性が確定したという判断ではありません。SHA-256は旧版の記録です。",
+      "sha256": "87b0948a30116b968387523160a040f124a32229968f56b7469a6edfecd47913",
+      "withheld": true,
+      "replacement": "/company-comparison-method"
     },
     {
       "file": "/pdf/mRNAとAI創薬とは_技術の仕組みと関連企業.pdf",
@@ -363,8 +365,10 @@
       "lang": "ja",
       "textCharacters": 996,
       "sourceUrls": [],
-      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。 独自評価の配点・全計算根拠は未収録です。評価点を現在の買い推奨順位として扱わないでください。",
-      "sha256": "6476802bacc33eddc0bfc11e80a05ea71371a78441a49ab4f13940dfcd4e1771"
+      "status": "公開見合わせ（2026年10月29日）：評価点の配点・根拠資料との対応を再現できる状態になるまで公開を停止しています。違法性が確定したという判断ではありません。SHA-256は旧版の記録です。",
+      "sha256": "6476802bacc33eddc0bfc11e80a05ea71371a78441a49ab4f13940dfcd4e1771",
+      "withheld": true,
+      "replacement": "/company-comparison-method"
     },
     {
       "file": "/pdf/spacex_starship_japan.pdf",
@@ -801,8 +805,10 @@
       "lang": "en",
       "textCharacters": 1826,
       "sourceUrls": [],
-      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
-      "sha256": "23ce15ae786101cbcef4adaf52c443482061f8acc116142da445e8b599c63d19"
+      "status": "公開見合わせ（2026年10月29日）：評価点の配点・根拠資料との対応を再現できる状態になるまで公開を停止しています。違法性が確定したという判断ではありません。SHA-256は旧版の記録です。",
+      "sha256": "23ce15ae786101cbcef4adaf52c443482061f8acc116142da445e8b599c63d19",
+      "withheld": true,
+      "replacement": "/company-comparison-method"
     },
     {
       "file": "/pdf/en/discounted-utility.pdf",
@@ -1345,8 +1351,10 @@
       "lang": "zh-Hans",
       "textCharacters": 825,
       "sourceUrls": [],
-      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
-      "sha256": "30ae675c595984eb9cb1c4af401e021c37d76a0d337affcec7c646d689d87e09"
+      "status": "公開見合わせ（2026年10月29日）：評価点の配点・根拠資料との対応を再現できる状態になるまで公開を停止しています。違法性が確定したという判断ではありません。SHA-256は旧版の記録です。",
+      "sha256": "30ae675c595984eb9cb1c4af401e021c37d76a0d337affcec7c646d689d87e09",
+      "withheld": true,
+      "replacement": "/company-comparison-method"
     },
     {
       "file": "/pdf/zh-Hans/discounted-utility.pdf",
@@ -1889,8 +1897,10 @@
       "lang": "es",
       "textCharacters": 2012,
       "sourceUrls": [],
-      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
-      "sha256": "e148bc3332b3ebff8830e65cfd245340d1863a0b324eb685352a94ba82d2f7b8"
+      "status": "公開見合わせ（2026年10月29日）：評価点の配点・根拠資料との対応を再現できる状態になるまで公開を停止しています。違法性が確定したという判断ではありません。SHA-256は旧版の記録です。",
+      "sha256": "e148bc3332b3ebff8830e65cfd245340d1863a0b324eb685352a94ba82d2f7b8",
+      "withheld": true,
+      "replacement": "/company-comparison-method"
     },
     {
       "file": "/pdf/es/discounted-utility.pdf",
@@ -2433,8 +2443,10 @@
       "lang": "zh-Hant",
       "textCharacters": 823,
       "sourceUrls": [],
-      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
-      "sha256": "15a9b776b0d324235f0ed4c72cb0058b62b71908bfb70293eba117eafd460f00"
+      "status": "公開見合わせ（2026年10月29日）：評価点の配点・根拠資料との対応を再現できる状態になるまで公開を停止しています。違法性が確定したという判断ではありません。SHA-256は旧版の記録です。",
+      "sha256": "15a9b776b0d324235f0ed4c72cb0058b62b71908bfb70293eba117eafd460f00",
+      "withheld": true,
+      "replacement": "/company-comparison-method"
     },
     {
       "file": "/pdf/zh-Hant/discounted-utility.pdf",
@@ -2977,8 +2989,10 @@
       "lang": "pt",
       "textCharacters": 1983,
       "sourceUrls": [],
-      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
-      "sha256": "1363d90843eccecfd06cec0e017d2e2897920e7b850a089fcecbc8b72813f54b"
+      "status": "公開見合わせ（2026年10月29日）：評価点の配点・根拠資料との対応を再現できる状態になるまで公開を停止しています。違法性が確定したという判断ではありません。SHA-256は旧版の記録です。",
+      "sha256": "1363d90843eccecfd06cec0e017d2e2897920e7b850a089fcecbc8b72813f54b",
+      "withheld": true,
+      "replacement": "/company-comparison-method"
     },
     {
       "file": "/pdf/pt/discounted-utility.pdf",
