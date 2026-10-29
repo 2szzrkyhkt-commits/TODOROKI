@@ -59,7 +59,7 @@
         <label for="email">メールアドレス</label>
         <input id="email" type="email" autocomplete="email" maxlength="254" required placeholder="you@example.com" spellcheck="false" autocapitalize="none">
         <button type="submit">認証コードを送る</button>
-        <p class="small">初めてログインする場合は、メール認証後にアカウントが作成されます。記事の購入時も同じメールアドレスをご利用ください。</p>
+        <p class="small">初めてログインする場合は、メール認証後にアカウントが作成されます。</p>
       </form>
       <div id="code-step" hidden>
         <p class="small" style="margin-top:0">認証コードの送信先</p><p class="email" id="destination"></p>
@@ -74,7 +74,7 @@
       </div>
       <div id="member-step" hidden>
         <p>ログインしています</p><p class="email" id="member-email"></p>
-        <a class="button" href="/premium">購入済みPDFを確認</a>
+        <a class="button" href="/pdf-library">無料PDFを見る</a>
         <button type="button" class="secondary" id="logout">ログアウト</button>
       </div>
       <p class="status" id="status" role="status" aria-live="polite"></p>
@@ -85,12 +85,6 @@
   <footer>© TODOROKI<p><a href="/site-map">サイトマップ</a></p></footer>
   <script>
     const get = id => document.getElementById(id);
-    // Only the premium page and a validated checkout session may be used as a return destination.
-    const requestedNext = new URLSearchParams(location.search).get('next');
-    const returnPath = typeof requestedNext === 'string' &&
-      /^\/premium\.html(?:\?session_id=cs_(?:test|live)_[A-Za-z0-9_]{1,240})?$/.test(requestedNext)
-      ? requestedNext : null;
-    if (returnPath) document.querySelectorAll('a[href="/premium.html"]').forEach(link => link.href = returnPath);
     let email = '';
     let busy = false;
     let resendAt = 0;
@@ -155,7 +149,6 @@
         if (!data.member) throw new Error('ログイン状態を保存できませんでした。Cookieの設定をご確認ください。');
         get('member-email').textContent = data.member.email;
         show('member'); status('ログインしました。');
-        if (returnPath) location.replace(returnPath);
       });
     });
     get('logout').addEventListener('click', () => action(async () => {
@@ -165,7 +158,7 @@
     action(async () => {
       status('ログイン状態を確認しています…');
       const data = await api('me');
-      if (data.member) { get('member-email').textContent = data.member.email; show('member'); if (returnPath) location.replace(returnPath); }
+      if (data.member) { get('member-email').textContent = data.member.email; show('member'); }
       status('');
     });
   </script>
