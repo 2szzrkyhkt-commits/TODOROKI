@@ -2,15 +2,10 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+<script src="/assets/privacy-controls.js" defer></script>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNSX8VRZ2S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-ZNSX8VRZ2S');
-</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>プライバシーポリシー | TODOROKI</title>
@@ -116,7 +111,7 @@ TODOROKI（以下「当サイト」）は、
 <p>認証コードの送信にはResendを、アカウント情報の保存にはCloudflare D1を利用します。メールアドレスを公開したり、広告・アクセス解析のために送信したりすることはありません。新着記事や広告などの案内配信には、別途希望した方の同意を得てから利用します。</p>
 <p>登録情報の確認・訂正・削除のご希望は、<a href="/contact">お問い合わせ</a>からご連絡ください。本人確認のうえ対応します。アカウント情報は利用目的に必要な期間保持し、不要になった情報は適切に削除します。</p>
 
-<h2>お問い合わせフォームについて</h2>
+<h2 id="contact-transfer">お問い合わせフォームについて</h2><p>送信先は米国のFormspree, Inc.です。問い合わせの氏名・メールアドレス・本文・通信情報を米国等で取り扱う場合があります。日本と同一の個人情報保護制度ではありません。事業者は米国以外で処理する可能性も公表していますが、個別の取扱国すべては当サイトから特定できません。事業者の<a href="https://formspree.io/legal/privacy-policy/">取扱方針・保護措置・利用者の権利</a>と<a href="https://www.ppc.go.jp/en/legal/">日本の制度</a>をご確認のうえ、送信前に同意を選択してください。</p>
 <p>
 当サイトでは、お問い合わせの受付に
 Formspree（外部フォームサービス）を利用しています。
@@ -136,7 +131,7 @@ Formspreeのプライバシーポリシー
 </p>
 
 <h2>広告について</h2>
-<p>当サイトはGoogle AdSenseに申請しており、承認後にGoogleおよびそのパートナーの広告を掲載する予定です。サイトにはGoogleの広告用コードを設置しています。</p>
+<p>当サイトはGoogle AdSenseの広告用コードを設置しています。広告の実際の配信はGoogleの承認・設定等によります。任意の広告・解析の読込みは利用者の選択に応じて行います。</p>
 <p>Googleなどの第三者広告配信事業者はCookie等を使用し、当サイトや他のウェブサイトへの過去のアクセス情報に基づいて広告を配信する場合があります。Googleの広告Cookieにより、Googleおよびそのパートナーが利用者の関心に応じた広告（パーソナライズド広告）を表示する場合があります。</p>
 <p>Googleの広告に関する設定は<a href="https://www.google.com/settings/ads">Googleの広告設定</a>から確認・変更でき、パーソナライズド広告を無効にできます。Googleによる情報の利用については、<a href="https://policies.google.com/technologies/ads?hl=ja">広告に関するGoogleのポリシー</a>をご確認ください。</p>
 <p>第三者配信事業者や広告ネットワークのCookieが使われる場合もあります。一部の事業者によるパーソナライズド広告の設定は、<a href="https://www.aboutads.info/">AboutAds.info</a>で確認できます。Cookieはブラウザの設定でも管理できます。広告のパーソナライズを無効にしても、広告自体の表示がなくなるとは限りません。</p>
@@ -175,7 +170,7 @@ Googleアナリティクス オプトアウト アドオン
 を利用して、Googleアナリティクスへの情報送信を停止できます。
 </p>
 
-<h2>免責事項</h2>
+<section><h2>安全管理と外部委託</h2><p>通信にはHTTPSを使用し、認証コードには有効期限・試行回数制限・送信回数制限を設けています。認証コードの検証値・セッショントークンの検証値はハッシュ等で保存し、セッションCookieにはHttpOnly・Secure・SameSite属性を使用します。これらはコード上の対策であり、事故が発生しないことを保証するものではありません。</p><p>Cloudflareは米国の事業者で、グローバルな設備・委託先を通じて処理する場合があります。<a href="https://www.cloudflare.com/trust-hub/appi/">日本の個人情報保護法への対応</a>と<a href="https://www.cloudflare.com/cloudflare-customer-dpa/">データ処理条件</a>を公表しています。個別の保存国・管理画面上の設定はサービス構成により異なります。</p><p>認証メールの送信先は米国のResend（Plus Five Five, Inc.）です。メールアドレスと認証コードを含むメール内容を送信し、配信・運用のため米国の委託先が処理する場合があります。日本と同一の個人情報保護制度ではありません。<a href="https://www.ppc.go.jp/en/legal/">日本の個人情報保護制度</a>、<a href="https://resend.com/legal/dpa">Resendの保護措置・処理条件</a>、<a href="https://resend.com/legal/subprocessors">再委託先</a>を確認したうえで、ログイン画面で同意する場合に送信します。Resendは契約終了後90日以内の顧客データ削除等を公表しています。</p><p>外部送信への同意記録はメールアドレスのハッシュ値・同意日時・説明の版を記録します。保存期間は原則1年で、期限を過ぎた記録は次回の認証メール送信処理時に削除します。</p><p>保有個人データに関する利用目的の通知・開示・訂正・削除・利用停止、安全管理措置の概要、運営者情報については、<a href="/contact">お問い合わせ窓口</a>で受け付けます。必要に応じて本人確認を行い、法令に従って対応します。すべての削除等のご希望に応じられることを保証するものではありません。</p><p>広告・解析等の送信先・情報・利用目的と設定の変更は<a href="/data-use">広告・外部送信</a>をご確認ください。</p></section><h2>免責事項</h2>
 <p>
 当サイトに掲載する投資・経済情報は、
 一般的な情報提供を目的とするものであり、
@@ -206,7 +201,7 @@ PDFなどの無断転載・無断複製を禁止します。
 
 <footer>
 © 2026 TODOROKI. All rights reserved.
-<nav class="todoroki-info-nav" aria-label="TODOROKI"><a href="/about">このサイトについて</a><a href="/privacy">プライバシー</a><a href="/contact">お問い合わせ</a></nav><p><a href="/site-map">サイトマップ</a></p></footer>
+<nav class="todoroki-info-nav" aria-label="TODOROKI"><a href="/about">このサイトについて</a><a href="/privacy">プライバシー</a><a href="/contact">お問い合わせ</a></nav><p><a href="/site-map">サイトマップ</a></p><nav class="todoroki-info-nav" aria-label="運営方針 / Policies" style="margin:16px 0;font-size:13px"><a href="/editorial-policy">編集・利用方針 / Editorial policy</a> · <a href="/data-use">広告・外部送信 / Data use</a> · <a href="/sources">資料の出典 / Sources</a></nav></footer>
 
 </body>
 </html>

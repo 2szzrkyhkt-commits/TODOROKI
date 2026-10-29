@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="ja">
 <head>
+<script src="/assets/privacy-controls.js" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,follow">
@@ -10,7 +11,7 @@
 :root{color-scheme:dark}[hidden]{display:none!important}*{box-sizing:border-box}body{margin:0;background:#080808;color:#eee9dc;font:15px/1.8 system-ui,sans-serif}header{padding:16px max(20px,4vw);border-bottom:1px solid #4b3d20;display:flex;gap:14px;align-items:center;flex-wrap:wrap}.logo{color:#f4d77b;font-size:20px;font-weight:800;letter-spacing:.14em;text-decoration:none}.tools{display:flex;flex-wrap:wrap;gap:10px;margin-left:auto}a{color:#e5c56e}a:focus-visible{outline:2px solid #fff;outline-offset:4px}.tools a{display:inline-flex;align-items:center;min-height:44px;border:1px solid #67532b;border-radius:6px;padding:7px 15px;text-decoration:none}.tools a:hover{background:#211c10}main{max-width:1280px;margin:auto;padding:22px 20px 36px}h1{font-size:clamp(19px,3vw,27px);line-height:1.6;margin:0 0 12px;overflow-wrap:anywhere}.help{font-size:13px;color:#bcb5a6;margin:0 0 18px}iframe{display:block;width:100%;height:78vh;min-height:440px;border:1px solid #554628;border-radius:6px;background:#1a1915}#status{color:#d5bf80}.related{margin-top:20px;display:flex;gap:20px;flex-wrap:wrap}.related a{min-height:44px;display:inline-flex;align-items:center}@media(max-width:600px){header{padding:12px 16px}.tools{width:100%;margin:0}.tools a{flex:1;justify-content:center;padding:7px 9px;font-size:13px}main{padding:20px 14px}iframe{height:68vh;min-height:360px}}
 </style>
 <script src="/assets/site-header.js" defer></script><script src="/assets/language-picker.js" defer></script><script src="/assets/pdf-viewer.js" defer></script>
-<link rel="stylesheet" href="/assets/language-picker.css"><link rel="stylesheet" href="/assets/site-header.css"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7179318481718851" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/assets/language-picker.css"><link rel="stylesheet" href="/assets/site-header.css">
 <link rel="stylesheet" href="/assets/site-quality.css"></head>
 <body><a class="skip-link" href="#main-content">本文へ移動</a>
 <header class="site-header">
@@ -50,6 +51,6 @@
 <p id="status" role="status" aria-live="polite">PDFを確認しています…</p>
 <div id="document"></div>
 <nav class="related" aria-label="PDF"><a id="direct" hidden target="_blank" rel="noopener">PDFを直接開く ↗</a><a id="article" hidden>関連記事へ →</a></nav>
-</main>
-</body>
+<p id="pdf-source-note" style="font-size:13px;color:#cfc3a2">資料の作成時点・引用・数値の確認状況は<a id="pdf-source-link" href="/sources">資料の出典・確認状況</a>をご確認ください。</p><aside aria-label="広告：ネットオフ" style="margin:24px 0;padding:18px;border:1px solid #554526"><p style="font-size:12px">広告・PR｜アフィリエイト広告</p><a href="https://ad2.trafficgate.net/t/r/352/45/319542_399447" target="_blank" rel="nofollow sponsored noopener noreferrer">経済・ビジネスの中古書籍をネットオフで探す →</a></aside></main>
+<script>document.getElementById("pdf-source-link").href="/sources?file="+encodeURIComponent(new URLSearchParams(location.search).get("file")||"");</script><footer style="text-align:center;padding:20px"><a href="/privacy">プライバシー</a> · <a href="/data-use">広告・外部送信</a> · <a href="/editorial-policy">編集・利用方針</a></footer></body>
 </html>

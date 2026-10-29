@@ -1,0 +1,3441 @@
+{
+  "checked": "2026-10-29",
+  "scope": "本文の機械抽出による点検。権利者との照合・全事実の裏付け確認とは別です。",
+  "pdfs": [
+    {
+      "file": "/pdf/singularity.pdf",
+      "title": "シンギュラリティとは｜AIの進化と社会の変化",
+      "lang": "ja",
+      "textCharacters": 428,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "912ded86f6266610c62ea47a625971b412c4529763d499754ae532bb9131285c"
+    },
+    {
+      "file": "/pdf/PHPの重大な脆弱性と対策_PHP2Shell.pdf",
+      "title": "PHPの重大な脆弱性と対策｜PHP2Shell",
+      "lang": "ja",
+      "textCharacters": 1982,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "8d3acf02c98f8c5195d401dd018a1261240123e0651710eebccb6f63c2c9f5f1"
+    },
+    {
+      "file": "/pdf/企業会計の一般原則_7つの基本ルール.pdf",
+      "title": "企業会計の一般原則｜7つの基本ルール",
+      "lang": "ja",
+      "textCharacters": 1332,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "752919ed1d676f839542d7bf3f11cb0d75d83f222b5dde4cac7437b4f2d4d9c9"
+    },
+    {
+      "file": "/pdf/欲望が経済を動かす_消費と購買心理.pdf",
+      "title": "欲望が経済を動かす｜消費と購買心理",
+      "lang": "ja",
+      "textCharacters": 809,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "73a8bcceb62f17e89cce583c418d769d859a4fcd97b4514b4a9c8002d88c4903"
+    },
+    {
+      "file": "/pdf/russia_ukraine_war.pdf",
+      "title": "ロシア・ウクライナ戦争｜長期化の背景と日本企業への影響",
+      "lang": "ja",
+      "textCharacters": 1149,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "19f088c0fd5b2bf2d963c5f8aa09ed8247bfcb556b16ed250af8cd3cca764523"
+    },
+    {
+      "file": "/pdf/FRBとは_米国金融政策と株価・為替の関係.pdf",
+      "title": "FRBとは｜米国金融政策と株価・為替の関係",
+      "lang": "ja",
+      "textCharacters": 966,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "b2104d1d3fd166c73d9884a098c562798aed6d5fcd85863afd99393c55538f00"
+    },
+    {
+      "file": "/pdf/社会的選好と情報共有_仕事仲間の協力.pdf",
+      "title": "社会的選好と情報共有_仕事仲間の協力",
+      "lang": "ja",
+      "textCharacters": 919,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "f1001d1cb28de14f35db8d362f881efe4e53369f6e136a291c26141acdb9cb75"
+    },
+    {
+      "file": "/pdf/spintronics_mram.pdf",
+      "title": "スピントロニクスとは｜MRAMの仕組みと日本企業",
+      "lang": "ja",
+      "textCharacters": 1120,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "982bf7ab95b1d507e111cb465d8f1b65aa761771cd1e71671f6236fd2269a5a7"
+    },
+    {
+      "file": "/pdf/インタレストカバレッジレシオ_利息支払能力の見方.pdf",
+      "title": "インタレスト・カバレッジ・レシオ｜利息支払能力の見方",
+      "lang": "ja",
+      "textCharacters": 270,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "4bd46578c015b5504f57da9fca19c4b1ec9941fe4516236d6608de1f9efd085f"
+    },
+    {
+      "file": "/pdf/金利上昇と株価の関係_株価に影響する4つの仕組み.pdf",
+      "title": "金利上昇と株価の関係｜株価に影響する4つの仕組み",
+      "lang": "ja",
+      "textCharacters": 867,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "884749e34fcfed6fdcf6c0bee0a77882f39b57bba22d66c1ff95dcd004a55498"
+    },
+    {
+      "file": "/pdf/グローバル化_黒金PDF.pdf",
+      "title": "グローバル化が経済と企業に与える影響",
+      "lang": "ja",
+      "textCharacters": 1114,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "f0294dbf6cd9894640fe36d1848108f06827f2a0d4584200271c23f445bb4840"
+    },
+    {
+      "file": "/pdf/ヒト・モノ・カネ_企業価値の源泉_黒金.pdf",
+      "title": "ヒト・モノ・カネ ― 企業価値の源泉",
+      "lang": "ja",
+      "textCharacters": 917,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "161f50186747b64e12ad7597a8e51db36a5af423f1359b8e9b24773ebec7d600"
+    },
+    {
+      "file": "/pdf/blue_collar_wages.pdf",
+      "title": "ブルーカラーの価値と賃金｜学歴・技能・教育投資を考える",
+      "lang": "ja",
+      "textCharacters": 978,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "5cc0a44ad4751034d002b58ad1b6ddb6f776677c395887fdbd7bf80977042956"
+    },
+    {
+      "file": "/pdf/graham_earnings_power.pdf",
+      "title": "グレアムの収益力分析｜10年の純利益から企業を見る",
+      "lang": "ja",
+      "textCharacters": 839,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "1a489d4978d0d91a9ed417f1b5a443a73702747ce3adfd749b5aa1c112b77c31"
+    },
+    {
+      "file": "/pdf/japan_companies_top10_20260929.pdf",
+      "title": "日本企業10社の比較評価｜2026年9月29日時点",
+      "lang": "ja",
+      "textCharacters": 726,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。 独自評価の配点・全計算根拠は未収録です。評価点を現在の買い推奨順位として扱わないでください。",
+      "sha256": "87b0948a30116b968387523160a040f124a32229968f56b7469a6edfecd47913"
+    },
+    {
+      "file": "/pdf/mRNAとAI創薬とは_技術の仕組みと関連企業.pdf",
+      "title": "mRNAとAI創薬とは｜技術の仕組みと関連企業",
+      "lang": "ja",
+      "textCharacters": 1365,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "e1d8e994a26c63fa51eb3431c28c5a204483f4c96d3279cd88c927c294b8b6bd"
+    },
+    {
+      "file": "/pdf/マネーサプライとは何か_お金の量と経済の関係.pdf",
+      "title": "マネーサプライとは何か｜お金の量と経済の関係",
+      "lang": "ja",
+      "textCharacters": 1071,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "889ba23d9415f1b337f94e7f979790c63952ca144e8036fd95690975a894ba7c"
+    },
+    {
+      "file": "/pdf/Amazon輸入ビジネス_価格差と相乗り販売_修正版.pdf",
+      "title": "Amazon輸入ビジネス_価格差と相乗り販売_修正版",
+      "lang": "ja",
+      "textCharacters": 0,
+      "sourceUrls": [],
+      "status": "画像主体のため本文の機械抽出ができません。画像・引用・原資料の確認が必要です。",
+      "sha256": "905d982b995da738064d2766abf0244fbbd98b8920731a20602cc6d687c3fc66"
+    },
+    {
+      "file": "/pdf/inflation_capital_cost_best_owner_black_gold.pdf",
+      "title": "インフレ時代の資本コストとベストオーナー",
+      "lang": "ja",
+      "textCharacters": 971,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "750a0c1dc842e1a4dd18497ec4c968f417fc963468e5634b3eb5a4e6d9b1d672"
+    },
+    {
+      "file": "/pdf/Switch2関連半導体株の見通し_2026年9月23日.pdf",
+      "title": "Switch 2関連 半導体株の見通し",
+      "lang": "ja",
+      "textCharacters": 1199,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "d6fba26b848d7b8a0cd62baad523b1820a49fdd7b76bc313c61304f3027ad03b"
+    },
+    {
+      "file": "/pdf/行動経済学_投資判断をゆがめる7つの心理.pdf",
+      "title": "行動経済学｜投資判断をゆがめる7つの心理",
+      "lang": "ja",
+      "textCharacters": 1515,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "2a61d15dcefdafd0af72b1be41f5eea293a0022e1f304c2508701baffd5bed75"
+    },
+    {
+      "file": "/pdf/会計公準_企業会計を支える3つの前提.pdf",
+      "title": "会計公準｜企業会計を支える3つの前提",
+      "lang": "ja",
+      "textCharacters": 721,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "f8cca5bf27f7af534a31065711efdbc77625cbc2cdf5439e3d66323879a3c516"
+    },
+    {
+      "file": "/pdf/quantum_computer_japan.pdf",
+      "title": "量子コンピュータの仕組みと日本の関連銘柄",
+      "lang": "ja",
+      "textCharacters": 1436,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "f2fc7f6c825bbf91a14757a733eb5c9a4a97b95b8099390d366d4dee325266ca"
+    },
+    {
+      "file": "/pdf/GPT-6_Astraとは_特徴と活用法.pdf",
+      "title": "GPT-6 Astraとは｜特徴と活用法",
+      "lang": "ja",
+      "textCharacters": 1328,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "ffd9224e9fe45816b4b0c566c185703f67bd75bdb1e7433112948e16e3b39fcb"
+    },
+    {
+      "file": "/pdf/金利上昇と日本株_株価に伝わる仕組み.pdf",
+      "title": "金利上昇と日本株｜株価に伝わる仕組みと日本の利上げ",
+      "lang": "ja",
+      "textCharacters": 3100,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "34509516414ce03a743051a4903b81dc8184a82089cbcb55a2db9a1457f86827"
+    },
+    {
+      "file": "/pdf/成功から学ぶ方法と成功体験の罠.pdf",
+      "title": "成功から学ぶ方法と成功体験の罠｜サクセスラーニング",
+      "lang": "ja",
+      "textCharacters": 2930,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "348741d17464bc5d05e87d57638ff31dca8f4662bbcb629d224b19b85e5502cd"
+    },
+    {
+      "file": "/pdf/physical_ai.pdf",
+      "title": "フィジカルAIとは｜仕組みと日本企業の関連領域",
+      "lang": "ja",
+      "textCharacters": 1350,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "e0378d3f0994666482015ebbae35c0a81a4f54da74d4cc5998f0a9e7592045e6"
+    },
+    {
+      "file": "/pdf/意思決定を磨く思考法_演繹と帰納と行動科学.pdf",
+      "title": "意思決定を磨く思考法｜演繹と帰納と行動科学",
+      "lang": "ja",
+      "textCharacters": 1378,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "e7010e9b632c55cf8afef0c4760f166af5e8982d8bd54fa1055586059bd8a000"
+    },
+    {
+      "file": "/pdf/貸借倍率_信用需給と株価の読み方.pdf",
+      "title": "貸借倍率｜信用需給と株価の読み方",
+      "lang": "ja",
+      "textCharacters": 282,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "e093efa2ef61afd673916f072068d7b435e17fc986aa8ee00764c896a52158c7"
+    },
+    {
+      "file": "/pdf/MBOを狙う_企業価値と株価の差を読む.pdf",
+      "title": "MBOを狙う｜企業価値と株価の差を読む",
+      "lang": "ja",
+      "textCharacters": 2190,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "3ea31784c60cff828729be0aed378dcef8537bf7cb681132e11d3a992546567e"
+    },
+    {
+      "file": "/pdf/NANDフラッシュメモリとは_市場構造と関連企業.pdf",
+      "title": "NANDフラッシュメモリとは｜市場構造と関連企業",
+      "lang": "ja",
+      "textCharacters": 928,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "bf232a6d0ded654a3b3911642d9949e61907740d7758ad00fe6bc9d96a1a7021"
+    },
+    {
+      "file": "/pdf/nikkei_100k_black_gold.pdf",
+      "title": "日経平均10万円時代は来るのか",
+      "lang": "ja",
+      "textCharacters": 1128,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "5acc64d37c5868b26631ba3372783e198f945e223c58d9ce8d481f966a3b3924"
+    },
+    {
+      "file": "/pdf/リベラルと保守_考え方と違いを読み解く.pdf",
+      "title": "リベラルと保守｜考え方と違いを読み解く",
+      "lang": "ja",
+      "textCharacters": 1425,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "4aed71f27a0ebd2c19c38467f031225a34678ba959be0866d0aacc3f2bffeef9"
+    },
+    {
+      "file": "/pdf/Amazon輸入ビジネス_価格差と相乗り販売_閲覧用.pdf",
+      "title": "Amazon輸入ビジネス｜価格差と相乗り販売",
+      "lang": "ja",
+      "textCharacters": 0,
+      "sourceUrls": [],
+      "status": "画像主体のため本文の機械抽出ができません。画像・引用・原資料の確認が必要です。",
+      "sha256": "cf59cf201434eddc1a2c8cf4915b2b5a9f3e2cd772b85a716de5fb28f451c1a6"
+    },
+    {
+      "file": "/pdf/M&Aと資本配分_企業価値を高める再編の見方.pdf",
+      "title": "M&Aと資本配分｜企業価値を高める再編の見方",
+      "lang": "ja",
+      "textCharacters": 4418,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "044b9fda00a56266d49b0a8f1612febebeec593b26b472007774abd27057ef48"
+    },
+    {
+      "file": "/pdf/エヌビディアはどんな企業か.pdf",
+      "title": "エヌビディアはどんな企業か",
+      "lang": "ja",
+      "textCharacters": 294,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "8500595a8b8edd767f31e329b8bfbce20fec0681b928212bb75fb05e3809de1a"
+    },
+    {
+      "file": "/pdf/社会的選好と情報共有_仕事仲間の協力_改訂版.pdf",
+      "title": "社会的選好と情報共有｜協力とフリーライド",
+      "lang": "ja",
+      "textCharacters": 919,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "f1001d1cb28de14f35db8d362f881efe4e53369f6e136a291c26141acdb9cb75"
+    },
+    {
+      "file": "/pdf/EUVとは何か_半導体の微細化を支える技術.pdf",
+      "title": "EUVとは何か｜半導体の微細化を支える技術",
+      "lang": "ja",
+      "textCharacters": 689,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "9b265bb5400dee13378248041b9bf0587396241b6fe7870e0f9cd72f44edbbf9"
+    },
+    {
+      "file": "/pdf/米国中間選挙と株価の関係.pdf",
+      "title": "米国中間選挙と株価の関係",
+      "lang": "ja",
+      "textCharacters": 958,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "488fac4d4f8734fb519866009cd0c553800c6bbb2faba89d5eae54a58b0ab98f"
+    },
+    {
+      "file": "/pdf/日本企業10社の比較評価_2026年9月29日時点.pdf",
+      "title": "日本企業10社の比較評価｜2026年9月29日時点",
+      "lang": "ja",
+      "textCharacters": 996,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。 独自評価の配点・全計算根拠は未収録です。評価点を現在の買い推奨順位として扱わないでください。",
+      "sha256": "6476802bacc33eddc0bfc11e80a05ea71371a78441a49ab4f13940dfcd4e1771"
+    },
+    {
+      "file": "/pdf/spacex_starship_japan.pdf",
+      "title": "SpaceXとStarship｜宇宙輸送の変革と日本企業との接点",
+      "lang": "ja",
+      "textCharacters": 1706,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "d1ad4ea1ba0d2658a645aeeb918c931fcfef2c870d35fa7c093fd051818fbf73"
+    },
+    {
+      "file": "/pdf/tax_cuts_schroeder_reform_black_gold.pdf",
+      "title": "減税とシュレーダー改革",
+      "lang": "ja",
+      "textCharacters": 1403,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "ac286b27be6d786c41402916e0770706bf074d6905f445220c9ca4d73f78ad45"
+    },
+    {
+      "file": "/pdf/ビッグマック指数から見る円とドル.pdf",
+      "title": "ビッグマック指数から見る円とドル",
+      "lang": "ja",
+      "textCharacters": 1266,
+      "sourceUrls": [
+        "https://github.com/TheEconomist/big-mac-data"
+      ],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "80101d9d1a524f69492dcbae56df5db298f73ed34fe821aeaa6c842939d966c7"
+    },
+    {
+      "file": "/pdf/社会的選好_情報共有_フリーライド_黒金.pdf",
+      "title": "社会的選好_情報共有_フリーライド_黒金",
+      "lang": "ja",
+      "textCharacters": 919,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "f1001d1cb28de14f35db8d362f881efe4e53369f6e136a291c26141acdb9cb75"
+    },
+    {
+      "file": "/pdf/AI時代の現場技能と価格決定力_適正価格をつくる仕組み.pdf",
+      "title": "AI時代の現場技能と価格決定力｜適正価格をつくる仕組み",
+      "lang": "ja",
+      "textCharacters": 1565,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "c1e9f59dd0a9220d7482d7ba2b79699501188fc08bfbd6f384d7f4e39af32142"
+    },
+    {
+      "file": "/pdf/成功体験が人と企業を弱くする理由_黒金.pdf",
+      "title": "成功体験の罠 ― 人と企業が衰退する理由",
+      "lang": "ja",
+      "textCharacters": 580,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "211836de8286196cd09267f2bb9164967afd579bfe6a34c10041a6db0ebe75d7"
+    },
+    {
+      "file": "/pdf/企業も自習だけでは伸びない_黒金4枚.pdf",
+      "title": "企業は自習だけでは成長できない",
+      "lang": "ja",
+      "textCharacters": 744,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "307f6e45d0a638bb39c4bf60d431524f0ebfc3b6ffbfa7708808ae5df2be0e02"
+    },
+    {
+      "file": "/pdf/半導体の種類_材料と用途から理解する.pdf",
+      "title": "半導体の種類｜材料と用途から理解する",
+      "lang": "ja",
+      "textCharacters": 329,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "ff393fba49b8cd0722b351eb475f2461198000b0c9529ef447446ee561cbbc50"
+    },
+    {
+      "file": "/pdf/半導体設計を担う日本企業_関連5銘柄.pdf",
+      "title": "半導体設計を担う日本企業｜関連5銘柄",
+      "lang": "ja",
+      "textCharacters": 1631,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "b4abd9b67e6180781e0047d4f9de586102a0ceab3b738b5025ce05dde1f1248e"
+    },
+    {
+      "file": "/pdf/diode_transistor_mosfet.pdf",
+      "title": "ダイオード・トランジスタ・MOSFETの基本｜仕組みと役割",
+      "lang": "ja",
+      "textCharacters": 2136,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "5fbaaa2c1d2687521fc9ca665ea47a8dd1f82467a556b83e7dde1bc2a863682b"
+    },
+    {
+      "file": "/pdf/graham_7_criteria.pdf",
+      "title": "グレアムの投資基準｜企業選別の7条件",
+      "lang": "ja",
+      "textCharacters": 1611,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "fd4ce9e4a44135ff2cae029a704c418d9897038fd3f3deda6c47ff9188ef20d5"
+    },
+    {
+      "file": "/pdf/大衆心理_群集が判断を狂わせる理由_黒金.pdf",
+      "title": "大衆心理 ― 群集が判断を狂わせる理由",
+      "lang": "ja",
+      "textCharacters": 625,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "4d69d0b1fc834e3d933ac9341ed66cc15d35f6533efb37f9819977d596786142"
+    },
+    {
+      "file": "/pdf/日本企業_資本の使い方_黒金_X4枚版.pdf",
+      "title": "日本企業の資本配分と企業価値",
+      "lang": "ja",
+      "textCharacters": 993,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "2a2cc7dc5993971d28256e68a2b625f65c10aa5ed02a16081757043fffc3a87f"
+    },
+    {
+      "file": "/pdf/japan_stock_megatrends.pdf",
+      "title": "日本株のメタトレンド｜成長分野と関連産業",
+      "lang": "ja",
+      "textCharacters": 1388,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "227aedcab3803f463d2993533f344dc9d85fc0811ba19c4047abf1116bcb8464"
+    },
+    {
+      "file": "/pdf/mammal_attachment_infidelity.pdf",
+      "title": "哺乳類の愛着と不倫｜進化と行動の関係",
+      "lang": "ja",
+      "textCharacters": 849,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "0122b104680932e770fe49671062f2ccd99f9bae349d2ea56116addeca4f2c86"
+    },
+    {
+      "file": "/pdf/consolidation.pdf",
+      "title": "コンソリデーションとは｜企業統合と株価のもみ合い",
+      "lang": "ja",
+      "textCharacters": 1070,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "808cf89109e1d5a9c257070717893537cd06911e3174ff02187a872ce70320ba"
+    },
+    {
+      "file": "/pdf/安くしても買われない理由_株価と信頼と成長期待.pdf",
+      "title": "安くしても買われない理由｜株価と信頼・成長期待",
+      "lang": "ja",
+      "textCharacters": 862,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "83ea906ab7ecbfff17902d41143c0f317c33f962ae29cfe8d8ff09f8ed7ed2b5"
+    },
+    {
+      "file": "/pdf/TOPIX_new_members_35_TOP10_black_gold.pdf",
+      "title": "TOPIX入替の読み方",
+      "lang": "ja",
+      "textCharacters": 577,
+      "sourceUrls": [
+        "https://www.jpx.co.jp/news/6030/20261007-01.html"
+      ],
+      "status": "2026年10月29日改訂。公式発表リンクを追加し、再利用条件未確認の第三者試算表・金額ランキングを削除。",
+      "sha256": "10206a71690dd88dadb0f61899c81161af141026619e65e5f84668893d2f0c0b"
+    },
+    {
+      "file": "/pdf/robot_hand_technology.pdf",
+      "title": "ロボットハンドの進化を支える技術と日本企業",
+      "lang": "ja",
+      "textCharacters": 1111,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "703080ff892aa00a4820e479fa7fb4c570dc5120561408815328e7136e791d4f"
+    },
+    {
+      "file": "/pdf/日本企業_M&A産業再編_黒金4P.pdf",
+      "title": "日本企業のM&Aと産業再編",
+      "lang": "ja",
+      "textCharacters": 1220,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "c769ca81f57bbfc298fcc2bb35908f66d666127856a08f179bd7efbd91710bb6"
+    },
+    {
+      "file": "/pdf/経営者の世代交代_黒金.pdf",
+      "title": "経営者の世代交代と企業の未来",
+      "lang": "ja",
+      "textCharacters": 907,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "ad945e0ce472815af174b28f08dd38f01e6269de0128a52d0d8206e0c221a58a"
+    },
+    {
+      "file": "/pdf/DRAMとは何か_半導体メモリの仕組み.pdf",
+      "title": "DRAMとは何か｜半導体メモリの仕組み",
+      "lang": "ja",
+      "textCharacters": 993,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "a1712f6f414d270cfbea4479378f5978988deffc65774bbbcec05e1997159331"
+    },
+    {
+      "file": "/pdf/企業会計原則の全体像_3つの原則の役割.pdf",
+      "title": "企業会計原則の全体像｜3つの原則の役割",
+      "lang": "ja",
+      "textCharacters": 859,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "a816342427326a074ce65ac570cf00808ad4a7b20335b9c2d2d2d0f0561a7873"
+    },
+    {
+      "file": "/pdf/責任ある積極財政とは_政府投資の財源と財政の持続可能性.pdf",
+      "title": "責任ある積極財政とは｜政府投資の財源と財政の持続可能性",
+      "lang": "ja",
+      "textCharacters": 1205,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "80f77a90dcb6c72f9ceb5584150fdae486c00281bcf72ec9e7900ce2c03601e2"
+    },
+    {
+      "file": "/pdf/高市政権の戦略17分野_官民投資と成長戦略.pdf",
+      "title": "高市政権の戦略17分野｜官民投資と成長戦略",
+      "lang": "ja",
+      "textCharacters": 1170,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "c587a69286f921ec6fab280814a334a35c03a0f344ff111112827bbd7fee8c0b"
+    },
+    {
+      "file": "/pdf/サクセスラーニング_成功事例から学ぶ方法.pdf",
+      "title": "サクセスラーニング｜成功事例から学ぶ方法",
+      "lang": "ja",
+      "textCharacters": 285,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "c7e6a49508c14c4d57ee90eff520b619c4298a7743430e170b0b49a8ae381c72"
+    },
+    {
+      "file": "/pdf/dotsとは何か_常時稼働AIの仕組みと使い方.pdf",
+      "title": "dotsとは何か｜常時稼働AIの仕組みと使い方",
+      "lang": "ja",
+      "textCharacters": 1673,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "daae816b4012515024c67f2ed44b05fe3374227e2b44d9afb66b5883e0ec8db6"
+    },
+    {
+      "file": "/pdf/割引効用理論_黒金_改訂版.pdf",
+      "title": "割引効用理論｜将来の利益と選好の逆転",
+      "lang": "ja",
+      "textCharacters": 813,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "556d2b1e1bc413e9d14e0093c299e38124b7a81b6bbbabb383693724afae4ac4"
+    },
+    {
+      "file": "/pdf/japan_rate_hike_black_gold.pdf",
+      "title": "日本の利上げと株価への影響",
+      "lang": "ja",
+      "textCharacters": 1103,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "4bbffde0c4f90cd992f2a5d586a326b191ba568423e466ec7e496aa4c7fe7cf2"
+    },
+    {
+      "file": "/pdf/プロスペクト理論とナッジ_投資判断を仕組みで整える.pdf",
+      "title": "プロスペクト理論とナッジ｜投資判断を仕組みで整える",
+      "lang": "ja",
+      "textCharacters": 1440,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "423a98afa579d3084c6614d8686ac7743a13a35ba1c632c7925b80035f7d8dc2"
+    },
+    {
+      "file": "/pdf/情報漏洩の仕組みと対策_主要システムと関連企業.pdf",
+      "title": "情報漏洩の仕組みと対策｜主要システムと関連企業",
+      "lang": "ja",
+      "textCharacters": 1705,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "c7bc8ef199ee82a059fa1aec42729f07a136d9c4a597f5753f4ae33607418354"
+    },
+    {
+      "file": "/pdf/Amazon輸入ビジネス_価格差と相乗り販売.pdf",
+      "title": "Amazon輸入ビジネス_価格差と相乗り販売",
+      "lang": "ja",
+      "textCharacters": 0,
+      "sourceUrls": [],
+      "status": "画像主体のため本文の機械抽出ができません。画像・引用・原資料の確認が必要です。",
+      "sha256": "905d982b995da738064d2766abf0244fbbd98b8920731a20602cc6d687c3fc66"
+    },
+    {
+      "file": "/pdf/ToDoリスト_行動を管理する基本.pdf",
+      "title": "ToDoリスト｜行動を管理する基本",
+      "lang": "ja",
+      "textCharacters": 288,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "541b7583021d26c98dea5b756cfa12c96c5157c209a113b79ad1d906f2ea90e8"
+    },
+    {
+      "file": "/pdf/マーチンゲール法_仕組みと資金管理のリスク.pdf",
+      "title": "マーチンゲール法｜仕組みと資金管理のリスク",
+      "lang": "ja",
+      "textCharacters": 373,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "ca3baba2cad9a4f9a8765ce038871b7fc19815ceb25b1307062f4afdb8dc71be"
+    },
+    {
+      "file": "/pdf/ヒューリスティックとバイアス_投資判断の心理と対策.pdf",
+      "title": "ヒューリスティックとバイアス｜投資判断の心理と対策",
+      "lang": "ja",
+      "textCharacters": 1231,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "50453ad03da98754b8c89bb13f59ad135d42eb5d8881902c98f535d6471b3fc6"
+    },
+    {
+      "file": "/pdf/SOX指数とは_半導体株と日本株の関係.pdf",
+      "title": "SOX指数とは｜半導体株と日本株の関係",
+      "lang": "ja",
+      "textCharacters": 1246,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "b97502c20d7609d98b7c73479cffd5e560ccadc71301ea07c45a6297ded1b857"
+    },
+    {
+      "file": "/pdf/資本論_資本主義の仕組みを読み解く.pdf",
+      "title": "資本論_資本主義の仕組みを読み解く",
+      "lang": "ja",
+      "textCharacters": 1360,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "3705116c1598ae18c2b4e295b54aa232f79498db64cc3833d08f0558b27fa395"
+    },
+    {
+      "file": "/pdf/デフレとインフレ_資産格差_黒金4枚.pdf",
+      "title": "デフレとインフレで変わる資産格差",
+      "lang": "ja",
+      "textCharacters": 756,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "8c466b265f4b2ab7b1b50409a21bbd28047750b2d60b934bdda1eb245de6ab17"
+    },
+    {
+      "file": "/pdf/japan_stock_theme_map.pdf",
+      "title": "日本株のテーマ別監視マップ",
+      "lang": "ja",
+      "textCharacters": 899,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "b7b21fa1ded31c975517d1a27ac7ac1df53d21ab1b266ab1da8bfda960a93baa"
+    },
+    {
+      "file": "/pdf/en/spacex-starship.pdf",
+      "title": "SpaceX, Starship and Japanese companies",
+      "lang": "en",
+      "textCharacters": 3927,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "5f9b311a0a4ad6288200454063fbccb6e3d8621d6df061962110a472caeff8ae"
+    },
+    {
+      "file": "/pdf/en/capital-allocation.pdf",
+      "title": "Capital allocation and corporate value in Japan",
+      "lang": "en",
+      "textCharacters": 2483,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "3edcfabffcbe60a0f84a6ef0d1ecf9b5f1901e789843713decff4792f13ff414"
+    },
+    {
+      "file": "/pdf/en/singularity.pdf",
+      "title": "The singularity: AI and society",
+      "lang": "en",
+      "textCharacters": 1046,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "7926803cab8ffecc84092ff423a42589211589e39786d152061ee9a878731f16"
+    },
+    {
+      "file": "/pdf/en/japan-rate-hikes.pdf",
+      "title": "Japan’s rate hikes and stock prices",
+      "lang": "en",
+      "textCharacters": 2880,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "7f03a3b2da490bc3a7f33b4c20208fd9a668daf848e3a11d12839e5f053040fa"
+    },
+    {
+      "file": "/pdf/en/graham-earnings.pdf",
+      "title": "Graham’s earnings power analysis",
+      "lang": "en",
+      "textCharacters": 2227,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "2a54cc9f72b39aa7bb2f6788a4e73339ed9a3a303ad4a57c00ded1d81fc3cdf5"
+    },
+    {
+      "file": "/pdf/en/blue-collar-wages.pdf",
+      "title": "Blue-collar skills, wages and education",
+      "lang": "en",
+      "textCharacters": 2656,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "7fcbd8a84fbc7cc7e6261bb9d5748b578955df9418d0d1e245ef172ef13ae0c8"
+    },
+    {
+      "file": "/pdf/en/globalization.pdf",
+      "title": "Globalization and business",
+      "lang": "en",
+      "textCharacters": 2870,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "6139b82a6d95e6a3d76338832b7e7a14037f9a1db66843b073be7e9c1dac5c9c"
+    },
+    {
+      "file": "/pdf/en/physical-ai.pdf",
+      "title": "Physical AI and Japanese companies",
+      "lang": "en",
+      "textCharacters": 3360,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "ac78e173a533a277a90b6c40a7a63cbc399b101fa41ab467b61deccc12ef1478"
+    },
+    {
+      "file": "/pdf/en/japan-companies-comparison.pdf",
+      "title": "Comparison of 10 Japanese companies: September 29, 2026",
+      "lang": "en",
+      "textCharacters": 1826,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "23ce15ae786101cbcef4adaf52c443482061f8acc116142da445e8b599c63d19"
+    },
+    {
+      "file": "/pdf/en/discounted-utility.pdf",
+      "title": "Discounted utility and preference reversals",
+      "lang": "en",
+      "textCharacters": 2046,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "b4f6d6ed25a44cb03d3568582adff8521048d4dc3c281c53eb55db58f66d99bc"
+    },
+    {
+      "file": "/pdf/en/skills-pricing-power.pdf",
+      "title": "Workplace skills and pricing power in the AI era",
+      "lang": "en",
+      "textCharacters": 4014,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "8e59c889db62f4119e6e3332852c4312db79698d5186d87379ac1281ca531b31"
+    },
+    {
+      "file": "/pdf/en/big-mac-index.pdf",
+      "title": "The yen, dollar and Big Mac Index",
+      "lang": "en",
+      "textCharacters": 2546,
+      "sourceUrls": [
+        "https://github.com/TheEconomist/big-mac-data"
+      ],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "7e5f414539406fec8badc3863e84bc8d45d938a160aaf2d281f0015c7e42fa43"
+    },
+    {
+      "file": "/pdf/en/todo-list.pdf",
+      "title": "To-do lists and task management",
+      "lang": "en",
+      "textCharacters": 657,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "f8390104a18ae97d71986a638ee43db1721097ee301fad3190175f8c086f944a"
+    },
+    {
+      "file": "/pdf/en/rising-rates.pdf",
+      "title": "Four ways rising rates affect stocks",
+      "lang": "en",
+      "textCharacters": 2308,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "b8f08005a2c0f481080023b1cdf6361945eb300669d81e924adf0d372dc0559f"
+    },
+    {
+      "file": "/pdf/en/japan-theme-map.pdf",
+      "title": "Japanese stock investment theme map",
+      "lang": "en",
+      "textCharacters": 2494,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "2ee61e1c8b9ac9bc16184dcf15c1f5658b0735e604fd783ffc92b9317aa34185"
+    },
+    {
+      "file": "/pdf/en/social-preferences.pdf",
+      "title": "Social preferences, cooperation and free riding",
+      "lang": "en",
+      "textCharacters": 2160,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "f711260bf3b490d2982cf3230af1f2a97202999224e725a8456d7642ab3a2eb7"
+    },
+    {
+      "file": "/pdf/en/mrna-ai-drug-discovery.pdf",
+      "title": "mRNA and AI drug discovery",
+      "lang": "en",
+      "textCharacters": 3519,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "0e04f84f96e091a33374b03610e94ea9a48c2f5b150ba3b23e4be952c63ba92b"
+    },
+    {
+      "file": "/pdf/en/success-trap.pdf",
+      "title": "The trap of past success",
+      "lang": "en",
+      "textCharacters": 1382,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "391bc92bd7baba1a5a94d0183215955de177adbc8274615cea60a867f551a7c8"
+    },
+    {
+      "file": "/pdf/en/spintronics-mram.pdf",
+      "title": "Spintronics and MRAM",
+      "lang": "en",
+      "textCharacters": 2585,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "13a5e29dbf17cd7f5b097c949d74537752456530f76fd43f906611108dcb05d5"
+    },
+    {
+      "file": "/pdf/en/switch2-semiconductors.pdf",
+      "title": "Switch 2 semiconductor stocks: outlook",
+      "lang": "en",
+      "textCharacters": 2768,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "02654f3fc17f74c5cd4399e896dd329737fd240f3bf8e141d7b59e46cf754e35"
+    },
+    {
+      "file": "/pdf/en/schroeder-reforms.pdf",
+      "title": "Tax cuts and the Schröder reforms",
+      "lang": "en",
+      "textCharacters": 3706,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "628c71be1931911a7315296bbe9d2291f9588c47d540cbaa61d9d78ac80e6259"
+    },
+    {
+      "file": "/pdf/en/dram.pdf",
+      "title": "How DRAM works",
+      "lang": "en",
+      "textCharacters": 1879,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "2a3a7900daba0d7c2a0714a805cece957e8fdb8b890e4a0c15d20c1d0aa85d67"
+    },
+    {
+      "file": "/pdf/en/diodes-transistors.pdf",
+      "title": "Diodes, transistors and MOSFETs",
+      "lang": "en",
+      "textCharacters": 4901,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "5ea3e138f05fc666a66dd15d56f758d8535dc667576e6b32dfbd9bf23be3aaf4"
+    },
+    {
+      "file": "/pdf/en/nvidia.pdf",
+      "title": "Understanding NVIDIA",
+      "lang": "en",
+      "textCharacters": 730,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "441567e0209abe06690040ebedb328e68b2c87d85c374304009e237482713ace"
+    },
+    {
+      "file": "/pdf/en/gpt6-astra.pdf",
+      "title": "GPT-6 Astra: features and uses",
+      "lang": "en",
+      "textCharacters": 2881,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "fc5aab36c370d2473a36fa084f04fd7070c6ed1bb073f2b5b4745991bdf6d086"
+    },
+    {
+      "file": "/pdf/en/php-security.pdf",
+      "title": "PHP2Shell: PHP vulnerabilities and defenses",
+      "lang": "en",
+      "textCharacters": 4112,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "e6009811ffbe95a192a897d22155c388e7be3967bdee670f3e3d0e9836bb0370"
+    },
+    {
+      "file": "/pdf/en/nand.pdf",
+      "title": "NAND flash memory and its market",
+      "lang": "en",
+      "textCharacters": 1736,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "cf4278d64002cb1e1a788bce06edcb5e43ee6ea20a85f239b4716e875a232c10"
+    },
+    {
+      "file": "/pdf/en/strategic-sectors.pdf",
+      "title": "17 strategic sectors of the Takaichi administration",
+      "lang": "en",
+      "textCharacters": 3117,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "be6a4ee33692c01fdfd126cd3deedb646aead1eeb6df70fab5e5bbecbd09696a"
+    },
+    {
+      "file": "/pdf/en/inflation-wealth-gap.pdf",
+      "title": "Deflation, inflation and wealth inequality",
+      "lang": "en",
+      "textCharacters": 1778,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "8a40600564afac81599d4210680898be79892d7203b9791be571a4be8de32b50"
+    },
+    {
+      "file": "/pdf/en/robotic-hands.pdf",
+      "title": "Robotic hand technology and Japanese companies",
+      "lang": "en",
+      "textCharacters": 2544,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "9f190e820bc547ae41fea54ac79f035b0b5e86e817c77fb05ae18970e0b59cac"
+    },
+    {
+      "file": "/pdf/en/attachment-infidelity.pdf",
+      "title": "Mammalian attachment and infidelity",
+      "lang": "en",
+      "textCharacters": 1972,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "d4c8942ab2eaf116524ce1ac7feebe4e76bd1816285c73e119bbae3d9d0aad6d"
+    },
+    {
+      "file": "/pdf/en/japanese-chip-design.pdf",
+      "title": "Five Japanese semiconductor design stocks",
+      "lang": "en",
+      "textCharacters": 3983,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "b794c427ad6d3c2379bb676980d3d516f90b441bd559fe264f8f71635c71c489"
+    },
+    {
+      "file": "/pdf/en/russia-ukraine.pdf",
+      "title": "Russia–Ukraine war and Japanese business",
+      "lang": "en",
+      "textCharacters": 3135,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "872a2aec6459b04b5a4e6f22986513acb7ba12658777cb93b53f3ba4f6e86728"
+    },
+    {
+      "file": "/pdf/en/margin-ratio.pdf",
+      "title": "Margin trading supply and demand",
+      "lang": "en",
+      "textCharacters": 808,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "2d87c359380d7b37f625770a06bb5844494393527d9b1b734bb561de2e2d685f"
+    },
+    {
+      "file": "/pdf/en/interest-coverage.pdf",
+      "title": "Interest coverage ratio",
+      "lang": "en",
+      "textCharacters": 681,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "8c5713e3cfc078a43746b370d35e6f7e66035e87254d040fdc1d1508d3dcb285"
+    },
+    {
+      "file": "/pdf/en/money-supply.pdf",
+      "title": "Money supply and the economy",
+      "lang": "en",
+      "textCharacters": 3179,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "71b150d55923addd7fcc21a2ab3880ab7e99acf076e42e7e17228f6548d600d1"
+    },
+    {
+      "file": "/pdf/en/corporate-learning.pdf",
+      "title": "Why companies need more than self-study",
+      "lang": "en",
+      "textCharacters": 2096,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "ec6dfe5c40d621ff80615c7dc5b185474426894e1a0a36c7a97540b23fe1fbd8"
+    },
+    {
+      "file": "/pdf/en/graham-criteria.pdf",
+      "title": "Graham’s seven investment criteria",
+      "lang": "en",
+      "textCharacters": 3643,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "471ef9ed592e17b2ca6730fa2aa8960f5f3134e735ec4e803b27b251813f9c7d"
+    },
+    {
+      "file": "/pdf/en/semiconductor-types.pdf",
+      "title": "Semiconductor types, materials and uses",
+      "lang": "en",
+      "textCharacters": 870,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "84704b8b9d7295d9d2bad77855a4281b08b7c881f1e4eea801bcf6361f3b45df"
+    },
+    {
+      "file": "/pdf/en/leadership-succession.pdf",
+      "title": "Leadership succession and the future of companies",
+      "lang": "en",
+      "textCharacters": 2332,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "82e80d364ce0f0146dd1aff15e5c4769bac7eb64e83e340ffa37ed441ba6e72f"
+    },
+    {
+      "file": "/pdf/en/people-assets-capital.pdf",
+      "title": "People, assets and capital: sources of business value",
+      "lang": "en",
+      "textCharacters": 2435,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "95fb46144dfb092c8d71e37e3d3ce6ab22eafc0e9f60c869e3d0e259070e1605"
+    },
+    {
+      "file": "/pdf/en/data-security.pdf",
+      "title": "Data breaches and prevention",
+      "lang": "en",
+      "textCharacters": 4327,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "fbc12f277066db8991cced31ffcde1b53d396771e769b2c618e211cc0257c6bf"
+    },
+    {
+      "file": "/pdf/en/consolidation.pdf",
+      "title": "Corporate consolidation and trading ranges",
+      "lang": "en",
+      "textCharacters": 2708,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "14c8a3980a2e3827b3e06c2c0c807489f5750ce4e707fcc3f06d35f4887d545f"
+    },
+    {
+      "file": "/pdf/en/japan-equity-megatrends.pdf",
+      "title": "Japanese equity megatrends",
+      "lang": "en",
+      "textCharacters": 3201,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "18eabd730daeaaf121cc24c3f08d11fbe7d07ce43f376dee5124e91be15f5556"
+    },
+    {
+      "file": "/pdf/en/dots.pdf",
+      "title": "dots: how always-on AI works",
+      "lang": "en",
+      "textCharacters": 3667,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "61cf08785ff2f34575e7fd6c2a32ab0528a863036106a2d1214538100aea7d3a"
+    },
+    {
+      "file": "/pdf/en/fed.pdf",
+      "title": "The Fed, stock prices and exchange rates",
+      "lang": "en",
+      "textCharacters": 2541,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "885002b020c488d976dd22b26dc142b5a0445233aab0464e6d62e220aa7e2fd6"
+    },
+    {
+      "file": "/pdf/en/euv.pdf",
+      "title": "EUV semiconductor lithography",
+      "lang": "en",
+      "textCharacters": 1391,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "f17ccbf76e07836723b87574926178ecf0d004c9ec1df1ad9027777780870e9f"
+    },
+    {
+      "file": "/pdf/en/consumer-desire.pdf",
+      "title": "Consumer desire and buying behavior",
+      "lang": "en",
+      "textCharacters": 1883,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "49d62e3940719d7b93bbd0468055412aac8c0e9715622836aebd1203fdae4dff"
+    },
+    {
+      "file": "/pdf/en/japan-ma.pdf",
+      "title": "M&A and industrial restructuring in Japan",
+      "lang": "en",
+      "textCharacters": 3059,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "8a396973355cfaa59aff6c866fb726dae961272212a87d3fba50f7cebc9e8d86"
+    },
+    {
+      "file": "/pdf/en/quantum-computing.pdf",
+      "title": "Quantum computing and Japanese companies",
+      "lang": "en",
+      "textCharacters": 3496,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "68863f23b3697da883e2dc40def6c761c2439dbbea0e56c894016c7c0a014ebb"
+    },
+    {
+      "file": "/pdf/en/sox.pdf",
+      "title": "SOX Index and Japanese stocks",
+      "lang": "en",
+      "textCharacters": 3168,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "254508ad102577bbf45e55e379acc067df0fdc77826daa1d46b46fa2b0baa6f2"
+    },
+    {
+      "file": "/pdf/en/success-learning.pdf",
+      "title": "Learning from successful examples",
+      "lang": "en",
+      "textCharacters": 800,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "3c69c0839772af40de0b9c137693f02c6b6029035667f736e66bcc2915243fa0"
+    },
+    {
+      "file": "/pdf/en/mbo.pdf",
+      "title": "MBOs: business value versus share price",
+      "lang": "en",
+      "textCharacters": 5210,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "2bfb9af67425f11feba05b47d96751a65ec9a30a13579393194f95a320b83a5e"
+    },
+    {
+      "file": "/pdf/en/us-midterm-elections.pdf",
+      "title": "US midterm elections and stock prices",
+      "lang": "en",
+      "textCharacters": 2380,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "2c1024dfedb788ef4f87e6ad06b7c84ddd2f1fc29e709768ca339c2a7ca6a449"
+    },
+    {
+      "file": "/pdf/en/topix-new-members.pdf",
+      "title": "Reading TOPIX changes",
+      "lang": "en",
+      "textCharacters": 1219,
+      "sourceUrls": [
+        "https://www.jpx.co.jp/news/6030/20261007-01.html"
+      ],
+      "status": "2026年10月29日改訂。公式発表リンクを追加し、再利用条件未確認の第三者試算表・金額ランキングを削除。",
+      "sha256": "3caad4b6b0d1d9438f4bc956ee4913bf9ee938bd04911d2e50fa7752256da9d3"
+    },
+    {
+      "file": "/pdf/en/crowd-psychology.pdf",
+      "title": "Crowd psychology and distorted judgment",
+      "lang": "en",
+      "textCharacters": 1558,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "1917013697836c27a5f685c38910cd754b431c0927df6001f7ccb2b78415fcc2"
+    },
+    {
+      "file": "/pdf/en/martingale.pdf",
+      "title": "Martingale strategy and capital risk",
+      "lang": "en",
+      "textCharacters": 913,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "b0069d1e4ea598473834bac63c1bac51831e91d5a13da15647a8b55a2bf3ccb9"
+    },
+    {
+      "file": "/pdf/en/capital-cost-best-owner.pdf",
+      "title": "Inflation, cost of capital and the best owner",
+      "lang": "en",
+      "textCharacters": 2530,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "bca725a0ab986f3b4d67a00001dc3c036cc42f823fa42099126df3fb1270a606"
+    },
+    {
+      "file": "/pdf/en/fiscal-sustainability.pdf",
+      "title": "Government investment and fiscal sustainability",
+      "lang": "en",
+      "textCharacters": 3354,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "7d682890b24109fa2afd878041389c26c9d75a49b5638d76a8d1cee64ac8b151"
+    },
+    {
+      "file": "/pdf/en/nikkei-100k.pdf",
+      "title": "Could the Nikkei reach 100,000?",
+      "lang": "en",
+      "textCharacters": 2817,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "807ce5461d6f8e546c0ce75250d08b9b71596a1694d309e63742b41de44c83bb"
+    },
+    {
+      "file": "/pdf/zh-Hans/spacex-starship.pdf",
+      "title": "SpaceX、Starship与日本企业",
+      "lang": "zh-Hans",
+      "textCharacters": 1354,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "47ea9a30c994eb8848be73290af8ecd58c971101a2c3dcc7fd42aed8c39d11cf"
+    },
+    {
+      "file": "/pdf/zh-Hans/capital-allocation.pdf",
+      "title": "日本企业资本配置与企业价值",
+      "lang": "zh-Hans",
+      "textCharacters": 911,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "55b2f13358160f893e0273db9fcec66410cded99ca0c5ea98bf28e750d577aa6"
+    },
+    {
+      "file": "/pdf/zh-Hans/singularity.pdf",
+      "title": "技术奇点：AI与社会变化",
+      "lang": "zh-Hans",
+      "textCharacters": 381,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "86e55abaef8303b33ea4d23fa60aedab5c108c650de1b0548a8885df311e15b5"
+    },
+    {
+      "file": "/pdf/zh-Hans/japan-rate-hikes.pdf",
+      "title": "日本加息与股价",
+      "lang": "zh-Hans",
+      "textCharacters": 952,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "cd87f8ba80200afbe8279944282c2e68f9144bede0ff8229605cd032f17c9586"
+    },
+    {
+      "file": "/pdf/zh-Hans/graham-earnings.pdf",
+      "title": "格雷厄姆的盈利能力分析",
+      "lang": "zh-Hans",
+      "textCharacters": 767,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "73cce0d87ba7b423bc007cd2bf60ba447e51b909f08e9673803207ec97ac3ebf"
+    },
+    {
+      "file": "/pdf/zh-Hans/blue-collar-wages.pdf",
+      "title": "蓝领技能、工资与教育",
+      "lang": "zh-Hans",
+      "textCharacters": 790,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "639b0a5f520043a1434e63d053781eb98bc9fa56f5ff074560617f5f9deed2a0"
+    },
+    {
+      "file": "/pdf/zh-Hans/globalization.pdf",
+      "title": "全球化对经济与企业的影响",
+      "lang": "zh-Hans",
+      "textCharacters": 953,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "56b4400766a3134e76188440e5fc0d31fd543085daf9ed3dc1e13fec36e89c31"
+    },
+    {
+      "file": "/pdf/zh-Hans/physical-ai.pdf",
+      "title": "物理AI与日本企业",
+      "lang": "zh-Hans",
+      "textCharacters": 1241,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "40f0748abc989c5427809cd9d53a6e5929ee2aca0bf0bb80c44bc699a00ac4d6"
+    },
+    {
+      "file": "/pdf/zh-Hans/japan-companies-comparison.pdf",
+      "title": "日本10家企业比较：2026年9月29日",
+      "lang": "zh-Hans",
+      "textCharacters": 825,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "30ae675c595984eb9cb1c4af401e021c37d76a0d337affcec7c646d689d87e09"
+    },
+    {
+      "file": "/pdf/zh-Hans/discounted-utility.pdf",
+      "title": "贴现效用与偏好反转",
+      "lang": "zh-Hans",
+      "textCharacters": 722,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "6345944c59a7aec41b923da794bd1dba5d3b19d53e0d2ad28cf88c3ac0053a6e"
+    },
+    {
+      "file": "/pdf/zh-Hans/skills-pricing-power.pdf",
+      "title": "AI时代的现场技能与定价能力",
+      "lang": "zh-Hans",
+      "textCharacters": 1380,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "22ee09102856a9adde196072f9b5aef5e9baf319d9c2a901c02c59ccf3915af0"
+    },
+    {
+      "file": "/pdf/zh-Hans/big-mac-index.pdf",
+      "title": "从巨无霸指数看日元与美元",
+      "lang": "zh-Hans",
+      "textCharacters": 1058,
+      "sourceUrls": [
+        "https://github.com/TheEconomist/big-mac-data"
+      ],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "04d5c010a52bfeeec2cd0c7b08a9bca6115d3a53f5d67d8738ff1f8a36ef8774"
+    },
+    {
+      "file": "/pdf/zh-Hans/todo-list.pdf",
+      "title": "待办清单与任务管理",
+      "lang": "zh-Hans",
+      "textCharacters": 248,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "486bc4ba69138619941bcac33afbfec53fb03eb5c0773fd8cbceb9d94173fb86"
+    },
+    {
+      "file": "/pdf/zh-Hans/rising-rates.pdf",
+      "title": "加息影响股价的四种机制",
+      "lang": "zh-Hans",
+      "textCharacters": 751,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "97089b4fd1bb67353818905c0749c217cc8300f8dd29b0b5f05fe559b3ffa246"
+    },
+    {
+      "file": "/pdf/zh-Hans/japan-theme-map.pdf",
+      "title": "日本股票投资主题地图",
+      "lang": "zh-Hans",
+      "textCharacters": 894,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "7bbd16e159c8a03357c5363ee5f3c1e5ff0df9e3b94a5a65b5321cee1b73a60e"
+    },
+    {
+      "file": "/pdf/zh-Hans/social-preferences.pdf",
+      "title": "社会偏好、合作与搭便车",
+      "lang": "zh-Hans",
+      "textCharacters": 720,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "8e0e9743e9b570c7f0aa4bd6e7d1bdaaae894e17990179c9fde3311c84bbb02a"
+    },
+    {
+      "file": "/pdf/zh-Hans/mrna-ai-drug-discovery.pdf",
+      "title": "mRNA与AI药物研发",
+      "lang": "zh-Hans",
+      "textCharacters": 1263,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "02d6539519facaeb9256a0226ca274322a9f56ce6a0b208c6425b1c96a99f7ac"
+    },
+    {
+      "file": "/pdf/zh-Hans/success-trap.pdf",
+      "title": "过去成功的陷阱",
+      "lang": "zh-Hans",
+      "textCharacters": 560,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "20f9d496d2e932abb04f77acaccf294c4336ba0bc53d03ff1df8be429c99794c"
+    },
+    {
+      "file": "/pdf/zh-Hans/spintronics-mram.pdf",
+      "title": "自旋电子学与MRAM",
+      "lang": "zh-Hans",
+      "textCharacters": 861,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "1ff75755ab2d5dec76ad71af7de6136c1a7387893c3913bd9de43b132f780543"
+    },
+    {
+      "file": "/pdf/zh-Hans/switch2-semiconductors.pdf",
+      "title": "Switch 2相关半导体股展望",
+      "lang": "zh-Hans",
+      "textCharacters": 1092,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "de193051b5bb3fb48a648f6484c46ce3f4765a73eb6a3c74c71c881fbc5fbee0"
+    },
+    {
+      "file": "/pdf/zh-Hans/schroeder-reforms.pdf",
+      "title": "减税与施罗德改革",
+      "lang": "zh-Hans",
+      "textCharacters": 1198,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "4925e98cdfae2302303c8b05b244cbc5ac893ed7fb7a02c393c3d09bead6c429"
+    },
+    {
+      "file": "/pdf/zh-Hans/dram.pdf",
+      "title": "DRAM的工作原理",
+      "lang": "zh-Hans",
+      "textCharacters": 801,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "44273a3728ebc212b65ce10c71435ec3ced927efafbe1f24263d6fa42e4fd4eb"
+    },
+    {
+      "file": "/pdf/zh-Hans/diodes-transistors.pdf",
+      "title": "二极管、晶体管与MOSFET",
+      "lang": "zh-Hans",
+      "textCharacters": 1562,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "ff34c282993d0bfa8245a634c99946e9be7e2b23bfb946a5c5f35bd907390e3d"
+    },
+    {
+      "file": "/pdf/zh-Hans/nvidia.pdf",
+      "title": "英伟达是一家什么公司",
+      "lang": "zh-Hans",
+      "textCharacters": 273,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "8bcf075d804be649a02ab753ae55b7d8337e091725c73887c1dd9444c7c70e5d"
+    },
+    {
+      "file": "/pdf/zh-Hans/gpt6-astra.pdf",
+      "title": "GPT-6 Astra：特点与用法",
+      "lang": "zh-Hans",
+      "textCharacters": 1066,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "6e45fff77a6e4772083306fcce6afc683451d9283eaa22608b643375decee5a4"
+    },
+    {
+      "file": "/pdf/zh-Hans/php-security.pdf",
+      "title": "PHP2Shell：PHP漏洞与防护",
+      "lang": "zh-Hans",
+      "textCharacters": 1640,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "b09bed4424b45a279794dd38d3f72a322d4e355fdc2efd61044fee8ecc805cca"
+    },
+    {
+      "file": "/pdf/zh-Hans/nand.pdf",
+      "title": "NAND闪存与市场结构",
+      "lang": "zh-Hans",
+      "textCharacters": 683,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "a50fbeecff0fde58bed4d8ce05a59e47cb2696b9c9892ea8aa585ad6ce673173"
+    },
+    {
+      "file": "/pdf/zh-Hans/strategic-sectors.pdf",
+      "title": "高市政府的17个战略领域",
+      "lang": "zh-Hans",
+      "textCharacters": 1148,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "18370cd648980ad77d37c969c13947c31606fba5f503459d73f31cb607e28d69"
+    },
+    {
+      "file": "/pdf/zh-Hans/inflation-wealth-gap.pdf",
+      "title": "通缩、通胀与财富差距",
+      "lang": "zh-Hans",
+      "textCharacters": 740,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "acfacc72290665966e57f74f024761c434a524fbb607d25546ba7e1bc2fc5a72"
+    },
+    {
+      "file": "/pdf/zh-Hans/robotic-hands.pdf",
+      "title": "机器人手技术与日本企业",
+      "lang": "zh-Hans",
+      "textCharacters": 884,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "151ac246831a6f6ffbc5d8d1fd273015364b0d9d2229cbaa8023713610ccfbe3"
+    },
+    {
+      "file": "/pdf/zh-Hans/attachment-infidelity.pdf",
+      "title": "哺乳动物的依恋与不忠",
+      "lang": "zh-Hans",
+      "textCharacters": 736,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "5e1c983056e68595eaff651bdfec6605dcc1b2e90cb6897d49a6cd2eb56c045f"
+    },
+    {
+      "file": "/pdf/zh-Hans/japanese-chip-design.pdf",
+      "title": "日本半导体设计相关五只股票",
+      "lang": "zh-Hans",
+      "textCharacters": 1454,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "f10ca7ad9433e263cbe6bd36343a4f2b9f7bda89210933531c104c851e3cc99e"
+    },
+    {
+      "file": "/pdf/zh-Hans/russia-ukraine.pdf",
+      "title": "俄乌战争与日本企业",
+      "lang": "zh-Hans",
+      "textCharacters": 968,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "97d7be8fb0f05a51aab8b35fe8169ec1569710956679eeea0c721b03e4e878d3"
+    },
+    {
+      "file": "/pdf/zh-Hans/margin-ratio.pdf",
+      "title": "融资融券供需与股价",
+      "lang": "zh-Hans",
+      "textCharacters": 273,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "48ba5cffdc2e5f58dc4eefdad7344f7a192368b36d16ff8556ab05e50391d9fb"
+    },
+    {
+      "file": "/pdf/zh-Hans/interest-coverage.pdf",
+      "title": "利息保障倍数",
+      "lang": "zh-Hans",
+      "textCharacters": 249,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "dfc3904ff94c9627a8eed3ac809829397cb0c03601da388cb5743e27be0e692f"
+    },
+    {
+      "file": "/pdf/zh-Hans/money-supply.pdf",
+      "title": "货币供应量与经济",
+      "lang": "zh-Hans",
+      "textCharacters": 1037,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "14509622da0b14095c51619f0246b8fe5e0c023c7f3381be4b067e0c0e0509f2"
+    },
+    {
+      "file": "/pdf/zh-Hans/corporate-learning.pdf",
+      "title": "企业为何不能只靠自学成长",
+      "lang": "zh-Hans",
+      "textCharacters": 723,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "6a327ec37629180384963a1ac9f5a0c71f40b3eb611b044dd9d23c24f46e4404"
+    },
+    {
+      "file": "/pdf/zh-Hans/graham-criteria.pdf",
+      "title": "格雷厄姆的七项投资标准",
+      "lang": "zh-Hans",
+      "textCharacters": 1377,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "29d912faf00ac006d4cfe433de7c5a777d5eb3a0c0e2258886c3ad1b5624aa85"
+    },
+    {
+      "file": "/pdf/zh-Hans/semiconductor-types.pdf",
+      "title": "半导体的种类、材料与用途",
+      "lang": "zh-Hans",
+      "textCharacters": 316,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "b2f2caff2a13808d1194343ee83c137e6d9da4dacd012a59baf30a2ffe79c90c"
+    },
+    {
+      "file": "/pdf/zh-Hans/leadership-succession.pdf",
+      "title": "管理层接班与企业未来",
+      "lang": "zh-Hans",
+      "textCharacters": 812,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "a0e4ead17b8af644c0030db9190db9011949702a9f9e08cd34cfdba004d021b9"
+    },
+    {
+      "file": "/pdf/zh-Hans/people-assets-capital.pdf",
+      "title": "人才、资产与资金：企业价值的源泉",
+      "lang": "zh-Hans",
+      "textCharacters": 849,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "477d65f83d28e1570a06be666b543ffcb743f271c7aa3003741ea40d7c716f93"
+    },
+    {
+      "file": "/pdf/zh-Hans/data-security.pdf",
+      "title": "数据泄露原理与防范",
+      "lang": "zh-Hans",
+      "textCharacters": 1461,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "b4114472f227fb38bf37a9e17b0e677ce15a93ce21e9278403741f13bf536a9a"
+    },
+    {
+      "file": "/pdf/zh-Hans/consolidation.pdf",
+      "title": "企业整合与股价盘整",
+      "lang": "zh-Hans",
+      "textCharacters": 902,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "bca019420638bcb2142c46cdabaa8104ee1b8758509ca639d8bad9cd65a2643c"
+    },
+    {
+      "file": "/pdf/zh-Hans/japan-equity-megatrends.pdf",
+      "title": "日本股票的长期趋势",
+      "lang": "zh-Hans",
+      "textCharacters": 1134,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "80c3137c6c2e2612fb4b9e0ea54412bff866b166fb1f20792d7dbb51b869c16f"
+    },
+    {
+      "file": "/pdf/zh-Hans/dots.pdf",
+      "title": "dots：持续运行的AI原理与用法",
+      "lang": "zh-Hans",
+      "textCharacters": 1372,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "700d2c41158032c2331dba354c44df7ce8d1fd5641dff05f1f4a7c868a577803"
+    },
+    {
+      "file": "/pdf/zh-Hans/fed.pdf",
+      "title": "美联储、股价与汇率",
+      "lang": "zh-Hans",
+      "textCharacters": 853,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "aae56b7278fd8be300ca0be2a94b130e2e9de84680a788b0b0947f36d1c51449"
+    },
+    {
+      "file": "/pdf/zh-Hans/euv.pdf",
+      "title": "EUV半导体光刻技术",
+      "lang": "zh-Hans",
+      "textCharacters": 554,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "52cb15816b0753b81b132a396bd18d15ddf230ea0276a22fb56492f56c47b79a"
+    },
+    {
+      "file": "/pdf/zh-Hans/consumer-desire.pdf",
+      "title": "消费欲望与购买心理",
+      "lang": "zh-Hans",
+      "textCharacters": 705,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "95049126119715ff6a04bb1d65194bc94671b9502e7369916a60c3100d58f19d"
+    },
+    {
+      "file": "/pdf/zh-Hans/japan-ma.pdf",
+      "title": "日本企业并购与产业重组",
+      "lang": "zh-Hans",
+      "textCharacters": 988,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "1898741adcd6d43e403410d86f3c6e5da65d7d50be3e323ede10dbff233814e3"
+    },
+    {
+      "file": "/pdf/zh-Hans/quantum-computing.pdf",
+      "title": "量子计算与日本相关企业",
+      "lang": "zh-Hans",
+      "textCharacters": 1153,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "00c67874d57ff9d4f995b8fd9c03bb83efa23180848ea37f853de9e21028f26b"
+    },
+    {
+      "file": "/pdf/zh-Hans/sox.pdf",
+      "title": "SOX指数与日本股票",
+      "lang": "zh-Hans",
+      "textCharacters": 1085,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "be3d3ce2a2d9eb9bfaa8588c0ec1dfbf036f8a157318ddb832235ba546bca3aa"
+    },
+    {
+      "file": "/pdf/zh-Hans/success-learning.pdf",
+      "title": "从成功案例中学习",
+      "lang": "zh-Hans",
+      "textCharacters": 265,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "74cb8dcdec1ca4bb4ee6bee8fb2de468fafa68479f525058882ae114286f73d1"
+    },
+    {
+      "file": "/pdf/zh-Hans/mbo.pdf",
+      "title": "MBO：企业价值与股价之差",
+      "lang": "zh-Hans",
+      "textCharacters": 1762,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "56111ebe641dddbe20a082fd29577e6404143cf3e1d56612d3d10fb03f9edcb8"
+    },
+    {
+      "file": "/pdf/zh-Hans/us-midterm-elections.pdf",
+      "title": "美国中期选举与股价",
+      "lang": "zh-Hans",
+      "textCharacters": 842,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "0fe90f197c5727f82a96bf8a0fdafc4de42ff06aab36ad27208eba71f3910d22"
+    },
+    {
+      "file": "/pdf/zh-Hans/topix-new-members.pdf",
+      "title": "如何理解TOPIX成分股调整",
+      "lang": "zh-Hans",
+      "textCharacters": 477,
+      "sourceUrls": [
+        "https://www.jpx.co.jp/news/6030/20261007-01.html"
+      ],
+      "status": "2026年10月29日改訂。公式発表リンクを追加し、再利用条件未確認の第三者試算表・金額ランキングを削除。",
+      "sha256": "6b34198e61f0ae146c3b14885cfa5c5a5ead61766729a5756d3d670551dab82f"
+    },
+    {
+      "file": "/pdf/zh-Hans/crowd-psychology.pdf",
+      "title": "群体心理与判断失误",
+      "lang": "zh-Hans",
+      "textCharacters": 587,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "a3b99d86c3a8ad0517c105d972a824ac7e73fedc266f4082f2e8723cf26e0993"
+    },
+    {
+      "file": "/pdf/zh-Hans/martingale.pdf",
+      "title": "马丁格尔策略与资金风险",
+      "lang": "zh-Hans",
+      "textCharacters": 365,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "2cc1d1b7b8f932ac63c2bc3eae7a59455ca7d8ec5c8ccf55f29797654c0dd5aa"
+    },
+    {
+      "file": "/pdf/zh-Hans/capital-cost-best-owner.pdf",
+      "title": "通胀、资本成本与最佳所有者",
+      "lang": "zh-Hans",
+      "textCharacters": 964,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "f99000c4d7d0343b8ec5a44cdebab4948bf8d498bb47fff30db9b855097ab482"
+    },
+    {
+      "file": "/pdf/zh-Hans/fiscal-sustainability.pdf",
+      "title": "政府投资与财政可持续性",
+      "lang": "zh-Hans",
+      "textCharacters": 1139,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "82766520c7d6f85338e685059fadc315d12f2926e341c3e6b42703ba039b551b"
+    },
+    {
+      "file": "/pdf/zh-Hans/nikkei-100k.pdf",
+      "title": "日经指数能否达到10万点？",
+      "lang": "zh-Hans",
+      "textCharacters": 1110,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "f2b8a9479f7a3ab1323f731ea271306b505591c8627aae4d09f434204ecdffbe"
+    },
+    {
+      "file": "/pdf/es/spacex-starship.pdf",
+      "title": "SpaceX, Starship y empresas japonesas",
+      "lang": "es",
+      "textCharacters": 3817,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "eacebdbb36d545c6ca0f9db79c6c793a35a9e3fb90b88c8e6a1117d2373c2c60"
+    },
+    {
+      "file": "/pdf/es/capital-allocation.pdf",
+      "title": "Asignación de capital y valor empresarial en Japón",
+      "lang": "es",
+      "textCharacters": 2671,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "5b6c4294be00d11da81211791872a69cc1865c2a6314fed1a32d6699179eac3d"
+    },
+    {
+      "file": "/pdf/es/singularity.pdf",
+      "title": "Singularidad: IA y sociedad",
+      "lang": "es",
+      "textCharacters": 1096,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "3a530fe8d5fc6a1317464e2aab64327dba57b79a476d0a940f933b6983a8adb0"
+    },
+    {
+      "file": "/pdf/es/japan-rate-hikes.pdf",
+      "title": "Subidas de tipos en Japón y bolsa",
+      "lang": "es",
+      "textCharacters": 2973,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "b2c4d118661be2c96277f13ee4fd6dbab41b36ac0f0e5447b0304eeca05365fc"
+    },
+    {
+      "file": "/pdf/es/graham-earnings.pdf",
+      "title": "Análisis de la capacidad de beneficios de Graham",
+      "lang": "es",
+      "textCharacters": 2281,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "48a21dac5dc78d698a7d05a2b35294b574a8e546f2e6db834d3a3a4c6289b62d"
+    },
+    {
+      "file": "/pdf/es/blue-collar-wages.pdf",
+      "title": "Oficios, salarios y educación",
+      "lang": "es",
+      "textCharacters": 2666,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "5eff8b758c1f251ef11fcbe76f0a50823dbd3af4c359224145930734ba1a4bce"
+    },
+    {
+      "file": "/pdf/es/globalization.pdf",
+      "title": "Globalización y empresas",
+      "lang": "es",
+      "textCharacters": 2831,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "47c49dad83654c9c9ecc35ec750d202bd5d944f1c841eacd0ebc6cd34b912803"
+    },
+    {
+      "file": "/pdf/es/physical-ai.pdf",
+      "title": "IA física y empresas japonesas",
+      "lang": "es",
+      "textCharacters": 3414,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "0f3c0246cfb5d2e0cfac822476ea4a612e6ff7201fb5f2f9d54e95277211f544"
+    },
+    {
+      "file": "/pdf/es/japan-companies-comparison.pdf",
+      "title": "Comparación de 10 empresas japonesas: 29 de septiembre de 2026",
+      "lang": "es",
+      "textCharacters": 2012,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "e148bc3332b3ebff8830e65cfd245340d1863a0b324eb685352a94ba82d2f7b8"
+    },
+    {
+      "file": "/pdf/es/discounted-utility.pdf",
+      "title": "Utilidad descontada e inversión de preferencias",
+      "lang": "es",
+      "textCharacters": 2112,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "a87e196401195aaaa9ec5b1fda395692730ae65933c14eee969475901a23c807"
+    },
+    {
+      "file": "/pdf/es/skills-pricing-power.pdf",
+      "title": "Habilidades laborales y poder de fijación de precios en la era de la IA",
+      "lang": "es",
+      "textCharacters": 4355,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "ae8d89201beea8df60b75fb507971e2df97a8365fcacfde7320f4078c9a38d2f"
+    },
+    {
+      "file": "/pdf/es/big-mac-index.pdf",
+      "title": "El yen, el dólar y el índice Big Mac",
+      "lang": "es",
+      "textCharacters": 2718,
+      "sourceUrls": [
+        "https://github.com/TheEconomist/big-mac-data"
+      ],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "e729e48860931c4c81802ece63fa1c9656ed2af323e01fa7b5fd3ec25b881f94"
+    },
+    {
+      "file": "/pdf/es/todo-list.pdf",
+      "title": "Listas de tareas y gestión del trabajo",
+      "lang": "es",
+      "textCharacters": 717,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "1a3d5a3bb9935820f5dedada3b72912d06386c4a9bed9ec1048851f25604d484"
+    },
+    {
+      "file": "/pdf/es/rising-rates.pdf",
+      "title": "Cuatro efectos de la subida de tipos en bolsa",
+      "lang": "es",
+      "textCharacters": 2498,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "6dbf0bfc31de579052262c62025b16b0cdfb94753e4484e96a91bf8486d055ca"
+    },
+    {
+      "file": "/pdf/es/japan-theme-map.pdf",
+      "title": "Mapa temático de inversión en Japón",
+      "lang": "es",
+      "textCharacters": 2566,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "66d5be12e26c9a37d34aba950aa279ac448aa1c3ad646d9f0839400e16dd945a"
+    },
+    {
+      "file": "/pdf/es/social-preferences.pdf",
+      "title": "Preferencias sociales, cooperación y oportunismo",
+      "lang": "es",
+      "textCharacters": 2154,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "7d86d92f69953ac2f94a33213b0e652a63398ab22b494cdbcc7b8ced08de5bc2"
+    },
+    {
+      "file": "/pdf/es/mrna-ai-drug-discovery.pdf",
+      "title": "ARNm e IA en el desarrollo de fármacos",
+      "lang": "es",
+      "textCharacters": 3821,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "eb8df2098cb45b83d69ab3ccff260a6a4f51cb1d2da82cabf29b869424caa225"
+    },
+    {
+      "file": "/pdf/es/success-trap.pdf",
+      "title": "La trampa del éxito pasado",
+      "lang": "es",
+      "textCharacters": 1472,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "32eda0f5ac7c7e21f6800acb620ca989c1b46984864de77ed47edd7250f6e702"
+    },
+    {
+      "file": "/pdf/es/spintronics-mram.pdf",
+      "title": "Espintrónica y MRAM",
+      "lang": "es",
+      "textCharacters": 2682,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "e83a012da740e9a37fabe3a784d98b0a477d1c9f191f085aacbb7f24564b1ed7"
+    },
+    {
+      "file": "/pdf/es/switch2-semiconductors.pdf",
+      "title": "Perspectivas de semiconductores vinculados a Switch 2",
+      "lang": "es",
+      "textCharacters": 2924,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "74d1050454586a2dee356d0650b18a42574f19d3e80c1a1220dc77d567ac1867"
+    },
+    {
+      "file": "/pdf/es/schroeder-reforms.pdf",
+      "title": "Rebajas fiscales y reformas de Schröder",
+      "lang": "es",
+      "textCharacters": 3865,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "d66ecd9b11621a83a61217e9cc204ecf7a6833dbe16cdbc6b7fe93cabf98691a"
+    },
+    {
+      "file": "/pdf/es/dram.pdf",
+      "title": "Cómo funciona la DRAM",
+      "lang": "es",
+      "textCharacters": 2142,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "6950a6ffcbca7f42bc12701611356f5ac089a049ae26197e4c1e83ddf760e353"
+    },
+    {
+      "file": "/pdf/es/diodes-transistors.pdf",
+      "title": "Diodos, transistores y MOSFET",
+      "lang": "es",
+      "textCharacters": 5103,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "98b6d65d1db35cf97222adca602fd6af69973de0cda4c4cab661efa770b36118"
+    },
+    {
+      "file": "/pdf/es/nvidia.pdf",
+      "title": "Qué es NVIDIA",
+      "lang": "es",
+      "textCharacters": 819,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "97e1ede95dc4c62cc94f7f886073a7d4efeb65138bb9df3515e6bd5218fd98b8"
+    },
+    {
+      "file": "/pdf/es/gpt6-astra.pdf",
+      "title": "GPT-6 Astra: características y usos",
+      "lang": "es",
+      "textCharacters": 3090,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "41d3a14a2ad73985c86d32f212d4de52e8c36122ffba8e43be6fa32e9b7922ee"
+    },
+    {
+      "file": "/pdf/es/php-security.pdf",
+      "title": "PHP2Shell: vulnerabilidades y protección",
+      "lang": "es",
+      "textCharacters": 4499,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "8ce6ec0aafb271a0b428f260bc91b3a31d57ab867335f8572e76d171d7859803"
+    },
+    {
+      "file": "/pdf/es/nand.pdf",
+      "title": "Memoria NAND y su mercado",
+      "lang": "es",
+      "textCharacters": 1943,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "de15f6bf535cbf90dcbea414d0de6ce42f79c700236a9ea40510cd3b28ae3c9b"
+    },
+    {
+      "file": "/pdf/es/strategic-sectors.pdf",
+      "title": "17 sectores estratégicos del Gobierno de Takaichi",
+      "lang": "es",
+      "textCharacters": 3453,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "c835c5c051b0ba7dc5350156eb5000e314ec688b550ef4b89646da12c9828b19"
+    },
+    {
+      "file": "/pdf/es/inflation-wealth-gap.pdf",
+      "title": "Deflación, inflación y desigualdad patrimonial",
+      "lang": "es",
+      "textCharacters": 1939,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "c18254bd1bc5b07ee578f8b72ad2921cc074df3ee1936e79c7819557238f8073"
+    },
+    {
+      "file": "/pdf/es/robotic-hands.pdf",
+      "title": "Manos robóticas y empresas japonesas",
+      "lang": "es",
+      "textCharacters": 2694,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "5b18827327eb3875fd227398d8dee0bf96c5b5e4f28eacd3160f300ef8c88d40"
+    },
+    {
+      "file": "/pdf/es/attachment-infidelity.pdf",
+      "title": "Apego e infidelidad en mamíferos",
+      "lang": "es",
+      "textCharacters": 2044,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "bd3ab32a3ba98a838e6bc94993916cdee5188f0532085c05b3b21e470728bf81"
+    },
+    {
+      "file": "/pdf/es/japanese-chip-design.pdf",
+      "title": "Cinco acciones japonesas de diseño de semiconductores",
+      "lang": "es",
+      "textCharacters": 3909,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "321c39dbdc702f44ba1437939e553841b2a326dde1ecd2159b0a31fea52195d8"
+    },
+    {
+      "file": "/pdf/es/russia-ukraine.pdf",
+      "title": "Guerra Rusia-Ucrania y empresas japonesas",
+      "lang": "es",
+      "textCharacters": 3207,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "093016e9988059df9641a7e86cef967356ca0c21a076c410ac3b6b67f9e5d5e5"
+    },
+    {
+      "file": "/pdf/es/margin-ratio.pdf",
+      "title": "Oferta y demanda en operaciones a crédito",
+      "lang": "es",
+      "textCharacters": 904,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "a1c609a2242bf3857d4d11700e423bc004377e476260b73f594c712b3c0c873f"
+    },
+    {
+      "file": "/pdf/es/interest-coverage.pdf",
+      "title": "Ratio de cobertura de intereses",
+      "lang": "es",
+      "textCharacters": 739,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "e938a3e51ba3f9d492d7388a62a0111c4622a9a23837bbdc3f4009e5404ff44f"
+    },
+    {
+      "file": "/pdf/es/money-supply.pdf",
+      "title": "Oferta monetaria y economía",
+      "lang": "es",
+      "textCharacters": 3412,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "f789641beb64b58a373067b469ef307d9a0122a789bf1530b5c3a6c89d8f13aa"
+    },
+    {
+      "file": "/pdf/es/corporate-learning.pdf",
+      "title": "Por qué las empresas necesitan más que autoaprendizaje",
+      "lang": "es",
+      "textCharacters": 2089,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "f05197c86bb8fa14460751a2e97d23c99dcd6f89c5b99b5839cbef2c402c0e10"
+    },
+    {
+      "file": "/pdf/es/graham-criteria.pdf",
+      "title": "Los siete criterios de inversión de Graham",
+      "lang": "es",
+      "textCharacters": 3882,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "8b16325dab06da1fe244f49ee1f7f3ab4477a32b3399aa8bb9423176b94aa84f"
+    },
+    {
+      "file": "/pdf/es/semiconductor-types.pdf",
+      "title": "Tipos de semiconductores, materiales y usos",
+      "lang": "es",
+      "textCharacters": 923,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "9477af9368d3929a0b44d04faee1619079a210cf128b73484289be0ae55a3aac"
+    },
+    {
+      "file": "/pdf/es/leadership-succession.pdf",
+      "title": "Sucesión directiva y futuro empresarial",
+      "lang": "es",
+      "textCharacters": 2289,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "bf072b295131f4e1b6343345717a4e4ecfaa90f23b59bae4c5fad177b025ae24"
+    },
+    {
+      "file": "/pdf/es/people-assets-capital.pdf",
+      "title": "Personas, activos y capital: fuentes de valor",
+      "lang": "es",
+      "textCharacters": 2488,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "f8137db01a930005e24f0fa42107c6a72a1c25c66ba9d6b35682e1975354b1bd"
+    },
+    {
+      "file": "/pdf/es/data-security.pdf",
+      "title": "Filtraciones de datos y prevención",
+      "lang": "es",
+      "textCharacters": 4758,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "36bd6a36e77e9d405968b82970467a970e85c382a6cb6cf76383daabf79a54f5"
+    },
+    {
+      "file": "/pdf/es/consolidation.pdf",
+      "title": "Consolidación empresarial y lateralidad bursátil",
+      "lang": "es",
+      "textCharacters": 2869,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "cf11b37e0bb1b75cbc1246ea6c0db5d80c52e4de3b2050f36bc1bdf8341a5978"
+    },
+    {
+      "file": "/pdf/es/japan-equity-megatrends.pdf",
+      "title": "Megatendencias de la bolsa japonesa",
+      "lang": "es",
+      "textCharacters": 3189,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "43f4005456687cf889499a2ac13e1dd475556d5da2bc442915f90d690478b6ef"
+    },
+    {
+      "file": "/pdf/es/dots.pdf",
+      "title": "dots: cómo funciona la IA siempre activa",
+      "lang": "es",
+      "textCharacters": 4105,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "fb14c782d9488971a81ec60f1d584d73a783fdaf0315d2efd4bd4ce6c025e1fc"
+    },
+    {
+      "file": "/pdf/es/fed.pdf",
+      "title": "La Fed, las acciones y las divisas",
+      "lang": "es",
+      "textCharacters": 2790,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "071ed8cbeaabe6c7c54896c24ffcdf40b3e1dc9a3adc360a59f93a4ac8e2a671"
+    },
+    {
+      "file": "/pdf/es/euv.pdf",
+      "title": "Litografía EUV para semiconductores",
+      "lang": "es",
+      "textCharacters": 1508,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "a1525ef2e96e33a957dbd73ade475322b9de6e243b9ad73d55f30ba4b13243d7"
+    },
+    {
+      "file": "/pdf/es/consumer-desire.pdf",
+      "title": "Deseo del consumidor y decisiones de compra",
+      "lang": "es",
+      "textCharacters": 1913,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "54668a56decdb6a959141aa2e9ccbd2e4a47f775c9aab148412d59af233ff91f"
+    },
+    {
+      "file": "/pdf/es/japan-ma.pdf",
+      "title": "Fusiones y reestructuración industrial en Japón",
+      "lang": "es",
+      "textCharacters": 3119,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "24872e21d1eb72c1b14673ad5318255bbd1c287f15487474907a99d6ea0c9747"
+    },
+    {
+      "file": "/pdf/es/quantum-computing.pdf",
+      "title": "Computación cuántica y empresas japonesas",
+      "lang": "es",
+      "textCharacters": 3355,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "f3573aca57512999e2793d276ef2f7fe3298e98b18263ed0df7c5ee1d0fb699f"
+    },
+    {
+      "file": "/pdf/es/sox.pdf",
+      "title": "Índice SOX y acciones japonesas",
+      "lang": "es",
+      "textCharacters": 3352,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "9f042a7899011a9cae81b163676e25a93f221edaee963447ee54a91dc042fedc"
+    },
+    {
+      "file": "/pdf/es/success-learning.pdf",
+      "title": "Aprender de casos de éxito",
+      "lang": "es",
+      "textCharacters": 856,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "1fe93a8ba9189ec7fa4dafd8a6e5d06458456d06cb91d05ff364c47f2b9255e3"
+    },
+    {
+      "file": "/pdf/es/mbo.pdf",
+      "title": "MBO: valor empresarial y cotización",
+      "lang": "es",
+      "textCharacters": 5198,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "1dda2ed7f39d049b591104baff2eea6f8cad2e0feaae6f5893ba4f358f678616"
+    },
+    {
+      "file": "/pdf/es/us-midterm-elections.pdf",
+      "title": "Elecciones legislativas de EE. UU. y bolsa",
+      "lang": "es",
+      "textCharacters": 2622,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "06d132780a43d89b08ec5d9441da683e18378411438848dc6c0dbfeedc0ce6c3"
+    },
+    {
+      "file": "/pdf/es/topix-new-members.pdf",
+      "title": "Cómo leer los cambios del TOPIX",
+      "lang": "es",
+      "textCharacters": 1086,
+      "sourceUrls": [
+        "https://www.jpx.co.jp/news/6030/20261007-01.html"
+      ],
+      "status": "2026年10月29日改訂。公式発表リンクを追加し、再利用条件未確認の第三者試算表・金額ランキングを削除。",
+      "sha256": "e94a9a583a033370c17374fdb1630b874ae3fd08020b984641fb431b92ebe751"
+    },
+    {
+      "file": "/pdf/es/crowd-psychology.pdf",
+      "title": "Psicología de masas y errores de juicio",
+      "lang": "es",
+      "textCharacters": 1635,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "45ba93fcaf6ffd37a0cdcabdafbda53e36d7e246a84fff93b41f87ecbdb0b761"
+    },
+    {
+      "file": "/pdf/es/martingale.pdf",
+      "title": "Martingala y riesgo de capital",
+      "lang": "es",
+      "textCharacters": 1009,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "a2ce787283b115dff69735b70231d18a84d917ec0d57b282da4f13ca8da5342c"
+    },
+    {
+      "file": "/pdf/es/capital-cost-best-owner.pdf",
+      "title": "Inflación, coste de capital y propietario óptimo",
+      "lang": "es",
+      "textCharacters": 2646,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "1ab86e0c80aef5dd451c38a9ee8f27d2503807e1e9c57912907cd55534824894"
+    },
+    {
+      "file": "/pdf/es/fiscal-sustainability.pdf",
+      "title": "Inversión pública y sostenibilidad fiscal",
+      "lang": "es",
+      "textCharacters": 3402,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "77919f303648fb4bf53f84c07b72eeaa33ba246663310bb4933783ccd798d4b9"
+    },
+    {
+      "file": "/pdf/es/nikkei-100k.pdf",
+      "title": "¿Puede el Nikkei alcanzar los 100.000 puntos?",
+      "lang": "es",
+      "textCharacters": 3030,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "0a9f96f7e1f4e2201785b1f96125ce5d0814c0502dde5c0b2bbea6a1039764b7"
+    },
+    {
+      "file": "/pdf/zh-Hant/spacex-starship.pdf",
+      "title": "SpaceX、Starship與日本企業",
+      "lang": "zh-Hant",
+      "textCharacters": 1355,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "41a2d477a79f28d16fa3285b50c5fd33739453894908c3559ea41405dc5ff891"
+    },
+    {
+      "file": "/pdf/zh-Hant/capital-allocation.pdf",
+      "title": "日本企業資本配置與企業價值",
+      "lang": "zh-Hant",
+      "textCharacters": 910,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "0e9604415c33b67004ca7e368226f31c903d9b4f3f13768ed3306aca69236856"
+    },
+    {
+      "file": "/pdf/zh-Hant/singularity.pdf",
+      "title": "技術奇點：AI與社會變化",
+      "lang": "zh-Hant",
+      "textCharacters": 381,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "1e4ff3442431899d5c4df47998bff2095ef71b99adaf69a9c5ece8cc4cf16500"
+    },
+    {
+      "file": "/pdf/zh-Hant/japan-rate-hikes.pdf",
+      "title": "日本升息與股價",
+      "lang": "zh-Hant",
+      "textCharacters": 951,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "a1aa658a580c95474e914b281b23169719e17f5a37fc0f1492aba94efbc2e3a1"
+    },
+    {
+      "file": "/pdf/zh-Hant/graham-earnings.pdf",
+      "title": "葛拉漢的獲利能力分析",
+      "lang": "zh-Hant",
+      "textCharacters": 761,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "e81d9d861c2a3469999bb2c6fe250fb9bfc2613a39940d09d99eefeb426bd475"
+    },
+    {
+      "file": "/pdf/zh-Hant/blue-collar-wages.pdf",
+      "title": "藍領技能、工資與教育",
+      "lang": "zh-Hant",
+      "textCharacters": 788,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "ff7bd1586e633c7a31ca386abc17fe84688fd7bb93d7882b82eb551fd25351eb"
+    },
+    {
+      "file": "/pdf/zh-Hant/globalization.pdf",
+      "title": "全球化對經濟與企業的影響",
+      "lang": "zh-Hant",
+      "textCharacters": 953,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "7224c8fc365aa92934c50461d70d68f3ff06ee809791b9808db5b11d1da7da95"
+    },
+    {
+      "file": "/pdf/zh-Hant/physical-ai.pdf",
+      "title": "實體AI與日本企業",
+      "lang": "zh-Hant",
+      "textCharacters": 1245,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "ce5dd5114926d6853a705918d662fbf588e1912a8d6a46553aae6a08b9760289"
+    },
+    {
+      "file": "/pdf/zh-Hant/japan-companies-comparison.pdf",
+      "title": "日本10家企業比較：2026年9月29日",
+      "lang": "zh-Hant",
+      "textCharacters": 823,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "15a9b776b0d324235f0ed4c72cb0058b62b71908bfb70293eba117eafd460f00"
+    },
+    {
+      "file": "/pdf/zh-Hant/discounted-utility.pdf",
+      "title": "折現效用與偏好反轉",
+      "lang": "zh-Hant",
+      "textCharacters": 722,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "478ec18e8d64287eb1689b16a47e32cdf07ef760d703c4dfa3ff97cb0f953233"
+    },
+    {
+      "file": "/pdf/zh-Hant/skills-pricing-power.pdf",
+      "title": "AI時代的現場技能與定價能力",
+      "lang": "zh-Hant",
+      "textCharacters": 1380,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "73a4701d79a8c8f1b7aba670e21f1ac9abec70e9127f430794201e46129aa11c"
+    },
+    {
+      "file": "/pdf/zh-Hant/big-mac-index.pdf",
+      "title": "從大麥克指數看日圓與美元",
+      "lang": "zh-Hant",
+      "textCharacters": 1054,
+      "sourceUrls": [
+        "https://github.com/TheEconomist/big-mac-data"
+      ],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "c4aeb12b88b4a6b2bba3b69f2016116166f51f067b8a53d28ab3b21167b50b50"
+    },
+    {
+      "file": "/pdf/zh-Hant/todo-list.pdf",
+      "title": "待辦清單與任務管理",
+      "lang": "zh-Hant",
+      "textCharacters": 250,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "b7bd6cd1edb5bef73f25f85961c7e20013d9ba60b44e83ee4b96235fcb14fe38"
+    },
+    {
+      "file": "/pdf/zh-Hant/rising-rates.pdf",
+      "title": "升息影響股價的四種機制",
+      "lang": "zh-Hant",
+      "textCharacters": 750,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "5ef26251580dd81176f894cce0c001071a574527fe6692daa750ea928d3a09ec"
+    },
+    {
+      "file": "/pdf/zh-Hant/japan-theme-map.pdf",
+      "title": "日本股票投資主題地圖",
+      "lang": "zh-Hant",
+      "textCharacters": 895,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "ae3255bc09599415836b408ddc20eef872da0df85e07d9ee195a0473c067d282"
+    },
+    {
+      "file": "/pdf/zh-Hant/social-preferences.pdf",
+      "title": "社會偏好、合作與搭便車",
+      "lang": "zh-Hant",
+      "textCharacters": 721,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "6a0878eeb3e29a984b1236c854b6cfa1d5b7d6221a63ccf254340821a474f02d"
+    },
+    {
+      "file": "/pdf/zh-Hant/mrna-ai-drug-discovery.pdf",
+      "title": "mRNA與AI藥物研發",
+      "lang": "zh-Hant",
+      "textCharacters": 1265,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "6a2ebf513de38ed8ff87ccc2b40e9cabb34a8158b2142c906f87e8466f4d24aa"
+    },
+    {
+      "file": "/pdf/zh-Hant/success-trap.pdf",
+      "title": "過去成功的陷阱",
+      "lang": "zh-Hant",
+      "textCharacters": 560,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "968ac4d95311f1b9d39c22743fad079e9eae498fec4dfc68503a88ed093b285a"
+    },
+    {
+      "file": "/pdf/zh-Hant/spintronics-mram.pdf",
+      "title": "自旋電子學與MRAM",
+      "lang": "zh-Hant",
+      "textCharacters": 866,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "7f9a1c80520e17286de765d3c483a193e2567b3176a47db129eb958261e3c2c5"
+    },
+    {
+      "file": "/pdf/zh-Hant/switch2-semiconductors.pdf",
+      "title": "Switch 2相關半導體股展望",
+      "lang": "zh-Hant",
+      "textCharacters": 1103,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "c8ff0248a5d929d3d6b9a922e0fbb8a2a791741a47b79bb6f533c518fbc0cea4"
+    },
+    {
+      "file": "/pdf/zh-Hant/schroeder-reforms.pdf",
+      "title": "減稅與施洛德改革",
+      "lang": "zh-Hant",
+      "textCharacters": 1196,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "fbaf3c20789389e2fca6e744eb8b166276f30939361a225f2f0aed3b61775686"
+    },
+    {
+      "file": "/pdf/zh-Hant/dram.pdf",
+      "title": "DRAM的運作原理",
+      "lang": "zh-Hant",
+      "textCharacters": 809,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "880c229de75547d8f0d37745d4eea8f7755169ef3d950093042d3e30da9b32bf"
+    },
+    {
+      "file": "/pdf/zh-Hant/diodes-transistors.pdf",
+      "title": "二極體、電晶體與MOSFET",
+      "lang": "zh-Hant",
+      "textCharacters": 1564,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "6582c44c9a60ab593321dcb775206a57a2da58ac8f443a18146b1644aa61c918"
+    },
+    {
+      "file": "/pdf/zh-Hant/nvidia.pdf",
+      "title": "輝達是一家什麼公司",
+      "lang": "zh-Hant",
+      "textCharacters": 273,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "c6a4b73ebe9f3893ad1c72b08405669f8c9de8d66f4a86d3ccf78d66af1e34ab"
+    },
+    {
+      "file": "/pdf/zh-Hant/gpt6-astra.pdf",
+      "title": "GPT-6 Astra：特色與用法",
+      "lang": "zh-Hant",
+      "textCharacters": 1071,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "256a8dc66a1e95350b24c361185267e5bbaee3efeb7dd236e3cdb0a40df8c631"
+    },
+    {
+      "file": "/pdf/zh-Hant/php-security.pdf",
+      "title": "PHP2Shell：PHP漏洞與防護",
+      "lang": "zh-Hant",
+      "textCharacters": 1654,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "063405fa4a6ffe152076532cd29413fc53227d24d78c8f3c1019369ce4495d4e"
+    },
+    {
+      "file": "/pdf/zh-Hant/nand.pdf",
+      "title": "NAND快閃記憶體與市場結構",
+      "lang": "zh-Hant",
+      "textCharacters": 688,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "3e3078918218e9bdf1c690b319db159db3979c6e6d0a306f99974a832d5be9a3"
+    },
+    {
+      "file": "/pdf/zh-Hant/strategic-sectors.pdf",
+      "title": "高市政府的17個戰略領域",
+      "lang": "zh-Hant",
+      "textCharacters": 1147,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "19b6126f9183f26d8a1c9c904c17e29d412fd312d20cf71941153bcb97769057"
+    },
+    {
+      "file": "/pdf/zh-Hant/inflation-wealth-gap.pdf",
+      "title": "通縮、通膨與財富差距",
+      "lang": "zh-Hant",
+      "textCharacters": 740,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "d122346d1cba5e2120ca179e74fc8719ac7b7de3bbed50b0a4bce236c45a264e"
+    },
+    {
+      "file": "/pdf/zh-Hant/robotic-hands.pdf",
+      "title": "機器人手技術與日本企業",
+      "lang": "zh-Hant",
+      "textCharacters": 884,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "1f667746042ca14f1179020e43ac1725f7f14ab6b8f37e6e118a909c79d917eb"
+    },
+    {
+      "file": "/pdf/zh-Hant/attachment-infidelity.pdf",
+      "title": "哺乳動物的依附與不忠",
+      "lang": "zh-Hant",
+      "textCharacters": 736,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "0b6acb708edef4ae2a98bd44965d3a23bca922f9087d967e25d49be8bf6dbafc"
+    },
+    {
+      "file": "/pdf/zh-Hant/japanese-chip-design.pdf",
+      "title": "日本半導體設計相關五檔股票",
+      "lang": "zh-Hant",
+      "textCharacters": 1456,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "89272429206b87fcfe0089e85a4c923ffefe6f732925dd765874801e273f054a"
+    },
+    {
+      "file": "/pdf/zh-Hant/russia-ukraine.pdf",
+      "title": "俄烏戰爭與日本企業",
+      "lang": "zh-Hant",
+      "textCharacters": 968,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "924b14c7e4e8a2173d219d31e34d87a7bf7a86cf8f5ff03babd3bdb8547aa6d5"
+    },
+    {
+      "file": "/pdf/zh-Hant/margin-ratio.pdf",
+      "title": "融資融券供需與股價",
+      "lang": "zh-Hant",
+      "textCharacters": 273,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "38902ebc302a348a53d2f43c0954d7b359179213195daf9f48a80943baa08b5b"
+    },
+    {
+      "file": "/pdf/zh-Hant/interest-coverage.pdf",
+      "title": "利息保障倍數",
+      "lang": "zh-Hant",
+      "textCharacters": 249,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "125806a2e83f1b5006c7b7dfc1743f2a703b7edb7a08ae74321347f9bc608168"
+    },
+    {
+      "file": "/pdf/zh-Hant/money-supply.pdf",
+      "title": "貨幣供給量與經濟",
+      "lang": "zh-Hant",
+      "textCharacters": 1036,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "40423f25c966d8996be4754daa38e93b8c2371bb12866c5b6a59b41aa8896c09"
+    },
+    {
+      "file": "/pdf/zh-Hant/corporate-learning.pdf",
+      "title": "企業為何不能只靠自學成長",
+      "lang": "zh-Hant",
+      "textCharacters": 723,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "a951782e4ae068dc4a8739599538f7b5a52c8edae8c639af558076a6159c2e6e"
+    },
+    {
+      "file": "/pdf/zh-Hant/graham-criteria.pdf",
+      "title": "葛拉漢的七項投資標準",
+      "lang": "zh-Hant",
+      "textCharacters": 1389,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "2a77088043248b0c59f63de805a5da95c94bd2dc207838bc0cdbfbc7a89abdc6"
+    },
+    {
+      "file": "/pdf/zh-Hant/semiconductor-types.pdf",
+      "title": "半導體的種類、材料與用途",
+      "lang": "zh-Hant",
+      "textCharacters": 316,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "cf0abbe850f312ab00fb25289e17af900b0a404153187b2754f48c997fa30bd2"
+    },
+    {
+      "file": "/pdf/zh-Hant/leadership-succession.pdf",
+      "title": "管理階層接班與企業未來",
+      "lang": "zh-Hant",
+      "textCharacters": 811,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "0cb2e2bf34243c0a27a8591a478b870b43d2a4c12d0ee62882f6744fd4e15507"
+    },
+    {
+      "file": "/pdf/zh-Hant/people-assets-capital.pdf",
+      "title": "人才、資產與資金：企業價值的源泉",
+      "lang": "zh-Hant",
+      "textCharacters": 850,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "f843725ba250461988dc3862ad26dd6ce5c0d67300a6f257ab4f6ef84ac478ee"
+    },
+    {
+      "file": "/pdf/zh-Hant/data-security.pdf",
+      "title": "資料外洩原理與防範",
+      "lang": "zh-Hant",
+      "textCharacters": 1466,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "6c1bf0635fc2d6712cfa05e2610a424216e4863f7963cf0dd5f2f453815b7a8f"
+    },
+    {
+      "file": "/pdf/zh-Hant/consolidation.pdf",
+      "title": "企業整合與股價盤整",
+      "lang": "zh-Hant",
+      "textCharacters": 901,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "db3277a7249e15eaeecb11e13528f3155f820f4adc08c87489f1cf4789b8ea24"
+    },
+    {
+      "file": "/pdf/zh-Hant/japan-equity-megatrends.pdf",
+      "title": "日本股票的長期趨勢",
+      "lang": "zh-Hant",
+      "textCharacters": 1135,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "218b9aed4dca8125b819cc0a4a0ae3445f678ed4428eb054546273128e2de44e"
+    },
+    {
+      "file": "/pdf/zh-Hant/dots.pdf",
+      "title": "dots：持續運作的AI原理與用法",
+      "lang": "zh-Hant",
+      "textCharacters": 1381,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "83ffdeab3ced217cbfe0a7be1ebda8aa72c6b3cddb562a84bc055b696574aef8"
+    },
+    {
+      "file": "/pdf/zh-Hant/fed.pdf",
+      "title": "聯準會、股價與匯率",
+      "lang": "zh-Hant",
+      "textCharacters": 849,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "17c9d500c3f48bd725cc3d50ff802b30d24821cd61f25f0c89cae7cfb7bcd02d"
+    },
+    {
+      "file": "/pdf/zh-Hant/euv.pdf",
+      "title": "EUV半導體微影技術",
+      "lang": "zh-Hant",
+      "textCharacters": 556,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "6a2ef29170607cb390902e6de86d27d482c76cf1243840476957f3a2be097b2f"
+    },
+    {
+      "file": "/pdf/zh-Hant/consumer-desire.pdf",
+      "title": "消費慾望與購買心理",
+      "lang": "zh-Hant",
+      "textCharacters": 705,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "4851fba0302d34b29045dc47afe5195974c7e1d8eee2a15bb5b442ab2804590b"
+    },
+    {
+      "file": "/pdf/zh-Hant/japan-ma.pdf",
+      "title": "日本企業併購與產業重組",
+      "lang": "zh-Hant",
+      "textCharacters": 984,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "173a0e774419b2af499bbcb26a8cf93c7bc762e8044b544325becf4f20d3b073"
+    },
+    {
+      "file": "/pdf/zh-Hant/quantum-computing.pdf",
+      "title": "量子運算與日本相關企業",
+      "lang": "zh-Hant",
+      "textCharacters": 1156,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "804939eb52dcd4859dfc86c6d7e87dc93a5a46da2763b74dd6009c74537e87ba"
+    },
+    {
+      "file": "/pdf/zh-Hant/sox.pdf",
+      "title": "SOX指數與日本股票",
+      "lang": "zh-Hant",
+      "textCharacters": 1086,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "2ad9ca0897eae48495c75d030cee2fa79287e27c0f116d7f2d6b3c9107a15aa6"
+    },
+    {
+      "file": "/pdf/zh-Hant/success-learning.pdf",
+      "title": "從成功案例中學習",
+      "lang": "zh-Hant",
+      "textCharacters": 265,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "f813a67406a20a876f3dcbcb25cff72cad1ca11a4a576b5e1e504cb7a0bd0ebb"
+    },
+    {
+      "file": "/pdf/zh-Hant/mbo.pdf",
+      "title": "MBO：企業價值與股價之差",
+      "lang": "zh-Hant",
+      "textCharacters": 1763,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "ec4aa22f89b9be27adee8ff0027b1379e4691ae7fb132cb054a2c2c6edcc5c29"
+    },
+    {
+      "file": "/pdf/zh-Hant/us-midterm-elections.pdf",
+      "title": "美國期中選舉與股價",
+      "lang": "zh-Hant",
+      "textCharacters": 843,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "aab6a90eb95d75e6b806bb0728fb54499391615def04949e7e9fd8272e2abf40"
+    },
+    {
+      "file": "/pdf/zh-Hant/topix-new-members.pdf",
+      "title": "如何理解TOPIX成分股調整",
+      "lang": "zh-Hant",
+      "textCharacters": 477,
+      "sourceUrls": [
+        "https://www.jpx.co.jp/news/6030/20261007-01.html"
+      ],
+      "status": "2026年10月29日改訂。公式発表リンクを追加し、再利用条件未確認の第三者試算表・金額ランキングを削除。",
+      "sha256": "359fa51250baeaaf1c353e4eb907f1c01bd0830a6ef0b6557f81cc76f5ebb49d"
+    },
+    {
+      "file": "/pdf/zh-Hant/crowd-psychology.pdf",
+      "title": "群體心理與判斷失誤",
+      "lang": "zh-Hant",
+      "textCharacters": 587,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "66e793f99a51164b9cd93dfd5fb0b5793d7ffab9a773fa1c8ac3b446fd002281"
+    },
+    {
+      "file": "/pdf/zh-Hant/martingale.pdf",
+      "title": "馬丁格爾策略與資金風險",
+      "lang": "zh-Hant",
+      "textCharacters": 365,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "049b8d36c161dd500544bcc63ae8b133f336f65c120d3045fe3b4020be3673fa"
+    },
+    {
+      "file": "/pdf/zh-Hant/capital-cost-best-owner.pdf",
+      "title": "通膨、資金成本與最佳所有者",
+      "lang": "zh-Hant",
+      "textCharacters": 964,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "6b104d091602d7e147d5d5851b73c11b234e2fdd46bc46bd7fdd7c5ec807f07e"
+    },
+    {
+      "file": "/pdf/zh-Hant/fiscal-sustainability.pdf",
+      "title": "政府投資與財政永續性",
+      "lang": "zh-Hant",
+      "textCharacters": 1133,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "698d66c257e76c1af5f5e9e636a547f4902dda0aaa999d30db3fb1e23b60e236"
+    },
+    {
+      "file": "/pdf/zh-Hant/nikkei-100k.pdf",
+      "title": "日經指數能否達到10萬點？",
+      "lang": "zh-Hant",
+      "textCharacters": 1109,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "3208bafadeca9e069d25b5e7c84c5a4bfa932f8eb187cb15dbbf5bbfdbf2e0fa"
+    },
+    {
+      "file": "/pdf/pt/spacex-starship.pdf",
+      "title": "SpaceX, Starship e empresas japonesas",
+      "lang": "pt",
+      "textCharacters": 3663,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "c2dea60ae34106a2a3cb8999c51b3d2da62ea574f60539c43c5784fc00f63145"
+    },
+    {
+      "file": "/pdf/pt/capital-allocation.pdf",
+      "title": "Alocação de capital e valor empresarial no Japão",
+      "lang": "pt",
+      "textCharacters": 2535,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "29c07108200776ade72d2e178f01bce40f3e83bce72b7a673c7e34a96e53cc53"
+    },
+    {
+      "file": "/pdf/pt/singularity.pdf",
+      "title": "Singularidade: IA e sociedade",
+      "lang": "pt",
+      "textCharacters": 1062,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "0741238d09044a2f9ade74d9328eb7574f5b8cc1b1ce87430051eef961ebedfd"
+    },
+    {
+      "file": "/pdf/pt/japan-rate-hikes.pdf",
+      "title": "Alta de juros no Japão e ações",
+      "lang": "pt",
+      "textCharacters": 2772,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "d6f4a2a58c4165a1caa3147494cc273fa18a4d4f75dd4e0664f71c6c8af036ab"
+    },
+    {
+      "file": "/pdf/pt/graham-earnings.pdf",
+      "title": "Análise do poder de lucro de Graham",
+      "lang": "pt",
+      "textCharacters": 2155,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "fa93147ae1e736889778d9ae0b1acc0bb0006727ba02104ad97c9da58b3f7bdc"
+    },
+    {
+      "file": "/pdf/pt/blue-collar-wages.pdf",
+      "title": "Trabalho manual, salários e educação",
+      "lang": "pt",
+      "textCharacters": 2706,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "0d9a2a3b4719abf81074b9fe063c45e5b6c56842fee66059f9f1586a2959b1fc"
+    },
+    {
+      "file": "/pdf/pt/globalization.pdf",
+      "title": "Globalização e empresas",
+      "lang": "pt",
+      "textCharacters": 2765,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "ed8d884e19f4d074727b132c44bf5953955565cf6305bbae8064514ba6e1bb55"
+    },
+    {
+      "file": "/pdf/pt/physical-ai.pdf",
+      "title": "IA física e empresas japonesas",
+      "lang": "pt",
+      "textCharacters": 3224,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "7c135546ce72d8d4458dd8f39a86a059d18f59fea245ff7ecb22e1e95c879989"
+    },
+    {
+      "file": "/pdf/pt/japan-companies-comparison.pdf",
+      "title": "Comparação de 10 empresas japonesas: 29 de setembro de 2026",
+      "lang": "pt",
+      "textCharacters": 1983,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "1363d90843eccecfd06cec0e017d2e2897920e7b850a089fcecbc8b72813f54b"
+    },
+    {
+      "file": "/pdf/pt/discounted-utility.pdf",
+      "title": "Utilidade descontada e inversão de preferências",
+      "lang": "pt",
+      "textCharacters": 2065,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "f4fb365e6e88f15d37bba56fc538a019277f557d0c57637e49326581d97317d0"
+    },
+    {
+      "file": "/pdf/pt/skills-pricing-power.pdf",
+      "title": "Habilidades profissionais e poder de precificação na era da IA",
+      "lang": "pt",
+      "textCharacters": 4164,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "394ba252927988edf21386970b378e7ae604c4df64789b00de8e34f3bbf10706"
+    },
+    {
+      "file": "/pdf/pt/big-mac-index.pdf",
+      "title": "O iene, o dólar e o Índice Big Mac",
+      "lang": "pt",
+      "textCharacters": 2528,
+      "sourceUrls": [
+        "https://github.com/TheEconomist/big-mac-data"
+      ],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "b6c02211d96703d5fbf66a48efc0cb17662d49a7a67ebec7d9c5637bcd36039e"
+    },
+    {
+      "file": "/pdf/pt/todo-list.pdf",
+      "title": "Listas de tarefas e gestão do trabalho",
+      "lang": "pt",
+      "textCharacters": 685,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "21d840c0c7e6bdfb90ab821a0fdf4ebdada6243e29aae4d9929b1413fb024cc2"
+    },
+    {
+      "file": "/pdf/pt/rising-rates.pdf",
+      "title": "Quatro efeitos da alta de juros nas ações",
+      "lang": "pt",
+      "textCharacters": 2388,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "6d48f4cc1e3d23098e8fb142f4840dea4de5c077bc62f30a406900ea6634ee3d"
+    },
+    {
+      "file": "/pdf/pt/japan-theme-map.pdf",
+      "title": "Mapa temático de investimentos no Japão",
+      "lang": "pt",
+      "textCharacters": 2519,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "bc375a2ea0607cb2b41ecd7d64298cf438a3b224da47ffe139ed941f6f035ce0"
+    },
+    {
+      "file": "/pdf/pt/social-preferences.pdf",
+      "title": "Preferências sociais, cooperação e oportunismo",
+      "lang": "pt",
+      "textCharacters": 2054,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "c2c4d444c758cf5cb26fab8a44ef660ceefaabddefa233cc3ccde6ba4597081d"
+    },
+    {
+      "file": "/pdf/pt/mrna-ai-drug-discovery.pdf",
+      "title": "mRNA e IA na descoberta de medicamentos",
+      "lang": "pt",
+      "textCharacters": 3641,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "a310686d19f3b86630eebe13ed32e2cefb4e519dca5231a57b53b66af35f8e4d"
+    },
+    {
+      "file": "/pdf/pt/success-trap.pdf",
+      "title": "A armadilha do sucesso passado",
+      "lang": "pt",
+      "textCharacters": 1427,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "44d78c0b297e0ca60a5f2258ce426aa8b16c7881174c0d91cb1c5f4e3680942d"
+    },
+    {
+      "file": "/pdf/pt/spintronics-mram.pdf",
+      "title": "Spintrônica e MRAM",
+      "lang": "pt",
+      "textCharacters": 2617,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "d538f90c407e2bc43c36dacb150d70745c07570f67901324371de2da2b28c179"
+    },
+    {
+      "file": "/pdf/pt/switch2-semiconductors.pdf",
+      "title": "Perspectivas de semicondutores ligados ao Switch 2",
+      "lang": "pt",
+      "textCharacters": 2807,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "5ff756283e72336528e5cafdafb6117756069cc2dc7b8bd928a7d94c51f9e7a7"
+    },
+    {
+      "file": "/pdf/pt/schroeder-reforms.pdf",
+      "title": "Cortes de impostos e reformas de Schröder",
+      "lang": "pt",
+      "textCharacters": 3701,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "b1937ba0a708e11b4fbe041e3ab41b5f0c4b2656b8cc3f588e3ba8b5210b23c6"
+    },
+    {
+      "file": "/pdf/pt/dram.pdf",
+      "title": "Como funciona a DRAM",
+      "lang": "pt",
+      "textCharacters": 2086,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "86d68ea084d58c7f92b7f7b91503f7c8d865ef3ed2f864a98eb353ae6902d299"
+    },
+    {
+      "file": "/pdf/pt/diodes-transistors.pdf",
+      "title": "Diodos, transistores e MOSFETs",
+      "lang": "pt",
+      "textCharacters": 4896,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "14d09ab201b49641fec386e549d5263d552bf636afa228e95682ee0fa20dac4f"
+    },
+    {
+      "file": "/pdf/pt/nvidia.pdf",
+      "title": "O que é a NVIDIA",
+      "lang": "pt",
+      "textCharacters": 800,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "1a8d8ce027795d0288ba19a7db8a6432a46384aae102aa03e26a82ea99d1f05a"
+    },
+    {
+      "file": "/pdf/pt/gpt6-astra.pdf",
+      "title": "GPT-6 Astra: características e usos",
+      "lang": "pt",
+      "textCharacters": 2944,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "58a14f7417cb89e2523e7c41268abf499eda63fdfea0a42774f4c8f57e0b5094"
+    },
+    {
+      "file": "/pdf/pt/php-security.pdf",
+      "title": "PHP2Shell: vulnerabilidades e proteção",
+      "lang": "pt",
+      "textCharacters": 4337,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "5ca65fc4aef91845432043db80a710ebf74b647cea2b5f1463c1482a4ead72ce"
+    },
+    {
+      "file": "/pdf/pt/nand.pdf",
+      "title": "Memória NAND e seu mercado",
+      "lang": "pt",
+      "textCharacters": 1893,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "b12c83c172ba14a35d208633829c33a204336b56bd7ddd6623478b0396e3f76d"
+    },
+    {
+      "file": "/pdf/pt/strategic-sectors.pdf",
+      "title": "17 setores estratégicos do governo Takaichi",
+      "lang": "pt",
+      "textCharacters": 3288,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "64739753871fcd6f1be4d98a39eb71e9b0c070e171ba15f14d7cd3c3810bceed"
+    },
+    {
+      "file": "/pdf/pt/inflation-wealth-gap.pdf",
+      "title": "Deflação, inflação e desigualdade patrimonial",
+      "lang": "pt",
+      "textCharacters": 1811,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "8c50d5fb7889a21c2431bcb3fc94e6f5b40e2b7a89f0ae0ecdee6dfe4037da76"
+    },
+    {
+      "file": "/pdf/pt/robotic-hands.pdf",
+      "title": "Mãos robóticas e empresas japonesas",
+      "lang": "pt",
+      "textCharacters": 2648,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "fd795ac8514be8753e80a7af7121581ee7d69ce550162928a4584dc61d1b2957"
+    },
+    {
+      "file": "/pdf/pt/attachment-infidelity.pdf",
+      "title": "Apego e infidelidade em mamíferos",
+      "lang": "pt",
+      "textCharacters": 2023,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "ffc051c73a429d7fa489188e6f93c32400a20defe42baffe2bd7583ec6fe6dc9"
+    },
+    {
+      "file": "/pdf/pt/japanese-chip-design.pdf",
+      "title": "Cinco ações japonesas de design de semicondutores",
+      "lang": "pt",
+      "textCharacters": 3825,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "a754599ba51e2739184e5d7458f41c4f65de979f004a5bf9d5a6513fce92c455"
+    },
+    {
+      "file": "/pdf/pt/russia-ukraine.pdf",
+      "title": "Guerra Rússia-Ucrânia e empresas japonesas",
+      "lang": "pt",
+      "textCharacters": 3077,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "52b752a8e489362356f3d2b75d275644e5284fc97abcb091cd5c26f59ad1cd4c"
+    },
+    {
+      "file": "/pdf/pt/margin-ratio.pdf",
+      "title": "Oferta e demanda nas operações a crédito",
+      "lang": "pt",
+      "textCharacters": 854,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "2294200279badefe921159bb37a6c05dae4b8fe25aa15078df58203dfeccae6a"
+    },
+    {
+      "file": "/pdf/pt/interest-coverage.pdf",
+      "title": "Índice de cobertura de juros",
+      "lang": "pt",
+      "textCharacters": 685,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "073e32d23961b0e0e9461d693567ce427c2563fa5746f4a32da13af6a71e1d3c"
+    },
+    {
+      "file": "/pdf/pt/money-supply.pdf",
+      "title": "Oferta monetária e economia",
+      "lang": "pt",
+      "textCharacters": 3389,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "e1c0c876d3fe988f818aaa2fc802140ec0f6b7b7ebab895826dbfdf87d1182fd"
+    },
+    {
+      "file": "/pdf/pt/corporate-learning.pdf",
+      "title": "Por que empresas precisam de mais que autoaprendizagem",
+      "lang": "pt",
+      "textCharacters": 2068,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "8ba1312b0d938a7d2cc2bc93676b3b8c8d5e01bee15aedf75fd8ac64bb3e413c"
+    },
+    {
+      "file": "/pdf/pt/graham-criteria.pdf",
+      "title": "Os sete critérios de investimento de Graham",
+      "lang": "pt",
+      "textCharacters": 3656,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "5dabbe2bb24a49875cea0bf7f030133b50ff6aecc920c1818569146e515bcf1e"
+    },
+    {
+      "file": "/pdf/pt/semiconductor-types.pdf",
+      "title": "Tipos de semicondutores, materiais e usos",
+      "lang": "pt",
+      "textCharacters": 952,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "2fb6f2111f8e0ee083d4879944b21aee26a5f1d27bfc1a9bf545e5f82b7f96c9"
+    },
+    {
+      "file": "/pdf/pt/leadership-succession.pdf",
+      "title": "Sucessão de liderança e futuro das empresas",
+      "lang": "pt",
+      "textCharacters": 2238,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "3b505494831ebe1bc95b9cc448f4e583ae3dd07389bfb9c2fad5b386b13fb1f4"
+    },
+    {
+      "file": "/pdf/pt/people-assets-capital.pdf",
+      "title": "Pessoas, ativos e capital: fontes de valor",
+      "lang": "pt",
+      "textCharacters": 2426,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "88901c6a7abd9fccad8b76e78fbc7d44e32a5b62b8b22b0df1ea7a68014594cf"
+    },
+    {
+      "file": "/pdf/pt/data-security.pdf",
+      "title": "Vazamentos de dados e prevenção",
+      "lang": "pt",
+      "textCharacters": 4461,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "41a256abcd2fa41b83dac4c9166e95b245f2f6c65a22ccc4f74888331a7cd091"
+    },
+    {
+      "file": "/pdf/pt/consolidation.pdf",
+      "title": "Consolidação empresarial e lateralização de preços",
+      "lang": "pt",
+      "textCharacters": 2717,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "4c54e9c23bf7c3cb34a177a7e57e92cfc82f5a6d5533ea66bfefa0cc26299851"
+    },
+    {
+      "file": "/pdf/pt/japan-equity-megatrends.pdf",
+      "title": "Megatendências das ações japonesas",
+      "lang": "pt",
+      "textCharacters": 3127,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "4a652ce93acc1b0aa785abb78ae1872914496ce4e2922c0faf732c508135d938"
+    },
+    {
+      "file": "/pdf/pt/dots.pdf",
+      "title": "dots: como funciona a IA sempre ativa",
+      "lang": "pt",
+      "textCharacters": 3812,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "8a31b4162bd76a9235e1ab01e4289b02448a79d7864073f5e07f64ce6d98ae60"
+    },
+    {
+      "file": "/pdf/pt/fed.pdf",
+      "title": "O Fed, as ações e o câmbio",
+      "lang": "pt",
+      "textCharacters": 2654,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "44779381d143601c4907f756218d4b19f72772d68586510bce671fcc3cb7f9af"
+    },
+    {
+      "file": "/pdf/pt/euv.pdf",
+      "title": "Litografia EUV para semicondutores",
+      "lang": "pt",
+      "textCharacters": 1474,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "3fc5cf45929c59a9b71fb388359a77542b31bf1843039e8cee21313151da4c89"
+    },
+    {
+      "file": "/pdf/pt/consumer-desire.pdf",
+      "title": "Desejo do consumidor e decisões de compra",
+      "lang": "pt",
+      "textCharacters": 1905,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "148b1fc0fc0a351e939b19806c33a60f9f6d37439c70cf7b994a95b56fc4cb3a"
+    },
+    {
+      "file": "/pdf/pt/japan-ma.pdf",
+      "title": "Fusões e reestruturação industrial no Japão",
+      "lang": "pt",
+      "textCharacters": 3085,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "c509f55f6cf8630851885b24596440b080a16d4405650bdad449ecc7e460acb8"
+    },
+    {
+      "file": "/pdf/pt/quantum-computing.pdf",
+      "title": "Computação quântica e empresas japonesas",
+      "lang": "pt",
+      "textCharacters": 3300,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "e82d4898ade8b7cc262409bd57edef99cfa561a0d4ad4cb4e65cdeb9040a268b"
+    },
+    {
+      "file": "/pdf/pt/sox.pdf",
+      "title": "Índice SOX e ações japonesas",
+      "lang": "pt",
+      "textCharacters": 3147,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "dd6e4fc6a56ddcbb7ae8803860d67eff9e8870be923af82bd353f62ae397eade"
+    },
+    {
+      "file": "/pdf/pt/success-learning.pdf",
+      "title": "Aprender com casos de sucesso",
+      "lang": "pt",
+      "textCharacters": 860,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "1e45630637b719e43730b8ab323b56c330ad33ad23a82fbe86f7836858022d74"
+    },
+    {
+      "file": "/pdf/pt/mbo.pdf",
+      "title": "MBO: valor empresarial e cotação",
+      "lang": "pt",
+      "textCharacters": 4944,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "1ed7a002b3ea1d7d6af86a3481a312763d413a5a698be0a6ba01e6ef6e1c450b"
+    },
+    {
+      "file": "/pdf/pt/us-midterm-elections.pdf",
+      "title": "Eleições legislativas dos EUA e ações",
+      "lang": "pt",
+      "textCharacters": 2394,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "ca6d1dd070ffaac50b4ccbd79c243e5bca08f3043edd4fd5d6b1583e9375635d"
+    },
+    {
+      "file": "/pdf/pt/topix-new-members.pdf",
+      "title": "Como interpretar mudanças no TOPIX",
+      "lang": "pt",
+      "textCharacters": 1043,
+      "sourceUrls": [
+        "https://www.jpx.co.jp/news/6030/20261007-01.html"
+      ],
+      "status": "2026年10月29日改訂。公式発表リンクを追加し、再利用条件未確認の第三者試算表・金額ランキングを削除。",
+      "sha256": "b3983f549bc2470a86c2e706c2b2d52da3c30f2341d0573fb21a30fc7e0c4fbe"
+    },
+    {
+      "file": "/pdf/pt/crowd-psychology.pdf",
+      "title": "Psicologia das multidões e erros de julgamento",
+      "lang": "pt",
+      "textCharacters": 1590,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "b9b91bb1e38d08935e020490472556c5e324aba4a7bbf1c7fb7a8695b3d0fbaf"
+    },
+    {
+      "file": "/pdf/pt/martingale.pdf",
+      "title": "Martingale e risco de capital",
+      "lang": "pt",
+      "textCharacters": 931,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "105d7edda96425242cf1b6db808a66d6eb691b78709853ef3e8080c071cb5419"
+    },
+    {
+      "file": "/pdf/pt/capital-cost-best-owner.pdf",
+      "title": "Inflação, custo de capital e melhor proprietário",
+      "lang": "pt",
+      "textCharacters": 2554,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "2d158a959c81b3b60bafd6600f693d04bf6c6cf412b63fcfdbbbd88f9d139ea6"
+    },
+    {
+      "file": "/pdf/pt/fiscal-sustainability.pdf",
+      "title": "Investimento público e sustentabilidade fiscal",
+      "lang": "pt",
+      "textCharacters": 3374,
+      "sourceUrls": [],
+      "status": "本文内に参照情報あり。全数値・利用条件の照合完了を意味しません。",
+      "sha256": "9fc4de4a5bf6e90abbe6d3a2e02659ef20c0a9ba9824071a681e0fe835d93b0d"
+    },
+    {
+      "file": "/pdf/pt/nikkei-100k.pdf",
+      "title": "O Nikkei pode chegar a 100 mil pontos?",
+      "lang": "pt",
+      "textCharacters": 2826,
+      "sourceUrls": [],
+      "status": "本文内の出典表記を機械抽出では確認できません。引用・個別数値・原資料との対応は追加確認が必要です。",
+      "sha256": "ef8a1aca0ebcb0456b73c18eaf0275aa9b41eaa1dae55bd9ed54c8777d2ddf0a"
+    }
+  ]
+}

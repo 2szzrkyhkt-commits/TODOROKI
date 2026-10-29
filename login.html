@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+<script src="/assets/privacy-controls.js" defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
@@ -70,7 +71,7 @@
       <form id="email-form">
         <label for="email">メールアドレス</label>
         <input id="email" type="email" autocomplete="email" maxlength="254" required placeholder="you@example.com" spellcheck="false" autocapitalize="none">
-        <button type="submit">認証コードを送る</button>
+        <label class="small" style="display:flex;align-items:flex-start;gap:10px;margin:15px 0"><input id="transfer-consent" type="checkbox" required style="width:18px;min-width:18px;margin-top:6px"><span>認証メールの配信のため、米国のResendにメールアドレス・認証コードを含む送信内容を提供することに同意します。<a href="/privacy">送信先・保護措置の説明</a>をご確認ください。広告メール配信への同意ではありません。</span></label><button type="submit">認証コードを送る</button>
         <p class="small">初めてログインする場合は、メール認証後にアカウントが作成されます。メールアドレスは本人認証とアカウント管理のために取得・保存します。案内・広告メールの配信には別途同意をいただきます。詳しくは<a href="/privacy">プライバシーポリシー</a>をご確認ください。</p>
       </form>
       <div id="code-step" hidden>
@@ -106,7 +107,7 @@
     <p class="small"><a href="/privacy">プライバシーポリシー</a> ／ <a href="/contact">お問い合わせ</a></p>
     <noscript><p>ログインするには、ブラウザのJavaScriptを有効にしてください。</p></noscript>
   </main>
-  <footer>© TODOROKI<p><a href="/site-map">サイトマップ</a></p></footer>
+  <footer>© TODOROKI<p><a href="/site-map">サイトマップ</a></p><nav class="todoroki-info-nav" aria-label="運営方針 / Policies" style="margin:16px 0;font-size:13px"><a href="/editorial-policy">編集・利用方針 / Editorial policy</a> · <a href="/data-use">広告・外部送信 / Data use</a> · <a href="/sources">資料の出典 / Sources</a></nav></footer>
   <script>
     const get = id => document.getElementById(id);
     let email = '';
@@ -152,7 +153,8 @@
       const seconds = Math.ceil((resendAt - Date.now()) / 1000);
       if (seconds > 0) throw new Error(`再送信まであと${seconds}秒お待ちください。`);
       status('認証コードを送信しています…');
-      await api('request', { email });
+      if (!get('transfer-consent').checked) throw new Error('認証メールの外部送信について確認・選択してください。');
+      await api('request', { email, transferConsent: true });
       resendAt = Date.now() + 60000;
       get('destination').textContent = email;
       get('code').value = '';

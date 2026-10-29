@@ -2,15 +2,10 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+<script src="/assets/privacy-controls.js" defer></script>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNSX8VRZ2S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-ZNSX8VRZ2S');
-</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>お問い合わせ | TODOROKI</title>
@@ -121,7 +116,7 @@ TODOROKIへのご質問・ご意見・ご連絡は、
 
 <form action="https://formspree.io/f/mzedvogk" method="POST">
 
-<label for="name">お名前</label>
+<label for="name">お名前（ニックネーム可）</label>
 <input id="name" type="text" name="name"
        autocomplete="name" required>
 
@@ -132,7 +127,7 @@ TODOROKIへのご質問・ご意見・ご連絡は、
 <label for="message">お問い合わせ内容</label>
 <textarea id="message" name="message" required></textarea>
 
-<button type="submit">送信する</button>
+<p style="font-size:13px">本人認証情報・金融口座・健康情報などの機微な情報は記入しないでください。</p><label style="display:flex;gap:10px;align-items:flex-start"><input type="checkbox" name="external_processing_consent_20261029" value="agreed" required style="width:18px;min-width:18px;margin-top:7px"><span style="font-size:13px">問い合わせの受付のため、氏名・メールアドレス・本文・通信情報を米国のFormspreeへ送信することに同意します。<a href="/privacy#contact-transfer">取扱国・保護措置の説明</a>をご確認ください。</span></label><button type="submit">送信する</button>
 </form>
 
 <p style="font-size:13px; margin-top:25px;">
@@ -147,7 +142,7 @@ TODOROKIへのご質問・ご意見・ご連絡は、
 
 <footer>
 © 2026 TODOROKI. All rights reserved.
-<nav class="todoroki-info-nav" aria-label="TODOROKI"><a href="/about">このサイトについて</a><a href="/privacy">プライバシー</a><a href="/contact">お問い合わせ</a></nav><p><a href="/site-map">サイトマップ</a></p></footer>
+<nav class="todoroki-info-nav" aria-label="TODOROKI"><a href="/about">このサイトについて</a><a href="/privacy">プライバシー</a><a href="/contact">お問い合わせ</a></nav><p><a href="/site-map">サイトマップ</a></p><nav class="todoroki-info-nav" aria-label="運営方針 / Policies" style="margin:16px 0;font-size:13px"><a href="/editorial-policy">編集・利用方針 / Editorial policy</a> · <a href="/data-use">広告・外部送信 / Data use</a> · <a href="/sources">資料の出典 / Sources</a></nav></footer>
 
 </body>
 </html>

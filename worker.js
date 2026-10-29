@@ -89,6 +89,12 @@ async function toolGate(request, env, path) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    if (url.pathname === '/api/privacy/region') {
+      if (request.method !== 'GET') return json({ error: 'Method not allowed' }, 405);
+      const restricted = new Set(['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IS','IE','IT','LV','LI','LT','LU','MT','NL','NO','PL','PT','RO','SK','SI','ES','SE','GB','CH']);
+      const country = request.cf?.country;
+      return json({ optionalAllowed: typeof country === 'string' && /^[A-Z]{2}$/.test(country) && country !== 'XX' && !restricted.has(country) });
+    }
     if (!url.pathname.startsWith('/api/')) return env.ASSETS.fetch(request);
     if (url.origin !== ORIGIN) return json({ error: '本番サイトからアクセスしてください。' }, 403);
     const path = url.pathname;
@@ -119,10 +125,13 @@ export default {
       await db.prepare('DELETE FROM auth_rate_limits WHERE expires_at <= ?').bind(now()).run();
       const ip = await sign(env.AUTH_SECRET, 'ip:' + (request.headers.get('CF-Connecting-IP') || 'unknown'));
       if (path.endsWith('/request')) {
+        if (input.transferConsent !== true) return json({ error: '認証メールの外部送信について同意を確認してください。' }, 400);
         const email = typeof input.email === 'string' ? input.email.trim().toLowerCase() : '';
         if (email.length > 254 || !/^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9](?:[a-z0-9-]*[a-z0-9])?(?:\.[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)+$/.test(email)) return json({ error: 'メールアドレスを確認してください。' }, 400);
         const address = await sign(env.AUTH_SECRET, 'email:' + email);
         if (!await limit(db, 'send-ip:' + ip, 600, 10) || !await limit(db, 'send-email:' + address, 60, 1) || !await limit(db, 'send-email-hour:' + address, 3600, 5) || !await limit(db, 'send-total', 86400, 80)) return json({ error: '送信回数の上限です。時間をおいてお試しください。' }, 429);
+        await db.prepare('CREATE TABLE IF NOT EXISTS auth_transfer_consents (id TEXT PRIMARY KEY, email_hash TEXT NOT NULL, consented_at INTEGER NOT NULL, policy_version TEXT NOT NULL)').run();
+        await db.prepare('DELETE FROM auth_transfer_consents WHERE consented_at < ?').bind(now() - 31536000).run();
         const id = random();
         let number;
         do { number = crypto.getRandomValues(new Uint32Array(1))[0]; } while (number >= 4294000000);
@@ -162,6 +171,8 @@ export default {
           await db.prepare('DELETE FROM login_challenges WHERE id = ?').bind(id).run();
           return json({ error: 'メールを送信できませんでした。', code: mailDiagnostic, mail_status: mailStatus, mail_error_type: mailErrorType }, 502);
         }
+        await db.prepare('INSERT INTO auth_transfer_consents (id, email_hash, consented_at, policy_version) VALUES (?, ?, ?, ?)')
+          .bind(id, address, time, '2026-10-29').run();
         return json({ ok: true }, 200, [cookie(CHALLENGE, id, 600)]);
       }
       if (!await limit(db, 'verify-ip:' + ip, 600, 30)) return json({ error: '試行回数の上限です。時間をおいてお試しください。' }, 429);
@@ -190,3 +201,4 @@ export default {
     }
   }
 };
+
