@@ -1,3 +1,4 @@
+import { supportPayments } from './support-payments.mjs';
 const ORIGIN = 'https://todoroki-gold.com';
 const SESSION = '__Host-todoroki_session';
 const CHALLENGE = '__Host-todoroki_challenge';
@@ -44,6 +45,8 @@ async function limit(db, key, seconds, maximum) {
 }
 export default {
   async fetch(request, env) {
+    const support = await supportPayments(request, env);
+    if (support) return support;
     const url = new URL(request.url);
     if (!url.pathname.startsWith('/api/')) return env.ASSETS.fetch(request);
     if (url.origin !== ORIGIN) return json({ error: '本番サイトからアクセスしてください。' }, 403);
@@ -145,3 +148,4 @@ export default {
     }
   }
 };
+

@@ -12,3 +12,7 @@
 /tools/**
 /validation/**
 /migration/**
+/support-payments.mjs
+/tests/**
+/docs/support-setup.md
+/migrations/**
