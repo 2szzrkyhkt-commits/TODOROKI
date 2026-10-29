@@ -19,6 +19,14 @@
     .small{font-size:12px;color:var(--muted);margin:18px 0 0}.email{overflow-wrap:anywhere;font-size:14px;color:var(--gold)}.status{font-size:14px;margin:20px 0 0;min-height:26px}.status.error{color:#ffb4a6}.status.success{color:#d9dfaf}
     #code{letter-spacing:.25em;font-size:24px}footer{color:var(--muted);font-size:11px;text-align:center;padding:20px} [hidden]{display:none!important}
     @media(max-width:480px){main{margin-top:38px}.panel{padding:23px}h1{font-size:27px}}
+    main.is-member{max-width:960px}.content-title{font-size:22px;line-height:1.5;margin:28px 0 8px}.content-lead{color:var(--muted);font-size:14px;margin:0 0 22px}
+    .content-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .content-card{display:flex;flex-direction:column;min-width:0;gap:8px;padding:22px 18px;border:1px solid var(--border);border-radius:10px;background:linear-gradient(135deg,#211e16,#111214);text-decoration:none;transition:border-color .15s,background .15s}
+    .content-card:hover{border-color:var(--gold);background:#252116}.card-number{font-size:11px;letter-spacing:.12em;color:var(--muted)}.content-card strong{font-size:17px;line-height:1.6}.card-description{color:var(--muted);font-size:13px;line-height:1.8}
+    #member-step>.email{margin-top:0}#member-step>p:first-child{margin-bottom:4px}#logout{max-width:240px;margin:26px auto 0}
+    @media(max-width:760px){.content-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:480px){.content-grid{grid-template-columns:1fr}.content-card{padding:18px}.content-title{font-size:20px}}
+    @media(prefers-reduced-motion:reduce){.content-card{transition:none}}
   </style>
 <link rel="stylesheet" href="/assets/navigation.css"><link rel="stylesheet" href="/assets/language-picker.css"><link rel="stylesheet" href="/assets/site-header.css"><script src="/assets/language-picker.js" defer></script><link rel="stylesheet" href="/assets/site-quality.css"></head>
 <body><a class="skip-link" href="#main-content">本文へ移動</a>
@@ -26,11 +34,13 @@
   <div class="wrap brand-row">
     <a class="logo" href="/" aria-label="TODOROKI トップページ">TODOROKI</a>
     <nav class="desktop-links" aria-label="メインメニュー">
+        <a href="/#latest-articles">新着記事</a>
         <a href="/#articles">記事</a>
         <a href="/boki1">簿記を学ぶ</a>
         <a href="/#themes">テーマ</a>
         <a href="/glossary">用語辞典</a>
         <a href="/pdf-library">PDF資料</a>
+        <a href="/#company-analysis">ツール</a>
         <a href="/#about">TODOROKIについて</a>
         <a href="/#social">SNS</a>
     </nav>
@@ -41,19 +51,21 @@
     </a>
   </div>
   <nav class="mobile-links" aria-label="メインメニュー">
+        <a href="/#latest-articles">新着記事</a>
         <a href="/#articles">記事</a>
         <a href="/boki1">簿記を学ぶ</a>
         <a href="/#themes">テーマ</a>
         <a href="/glossary">用語辞典</a>
         <a href="/pdf-library">PDF資料</a>
+        <a href="/#company-analysis">ツール</a>
         <a href="/#about" aria-label="TODOROKIについて">このサイト</a>
         <a href="/#social">SNS</a>
   </nav>
 </header>
   <main id="main-content">
     <p class="eyebrow">TODOROKI ACCOUNT</p>
-    <h1>メールでログイン</h1>
-    <p class="intro">メールで届く6桁の認証コードを入力してください。<br>パスワードの設定は不要です。</p>
+    <h1 id="page-title">メールでログイン</h1>
+    <p class="intro" id="page-intro">メールで届く6桁の認証コードを入力してください。<br>パスワードの設定は不要です。</p>
     <section class="panel" aria-label="ログイン">
       <form id="email-form">
         <label for="email">メールアドレス</label>
@@ -74,7 +86,19 @@
       </div>
       <div id="member-step" hidden>
         <p>ログインしています</p><p class="email" id="member-email"></p>
-        <a class="button" href="/pdf-library">無料PDFを見る</a>
+        <h2 class="content-title">TODOROKIのコンテンツ</h2>
+        <p class="content-lead">気になるテーマから、学びを深めてみてください。</p>
+        <nav class="content-grid" aria-label="コンテンツ一覧">
+          <a class="content-card" href="/#latest-articles"><span class="card-number" aria-hidden="true">01 /</span><strong>新着記事<span aria-hidden="true"> →</span></strong><span class="card-description">いま注目のニュースを、経済や投資の視点で読み解く。</span></a>
+          <a class="content-card" href="/#articles"><span class="card-number" aria-hidden="true">02 /</span><strong>記事<span aria-hidden="true"> →</span></strong><span class="card-description">投資・経済・ビジネスの基礎を、わかりやすく学ぶ。</span></a>
+          <a class="content-card" href="/boki1"><span class="card-number" aria-hidden="true">03 /</span><strong>簿記を学ぶ<span aria-hidden="true"> →</span></strong><span class="card-description">簿記1級の論点や実践問題で、会計の理解を深める。</span></a>
+          <a class="content-card" href="/#themes"><span class="card-number" aria-hidden="true">04 /</span><strong>テーマ<span aria-hidden="true"> →</span></strong><span class="card-description">興味のある分野から、読みたい記事を探す。</span></a>
+          <a class="content-card" href="/glossary"><span class="card-number" aria-hidden="true">05 /</span><strong>用語辞典<span aria-hidden="true"> →</span></strong><span class="card-description">気になった言葉の意味を調べて、理解をつなげる。</span></a>
+          <a class="content-card" href="/pdf-library"><span class="card-number" aria-hidden="true">06 /</span><strong>PDF資料<span aria-hidden="true"> →</span></strong><span class="card-description">図解や解説を無料PDFで。気になる資料を読む・保存する。</span></a>
+          <a class="content-card" href="/#company-analysis"><span class="card-number" aria-hidden="true">07 /</span><strong>ツール<span aria-hidden="true"> →</span></strong><span class="card-description">EDINETの通期決算をもとに、企業分析ツールβ版を使う。</span></a>
+          <a class="content-card" href="/#about"><span class="card-number" aria-hidden="true">08 /</span><strong>TODOROKIについて<span aria-hidden="true"> →</span></strong><span class="card-description">サイトの考え方や、発信している内容を知る。</span></a>
+          <a class="content-card" href="/#social"><span class="card-number" aria-hidden="true">09 /</span><strong>SNS<span aria-hidden="true"> →</span></strong><span class="card-description">TODOROKIのSNSから、日々の発信をチェック。</span></a>
+        </nav>
         <button type="button" class="secondary" id="logout">ログアウト</button>
       </div>
       <p class="status" id="status" role="status" aria-live="polite"></p>
@@ -92,6 +116,9 @@
       get('email-form').hidden = step !== 'email';
       get('code-step').hidden = step !== 'code';
       get('member-step').hidden = step !== 'member';
+      get('main-content').classList.toggle('is-member', step === 'member');
+      get('page-title').textContent = step === 'member' ? 'ようこそ、TODOROKIへ' : 'メールでログイン';
+      get('page-intro').textContent = step === 'member' ? '記事・学習・資料・ツール。ここから、知りたいことを見つけましょう。' : 'メールで届く6桁の認証コードを入力してください。パスワードの設定は不要です。';
     }
     function status(message, error = false) {
       get('status').textContent = message;
