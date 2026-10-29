@@ -57,3 +57,19 @@ function addAnalysisLink(){
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',addAnalysisLink,{once:true});else addAnalysisLink();
 })();
+
+(function(){'use strict';
+function addLatestArticlesLink(){
+ if((document.documentElement.lang||'ja')!=='ja')return;
+ document.querySelectorAll('.site-header .desktop-links,.site-header .mobile-links').forEach(function(nav){
+  const existing=Array.from(nav.querySelectorAll('a')).find(function(link){
+   const target=new URL(link.href,location.origin);
+   return target.origin===location.origin&&target.hash==='#latest-articles';
+  });
+  const link=existing||document.createElement('a');
+  link.href='/#latest-articles';link.textContent='新着記事';
+  nav.prepend(link);
+ });
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',addLatestArticlesLink,{once:true});else addLatestArticlesLink();
+})();
