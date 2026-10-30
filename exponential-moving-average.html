@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<script src="/assets/privacy-controls.js" defer></script>
+<!-- Google tag (gtag.js) -->
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>指数平滑移動平均線（EMA）とは？計算方法とSMA・WMAとの違い｜TODOROKI</title>
+<meta name="description" content="指数平滑移動平均線（EMA）の仕組み、平滑化係数と計算例、SMA・WMAとの違い、期間設定やクロスの注意点を初心者向けに解説します。">
+<link rel="canonical" href="https://todoroki-gold.com/exponential-moving-average">
+<link rel="alternate" hreflang="ja" href="https://todoroki-gold.com/exponential-moving-average">
+<link rel="alternate" hreflang="x-default" href="https://todoroki-gold.com/exponential-moving-average">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="TODOROKI">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="指数平滑移動平均線（EMA）とは？計算方法とSMA・WMAとの違い｜TODOROKI">
+<meta property="og:description" content="指数平滑移動平均線（EMA）の仕組み、平滑化係数と計算例、SMA・WMAとの違い、期間設定やクロスの注意点を初心者向けに解説します。">
+<meta property="og:url" content="https://todoroki-gold.com/exponential-moving-average">
+<style>:root{color-scheme:dark}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#080808;color:#eae6dd;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP",sans-serif;line-height:1.95}header{padding:24px 6%;border-bottom:1px solid #302819}.logo{color:#d8b85c;font-weight:800;letter-spacing:3px;text-decoration:none}main{max-width:850px;margin:60px auto 80px;padding:0 24px}a{color:#d8b85c;text-underline-offset:5px}.tag{color:#d8b85c;font-size:12px;font-weight:700;letter-spacing:.08em}h1{font-size:clamp(28px,5vw,42px);line-height:1.5;margin:14px 0 24px}h2{font-size:22px;line-height:1.6;margin:42px 0 14px}p{font-size:16px;margin:0 0 22px}.lead{font-size:18px;color:#bbb}.related{margin-top:48px;padding:24px;border:1px solid #4b3d20;border-radius:12px;background:#12110d}.related h2{margin-top:0}.related ul{padding-left:22px}.related li{margin:12px 0;color:#bbb}.button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;border:1px solid #d8b85c;border-radius:6px;text-decoration:none}.button:hover{background:#211c10}.navigation{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:36px}a:focus-visible{outline:2px solid #fff;outline-offset:4px}#article-top{scroll-margin-top:24px}footer{padding:25px 20px;border-top:1px solid #302819;text-align:center;color:#777;font-size:13px}footer a{margin:0 10px}@media(max-width:600px){main{margin-top:38px}.related{padding:20px}.button{width:100%;text-align:center}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}.article-links{list-style:none;padding:0!important}.article-links li{padding:16px 0;border-bottom:1px solid #302819}.article-links li:last-child{border-bottom:0}.article-links a{font-weight:700}.article-links p{font-size:14px;color:#aaa;margin:8px 0 0}.chart,.formula,.callout{padding:20px;border:1px solid #4b3d20;border-radius:12px;background:#12110d;margin:26px 0}.chart svg{width:100%;height:auto;display:block}.chart p,.sources{font-size:12px;color:#bbb}.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:12px}table{width:100%;border-collapse:collapse;font-size:14px;margin:24px 0}th,td{padding:12px;border-bottom:1px solid #4b3d20;text-align:left}th{color:#d8b85c}section{scroll-margin-top:24px}</style>
+<link rel="stylesheet" href="/assets/navigation.css"><link rel="stylesheet" href="/assets/language-picker.css"><link rel="stylesheet" href="/assets/site-header.css"><script src="/assets/language-picker.js" defer></script>
+<link rel="stylesheet" href="/assets/site-quality.css"></head>
+<body><a class="skip-link" href="#article-top">本文へ移動</a>
+<header class="site-header">
+  <div class="wrap brand-row">
+    <a class="logo" href="/" aria-label="TODOROKI トップページ">TODOROKI</a>
+    <nav class="desktop-links" aria-label="メインメニュー">
+        <a href="/#articles">記事</a>
+        <a href="/#themes">テーマ</a>
+        <a href="/glossary">用語辞典</a>
+        <a href="/pdf-library">PDF資料</a>
+        <a href="/boki1">簿記を学ぶ</a>
+        <a href="/#company-analysis">ツール</a>
+        <a href="/#about">TODOROKIについて</a>
+        <a href="/#social">SNS</a>
+    </nav>
+    <label class="todoroki-language-picker">🌐 <select data-todoroki-language aria-label="表示言語 / Language"><option value="ja" selected>日本語</option><option value="en">English</option><option value="es">Español</option><option value="pt">Português</option><option value="zh-Hant">繁體中文</option><option value="zh-Hans">简体中文</option></select></label>
+    <a class="account-link" href="/login">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="6" r="3"/><path d="M4 18v-2a6 6 0 0 1 12 0v2"/></svg>
+      ログイン
+    </a>
+  </div>
+  <nav class="mobile-links" aria-label="メインメニュー">
+        <a href="/#articles">記事</a>
+        <a href="/#themes">テーマ</a>
+        <a href="/glossary">用語辞典</a>
+        <a href="/pdf-library">PDF資料</a>
+        <a href="/boki1">簿記を学ぶ</a>
+        <a href="/#company-analysis">ツール</a>
+        <a href="/#about" aria-label="TODOROKIについて">このサイト</a>
+        <a href="/#social">SNS</a>
+  </nav>
+</header>
+<main id="article-top">
+<article><p class="tag">INVESTMENT ／ テクニカル分析</p><h1>指数平滑移動平均線（EMA）とは？計算方法とSMA・WMAとの違い</h1><p class="lead">EMAは、最近の価格を強く反映しながら値動きをならす移動平均線です。線の傾きや価格との位置から相場の流れを整理できますが、反応が速いことと予測が当たることは別です。</p>
+<section><h2>EMAとは？新しい価格ほど重く扱う平均線</h2><p>EMAはExponential Moving Averageの略で、日本語では「指数平滑移動平均線」と呼ばれます。前回のEMAに新しい価格を一定の割合で取り込み、1本ずつ更新します。ここでは終値を使って説明します。</p><p>過去の価格の影響は、更新するたびに同じ比率で小さくなります。例えば「20期間EMA」は直近20本だけを切り出す平均ではありません。以前の価格も、前回のEMAを通じて小さな重みで残ります。</p></section>
+<section><h2>計算式と平滑化係数</h2><div class="formula"><strong>今回のEMA ＝ α × 今回の終値 ＋（1−α）× 前回のEMA</strong><br>一般的な係数：α ＝ 2 ÷（期間N＋1）</div><p>同じ式を「前回のEMA＋α×（今回の終値−前回のEMA）」とも表せます。終値が前回のEMAより高ければEMAは上がり、低ければ下がります。前日終値との比較とは異なります。</p><p>最初のEMAは、最初のN本のSMAを初期値にする方法があります。初期値や計算開始地点、使用価格が違うと、同じ期間でもサービス間で数値が一致しない場合があります。</p></section>
+<section><h2>5日EMAを実際に計算する</h2><p>架空の終値を、1日目から順に1,000円、1,020円、1,010円、1,040円、1,030円とします。5日目の初期値をSMAにすると、合計5,100円÷5＝1,020円。係数は2÷6＝1/3です。</p><div class="formula">6日目の終値が1,080円なら：<br>EMA ＝ 1,020＋（1,080−1,020）÷3<br><strong>＝1,040円</strong></div><p>同じ6日目の5日SMAは、最初の1,000円を外して（1,020＋1,010＋1,040＋1,030＋1,080）÷5＝1,036円です。この例ではEMAの方が新しい上昇を強く反映しています。</p><p>7日目が1,020円なら、EMAは1,040＋（1,020−1,040）÷3＝約1,033.33円。前日のEMAを引き継いで更新することがポイントです。計算途中は丸めず、表示時に丸めています。</p></section>
+<section><h2>SMA・WMA・EMAの違い</h2><table><thead><tr><th>種類</th><th>価格の扱い</th></tr></thead><tbody><tr><td>SMA（単純）</td><td>直近N本を同じ重みで平均。最も古い価格を外す。</td></tr><tr><td>WMA（線形加重）</td><td>直近N本に、古い順に1、2、…、Nの重みを付ける。</td></tr><tr><td>EMA（指数平滑）</td><td>前回の平均を引き継ぎ、古い価格の影響を指数的に小さくする。</td></tr></tbody></table><p>EMAも重み付き平均の一種ですが、一般にWMAという指標名は線形加重を指します。EMAとWMAは同じ計算ではありません。また、EMAがあらゆる場面でWMAより速いとは限りません。</p><p><a href="/moving-average-basics">単純移動平均線（SMA）の計算と見方 →</a></p></section>
+<section><h2>期間と時間足をそろえる</h2><table><thead><tr><th>期間N</th><th>新しい終値の重みα</th></tr></thead><tbody><tr><td>5</td><td>約33.33％</td></tr><tr><td>20</td><td>約9.52％</td></tr><tr><td>25</td><td>約7.69％</td></tr><tr><td>75</td><td>約2.63％</td></tr></tbody></table><p>表は2÷（N＋1）から計算した値です。短い期間ほど直近の変化を大きく取り込みます。日足20期間は20営業日を基準とする設定で、5分足20期間なら20本の5分足を基準にします。時間足が違えば同じ「20」でも意味が変わります。</p></section>
+<section><h2>傾き・株価との位置・クロスを見る</h2><p>上向きのEMAの上で価格が推移していれば、上昇方向の流れを確認する材料になります。下向きのEMAの下なら下降方向、線が横ばいなら方向感が乏しい可能性があります。線付近が支持・抵抗の目安になることもありますが、反発は保証されません。</p><p>短期EMAが長期EMAを下から上へ抜ける交差はゴールデンクロス、上から下へ抜ける交差はデッドクロスと呼ばれます。すでに価格が動いた後で生じるため、天井や底を事前に示すものではありません。</p></section>
+<section><h2>EMAを使うときの注意点</h2><p>EMAは同じ期間のSMAより最近の変化に敏感な傾向があります。その分、横ばいの相場では交差後に逆方向へ動く「ダマシ」も起きます。反応の速さだけで成績の優劣は決まりません。</p><p>価格がEMAを上回ったというだけで結論を出さず、高値・安値の更新、出来高、より長い時間足も確認します。確定前の足では、価格に応じてEMAやクロスの状態が変わることにも注意が必要です。</p><div class="callout"><strong>確認する順番</strong><ol><li>時間足・期間・使用価格をそろえる。</li><li>EMAの傾きと価格の位置を確認する。</li><li>高値・安値と出来高も確認する。</li><li>足の確定前か後かを確認する。</li></ol></div><p>EMAは価格の推移を整理する指標です。企業の利益や資産から価値を算出する指標ではないため、「線より下だから割安」とは判断できません。</p></section>
+<section class="related"><h2>参考資料</h2><ul><li><a href="https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/ema">Fidelity：EMAの特徴と計算</a></li><li><a href="https://www.tradingview.com/support/solutions/43000502589-moving-averages/">TradingView：SMA・WMA・EMAの計算方法</a></li><li><a href="https://www.metatrader5.com/en/terminal/help/indicators/trend_indicators/ma">MetaTrader 5：移動平均線の種類と計算式</a></li></ul></section>
+<section class="related"><h2>関連記事</h2><ul class="article-links"><li><a href="/moving-average-basics">単純移動平均線（SMA）の見方 →</a></li><li><a href="/technical-analysis">テクニカル分析とは？ →</a></li><li><a href="/volume-basics">出来高の見方 →</a></li></ul></section></article>
+    <aside aria-label="広告：Fujisan.co.jp" style="margin:36px 0;padding:20px 0;border-top:1px solid #383226;border-bottom:1px solid #383226;">
+      <p style="margin:0 0 10px;font-size:12px;color:#c8c2b5;">PR｜雑誌のオンライン書店 Fujisan.co.jp</p>
+      <!-- TG-Affiliate Banner Space -->
+      <a href="https://ad2.trafficgate.net/t/r/205/394/319542_399447" target="_blank" rel="nofollow sponsored noopener" style="display:block;max-width:728px;">
+        <img data-consent-src="https://srv2.trafficgate.net/t/b/205/394/319542_399447" width="728" height="90" alt="雑誌の定期購読をFujisan.co.jpで探す" loading="lazy" style="display:block;max-width:100%;height:auto;" />
+      </a>
+      <!-- /TG-Affiliate Banner Space -->
+    </aside>
+<nav class="navigation" aria-label="記事ナビゲーション"><a href="/investment-list#technical-analysis">← テクニカル分析の欄へ</a><a href="#article-top">↑ 記事の先頭へ</a></nav>
+</main>
+<footer>© TODOROKI <a href="/about">このサイトについて</a><a href="/contact">お問い合わせ</a><nav class="todoroki-info-nav" aria-label="TODOROKI"><a href="/privacy">プライバシー</a></nav><p><a href="/site-map">サイトマップ</a></p><nav class="todoroki-info-nav" aria-label="運営方針 / Policies" style="margin:16px 0;font-size:13px"><a href="/editorial-policy">編集・利用方針 / Editorial policy</a> · <a href="/data-use">広告・外部送信 / Data use</a> · <a href="/sources">資料の出典 / Sources</a></nav></footer>
+</body>
+</html>
