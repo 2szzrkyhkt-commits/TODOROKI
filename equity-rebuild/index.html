@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TODOROKI Equity Lab — 再構築版（試作）</title><style>
+:root{color-scheme:dark}body{margin:0;background:#080808;color:#f5f0df;font:16px system-ui,sans-serif}main{max-width:1050px;margin:auto;padding:24px}h1,h2{color:#d4af37}section{border:1px solid #68551c;border-radius:12px;padding:20px;margin:20px 0}label{display:block;margin:12px 0}input,select,button{font:inherit;padding:10px;border:1px solid #78652d;border-radius:6px;background:#181818;color:white;max-width:100%;box-sizing:border-box}input{width:230px}button{cursor:pointer;background:#584719}table{border-collapse:collapse;width:100%;overflow:auto}td,th{border-bottom:1px solid #48402b;padding:10px;text-align:left}small,.muted{color:#bbb}output{font-weight:bold;color:#f5d77b}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}.scroll{overflow-x:auto}</style></head>
+<body><main><h1>TODOROKI Equity Lab</h1><p>再構築試作版 — 入力した数値のみ計算。EDINET自動取得・126項目の再現・公開運用は未実装です。</p>
+<section><h2>企業と計算入力</h2><div class="grid">
+<label>証券コード <input id="code" placeholder="例：8053" inputmode="numeric"></label>
+<label>会社名 <input id="company" placeholder="会社名"></label>
+<label>株価（円/株） <input id="price" type="number" min="0" step="any"></label>
+<label>発行済株式数（株） <input id="shares" type="number" min="0" step="1"></label>
+<label>PER（倍） <input id="per" type="number" min="0" step="any"></label>
+<label>当期純利益（百万円） <input id="income" type="number" step="any"></label>
+<label>PBR（倍） <input id="pbr" type="number" min="0" step="any"></label>
+<label>自己資本（百万円） <input id="equity" type="number" step="any"></label>
+<label>オーナー利益（百万円） <input id="owner" type="number" step="any"></label>
+<label>米国10年国債利回り（%） <input id="yield" type="number" min="0" step="any" placeholder="手動入力"></label>
+<label>利回り観測日 <input id="yieldDate" type="date"></label></div>
+<button id="calculate">計算する</button> <button id="save">この端末に保存</button> <button id="load">保存データを読み込む</button>
+<p id="status" role="status"></p></section>
+<section><h2>算定結果</h2><div class="scroll"><table><tbody>
+<tr><th>時価総額</th><td><output id="market">未算定</output></td></tr>
+<tr><th>時価総額の算定方法</th><td id="method">—</td></tr>
+<tr><th>企業価値（オーナー利益 ÷ 利回り）</th><td><output id="value">未算定</output></td></tr>
+<tr><th>安全マージン（企業価値 − 時価総額）</th><td><output id="margin">未算定</output></td></tr>
+</tbody></table></div><p class="muted">株価×株数を優先し、入力不足ならPER×純利益、次にPBR×自己資本で逆算。純利益・自己資本・オーナー利益の単位は百万円。利回りは年率%から小数に変換。FRED自動取得は未接続です。</p></section>
+<section><h2>過去10年の通期決算</h2><p>EDINETとの接続前の表示枠です。未取得の数値は表示しません。</p><div class="scroll"><table><thead><tr><th>決算期</th><th>売上高</th><th>営業利益</th><th>純利益</th><th>総資産</th><th>純資産</th><th>営業CF</th><th>設備投資</th><th>FCF</th></tr></thead><tbody id="annual"></tbody></table></div></section>
+</main><script type="module">
+const ids=['code','company','price','shares','per','income','pbr','equity','owner','yield','yieldDate'];
+const get=id=>document.getElementById(id);
+const num=id=>{const raw=get(id).value.trim();if(!raw)return null;const n=Number(raw);return Number.isFinite(n)?n:null};
+const pos=id=>{const n=num(id);return n!==null&&n>0?n:null};
+const money=n=>n===null||!Number.isFinite(n)?'未算定':new Intl.NumberFormat('ja-JP',{maximumFractionDigits:2}).format(n/1e8)+' 億円';
+function calculate(){
+ let market=null,method='算定不能';
+ if(pos('price')!==null&&pos('shares')!==null){market=pos('price')*pos('shares');method='株価 × 発行済株式数'}
+ else if(pos('per')!==null&&num('income')!==null&&num('income')>0){market=pos('per')*num('income')*1e6;method='PER × 純利益（推計）'}
+ else if(pos('pbr')!==null&&pos('equity')!==null){market=pos('pbr')*pos('equity')*1e6;method='PBR × 自己資本（推計）'}
+ const owner=num('owner'),y=pos('yield');
+ const value=owner!==null&&y!==null?owner*1e6/(y/100):null;
+ get('market').textContent=money(market);get('method').textContent=method;
+ get('value').textContent=money(value);
+ get('margin').textContent=market!==null&&value!==null?money(value-market):'未算定';
+}
+get('calculate').addEventListener('click',calculate);
+get('save').addEventListener('click',()=>{try{localStorage.setItem('todoroki-equity-lab-prototype-v1',JSON.stringify(Object.fromEntries(ids.map(id=>[id,get(id).value]))));get('status').textContent='このブラウザに保存しました（サーバーには送信しません）。'}catch{get('status').textContent='保存できませんでした。'}});
+get('load').addEventListener('click',()=>{try{const data=JSON.parse(localStorage.getItem('todoroki-equity-lab-prototype-v1')||'null');if(!data){get('status').textContent='保存データがありません。';return}ids.forEach(id=>{get(id).value=String(data[id]??'')});calculate();get('status').textContent='読み込みました。'}catch{get('status').textContent='読み込みに失敗しました。'}});
+for(let i=0;i<10;i++){const tr=document.createElement('tr');for(let j=0;j<9;j++){const td=document.createElement('td');td.textContent='—';tr.append(td)}get('annual').append(tr)}
+</script></body></html>
