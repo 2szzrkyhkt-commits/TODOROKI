@@ -2,6 +2,17 @@
  const key='todoroki_privacy_v1',sensitive=/^\/(?:login|privacy|contact|data-use)(?:\.html)?\/?$/.test(location.pathname);let region={optionalAllowed:false},prefs={analytics:false,ads:false},initial=true,ready=false,activated=false;
  try{const p=JSON.parse(localStorage.getItem(key));if(p&&p.version===1&&Date.now()-p.time<15552000000){prefs={analytics:p.analytics===true,ads:p.ads===true};initial=false}}catch{}
  function script(src){const s=document.createElement('script');s.async=true;s.src=src;s.crossOrigin='anonymous';document.head.append(s)}
+ // Keep affiliate links readable while images are disabled, blocked or loading.
+ document.querySelectorAll('a[href*="trafficgate.net"] img[data-consent-src]').forEach(img=>{
+  const link=img.closest('a');
+  const fallback=document.createElement('span');
+  fallback.textContent=img.alt || (document.documentElement.lang==='ja'?'広告主のサイトを見る':'Visit advertiser');
+  fallback.style.cssText='display:block;padding:10px 0;overflow-wrap:anywhere';
+  img.style.display='none';
+  img.addEventListener('load',()=>{img.style.display='block';fallback.style.display='none'});
+  img.addEventListener('error',()=>{img.style.display='none';fallback.style.display='block'});
+  link.append(fallback);
+ });
  function activate(){if(!ready||activated||sensitive||navigator.globalPrivacyControl===true||!region.optionalAllowed)return;activated=true;
  if(prefs.analytics){window.dataLayer=window.dataLayer||[];window.gtag=function(){window.dataLayer.push(arguments)};window.gtag('js',new Date());window.gtag('config','G-ZNSX8VRZ2S',{allow_google_signals:false,allow_ad_personalization_signals:false});script('https://www.googletagmanager.com/gtag/js?id=G-ZNSX8VRZ2S')}
  if(prefs.ads){script('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7179318481718851');document.querySelectorAll('[data-consent-src]').forEach(img=>{img.src=img.dataset.consentSrc})}}
@@ -13,3 +24,4 @@
  }
  ui();fetch('/api/privacy/region',{credentials:'omit',cache:'no-store',signal:AbortSignal.timeout(5000)}).then(r=>r.ok?r.json():{}).then(v=>{region={optionalAllowed:v.optionalAllowed===true};}).catch(()=>{}).finally(()=>{ready=true;const allowed=region.optionalAllowed&&!sensitive&&navigator.globalPrivacyControl!==true;if(!allowed){analytics.disabled=true;ads.disabled=true;analytics.checked=false;ads.checked=false;document.getElementById('td-region').textContent=en?'Optional tags are disabled for this region, privacy signal or page.':'この地域・プライバシー設定・ページでは任意タグを配信しません。'}activate()});
 })();
+
