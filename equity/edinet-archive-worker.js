@@ -38,6 +38,7 @@ async function tick(env) {
       return {state:'retry-date',date:job.cursor,error:String(e)};
     }
   }
+  // Once the date range is indexed, continue draining queued documents.
   const docs=await env.EDINET_DB.prepare("SELECT doc_id FROM archive_docs WHERE job_id=? AND state='pending' ORDER BY submitted_on LIMIT 2").bind(job.id).all();
   for(const d of docs.results){
     try{
@@ -70,6 +71,18 @@ export default {
       if(!j)return Response.json({error:'No running job'},{status:409});
       const result=await env.EDINET_DB.prepare("UPDATE archive_docs SET state='pending',attempts=0 WHERE job_id=? AND state='failed'").bind(j.id).run();
       return Response.json({reset:result.meta.changes});
+    }
+    if(request.method==='POST'&&url.pathname==='/pause'){
+      await env.EDINET_DB.prepare("UPDATE archive_jobs SET state='paused' WHERE state='running'").run();
+      return Response.json({state:'paused'});
+    }
+    if(request.method==='POST'&&url.pathname==='/resume'){
+      const active=await env.EDINET_DB.prepare("SELECT id FROM archive_jobs WHERE state='running' LIMIT 1").first();
+      if(active)return Response.json({error:'Already running'},{status:409});
+      const paused=await env.EDINET_DB.prepare("SELECT id FROM archive_jobs WHERE state='paused' ORDER BY id DESC LIMIT 1").first();
+      if(!paused)return Response.json({error:'No paused job'},{status:404});
+      await env.EDINET_DB.prepare("UPDATE archive_jobs SET state='running' WHERE id=?").bind(paused.id).run();
+      return Response.json({state:'running',id:paused.id});
     }
     if(url.pathname==='/status'){
       const j=await env.EDINET_DB.prepare("SELECT * FROM archive_jobs ORDER BY id DESC LIMIT 1").first();
