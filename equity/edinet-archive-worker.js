@@ -20,12 +20,14 @@ async function tick(env) {
   if(!job)return {state:'idle'};
   if(job.cursor>job.end_date){
     const pending=await env.EDINET_DB.prepare("SELECT count(*) n FROM archive_docs WHERE job_id=? AND state!='done'").bind(job.id).first();
-    if(!pending.n){await env.EDINET_DB.prepare("UPDATE archive_jobs SET state='complete' WHERE id=?").bind(job.id).run();return {state:'complete'};}\n    // Failed records remain visible for manual review; do not silently declare success.
+    if(!pending.n){await env.EDINET_DB.prepare("UPDATE archive_jobs SET state='complete' WHERE id=?").bind(job.id).run();return {state:'complete'};}
+    // Failed records remain visible for manual review; do not silently declare success.
   }else{
     try{
       const url='https://api.edinet-fsa.go.jp/api/v2/documents.json?date='+job.cursor+'&type=2&Subscription-Key='+encodeURIComponent(env.EDINET_API_KEY);
       const data=await (await api(url,env.EDINET_API_KEY)).json();
-      if(data.metadata?.status && String(data.metadata.status)!=='200')throw Error('EDINET API status '+data.metadata.status);\n      if(!Array.isArray(data.results))throw Error('Missing results');
+      if(data.metadata?.status && String(data.metadata.status)!=='200')throw Error('EDINET API status '+data.metadata.status);
+      if(!Array.isArray(data.results))throw Error('Missing results');
       for(const d of data.results){
         // 120 = annual securities report; 130 = amended annual securities report.
         if(!['120','130'].includes(String(d.docTypeCode)))continue;
