@@ -65,6 +65,12 @@ export default {
       const r=await env.EDINET_DB.prepare("INSERT INTO archive_jobs(start_date,end_date,cursor,state) VALUES(?,?,?,'running')").bind(from,to,from).run();
       return Response.json({id:r.meta.last_row_id,state:'running'});
     }
+    if(request.method==='POST'&&url.pathname==='/retry-failed'){
+      const j=await env.EDINET_DB.prepare("SELECT id FROM archive_jobs WHERE state='running' ORDER BY id DESC LIMIT 1").first();
+      if(!j)return Response.json({error:'No running job'},{status:409});
+      const result=await env.EDINET_DB.prepare("UPDATE archive_docs SET state='pending',attempts=0 WHERE job_id=? AND state='failed'").bind(j.id).run();
+      return Response.json({reset:result.meta.changes});
+    }
     if(url.pathname==='/status'){
       const j=await env.EDINET_DB.prepare("SELECT * FROM archive_jobs ORDER BY id DESC LIMIT 1").first();
       if(!j)return Response.json({state:'idle'});
