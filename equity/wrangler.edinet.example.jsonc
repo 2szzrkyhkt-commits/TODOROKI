@@ -1,0 +1,18 @@
+// Copy to wrangler.jsonc after provisioning dedicated D1 and R2 resources.
+// Replace DATABASE_ID; configure EDINET_API_KEY and ADMIN_TOKEN as Worker secrets.
+// Do not deploy with placeholders.
+{
+  "name": "todoroki-edinet-archive",
+  "main": "edinet-archive-worker.js",
+  "compatibility_date": "2026-10-01",
+  "triggers": { "crons": ["* * * * *"] },
+  "d1_databases": [{
+    "binding": "EDINET_DB",
+    "database_name": "todoroki-edinet-archive",
+    "database_id": "REPLACE_WITH_D1_DATABASE_ID"
+  }],
+  "r2_buckets": [{
+    "binding": "EDINET_FILES",
+    "bucket_name": "todoroki-edinet-archive"
+  }]
+}
