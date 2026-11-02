@@ -20,12 +20,12 @@ async function tick(env) {
   if(!job)return {state:'idle'};
   if(job.cursor>job.end_date){
     const pending=await env.EDINET_DB.prepare("SELECT count(*) n FROM archive_docs WHERE job_id=? AND state!='done'").bind(job.id).first();
-    if(!pending.n){await env.EDINET_DB.prepare("UPDATE archive_jobs SET state='complete' WHERE id=?").bind(job.id).run();return {state:'complete'};}
+    if(!pending.n){await env.EDINET_DB.prepare("UPDATE archive_jobs SET state='complete' WHERE id=?").bind(job.id).run();return {state:'complete'};}\n    // Failed records remain visible for manual review; do not silently declare success.
   }else{
     try{
       const url='https://api.edinet-fsa.go.jp/api/v2/documents.json?date='+job.cursor+'&type=2&Subscription-Key='+encodeURIComponent(env.EDINET_API_KEY);
       const data=await (await api(url,env.EDINET_API_KEY)).json();
-      if(!Array.isArray(data.results))throw Error('Missing results');
+      if(data.metadata?.status && String(data.metadata.status)!=='200')throw Error('EDINET API status '+data.metadata.status);\n      if(!Array.isArray(data.results))throw Error('Missing results');
       for(const d of data.results){
         // 120 = annual securities report; 130 = amended annual securities report.
         if(!['120','130'].includes(String(d.docTypeCode)))continue;
@@ -59,8 +59,8 @@ export default {
     const url=new URL(request.url);
     if(!env.ADMIN_TOKEN||request.headers.get('Authorization')!=='Bearer '+env.ADMIN_TOKEN)return new Response('Unauthorized',{status:401});
     if(request.method==='POST'&&url.pathname==='/start'){
-      const {from,to}=await request.json();
-      if(!valid(from)||!valid(to)||from>to||to>new Date().toISOString().slice(0,10))return new Response('Invalid dates',{status:400});
+      let from,to;try{({from,to}=await request.json());}catch{return Response.json({error:'Invalid JSON'},{status:400});}
+      if(!valid(from)||!valid(to)||new Date(from).toISOString().slice(0,10)!==from||new Date(to).toISOString().slice(0,10)!==to||from>to||to>new Date().toISOString().slice(0,10))return new Response('Invalid dates',{status:400});
       const existing=await env.EDINET_DB.prepare("SELECT id FROM archive_jobs WHERE state='running' LIMIT 1").first();
       if(existing)return Response.json({error:'Already running',id:existing.id},{status:409});
       const r=await env.EDINET_DB.prepare("INSERT INTO archive_jobs(start_date,end_date,cursor,state) VALUES(?,?,?,'running')").bind(from,to,from).run();
