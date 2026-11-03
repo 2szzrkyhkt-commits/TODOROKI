@@ -25,3 +25,34 @@
  ui();fetch('/api/privacy/region',{credentials:'omit',cache:'no-store',signal:AbortSignal.timeout(5000)}).then(r=>r.ok?r.json():{}).then(v=>{region={optionalAllowed:v.optionalAllowed===true};}).catch(()=>{}).finally(()=>{ready=true;const allowed=region.optionalAllowed&&!sensitive&&navigator.globalPrivacyControl!==true;if(!allowed){analytics.disabled=true;ads.disabled=true;analytics.checked=false;ads.checked=false;document.getElementById('td-region').textContent=en?'Optional tags are disabled for this region, privacy signal or page.':'この地域・プライバシー設定・ページでは任意タグを配信しません。'}activate()});
 })();
 
+
+/* Shared TODOROKI header navigation: one source for all pages using privacy controls. */
+(()=>{'use strict';
+const labels={
+ja:['新着記事','記事','テーマ','用語辞典','PDF資料','学ぶ','ツール','TODOROKIについて','SNS'],
+en:['Latest','Articles','Topics','Glossary','PDF Library','Learn','Tools','About TODOROKI','SNS'],
+es:['Novedades','Artículos','Temas','Glosario','PDF','Aprender','Herramientas','Acerca de TODOROKI','Redes'],
+pt:['Novidades','Artigos','Temas','Glossário','PDF','Aprender','Ferramentas','Sobre TODOROKI','Redes'],
+'zh-Hans':['最新文章','文章','主题','术语表','PDF资料','学习','工具','关于TODOROKI','社交媒体'],
+'zh-Hant':['最新文章','文章','主題','術語表','PDF資料','學習','工具','關於TODOROKI','社群']
+};
+function update(){
+const header=document.querySelector('header.site-header')||document.querySelector('body > header');
+if(!header)return;
+const locale=(location.pathname.match(/^\/(en|es|pt|zh-Hans|zh-Hant)(?:\/|$)/)||[])[1]||'ja', l=labels[locale],base=locale==='ja'?'/':'/'+locale+'/';
+const links=[[base+'#latest-articles',l[0]],[base+'#articles',l[1]],[base+'#themes',l[2]],[base+'glossary',l[3]],[base+'pdf-library',l[4]],['/#study',l[5]],[base+'#company-analysis',l[6]],[base+'#about',l[7]],[base+'#social',l[8]]];
+const markup=links.map(([href,label])=>'<a href="'+href+'">'+label+'</a>').join('');
+if(!header.classList.contains('site-header')){
+header.className='site-header';
+header.innerHTML='<div class="wrap brand-row"><a class="logo" href="'+base+'">TODOROKI</a><nav class="desktop-links" aria-label="Main navigation">'+markup+'</nav><a class="account-link" href="/login">ログイン</a></div><nav class="mobile-links" aria-label="Mobile navigation">'+markup+'</nav>';
+}else{
+header.querySelectorAll('nav.desktop-links,nav.mobile-links').forEach(nav=>nav.innerHTML=markup);
+}
+if(!document.getElementById('td-shared-header-style')){
+const style=document.createElement('style');style.id='td-shared-header-style';
+style.textContent='.site-header{display:block!important;position:sticky;top:0;z-index:100;background:rgba(8,8,8,.97);border-bottom:1px solid #5d4c27;padding:0!important;color:#eee9dd}.site-header .wrap{width:min(1200px,94%);margin:auto;padding:0}.site-header .brand-row{display:flex;align-items:center;gap:18px;min-height:76px}.site-header .logo{color:#e4c46e;font-size:23px;font-weight:800;text-decoration:none;white-space:nowrap}.site-header .desktop-links{display:flex;align-items:center;gap:15px;margin-left:auto;flex-wrap:wrap}.site-header .desktop-links a,.site-header .mobile-links a{font:inherit;font-family:inherit;font-size:13px;font-weight:400;letter-spacing:normal;color:#cfc7b6;text-decoration:none;white-space:nowrap}.site-header .desktop-links a:hover,.site-header .mobile-links a:hover{color:#e4c46e}.site-header .mobile-links{display:none;gap:16px;overflow-x:auto;padding:12px 3%;border-top:1px solid #3b321f}.site-header .account-link{font-size:13px;white-space:nowrap;color:#e4c46e;text-decoration:none}.site-header .account-link svg{width:16px;height:16px;vertical-align:middle;fill:none;stroke:currentColor}@media(max-width:1050px){.site-header .desktop-links{display:none!important}.site-header .mobile-links{display:flex!important}.site-header .brand-row{min-height:66px}}';
+document.head.appendChild(style);
+}
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',update,{once:true});else update();
+})();
