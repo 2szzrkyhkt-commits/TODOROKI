@@ -890,7 +890,7 @@ footer {
   var entries=Array.from(section.querySelectorAll('.cards > a.card-link')).map(function(a){
     var time=a.querySelector('time');var heading=a.querySelector('h3');
     return time&&heading?{date:time.getAttribute('datetime'),title:heading.textContent.trim(),href:a.getAttribute('href')}:null;
-  }).filter(function(x){return x&&/^\\d{4}-\\d{2}-\\d{2}$/.test(x.date)&&x.href;});
+  }).filter(function(x){return x&&/^\d{4}-\d{2}-\d{2}$/.test(x.date)&&x.href;});
   entries.sort(function(a,b){return b.date.localeCompare(a.date);});
   var seen=new Set();entries=entries.filter(function(x){if(seen.has(x.href))return false;seen.add(x.href);return true;}).slice(0,10);
   if(!entries.length)return;
