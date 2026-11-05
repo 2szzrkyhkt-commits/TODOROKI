@@ -26,33 +26,16 @@
 })();
 
 
-/* Shared TODOROKI header navigation: one source for all pages using privacy controls. */
+/* All pages use the homepage header and the same navigation targets. */
 (()=>{'use strict';
-const labels={
-ja:['新着記事','基礎','テーマ','用語辞典','PDF','学ぶ','ツール','TODOROKIについて','SNS'],
-en:['Latest','Articles','Topics','Glossary','PDF Library','Learn','Tools','About TODOROKI','SNS'],
-es:['Novedades','Artículos','Temas','Glosario','PDF','Aprender','Herramientas','Acerca de TODOROKI','Redes'],
-pt:['Novidades','Artigos','Temas','Glossário','PDF','Aprender','Ferramentas','Sobre TODOROKI','Redes'],
-'zh-Hans':['最新文章','文章','主题','术语表','PDF资料','学习','工具','关于TODOROKI','社交媒体'],
-'zh-Hant':['最新文章','文章','主題','術語表','PDF資料','學習','工具','關於TODOROKI','社群']
-};
+const markup="<header class=\"site-header\">\n  <div class=\"wrap brand-row\">\n    <a class=\"logo\" href=\"/\" aria-label=\"TODOROKI トップページ\">TODOROKI</a>\n    <nav class=\"desktop-links\" aria-label=\"メインメニュー\">\n      <a href=\"/#latest-articles\">新着記事</a>\n      <a href=\"/#articles\">基礎</a>\n      <a href=\"/#themes\">テーマ</a>\n      <a href=\"/#pdf-library\">用語・PDF</a>\n      <a href=\"/#study\">学ぶ</a>\n      <a href=\"/#company-analysis\">ツール</a>\n    </nav>\n    <label class=\"todoroki-language-picker\">🌐 <select data-todoroki-language aria-label=\"表示言語 / Language\"><option value=\"ja\" selected>日本語</option><option value=\"en\">English</option><option value=\"es\">Español</option><option value=\"pt\">Português</option><option value=\"zh-Hant\">繁體中文</option><option value=\"zh-Hans\">简体中文</option></select></label>\n    <a class=\"account-link\" href=\"/login\">\n      <svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><circle cx=\"10\" cy=\"6\" r=\"3\"/><path d=\"M4 18v-2a6 6 0 0 1 12 0v2\"/></svg>\n      ログイン\n    </a>\n  </div>\n  <nav class=\"mobile-links\" aria-label=\"メインメニュー\">\n    <a href=\"/#latest-articles\">新着記事</a>\n    <a href=\"/#articles\">基礎</a>\n    <a href=\"/#themes\">テーマ</a>\n      <a href=\"/#pdf-library\">用語・PDF</a>\n    <a href=\"/#study\">学ぶ</a>\n    <a href=\"/#company-analysis\">ツール</a>\n  </nav>\n</header>";
 function update(){
-const header=document.querySelector('header.site-header')||document.querySelector('body > header');
-if(!header)return;
-const locale=(location.pathname.match(/^\/(en|es|pt|zh-Hans|zh-Hant)(?:\/|$)/)||[])[1]||'ja', l=labels[locale],base=locale==='ja'?'/':'/'+locale+'/';
-const links=[[base+'#latest-articles',l[0]],[base+'#articles',l[1]],[base+'#themes',l[2]],[base+(locale==='ja'?'#glossary':'glossary'),l[3]],[base+(locale==='ja'?'#pdf-library':'pdf-library'),l[4]],['/#study',l[5]],[base+'#company-analysis',l[6]],[base+'#about',l[7]],[base+'#social',l[8]]];
-const markup=(locale==='ja'?[...links.slice(0,3),[base+'#pdf-library','用語・PDF'],...links.slice(5,7)]:links).map(([href,label])=>'<a href="'+href+'">'+label+'</a>').join('');
-if(!header.classList.contains('site-header')){
-header.className='site-header';
-header.innerHTML='<div class="wrap brand-row"><a class="logo" href="'+base+'">TODOROKI</a><nav class="desktop-links" aria-label="Main navigation">'+markup+'</nav><a class="account-link" href="/login">ログイン</a></div><nav class="mobile-links" aria-label="Mobile navigation">'+markup+'</nav>';
-}else{
-header.querySelectorAll('nav.desktop-links,nav.mobile-links').forEach(nav=>nav.innerHTML=markup);
-}
-if(!document.getElementById('td-shared-header-style')){
-const style=document.createElement('style');style.id='td-shared-header-style';
-style.textContent='.site-header{display:block!important;position:sticky;top:0;z-index:100;background:rgba(8,8,8,.97);border-bottom:1px solid #5d4c27;padding:0!important;color:#eee9dd}.site-header .wrap{width:min(1200px,94%);margin:auto;padding:0}.site-header .brand-row{display:flex;align-items:center;gap:18px;min-height:76px}.site-header .logo{color:#e4c46e;font-size:23px;font-weight:800;text-decoration:none;white-space:nowrap}.site-header .desktop-links{display:flex;align-items:center;gap:15px;margin-left:auto;flex-wrap:wrap}.site-header .desktop-links a,.site-header .mobile-links a{font:inherit;font-family:inherit;font-size:13px;font-weight:400;letter-spacing:normal;color:#cfc7b6;text-decoration:none;white-space:nowrap}.site-header .desktop-links a:hover,.site-header .mobile-links a:hover{color:#e4c46e}.site-header .mobile-links{display:none;gap:16px;overflow-x:auto;padding:12px 3%;border-top:1px solid #3b321f}.site-header .account-link{font-size:13px;white-space:nowrap;color:#e4c46e;text-decoration:none}.site-header .account-link svg{width:16px;height:16px;vertical-align:middle;fill:none;stroke:currentColor}@media(max-width:1050px){.site-header .desktop-links{display:none!important}.site-header .mobile-links{display:flex!important}.site-header .brand-row{min-height:66px}}';
-document.head.appendChild(style);
-}
+ const header=document.querySelector('header.site-header')||document.querySelector('body > header');
+ if(!header)return;
+ header.outerHTML=markup;
+ if(!document.querySelector('link[href^="/assets/site-header.css"]')){
+  const css=document.createElement('link');css.rel='stylesheet';css.href='/assets/site-header.css';document.head.append(css);
+ }
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',update,{once:true});else update();
 })();
