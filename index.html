@@ -431,7 +431,8 @@ footer {
 @media(hover:hover) and (pointer:fine){.news-ticker:hover .news-ticker-track{animation-play-state:paused}}
 .news-ticker:focus-within .news-ticker-track{animation-play-state:paused}
 .news-ticker[data-playing="true"] .news-ticker-track{animation-play-state:running!important}
-.news-ticker-toggle{flex:none;border:0;border-left:1px solid #665225;background:#16130c;color:#f4d77b;padding:10px 12px;min-height:48px;cursor:pointer;font-size:12px}
+.news-ticker-toggle:focus-visible{position:relative!important;width:auto!important;height:auto!important;padding:10px 12px!important;margin:0!important;overflow:visible!important;clip:auto!important;white-space:normal!important;border:1px solid #665225!important}
+.news-ticker-toggle{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important;flex:none;border:0;border-left:1px solid #665225;background:#16130c;color:#f4d77b;padding:10px 12px;min-height:48px;cursor:pointer;font-size:12px}
 @keyframes todoroki-ticker{to{transform:translateX(-50%)}}
 @media(max-width:600px){.news-ticker-label{padding:12px 9px;font-size:10px}.news-ticker-group{gap:18px}.news-ticker-group a{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.news-ticker-window{scrollbar-width:thin}}
