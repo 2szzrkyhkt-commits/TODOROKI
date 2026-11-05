@@ -36,6 +36,22 @@ try{sessionStorage.setItem('todoroki-language-scroll',JSON.stringify({target:tar
 location.assign(target);
 }
 try{const saved=JSON.parse(sessionStorage.getItem('todoroki-language-scroll')||'null');if(saved){sessionStorage.removeItem('todoroki-language-scroll');const normalizedPath=value=>value.replace(/\.html$/,'').replace(/\/$/,'').replace(/\/index$/,'');const sameTarget=normalizedPath(location.pathname)===normalizedPath(saved.target);if(sameTarget&&Date.now()-saved.from<20000){let attempts=0;const restore=function(){const height=Math.max(0,document.documentElement.scrollHeight-window.innerHeight);window.scrollTo(0,Math.round(height*Math.min(1,Math.max(0,saved.ratio))));};const ready=function(){restore();requestAnimationFrame(restore);};if(document.readyState==='complete')ready();else window.addEventListener('load',ready,{once:true});}}}catch(e){}
+// Keep shared header navigation consistent on pages that include this script.
+document.querySelectorAll('header.site-header').forEach(function(header){
+ const onLogin=/^\/login(?:\.html)?\/?$/.test(location.pathname);
+ header.querySelectorAll('a.account-link').forEach(function(link){
+  if(onLogin){link.setAttribute('aria-current','page');link.setAttribute('aria-label',current==='ja'?'ログインページ': 'Login page');}
+  else link.removeAttribute('aria-current');
+ });
+ header.querySelectorAll('.desktop-links,.mobile-links').forEach(function(nav){
+  const seen=new Set();
+  nav.querySelectorAll('a[href]').forEach(function(link){
+   const url=new URL(link.getAttribute('href'),location.origin);
+   const key=url.origin+url.pathname.replace(/\.html$/,'').replace(/\/$/,'')+url.search+url.hash;
+   if(seen.has(key))link.remove();else seen.add(key);
+  });
+ });
+});
 if(current==='ja'){document.querySelectorAll('.site-header .desktop-links, .site-header .mobile-links').forEach(function(nav){if(!nav.querySelector('a[href="/boki1"]')){const a=document.createElement('a');a.href='/boki1';a.textContent='簿記を学ぶ';const first=nav.querySelector('a');if(first)first.insertAdjacentElement('afterend',a);else nav.appendChild(a)}})}
 document.querySelectorAll('[data-todoroki-language]').forEach(function(select){select.replaceChildren();locales.forEach(function(pair){const opt=document.createElement('option');opt.value=pair[0];opt.textContent=pair[1];select.appendChild(opt)});select.value=current;select.addEventListener('change',function(){changeLanguage(select.value)})});
 })();
