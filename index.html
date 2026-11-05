@@ -417,6 +417,20 @@ footer {
 .market-watch-links a:hover,.market-watch-links a:focus-visible{color:#f4d77b;text-decoration:underline}
 .market-watch-note{margin-left:auto;flex:none;color:#aaa18b;font-size:10px}
 @media(max-width:600px){.market-watch{gap:8px;padding:7px 10px}.market-watch-links{gap:12px}.market-watch-note{display:none}}
+
+/* Featured article cards replace the former moving text ticker. */
+.featured-carousel{background:#100f0b;border-block:1px solid #665225;padding:12px max(12px,calc((100% - 1120px)/2));color:#f4d77b}
+.featured-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;font-size:12px;letter-spacing:.06em}.featured-head strong span{font-size:11px;color:#bfb39b;margin-left:8px;font-weight:500}
+.featured-controls{display:flex;gap:6px}.featured-controls button{border:1px solid #68582f;border-radius:4px;background:#211d14;color:#f4d77b;min-width:36px;min-height:34px;cursor:pointer;font-size:19px}.featured-controls .featured-pause{font-size:11px;padding-inline:9px}
+.featured-viewport{overflow:hidden}.featured-track{display:flex;gap:12px;transition:transform .45s ease;will-change:transform}
+.featured-card{flex:0 0 calc((100% - 24px)/3);min-width:0;display:flex;align-items:center;gap:11px;padding:8px;border:1px solid #4d4128;border-radius:6px;background:#1b1914;color:#f4e7c3;text-decoration:none;box-sizing:border-box}
+.featured-card:hover,.featured-card:focus-visible{border-color:#d4af37;background:#242017}
+.featured-thumb{flex:0 0 92px;height:62px;border-radius:4px;background:linear-gradient(145deg,#3c3118,#0e0d0a 70%);border:1px solid #5e4b22;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;overflow:hidden}
+.featured-thumb-brand{font-size:10px;letter-spacing:.12em;font-weight:800;color:#d4af37}.featured-thumb-topic{font-size:10px;color:#e6d6ad}
+.featured-card-title{font-size:13px;line-height:1.55;font-weight:700;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+@media(max-width:850px){.featured-card{flex-basis:calc((100% - 12px)/2)}}
+@media(max-width:600px){.featured-card{flex-basis:100%}.featured-thumb{flex-basis:110px;height:70px}.featured-carousel{padding:10px 12px}}
+@media(prefers-reduced-motion:reduce){.featured-track{transition:none}}
 /* Homepage latest-article ticker */
 .news-ticker[hidden]{display:none!important}
 .news-ticker{display:flex;align-items:center;min-height:48px;background:#100f0b;border-block:1px solid #665225;overflow:hidden;color:#f4d77b}
@@ -482,7 +496,7 @@ footer {
 </header>
 
 <main id="main-content">
-<div class="news-ticker" id="news-ticker" aria-label="新着記事"><span class="news-ticker-label">LATEST NEWS</span><div class="news-ticker-window"><nav class="news-ticker-track" aria-label="新着記事へのリンク"><div class="news-ticker-group"><a href="/nintendo-earnings-analysis-2026-nov">任天堂決算｜49.1%増益でも割高？</a><a href="/us-midterm-election-2026-checks-balances">米国中間選挙で議会が変わる</a><a href="/yen-carry-trade-fx-outlook-2026">円キャリートレードと為替見通し</a><a href="/murder-accountability-and-prison-labor">殺人犯の出所後の生活と刑事責任</a><a href="/monetary-policy-weekly-20261030">金利据え置きでも安心できない？</a><a href="/gasoline-subsidy-outlook-2026">ガソリン補助金が底をつく？</a><a href="/gmo-stock-recovery-data-breach">GMOの株価は戻る？</a><a href="/company-data-leak-prevention">企業の情報漏洩対策15選</a><a href="/ai-bubble-collapse-or-correction">AIバブルは崩壊したのか？</a><a href="/password-copy-paste-security">パスワードのコピペは危険？</a></div><div class="news-ticker-group" aria-hidden="true"><a tabindex="-1" href="/nintendo-earnings-analysis-2026-nov">任天堂決算｜49.1%増益でも割高？</a><a tabindex="-1" href="/us-midterm-election-2026-checks-balances">米国中間選挙で議会が変わる</a><a tabindex="-1" href="/yen-carry-trade-fx-outlook-2026">円キャリートレードと為替見通し</a><a tabindex="-1" href="/murder-accountability-and-prison-labor">殺人犯の出所後の生活と刑事責任</a><a tabindex="-1" href="/monetary-policy-weekly-20261030">金利据え置きでも安心できない？</a><a tabindex="-1" href="/gasoline-subsidy-outlook-2026">ガソリン補助金が底をつく？</a><a tabindex="-1" href="/gmo-stock-recovery-data-breach">GMOの株価は戻る？</a><a tabindex="-1" href="/company-data-leak-prevention">企業の情報漏洩対策15選</a><a tabindex="-1" href="/ai-bubble-collapse-or-correction">AIバブルは崩壊したのか？</a><a tabindex="-1" href="/password-copy-paste-security">パスワードのコピペは危険？</a></div></nav></div><button type="button" class="news-ticker-toggle" aria-label="テロップを一時停止">停止</button></div>
+<section class="featured-carousel" id="featured-carousel" aria-label="注目の新着記事"><div class="featured-head"><strong>FEATURED ARTICLES <span>注目記事</span></strong><div class="featured-controls"><button type="button" class="featured-prev" aria-label="前の記事">‹</button><button type="button" class="featured-next" aria-label="次の記事">›</button><button type="button" class="featured-pause" aria-label="自動切り替えを停止">停止</button></div></div><div class="featured-viewport"><div class="featured-track"><a class="featured-card" href="/nintendo-earnings-analysis-2026-nov"><span class="featured-thumb" aria-hidden="true"><span class="featured-thumb-brand">TODOROKI</span><span class="featured-thumb-topic">決算分析</span></span><span class="featured-card-title">任天堂決算｜49.1%増益でも割高？</span></a><a class="featured-card" href="/us-midterm-election-2026-checks-balances"><span class="featured-thumb" aria-hidden="true"><span class="featured-thumb-brand">TODOROKI</span><span class="featured-thumb-topic">米国政治</span></span><span class="featured-card-title">米国中間選挙で議会が変わる</span></a><a class="featured-card" href="/yen-carry-trade-fx-outlook-2026"><span class="featured-thumb" aria-hidden="true"><span class="featured-thumb-brand">TODOROKI</span><span class="featured-thumb-topic">為替・金利</span></span><span class="featured-card-title">円キャリートレードと為替見通し</span></a><a class="featured-card" href="/murder-accountability-and-prison-labor"><span class="featured-thumb" aria-hidden="true"><span class="featured-thumb-brand">TODOROKI</span><span class="featured-thumb-topic">社会・制度</span></span><span class="featured-card-title">殺人犯の出所後の生活と刑事責任</span></a><a class="featured-card" href="/monetary-policy-weekly-20261030"><span class="featured-thumb" aria-hidden="true"><span class="featured-thumb-brand">TODOROKI</span><span class="featured-thumb-topic">金融政策</span></span><span class="featured-card-title">金利据え置きでも安心できない？</span></a><a class="featured-card" href="/gasoline-subsidy-outlook-2026"><span class="featured-thumb" aria-hidden="true"><span class="featured-thumb-brand">TODOROKI</span><span class="featured-thumb-topic">経済政策</span></span><span class="featured-card-title">ガソリン補助金が底をつく？</span></a><a class="featured-card" href="/gmo-stock-recovery-data-breach"><span class="featured-thumb" aria-hidden="true"><span class="featured-thumb-brand">TODOROKI</span><span class="featured-thumb-topic">企業分析</span></span><span class="featured-card-title">GMOの株価は戻る？</span></a><a class="featured-card" href="/company-data-leak-prevention"><span class="featured-thumb" aria-hidden="true"><span class="featured-thumb-brand">TODOROKI</span><span class="featured-thumb-topic">情報セキュリティ</span></span><span class="featured-card-title">企業の情報漏洩対策15選</span></a><a class="featured-card" href="/ai-bubble-collapse-or-correction"><span class="featured-thumb" aria-hidden="true"><span class="featured-thumb-brand">TODOROKI</span><span class="featured-thumb-topic">AI・市場</span></span><span class="featured-card-title">AIバブルは崩壊したのか？</span></a><a class="featured-card" href="/password-copy-paste-security"><span class="featured-thumb" aria-hidden="true"><span class="featured-thumb-brand">TODOROKI</span><span class="featured-thumb-topic">情報セキュリティ</span></span><span class="featured-card-title">パスワードのコピペは危険？</span></a></div></div></section>
 <div class="market-watch" aria-label="マーケット指標の参照先"><strong>MARKET WATCH</strong><nav class="market-watch-links" aria-label="主要マーケットデータ"><a href="https://www.jpx.co.jp/markets/indices/" target="_blank" rel="noopener noreferrer">日経・TOPIX ↗</a><a href="https://fred.stlouisfed.org/series/SP500" target="_blank" rel="noopener noreferrer">S&amp;P 500 ↗</a><a href="https://fred.stlouisfed.org/series/DEXJPUS" target="_blank" rel="noopener noreferrer">ドル円 ↗</a><a href="https://fred.stlouisfed.org/series/DGS10" target="_blank" rel="noopener noreferrer">米国10年債 ↗</a></nav><span class="market-watch-note">各データ提供元で確認</span></div>
 
 <!-- 表紙 -->
@@ -896,32 +910,20 @@ footer {
 </script>
 
 <script>
-/* Smooth continuous marquee driven by animation frames, with explicit pause control. */
+/* Accessible featured article carousel: one card per step, 4 seconds. */
 (function(){
- var ticker=document.getElementById('news-ticker');if(!ticker)return;
- var groups=ticker.querySelectorAll('.news-ticker-group');
- var track=ticker.querySelector('.news-ticker-track');
- var btn=ticker.querySelector('.news-ticker-toggle');
- if(groups.length!==2||!track||!btn)return;
- var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
- var playing=!reduced, position=0, previous=0, width=0;
- function measure(){width=groups[0].getBoundingClientRect().width;groups[1].style.width=width+'px';if(width>0)position%=width;}
- function label(){ticker.dataset.playing=String(playing);btn.textContent=playing?'停止':'再生';btn.setAttribute('aria-label',playing?'テロップを一時停止':'テロップを再生');}
- btn.addEventListener('click',function(){playing=!playing;previous=0;label();});
- var hovered=false;
- if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){ticker.addEventListener('mouseenter',function(){hovered=true});ticker.addEventListener('mouseleave',function(){hovered=false;previous=0});}
- window.addEventListener('resize',measure,{passive:true});
- measure();label();
- function frame(now){
-   if(!width)measure();
-   if(previous&&playing&&!hovered&&!document.hidden&&width){
-     position=(position+Math.min((now-previous)/1000,0.1)*75)%width;
-     track.style.transform='translate3d('+(-position)+'px,0,0)';
-   }
-   previous=now;
-   window.requestAnimationFrame(frame);
- }
- window.requestAnimationFrame(frame);
+ var root=document.getElementById('featured-carousel');if(!root)return;
+ var track=root.querySelector('.featured-track'),cards=Array.from(root.querySelectorAll('.featured-card'));
+ var prev=root.querySelector('.featured-prev'),next=root.querySelector('.featured-next'),pause=root.querySelector('.featured-pause');
+ if(!cards.length)return;
+ var index=0,playing=!window.matchMedia('(prefers-reduced-motion: reduce)').matches,timer;
+ function visible(){return window.matchMedia('(max-width:600px)').matches?1:window.matchMedia('(max-width:850px)').matches?2:3;}
+ function update(){var max=Math.max(0,cards.length-visible());index=Math.min(Math.max(0,index),max);var x=cards[index].offsetLeft-cards[0].offsetLeft;track.style.transform='translateX('+(-x)+'px)';pause.textContent=playing?'停止':'再生';pause.setAttribute('aria-label',playing?'自動切り替えを停止':'自動切り替えを再生');}
+ function step(n){var max=Math.max(0,cards.length-visible());index=index+n;if(index>max)index=0;if(index<0)index=max;update();}
+ function start(){clearInterval(timer);timer=setInterval(function(){if(playing&&!document.hidden&&!root.matches(':hover')&&!root.contains(document.activeElement))step(1)},4000);}
+ prev.addEventListener('click',function(){step(-1)});next.addEventListener('click',function(){step(1)});
+ pause.addEventListener('click',function(){playing=!playing;update()});window.addEventListener('resize',update,{passive:true});
+ update();start();
 })();
 </script>
 </body>
