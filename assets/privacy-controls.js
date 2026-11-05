@@ -29,7 +29,7 @@
 /* Shared TODOROKI header navigation: one source for all pages using privacy controls. */
 (()=>{'use strict';
 const labels={
-ja:['新着記事','記事','テーマ','用語辞典','PDF資料','学ぶ','ツール','TODOROKIについて','SNS'],
+ja:['新着記事','基礎','テーマ','用語辞典','PDF','学ぶ','ツール','TODOROKIについて','SNS'],
 en:['Latest','Articles','Topics','Glossary','PDF Library','Learn','Tools','About TODOROKI','SNS'],
 es:['Novedades','Artículos','Temas','Glosario','PDF','Aprender','Herramientas','Acerca de TODOROKI','Redes'],
 pt:['Novidades','Artigos','Temas','Glossário','PDF','Aprender','Ferramentas','Sobre TODOROKI','Redes'],
@@ -41,7 +41,7 @@ const header=document.querySelector('header.site-header')||document.querySelecto
 if(!header)return;
 const locale=(location.pathname.match(/^\/(en|es|pt|zh-Hans|zh-Hant)(?:\/|$)/)||[])[1]||'ja', l=labels[locale],base=locale==='ja'?'/':'/'+locale+'/';
 const links=[[base+'#latest-articles',l[0]],[base+'#articles',l[1]],[base+'#themes',l[2]],[base+'glossary',l[3]],[base+'pdf-library',l[4]],['/#study',l[5]],[base+'#company-analysis',l[6]],[base+'#about',l[7]],[base+'#social',l[8]]];
-const markup=links.map(([href,label])=>'<a href="'+href+'">'+label+'</a>').join('');
+const markup=(locale==='ja'?links.slice(0,7):links).map(([href,label])=>'<a href="'+href+'">'+label+'</a>').join('');
 if(!header.classList.contains('site-header')){
 header.className='site-header';
 header.innerHTML='<div class="wrap brand-row"><a class="logo" href="'+base+'">TODOROKI</a><nav class="desktop-links" aria-label="Main navigation">'+markup+'</nav><a class="account-link" href="/login">ログイン</a></div><nav class="mobile-links" aria-label="Mobile navigation">'+markup+'</nav>';
