@@ -17,9 +17,12 @@ async function sync(env) {
   for(const s of SERIES) {
     try {
       const endYear=new Date().getUTCFullYear();
-      // BLS public API v1 allows up to 10 years; use rolling two-year window for revisions.
+      // Backfill up to 10 calendar years once, then check the most recent 2 years daily.
+      // Public API v1 accepts a maximum 10-year inclusive window.
+      const existing=await env.US_DB.prepare('SELECT COUNT(*) AS n FROM us_observations WHERE series_id=?').bind(s.id).first();
+      const startYear=Number(existing?.n||0)===0?endYear-9:endYear-1;
       const res=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({seriesid:[s.id],startyear:String(endYear-1),endyear:String(endYear)}),
+        body:JSON.stringify({seriesid:[s.id],startyear:String(startYear),endyear:String(endYear)}),
         signal:AbortSignal.timeout(15000)});
       if(!res.ok) throw new Error('BLS HTTP '+res.status);
       const payload=await res.json();
