@@ -6,7 +6,7 @@
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const valid = s => /^\d{4}-\d{2}-\d{2}$/.test(s) && !Number.isNaN(Date.parse(s + 'T00:00:00Z'));
 const next = s => new Date(Date.parse(s+'T00:00:00Z')+86400000).toISOString().slice(0,10);
-async function api(url, key) {
+async function api(url) {
   for(let attempt=0;attempt<5;attempt++){
     const r=await fetch(url,{headers:{'Accept':'application/json'}});
     if(r.ok)return r;
@@ -18,14 +18,18 @@ async function api(url, key) {
 async function tick(env) {
   const job=await env.EDINET_DB.prepare("SELECT * FROM archive_jobs WHERE state='running' ORDER BY id LIMIT 1").first();
   if(!job)return {state:'idle'};
+  if(!env.EDINET_API_KEY || !env.EDINET_FILES) return {state:'needs_attention',error:'Missing EDINET secret or R2 binding'};
   if(job.cursor>job.end_date){
     const pending=await env.EDINET_DB.prepare("SELECT count(*) n FROM archive_docs WHERE job_id=? AND state!='done'").bind(job.id).first();
     if(!pending.n){await env.EDINET_DB.prepare("UPDATE archive_jobs SET state='complete' WHERE id=?").bind(job.id).run();return {state:'complete'};}
-    // Failed records remain visible for manual review; do not silently declare success.
+    // Retry failed documents automatically after the date range is indexed.
+    if(pending.n){
+      await env.EDINET_DB.prepare("UPDATE archive_docs SET state='pending',attempts=0 WHERE job_id=? AND state='failed'").bind(job.id).run();
+    }
   }else{
     try{
       const url='https://api.edinet-fsa.go.jp/api/v2/documents.json?date='+job.cursor+'&type=2&Subscription-Key='+encodeURIComponent(env.EDINET_API_KEY);
-      const data=await (await api(url,env.EDINET_API_KEY)).json();
+      const data=await (await api(url)).json();
       if(data.metadata?.status && String(data.metadata.status)!=='200')throw Error('EDINET API status '+data.metadata.status);
       if(!Array.isArray(data.results))throw Error('Missing results');
       for(const d of data.results){
@@ -34,7 +38,7 @@ async function tick(env) {
         if(!d.docID)continue;
         await env.EDINET_DB.prepare("INSERT OR IGNORE INTO archive_docs(job_id,doc_id,submitted_on,doc_type,state) VALUES(?,?,?,?, 'pending')").bind(job.id,d.docID,job.cursor,String(d.docTypeCode)).run();
       }
-      await env.EDINET_DB.prepare("UPDATE archive_jobs SET cursor=?,last_error=NULL WHERE id=?").bind(next(job.cursor),job.id).run();
+      await env.EDINET_DB.prepare("UPDATE archive_jobs SET cursor=?,last_error=NULL WHERE id=? AND cursor=?").bind(next(job.cursor),job.id,job.cursor).run();
     }catch(e){
       await env.EDINET_DB.prepare("UPDATE archive_jobs SET last_error=? WHERE id=?").bind(String(e).slice(0,500),job.id).run();
       return {state:'retry-date',date:job.cursor,error:String(e)};
@@ -45,11 +49,11 @@ async function tick(env) {
   for(const d of docs.results){
     try{
       const u='https://api.edinet-fsa.go.jp/api/v2/documents/'+encodeURIComponent(d.doc_id)+'?type=1&Subscription-Key='+encodeURIComponent(env.EDINET_API_KEY);
-      const r=await api(u,env.EDINET_API_KEY);
+      const r=await api(u);
       await env.EDINET_FILES.put('edinet/'+d.doc_id+'.zip',r.body,{httpMetadata:{contentType:'application/zip'}});
       await env.EDINET_DB.prepare("UPDATE archive_docs SET state='done',last_error=NULL WHERE job_id=? AND doc_id=?").bind(job.id,d.doc_id).run();
     }catch(e){
-      await env.EDINET_DB.prepare("UPDATE archive_docs SET attempts=attempts+1,last_error=?,state=CASE WHEN attempts>=9 THEN 'failed' ELSE 'pending' END WHERE job_id=? AND doc_id=?").bind(String(e).slice(0,500),job.id,d.doc_id).run();
+      await env.EDINET_DB.prepare("UPDATE archive_docs SET attempts=attempts+1,last_error=?,state=CASE WHEN attempts+1>=10 THEN 'failed' ELSE 'pending' END WHERE job_id=? AND doc_id=?").bind(String(e).slice(0,500),job.id,d.doc_id).run();
     }
     await sleep(1500);
   }
