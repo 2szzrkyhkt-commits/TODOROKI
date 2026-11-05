@@ -407,6 +407,21 @@ footer {
 
 /* Consistent, single-line section headings on desktop and mobile. */
 .section-title{font-size:clamp(15px, 4.2vw, 29px);letter-spacing:0.01em;white-space:nowrap;}
+
+/* Homepage latest-article ticker */
+.news-ticker{display:flex;align-items:center;min-height:48px;background:#100f0b;border-block:1px solid #665225;overflow:hidden;color:#f4d77b}
+.news-ticker-label{position:relative;z-index:1;flex:none;padding:12px 16px;background:#d4af37;color:#080808;font-size:12px;font-weight:900;letter-spacing:.07em;white-space:nowrap}
+.news-ticker-window{min-width:0;flex:1;overflow:hidden}
+.news-ticker-track{display:flex;width:max-content;align-items:center;animation:todoroki-ticker 55s linear infinite}
+.news-ticker-group{display:flex;align-items:center;flex:none;gap:28px;padding-inline:14px;white-space:nowrap}
+.news-ticker-group a{display:inline-block;font-size:13px;font-weight:600;color:#f4d77b;max-width:80vw;overflow:hidden;text-overflow:ellipsis;vertical-align:middle}
+.news-ticker-group a:hover{text-decoration:underline;color:#fff}
+.news-ticker-group a:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.news-ticker-group a::before{content:'◆';font-size:8px;margin-right:12px;color:#b69a50}
+.news-ticker:hover .news-ticker-track,.news-ticker:focus-within .news-ticker-track,.news-ticker:active .news-ticker-track{animation-play-state:paused}
+@keyframes todoroki-ticker{to{transform:translateX(-50%)}}
+@media(max-width:600px){.news-ticker-label{padding:12px 9px;font-size:10px}.news-ticker-group{gap:18px}.news-ticker-group a{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.news-ticker-track{animation:none;width:auto}.news-ticker-window{overflow-x:auto;scrollbar-width:thin}.news-ticker-group[aria-hidden=true]{display:none}}
 </style>
 <link rel="stylesheet" href="/assets/language-picker.css"><link rel="stylesheet" href="/assets/site-header.css"><script src="/assets/language-picker.js" defer></script><link rel="stylesheet" href="/assets/site-quality.css"><style>#latest-articles [hidden]{display:none!important}</style><style>
 .site-header .desktop-links .study-nav>summary{font-family:inherit;font-size:13px;font-weight:inherit;letter-spacing:inherit;line-height:inherit;color:#bbb;white-space:nowrap}
@@ -454,6 +469,7 @@ footer {
 </header>
 
 <main id="main-content">
+<div class="news-ticker" id="news-ticker" aria-label="新着記事" hidden><span class="news-ticker-label">LATEST NEWS</span><div class="news-ticker-window"><nav class="news-ticker-track" aria-label="新着記事へのリンク"><div class="news-ticker-group"></div><div class="news-ticker-group" aria-hidden="true"></div></nav></div></div>
 
 <!-- 表紙 -->
 
@@ -862,6 +878,25 @@ footer {
   var empty = document.getElementById('latest-empty');
   empty.textContent = count === 0 ? '現在、新着記事はありません。過去の記事は時事ネタ一覧からご覧ください。' : '';
   empty.hidden = count > 0;
+})();
+</script>
+
+<script>
+/* Derive ticker links from the homepage article list; no separate manual updates. */
+(function(){
+  var ticker=document.getElementById('news-ticker');
+  var section=document.getElementById('latest-articles');
+  if(!ticker||!section)return;
+  var entries=Array.from(section.querySelectorAll('.cards > a.card-link')).map(function(a){
+    var time=a.querySelector('time');var heading=a.querySelector('h3');
+    return time&&heading?{date:time.getAttribute('datetime'),title:heading.textContent.trim(),href:a.getAttribute('href')}:null;
+  }).filter(function(x){return x&&/^\\d{4}-\\d{2}-\\d{2}$/.test(x.date)&&x.href;});
+  entries.sort(function(a,b){return b.date.localeCompare(a.date);});
+  var seen=new Set();entries=entries.filter(function(x){if(seen.has(x.href))return false;seen.add(x.href);return true;}).slice(0,10);
+  if(!entries.length)return;
+  var groups=ticker.querySelectorAll('.news-ticker-group');
+  groups.forEach(function(group,i){entries.forEach(function(item){var a=document.createElement('a');a.href=item.href;a.textContent=item.title;if(i)a.tabIndex=-1;group.appendChild(a);});});
+  ticker.hidden=false;
 })();
 </script>
 </body>
