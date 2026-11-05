@@ -1,24 +1,21 @@
-/* Let readers pause decorative motion, including reduced-motion preferences. */
+/* Keep the muted, looping TODOROKI bull background video playing. */
 (() => {
-  const videos = [...document.querySelectorAll('.hero-video, .end-video video')];
-  const hero = document.querySelector('.hero');
-  if (!hero || !videos.length) return;
-  const preference = matchMedia('(prefers-reduced-motion: reduce)');
-  let paused = preference.matches;
-  const button = document.createElement('button');
-  button.type = 'button';
-  button.className = 'motion-toggle';
-  function apply() {
-    button.textContent = paused ? '背景動画を再生' : '背景動画を停止';
-    videos.forEach(video => {
-      video.dataset.motionPaused = String(paused);
-      if (paused) video.pause();
-      else { const attempt = video.play(); if (attempt) attempt.catch(() => {}); }
-    });
-  }
-  videos.forEach(video => video.addEventListener('play', () => { if (paused) video.pause(); }));
-  button.addEventListener('click', () => { paused = !paused; apply(); });
-  preference.addEventListener('change', e => { paused = e.matches; apply(); });
-  hero.append(button);
-  apply();
+  const videos = document.querySelectorAll('.hero-video, .end-video video');
+  videos.forEach(video => {
+    video.autoplay = true;
+    video.loop = true;
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+    video.removeAttribute('controls');
+    function play() {
+      if (document.hidden) return;
+      const attempt = video.play();
+      if (attempt && typeof attempt.catch === 'function') attempt.catch(() => {});
+    }
+    if (video.readyState >= 2) play();
+    else video.addEventListener('canplay', play, { once: true });
+    video.addEventListener('pause', () => { if (!document.hidden) play(); });
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) play(); });
+  });
 })();
