@@ -409,11 +409,12 @@ footer {
 .section-title{font-size:clamp(15px, 4.2vw, 29px);letter-spacing:0.01em;white-space:nowrap;}
 
 /* Homepage latest-article ticker */
+.news-ticker[hidden]{display:none!important}
 .news-ticker{display:flex;align-items:center;min-height:48px;background:#100f0b;border-block:1px solid #665225;overflow:hidden;color:#f4d77b}
 .news-ticker-label{position:relative;z-index:1;flex:none;padding:12px 16px;background:#d4af37;color:#080808;font-size:12px;font-weight:900;letter-spacing:.07em;white-space:nowrap}
 .news-ticker-window{min-width:0;flex:1;overflow:hidden}
 .news-ticker-track{display:flex;width:max-content;align-items:center;animation:todoroki-ticker 55s linear infinite}
-.news-ticker-group{display:flex;align-items:center;flex:none;gap:28px;padding-inline:14px;white-space:nowrap}
+.news-ticker-group{display:flex;align-items:center;flex:none;gap:28px;padding-inline:14px;white-space:nowrap;width:max-content}
 .news-ticker-group a{display:inline-block;font-size:13px;font-weight:600;color:#f4d77b;max-width:80vw;overflow:hidden;text-overflow:ellipsis;vertical-align:middle}
 .news-ticker-group a:hover{text-decoration:underline;color:#fff}
 .news-ticker-group a:focus-visible{outline:2px solid #fff;outline-offset:3px}
@@ -897,6 +898,11 @@ footer {
   var groups=ticker.querySelectorAll('.news-ticker-group');
   groups.forEach(function(group,i){entries.forEach(function(item){var a=document.createElement('a');a.href=item.href;a.textContent=item.title;if(i)a.tabIndex=-1;group.appendChild(a);});});
   ticker.hidden=false;
+  /* Make each half exactly the same width, so the wrap is seamless. */
+  var track=ticker.querySelector(".news-ticker-track");
+  function syncWidth(){var width=groups[0].scrollWidth;groups[1].style.width=width+"px";}
+  syncWidth();
+  window.addEventListener("resize",syncWidth,{passive:true});
 })();
 </script>
 </body>
