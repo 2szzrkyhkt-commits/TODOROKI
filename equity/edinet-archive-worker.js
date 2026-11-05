@@ -22,10 +22,8 @@ async function tick(env) {
   if(job.cursor>job.end_date){
     const pending=await env.EDINET_DB.prepare("SELECT count(*) n FROM archive_docs WHERE job_id=? AND state!='done'").bind(job.id).first();
     if(!pending.n){await env.EDINET_DB.prepare("UPDATE archive_jobs SET state='complete' WHERE id=?").bind(job.id).run();return {state:'complete'};}
-    // Retry failed documents automatically after the date range is indexed.
-    if(pending.n){
-      await env.EDINET_DB.prepare("UPDATE archive_docs SET state='pending',attempts=0 WHERE job_id=? AND state='failed'").bind(job.id).run();
-    }
+    // Failed documents remain held for operator review. Never reset their attempts automatically.
+
   }else{
     try{
       const url='https://api.edinet-fsa.go.jp/api/v2/documents.json?date='+job.cursor+'&type=2&Subscription-Key='+encodeURIComponent(env.EDINET_API_KEY);

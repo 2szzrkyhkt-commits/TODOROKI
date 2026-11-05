@@ -1,0 +1,4 @@
+import assert from 'node:assert/strict';import {runScheduled}from './edinet-cron.js';
+assert.equal((await runScheduled({})).state,'not_configured');let count=0;globalThis.fetch=async(url,opt)=>{assert.equal(new URL(url).origin,'https://todoroki-edinet-connect.easysquid66.chatgpt.site');assert.equal(opt.headers['OAI-Sites-Authorization'],'Bearer test');count++;return Response.json(count===1?{state:'running',updatedAt:'1'}:{state:'watching',updatedAt:'2',nextPollAt:Date.now()+3600000,saved:1});};const d=await runScheduled({EDINET_CONNECT_TOKEN:'test'});assert.equal(count,2);assert.equal(d.calls,1);
+globalThis.fetch=async()=>new Response('Forbidden',{status:403});await assert.rejects(()=>runScheduled({EDINET_CONNECT_TOKEN:'test'}),/CONNECT_HTTP_403/);
+console.log('PASS fixed private target, service header, bounded batch loop, monitoring wait, HTTP failure handling');

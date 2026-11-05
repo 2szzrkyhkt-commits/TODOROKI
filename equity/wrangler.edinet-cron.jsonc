@@ -1,0 +1,7 @@
+{
+  "name": "todoroki-edinet-cron",
+  "main": "edinet-cron.js",
+  "compatibility_date": "2026-11-05",
+  "triggers": {"crons": ["*/5 * * * *"]},
+  "observability": {"enabled": true}
+}
