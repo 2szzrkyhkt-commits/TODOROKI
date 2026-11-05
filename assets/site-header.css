@@ -26,7 +26,7 @@
 @media(min-width:1201px){.site-header .brand-row{gap:16px}.site-header .desktop-links{gap:12px}.site-header .desktop-links a{font-size:12px}}
 
 /* Consistent navigation: old pages used a separate bookkeeping item. */
-.site-header nav a[href="/boki1"]{display:none!important}
+
 /* Preserve the brand and controls; keep the long desktop menu scrollable instead of clipping the logo. */
 @media(min-width:1201px){
  .site-header .brand-row{min-width:0;gap:12px}
