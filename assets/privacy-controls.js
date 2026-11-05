@@ -40,7 +40,7 @@ function update(){
 const header=document.querySelector('header.site-header')||document.querySelector('body > header');
 if(!header)return;
 const locale=(location.pathname.match(/^\/(en|es|pt|zh-Hans|zh-Hant)(?:\/|$)/)||[])[1]||'ja', l=labels[locale],base=locale==='ja'?'/':'/'+locale+'/';
-const links=[[base+'#latest-articles',l[0]],[base+'#articles',l[1]],[base+'#themes',l[2]],[base+'glossary',l[3]],[base+'pdf-library',l[4]],['/#study',l[5]],[base+'#company-analysis',l[6]],[base+'#about',l[7]],[base+'#social',l[8]]];
+const links=[[base+'#latest-articles',l[0]],[base+'#articles',l[1]],[base+'#themes',l[2]],[base+(locale==='ja'?'#glossary':'glossary'),l[3]],[base+(locale==='ja'?'#pdf-library':'pdf-library'),l[4]],['/#study',l[5]],[base+'#company-analysis',l[6]],[base+'#about',l[7]],[base+'#social',l[8]]];
 const markup=(locale==='ja'?links.slice(0,7):links).map(([href,label])=>'<a href="'+href+'">'+label+'</a>').join('');
 if(!header.classList.contains('site-header')){
 header.className='site-header';
