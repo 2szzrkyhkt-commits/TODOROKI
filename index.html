@@ -428,6 +428,7 @@ footer {
 @keyframes todoroki-ticker{to{transform:translateX(-50%)}}
 @media(max-width:600px){.news-ticker-label{padding:12px 9px;font-size:10px}.news-ticker-group{gap:18px}.news-ticker-group a{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.news-ticker-window{scrollbar-width:thin}}
+.reference-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.reference-cards .card{height:100%}@media(max-width:720px){.reference-cards{grid-template-columns:1fr}}
 </style>
 <link rel="stylesheet" href="/assets/language-picker.css"><link rel="stylesheet" href="/assets/site-header.css"><script src="/assets/language-picker.js" defer></script><link rel="stylesheet" href="/assets/site-quality.css"><style>#latest-articles [hidden]{display:none!important}</style><style>
 .site-header .desktop-links .study-nav>summary{font-family:inherit;font-size:13px;font-weight:inherit;letter-spacing:inherit;line-height:inherit;color:#bbb;white-space:nowrap}
@@ -668,9 +669,18 @@ footer {
 <section id="pdf-library">
   <div class="wrap">
 
-    <h2 class="section-title">PDF LIBRARY</h2>
+    <h2 class="section-title">用語辞典・PDFライブラリー</h2>
     <div class="rule"></div>
 
+    <div class="reference-cards">
+    <a href="/glossary" class="card-link" id="glossary">
+      <article class="card">
+        <span class="tag">GLOSSARY</span>
+        <h3>用語辞典</h3>
+        <p>投資・経済・会計・技術の専門用語をわかりやすく解説。</p>
+        <span style="color:#d4af37;font-weight:bold;">用語辞典を見る →</span>
+      </article>
+    </a>
     <a href="/pdf-library" class="card-link">
       <article class="card">
 
@@ -690,6 +700,7 @@ footer {
 
       </article>
     </a>
+    </div>
 
   </div>
 </section>
