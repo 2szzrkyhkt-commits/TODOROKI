@@ -470,7 +470,7 @@ footer {
 </header>
 
 <main id="main-content">
-<div class="news-ticker" id="news-ticker" aria-label="新着記事" hidden><span class="news-ticker-label">LATEST NEWS</span><div class="news-ticker-window"><nav class="news-ticker-track" aria-label="新着記事へのリンク"><div class="news-ticker-group"></div><div class="news-ticker-group" aria-hidden="true"></div></nav></div></div>
+<div class="news-ticker" id="news-ticker" aria-label="新着記事"><span class="news-ticker-label">LATEST NEWS</span><div class="news-ticker-window"><nav class="news-ticker-track" aria-label="新着記事へのリンク"><div class="news-ticker-group"><a href="/nintendo-earnings-analysis-2026-nov">任天堂決算｜49.1%増益でも割高？</a><a href="/us-midterm-election-2026-checks-balances">米国中間選挙で議会が変わる</a><a href="/yen-carry-trade-fx-outlook-2026">円キャリートレードと為替見通し</a><a href="/murder-accountability-and-prison-labor">殺人犯の出所後の生活と刑事責任</a><a href="/monetary-policy-weekly-20261030">金利据え置きでも安心できない？</a><a href="/gasoline-subsidy-outlook-2026">ガソリン補助金が底をつく？</a><a href="/gmo-stock-recovery-data-breach">GMOの株価は戻る？</a><a href="/company-data-leak-prevention">企業の情報漏洩対策15選</a><a href="/ai-bubble-collapse-or-correction">AIバブルは崩壊したのか？</a><a href="/password-copy-paste-security">パスワードのコピペは危険？</a></div><div class="news-ticker-group" aria-hidden="true"><a tabindex="-1" href="/nintendo-earnings-analysis-2026-nov">任天堂決算｜49.1%増益でも割高？</a><a tabindex="-1" href="/us-midterm-election-2026-checks-balances">米国中間選挙で議会が変わる</a><a tabindex="-1" href="/yen-carry-trade-fx-outlook-2026">円キャリートレードと為替見通し</a><a tabindex="-1" href="/murder-accountability-and-prison-labor">殺人犯の出所後の生活と刑事責任</a><a tabindex="-1" href="/monetary-policy-weekly-20261030">金利据え置きでも安心できない？</a><a tabindex="-1" href="/gasoline-subsidy-outlook-2026">ガソリン補助金が底をつく？</a><a tabindex="-1" href="/gmo-stock-recovery-data-breach">GMOの株価は戻る？</a><a tabindex="-1" href="/company-data-leak-prevention">企業の情報漏洩対策15選</a><a tabindex="-1" href="/ai-bubble-collapse-or-correction">AIバブルは崩壊したのか？</a><a tabindex="-1" href="/password-copy-paste-security">パスワードのコピペは危険？</a></div></nav></div></div>
 
 <!-- 表紙 -->
 
@@ -883,27 +883,8 @@ footer {
 </script>
 
 <script>
-/* Derive ticker links from the homepage article list; no separate manual updates. */
-(function(){
-  var ticker=document.getElementById('news-ticker');
-  var section=document.getElementById('latest-articles');
-  if(!ticker||!section)return;
-  var entries=Array.from(section.querySelectorAll('.cards > a.card-link')).map(function(a){
-    var time=a.querySelector('time');var heading=a.querySelector('h3');
-    return time&&heading?{date:time.getAttribute('datetime'),title:heading.textContent.trim(),href:a.getAttribute('href')}:null;
-  }).filter(function(x){return x&&/^\d{4}-\d{2}-\d{2}$/.test(x.date)&&x.href;});
-  entries.sort(function(a,b){return b.date.localeCompare(a.date);});
-  var seen=new Set();entries=entries.filter(function(x){if(seen.has(x.href))return false;seen.add(x.href);return true;}).slice(0,10);
-  if(!entries.length)return;
-  var groups=ticker.querySelectorAll('.news-ticker-group');
-  groups.forEach(function(group,i){entries.forEach(function(item){var a=document.createElement('a');a.href=item.href;a.textContent=item.title;if(i)a.tabIndex=-1;group.appendChild(a);});});
-  ticker.hidden=false;
-  /* Make each half exactly the same width, so the wrap is seamless. */
-  var track=ticker.querySelector(".news-ticker-track");
-  function syncWidth(){var width=groups[0].scrollWidth;groups[1].style.width=width+"px";}
-  syncWidth();
-  window.addEventListener("resize",syncWidth,{passive:true});
-})();
+/* The headlines are pre-rendered so animation works even if JavaScript fails. */
+(function(){var ticker=document.getElementById('news-ticker');if(!ticker)return;var groups=ticker.querySelectorAll('.news-ticker-group');function sync(){groups[1].style.width=groups[0].scrollWidth+'px'}sync();window.addEventListener('resize',sync,{passive:true});})();
 </script>
 </body>
 </html>
