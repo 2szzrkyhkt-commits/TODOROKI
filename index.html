@@ -850,7 +850,7 @@ footer {
       video.muted = true;
       video.defaultMuted = true;
       video.playsInline = true;
-      if(video.paused && video.dataset.motionPaused !== "true"){
+      if(video.paused && true){
         var attempt = video.play();
         if(attempt && typeof attempt.catch === 'function') attempt.catch(function(){});
       }
@@ -862,7 +862,7 @@ footer {
   document.addEventListener('pointerdown', resumeHeroVideos, {once:true, passive:true});
 })();
 </script>
-<script src="/assets/site-motion.js" defer></script>
+<script src="/assets/site-motion.js?v=20261105-bull-autoplay-2" defer></script>
 <script>
 /* Latest: today and the previous 13 calendar days in Japan, at most six. */
 (function () {
