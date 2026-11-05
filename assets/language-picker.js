@@ -52,7 +52,6 @@ document.querySelectorAll('header.site-header').forEach(function(header){
   });
  });
 });
-if(current==='ja'){document.querySelectorAll('.site-header .desktop-links, .site-header .mobile-links').forEach(function(nav){if(!nav.querySelector('a[href="/boki1"]')){const a=document.createElement('a');a.href='/boki1';a.textContent='簿記を学ぶ';const first=nav.querySelector('a');if(first)first.insertAdjacentElement('afterend',a);else nav.appendChild(a)}})}
 document.querySelectorAll('[data-todoroki-language]').forEach(function(select){select.replaceChildren();locales.forEach(function(pair){const opt=document.createElement('option');opt.value=pair[0];opt.textContent=pair[1];select.appendChild(opt)});select.value=current;select.addEventListener('change',function(){changeLanguage(select.value)})});
 })();
 (function(){'use strict';
