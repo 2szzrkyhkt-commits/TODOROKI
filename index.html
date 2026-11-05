@@ -413,7 +413,7 @@ footer {
 .news-ticker{display:flex;align-items:center;min-height:48px;background:#100f0b;border-block:1px solid #665225;overflow:hidden;color:#f4d77b}
 .news-ticker-label{position:relative;z-index:1;flex:none;padding:12px 16px;background:#d4af37;color:#080808;font-size:12px;font-weight:900;letter-spacing:.07em;white-space:nowrap}
 .news-ticker-window{min-width:0;flex:1;overflow:hidden}
-.news-ticker-track{display:flex;width:max-content;align-items:center;animation:todoroki-ticker 55s linear infinite}
+.news-ticker-track{display:flex;width:max-content;align-items:center;animation:none;will-change:transform}
 .news-ticker-group{display:flex;align-items:center;flex:none;gap:28px;padding-inline:14px;white-space:nowrap;width:max-content}
 .news-ticker-group a{display:inline-block;font-size:13px;font-weight:600;color:#f4d77b;max-width:80vw;overflow:hidden;text-overflow:ellipsis;vertical-align:middle}
 .news-ticker-group a:hover{text-decoration:underline;color:#fff}
@@ -425,7 +425,7 @@ footer {
 .news-ticker-toggle{flex:none;border:0;border-left:1px solid #665225;background:#16130c;color:#f4d77b;padding:10px 12px;min-height:48px;cursor:pointer;font-size:12px}
 @keyframes todoroki-ticker{to{transform:translateX(-50%)}}
 @media(max-width:600px){.news-ticker-label{padding:12px 9px;font-size:10px}.news-ticker-group{gap:18px}.news-ticker-group a{font-size:12px}}
-@media(prefers-reduced-motion:reduce){.news-ticker:not([data-playing="true"]) .news-ticker-track{animation:none;width:auto}.news-ticker-window{overflow-x:auto;scrollbar-width:thin}.news-ticker-group[aria-hidden=true]{display:none}}
+@media(prefers-reduced-motion:reduce){.news-ticker-window{scrollbar-width:thin}}
 </style>
 <link rel="stylesheet" href="/assets/language-picker.css"><link rel="stylesheet" href="/assets/site-header.css"><script src="/assets/language-picker.js" defer></script><link rel="stylesheet" href="/assets/site-quality.css"><style>#latest-articles [hidden]{display:none!important}</style><style>
 .site-header .desktop-links .study-nav>summary{font-family:inherit;font-size:13px;font-weight:inherit;letter-spacing:inherit;line-height:inherit;color:#bbb;white-space:nowrap}
@@ -886,17 +886,32 @@ footer {
 </script>
 
 <script>
-/* Pre-rendered headlines animate with CSS; allow explicit motion control. */
+/* Smooth continuous marquee driven by animation frames, with explicit pause control. */
 (function(){
  var ticker=document.getElementById('news-ticker');if(!ticker)return;
  var groups=ticker.querySelectorAll('.news-ticker-group');
- function sync(){groups[1].style.width=groups[0].scrollWidth+'px'}
- sync();window.addEventListener('resize',sync,{passive:true});
+ var track=ticker.querySelector('.news-ticker-track');
  var btn=ticker.querySelector('.news-ticker-toggle');
+ if(groups.length!==2||!track||!btn)return;
  var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
- var playing=!reduced;
- function apply(){ticker.dataset.playing=String(playing);btn.textContent=playing?'停止':'再生';btn.setAttribute('aria-label',playing?'テロップを一時停止':'テロップを再生');ticker.querySelector('.news-ticker-track').style.animationPlayState=playing?'running':'paused';}
- btn.addEventListener('click',function(){playing=!playing;apply()});apply();
+ var playing=!reduced, position=0, previous=0, width=0;
+ function measure(){width=groups[0].getBoundingClientRect().width;groups[1].style.width=width+'px';if(width>0)position%=width;}
+ function label(){ticker.dataset.playing=String(playing);btn.textContent=playing?'停止':'再生';btn.setAttribute('aria-label',playing?'テロップを一時停止':'テロップを再生');}
+ btn.addEventListener('click',function(){playing=!playing;previous=0;label();});
+ var hovered=false;
+ if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){ticker.addEventListener('mouseenter',function(){hovered=true});ticker.addEventListener('mouseleave',function(){hovered=false;previous=0});}
+ window.addEventListener('resize',measure,{passive:true});
+ measure();label();
+ function frame(now){
+   if(!width)measure();
+   if(previous&&playing&&!hovered&&!document.hidden&&width){
+     position=(position+Math.min((now-previous)/1000,0.1)*75)%width;
+     track.style.transform='translate3d('+(-position)+'px,0,0)';
+   }
+   previous=now;
+   window.requestAnimationFrame(frame);
+ }
+ window.requestAnimationFrame(frame);
 })();
 </script>
 </body>
