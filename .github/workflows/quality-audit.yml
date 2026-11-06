@@ -35,7 +35,9 @@ jobs:
         with:
           python-version: '3.12'
       - name: Tests
-        run: python -m unittest discover -s tools/quality -p 'test_*.py' -v
+        run: |
+          python -m unittest discover -s tools/quality -p 'test_*.py' -v
+          node --test tools/quality/watchdog.test.mjs
       - name: Load durable ledger
         if: github.event_name != 'pull_request'
         env:
