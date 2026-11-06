@@ -1,0 +1,106 @@
+name: TODOROKI quality audit
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        type: choice
+        options: [hourly, daily, weekly, monthly]
+        default: daily
+  pull_request:
+    paths: ['tools/quality/**', '.github/workflows/quality-audit.yml']
+  push:
+    branches: [main]
+  deployment_status:
+permissions:
+  contents: read
+concurrency:
+  group: quality-${{ github.event_name == 'pull_request' && github.head_ref || 'production' }}
+  cancel-in-progress: false
+jobs:
+  audit:
+    if: github.event_name != 'deployment_status' || github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 55
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Tests
+        run: |
+          python -m unittest discover -s tools/quality -p 'test_*.py' -v
+          node --test tools/quality/watchdog.test.mjs
+          node tools/quality/security.test.mjs
+          python tools/quality/source-restore.py
+      - name: Load durable ledger
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python tools/quality/state.py
+      - name: Select JST audit cadence
+        id: cadence
+        env:
+          REQUESTED: ${{ inputs.mode }}
+        run: echo "mode=$(python tools/quality/cadence.py)" >> "$GITHUB_OUTPUT"
+      - uses: actions/setup-node@v4
+        if: steps.cadence.outputs.mode != 'hourly'
+        with:
+          node-version: '22'
+      - name: Browser dependencies
+        if: steps.cadence.outputs.mode != 'hourly'
+        run: |
+          npm install --no-save --package-lock=false playwright@1.56.1 @axe-core/playwright@4.10.2
+          if [ "$GITHUB_EVENT_NAME" = pull_request ]; then
+            npx playwright install --with-deps chromium
+          else
+            npx playwright install --with-deps chromium firefox webkit
+          fi
+      - name: Browser checks
+        if: steps.cadence.outputs.mode != 'hourly'
+        env:
+          MODE: ${{ steps.cadence.outputs.mode }}
+        run: |
+          node tools/quality/consent.mjs
+          node tools/quality/browser.mjs
+      - name: Run audit
+        if: always() && !cancelled()
+        env:
+          MODE: ${{ steps.cadence.outputs.mode }}
+        run: |
+          if [ "$GITHUB_EVENT_NAME" = pull_request ]; then
+            python tools/quality/audit.py --offline --mode "$MODE"
+          else
+            python tools/quality/audit.py --mode "$MODE" --previous /tmp/quality-state/latest.json
+          fi
+      - name: Isolated cloud persistence and delivery validation
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python tools/quality/integration.py
+      - name: Job summary
+        if: always()
+        run: cat quality-results/summary.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: quality-${{ github.run_id }}-${{ github.run_attempt }}
+          path: quality-results/
+          retention-days: 90
+      - name: Notify only new important findings
+        if: github.event_name != 'pull_request' && success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python tools/quality/notify.py
+      - name: Persist history without site deployment
+        if: github.event_name != 'pull_request' && success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python tools/quality/persist.py

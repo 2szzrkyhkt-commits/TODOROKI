@@ -1,0 +1,7 @@
+{
+  "name": "todoroki-audit-watchdog",
+  "main": "watchdog-worker.mjs",
+  "compatibility_date": "2026-11-06",
+  "triggers": {"crons": ["43 * * * *"]},
+  "kv_namespaces": [{"binding": "STATE", "id": "REPLACE_WITH_SEPARATE_KV_ID"}]
+}
