@@ -23,7 +23,7 @@ def request(url,opener=urlopen,sleep=time.sleep):
    start=time.monotonic()
    with opener(Request(quote(url,safe=':/?&=%+#'),headers={'User-Agent':'TODOROKI-Quality-Audit/1.0'}),timeout=20) as r:
     body=r.read(8*1024*1024)
-    return dict(url=url,final_url=r.url,status=r.status,seconds=round(time.monotonic()-start,3),headers=dict(r.headers),sha256=hashlib.sha256(body).hexdigest(),pdf=body.startswith(b'%PDF-'),attempts=attempts)
+    return dict(url=url,final_url=r.url,status=r.status,seconds=round(time.monotonic()-start,3),headers={k:v for k,v in r.headers.items() if k.lower() in ('content-type','cache-control','content-security-policy','strict-transport-security','x-content-type-options')},sha256=hashlib.sha256(body).hexdigest(),pdf=body.startswith(b'%PDF-'),attempts=attempts)
   except HTTPError as e:
    attempts.append({'status':e.code})
    if e.code not in (429,500,502,503,504):break
@@ -56,6 +56,13 @@ def run(mode,out,previous=None,live=True):
   for p,d in pages.items():
    rel=p.relative_to(ROOT).as_posix();text=p.read_text();tags=d.tags
    noindex=any(t=='meta' and a.get('name')=='robots' and 'noindex' in a.get('content','') for t,a in tags)
+   if not __import__('re').search(r'<title[^>]*>\s*[^<\s]',text,__import__('re').I):problems[8].append([rel,'empty title'])
+   for block in __import__('re').findall(r'<script[^>]*type=[\"\']application/ld\+json[\"\'][^>]*>(.*?)</script>',text,__import__('re').S|__import__('re').I):
+    try:
+     value=json.loads(block)
+     if not isinstance(value,(dict,list)):problems[19].append([rel,'invalid JSON-LD root'])
+    except json.JSONDecodeError:problems[19].append([rel,'invalid JSON-LD'])
+   if noindex and any(t=='link' and a.get('rel')=='canonical' for t,a in tags):counts['noindex_with_canonical']+=1
    for i,t,attr,value in [(8,'title',None,None),(9,'meta','name','description'),(10,'link','rel','canonical')]:
     found=[a for tag,a in tags if tag==t and (attr is None or a.get(attr)==value)]
     if not noindex and len(found)!=1:problems[i].append([rel,'expected one tag',len(found)])
@@ -87,7 +94,7 @@ def run(mode,out,previous=None,live=True):
    problems[17].extend([rel,'duplicate id',s] for s,n in Counter(ids).items() if n>1)
   for url,rels in canonical.items():
    if len(rels)>1:problems[17].append(['duplicate canonical',url,rels])
-  for i in (8,9,10,11,16,17,18,21,27,50,51):result(i,[] if i==51 else problems[i],[{'html_count':len(pages),'scope':'static source across all languages','review_candidates':problems[i] if i==51 else []}],partial=True)
+  for i in (8,9,10,11,16,17,18,19,21,27,50,51):result(i,[] if i==51 else problems[i],[{'html_count':len(pages),'scope':'static source across all languages','review_candidates':problems[i] if i==51 else []}],partial=True)
   for i,file in ((12,'robots.txt'),(13,'sitemap.xml'),(14,'sitemap-pdfs.xml')):
    errors=[];p=ROOT/file
    if not p.exists():errors.append('missing file')
