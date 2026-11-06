@@ -6,10 +6,11 @@ def api(path,data=None):
  if data is not None:args+=['--method','POST','--input','-']
  p=subprocess.run(args,input=json.dumps(data) if data is not None else None,text=True,capture_output=True,check=True)
  return json.loads(p.stdout)
-repo=os.environ['GITHUB_REPOSITORY'];root=f'repos/{repo}';branch='quality-history'
+repo=os.environ['GITHUB_REPOSITORY'];root=f'repos/{repo}';branch=os.environ.get('QUALITY_HISTORY_BRANCH','quality-history')
 # A missing branch is the only expected absence; every other read failure aborts.
-branches=api(root+'/branches?per_page=100')
-exists=any(b['name']==branch for b in branches)
+probe=subprocess.run(['gh','api',root+'/git/ref/heads/'+branch],capture_output=True,text=True)
+if probe.returncode and '(HTTP 404)' not in probe.stderr:raise RuntimeError(probe.stderr)
+exists=probe.returncode==0
 head=api(root+'/git/ref/heads/'+branch)['object']['sha'] if exists else None
 base=api(root+'/git/commits/'+head)['tree']['sha'] if head else None
 report=json.loads(Path('quality-results/latest.json').read_text())
@@ -25,3 +26,7 @@ if head:
  args=['gh','api',root+'/git/refs/heads/'+branch,'--method','PATCH','--input','-']
  subprocess.run(args,input=json.dumps({'sha':commit['sha'],'force':False}),text=True,check=True)
 else:api(root+'/git/refs',{'ref':'refs/heads/'+branch,'sha':commit['sha']})
+
+readback=subprocess.check_output(['gh','api',root+'/contents/latest.json?ref='+branch,'-H','Accept: application/vnd.github.raw+json'],text=True)
+assert json.loads(readback)==report,'Persisted ledger differs from local report'
+print('Durable ledger saved and read back successfully:',report['at'])

@@ -7,7 +7,7 @@ from urllib.error import HTTPError,URLError
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime,timezone
-import unicodedata
+import unicodedata,re
 import argparse,hashlib,json,time,ssl,socket,subprocess,xml.etree.ElementTree as ET
 from criteria import CRITERIA
 ROOT=Path(__file__).resolve().parents[2]
@@ -107,7 +107,10 @@ def run(mode,out,previous=None,live=True):
     except ET.ParseError as e:errors.append(str(e))
    result(i,errors,[file],partial=True)
   catalog=json.loads((ROOT/'assets/pdf-catalog.json').read_text())
-  result(23,[u for u in catalog if not resolve(ROOT/'index.html',u)[0].is_file()],[{'catalog_entries':len(catalog)}],partial=True)
+  redirect_file=Path(__file__).with_name('redirects.json')
+  redirects=json.loads(redirect_file.read_text())
+  missing=[u for u in catalog if not resolve(ROOT/'index.html',redirects.get(u,u))[0].is_file()]
+  result(23,missing,[{'catalog_entries':len(catalog),'intentional_retirements':redirects}],partial=True)
   for p in (ROOT/'pdf').rglob('*.pdf'):
    data=p.read_bytes();pdfs.setdefault(hashlib.sha256(data).hexdigest(),[]).append(p.relative_to(ROOT).as_posix())
    if not data.startswith(b'%PDF-'):problems[22].append(str(p.relative_to(ROOT)))
@@ -126,17 +129,38 @@ def run(mode,out,previous=None,live=True):
    if i==7:errors=[x for x in data if x.get('seconds',0)>10]
    result(i,errors,data,partial=any('kind' in x for x in data))
    if all(x.get('kind')=='inconclusive' for x in data):rows[f'TQ{i:02}']['result']='未確認'
+ from supplemental import inspect_source
+ if mode!='hourly':
+  for i,data in inspect_source(ROOT).items():result(i,data['errors'],data['evidence'],partial=True)
+ consent=Path(out)/'consent.json'
+ if consent.exists():
+  for i,data in json.loads(consent.read_text()).items():result(int(i),data['errors'],data['evidence'],partial=True)
+ restore=Path(out)/'source-restore.json'
+ if restore.exists():
+  for i in (60,61):result(i,[],[json.loads(restore.read_text())],partial=True)
+ security=Path(out)/'security.json'
+ if security.exists():
+  for i,data in json.loads(security.read_text()).items():result(int(i),data['errors'],data['evidence'],partial=True)
  browser=Path(out)/'browser.json'
  if browser.exists():
   for key,data in json.loads(browser.read_text()).items():
    result(int(key),data['errors'],data['evidence'],partial=True)
    if data['evidence'] and all('inconclusive' in e for e in data['evidence']):rows[f'TQ{int(key):02}']['result']='未確認'
+ # Public 3-state classification does not promote partial checks to complete.
+ for row in rows.values():
+  row['classification']='完了' if row['result']=='完了' else '未完了' if row['errors'] or int(row['id'][2:]) not in {11,19,22,25,37,38,40,42,44,45,52,53,54,56,59,60,61,62} else '手動確認が必要'
+  row['manual_method']='管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない' if row['classification']=='手動確認が必要' else None
  # A full 62-row ledger always exists; unimplemented/manual checks remain unknown.
  items=list(rows.values());current={fingerprint([x['id'],e]):{'id':x['id'],'detail':e} for x in items for e in x['errors']}
  old=prior.get('findings',{}) if prior else {};new={k:v for k,v in current.items() if k not in old};resolved=[k for k in old if k not in current]
- report={'schema':1,'criteria_status':'provisional-original-missing','at':now,'timezone':'Asia/Tokyo','mode':mode,'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'items':items,'counts':dict(Counter(x['result'] for x in items)),'findings':current,'new_findings':new,'resolved':resolved,'notification_candidates':{k:v for k,v in new.items() if v['id'] in ('TQ01','TQ02','TQ03','TQ06','TQ10','TQ18','TQ20','TQ26','TQ28','TQ29','TQ30','TQ31','TQ32','TQ33','TQ34','TQ35','TQ36','TQ37','TQ38','TQ39','TQ53','TQ54','TQ55','TQ57','TQ59')},'limitations':['No original checklist; no real iPhone test','Unimplemented checks remain unknown; no claim of complete automation']}
+ modes=dict(prior.get('completed_modes',{}) if prior else {})
+ if mode!='hourly':
+  modes['daily']=now
+ if mode in ('weekly','monthly'):modes['weekly']=now
+ if mode=='monthly':modes['monthly']=now
+ report={'completed_modes':modes,'schema':1,'criteria_status':'provisional-original-missing','at':now,'timezone':'Asia/Tokyo','mode':mode,'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'items':items,'counts':dict(Counter(x['result'] for x in items)),'findings':current,'new_findings':new,'resolved':resolved,'notification_candidates':{k:v for k,v in new.items() if v['id'] in ('TQ01','TQ02','TQ03','TQ06','TQ10','TQ18','TQ20','TQ26','TQ28','TQ29','TQ30','TQ31','TQ32','TQ33','TQ34','TQ35','TQ36','TQ37','TQ38','TQ39','TQ53','TQ54','TQ55','TQ57','TQ59')},'limitations':['No original checklist; no real iPhone test','Unimplemented checks remain unknown; no claim of complete automation']}
  out=Path(out);out.mkdir(parents=True,exist_ok=True);(out/'latest.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
- (out/'summary.md').write_text('# TODOROKI 暫定62項目監査\n\n'+now+'\n\n|ID|項目|判定|最終実行|\n|---|---|---|---|\n'+''.join(f"|{x['id']}|{x['name']}|{x['result']}|{x['last_run'] or '未実行'}|\n" for x in items))
+ (out/'summary.md').write_text('# TODOROKI 暫定62項目監査\n\n'+now+'\n\n|ID|項目|判定|最終実行|\n|---|---|---|---|\n'+''.join(f"|{x['id']}|{x['name']}|{x['classification']}（{x['result']}）|{x['last_run'] or '未実行'}|\n" for x in items))
  print(json.dumps(report['counts'],ensure_ascii=False));return report
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--mode',default='daily',choices=['hourly','daily','weekly','monthly','all']);p.add_argument('--out',default='quality-results');p.add_argument('--previous');p.add_argument('--offline',action='store_true');a=p.parse_args();run(a.mode,a.out,a.previous,not a.offline)

@@ -38,28 +38,18 @@ jobs:
         run: |
           python -m unittest discover -s tools/quality -p 'test_*.py' -v
           node --test tools/quality/watchdog.test.mjs
+          node tools/quality/security.test.mjs
+          python tools/quality/source-restore.py
       - name: Load durable ledger
         if: github.event_name != 'pull_request'
         env:
           GH_TOKEN: ${{ github.token }}
-        run: |
-          mkdir -p /tmp/quality-state
-          if gh api "repos/$GITHUB_REPOSITORY/branches/quality-history" >/dev/null 2>&1; then
-            gh api "repos/$GITHUB_REPOSITORY/contents/latest.json?ref=quality-history" --jq .content | base64 -d > /tmp/quality-state/latest.json
-          fi
+        run: python tools/quality/state.py
       - name: Select JST audit cadence
         id: cadence
         env:
           REQUESTED: ${{ inputs.mode }}
-        run: |
-          mode=hourly
-          hour=$(TZ=Asia/Tokyo date +%H)
-          if [ "$hour" = 03 ]; then mode=daily; fi
-          if [ "$hour" = 03 ] && [ "$(TZ=Asia/Tokyo date +%u)" = 7 ]; then mode=weekly; fi
-          if [ "$hour" = 03 ] && [ "$(TZ=Asia/Tokyo date +%d)" = 01 ]; then mode=monthly; fi
-          if [ "$GITHUB_EVENT_NAME" != schedule ]; then mode=daily; fi
-          if [ -n "$REQUESTED" ]; then mode="$REQUESTED"; fi
-          echo "mode=$mode" >> "$GITHUB_OUTPUT"
+        run: echo "mode=$(python tools/quality/cadence.py)" >> "$GITHUB_OUTPUT"
       - uses: actions/setup-node@v4
         if: steps.cadence.outputs.mode != 'hourly'
         with:
@@ -77,7 +67,9 @@ jobs:
         if: steps.cadence.outputs.mode != 'hourly'
         env:
           MODE: ${{ steps.cadence.outputs.mode }}
-        run: node tools/quality/browser.mjs
+        run: |
+          node tools/quality/consent.mjs
+          node tools/quality/browser.mjs
       - name: Run audit
         if: always() && !cancelled()
         env:
@@ -88,6 +80,11 @@ jobs:
           else
             python tools/quality/audit.py --mode "$MODE" --previous /tmp/quality-state/latest.json
           fi
+      - name: Isolated cloud persistence and delivery validation
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python tools/quality/integration.py
       - name: Job summary
         if: always()
         run: cat quality-results/summary.md >> "$GITHUB_STEP_SUMMARY"

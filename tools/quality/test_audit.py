@@ -49,3 +49,25 @@ class DetectionTests(unittest.TestCase):
     page.write_text('<html><title>Test</title><h1 id="missing">Test</h1><a href="#missing">valid</a></html>')
     second=run('daily',root/'results',str(root/'results/latest.json'),live=False)
     self.assertFalse(second['items'][20]['errors']);self.assertTrue(second['resolved'])
+
+class CadenceTests(unittest.TestCase):
+ def test_daily_delayed_to_afternoon(self):
+  from cadence import choose,JST
+  from datetime import datetime
+  old={'completed_modes':{'daily':'2026-11-05T19:00:00+09:00','weekly':'2026-11-03T03:00:00+09:00','monthly':'2026-11-03T03:00:00+09:00'}}
+  self.assertEqual(choose(old,'schedule',now=datetime(2026,11,6,15,tzinfo=JST)),'daily')
+ def test_hourly_after_daily(self):
+  from cadence import choose,JST
+  from datetime import datetime
+  stamp='2026-11-06T03:00:00+09:00';old={'completed_modes':dict.fromkeys(['daily','weekly','monthly'],stamp)}
+  self.assertEqual(choose(old,'schedule',now=datetime(2026,11,6,15,tzinfo=JST)),'hourly')
+ def test_week_rollover(self):
+  from cadence import choose,JST
+  from datetime import datetime
+  stamp='2026-11-06T03:00:00+09:00';old={'completed_modes':dict.fromkeys(['daily','weekly','monthly'],stamp)}
+  self.assertEqual(choose(old,'schedule',now=datetime(2026,11,9,15,tzinfo=JST)),'weekly')
+ def test_month_rollover(self):
+  from cadence import choose,JST
+  from datetime import datetime
+  stamp='2026-11-06T03:00:00+09:00';old={'completed_modes':dict.fromkeys(['daily','weekly','monthly'],stamp)}
+  self.assertEqual(choose(old,'schedule',now=datetime(2026,12,1,15,tzinfo=JST)),'monthly')
