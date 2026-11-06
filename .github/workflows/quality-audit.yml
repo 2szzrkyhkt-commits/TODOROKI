@@ -59,16 +59,20 @@ jobs:
           if [ -n "$REQUESTED" ]; then mode="$REQUESTED"; fi
           echo "mode=$mode" >> "$GITHUB_OUTPUT"
       - uses: actions/setup-node@v4
-        if: github.event_name != 'pull_request' && steps.cadence.outputs.mode != 'hourly'
+        if: steps.cadence.outputs.mode != 'hourly'
         with:
           node-version: '22'
       - name: Browser dependencies
-        if: github.event_name != 'pull_request' && steps.cadence.outputs.mode != 'hourly'
+        if: steps.cadence.outputs.mode != 'hourly'
         run: |
           npm install --no-save --package-lock=false playwright@1.56.1 @axe-core/playwright@4.10.2
-          npx playwright install --with-deps chromium firefox webkit
+          if [ "$GITHUB_EVENT_NAME" = pull_request ]; then
+            npx playwright install --with-deps chromium
+          else
+            npx playwright install --with-deps chromium firefox webkit
+          fi
       - name: Browser checks
-        if: github.event_name != 'pull_request' && steps.cadence.outputs.mode != 'hourly'
+        if: steps.cadence.outputs.mode != 'hourly'
         env:
           MODE: ${{ steps.cadence.outputs.mode }}
         run: node tools/quality/browser.mjs
