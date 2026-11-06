@@ -1,0 +1,102 @@
+name: TODOROKI quality audit
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        type: choice
+        options: [hourly, daily, weekly, monthly]
+        default: daily
+  pull_request:
+    paths: ['tools/quality/**', '.github/workflows/quality-audit.yml']
+  push:
+    branches: [main]
+  deployment_status:
+permissions:
+  contents: read
+concurrency:
+  group: quality-${{ github.event_name == 'pull_request' && github.head_ref || 'production' }}
+  cancel-in-progress: false
+jobs:
+  audit:
+    if: github.event_name != 'deployment_status' || github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Tests
+        run: python -m unittest discover -s tools/quality -p 'test_*.py' -v
+      - name: Load durable ledger
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/quality-state
+          if gh api "repos/$GITHUB_REPOSITORY/branches/quality-history" >/dev/null 2>&1; then
+            gh api "repos/$GITHUB_REPOSITORY/contents/latest.json?ref=quality-history" --jq .content | base64 -d > /tmp/quality-state/latest.json
+          fi
+      - name: Select JST audit cadence
+        id: cadence
+        env:
+          REQUESTED: ${{ inputs.mode }}
+        run: |
+          mode=hourly
+          hour=$(TZ=Asia/Tokyo date +%H)
+          if [ "$hour" = 03 ]; then mode=daily; fi
+          if [ "$hour" = 03 ] && [ "$(TZ=Asia/Tokyo date +%u)" = 7 ]; then mode=weekly; fi
+          if [ "$hour" = 03 ] && [ "$(TZ=Asia/Tokyo date +%d)" = 01 ]; then mode=monthly; fi
+          if [ "$GITHUB_EVENT_NAME" != schedule ]; then mode=daily; fi
+          if [ -n "$REQUESTED" ]; then mode="$REQUESTED"; fi
+          echo "mode=$mode" >> "$GITHUB_OUTPUT"
+      - uses: actions/setup-node@v4
+        if: github.event_name != 'pull_request' && steps.cadence.outputs.mode != 'hourly'
+        with:
+          node-version: '22'
+      - name: Browser dependencies
+        if: github.event_name != 'pull_request' && steps.cadence.outputs.mode != 'hourly'
+        run: |
+          npm install --no-save --package-lock=false playwright@1.56.1 @axe-core/playwright@4.10.2
+          npx playwright install --with-deps chromium firefox webkit
+      - name: Browser checks
+        if: github.event_name != 'pull_request' && steps.cadence.outputs.mode != 'hourly'
+        env:
+          MODE: ${{ steps.cadence.outputs.mode }}
+        run: node tools/quality/browser.mjs
+      - name: Run audit
+        env:
+          MODE: ${{ steps.cadence.outputs.mode }}
+        run: |
+          if [ "$GITHUB_EVENT_NAME" = pull_request ]; then
+            python tools/quality/audit.py --offline --mode "$MODE"
+          else
+            python tools/quality/audit.py --mode "$MODE" --previous /tmp/quality-state/latest.json
+          fi
+      - name: Job summary
+        if: always()
+        run: cat quality-results/summary.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: quality-${{ github.run_id }}-${{ github.run_attempt }}
+          path: quality-results/
+          retention-days: 90
+      - name: Notify only new important findings
+        if: github.event_name != 'pull_request' && success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python tools/quality/notify.py
+      - name: Persist history without site deployment
+        if: github.event_name != 'pull_request' && success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python tools/quality/persist.py
