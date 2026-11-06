@@ -33,3 +33,19 @@ class AuditTests(unittest.TestCase):
    self.assertEqual(second['new_findings'],{});self.assertEqual(first['findings'],second['findings'])
    self.assertEqual(first['items'][61]['result'],'未確認')
 if __name__=='__main__':unittest.main()
+
+class DetectionTests(unittest.TestCase):
+ def test_injected_broken_anchor_and_recovery(self):
+  import audit
+  with tempfile.TemporaryDirectory() as d:
+   root=Path(d);(root/'assets').mkdir();(root/'pdf').mkdir()
+   (root/'assets/pdf-catalog.json').write_text('{}')
+   (root/'robots.txt').write_text('User-agent: *\nAllow: /')
+   for file in ('sitemap.xml','sitemap-pdfs.xml'):(root/file).write_text('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"/>')
+   page=root/'index.html';page.write_text('<html><title>Test</title><h1>Test</h1><a href="#missing">broken</a></html>')
+   with patch.object(audit,'ROOT',root),patch.object(audit.subprocess,'check_output',return_value='fixture\n'):
+    first=run('daily',root/'results',live=False)
+    self.assertEqual(first['items'][20]['result'],'未完了')
+    page.write_text('<html><title>Test</title><h1 id="missing">Test</h1><a href="#missing">valid</a></html>')
+    second=run('daily',root/'results',str(root/'results/latest.json'),live=False)
+    self.assertFalse(second['items'][20]['errors']);self.assertTrue(second['resolved'])
