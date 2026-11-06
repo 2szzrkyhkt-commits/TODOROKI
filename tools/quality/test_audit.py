@@ -71,3 +71,20 @@ class CadenceTests(unittest.TestCase):
   from datetime import datetime
   stamp='2026-11-06T03:00:00+09:00';old={'completed_modes':dict.fromkeys(['daily','weekly','monthly'],stamp)}
   self.assertEqual(choose(old,'schedule',now=datetime(2026,12,1,15,tzinfo=JST)),'monthly')
+
+class NotificationTests(unittest.TestCase):
+ def exercise(self,candidates,issues):
+  import runpy,os
+  script=Path(__file__).with_name('notify.py').resolve();cwd=Path.cwd()
+  with tempfile.TemporaryDirectory() as d:
+   p=Path(d)/'quality-results';p.mkdir();(p/'latest.json').write_text(json.dumps({'notification_candidates':candidates}))
+   try:
+    os.chdir(d)
+    with patch.dict(os.environ,{'GITHUB_REPOSITORY':'fixture/repo','GITHUB_RUN_ID':'1'}),patch('subprocess.check_output',return_value=json.dumps(issues)),patch('subprocess.run') as send:
+     runpy.run_path(str(script));return send.call_count
+   finally:os.chdir(cwd)
+ def test_healthy_sends_nothing(self):self.assertEqual(self.exercise({},[]),0)
+ def test_same_open_finding_sends_nothing(self):
+  self.assertEqual(self.exercise({'fixture-key':{'id':'TQ01','detail':'fixture'}},[{'body':'<!-- todoroki-quality:fixture-key -->'}]),0)
+ def test_new_finding_sends_once(self):
+  self.assertEqual(self.exercise({'fixture-key':{'id':'TQ01','detail':'fixture'}},[]),1)
