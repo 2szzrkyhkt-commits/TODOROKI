@@ -1115,6 +1115,32 @@
           "ホモ・エコノミカス（経済人）",
           "Homo economicus (economic agent)"
         ]
+      },
+      {
+        "id": "term-inverse-bear",
+        "category": "投資基礎",
+        "title": "Inverse (Bear) Fund",
+        "definition": "An ETF or fund targeting a negative multiple of an index's daily return.",
+        "formula": "",
+        "example": "If the index falls 1% in one day, a −1x fund targets about +1%.",
+        "note": "Compounding can cause multi-day returns to diverge from the inverse of the index's cumulative return.",
+        "aliases": [
+          "インバース型（ベア型）",
+          "Inverse Bear"
+        ]
+      },
+      {
+        "id": "term-leveraged-bull",
+        "category": "投資基礎",
+        "title": "Leveraged (Bull) Fund",
+        "definition": "An ETF or fund targeting a positive multiple of an index's daily return.",
+        "formula": "",
+        "example": "If the index rises 1% in one day, a 2x fund targets about +2%.",
+        "note": "Losses are magnified; multi-day returns may diverge from the stated multiple.",
+        "aliases": [
+          "レバレッジ型（ブル型）",
+          "Leveraged Bull"
+        ]
       }
     ]
   },
@@ -2233,6 +2259,32 @@
         "aliases": [
           "ホモ・エコノミカス（経済人）",
           "Homo economicus (economic agent)"
+        ]
+      },
+      {
+        "id": "term-inverse-bear",
+        "category": "投資基礎",
+        "title": "Fondo inverso (bajista)",
+        "definition": "Fondo que busca un múltiplo negativo del rendimiento diario de un índice.",
+        "formula": "",
+        "example": "Si el índice cae 1 % en un día, un fondo −1x busca subir cerca de 1 %.",
+        "note": "La capitalización puede alterar los resultados durante varios días.",
+        "aliases": [
+          "インバース型（ベア型）",
+          "Inverse Bear"
+        ]
+      },
+      {
+        "id": "term-leveraged-bull",
+        "category": "投資基礎",
+        "title": "Fondo apalancado (alcista)",
+        "definition": "Fondo que busca un múltiplo positivo del rendimiento diario de un índice.",
+        "formula": "",
+        "example": "Si el índice sube 1 % en un día, un fondo 2x busca subir cerca de 2 %.",
+        "note": "También amplifica las pérdidas y los rendimientos de varios días pueden divergir.",
+        "aliases": [
+          "レバレッジ型（ブル型）",
+          "Leveraged Bull"
         ]
       }
     ]
@@ -3353,6 +3405,32 @@
           "ホモ・エコノミカス（経済人）",
           "Homo economicus (economic agent)"
         ]
+      },
+      {
+        "id": "term-inverse-bear",
+        "category": "投資基礎",
+        "title": "Fundo inverso (bear)",
+        "definition": "Fundo que busca um múltiplo negativo do retorno diário de um índice.",
+        "formula": "",
+        "example": "Se o índice cair 1% em um dia, um fundo −1x busca subir cerca de 1%.",
+        "note": "A composição pode causar desvios em períodos de vários dias.",
+        "aliases": [
+          "インバース型（ベア型）",
+          "Inverse Bear"
+        ]
+      },
+      {
+        "id": "term-leveraged-bull",
+        "category": "投資基礎",
+        "title": "Fundo alavancado (bull)",
+        "definition": "Fundo que busca um múltiplo positivo do retorno diário de um índice.",
+        "formula": "",
+        "example": "Se o índice subir 1% em um dia, um fundo 2x busca subir cerca de 2%.",
+        "note": "Amplifica também as perdas; retornos de vários dias podem divergir.",
+        "aliases": [
+          "レバレッジ型（ブル型）",
+          "Leveraged Bull"
+        ]
       }
     ]
   },
@@ -4472,6 +4550,32 @@
           "ホモ・エコノミカス（経済人）",
           "Homo economicus (economic agent)"
         ]
+      },
+      {
+        "id": "term-inverse-bear",
+        "category": "投資基礎",
+        "title": "反向型（看跌型）基金",
+        "definition": "追求指数每日收益率负向固定倍数的基金。",
+        "formula": "",
+        "example": "指数单日下跌1%时，−1倍基金目标上涨约1%。",
+        "note": "多日复利可能使收益偏离累计收益率的简单反向倍数。",
+        "aliases": [
+          "インバース型（ベア型）",
+          "Inverse Bear"
+        ]
+      },
+      {
+        "id": "term-leveraged-bull",
+        "category": "投資基礎",
+        "title": "杠杆型（看涨型）基金",
+        "definition": "追求指数每日收益率正向固定倍数的基金。",
+        "formula": "",
+        "example": "指数单日上涨1%时，2倍基金目标上涨约2%。",
+        "note": "亏损同样放大，多日收益可能偏离目标倍数。",
+        "aliases": [
+          "レバレッジ型（ブル型）",
+          "Leveraged Bull"
+        ]
       }
     ]
   },
@@ -5590,6 +5694,32 @@
         "aliases": [
           "ホモ・エコノミカス（経済人）",
           "Homo economicus (economic agent)"
+        ]
+      },
+      {
+        "id": "term-inverse-bear",
+        "category": "投資基礎",
+        "title": "反向型（看跌型）基金",
+        "definition": "追求指數每日報酬率負向固定倍數的基金。",
+        "formula": "",
+        "example": "指數單日下跌1%時，−1倍基金目標上漲約1%。",
+        "note": "多日複利可能使報酬偏離累計報酬率的簡單反向倍數。",
+        "aliases": [
+          "インバース型（ベア型）",
+          "Inverse Bear"
+        ]
+      },
+      {
+        "id": "term-leveraged-bull",
+        "category": "投資基礎",
+        "title": "槓桿型（看漲型）基金",
+        "definition": "追求指數每日報酬率正向固定倍數的基金。",
+        "formula": "",
+        "example": "指數單日上漲1%時，2倍基金目標上漲約2%。",
+        "note": "虧損同樣放大，多日報酬可能偏離目標倍數。",
+        "aliases": [
+          "レバレッジ型（ブル型）",
+          "Leveraged Bull"
         ]
       }
     ]
