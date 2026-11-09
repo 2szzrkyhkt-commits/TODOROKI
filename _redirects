@@ -1,0 +1,5 @@
+# Legacy URL redirects for Cloudflare Pages static deployment.
+# Validate deployment platform and HTTP status before merging.
+/pdf /pdf-library 301
+/pdf/ /pdf-library 301
+/technology-list.html /science-technology 301
