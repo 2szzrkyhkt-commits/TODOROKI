@@ -43,6 +43,21 @@ async function limit(db, key, seconds, maximum) {
   return Boolean(row);
 }
 
+// Paid Okamura PDF sales were retired on 2026-10-29.
+const RETIRED_SALES_PATHS = new Set([
+  '/premium', '/api/shop', '/api/checkout', '/api/purchases/confirm',
+  '/api/download/okamura-7994', '/api/stripe/webhook'
+]);
+function retiredSalesResponse(path) {
+  const headers = { 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex', 'X-Content-Type-Options': 'nosniff' };
+  if (path.startsWith('/api/')) return new Response(JSON.stringify({ error: '有料PDFの販売・配信は終了しました。' }), {
+    status: 410, headers: { ...headers, 'Content-Type': 'application/json; charset=utf-8' }
+  });
+  return new Response('<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>有料PDFの提供終了｜TODOROKI</title><main><h1>有料PDFの提供は終了しました</h1><p>オカムラの旧有料PDFは、現在販売・配信していません。</p><p><a href="/pdf-library">公開中のPDF一覧</a> · <a href="/contact">お問い合わせ</a></p></main></html>', {
+    status: 410, headers: { ...headers, 'Content-Type': 'text/html; charset=utf-8' }
+  });
+}
+
 const TOOL_AUDIENCE = 'todoroki-us-economy-data';
 const TOOLS = {
 us: {aud: TOOL_AUDIENCE, url:'https://todoroki-us-economy-data.easysquid66.chatgpt.site'},
@@ -90,6 +105,8 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     let decodedPath; try { decodedPath = decodeURIComponent(url.pathname).normalize('NFC'); } catch { decodedPath = ''; }
+    const retiredPath = decodedPath.replace(/\/$/, '').replace(/\.html$/, '');
+    if (RETIRED_SALES_PATHS.has(retiredPath)) return retiredSalesResponse(retiredPath);
     if (["/pdf/会計公準_企業会計を支える3つの前提.pdf"].includes(decodedPath)) return new Response(null, { status: 302, headers: { Location: '/accounting-materials-update', 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex' } });
     if (["/pdf/japan_companies_top10_20260929.pdf", "/pdf/日本企業10社の比較評価_2026年9月29日時点.pdf", "/pdf/en/japan-companies-comparison.pdf", "/pdf/zh-Hans/japan-companies-comparison.pdf", "/pdf/es/japan-companies-comparison.pdf", "/pdf/zh-Hant/japan-companies-comparison.pdf", "/pdf/pt/japan-companies-comparison.pdf"].includes(decodedPath)) return new Response(null, { status: 302, headers: { Location: '/company-comparison-method', 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex' } });
     if (url.pathname === '/api/privacy/region') {
