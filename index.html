@@ -878,6 +878,25 @@ footer {
 /* Smooth continuous marquee driven by animation frames, with explicit pause control. */
 (function(){
  var ticker=document.getElementById('news-ticker');if(!ticker)return;
+ /* Use the article list as the single source; hidden cards are also eligible. */
+ var section=document.getElementById('latest-articles');
+ var articles=section?Array.from(section.querySelectorAll('.cards > .card-link')):[];
+ var today=new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+ var seen=new Set();
+ var latest=articles.map(function(card,index){
+   var time=card.querySelector('time'),heading=card.querySelector('h3');
+   return {href:card.getAttribute('href'),title:heading?heading.textContent.trim():'',date:time?time.dateTime:'',index:index};
+ }).filter(function(article){
+   if(!article.href||!article.href.startsWith('/')||article.href.startsWith('//')||!article.title||!/^\d{4}-\d{2}-\d{2}$/.test(article.date)||article.date>today||seen.has(article.href))return false;
+   seen.add(article.href);return true;
+ }).sort(function(a,b){return b.date.localeCompare(a.date)||a.index-b.index;}).slice(0,10);
+ if(latest.length){
+   var primary=document.createElement('div');primary.className='news-ticker-group';
+   latest.forEach(function(article){var link=document.createElement('a');link.setAttribute('href',article.href);link.textContent=article.title;primary.appendChild(link);});
+   var duplicate=primary.cloneNode(true);duplicate.setAttribute('aria-hidden','true');
+   duplicate.querySelectorAll('a').forEach(function(link){link.tabIndex=-1;});
+   ticker.querySelector('.news-ticker-track').replaceChildren(primary,duplicate);
+ }
  var groups=ticker.querySelectorAll('.news-ticker-group');
  var track=ticker.querySelector('.news-ticker-track');
  var btn=ticker.querySelector('.news-ticker-toggle');
