@@ -122,3 +122,18 @@ class AdvertisingExclusionTests(unittest.TestCase):
     second=run('daily',d,str(previous),live=True)
    self.assertEqual(second['items'][19]['errors'],[])
    self.assertEqual(second['items'][19]['result'],'一部完了')
+
+class ExecutionMetadataTests(unittest.TestCase):
+ def test_only_allowlisted_environment_is_returned(self):
+  from audit import execution_metadata
+  self.assertEqual(execution_metadata({'GITHUB_EVENT_NAME':'schedule','GITHUB_RUN_ID':'123','GITHUB_RUN_ATTEMPT':'2','GH_TOKEN':'do-not-record'}),{'event':'schedule','run_id':'123','run_attempt':'2'})
+  self.assertEqual(execution_metadata({'GITHUB_EVENT_NAME':'untrusted-text','GITHUB_RUN_ID':'secret-value'}),{'event':'unknown','run_id':None,'run_attempt':None})
+ def test_push_preserves_prior_scheduled_reference(self):
+  with tempfile.TemporaryDirectory() as d:
+   with patch.dict('os.environ',{'GITHUB_EVENT_NAME':'schedule','GITHUB_RUN_ID':'123','GITHUB_RUN_ATTEMPT':'1'}):
+    scheduled=run('daily',d,live=False)
+   with patch.dict('os.environ',{'GITHUB_EVENT_NAME':'push','GITHUB_RUN_ID':'124','GITHUB_RUN_ATTEMPT':'1'}):
+    pushed=run('hourly',d,str(Path(d)/'latest.json'),live=False)
+   self.assertEqual(pushed['execution']['event'],'push')
+   self.assertEqual(pushed['last_scheduled_audit'],scheduled['last_scheduled_audit'])
+   self.assertEqual(pushed['last_scheduled_audit']['run_id'],'123')
