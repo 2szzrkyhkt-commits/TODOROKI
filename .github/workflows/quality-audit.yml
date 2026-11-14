@@ -40,6 +40,7 @@ jobs:
           node --test tools/quality/watchdog.test.mjs
           node tools/quality/security.test.mjs
           python tools/quality/source-restore.py
+          python tools/quality/publication.py
       - name: Load durable ledger
         if: github.event_name != 'pull_request'
         env:
@@ -75,6 +76,9 @@ jobs:
         env:
           MODE: ${{ steps.cadence.outputs.mode }}
         run: |
+          if [ "$MODE" != hourly ] && [ "$GITHUB_EVENT_NAME" != pull_request ]; then
+            python tools/quality/publication.py --live
+          fi
           if [ "$GITHUB_EVENT_NAME" = pull_request ]; then
             python tools/quality/audit.py --offline --mode "$MODE"
           else

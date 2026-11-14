@@ -2,8 +2,20 @@ import unittest,tempfile,json
 from pathlib import Path
 from urllib.error import URLError,HTTPError
 from unittest.mock import patch
-from audit import request,run,fingerprint
+from audit import request,run,fingerprint,AuditRedirectHandler,PaidLinkSkipped,tracking_url
 class AuditTests(unittest.TestCase):
+ def test_tracking_link_never_opens(self):
+  def forbidden(*a,**k):raise AssertionError('affiliate link was requested')
+  r=request('https://ad2.trafficgate.net/t/r/test',forbidden)
+  self.assertEqual(r['kind'],'skipped');self.assertEqual(r['attempts'],[])
+ def test_redirect_into_tracking_never_follows(self):
+  from urllib.request import Request
+  with self.assertRaises(PaidLinkSkipped):
+   AuditRedirectHandler().redirect_request(Request('https://example.com/'),None,302,'Found',{},'https://ad.doubleclick.net/click')
+ def test_tracking_host_match_has_domain_boundary(self):
+  self.assertTrue(tracking_url('https://AD2.TRAFFICGATE.NET./t/r/1'))
+  self.assertFalse(tracking_url('https://trafficgate.net.example.com/article'))
+  self.assertFalse(tracking_url('https://www.fujisan.co.jp/'))
  def test_retry_exponential(self):
   sleeps=[]
   class Response:
