@@ -109,3 +109,16 @@ class AdvertisingExclusionTests(unittest.TestCase):
    handler.redirect_request(Request('https://example.org/'),None,302,'Found',{},'https://ad2.trafficgate.net/t/r/example')
   target=handler.redirect_request(Request('https://example.org/'),None,302,'Found',{},'https://www.stat.go.jp/')
   self.assertEqual(target.full_url,'https://www.stat.go.jp/')
+
+ def test_previous_external_failure_clears_after_exclusion(self):
+  import audit
+  with tempfile.TemporaryDirectory() as d:
+   first=run('daily',d,live=False)
+   first['items'][19]['errors']=[{'url':'https://ad2.trafficgate.net/t/r/example','kind':'http_failure'}]
+   first['items'][19]['result']='未完了'
+   previous=Path(d)/'prior.json';previous.write_text(json.dumps(first))
+   def healthy(url):return {'url':url,'status':200,'headers':{},'seconds':0}
+   with patch.object(audit,'request',side_effect=healthy):
+    second=run('daily',d,str(previous),live=True)
+   self.assertEqual(second['items'][19]['errors'],[])
+   self.assertEqual(second['items'][19]['result'],'一部完了')

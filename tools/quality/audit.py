@@ -136,7 +136,7 @@ def run(mode,out,previous=None,live=True):
    with ThreadPoolExecutor(max_workers=4) as pool:network=list(pool.map(request,sorted(links|ext)))
    for i,scope in ((18,links),(20,ext)):
     data=[x for x in network if x['url'] in scope];errors=[x for x in data if x.get('kind')=='http_failure']
-    result(i,rows[f'TQ{i:02}']['errors']+errors,data,partial=any(x.get('kind')=='inconclusive' for x in data) or (i==20 and bool(excluded_ads)))
+    result(i,(rows['TQ18']['errors'] if i==18 else [])+errors,data,partial=any(x.get('kind')=='inconclusive' for x in data) or (i==20 and bool(excluded_ads)))
     if i==20 and excluded_ads:rows['TQ20']['evidence'].append({'excluded_advertising_urls':sorted(excluded_ads),'method':'no network requests; advertising delivery remains unverified'})
  if live:
   urls=[BASE,BASE+'boki1',BASE+'pdf-library',BASE+'en/',BASE+'es/',BASE+'pt/',BASE+'zh-Hans/',BASE+'zh-Hant/',BASE+'api/privacy/region']
