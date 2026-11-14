@@ -1,19 +1,19 @@
 {
   "execution": {
     "event": "pull_request",
-    "run_id": "43553152778",
+    "run_id": "43555334055",
     "run_attempt": "1"
   },
   "last_scheduled_audit": null,
   "completed_modes": {
-    "daily": "2026-11-14T03:45:49.262505+00:00"
+    "daily": "2026-11-14T04:12:42.640175+00:00"
   },
   "schema": 1,
   "criteria_status": "provisional-original-missing",
-  "at": "2026-11-14T03:45:49.262505+00:00",
+  "at": "2026-11-14T04:12:42.640175+00:00",
   "timezone": "Asia/Tokyo",
   "mode": "daily",
-  "source_commit": "449ca04999affba021e2c1e0c7d2b26053ead2cf",
+  "source_commit": "d969c8453dc7c56a2c37d93b85088146463592e1",
   "items": [
     {
       "id": "TQ01",
@@ -143,7 +143,7 @@
       "automatic_method": "HTMLParser across every repository HTML; source existence/structure only, deployed behavior remains partial",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
@@ -155,7 +155,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -169,7 +169,7 @@
       "automatic_method": "HTMLParser across every repository HTML; source existence/structure only, deployed behavior remains partial",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
@@ -181,7 +181,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -195,7 +195,7 @@
       "automatic_method": "HTMLParser across every repository HTML; source existence/structure only, deployed behavior remains partial",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
@@ -207,7 +207,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -221,7 +221,7 @@
       "automatic_method": "HTMLParser across every repository HTML; source existence/structure only, deployed behavior remains partial",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
@@ -233,7 +233,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -247,7 +247,7 @@
       "automatic_method": "Parse robots or XML sitemap; compare referenced paths to source tree",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         "robots.txt"
@@ -255,7 +255,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -269,7 +269,7 @@
       "automatic_method": "Parse robots or XML sitemap; compare referenced paths to source tree",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         "sitemap.xml"
@@ -277,7 +277,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -291,7 +291,7 @@
       "automatic_method": "Parse robots or XML sitemap; compare referenced paths to source tree",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         "sitemap-pdfs.xml"
@@ -299,7 +299,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -313,13 +313,13 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
           "noindex_pages": [
-            "login.html",
-            "pdf-viewer.html"
+            "pdf-viewer.html",
+            "login.html"
           ],
           "scope": "inventory; index policy requires editorial review"
         }
@@ -327,7 +327,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -341,7 +341,7 @@
       "automatic_method": "HTMLParser across every repository HTML; source existence/structure only, deployed behavior remains partial",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
@@ -353,7 +353,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -367,7 +367,7 @@
       "automatic_method": "HTMLParser across every repository HTML; source existence/structure only, deployed behavior remains partial",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
@@ -379,7 +379,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -393,7 +393,7 @@
       "automatic_method": "HTMLParser across every repository HTML; source existence/structure only, deployed behavior remains partial",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
@@ -405,7 +405,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -419,7 +419,7 @@
       "automatic_method": "Parse every application/ld+json block; schema semantics require further verification",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
@@ -431,7 +431,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -462,7 +462,7 @@
       "automatic_method": "HTMLParser across every repository HTML; source existence/structure only, deployed behavior remains partial",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
@@ -474,7 +474,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -488,7 +488,7 @@
       "automatic_method": "Inspect PDF magic bytes; content rendering remains unverified",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
@@ -498,7 +498,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -512,7 +512,7 @@
       "automatic_method": "Compare PDF catalog paths with source tree, including Unicode normalization",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
@@ -532,7 +532,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -563,19 +563,19 @@
       "automatic_method": "Group PDF SHA256 hashes; duplicates are evidence for review, not automatic deletions",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
           "duplicate_pdf_groups": [
             [
-              "pdf/社会的選好_情報共有_フリーライド_黒金.pdf",
-              "pdf/社会的選好と情報共有_仕事仲間の協力_改訂版.pdf",
-              "pdf/社会的選好と情報共有_仕事仲間の協力.pdf"
-            ],
-            [
               "pdf/Amazon輸入ビジネス_価格差と相乗り販売.pdf",
               "pdf/Amazon輸入ビジネス_価格差と相乗り販売_修正版.pdf"
+            ],
+            [
+              "pdf/社会的選好_情報共有_フリーライド_黒金.pdf",
+              "pdf/社会的選好と情報共有_仕事仲間の協力.pdf",
+              "pdf/社会的選好と情報共有_仕事仲間の協力_改訂版.pdf"
             ]
           ]
         }
@@ -583,7 +583,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -597,7 +597,7 @@
       "automatic_method": "Playwright read-only browser smoke check; per-page/browser evidence in browser.json",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
@@ -654,12 +654,77 @@
           "path": "/break-even/",
           "name": "chromium",
           "width": 390
+        },
+        {
+          "path": "/ai-bubble-collapse-or-correction",
+          "name": "chromium",
+          "width": 390
+        },
+        {
+          "path": "/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/en/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/es/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/pt/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/zh-Hans/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/zh-Hant/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/boki1",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/pdf-library",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/calculators/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/compound-interest/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/break-even/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/ai-bubble-collapse-or-correction",
+          "name": "chromium",
+          "width": 1440
         }
       ],
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -673,7 +738,7 @@
       "automatic_method": "HTMLParser across every repository HTML; source existence/structure only, deployed behavior remains partial",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
@@ -685,7 +750,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -699,7 +764,7 @@
       "automatic_method": "Playwright read-only browser smoke check; per-page/browser evidence in browser.json",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
@@ -756,12 +821,77 @@
           "path": "/break-even/",
           "name": "chromium",
           "width": 390
+        },
+        {
+          "path": "/ai-bubble-collapse-or-correction",
+          "name": "chromium",
+          "width": 390
+        },
+        {
+          "path": "/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/en/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/es/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/pt/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/zh-Hans/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/zh-Hant/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/boki1",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/pdf-library",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/calculators/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/compound-interest/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/break-even/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/ai-bubble-collapse-or-correction",
+          "name": "chromium",
+          "width": 1440
         }
       ],
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -775,7 +905,7 @@
       "automatic_method": "Playwright read-only browser smoke check; per-page/browser evidence in browser.json",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
@@ -832,12 +962,77 @@
           "path": "/break-even/",
           "name": "chromium",
           "width": 390
+        },
+        {
+          "path": "/ai-bubble-collapse-or-correction",
+          "name": "chromium",
+          "width": 390
+        },
+        {
+          "path": "/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/en/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/es/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/pt/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/zh-Hans/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/zh-Hant/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/boki1",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/pdf-library",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/calculators/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/compound-interest/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/break-even/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/ai-bubble-collapse-or-correction",
+          "name": "chromium",
+          "width": 1440
         }
       ],
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -851,9 +1046,14 @@
       "automatic_method": "Playwright read-only browser smoke check; per-page/browser evidence in browser.json",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
+        {
+          "path": "/",
+          "target": "https://todoroki-gold.com/en/",
+          "scope": "Japanese to English home only"
+        },
         {
           "path": "/",
           "target": "https://todoroki-gold.com/en/",
@@ -863,7 +1063,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -877,9 +1077,17 @@
       "automatic_method": "Playwright read-only browser smoke check; per-page/browser evidence in browser.json",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
+        {
+          "path": "/boki1",
+          "searchQuery": "unique no-match fixture"
+        },
+        {
+          "path": "/pdf-library",
+          "searchQuery": "unique no-match fixture"
+        },
         {
           "path": "/boki1",
           "searchQuery": "unique no-match fixture"
@@ -892,7 +1100,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -906,21 +1114,28 @@
       "automatic_method": "Playwright read-only browser smoke check; per-page/browser evidence in browser.json",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
           "path": "/",
           "transforms": [
-            "matrix(1, 0, 0, 1, -116.245, 0)",
-            "matrix(1, 0, 0, 1, -147.498, 0)"
+            "matrix(1, 0, 0, 1, -114.99, 0)",
+            "matrix(1, 0, 0, 1, -146.243, 0)"
+          ]
+        },
+        {
+          "path": "/",
+          "transforms": [
+            "matrix(1, 0, 0, 1, -114.998, 0)",
+            "matrix(1, 0, 0, 1, -146.25, 0)"
           ]
         }
       ],
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -934,9 +1149,14 @@
       "automatic_method": "Playwright read-only browser smoke check; per-page/browser evidence in browser.json",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
+        {
+          "path": "/boki1",
+          "searchTest": true,
+          "scope": "lesson filtering only; save and quiz not verified"
+        },
         {
           "path": "/boki1",
           "searchTest": true,
@@ -946,7 +1166,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -960,9 +1180,17 @@
       "automatic_method": "Playwright read-only browser smoke check; per-page/browser evidence in browser.json",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
+        {
+          "path": "/compound-interest/",
+          "case": "zero-rate one year"
+        },
+        {
+          "path": "/break-even/",
+          "case": "fixed example"
+        },
         {
           "path": "/compound-interest/",
           "case": "zero-rate one year"
@@ -975,7 +1203,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -989,7 +1217,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
@@ -999,7 +1227,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -1013,7 +1241,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
@@ -1024,7 +1252,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -1072,7 +1300,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
@@ -1088,7 +1316,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "一部完了",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -1118,12 +1346,136 @@
       "inspection": "横スクロール：要求された範囲を証拠と照合し、未実行範囲を残す",
       "automatic_method": "Playwright read-only browser smoke check; per-page/browser evidence in browser.json",
       "implementation": "partial",
-      "result": "未確認",
-      "last_run": null,
+      "result": "一部完了",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
-      "evidence": [],
+      "evidence": [
+        {
+          "path": "/",
+          "name": "chromium",
+          "width": 390
+        },
+        {
+          "path": "/en/",
+          "name": "chromium",
+          "width": 390
+        },
+        {
+          "path": "/es/",
+          "name": "chromium",
+          "width": 390
+        },
+        {
+          "path": "/pt/",
+          "name": "chromium",
+          "width": 390
+        },
+        {
+          "path": "/zh-Hans/",
+          "name": "chromium",
+          "width": 390
+        },
+        {
+          "path": "/zh-Hant/",
+          "name": "chromium",
+          "width": 390
+        },
+        {
+          "path": "/boki1",
+          "name": "chromium",
+          "width": 390
+        },
+        {
+          "path": "/pdf-library",
+          "name": "chromium",
+          "width": 390
+        },
+        {
+          "path": "/calculators/",
+          "name": "chromium",
+          "width": 390
+        },
+        {
+          "path": "/compound-interest/",
+          "name": "chromium",
+          "width": 390
+        },
+        {
+          "path": "/break-even/",
+          "name": "chromium",
+          "width": 390
+        },
+        {
+          "path": "/ai-bubble-collapse-or-correction",
+          "name": "chromium",
+          "width": 390
+        },
+        {
+          "path": "/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/en/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/es/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/pt/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/zh-Hans/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/zh-Hant/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/boki1",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/pdf-library",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/calculators/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/compound-interest/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/break-even/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/ai-bubble-collapse-or-correction",
+          "name": "chromium",
+          "width": 1440
+        }
+      ],
       "repair_status": "未着手",
-      "retest": null,
+      "retest": {
+        "previous": "未確認",
+        "at": "2026-11-14T04:12:42.640175+00:00"
+      },
       "classification": "未完了",
       "manual_method": null
     },
@@ -1152,12 +1504,185 @@
       "inspection": "レスポンシブ画像：要求された範囲を証拠と照合し、未実行範囲を残す",
       "automatic_method": "Playwright read-only browser smoke check; per-page/browser evidence in browser.json",
       "implementation": "partial",
-      "result": "未確認",
-      "last_run": null,
-      "errors": [],
-      "evidence": [],
+      "result": "未完了",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
+      "errors": [
+        {
+          "path": "/",
+          "name": "chromium",
+          "width": 390,
+          "src": null
+        },
+        {
+          "path": "/boki1",
+          "name": "chromium",
+          "width": 390,
+          "src": null
+        },
+        {
+          "path": "/pdf-library",
+          "name": "chromium",
+          "width": 390,
+          "src": null
+        },
+        {
+          "path": "/ai-bubble-collapse-or-correction",
+          "name": "chromium",
+          "width": 390,
+          "src": null
+        },
+        {
+          "path": "/",
+          "name": "chromium",
+          "width": 1440,
+          "src": null
+        },
+        {
+          "path": "/boki1",
+          "name": "chromium",
+          "width": 1440,
+          "src": null
+        },
+        {
+          "path": "/pdf-library",
+          "name": "chromium",
+          "width": 1440,
+          "src": null
+        },
+        {
+          "path": "/ai-bubble-collapse-or-correction",
+          "name": "chromium",
+          "width": 1440,
+          "src": null
+        }
+      ],
+      "evidence": [
+        {
+          "path": "/",
+          "name": "chromium",
+          "width": 390
+        },
+        {
+          "path": "/en/",
+          "name": "chromium",
+          "width": 390
+        },
+        {
+          "path": "/es/",
+          "name": "chromium",
+          "width": 390
+        },
+        {
+          "path": "/pt/",
+          "name": "chromium",
+          "width": 390
+        },
+        {
+          "path": "/zh-Hans/",
+          "name": "chromium",
+          "width": 390
+        },
+        {
+          "path": "/zh-Hant/",
+          "name": "chromium",
+          "width": 390
+        },
+        {
+          "path": "/boki1",
+          "name": "chromium",
+          "width": 390
+        },
+        {
+          "path": "/pdf-library",
+          "name": "chromium",
+          "width": 390
+        },
+        {
+          "path": "/calculators/",
+          "name": "chromium",
+          "width": 390
+        },
+        {
+          "path": "/compound-interest/",
+          "name": "chromium",
+          "width": 390
+        },
+        {
+          "path": "/break-even/",
+          "name": "chromium",
+          "width": 390
+        },
+        {
+          "path": "/ai-bubble-collapse-or-correction",
+          "name": "chromium",
+          "width": 390
+        },
+        {
+          "path": "/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/en/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/es/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/pt/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/zh-Hans/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/zh-Hant/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/boki1",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/pdf-library",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/calculators/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/compound-interest/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/break-even/",
+          "name": "chromium",
+          "width": 1440
+        },
+        {
+          "path": "/ai-bubble-collapse-or-correction",
+          "name": "chromium",
+          "width": 1440
+        }
+      ],
       "repair_status": "未着手",
-      "retest": null,
+      "retest": {
+        "previous": "未確認",
+        "at": "2026-11-14T04:12:42.640175+00:00"
+      },
       "classification": "未完了",
       "manual_method": null
     },
@@ -1272,7 +1797,7 @@
       "automatic_method": "HTMLParser across every repository HTML; source existence/structure only, deployed behavior remains partial",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
@@ -1284,7 +1809,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -1298,7 +1823,7 @@
       "automatic_method": "HTMLParser across every repository HTML; source existence/structure only, deployed behavior remains partial",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
@@ -1306,13 +1831,13 @@
           "scope": "static source across all languages",
           "review_candidates": [
             [
-              "login.html",
-              "transfer-consent",
+              "sources.html",
+              "source-search",
               "requires browser verification of wrapping label"
             ],
             [
-              "sources.html",
-              "source-search",
+              "contact.html",
+              null,
               "requires browser verification of wrapping label"
             ],
             [
@@ -1331,8 +1856,8 @@
               "requires browser verification of wrapping label"
             ],
             [
-              "contact.html",
-              null,
+              "login.html",
+              "transfer-consent",
               "requires browser verification of wrapping label"
             ],
             [
@@ -1381,7 +1906,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -1412,7 +1937,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
@@ -1424,7 +1949,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -1438,7 +1963,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
@@ -1450,7 +1975,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -1464,7 +1989,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
@@ -1479,7 +2004,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -1493,7 +2018,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
@@ -1505,7 +2030,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -1519,7 +2044,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
@@ -1529,7 +2054,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -1560,7 +2085,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
@@ -1572,7 +2097,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -1586,20 +2111,20 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
           "scope": "committed source only; production D1/member data not backed up or restored",
-          "archive_sha256": "ae06a27e26527eddc168abbe2c082d0bbed81122dba33f13517374861fbad063",
+          "archive_sha256": "14c0bb296b3e3a54df8764b805dd5654f12adebc780f7511c3f62ae1857fefb6",
           "restored_files": 729,
-          "source_commit": "449ca04999affba021e2c1e0c7d2b26053ead2cf"
+          "source_commit": "d969c8453dc7c56a2c37d93b85088146463592e1"
         }
       ],
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -1613,20 +2138,20 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T03:45:49.262505+00:00",
+      "last_run": "2026-11-14T04:12:42.640175+00:00",
       "errors": [],
       "evidence": [
         {
           "scope": "committed source only; production D1/member data not backed up or restored",
-          "archive_sha256": "ae06a27e26527eddc168abbe2c082d0bbed81122dba33f13517374861fbad063",
+          "archive_sha256": "14c0bb296b3e3a54df8764b805dd5654f12adebc780f7511c3f62ae1857fefb6",
           "restored_files": 729,
-          "source_commit": "449ca04999affba021e2c1e0c7d2b26053ead2cf"
+          "source_commit": "d969c8453dc7c56a2c37d93b85088146463592e1"
         }
       ],
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T03:45:49.262505+00:00"
+        "at": "2026-11-14T04:12:42.640175+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -1650,11 +2175,158 @@
     }
   ],
   "counts": {
-    "未確認": 24,
-    "一部完了": 38
+    "未確認": 22,
+    "一部完了": 39,
+    "未完了": 1
   },
-  "findings": {},
-  "new_findings": {},
+  "findings": {
+    "620d3f87295ce48dd4e39457": {
+      "id": "TQ43",
+      "detail": {
+        "path": "/",
+        "name": "chromium",
+        "width": 390,
+        "src": null
+      }
+    },
+    "9464d03ecdcc03b38e3dec6c": {
+      "id": "TQ43",
+      "detail": {
+        "path": "/boki1",
+        "name": "chromium",
+        "width": 390,
+        "src": null
+      }
+    },
+    "218536f6c956a904716a2be9": {
+      "id": "TQ43",
+      "detail": {
+        "path": "/pdf-library",
+        "name": "chromium",
+        "width": 390,
+        "src": null
+      }
+    },
+    "95b2d1fda40327f97a7b8d4a": {
+      "id": "TQ43",
+      "detail": {
+        "path": "/ai-bubble-collapse-or-correction",
+        "name": "chromium",
+        "width": 390,
+        "src": null
+      }
+    },
+    "390890a4550d86a3c5acadc0": {
+      "id": "TQ43",
+      "detail": {
+        "path": "/",
+        "name": "chromium",
+        "width": 1440,
+        "src": null
+      }
+    },
+    "ca1886a96f9b3ff681c27859": {
+      "id": "TQ43",
+      "detail": {
+        "path": "/boki1",
+        "name": "chromium",
+        "width": 1440,
+        "src": null
+      }
+    },
+    "7abba853d11b9142ddc280a8": {
+      "id": "TQ43",
+      "detail": {
+        "path": "/pdf-library",
+        "name": "chromium",
+        "width": 1440,
+        "src": null
+      }
+    },
+    "07ce273d2442160d14653ee8": {
+      "id": "TQ43",
+      "detail": {
+        "path": "/ai-bubble-collapse-or-correction",
+        "name": "chromium",
+        "width": 1440,
+        "src": null
+      }
+    }
+  },
+  "new_findings": {
+    "620d3f87295ce48dd4e39457": {
+      "id": "TQ43",
+      "detail": {
+        "path": "/",
+        "name": "chromium",
+        "width": 390,
+        "src": null
+      }
+    },
+    "9464d03ecdcc03b38e3dec6c": {
+      "id": "TQ43",
+      "detail": {
+        "path": "/boki1",
+        "name": "chromium",
+        "width": 390,
+        "src": null
+      }
+    },
+    "218536f6c956a904716a2be9": {
+      "id": "TQ43",
+      "detail": {
+        "path": "/pdf-library",
+        "name": "chromium",
+        "width": 390,
+        "src": null
+      }
+    },
+    "95b2d1fda40327f97a7b8d4a": {
+      "id": "TQ43",
+      "detail": {
+        "path": "/ai-bubble-collapse-or-correction",
+        "name": "chromium",
+        "width": 390,
+        "src": null
+      }
+    },
+    "390890a4550d86a3c5acadc0": {
+      "id": "TQ43",
+      "detail": {
+        "path": "/",
+        "name": "chromium",
+        "width": 1440,
+        "src": null
+      }
+    },
+    "ca1886a96f9b3ff681c27859": {
+      "id": "TQ43",
+      "detail": {
+        "path": "/boki1",
+        "name": "chromium",
+        "width": 1440,
+        "src": null
+      }
+    },
+    "7abba853d11b9142ddc280a8": {
+      "id": "TQ43",
+      "detail": {
+        "path": "/pdf-library",
+        "name": "chromium",
+        "width": 1440,
+        "src": null
+      }
+    },
+    "07ce273d2442160d14653ee8": {
+      "id": "TQ43",
+      "detail": {
+        "path": "/ai-bubble-collapse-or-correction",
+        "name": "chromium",
+        "width": 1440,
+        "src": null
+      }
+    }
+  },
   "resolved": [],
   "notification_candidates": {},
   "limitations": [
