@@ -8,7 +8,7 @@ from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime,timezone
 import unicodedata,re
-import argparse,hashlib,json,time,ssl,socket,subprocess,xml.etree.ElementTree as ET
+import argparse,hashlib,json,time,ssl,socket,subprocess,os,xml.etree.ElementTree as ET
 from criteria import CRITERIA
 ROOT=Path(__file__).resolve().parents[2]
 BASE='https://todoroki-gold.com/'
@@ -41,6 +41,14 @@ def request(url,opener=AUDIT_OPENER,sleep=time.sleep):
   except (URLError,TimeoutError,OSError) as e:attempts.append({'error':type(e).__name__})
   if i<2:sleep(2**i)
  return dict(url=url,attempts=attempts,status=attempts[-1].get('status'),kind='inconclusive' if attempts[-1].get('status') in (None,401,403,429) else 'http_failure')
+def execution_metadata(environ=None):
+ env=os.environ if environ is None else environ
+ event=env.get('GITHUB_EVENT_NAME','')
+ if event not in {'schedule','push','pull_request','workflow_dispatch','deployment_status'}:event='unknown'
+ def number(key):
+  value=env.get(key,'')
+  return value if re.fullmatch(r'[0-9]{1,24}',value) else None
+ return {'event':event,'run_id':number('GITHUB_RUN_ID'),'run_attempt':number('GITHUB_RUN_ATTEMPT')}
 def fingerprint(x):return hashlib.sha256(json.dumps(x,sort_keys=True,ensure_ascii=False).encode()).hexdigest()[:24]
 def resolve(page,url):
  u=urlsplit(urljoin(BASE+page.relative_to(ROOT).as_posix(),url))
@@ -175,9 +183,11 @@ def run(mode,out,previous=None,live=True):
   modes['daily']=now
  if mode in ('weekly','monthly'):modes['weekly']=now
  if mode=='monthly':modes['monthly']=now
- report={'completed_modes':modes,'schema':1,'criteria_status':'provisional-original-missing','at':now,'timezone':'Asia/Tokyo','mode':mode,'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'items':items,'counts':dict(Counter(x['result'] for x in items)),'findings':current,'new_findings':new,'resolved':resolved,'notification_candidates':{k:v for k,v in new.items() if v['id'] in ('TQ01','TQ02','TQ03','TQ06','TQ10','TQ18','TQ20','TQ26','TQ28','TQ29','TQ30','TQ31','TQ32','TQ33','TQ34','TQ35','TQ36','TQ37','TQ38','TQ39','TQ53','TQ54','TQ55','TQ57','TQ59')},'limitations':['No original checklist; no real iPhone test','Unimplemented checks remain unknown; no claim of complete automation']}
+ execution=execution_metadata()
+ scheduled={'at':now,**execution} if execution['event']=='schedule' else (prior or {}).get('last_scheduled_audit')
+ report={'execution':execution,'last_scheduled_audit':scheduled,'completed_modes':modes,'schema':1,'criteria_status':'provisional-original-missing','at':now,'timezone':'Asia/Tokyo','mode':mode,'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'items':items,'counts':dict(Counter(x['result'] for x in items)),'findings':current,'new_findings':new,'resolved':resolved,'notification_candidates':{k:v for k,v in new.items() if v['id'] in ('TQ01','TQ02','TQ03','TQ06','TQ10','TQ18','TQ20','TQ26','TQ28','TQ29','TQ30','TQ31','TQ32','TQ33','TQ34','TQ35','TQ36','TQ37','TQ38','TQ39','TQ53','TQ54','TQ55','TQ57','TQ59')},'limitations':['No original checklist; no real iPhone test','Unimplemented checks remain unknown; no claim of complete automation']}
  out=Path(out);out.mkdir(parents=True,exist_ok=True);(out/'latest.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
- (out/'summary.md').write_text('# TODOROKI 暫定62項目監査\n\n'+now+'\n\n|ID|項目|判定|最終実行|\n|---|---|---|---|\n'+''.join(f"|{x['id']}|{x['name']}|{x['classification']}（{x['result']}）|{x['last_run'] or '未実行'}|\n" for x in items))
+ (out/'summary.md').write_text('# TODOROKI 暫定62項目監査\n\n'+now+'\n\n起動理由：'+execution['event']+' / run '+str(execution['run_id'] or '未確認')+'（ジョブ成功は実行履歴で別途確認）\n\n|ID|項目|判定|最終実行|\n|---|---|---|---|\n'+''.join(f"|{x['id']}|{x['name']}|{x['classification']}（{x['result']}）|{x['last_run'] or '未実行'}|\n" for x in items))
  print(json.dumps(report['counts'],ensure_ascii=False));return report
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--mode',default='daily',choices=['hourly','daily','weekly','monthly','all']);p.add_argument('--out',default='quality-results');p.add_argument('--previous');p.add_argument('--offline',action='store_true');a=p.parse_args();run(a.mode,a.out,a.previous,not a.offline)
