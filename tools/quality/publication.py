@@ -27,7 +27,7 @@ def read_public(path):
  url=ORIGIN+path
  try:
   with build_opener(SameOriginRedirect()).open(Request(url,headers={'User-Agent':'TODOROKI-Quality-Audit/1.0'}),timeout=20) as r:
-   return {'status':r.status,'final_url':r.url,'text':r.read(5*1024*1024).decode('utf-8'),'robots':r.headers.get('X-Robots-Tag',''),'link':r.headers.get('Link','')}
+   return {'status':r.status,'final_url':r.url,'text':'' if 'application/pdf' in r.headers.get('Content-Type','').lower() else r.read(5*1024*1024).decode('utf-8'),'robots':r.headers.get('X-Robots-Tag',''),'link':r.headers.get('Link','')}
  except HTTPError as e:return {'status':e.code,'inconclusive':e.code in (401,403,429)}
  except (URLError,TimeoutError,OSError) as e:return {'inconclusive':True,'reason':type(e).__name__}
  except ValueError:return {'inconclusive':False,'reason':'unexpected_redirect_or_invalid_response'}
