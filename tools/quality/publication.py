@@ -36,10 +36,15 @@ def run(root=ROOT,live=False,reader=read_public):
  def add(name,ok,**evidence):checks.append({'check':name,'state':'passed' if ok else 'failed',**evidence})
  ads=(root/'ads.txt').read_text();add('ads.txt authorized publisher',ads_authorized(ads))
  sitemaps={name:sitemap_urls((root/name).read_text()) for name in ('sitemap.xml','sitemap-pdfs.xml')}
- noindex=[];indexable=[];missing_consent=[];canonical_errors=[]
+ noindex=[];indexable=[];missing_consent=[];canonical_errors=[];ad_errors=[]
  for p in root.rglob('*.html'):
   if any(x in p.parts for x in ('.git','node_modules','quality-results')):continue
   rel=p.relative_to(root).as_posix();text=p.read_text();policy=index_policy(text)
+  tags=Tags(text).tags
+  clients=[a.get('content') for t,a in tags if t=='meta' and a.get('name','').lower()=='google-adsense-account']
+  loaders=[a.get('src') for t,a in tags if t=='script' and 'adsbygoogle.js' in a.get('src','')]
+  slots=[a for t,a in tags if t=='ins' and 'adsbygoogle' in a.get('class','').split()]
+  if len(clients)>1 or any(c!='ca-pub-7179318481718851' for c in clients) or loaders or any(a.get('data-ad-client')!='ca-pub-7179318481718851' or not a.get('data-ad-slot') for a in slots):ad_errors.append(rel)
   if policy['noindex']:noindex.append(rel);continue
   indexable.append(rel)
   if '/assets/privacy-controls.js' not in text:missing_consent.append(rel)
@@ -48,6 +53,7 @@ def run(root=ROOT,live=False,reader=read_public):
  for rel in noindex:
   clean=rel[:-5];url=ORIGIN+('/' if clean=='index' else '/'+clean)
   if url in sitemaps['sitemap.xml']:canonical_errors.append(rel)
+ add('advertising publisher and consent-only loading',not ad_errors,errors=ad_errors,scope='source placement; Auto ads settings and actual delivery require AdSense owner')
  add('indexable pages use consent loader',not missing_consent,pages=len(indexable),missing=missing_consent)
  add('noindex policy and canonical inventory',not canonical_errors,noindex_pages=sorted(noindex),errors=canonical_errors,scope='source policy, not GSC exclusion reasons')
  for name,urls in sitemaps.items():add(name+' uses own HTTPS origin',all(u.startswith(ORIGIN+'/') for u in urls),url_count=len(urls))
@@ -62,7 +68,7 @@ def run(root=ROOT,live=False,reader=read_public):
     try:ok=sitemap_urls(text)==sitemaps[name]
     except ET.ParseError:ok=False
    add('live '+name,ok,**r)
-  for path in ('/es/margin-of-safety.html','/es/mbo-investing.html','/zh-Hans/japanese-stocks.html'):
+  for path in ('/es/margin-of-safety.html','/es/mbo-investing.html','/zh-Hans/japanese-stocks.html','/business-ma.html','/business-list.html','/price-value.html','/inflation.html','/investment-list.html','/economy-list.html','/inflation-asset-gap.html','/interest-rate.html'):
    r=reader(path);text=r.pop('text','');expected=ORIGIN+path[:-5]
    if r.get('inconclusive'):checks.append({'check':'canonical redirect '+path,'state':'inconclusive',**r});continue
    add('canonical redirect '+path,r.get('status')==200 and r.get('final_url')==expected and index_policy(text)['canonical']==[expected],**r)
