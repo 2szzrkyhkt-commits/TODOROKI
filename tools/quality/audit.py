@@ -12,23 +12,22 @@ import argparse,hashlib,json,time,ssl,socket,subprocess,xml.etree.ElementTree as
 from criteria import CRITERIA
 ROOT=Path(__file__).resolve().parents[2]
 BASE='https://todoroki-gold.com/'
-TRACKING_HOSTS=('trafficgate.net','a8.net','af.moshimo.com','valuecommerce.com','t.felmat.net','doubleclick.net','pagead2.googlesyndication.com')
-def tracking_url(url):
- host=(urlsplit(url).hostname or '').lower().rstrip('.')
- return any(host==domain or host.endswith('.'+domain) for domain in TRACKING_HOSTS)
-class PaidLinkSkipped(Exception):pass
+AD_DOMAINS=('trafficgate.net','doubleclick.net','googlesyndication.com','googleadservices.com','a8.net','valuecommerce.com','moshimo.com')
+def is_ad_url(url):
+ host=(urlsplit(url).hostname or '').lower()
+ return any(host==domain or host.endswith('.'+domain) for domain in AD_DOMAINS)
+
 class AuditRedirectHandler(HTTPRedirectHandler):
  def redirect_request(self,req,fp,code,msg,headers,newurl):
-  if tracking_url(newurl):raise PaidLinkSkipped()
+  if is_ad_url(newurl):raise HTTPError(newurl,403,'advertising redirect excluded',headers,fp)
   return super().redirect_request(req,fp,code,msg,headers,newurl)
-def safe_urlopen(*args,**kwargs):
- return build_opener(AuditRedirectHandler()).open(*args,**kwargs)
+AUDIT_OPENER=build_opener(AuditRedirectHandler()).open
 class HTML(HTMLParser):
  def __init__(self,text):
   super().__init__();self.tags=[];self.feed(text)
  def handle_starttag(self,t,a):self.tags.append((t,dict(a)))
-def request(url,opener=safe_urlopen,sleep=time.sleep):
- if tracking_url(url):return dict(url=url,kind='skipped',reason='advertising_or_affiliate_tracking_not_requested',attempts=[])
+def request(url,opener=AUDIT_OPENER,sleep=time.sleep):
+ if is_ad_url(url):return dict(url=url,status=None,kind='inconclusive',reason='advertising URL excluded; no request sent')
  attempts=[]
  for i in range(3):
   try:
@@ -36,8 +35,6 @@ def request(url,opener=safe_urlopen,sleep=time.sleep):
    with opener(Request(quote(url,safe=':/?&=%+#'),headers={'User-Agent':'TODOROKI-Quality-Audit/1.0'}),timeout=20) as r:
     body=r.read(8*1024*1024)
     return dict(url=url,final_url=r.url,status=r.status,seconds=round(time.monotonic()-start,3),headers={k:v for k,v in r.headers.items() if k.lower() in ('content-type','cache-control','content-security-policy','strict-transport-security','x-content-type-options')},sha256=hashlib.sha256(body).hexdigest(),pdf=body.startswith(b'%PDF-'),attempts=attempts)
-  except PaidLinkSkipped:
-   return dict(url=url,kind='skipped',reason='redirect_to_advertising_or_affiliate_tracking_not_followed',attempts=attempts)
   except HTTPError as e:
    attempts.append({'status':e.code})
    if e.code not in (429,500,502,503,504):break
@@ -66,7 +63,7 @@ def run(mode,out,previous=None,live=True):
  pages={p:HTML(p.read_text()) for p in ROOT.rglob('*.html') if not any(s in p.parts for s in ('.git','node_modules','quality-results'))}
  if mode!='hourly':
   problems={i:[] for i in (8,9,10,11,15,16,17,18,19,21,22,23,24,27,35,50,51)}
-  titles={};canonical={};links=set();ext=set();sponsored=set();pdfs={};counts=Counter()
+  titles={};canonical={};links=set();ext=set();excluded_ads=set();pdfs={};counts=Counter()
   for p,d in pages.items():
    rel=p.relative_to(ROOT).as_posix();text=p.read_text();tags=d.tags
    noindex=any(t=='meta' and a.get('name')=='robots' and 'noindex' in a.get('content','') for t,a in tags)
@@ -95,8 +92,9 @@ def run(mode,out,previous=None,live=True):
     if not url or urlsplit(url).scheme in ('mailto','tel','javascript','data'):continue
     target,u=resolve(p,url)
     if target is None:
-     external=u._replace(fragment='').geturl();ext.add(external)
-     if tag=='a' and 'sponsored' in a.get('rel','').lower().split():sponsored.add(external)
+     external=u._replace(fragment='').geturl()
+     if 'sponsored' in a.get('rel','').lower().split() or is_ad_url(external):excluded_ads.add(external)
+     else:ext.add(external)
      continue
     links.add(u._replace(fragment='').geturl())
     if u.path.startswith('/api/'):continue
@@ -134,12 +132,12 @@ def run(mode,out,previous=None,live=True):
   result(22,problems[22],[{'pdf_files':sum(map(len,pdfs.values()))}],partial=True)
   result(25,[],[{'duplicate_pdf_groups':[v for v in pdfs.values() if len(v)>1]}],partial=True)
   if live and mode in ('daily','weekly','monthly','all'):
-   # Never generate affiliate clicks or impressions during a health check.
-   skipped=[dict(url=u,kind='skipped',reason='sponsored_link_not_requested',attempts=[]) for u in sorted(sponsored)]
-   with ThreadPoolExecutor(max_workers=4) as pool:network=list(pool.map(request,sorted((links|ext)-sponsored)))+skipped
+   ext-=excluded_ads
+   with ThreadPoolExecutor(max_workers=4) as pool:network=list(pool.map(request,sorted(links|ext)))
    for i,scope in ((18,links),(20,ext)):
     data=[x for x in network if x['url'] in scope];errors=[x for x in data if x.get('kind')=='http_failure']
-    result(i,rows[f'TQ{i:02}']['errors']+errors,data,partial=any(x.get('kind') in ('inconclusive','skipped') for x in data))
+    result(i,(rows['TQ18']['errors'] if i==18 else [])+errors,data,partial=any(x.get('kind')=='inconclusive' for x in data) or (i==20 and bool(excluded_ads)))
+    if i==20 and excluded_ads:rows['TQ20']['evidence'].append({'excluded_advertising_urls':sorted(excluded_ads),'method':'no network requests; advertising delivery remains unverified'})
  if live:
   urls=[BASE,BASE+'boki1',BASE+'pdf-library',BASE+'en/',BASE+'es/',BASE+'pt/',BASE+'zh-Hans/',BASE+'zh-Hant/',BASE+'api/privacy/region']
   network=[request(u) for u in urls]
