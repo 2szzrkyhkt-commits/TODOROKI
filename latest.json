@@ -1,13 +1,13 @@
 {
   "execution": {
     "event": "schedule",
-    "run_id": "43585578255",
+    "run_id": "43619643814",
     "run_attempt": "1"
   },
   "last_scheduled_audit": {
-    "at": "2026-11-14T10:34:54.907273+00:00",
+    "at": "2026-11-14T17:10:37.716910+00:00",
     "event": "schedule",
-    "run_id": "43585578255",
+    "run_id": "43619643814",
     "run_attempt": "1"
   },
   "completed_modes": {
@@ -17,9 +17,9 @@
   },
   "schema": 1,
   "criteria_status": "provisional-original-missing",
-  "at": "2026-11-14T10:34:54.907273+00:00",
+  "at": "2026-11-14T17:10:37.716910+00:00",
   "timezone": "Asia/Tokyo",
-  "mode": "monthly",
+  "mode": "hourly",
   "source_commit": "5aaa86f44d8f3676ff8b8f0c13fa0d34f9a1c623",
   "items": [
     {
@@ -31,14 +31,14 @@
       "automatic_method": "urllib GET; follow redirects; maximum three attempts; record status, final URL and elapsed time",
       "implementation": "partial",
       "result": "完了",
-      "last_run": "2026-11-14T10:34:54.907273+00:00",
+      "last_run": "2026-11-14T17:10:37.716910+00:00",
       "errors": [],
       "evidence": [
         {
           "url": "https://todoroki-gold.com/",
           "final_url": "https://todoroki-gold.com/",
           "status": 200,
-          "seconds": 0.127,
+          "seconds": 0.135,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -52,7 +52,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "完了",
-        "at": "2026-11-14T10:34:54.907273+00:00"
+        "at": "2026-11-14T17:10:37.716910+00:00"
       },
       "classification": "完了",
       "manual_method": null
@@ -66,14 +66,14 @@
       "automatic_method": "urllib GET; follow redirects; maximum three attempts; record status, final URL and elapsed time",
       "implementation": "partial",
       "result": "完了",
-      "last_run": "2026-11-14T10:34:54.907273+00:00",
+      "last_run": "2026-11-14T17:10:37.716910+00:00",
       "errors": [],
       "evidence": [
         {
           "url": "https://todoroki-gold.com/boki1",
           "final_url": "https://todoroki-gold.com/boki1",
           "status": 200,
-          "seconds": 0.039,
+          "seconds": 0.077,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -87,7 +87,7 @@
           "url": "https://todoroki-gold.com/pdf-library",
           "final_url": "https://todoroki-gold.com/pdf-library",
           "status": 200,
-          "seconds": 0.046,
+          "seconds": 0.107,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -101,7 +101,7 @@
           "url": "https://todoroki-gold.com/en/",
           "final_url": "https://todoroki-gold.com/en/",
           "status": 200,
-          "seconds": 0.036,
+          "seconds": 0.089,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -115,7 +115,7 @@
           "url": "https://todoroki-gold.com/es/",
           "final_url": "https://todoroki-gold.com/es/",
           "status": 200,
-          "seconds": 0.04,
+          "seconds": 0.085,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -129,7 +129,7 @@
           "url": "https://todoroki-gold.com/pt/",
           "final_url": "https://todoroki-gold.com/pt/",
           "status": 200,
-          "seconds": 0.039,
+          "seconds": 0.072,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -143,7 +143,7 @@
           "url": "https://todoroki-gold.com/zh-Hans/",
           "final_url": "https://todoroki-gold.com/zh-Hans/",
           "status": 200,
-          "seconds": 0.04,
+          "seconds": 0.053,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -157,7 +157,7 @@
           "url": "https://todoroki-gold.com/zh-Hant/",
           "final_url": "https://todoroki-gold.com/zh-Hant/",
           "status": 200,
-          "seconds": 0.046,
+          "seconds": 0.102,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -171,7 +171,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "完了",
-        "at": "2026-11-14T10:34:54.907273+00:00"
+        "at": "2026-11-14T17:10:37.716910+00:00"
       },
       "classification": "完了",
       "manual_method": null
@@ -185,14 +185,14 @@
       "automatic_method": "urllib GET; follow redirects; maximum three attempts; record status, final URL and elapsed time",
       "implementation": "partial",
       "result": "完了",
-      "last_run": "2026-11-14T10:34:54.907273+00:00",
+      "last_run": "2026-11-14T17:10:37.716910+00:00",
       "errors": [],
       "evidence": [
         {
           "url": "https://todoroki-gold.com/",
           "final_url": "https://todoroki-gold.com/",
           "status": 200,
-          "seconds": 0.127,
+          "seconds": 0.135,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -206,7 +206,7 @@
           "url": "https://todoroki-gold.com/boki1",
           "final_url": "https://todoroki-gold.com/boki1",
           "status": 200,
-          "seconds": 0.039,
+          "seconds": 0.077,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -220,7 +220,7 @@
           "url": "https://todoroki-gold.com/pdf-library",
           "final_url": "https://todoroki-gold.com/pdf-library",
           "status": 200,
-          "seconds": 0.046,
+          "seconds": 0.107,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -234,7 +234,7 @@
           "url": "https://todoroki-gold.com/en/",
           "final_url": "https://todoroki-gold.com/en/",
           "status": 200,
-          "seconds": 0.036,
+          "seconds": 0.089,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -248,7 +248,7 @@
           "url": "https://todoroki-gold.com/es/",
           "final_url": "https://todoroki-gold.com/es/",
           "status": 200,
-          "seconds": 0.04,
+          "seconds": 0.085,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -262,7 +262,7 @@
           "url": "https://todoroki-gold.com/pt/",
           "final_url": "https://todoroki-gold.com/pt/",
           "status": 200,
-          "seconds": 0.039,
+          "seconds": 0.072,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -276,7 +276,7 @@
           "url": "https://todoroki-gold.com/zh-Hans/",
           "final_url": "https://todoroki-gold.com/zh-Hans/",
           "status": 200,
-          "seconds": 0.04,
+          "seconds": 0.053,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -290,7 +290,7 @@
           "url": "https://todoroki-gold.com/zh-Hant/",
           "final_url": "https://todoroki-gold.com/zh-Hant/",
           "status": 200,
-          "seconds": 0.046,
+          "seconds": 0.102,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -304,7 +304,7 @@
           "url": "https://todoroki-gold.com/api/privacy/region",
           "final_url": "https://todoroki-gold.com/api/privacy/region",
           "status": 200,
-          "seconds": 0.041,
+          "seconds": 0.118,
           "headers": {
             "Content-Type": "application/json; charset=utf-8",
             "Cache-Control": "no-store",
@@ -318,7 +318,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "完了",
-        "at": "2026-11-14T10:34:54.907273+00:00"
+        "at": "2026-11-14T17:10:37.716910+00:00"
       },
       "classification": "完了",
       "manual_method": null
@@ -332,14 +332,14 @@
       "automatic_method": "urllib GET; follow redirects; maximum three attempts; record status, final URL and elapsed time",
       "implementation": "partial",
       "result": "完了",
-      "last_run": "2026-11-14T10:34:54.907273+00:00",
+      "last_run": "2026-11-14T17:10:37.716910+00:00",
       "errors": [],
       "evidence": [
         {
           "url": "https://todoroki-gold.com/",
           "final_url": "https://todoroki-gold.com/",
           "status": 200,
-          "seconds": 0.127,
+          "seconds": 0.135,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -353,7 +353,7 @@
           "url": "https://todoroki-gold.com/boki1",
           "final_url": "https://todoroki-gold.com/boki1",
           "status": 200,
-          "seconds": 0.039,
+          "seconds": 0.077,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -367,7 +367,7 @@
           "url": "https://todoroki-gold.com/pdf-library",
           "final_url": "https://todoroki-gold.com/pdf-library",
           "status": 200,
-          "seconds": 0.046,
+          "seconds": 0.107,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -381,7 +381,7 @@
           "url": "https://todoroki-gold.com/en/",
           "final_url": "https://todoroki-gold.com/en/",
           "status": 200,
-          "seconds": 0.036,
+          "seconds": 0.089,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -395,7 +395,7 @@
           "url": "https://todoroki-gold.com/es/",
           "final_url": "https://todoroki-gold.com/es/",
           "status": 200,
-          "seconds": 0.04,
+          "seconds": 0.085,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -409,7 +409,7 @@
           "url": "https://todoroki-gold.com/pt/",
           "final_url": "https://todoroki-gold.com/pt/",
           "status": 200,
-          "seconds": 0.039,
+          "seconds": 0.072,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -423,7 +423,7 @@
           "url": "https://todoroki-gold.com/zh-Hans/",
           "final_url": "https://todoroki-gold.com/zh-Hans/",
           "status": 200,
-          "seconds": 0.04,
+          "seconds": 0.053,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -437,7 +437,7 @@
           "url": "https://todoroki-gold.com/zh-Hant/",
           "final_url": "https://todoroki-gold.com/zh-Hant/",
           "status": 200,
-          "seconds": 0.046,
+          "seconds": 0.102,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -451,7 +451,7 @@
           "url": "https://todoroki-gold.com/api/privacy/region",
           "final_url": "https://todoroki-gold.com/api/privacy/region",
           "status": 200,
-          "seconds": 0.041,
+          "seconds": 0.118,
           "headers": {
             "Content-Type": "application/json; charset=utf-8",
             "Cache-Control": "no-store",
@@ -465,7 +465,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "完了",
-        "at": "2026-11-14T10:34:54.907273+00:00"
+        "at": "2026-11-14T17:10:37.716910+00:00"
       },
       "classification": "完了",
       "manual_method": null
@@ -496,14 +496,14 @@
       "automatic_method": "urllib GET; follow redirects; maximum three attempts; record status, final URL and elapsed time",
       "implementation": "partial",
       "result": "完了",
-      "last_run": "2026-11-14T10:34:54.907273+00:00",
+      "last_run": "2026-11-14T17:10:37.716910+00:00",
       "errors": [],
       "evidence": [
         {
           "url": "https://todoroki-gold.com/api/privacy/region",
           "final_url": "https://todoroki-gold.com/api/privacy/region",
           "status": 200,
-          "seconds": 0.041,
+          "seconds": 0.118,
           "headers": {
             "Content-Type": "application/json; charset=utf-8",
             "Cache-Control": "no-store",
@@ -517,7 +517,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "完了",
-        "at": "2026-11-14T10:34:54.907273+00:00"
+        "at": "2026-11-14T17:10:37.716910+00:00"
       },
       "classification": "完了",
       "manual_method": null
@@ -531,14 +531,14 @@
       "automatic_method": "urllib GET; follow redirects; maximum three attempts; record status, final URL and elapsed time",
       "implementation": "partial",
       "result": "完了",
-      "last_run": "2026-11-14T10:34:54.907273+00:00",
+      "last_run": "2026-11-14T17:10:37.716910+00:00",
       "errors": [],
       "evidence": [
         {
           "url": "https://todoroki-gold.com/",
           "final_url": "https://todoroki-gold.com/",
           "status": 200,
-          "seconds": 0.127,
+          "seconds": 0.135,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -552,7 +552,7 @@
           "url": "https://todoroki-gold.com/boki1",
           "final_url": "https://todoroki-gold.com/boki1",
           "status": 200,
-          "seconds": 0.039,
+          "seconds": 0.077,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -566,7 +566,7 @@
           "url": "https://todoroki-gold.com/pdf-library",
           "final_url": "https://todoroki-gold.com/pdf-library",
           "status": 200,
-          "seconds": 0.046,
+          "seconds": 0.107,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -580,7 +580,7 @@
           "url": "https://todoroki-gold.com/en/",
           "final_url": "https://todoroki-gold.com/en/",
           "status": 200,
-          "seconds": 0.036,
+          "seconds": 0.089,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -594,7 +594,7 @@
           "url": "https://todoroki-gold.com/es/",
           "final_url": "https://todoroki-gold.com/es/",
           "status": 200,
-          "seconds": 0.04,
+          "seconds": 0.085,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -608,7 +608,7 @@
           "url": "https://todoroki-gold.com/pt/",
           "final_url": "https://todoroki-gold.com/pt/",
           "status": 200,
-          "seconds": 0.039,
+          "seconds": 0.072,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -622,7 +622,7 @@
           "url": "https://todoroki-gold.com/zh-Hans/",
           "final_url": "https://todoroki-gold.com/zh-Hans/",
           "status": 200,
-          "seconds": 0.04,
+          "seconds": 0.053,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -636,7 +636,7 @@
           "url": "https://todoroki-gold.com/zh-Hant/",
           "final_url": "https://todoroki-gold.com/zh-Hant/",
           "status": 200,
-          "seconds": 0.046,
+          "seconds": 0.102,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -650,7 +650,7 @@
           "url": "https://todoroki-gold.com/api/privacy/region",
           "final_url": "https://todoroki-gold.com/api/privacy/region",
           "status": 200,
-          "seconds": 0.041,
+          "seconds": 0.118,
           "headers": {
             "Content-Type": "application/json; charset=utf-8",
             "Cache-Control": "no-store",
@@ -664,7 +664,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "完了",
-        "at": "2026-11-14T10:34:54.907273+00:00"
+        "at": "2026-11-14T17:10:37.716910+00:00"
       },
       "classification": "完了",
       "manual_method": null
@@ -23778,7 +23778,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T10:34:54.907273+00:00",
+      "last_run": "2026-11-14T17:10:37.716910+00:00",
       "errors": [],
       "evidence": [
         {
@@ -23790,7 +23790,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "一部完了",
-        "at": "2026-11-14T10:34:54.907273+00:00"
+        "at": "2026-11-14T17:10:37.716910+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -23804,7 +23804,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T10:34:54.907273+00:00",
+      "last_run": "2026-11-14T17:10:37.716910+00:00",
       "errors": [],
       "evidence": [
         {
@@ -23816,7 +23816,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "一部完了",
-        "at": "2026-11-14T10:34:54.907273+00:00"
+        "at": "2026-11-14T17:10:37.716910+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -23859,7 +23859,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T10:34:54.907273+00:00",
+      "last_run": "2026-11-14T17:10:37.716910+00:00",
       "errors": [],
       "evidence": [
         {
@@ -23871,7 +23871,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "一部完了",
-        "at": "2026-11-14T10:34:54.907273+00:00"
+        "at": "2026-11-14T17:10:37.716910+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -23926,7 +23926,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T10:34:54.907273+00:00",
+      "last_run": "2026-11-14T17:10:37.716910+00:00",
       "errors": [],
       "evidence": [
         {
@@ -23938,7 +23938,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "一部完了",
-        "at": "2026-11-14T10:34:54.907273+00:00"
+        "at": "2026-11-14T17:10:37.716910+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -23952,7 +23952,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T10:34:54.907273+00:00",
+      "last_run": "2026-11-14T17:10:37.716910+00:00",
       "errors": [],
       "evidence": [
         {
@@ -23965,7 +23965,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "一部完了",
-        "at": "2026-11-14T10:34:54.907273+00:00"
+        "at": "2026-11-14T17:10:37.716910+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -23979,7 +23979,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T10:34:54.907273+00:00",
+      "last_run": "2026-11-14T17:10:37.716910+00:00",
       "errors": [],
       "evidence": [
         {
@@ -23992,7 +23992,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "一部完了",
-        "at": "2026-11-14T10:34:54.907273+00:00"
+        "at": "2026-11-14T17:10:37.716910+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -25313,1271 +25313,7 @@
       }
     }
   },
-  "new_findings": {
-    "c851798dc15984e64474cd5e": {
-      "id": "TQ43",
-      "detail": {
-        "path": "/",
-        "name": "chromium",
-        "width": 390,
-        "src": "/assets/thumb-ai-gold-rush-bits-atoms.svg"
-      }
-    },
-    "f858c8e489dfcad82be65320": {
-      "id": "TQ43",
-      "detail": {
-        "path": "/",
-        "name": "chromium",
-        "width": 390,
-        "src": "/assets/thumb-mhi-7011-earnings-analysis-2026.svg"
-      }
-    },
-    "23583a53143d32501d268f18": {
-      "id": "TQ43",
-      "detail": {
-        "path": "/",
-        "name": "chromium",
-        "width": 390,
-        "src": "/assets/thumb-sumitomo-metal-mining-5713-earnings-2026.svg"
-      }
-    },
-    "a52bcd6faa1ba4326a08764c": {
-      "id": "TQ43",
-      "detail": {
-        "path": "/",
-        "name": "firefox",
-        "width": 390,
-        "src": "/assets/thumb-olympus-7733-earnings-2026.svg"
-      }
-    },
-    "5d0e91e7b2e08a25bd7857bd": {
-      "id": "TQ43",
-      "detail": {
-        "path": "/",
-        "name": "firefox",
-        "width": 390,
-        "src": "/assets/thumb-advantest-6857-earnings-analysis-2026.svg"
-      }
-    },
-    "134156a047ccfc9849825c30": {
-      "id": "TQ43",
-      "detail": {
-        "path": "/",
-        "name": "firefox",
-        "width": 390,
-        "src": "/assets/thumb-kioxia-earnings-analysis-2026.svg"
-      }
-    },
-    "637fcf606f8d5e8f69920da0": {
-      "id": "TQ43",
-      "detail": {
-        "path": "/",
-        "name": "firefox",
-        "width": 390,
-        "src": "/assets/thumb-kokusai-electric-6525-earnings-2026.svg"
-      }
-    },
-    "033554030358aa1acff85ba2": {
-      "id": "TQ43",
-      "detail": {
-        "path": "/",
-        "name": "firefox",
-        "width": 390,
-        "src": "/assets/thumb-open-house-group-3288-earnings-2026.svg"
-      }
-    },
-    "44bb3da7e79933330c533f7e": {
-      "id": "TQ43",
-      "detail": {
-        "path": "/",
-        "name": "firefox",
-        "width": 390,
-        "src": "/assets/thumb-ai-gold-rush-bits-atoms.svg"
-      }
-    },
-    "c45d31afae8c9a8feb7d8247": {
-      "id": "TQ43",
-      "detail": {
-        "path": "/",
-        "name": "firefox",
-        "width": 390,
-        "src": "/assets/thumb-mhi-7011-earnings-analysis-2026.svg"
-      }
-    },
-    "522c5993794634b4cf551dee": {
-      "id": "TQ43",
-      "detail": {
-        "path": "/",
-        "name": "firefox",
-        "width": 390,
-        "src": "/assets/thumb-sumitomo-metal-mining-5713-earnings-2026.svg"
-      }
-    },
-    "78bbb04c5dfaaed8096764de": {
-      "id": "TQ43",
-      "detail": {
-        "path": "/",
-        "name": "firefox",
-        "width": 1440,
-        "src": "/assets/thumb-kioxia-earnings-analysis-2026.svg"
-      }
-    },
-    "8fc140938f136eafe1057b96": {
-      "id": "TQ43",
-      "detail": {
-        "path": "/",
-        "name": "firefox",
-        "width": 1440,
-        "src": "/assets/thumb-kokusai-electric-6525-earnings-2026.svg"
-      }
-    },
-    "3f530841655c6fe40e3cbe35": {
-      "id": "TQ43",
-      "detail": {
-        "path": "/",
-        "name": "firefox",
-        "width": 1440,
-        "src": "/assets/thumb-open-house-group-3288-earnings-2026.svg"
-      }
-    },
-    "8d43fcbdf6a6f7a670cb52d5": {
-      "id": "TQ43",
-      "detail": {
-        "path": "/",
-        "name": "firefox",
-        "width": 1440,
-        "src": "/assets/thumb-ai-gold-rush-bits-atoms.svg"
-      }
-    },
-    "f70130c530e565c7317b061b": {
-      "id": "TQ43",
-      "detail": {
-        "path": "/",
-        "name": "firefox",
-        "width": 1440,
-        "src": "/assets/thumb-mhi-7011-earnings-analysis-2026.svg"
-      }
-    },
-    "2002f05214984e0d78c84a7c": {
-      "id": "TQ43",
-      "detail": {
-        "path": "/",
-        "name": "firefox",
-        "width": 1440,
-        "src": "/assets/thumb-sumitomo-metal-mining-5713-earnings-2026.svg"
-      }
-    },
-    "dc80cba6ee939e74026a2f87": {
-      "id": "TQ43",
-      "detail": {
-        "path": "/",
-        "name": "webkit",
-        "width": 390,
-        "src": "/assets/thumb-advantest-6857-earnings-analysis-2026.svg"
-      }
-    },
-    "c819bf46dda7ff2dea39da92": {
-      "id": "TQ43",
-      "detail": {
-        "path": "/",
-        "name": "webkit",
-        "width": 390,
-        "src": "/assets/thumb-kioxia-earnings-analysis-2026.svg"
-      }
-    },
-    "2e9898fc5668bceff7a5f3f6": {
-      "id": "TQ43",
-      "detail": {
-        "path": "/",
-        "name": "webkit",
-        "width": 390,
-        "src": "/assets/thumb-kokusai-electric-6525-earnings-2026.svg"
-      }
-    },
-    "873bc04dcd3f516f42dc0426": {
-      "id": "TQ43",
-      "detail": {
-        "path": "/",
-        "name": "webkit",
-        "width": 390,
-        "src": "/assets/thumb-open-house-group-3288-earnings-2026.svg"
-      }
-    },
-    "8c794acfe9766ccd1d1fcc6a": {
-      "id": "TQ43",
-      "detail": {
-        "path": "/",
-        "name": "webkit",
-        "width": 390,
-        "src": "/assets/thumb-ai-gold-rush-bits-atoms.svg"
-      }
-    },
-    "ca37a6153ef6e6d15ae6edb6": {
-      "id": "TQ43",
-      "detail": {
-        "path": "/",
-        "name": "webkit",
-        "width": 390,
-        "src": "/assets/thumb-mhi-7011-earnings-analysis-2026.svg"
-      }
-    },
-    "784b0007b6a764740fa1ebe3": {
-      "id": "TQ43",
-      "detail": {
-        "path": "/",
-        "name": "webkit",
-        "width": 390,
-        "src": "/assets/thumb-sumitomo-metal-mining-5713-earnings-2026.svg"
-      }
-    },
-    "9b44d2352484e7e136bb2c06": {
-      "id": "TQ43",
-      "detail": {
-        "path": "/",
-        "name": "webkit",
-        "width": 1440,
-        "src": "/assets/thumb-sumitomo-metal-mining-5713-earnings-2026.svg"
-      }
-    },
-    "2a7f7688b747e90c0e1f636c": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/",
-        "name": "chromium",
-        "width": 390,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "a813de15e631c9d91fa2e13d": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/en/",
-        "name": "chromium",
-        "width": 390,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "a8737bf934aab0e905d91af8": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/es/",
-        "name": "chromium",
-        "width": 390,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "a3120d3b8ce61ffa98b7f924": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/pt/",
-        "name": "chromium",
-        "width": 390,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "4ee8de7b9b36ad1313530fed": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/zh-Hans/",
-        "name": "chromium",
-        "width": 390,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "6c5cdc3cb5c5ee125352d3bc": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/zh-Hant/",
-        "name": "chromium",
-        "width": 390,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "f7ef86826a7b9707a7a9f0dd": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/pdf-library",
-        "name": "chromium",
-        "width": 390,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > p:nth-child(2)"
-          ],
-          [
-            "nav[aria-label=\"運営方針 / Policies\"]"
-          ]
-        ]
-      }
-    },
-    "94ce16d9763342510e3bd950": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/",
-        "name": "chromium",
-        "width": 1440,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "b7f5b04e0523c636857f183a": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/en/",
-        "name": "chromium",
-        "width": 1440,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "59217afb8e2e641497bfd056": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/es/",
-        "name": "chromium",
-        "width": 1440,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "ff94e90e51e8efabbba65285": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/pt/",
-        "name": "chromium",
-        "width": 1440,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "c5b219e4fe83116165c41c03": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/zh-Hans/",
-        "name": "chromium",
-        "width": 1440,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "83bae5512b61c9b7ed9c0f9f": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/zh-Hant/",
-        "name": "chromium",
-        "width": 1440,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "6c1345b6fb1f877c0d8c1cee": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/pdf-library",
-        "name": "chromium",
-        "width": 1440,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > p:nth-child(2)"
-          ],
-          [
-            "nav[aria-label=\"運営方針 / Policies\"]"
-          ]
-        ]
-      }
-    },
-    "e4e68d12cd905426ee6f84e4": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/",
-        "name": "firefox",
-        "width": 390,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "982f4233ab0d9b19674809b9": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/en/",
-        "name": "firefox",
-        "width": 390,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "7be4749ac55360ba4e65c1ea": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/es/",
-        "name": "firefox",
-        "width": 390,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "9fc82544cad105c3323aa777": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/pt/",
-        "name": "firefox",
-        "width": 390,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "215334e58557d8ba65c6fc54": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/zh-Hans/",
-        "name": "firefox",
-        "width": 390,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "88267cc9ffffe60ba08a6ecb": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/zh-Hant/",
-        "name": "firefox",
-        "width": 390,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "9a2114893a07d03c879d7946": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/pdf-library",
-        "name": "firefox",
-        "width": 390,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > p:nth-child(2)"
-          ],
-          [
-            "nav[aria-label=\"運営方針 / Policies\"]"
-          ]
-        ]
-      }
-    },
-    "ff09536b5619c59a15c84902": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/",
-        "name": "firefox",
-        "width": 1440,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "70bc3ea7e19bde592558889a": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/en/",
-        "name": "firefox",
-        "width": 1440,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "90d6d751b6d4472e85cfb130": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/es/",
-        "name": "firefox",
-        "width": 1440,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "eb53dd049a78608ad1f3e518": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/pt/",
-        "name": "firefox",
-        "width": 1440,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "38ab349219e53beb6815d772": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/zh-Hans/",
-        "name": "firefox",
-        "width": 1440,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "f12161a105a0ae41de4352a7": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/zh-Hant/",
-        "name": "firefox",
-        "width": 1440,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "639f8e4d68d3aaaabe5b788e": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/pdf-library",
-        "name": "firefox",
-        "width": 1440,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > p:nth-child(2)"
-          ],
-          [
-            "nav[aria-label=\"運営方針 / Policies\"]"
-          ]
-        ]
-      }
-    },
-    "7daa06e3830e37c28bfdc673": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/",
-        "name": "webkit",
-        "width": 390,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "c9f261a254d8819f7b81323d": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/en/",
-        "name": "webkit",
-        "width": 390,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "73755034e2915c6449bf8ca6": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/es/",
-        "name": "webkit",
-        "width": 390,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "e4874dd946be750834476708": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/pt/",
-        "name": "webkit",
-        "width": 390,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "c9495895c317cfb2856dbdac": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/zh-Hans/",
-        "name": "webkit",
-        "width": 390,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "ae8f8f28c1798fc85fb10346": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/zh-Hant/",
-        "name": "webkit",
-        "width": 390,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "26755a502f1005cc1fc22631": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/pdf-library",
-        "name": "webkit",
-        "width": 390,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > p:nth-child(2)"
-          ],
-          [
-            "nav[aria-label=\"運営方針 / Policies\"]"
-          ]
-        ]
-      }
-    },
-    "3ca9e7e908b083f4259daa50": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/",
-        "name": "webkit",
-        "width": 1440,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "0070a5c5d506a1478a048df4": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/en/",
-        "name": "webkit",
-        "width": 1440,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "743d15a99e431e0f86763790": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/es/",
-        "name": "webkit",
-        "width": 1440,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "0c21b06c23330452086876d9": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/pt/",
-        "name": "webkit",
-        "width": 1440,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "ef38202d8d8e8cc0bffefab5": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/zh-Hans/",
-        "name": "webkit",
-        "width": 1440,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "a3da40371fe670654da8f686": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/zh-Hant/",
-        "name": "webkit",
-        "width": 1440,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > .wrap"
-          ],
-          [
-            ".todoroki-info-nav"
-          ],
-          [
-            "a[href$=\"editorial-policy\"]"
-          ],
-          [
-            ".todoroki-info-nav > a[href$=\"data-use\"]"
-          ],
-          [
-            "a[href$=\"sources\"]"
-          ]
-        ]
-      }
-    },
-    "8533b2cf866509d6810c37f7": {
-      "id": "TQ52",
-      "detail": {
-        "path": "/pdf-library",
-        "name": "webkit",
-        "width": 1440,
-        "id": "color-contrast",
-        "nodes": [
-          [
-            "footer > p:nth-child(2)"
-          ],
-          [
-            "nav[aria-label=\"運営方針 / Policies\"]"
-          ]
-        ]
-      }
-    }
-  },
+  "new_findings": {},
   "resolved": [],
   "notification_candidates": {},
   "limitations": [
