@@ -21,3 +21,24 @@ for(const [path,target] of Object.entries(redirects)){
 const data=Object.fromEntries([53,54,56,59].map(id=>[id,{errors:[],evidence:[{scope:'isolated worker contracts only; live positive login and provider setup require manual verification',cases:6,redirects:8}]}]));
 await fs.mkdir('quality-results',{recursive:true});await fs.writeFile('quality-results/security.json',JSON.stringify(data,null,2));
 console.log('isolated security: anonymous session, invalid session, method, Origin, body type, cookie flags, eight redirects passed');
+
+const pdfAlias='/pdf/社会的選好_情報共有_フリーライド_黒金.pdf';
+r=await invoke(encodeURI(pdfAlias)+'?download=1');
+assert.equal(r.headers.get('Link'),'<'+new URL('/pdf/社会的選好と情報共有_仕事仲間の協力_改訂版.pdf',origin).href+'>; rel="canonical"');
+assert.equal(await r.text(),'fixture');
+const rangeEnv={...env,ASSETS:{fetch:async()=>new Response('part',{status:206,headers:{'Content-Range':'bytes 0-3/100','Content-Type':'application/pdf'}})}};
+r=await worker.fetch(new Request(origin+encodeURI(pdfAlias),{headers:{Range:'bytes=0-3'}}),rangeEnv);
+assert.equal(r.status,206);assert.equal(r.headers.get('Content-Range'),'bytes 0-3/100');assert.ok(r.headers.has('Link'));
+r=await worker.fetch(new Request(origin+encodeURI(pdfAlias)),{...env,ASSETS:{fetch:async()=>new Response('missing',{status:404})}});assert.equal(r.headers.has('Link'),false);
+r=await invoke('/pdf/another.pdf');assert.equal(r.headers.has('Link'),false);
+console.log('PDF canonical: Unicode alias, query, bytes, range, missing and unrelated assets passed');
+
+const pdfFiles=await fs.readdir('pdf');
+for(const [alias,target] of [
+ ['Amazon輸入ビジネス_価格差と相乗り販売_修正版.pdf','Amazon輸入ビジネス_価格差と相乗り販売.pdf'],
+ ['社会的選好_情報共有_フリーライド_黒金.pdf','社会的選好と情報共有_仕事仲間の協力_改訂版.pdf'],
+ ['社会的選好と情報共有_仕事仲間の協力.pdf','社会的選好と情報共有_仕事仲間の協力_改訂版.pdf']]){
+ const a=pdfFiles.find(n=>n.normalize('NFC')===alias);assert.ok(a);
+ assert.deepEqual(await fs.readFile('pdf/'+a),await fs.readFile('pdf/'+target));
+}
+console.log('PDF canonical alias/target byte equality: 3 pairs passed');
