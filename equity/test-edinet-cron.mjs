@@ -10,3 +10,11 @@ for(const field of ['retryAt','nextPollAt','lease']){
  }
 }
 console.log('PASS 9 future retry/poll/lease guards across ISO, numeric and numeric-string timestamps');
+
+import worker from './edinet-cron.js';
+let support=0,tax=0;const pending=[];
+const env={SUPPORT_COLLECTOR:{run:async()=>{support++;return {status:'fixture'}}},TAX_COLLECTOR:{fetch:async(url,opts)=>{assert.equal(url,'https://tax.internal/setup-run');assert.equal(opts.method,'POST');assert.equal(opts.headers.Authorization,'Bearer fixture');tax++;return new Response('{}');}},TAX_RUN_TOKEN:'fixture'};
+for(const minute of [0,5,30]){await worker.scheduled({scheduledTime:Date.UTC(2026,10,14,6,minute)},env,{waitUntil:p=>pending.push(p)});await Promise.all(pending.splice(0));}
+assert.equal(support,3);assert.equal(tax,2);
+const r=await worker.fetch();assert.equal(r.status,200);assert.match((await r.json()).control,/cannot start/);
+console.log('PASS unchanged support dispatch, tax minute guard, service target/method/header, read-only health');
