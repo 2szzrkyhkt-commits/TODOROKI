@@ -183,3 +183,17 @@ D1実測：制度1件はpending/pendingのまま。取得元は有効1件・無�
 - 構造化データはソース内JSON-LD18ブロックのJSON解析成功。検索機能での適格性・全記事への収録は未検証。JSON-LD不在だけでページ障害とは扱わない。
 - AdSense所有者アカウント・GSC除外URL全件は引き続き未取得。直近mainのActions 43552452656はpushイベント成功であり、予約実行成功の証明には加算しない。
 - 定期タスク3件・Cron・権限・既存データは変更しない。T02/T03は未完了を維持。PRのCI・マージはGitHubの現況を参照し、未反映を本番完了と扱わない。
+
+## 2026-11-14 第2段階：本番監査・GSC・広告（PR #26）
+
+- 45項目の完了チェックは6/45を維持。T01/T02/T03/T45の部分対応であり、既存完了の再実装や新規TODOではない。
+- PR #23本番監査43553336408はsuccess。quality-history/latest.jsonを読戻し、source=e26a7f7、at=2026-11-14T03:47:58.070100Z、execution=pushを確認。findingsは空だが暫定62項目は完了7・一部38・未確認17。全項目正常・予約起動成功とはしない。
+- GSC正規プロパティsc-domain:todoroki-gold.comの管理画面を確認。報告更新日11/9、未登録912・登録525。理由は404=13、転送エラー8、noindex785、転送あり78、適切なcanonical9、正規未指定の重複5、その他4xx2、401=1、クロール済未登録7、検出未登録4。現在の公開不具合とは区別する。
+- noindex785件を500件＋285件の画面一覧で集計。PDFビューア781、ログイン2、旧企業比較PDF2。既存の意図的除外と一致し、一括解除しない。
+- 転送エラー8 URLはbusiness-ma/business-list/price-value/inflation/investment-list/economy-list/inflation-asset-gap/interest-rateの.html別名。既存の本番検証へ追加し、最終URLとcanonical一致を検査する。
+- 重複5 URLのうちAmazon修正版1件と社会的選好2件は別名PDFとバイト完全一致。ファイルを削除せずHTTP Link canonicalで正規PDFを指定。Unicode正規化・クエリ・本文保持・範囲要求・404/無関係ページへの非適用と実ファイル3組の同一性を検証。他2件のM&A PDFは完全一致せず、自動統合しない。
+- 404例13件はlibrary/pdf-11.html、pdf-03.html、pdf-38.html、pdf-03、pdf-02.html、pdf-01.html、pdf-05.html、pdf-04.html、premium.html、api/auth/、pdf/、technology-list.html、psychology-list.html。廃止・API・ディレクトリURLを一律に正常ページへ転送しない。現在HTTP・適切な代替先との照合は残作業。
+- GSC sitemap.xmlは11/13最終読込・成功・170ページ。sitemap-pdfs.xmlはrobotsに掲載されているが、管理画面の送信済み一覧にはない。追加送信や修正検証申請は今回行っていない。
+- AdSense管理画面は接続済みGoogleアカウントにAdSense未関連付けと表示。新規登録・別アカウントへの自動変更なし。本人が既存AdSense所有者アカウントを選ぶ必要がある。194 HTMLの直接ローダー0・手動広告枠0・ID誤り0。共通同意ローダーからAuto adsを読み込む構成。配信位置・承認・実収益は未確認。
+- 日次ブラウザ監査に390/1440pxと記事1ページ、横はみ出し・画像・画面保存を追加。実機確認は別。Python25テスト、静的公開6件、セキュリティとPDFヘッダー契約はローカル成功。PR CIと反映後の実HTTPはGitHubの最終結果で判定する。
+- scheduleイベント履歴0件、last_scheduled_audit=null。既存Actionsは毎時17分UTC（JSTも毎時17分）設定、通常は次の17分が予定だが実行保証はない。既存タスク3件・Cronは変更/新設せず、予約起動は未確認のまま。
