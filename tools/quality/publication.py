@@ -1,6 +1,6 @@
 """Bounded public publication checks; never requests advertising endpoints."""
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit,quote
 from urllib.request import Request, build_opener, HTTPRedirectHandler
 from urllib.error import HTTPError, URLError
 from html.parser import HTMLParser
@@ -27,7 +27,7 @@ def read_public(path):
  url=ORIGIN+path
  try:
   with build_opener(SameOriginRedirect()).open(Request(url,headers={'User-Agent':'TODOROKI-Quality-Audit/1.0'}),timeout=20) as r:
-   return {'status':r.status,'final_url':r.url,'text':r.read(5*1024*1024).decode('utf-8'),'robots':r.headers.get('X-Robots-Tag','')}
+   return {'status':r.status,'final_url':r.url,'text':r.read(5*1024*1024).decode('utf-8'),'robots':r.headers.get('X-Robots-Tag',''),'link':r.headers.get('Link','')}
  except HTTPError as e:return {'status':e.code,'inconclusive':e.code in (401,403,429)}
  except (URLError,TimeoutError,OSError) as e:return {'inconclusive':True,'reason':type(e).__name__}
  except ValueError:return {'inconclusive':False,'reason':'unexpected_redirect_or_invalid_response'}
@@ -72,6 +72,10 @@ def run(root=ROOT,live=False,reader=read_public):
    r=reader(path);text=r.pop('text','');expected=ORIGIN+path[:-5]
    if r.get('inconclusive'):checks.append({'check':'canonical redirect '+path,'state':'inconclusive',**r});continue
    add('canonical redirect '+path,r.get('status')==200 and r.get('final_url')==expected and index_policy(text)['canonical']==[expected],**r)
+  for path,target in [('/pdf/Amazon輸入ビジネス_価格差と相乗り販売_修正版.pdf','/pdf/Amazon輸入ビジネス_価格差と相乗り販売.pdf'),('/pdf/社会的選好_情報共有_フリーライド_黒金.pdf','/pdf/社会的選好と情報共有_仕事仲間の協力_改訂版.pdf'),('/pdf/社会的選好と情報共有_仕事仲間の協力.pdf','/pdf/社会的選好と情報共有_仕事仲間の協力_改訂版.pdf')]:
+   r=reader(quote(path));r.pop('text','')
+   if r.get('inconclusive'):checks.append({'check':'PDF canonical '+path,'state':'inconclusive',**r});continue
+   add('PDF canonical '+path,r.get('status')==200 and r.get('link')=='<'+ORIGIN+quote(target)+'>; rel="canonical"',**r)
   for path in ('/login','/pdf-viewer'):
    r=reader(path);text=r.pop('text','')
    if r.get('inconclusive'):checks.append({'check':'intentional noindex '+path,'state':'inconclusive',**r});continue
