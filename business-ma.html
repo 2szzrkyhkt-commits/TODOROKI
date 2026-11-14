@@ -48,8 +48,9 @@ p{margin:22px 0;color:#d0cdc6}
 .panel{background:#151515;border:1px solid #45391e;border-radius:12px;padding:25px;margin:30px 0}
 .panel p{margin:8px 0}
 .comparison-scroll{overflow-x:auto;max-width:100%;margin:24px 0}
-.comparison-scroll table{width:100%;min-width:500px;border-collapse:collapse;font-variant-numeric:tabular-nums}
-.comparison-scroll th,.comparison-scroll td{padding:12px;border:1px solid #45391e;text-align:left}
+.comparison-scroll table{width:100%;min-width:0;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.comparison-scroll th,.comparison-scroll td{padding:10px 6px;overflow-wrap:anywhere;border:1px solid #45391e;text-align:left}
+.comparison-scroll caption{text-align:left;margin-bottom:10px}
 .comparison-scroll th{background:#17140e}
 .comparison-scroll:focus-visible{outline:2px solid #d8b65c;outline-offset:3px}
 .article-updated{font-size:13px;color:#b7afa0}
@@ -144,7 +145,7 @@ html{scroll-behavior:smooth}
 <p>買収代金100億円と統合費用10億円を最初に支払うとします。買収で追加的に得られる税引後の<a href="/glossary#term-cf-2">フリーキャッシュフロー（FCF）</a>を、各年末に5年間受け取る設定です。ここでのFCFは維持投資・追加投資を差し引いた後の現金です。</p>
 <p>割引率は年8％。将来の現金を現在の価値に換算する率として使います。6年目以降の現金と5年後の売却代金はゼロ、借入による資金調達効果は含めません。実在企業の予測ではありません。</p>
 </div>
-<div class="comparison-scroll" role="region" aria-label="買収の回収額比較。横にスクロールできます" tabindex="0">
+<div class="comparison-scroll" role="region" aria-label="買収の回収額比較" tabindex="0">
 <table><caption>5年間の追加FCFと初期支出を比較（単位：億円）</caption>
 <thead><tr><th scope="col">ケース</th><th scope="col">毎年の追加FCF</th><th scope="col">5年分の現在価値</th><th scope="col">初期支出との差額</th></tr></thead>
 <tbody><tr><th scope="row">計画どおり</th><td>30</td><td>119.78</td><td>＋9.78</td></tr><tr><th scope="row">回収額が下振れ</th><td>20</td><td>79.85</td><td>−30.15</td></tr></tbody></table>
