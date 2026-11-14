@@ -18,6 +18,7 @@ for(const [name,engine] of Object.entries(weekly?{chromium,firefox,webkit}:{chro
    await page.waitForTimeout(1500);
    add(26,errors.map(e=>({path,name,width,error:e})),{path,name,width});
    const ui=await page.evaluate(()=>({headers:document.querySelectorAll('header.site-header').length,nav:document.querySelectorAll('header a[href]').length,overflow:document.documentElement.scrollWidth>innerWidth+2,brokenImages:[...document.images].filter(x=>!x.complete||x.naturalWidth===0).map(x=>x.getAttribute('src'))}));
+   await page.screenshot({path:`${out}/${name}-${width}-${path.replaceAll('/','_')}.png`,fullPage:true});
    add(28,ui.headers!==1?[{path,name,width,headerCount:ui.headers}]:[],{path,name,width});
    add(29,ui.nav===0?[{path,name,width,missingNavigation:true}]:[],{path,name,width});
    if(path==='/pdf-library'||path==='/boki1'){
@@ -62,7 +63,6 @@ for(const [name,engine] of Object.entries(weekly?{chromium,firefox,webkit}:{chro
     const axe=await new AxeBuilder({page}).analyze();
     add(52,axe.violations.filter(x=>['serious','critical'].includes(x.impact)).map(x=>({path,name,width,id:x.id,nodes:x.nodes.map(n=>n.target)})),{path,name,width,incomplete:axe.incomplete.map(x=>x.id)});
     }
-    await page.screenshot({path:`${out}/${name}-${width}-${path.replaceAll('/','_')}.png`,fullPage:true});
    }
   }catch(e){add(26,[],{path,name,width,inconclusive:e.message});}finally{await page.close();}
  }
