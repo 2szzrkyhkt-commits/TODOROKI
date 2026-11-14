@@ -23,3 +23,20 @@ class PublicationTests(unittest.TestCase):
    def reader(p):return {'status':200,'final_url':ORIGIN+p,'text':'<meta name="robots" content="noindex">'}
    r=run(root,True,reader)
    self.assertTrue(all(x['state']=='failed' for x in r['checks'] if x['check'].startswith('canonical redirect')))
+
+ def test_wrong_canonical_and_cross_page_duplicate_fail(self):
+  with tempfile.TemporaryDirectory() as d:
+   root=Path(d);(root/'ads.txt').write_text(ADS)
+   for n in ('sitemap.xml','sitemap-pdfs.xml'):(root/n).write_text('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"/>')
+   (root/'wrong.html').write_text('<link rel="canonical" href="'+ORIGIN+'/other"><script src="/assets/privacy-controls.js"></script>')
+   (root/'other.html').write_text('<link rel="canonical" href="'+ORIGIN+'/other"><script src="/assets/privacy-controls.js"></script>')
+   r=run(root);c=next(x for x in r['checks'] if x['check']=='noindex policy and canonical inventory')
+   self.assertEqual(c['state'],'failed');self.assertEqual(c['errors'],['wrong.html'])
+ def test_directory_index_and_name_ending_index_have_distinct_urls(self):
+  with tempfile.TemporaryDirectory() as d:
+   root=Path(d);(root/'ads.txt').write_text(ADS)
+   for n in ('sitemap.xml','sitemap-pdfs.xml'):(root/n).write_text('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"/>')
+   (root/'section').mkdir()
+   for name,url in [('index.html','/'),('section/index.html','/section/'),('global-index.html','/global-index')]:
+    (root/name).write_text('<link rel="canonical" href="'+ORIGIN+url+'"><script src="/assets/privacy-controls.js"></script>')
+   self.assertTrue(all(x['state']=='passed' for x in run(root)['checks']))
