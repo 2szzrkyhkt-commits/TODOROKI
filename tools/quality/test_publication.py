@@ -14,7 +14,7 @@ class PublicationTests(unittest.TestCase):
    (root/'index.html').write_text('<link rel="canonical" href="'+ORIGIN+'/"><script src="/assets/privacy-controls.js"></script>')
    for n in ('sitemap.xml','sitemap-pdfs.xml'):(root/n).write_text('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"/>')
    r=run(root,True,lambda p:{'status':403,'inconclusive':True})
-   self.assertEqual(sum(x['state']=='inconclusive' for x in r['checks']),17)
+   self.assertEqual(sum(x['state']=='inconclusive' for x in r['checks']),20)
    self.assertFalse(any(x['state']=='failed' for x in r['checks']))
  def test_unredirected_html_alias_fails_contract(self):
   with tempfile.TemporaryDirectory() as d:
