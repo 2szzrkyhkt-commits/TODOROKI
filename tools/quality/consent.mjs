@@ -52,3 +52,5 @@ try{
  await fs.mkdir('quality-results',{recursive:true});await fs.writeFile('quality-results/consent.json',JSON.stringify({39:{errors:[],evidence:[{scope:'isolated real-source browser contract; not production ad delivery',cases:evidence}]}},null,2));
  console.log('consent contracts passed:',evidence.length);
 }finally{await browser.close();server.close();}
+
+await import('./boki-content.mjs');
