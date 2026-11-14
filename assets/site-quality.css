@@ -5,3 +5,13 @@ main{min-width:0}main h1,main h2,main h3{overflow-wrap:anywhere}img{max-width:10
 :focus-visible{outline:2px solid #f4d77b;outline-offset:3px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
 .motion-toggle{position:absolute;bottom:16px;right:16px;z-index:3;padding:9px 14px;background:#111;color:#f4d77b;border:1px solid #a58a47;border-radius:6px;font:inherit;font-size:13px;cursor:pointer}
+
+/* Learning examples remain readable on narrow screens. */
+.worked-example .example-table{max-width:100%;overflow-x:auto;margin:24px 0}
+.worked-example table{width:100%;border-collapse:collapse;font-size:.95rem}
+.worked-example th,.worked-example td{padding:10px 12px;border:1px solid #554526;text-align:left;vertical-align:top}
+.worked-example th{color:#f4d77b;background:#18150f}
+.worked-example caption{text-align:left;color:#cfc3a2;padding:8px 0}
+.worked-example details{border:1px solid #554526;border-radius:8px;padding:16px;margin:24px 0}
+.worked-example summary{cursor:pointer;color:#f4d77b;line-height:1.7}
+.updated{font-size:13px;color:#bcb3a0}
