@@ -1,4 +1,12 @@
 const ORIGIN = 'https://todoroki-gold.com';
+// Only byte-identical PDF aliases share a canonical target. Keep downloads and ranges intact.
+const PDF_CANONICAL = new Map([
+ ['/pdf/Amazon輸入ビジネス_価格差と相乗り販売_修正版.pdf','/pdf/Amazon輸入ビジネス_価格差と相乗り販売.pdf'],
+ ['/pdf/Amazon輸入ビジネス_価格差と相乗り販売.pdf','/pdf/Amazon輸入ビジネス_価格差と相乗り販売.pdf'],
+ ['/pdf/社会的選好_情報共有_フリーライド_黒金.pdf','/pdf/社会的選好と情報共有_仕事仲間の協力_改訂版.pdf'],
+ ['/pdf/社会的選好と情報共有_仕事仲間の協力.pdf','/pdf/社会的選好と情報共有_仕事仲間の協力_改訂版.pdf'],
+ ['/pdf/社会的選好と情報共有_仕事仲間の協力_改訂版.pdf','/pdf/社会的選好と情報共有_仕事仲間の協力_改訂版.pdf']
+]);
 const SESSION = '__Host-todoroki_session';
 const CHALLENGE = '__Host-todoroki_challenge';
 const encoder = new TextEncoder();
@@ -115,7 +123,16 @@ export default {
       const country = request.cf?.country;
       return json({ optionalAllowed: typeof country === 'string' && /^[A-Z]{2}$/.test(country) && country !== 'XX' && !restricted.has(country) });
     }
-    if (!url.pathname.startsWith('/api/')) return env.ASSETS.fetch(request);
+    if (!url.pathname.startsWith('/api/')) {
+      const response = await env.ASSETS.fetch(request);
+      const canonical = PDF_CANONICAL.get(decodedPath);
+      if (canonical && ['GET','HEAD'].includes(request.method) && [200,206,304].includes(response.status)) {
+        const headers = new Headers(response.headers);
+        headers.set('Link', `<${new URL(canonical, ORIGIN).href}>; rel="canonical"`);
+        return new Response(response.body, {status:response.status,statusText:response.statusText,headers});
+      }
+      return response;
+    }
     if (url.origin !== ORIGIN) return json({ error: '本番サイトからアクセスしてください。' }, 403);
     const path = url.pathname;
     if (path.startsWith('/api/tools/')) { try { return await toolGate(request, env, path); } catch { return json({error:'ツールの入場を確認できません。再度お試しください。'},503); } }

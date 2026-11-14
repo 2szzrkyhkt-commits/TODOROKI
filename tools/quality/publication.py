@@ -1,6 +1,6 @@
 """Bounded public publication checks; never requests advertising endpoints."""
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit,quote
 from urllib.request import Request, build_opener, HTTPRedirectHandler
 from urllib.error import HTTPError, URLError
 from html.parser import HTMLParser
@@ -27,7 +27,7 @@ def read_public(path):
  url=ORIGIN+path
  try:
   with build_opener(SameOriginRedirect()).open(Request(url,headers={'User-Agent':'TODOROKI-Quality-Audit/1.0'}),timeout=20) as r:
-   return {'status':r.status,'final_url':r.url,'text':r.read(5*1024*1024).decode('utf-8'),'robots':r.headers.get('X-Robots-Tag','')}
+   return {'status':r.status,'final_url':r.url,'text':'' if 'application/pdf' in r.headers.get('Content-Type','').lower() else r.read(5*1024*1024).decode('utf-8'),'robots':r.headers.get('X-Robots-Tag',''),'link':r.headers.get('Link','')}
  except HTTPError as e:return {'status':e.code,'inconclusive':e.code in (401,403,429)}
  except (URLError,TimeoutError,OSError) as e:return {'inconclusive':True,'reason':type(e).__name__}
  except ValueError:return {'inconclusive':False,'reason':'unexpected_redirect_or_invalid_response'}
@@ -36,10 +36,15 @@ def run(root=ROOT,live=False,reader=read_public):
  def add(name,ok,**evidence):checks.append({'check':name,'state':'passed' if ok else 'failed',**evidence})
  ads=(root/'ads.txt').read_text();add('ads.txt authorized publisher',ads_authorized(ads))
  sitemaps={name:sitemap_urls((root/name).read_text()) for name in ('sitemap.xml','sitemap-pdfs.xml')}
- noindex=[];indexable=[];missing_consent=[];canonical_errors=[]
+ noindex=[];indexable=[];missing_consent=[];canonical_errors=[];ad_errors=[]
  for p in root.rglob('*.html'):
   if any(x in p.parts for x in ('.git','node_modules','quality-results')):continue
   rel=p.relative_to(root).as_posix();text=p.read_text();policy=index_policy(text)
+  tags=Tags(text).tags
+  clients=[a.get('content') for t,a in tags if t=='meta' and a.get('name','').lower()=='google-adsense-account']
+  loaders=[a.get('src') for t,a in tags if t=='script' and 'adsbygoogle.js' in a.get('src','')]
+  slots=[a for t,a in tags if t=='ins' and 'adsbygoogle' in a.get('class','').split()]
+  if len(clients)>1 or any(c!='ca-pub-7179318481718851' for c in clients) or loaders or any(a.get('data-ad-client')!='ca-pub-7179318481718851' or not a.get('data-ad-slot') for a in slots):ad_errors.append(rel)
   if policy['noindex']:noindex.append(rel);continue
   indexable.append(rel)
   if '/assets/privacy-controls.js' not in text:missing_consent.append(rel)
@@ -48,6 +53,7 @@ def run(root=ROOT,live=False,reader=read_public):
  for rel in noindex:
   clean=rel[:-5];url=ORIGIN+('/' if clean=='index' else '/'+clean)
   if url in sitemaps['sitemap.xml']:canonical_errors.append(rel)
+ add('advertising publisher and consent-only loading',not ad_errors,errors=ad_errors,scope='source placement; Auto ads settings and actual delivery require AdSense owner')
  add('indexable pages use consent loader',not missing_consent,pages=len(indexable),missing=missing_consent)
  add('noindex policy and canonical inventory',not canonical_errors,noindex_pages=sorted(noindex),errors=canonical_errors,scope='source policy, not GSC exclusion reasons')
  for name,urls in sitemaps.items():add(name+' uses own HTTPS origin',all(u.startswith(ORIGIN+'/') for u in urls),url_count=len(urls))
@@ -62,10 +68,14 @@ def run(root=ROOT,live=False,reader=read_public):
     try:ok=sitemap_urls(text)==sitemaps[name]
     except ET.ParseError:ok=False
    add('live '+name,ok,**r)
-  for path in ('/es/margin-of-safety.html','/es/mbo-investing.html','/zh-Hans/japanese-stocks.html'):
+  for path in ('/es/margin-of-safety.html','/es/mbo-investing.html','/zh-Hans/japanese-stocks.html','/business-ma.html','/business-list.html','/price-value.html','/inflation.html','/investment-list.html','/economy-list.html','/inflation-asset-gap.html','/interest-rate.html'):
    r=reader(path);text=r.pop('text','');expected=ORIGIN+path[:-5]
    if r.get('inconclusive'):checks.append({'check':'canonical redirect '+path,'state':'inconclusive',**r});continue
    add('canonical redirect '+path,r.get('status')==200 and r.get('final_url')==expected and index_policy(text)['canonical']==[expected],**r)
+  for path,target in [('/pdf/Amazon輸入ビジネス_価格差と相乗り販売_修正版.pdf','/pdf/Amazon輸入ビジネス_価格差と相乗り販売.pdf'),('/pdf/社会的選好_情報共有_フリーライド_黒金.pdf','/pdf/社会的選好と情報共有_仕事仲間の協力_改訂版.pdf'),('/pdf/社会的選好と情報共有_仕事仲間の協力.pdf','/pdf/社会的選好と情報共有_仕事仲間の協力_改訂版.pdf')]:
+   r=reader(quote(path));r.pop('text','')
+   if r.get('inconclusive'):checks.append({'check':'PDF canonical '+path,'state':'inconclusive',**r});continue
+   add('PDF canonical '+path,r.get('status')==200 and r.get('link')=='<'+ORIGIN+quote(target)+'>; rel="canonical"',**r)
   for path in ('/login','/pdf-viewer'):
    r=reader(path);text=r.pop('text','')
    if r.get('inconclusive'):checks.append({'check':'intentional noindex '+path,'state':'inconclusive',**r});continue
