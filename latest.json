@@ -1,19 +1,19 @@
 {
   "execution": {
     "event": "pull_request",
-    "run_id": "43555755423",
+    "run_id": "43555814067",
     "run_attempt": "1"
   },
   "last_scheduled_audit": null,
   "completed_modes": {
-    "daily": "2026-11-14T04:17:20.482988+00:00"
+    "daily": "2026-11-14T04:19:16.492337+00:00"
   },
   "schema": 1,
   "criteria_status": "provisional-original-missing",
-  "at": "2026-11-14T04:17:20.482988+00:00",
+  "at": "2026-11-14T04:19:16.492337+00:00",
   "timezone": "Asia/Tokyo",
   "mode": "daily",
-  "source_commit": "f670d060879df519b67d2c46077540f6f2a51b26",
+  "source_commit": "e3b407e37ea250b4bab20c66443ddef5dc49cd02",
   "items": [
     {
       "id": "TQ01",
@@ -143,7 +143,7 @@
       "automatic_method": "HTMLParser across every repository HTML; source existence/structure only, deployed behavior remains partial",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -155,7 +155,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -169,7 +169,7 @@
       "automatic_method": "HTMLParser across every repository HTML; source existence/structure only, deployed behavior remains partial",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -181,7 +181,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -195,7 +195,7 @@
       "automatic_method": "HTMLParser across every repository HTML; source existence/structure only, deployed behavior remains partial",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -207,7 +207,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -221,7 +221,7 @@
       "automatic_method": "HTMLParser across every repository HTML; source existence/structure only, deployed behavior remains partial",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -233,7 +233,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -247,7 +247,7 @@
       "automatic_method": "Parse robots or XML sitemap; compare referenced paths to source tree",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         "robots.txt"
@@ -255,7 +255,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -269,7 +269,7 @@
       "automatic_method": "Parse robots or XML sitemap; compare referenced paths to source tree",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         "sitemap.xml"
@@ -277,7 +277,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -291,7 +291,7 @@
       "automatic_method": "Parse robots or XML sitemap; compare referenced paths to source tree",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         "sitemap-pdfs.xml"
@@ -299,7 +299,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -313,7 +313,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -327,7 +327,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -341,7 +341,7 @@
       "automatic_method": "HTMLParser across every repository HTML; source existence/structure only, deployed behavior remains partial",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -353,7 +353,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -367,7 +367,7 @@
       "automatic_method": "HTMLParser across every repository HTML; source existence/structure only, deployed behavior remains partial",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -379,7 +379,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -393,7 +393,7 @@
       "automatic_method": "HTMLParser across every repository HTML; source existence/structure only, deployed behavior remains partial",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -405,7 +405,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -419,7 +419,7 @@
       "automatic_method": "Parse every application/ld+json block; schema semantics require further verification",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -431,7 +431,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -462,7 +462,7 @@
       "automatic_method": "HTMLParser across every repository HTML; source existence/structure only, deployed behavior remains partial",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -474,7 +474,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -488,7 +488,7 @@
       "automatic_method": "Inspect PDF magic bytes; content rendering remains unverified",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -498,7 +498,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -512,7 +512,7 @@
       "automatic_method": "Compare PDF catalog paths with source tree, including Unicode normalization",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -532,7 +532,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -563,7 +563,7 @@
       "automatic_method": "Group PDF SHA256 hashes; duplicates are evidence for review, not automatic deletions",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -583,7 +583,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -597,7 +597,7 @@
       "automatic_method": "Playwright read-only browser smoke check; per-page/browser evidence in browser.json",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -724,7 +724,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -738,7 +738,7 @@
       "automatic_method": "HTMLParser across every repository HTML; source existence/structure only, deployed behavior remains partial",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -750,7 +750,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -764,7 +764,7 @@
       "automatic_method": "Playwright read-only browser smoke check; per-page/browser evidence in browser.json",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -891,7 +891,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -905,7 +905,7 @@
       "automatic_method": "Playwright read-only browser smoke check; per-page/browser evidence in browser.json",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -1032,7 +1032,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -1046,7 +1046,7 @@
       "automatic_method": "Playwright read-only browser smoke check; per-page/browser evidence in browser.json",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -1063,7 +1063,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -1077,7 +1077,7 @@
       "automatic_method": "Playwright read-only browser smoke check; per-page/browser evidence in browser.json",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -1100,7 +1100,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -1114,28 +1114,28 @@
       "automatic_method": "Playwright read-only browser smoke check; per-page/browser evidence in browser.json",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
           "path": "/",
           "transforms": [
-            "matrix(1, 0, 0, 1, -116.245, 0)",
-            "matrix(1, 0, 0, 1, -147.505, 0)"
+            "matrix(1, 0, 0, 1, -142.5, 0)",
+            "matrix(1, 0, 0, 1, -173.753, 0)"
           ]
         },
         {
           "path": "/",
           "transforms": [
-            "matrix(1, 0, 0, 1, -116.25, 0)",
-            "matrix(1, 0, 0, 1, -146.25, 0)"
+            "matrix(1, 0, 0, 1, -144.998, 0)",
+            "matrix(1, 0, 0, 1, -174.998, 0)"
           ]
         }
       ],
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -1149,7 +1149,7 @@
       "automatic_method": "Playwright read-only browser smoke check; per-page/browser evidence in browser.json",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -1166,7 +1166,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -1180,7 +1180,7 @@
       "automatic_method": "Playwright read-only browser smoke check; per-page/browser evidence in browser.json",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -1203,7 +1203,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -1217,7 +1217,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -1227,7 +1227,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -1241,7 +1241,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -1252,7 +1252,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -1300,7 +1300,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -1316,7 +1316,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "一部完了",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -1347,7 +1347,7 @@
       "automatic_method": "Playwright read-only browser smoke check; per-page/browser evidence in browser.json",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -1474,7 +1474,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -1505,7 +1505,7 @@
       "automatic_method": "Playwright read-only browser smoke check; per-page/browser evidence in browser.json",
       "implementation": "partial",
       "result": "未完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [
         {
           "path": "/",
@@ -1681,7 +1681,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -1797,7 +1797,7 @@
       "automatic_method": "HTMLParser across every repository HTML; source existence/structure only, deployed behavior remains partial",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -1809,7 +1809,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -1823,7 +1823,7 @@
       "automatic_method": "HTMLParser across every repository HTML; source existence/structure only, deployed behavior remains partial",
       "implementation": "partial",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -1906,7 +1906,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -1937,7 +1937,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -1949,7 +1949,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -1963,7 +1963,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -1975,7 +1975,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -1989,7 +1989,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -2004,7 +2004,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -2018,7 +2018,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -2030,7 +2030,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -2044,7 +2044,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -2054,7 +2054,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "未完了",
       "manual_method": null
@@ -2085,7 +2085,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
@@ -2097,7 +2097,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -2111,20 +2111,20 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
           "scope": "committed source only; production D1/member data not backed up or restored",
-          "archive_sha256": "04503da3b23e1470c159035460c653fbe486ab4876821b79da7be154c31fc6f0",
+          "archive_sha256": "db56bcbf73fc155924e3a46a2d43b91f48ef20425b248e677b618f09f4f520fd",
           "restored_files": 729,
-          "source_commit": "f670d060879df519b67d2c46077540f6f2a51b26"
+          "source_commit": "e3b407e37ea250b4bab20c66443ddef5dc49cd02"
         }
       ],
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -2138,20 +2138,20 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-14T04:17:20.482988+00:00",
+      "last_run": "2026-11-14T04:19:16.492337+00:00",
       "errors": [],
       "evidence": [
         {
           "scope": "committed source only; production D1/member data not backed up or restored",
-          "archive_sha256": "04503da3b23e1470c159035460c653fbe486ab4876821b79da7be154c31fc6f0",
+          "archive_sha256": "db56bcbf73fc155924e3a46a2d43b91f48ef20425b248e677b618f09f4f520fd",
           "restored_files": 729,
-          "source_commit": "f670d060879df519b67d2c46077540f6f2a51b26"
+          "source_commit": "e3b407e37ea250b4bab20c66443ddef5dc49cd02"
         }
       ],
       "repair_status": "未着手",
       "retest": {
         "previous": "未確認",
-        "at": "2026-11-14T04:17:20.482988+00:00"
+        "at": "2026-11-14T04:19:16.492337+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
