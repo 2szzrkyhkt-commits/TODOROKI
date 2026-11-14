@@ -9,6 +9,10 @@ const server=createServer(async(req,res)=>{const p=new URL(req.url,'http://local
 await new Promise(r=>server.listen(0,'127.0.0.1',r));const origin=`http://127.0.0.1:${server.address().port}`,browser=await chromium.launch(),evidence=[];
 try{for(const width of [390,1440]){const context=await browser.newContext({viewport:{width,height:900}});await context.route('**/*',r=>r.request().url().startsWith(origin)?r.continue():r.abort());const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto(origin);
 const cards=page.locator('#latest-articles .card-link:visible');assert.equal(await cards.count(),6);
+assert.deepEqual(await cards.locator('.selection-label').allTextContents(),['新着','新着','新着','よく読まれた記事','よく読まれた記事','よく読まれた記事']);
+const hrefs=await cards.evaluateAll(es=>es.map(e=>e.getAttribute('href')));assert.equal(new Set(hrefs).size,6);assert.deepEqual(hrefs.slice(3),['/kioxia-earnings-analysis-2026','/kokusai-electric-6525-earnings-2026','/open-house-group-3288-earnings-2026']);
+assert.ok((await page.locator('#latest-articles').innerText()).includes('2026年11月7〜13日'));
+
 for(const card of await cards.all()){await card.scrollIntoViewIfNeeded();const img=card.locator('img.article-thumbnail');assert.equal(await img.count(),1);await img.evaluate(e=>e.decode());assert.ok(await img.evaluate(e=>e.naturalWidth===640&&e.naturalHeight===360));assert.ok((await card.locator('h3').innerText()).length>8);const href=await card.getAttribute('href');assert.ok(href.startsWith('/'));await fs.access(href.slice(1)+'.html');}
 await page.goto(origin);const track=page.locator('.news-ticker-track');const transform=()=>track.evaluate(e=>getComputedStyle(e).transform);
 const a=await transform();await page.waitForTimeout(350);const b=await transform();assert.notEqual(a,b);
