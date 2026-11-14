@@ -9,7 +9,7 @@ on:
         options: [hourly, daily, weekly, monthly]
         default: daily
   pull_request:
-    paths: ['tools/quality/**', '.github/workflows/quality-audit.yml']
+    paths: ['tools/quality/**', 'tools/japan-support/**', '.github/workflows/quality-audit.yml']
   push:
     branches: [main]
   deployment_status:
@@ -41,6 +41,9 @@ jobs:
           node tools/quality/security.test.mjs
           python tools/quality/source-restore.py
           python tools/quality/publication.py
+      - name: Support collection policy and isolation regressions
+        working-directory: tools/japan-support
+        run: node test.mjs
       - name: Load durable ledger
         if: github.event_name != 'pull_request'
         env:
