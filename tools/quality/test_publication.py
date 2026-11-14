@@ -14,7 +14,7 @@ class PublicationTests(unittest.TestCase):
    (root/'index.html').write_text('<link rel="canonical" href="'+ORIGIN+'/"><script src="/assets/privacy-controls.js"></script>')
    for n in ('sitemap.xml','sitemap-pdfs.xml'):(root/n).write_text('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"/>')
    r=run(root,True,lambda p:{'status':403,'inconclusive':True})
-   self.assertEqual(sum(x['state']=='inconclusive' for x in r['checks']),9)
+   self.assertEqual(sum(x['state']=='inconclusive' for x in r['checks']),17)
    self.assertFalse(any(x['state']=='failed' for x in r['checks']))
  def test_unredirected_html_alias_fails_contract(self):
   with tempfile.TemporaryDirectory() as d:
@@ -40,3 +40,11 @@ class PublicationTests(unittest.TestCase):
    for name,url in [('index.html','/'),('section/index.html','/section/'),('global-index.html','/global-index')]:
     (root/name).write_text('<link rel="canonical" href="'+ORIGIN+url+'"><script src="/assets/privacy-controls.js"></script>')
    self.assertTrue(all(x['state']=='passed' for x in run(root)['checks']))
+
+ def test_direct_ad_loader_and_wrong_publisher_are_rejected(self):
+  with tempfile.TemporaryDirectory() as d:
+   root=Path(d);(root/'ads.txt').write_text(ADS)
+   for n in ('sitemap.xml','sitemap-pdfs.xml'):(root/n).write_text('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"/>')
+   (root/'index.html').write_text('<link rel="canonical" href="'+ORIGIN+'/"><script src="/assets/privacy-controls.js"></script><meta name="google-adsense-account" content="ca-pub-wrong"><script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>')
+   c=next(x for x in run(root)['checks'] if x['check']=='advertising publisher and consent-only loading')
+   self.assertEqual(c['state'],'failed');self.assertEqual(c['errors'],['index.html'])
