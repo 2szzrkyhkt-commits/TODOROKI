@@ -5,7 +5,7 @@ const out='quality-results';await fs.mkdir(out,{recursive:true});
 const results={};
 function add(id,errors,evidence){const r=results[id]??={errors:[],evidence:[]};r.errors.push(...errors);r.evidence.push(evidence);}
 const weekly=['weekly','monthly'].includes(process.env.MODE);
-const paths=['/','/en/','/es/','/pt/','/zh-Hans/','/zh-Hant/','/boki1','/pdf-library','/calculators/','/compound-interest/','/break-even/','/ai-bubble-collapse-or-correction'];
+const paths=['/','/en/','/es/','/pt/','/zh-Hans/','/zh-Hant/','/boki1','/pdf-library','/calculators/','/compound-interest/','/break-even/','/ai-bubble-collapse-or-correction','/business-ma'];
 for(const [name,engine] of Object.entries(weekly?{chromium,firefox,webkit}:{chromium})){
  const browser=await engine.launch();
  try{for(const width of [390,1440]){

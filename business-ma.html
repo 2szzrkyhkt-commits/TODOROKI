@@ -47,6 +47,13 @@ p{margin:22px 0;color:#d0cdc6}
 .rule{width:75px;height:3px;background:#c9a646;margin:35px 0}
 .panel{background:#151515;border:1px solid #45391e;border-radius:12px;padding:25px;margin:30px 0}
 .panel p{margin:8px 0}
+.comparison-scroll{overflow-x:auto;max-width:100%;margin:24px 0}
+.comparison-scroll table{width:100%;min-width:0;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.comparison-scroll th,.comparison-scroll td{padding:10px 6px;overflow-wrap:anywhere;border:1px solid #45391e;text-align:left}
+.comparison-scroll caption{text-align:left;margin-bottom:10px}
+.comparison-scroll th{background:#17140e}
+.comparison-scroll:focus-visible{outline:2px solid #d8b65c;outline-offset:3px}
+.article-updated{font-size:13px;color:#b7afa0}
 a{color:#c9a646}
 .pdf-link{display:block;background:#17140e;border:1px solid #c9a646;border-radius:10px;padding:22px;text-decoration:none;margin-top:20px}
 .pdf-link:hover{background:#282113}
@@ -98,6 +105,7 @@ html{scroll-behavior:smooth}
 <div class="tag">BUSINESS / CORPORATE STRATEGY</div>
 <h1>日本企業はなぜM&A・産業再編を進めるのか</h1>
 <div class="rule"></div>
+<p class="article-updated">更新日：<time datetime="2026-11-14">2026年11月14日</time>｜編集：TODOROKI</p>
 <p class="lead">企業の競争力は、事業の規模だけで決まるものではない。どの事業に資本を配分し、どの分野に経営資源を集中させるか。その選択が企業の将来を左右する。</p>
 
 <h2>01. M&Aとは何か</h2>
@@ -128,6 +136,28 @@ html{scroll-behavior:smooth}
 <h2>05. 産業再編が持つ意味</h2>
 <p>産業再編は、企業数を減らすこと自体が目的ではない。限られた資本や技術、人材をどのように組み合わせれば、より高い生産性と競争力を実現できるかという問題である。</p>
 <p>統合が成功するかどうかは、規模の拡大よりも、経営資源の活用と統合後の実行力によって左右される。</p>
+
+<section aria-labelledby="cash-example">
+<h2 id="cash-example">06. 買収価格が同じでも、回収できる現金で結論が変わる</h2>
+<p>売上の増加だけでは、買収の採算は判断できません。買収代金に加え、システムの統合や拠点再編などに必要な現金も含め、事業から残る現金と比べます。</p>
+<div class="panel">
+<p><strong>TODOROKIの架空計算例</strong></p>
+<p>買収代金100億円と統合費用10億円を最初に支払うとします。買収で追加的に得られる税引後の<a href="/glossary#term-cf-2">フリーキャッシュフロー（FCF）</a>を、各年末に5年間受け取る設定です。ここでのFCFは維持投資・追加投資を差し引いた後の現金です。</p>
+<p>割引率は年8％。将来の現金を現在の価値に換算する率として使います。6年目以降の現金と5年後の売却代金はゼロ、借入による資金調達効果は含めません。実在企業の予測ではありません。</p>
+</div>
+<div class="comparison-scroll" role="region" aria-label="買収の回収額比較" tabindex="0">
+<table><caption>5年間の追加FCFと初期支出を比較（単位：億円）</caption>
+<thead><tr><th scope="col">ケース</th><th scope="col">毎年の追加FCF</th><th scope="col">5年分の現在価値</th><th scope="col">初期支出との差額</th></tr></thead>
+<tbody><tr><th scope="row">計画どおり</th><td>30</td><td>119.78</td><td>＋9.78</td></tr><tr><th scope="row">回収額が下振れ</th><td>20</td><td>79.85</td><td>−30.15</td></tr></tbody></table>
+</div>
+<p>計算は「各年の追加FCF ÷ 1.08の年数乗」を1～5年目まで合計し、初期支出110億円を引いています。毎年30億円なら、現在価値119.78億円から110億円を引いた差額は9.78億円。毎年20億円に下がると、差額はマイナス30.15億円です。</p>
+<p>実際の検討では、現金が入る時期、追加投資、統合費用、事業の存続期間をそれぞれ変えて比較します。「買収で売上が増える」という説明に加え、どの支出を引いた現金が、いつ増えるのかを確認することが大切です。</p>
+<h3>発表資料で確認する3点</h3>
+<ul><li>買収代金以外の費用と追加投資が、計画に含まれているか。</li><li>利益の増加見込みが、営業キャッシュフローにもつながるか。</li><li>実施後の進捗を、買収時の前提と同じ条件で比較できるか。</li></ul>
+<p>あわせて、<a href="/cash-flow-financial-health">利益とキャッシュフローの違い</a>、<a href="/company-comparison-method">企業比較の手順</a>、<a href="/glossary#term-extra-capital-allocation">資本配分の用語解説</a>を読むと、買収発表の数字を整理しやすくなります。</p>
+<p>考え方の参照：経済産業省「<a href="https://www.meti.go.jp/shingikai/economy/kosei_baishu/pdf/20230831_2.pdf" target="_blank" rel="noopener">企業買収における行動指針</a>」（2023年8月31日、p.13）。企業価値向上の検討についての一次資料です。上の金額・仮定・計算はTODOROKIによる独自の例で、同資料の数値ではありません。</p>
+</section>
+
 <a href="https://line.me/R/share"
    target="_blank"
    rel="noopener noreferrer"
@@ -150,12 +180,15 @@ html{scroll-behavior:smooth}
   </p>
 </section>
 <h2>関連資料</h2>
-<p>日本企業のM&Aと産業再編について、黒金PDFでも整理している。</p>
+<p>産業全体の再編を考える資料と、買収価格・資本配分を考える資料を分けて用意しています。テーマに応じて読み分けてください。</p>
 <a class="pdf-link"
 href="/pdf-viewer?file=%2Fpdf%2FM%26A%E3%81%A8%E8%B3%87%E6%9C%AC%E9%85%8D%E5%88%86_%E4%BC%81%E6%A5%AD%E4%BE%A1%E5%80%A4%E3%82%92%E9%AB%98%E3%82%81%E3%82%8B%E5%86%8D%E7%B7%A8%E3%81%AE%E8%A6%8B%E6%96%B9.pdf&amp;lang=ja&amp;from=%2Fbusiness-ma.html"
 target="_blank" rel="noopener">
-日本企業のM&A・産業再編｜PDFを読む →
+M&Aと資本配分｜企業価値を高める再編の見方を読む →
 </a>
+
+<a class="pdf-link" href="/pdf/%E6%97%A5%E6%9C%AC%E4%BC%81%E6%A5%AD_M%26A%E7%94%A3%E6%A5%AD%E5%86%8D%E7%B7%A8_%E9%BB%92%E9%87%914P.pdf" target="_blank" rel="noopener">日本企業の産業再編｜産業構造と規模の論点を読む →</a>
+<p>上の2資料は別内容です。前者は資本配分と投資回収、後者は日本企業の産業構造と再編を中心に扱います。</p>
 
 <a class="back" href="/business-list">← 企業・経営の記事一覧に戻る</a>
     <aside aria-label="広告：Fujisan.co.jp" style="margin:36px 0;padding:20px 0;border-top:1px solid #383226;border-bottom:1px solid #383226;">

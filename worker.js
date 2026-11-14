@@ -1,6 +1,8 @@
 const ORIGIN = 'https://todoroki-gold.com';
 // Only byte-identical PDF aliases share a canonical target. Keep downloads and ranges intact.
 const PDF_CANONICAL = new Map([
+ ['/pdf/M&Aと資本配分_企業価値を高める再編の見方.pdf','/pdf/M&Aと資本配分_企業価値を高める再編の見方.pdf'],
+ ['/pdf/日本企業_M&A産業再編_黒金4P.pdf','/pdf/日本企業_M&A産業再編_黒金4P.pdf'],
  ['/pdf/Amazon輸入ビジネス_価格差と相乗り販売_修正版.pdf','/pdf/Amazon輸入ビジネス_価格差と相乗り販売.pdf'],
  ['/pdf/Amazon輸入ビジネス_価格差と相乗り販売.pdf','/pdf/Amazon輸入ビジネス_価格差と相乗り販売.pdf'],
  ['/pdf/社会的選好_情報共有_フリーライド_黒金.pdf','/pdf/社会的選好と情報共有_仕事仲間の協力_改訂版.pdf'],

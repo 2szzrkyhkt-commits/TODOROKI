@@ -20,14 +20,16 @@ def sitemap_urls(text):
 def ads_authorized(text):
  return any(','.join(x.strip() for x in line.split('#',1)[0].split(','))==','.join(x.strip() for x in ADS.split(',')) for line in text.splitlines())
 class SameOriginRedirect(HTTPRedirectHandler):
+ def __init__(self):super().__init__();self.steps=[]
  def redirect_request(self,req,fp,code,msg,headers,newurl):
   if urlsplit(newurl).scheme!='https' or urlsplit(newurl).netloc!='todoroki-gold.com':raise ValueError('unexpected cross-origin redirect')
+  self.steps.append({'status':code,'url':newurl})
   return super().redirect_request(req,fp,code,msg,headers,newurl)
 def read_public(path):
- url=ORIGIN+path
+ url=ORIGIN+path;redirects=SameOriginRedirect()
  try:
-  with build_opener(SameOriginRedirect()).open(Request(url,headers={'User-Agent':'TODOROKI-Quality-Audit/1.0'}),timeout=20) as r:
-   return {'status':r.status,'final_url':r.url,'text':'' if 'application/pdf' in r.headers.get('Content-Type','').lower() else r.read(5*1024*1024).decode('utf-8'),'robots':r.headers.get('X-Robots-Tag',''),'link':r.headers.get('Link','')}
+  with build_opener(redirects).open(Request(url,headers={'User-Agent':'TODOROKI-Quality-Audit/1.0'}),timeout=20) as r:
+   return {'status':r.status,'final_url':r.url,'text':'' if 'application/pdf' in r.headers.get('Content-Type','').lower() else r.read(5*1024*1024).decode('utf-8'),'robots':r.headers.get('X-Robots-Tag',''),'link':r.headers.get('Link',''),'redirects':redirects.steps}
  except HTTPError as e:return {'status':e.code,'inconclusive':e.code in (401,403,429)}
  except (URLError,TimeoutError,OSError) as e:return {'inconclusive':True,'reason':type(e).__name__}
  except ValueError:return {'inconclusive':False,'reason':'unexpected_redirect_or_invalid_response'}
@@ -72,10 +74,19 @@ def run(root=ROOT,live=False,reader=read_public):
    r=reader(path);text=r.pop('text','');expected=ORIGIN+path[:-5]
    if r.get('inconclusive'):checks.append({'check':'canonical redirect '+path,'state':'inconclusive',**r});continue
    add('canonical redirect '+path,r.get('status')==200 and r.get('final_url')==expected and index_policy(text)['canonical']==[expected],**r)
-  for path,target in [('/pdf/Amazon輸入ビジネス_価格差と相乗り販売_修正版.pdf','/pdf/Amazon輸入ビジネス_価格差と相乗り販売.pdf'),('/pdf/社会的選好_情報共有_フリーライド_黒金.pdf','/pdf/社会的選好と情報共有_仕事仲間の協力_改訂版.pdf'),('/pdf/社会的選好と情報共有_仕事仲間の協力.pdf','/pdf/社会的選好と情報共有_仕事仲間の協力_改訂版.pdf')]:
+  legacy=json.loads(Path(__file__).with_name('legacy-redirects.json').read_text())
+  for row in legacy:
+   r=reader(row['from']);r.pop('text','')
+   if r.get('inconclusive'):checks.append({'check':'legacy redirect '+row['from'],'state':'inconclusive',**r});continue
+   add('legacy redirect '+row['from'],r.get('status')==200 and r.get('final_url')==ORIGIN+row['to'] and any(x.get('status')==301 for x in r.get('redirects',[])),**r)
+  for path in ('/api/auth/','/pdf/'):
+   r=reader(path);r.pop('text','')
+   if r.get('inconclusive'):checks.append({'check':'intentional missing endpoint '+path,'state':'inconclusive',**r});continue
+   add('intentional missing endpoint '+path,r.get('status')==404,**r)
+  for path,target in [('/pdf/M&Aと資本配分_企業価値を高める再編の見方.pdf','/pdf/M&Aと資本配分_企業価値を高める再編の見方.pdf'),('/pdf/日本企業_M&A産業再編_黒金4P.pdf','/pdf/日本企業_M&A産業再編_黒金4P.pdf'),('/pdf/Amazon輸入ビジネス_価格差と相乗り販売_修正版.pdf','/pdf/Amazon輸入ビジネス_価格差と相乗り販売.pdf'),('/pdf/社会的選好_情報共有_フリーライド_黒金.pdf','/pdf/社会的選好と情報共有_仕事仲間の協力_改訂版.pdf'),('/pdf/社会的選好と情報共有_仕事仲間の協力.pdf','/pdf/社会的選好と情報共有_仕事仲間の協力_改訂版.pdf')]:
    r=reader(quote(path));r.pop('text','')
    if r.get('inconclusive'):checks.append({'check':'PDF canonical '+path,'state':'inconclusive',**r});continue
-   add('PDF canonical '+path,r.get('status')==200 and r.get('link')=='<'+ORIGIN+quote(target)+'>; rel="canonical"',**r)
+   add('PDF canonical '+path,r.get('status')==200 and r.get('link')=='<'+ORIGIN+quote(target,safe='/&')+'>; rel="canonical"',**r)
   for path in ('/login','/pdf-viewer'):
    r=reader(path);text=r.pop('text','')
    if r.get('inconclusive'):checks.append({'check':'intentional noindex '+path,'state':'inconclusive',**r});continue

@@ -42,3 +42,8 @@ for(const [alias,target] of [
  assert.deepEqual(await fs.readFile('pdf/'+a),await fs.readFile('pdf/'+target));
 }
 console.log('PDF canonical alias/target byte equality: 3 pairs passed');
+
+for(const path of ['/pdf/M&Aと資本配分_企業価値を高める再編の見方.pdf','/pdf/日本企業_M&A産業再編_黒金4P.pdf']){
+ r=await invoke(encodeURI(path));assert.equal(r.headers.get('Link'),'<'+new URL(path,origin).href+'>; rel="canonical"');
+}
+console.log('Distinct M&A PDFs retain individual canonical targets: 2 passed');
