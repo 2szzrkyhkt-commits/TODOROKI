@@ -54,3 +54,5 @@ try{
 }finally{await browser.close();server.close();}
 
 await import('./boki-content.mjs');
+
+await import('./home-cards.mjs');
