@@ -17,7 +17,7 @@ for(const [name,engine] of Object.entries(weekly?{chromium,firefox,webkit}:{chro
    if(!response?.ok()){add(26,[],{path,name,width,inconclusive:`HTTP ${response?.status()}`});continue;}
    await page.waitForTimeout(1500);
    add(26,errors.map(e=>({path,name,width,error:e})),{path,name,width});
-   const ui=await page.evaluate(()=>({headers:document.querySelectorAll('header.site-header').length,nav:document.querySelectorAll('header a[href]').length,overflow:document.documentElement.scrollWidth>innerWidth+2,brokenImages:[...document.images].filter(x=>!x.complete||x.naturalWidth===0).map(x=>x.getAttribute('src'))}));
+   const ui=await page.evaluate(()=>({headers:document.querySelectorAll('header.site-header').length,nav:document.querySelectorAll('header a[href]').length,overflow:document.documentElement.scrollWidth>innerWidth+2,brokenImages:[...document.images].filter(x=>(x.currentSrc||x.getAttribute('src'))&&(!x.complete||x.naturalWidth===0)).map(x=>x.getAttribute('src'))}));
    await page.screenshot({path:`${out}/${name}-${width}-${path.replaceAll('/','_')}.png`,fullPage:true});
    add(28,ui.headers!==1?[{path,name,width,headerCount:ui.headers}]:[],{path,name,width});
    add(29,ui.nav===0?[{path,name,width,missingNavigation:true}]:[],{path,name,width});
