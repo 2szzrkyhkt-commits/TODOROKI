@@ -88,3 +88,37 @@ class NotificationTests(unittest.TestCase):
   self.assertEqual(self.exercise({'fixture-key':{'id':'TQ01','detail':'fixture'}},[{'body':'<!-- todoroki-quality:fixture-key -->'}]),0)
  def test_new_finding_sends_once(self):
   self.assertEqual(self.exercise({'fixture-key':{'id':'TQ01','detail':'fixture'}},[]),1)
+
+class AdvertisingExclusionTests(unittest.TestCase):
+ def test_ad_endpoint_never_requested(self):
+  for url in ('https://ad2.trafficgate.net/t/r/example','https://TRAFFICGATE.NET/','https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'):
+   with self.subTest(url=url):
+    opener=__import__('unittest.mock',fromlist=['Mock']).Mock()
+    self.assertEqual(request(url,opener)['kind'],'inconclusive')
+    opener.assert_not_called()
+ def test_domain_boundary(self):
+  from audit import is_ad_url
+  self.assertFalse(is_ad_url('https://trafficgate.net.example.org/'))
+  self.assertFalse(is_ad_url('https://www.stat.go.jp/'))
+
+ def test_redirect_to_ad_blocked_before_follow(self):
+  from audit import AuditRedirectHandler
+  from urllib.request import Request
+  handler=AuditRedirectHandler()
+  with self.assertRaises(HTTPError):
+   handler.redirect_request(Request('https://example.org/'),None,302,'Found',{},'https://ad2.trafficgate.net/t/r/example')
+  target=handler.redirect_request(Request('https://example.org/'),None,302,'Found',{},'https://www.stat.go.jp/')
+  self.assertEqual(target.full_url,'https://www.stat.go.jp/')
+
+ def test_previous_external_failure_clears_after_exclusion(self):
+  import audit
+  with tempfile.TemporaryDirectory() as d:
+   first=run('daily',d,live=False)
+   first['items'][19]['errors']=[{'url':'https://ad2.trafficgate.net/t/r/example','kind':'http_failure'}]
+   first['items'][19]['result']='未完了'
+   previous=Path(d)/'prior.json';previous.write_text(json.dumps(first))
+   def healthy(url):return {'url':url,'status':200,'headers':{},'seconds':0}
+   with patch.object(audit,'request',side_effect=healthy):
+    second=run('daily',d,str(previous),live=True)
+   self.assertEqual(second['items'][19]['errors'],[])
+   self.assertEqual(second['items'][19]['result'],'一部完了')

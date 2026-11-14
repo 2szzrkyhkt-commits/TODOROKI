@@ -2,7 +2,7 @@
 from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urljoin,urlsplit,unquote,quote
-from urllib.request import Request,urlopen
+from urllib.request import Request,urlopen,build_opener,HTTPRedirectHandler
 from urllib.error import HTTPError,URLError
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
@@ -12,11 +12,22 @@ import argparse,hashlib,json,time,ssl,socket,subprocess,xml.etree.ElementTree as
 from criteria import CRITERIA
 ROOT=Path(__file__).resolve().parents[2]
 BASE='https://todoroki-gold.com/'
+AD_DOMAINS=('trafficgate.net','doubleclick.net','googlesyndication.com','googleadservices.com','a8.net','valuecommerce.com','moshimo.com')
+def is_ad_url(url):
+ host=(urlsplit(url).hostname or '').lower()
+ return any(host==domain or host.endswith('.'+domain) for domain in AD_DOMAINS)
+
+class AuditRedirectHandler(HTTPRedirectHandler):
+ def redirect_request(self,req,fp,code,msg,headers,newurl):
+  if is_ad_url(newurl):raise HTTPError(newurl,403,'advertising redirect excluded',headers,fp)
+  return super().redirect_request(req,fp,code,msg,headers,newurl)
+AUDIT_OPENER=build_opener(AuditRedirectHandler()).open
 class HTML(HTMLParser):
  def __init__(self,text):
   super().__init__();self.tags=[];self.feed(text)
  def handle_starttag(self,t,a):self.tags.append((t,dict(a)))
-def request(url,opener=urlopen,sleep=time.sleep):
+def request(url,opener=AUDIT_OPENER,sleep=time.sleep):
+ if is_ad_url(url):return dict(url=url,status=None,kind='inconclusive',reason='advertising URL excluded; no request sent')
  attempts=[]
  for i in range(3):
   try:
@@ -52,7 +63,7 @@ def run(mode,out,previous=None,live=True):
  pages={p:HTML(p.read_text()) for p in ROOT.rglob('*.html') if not any(s in p.parts for s in ('.git','node_modules','quality-results'))}
  if mode!='hourly':
   problems={i:[] for i in (8,9,10,11,15,16,17,18,19,21,22,23,24,27,35,50,51)}
-  titles={};canonical={};links=set();ext=set();pdfs={};counts=Counter()
+  titles={};canonical={};links=set();ext=set();excluded_ads=set();pdfs={};counts=Counter()
   for p,d in pages.items():
    rel=p.relative_to(ROOT).as_posix();text=p.read_text();tags=d.tags
    noindex=any(t=='meta' and a.get('name')=='robots' and 'noindex' in a.get('content','') for t,a in tags)
@@ -80,7 +91,11 @@ def run(mode,out,previous=None,live=True):
     url=a.get('href') or a.get('src')
     if not url or urlsplit(url).scheme in ('mailto','tel','javascript','data'):continue
     target,u=resolve(p,url)
-    if target is None:ext.add(u._replace(fragment='').geturl());continue
+    if target is None:
+     external=u._replace(fragment='').geturl()
+     if 'sponsored' in a.get('rel','').lower().split() or is_ad_url(external):excluded_ads.add(external)
+     else:ext.add(external)
+     continue
     links.add(u._replace(fragment='').geturl())
     if u.path.startswith('/api/'):continue
     if not target.exists():problems[18].append([rel,url])
@@ -117,10 +132,12 @@ def run(mode,out,previous=None,live=True):
   result(22,problems[22],[{'pdf_files':sum(map(len,pdfs.values()))}],partial=True)
   result(25,[],[{'duplicate_pdf_groups':[v for v in pdfs.values() if len(v)>1]}],partial=True)
   if live and mode in ('daily','weekly','monthly','all'):
+   ext-=excluded_ads
    with ThreadPoolExecutor(max_workers=4) as pool:network=list(pool.map(request,sorted(links|ext)))
    for i,scope in ((18,links),(20,ext)):
     data=[x for x in network if x['url'] in scope];errors=[x for x in data if x.get('kind')=='http_failure']
-    result(i,rows[f'TQ{i:02}']['errors']+errors,data,partial=any(x.get('kind')=='inconclusive' for x in data))
+    result(i,(rows['TQ18']['errors'] if i==18 else [])+errors,data,partial=any(x.get('kind')=='inconclusive' for x in data) or (i==20 and bool(excluded_ads)))
+    if i==20 and excluded_ads:rows['TQ20']['evidence'].append({'excluded_advertising_urls':sorted(excluded_ads),'method':'no network requests; advertising delivery remains unverified'})
  if live:
   urls=[BASE,BASE+'boki1',BASE+'pdf-library',BASE+'en/',BASE+'es/',BASE+'pt/',BASE+'zh-Hans/',BASE+'zh-Hant/',BASE+'api/privacy/region']
   network=[request(u) for u in urls]
