@@ -43,7 +43,8 @@ def run(root=ROOT,live=False,reader=read_public):
   if policy['noindex']:noindex.append(rel);continue
   indexable.append(rel)
   if '/assets/privacy-controls.js' not in text:missing_consent.append(rel)
-  if len(policy['canonical'])!=1:canonical_errors.append(rel)
+  expected=ORIGIN+('/' if rel=='index.html' else '/'+rel[:-10] if rel.endswith('/index.html') else '/'+rel[:-5])
+  if policy['canonical']!=[expected]:canonical_errors.append(rel)
  for rel in noindex:
   clean=rel[:-5];url=ORIGIN+('/' if clean=='index' else '/'+clean)
   if url in sitemaps['sitemap.xml']:canonical_errors.append(rel)
