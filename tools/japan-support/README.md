@@ -46,3 +46,19 @@ conditions-schema.sqlで専用D1に版テーブルを追加。既存SupportColle
 既存Access判定内のGET /api/conditions?program_id=jp-child-allowanceで出典付きJSONを読める。公開ロックを解除する経路はない。所有者のD1 SELECTでもdocument_json/content_hash/stored_atを確認できる。読取時にハッシュとスキーマを検証する。未入力・未確認はnull/要確認でありfalseではない。条件入力の実データは保存しない。
 
 検証：node test-conditions.mjs（92検証）、node test-monitor.mjs（59検証）、node test.mjs（既存認証/RPC/税法周期回帰）。T25は現在収録制度の条件構造と保管経路が対象。追加制度の網羅と原本照合はT24、一般公開はT29で継続する。
+
+## T26 検索・条件照合
+
+対象は現行収録の児童手当1制度。名前/概要のキーワード、地域、分類をSQLの束縛パラメーターで検索する。LIKEの%・_は文字として扱う。検索0件は制度の不存在を意味しない。条件がない制度へ別制度の式を流用しない。
+
+25入力項目の型をT25の保存済み条件に照合し、candidate（条件に合う候補・認定ではない）、not_matching（記録した条件に不一致）、insufficient_input（不足）、needs_review（個別確認）を返す。受給認定は行わない。施設・里親、後見、父母指定、別居・複数養育者・留学/再留学は窓口確認とし、父母向け監護/生計要件を他の受給者へ適用しない。生計維持だけで生計同一か不明な場合も確認扱い。申請遅れ・未申請だけで制度全体の不該当にはしない。
+
+父母の通常ルートは対象年齢・児童と申請者の国内居住・監護・生計同一・施設/別居等の入力を照合した候補であり、後見や受給者の優先、窓口の認定の確認は常に残す。制度レコードのpendingをverifiedへ昇格しない。ended/rejectedなら要確認。未対応条件版や資料確認から30日超（法定期限ではなく運用上の鮮度基準）、確認日前の時点は要確認で停止する。
+
+年齢範囲は18歳到達後の最初の3月31日まで。4月1日生まれを前の学年に含める。独立照合先：文部科学省 https://www.mext.go.jp/a_menu/shotou/shugaku/detail/1422233.htm 、焼津市の2026年度対象範囲 https://www.city.yaizu.lg.jp/child-edu/kodomo/mokuteki/application/jido-teate/index.html 。これは学籍・就労・兄姉の人数算定・支給月額を判定するものではない。
+
+既存Access内にGET /api/searchとPOST /api/eligibilityを追加。POSTはJSON最大8KiB、未知キー/不正型/未来の生年月日を拒否。URLクエリへ条件入力を含めず、DBへ入力を保存せず、結果にも生年月日・回答内容を返さない。Cache-Control:no-storeを維持し、エラー内容へ入力を埋め込まない。ブラウザからの検索/判定は読取だけ。HTMLはtextContentで組み立て、公式HTTPSリンクだけを有効化。入力・検索条件変更時は前の結果を消し、応答順逆転を拒否する。
+
+既存SupportCollector.runの末尾で保存済み条件を使った合成5検証を実行し、support_feature_checksの1行へ版・ハッシュ・成否・確認日時だけを保存する。年齢境界・不足・例外・実保存データ検索を検証する。架空ケースの回答自体、実在利用者の入力、受給資格は保存しない。sourceReviewRequired=trueなら更新が必要であり、取得元全体の正常性を示さない。確認失敗は既存収集/税法/監視を止めない。新しいCronやタスクは作らない。
+
+検証：node test-eligibility.mjs（1,079検証。独立の年度対象範囲との多数日付照合を含む）、既存条件92・監視59・認証/RPC/税法回帰。isolated previewはnode:sqliteと公開済み制度メタデータだけを使い、Cloudflareへアクセスしない。preview-server.mjsのローカル用識別は本番へ配備しない。本番の既存Access/403を変更しない。ブラウザQAは隔離画面で検索・候補・年齢不一致・施設要確認・入力変更時消去・0件時停止を確認。PC幅1363pxで横溢れなし。iPhone実機と幅別ブラウザ・本番の所有者UIは未確認で、一般公開/認証統合の検証とは区別する。
