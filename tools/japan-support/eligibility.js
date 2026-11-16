@@ -4,9 +4,10 @@ export function validDate(value){return typeof value==='string'&&/^\d{4}-\d{2}-\
 export const japanDay=clock=>new Date(+clock+9*3600000).toISOString().slice(0,10);
 // Legal age attainment is at the end of the day preceding the birthday.
 // Equivalent for this fiscal-year boundary: Apr 1 belongs to the earlier cohort.
-export function childFiscalEnd(birth){
- if(!validDate(birth))throw Error('invalid_birth_date');
- const year=Number(birth.slice(0,4))+18,monthDay=birth.slice(5);
+export function childFiscalEnd(birth){return fiscalEndAtAge(birth,18)}
+export function fiscalEndAtAge(birth,age){
+ if(!validDate(birth)||!Number.isInteger(age)||age<1||age>125)throw Error('invalid_birth_date');
+ const year=Number(birth.slice(0,4))+age,monthDay=birth.slice(5);
  return String(year+(monthDay>'04-01'?1:0)).padStart(4,'0')+'-03-31';
 }
 export function assessDocument(document,input,asOf) {
