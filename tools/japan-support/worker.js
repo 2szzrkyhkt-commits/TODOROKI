@@ -1,6 +1,6 @@
 import {WorkerEntrypoint} from 'cloudflare:workers';
 import {assets} from './embedded-assets.js';
-import {collectDue} from './collector.js';
+import {collectAndMonitor as collectDue} from './monitor.js';
 const security={'Cache-Control':'no-store','X-Robots-Tag':'noindex, nofollow','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer','Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'"};
 export default {
  async fetch(request,env,ctx) {
@@ -27,4 +27,3 @@ export default {
 export class SupportCollector extends WorkerEntrypoint {
  async run(){return collectDue(this.env);}
 }
-
