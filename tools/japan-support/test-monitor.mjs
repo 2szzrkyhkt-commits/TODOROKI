@@ -32,4 +32,7 @@ result=await collectAndMonitor({COLLECTION_ENABLED:'false',DB:{batch:async()=>{t
 let monitorCalls=0;await assert.rejects(()=>collectAndMonitor({COLLECTION_ENABLED:'true',DB:{prepare(){return {bind(){return this},first(){throw Error('collection failure')}}},async batch(){monitorCalls++;throw Error('storage failure')}}}),/collection failure/);checks++;eq(monitorCalls,1);
 // Real SQLite statement rollback protects the pair from a half-saved transition.
 await assert.rejects(()=>db.batch([db.prepare("INSERT INTO support_monitor_latest VALUES('rollback','{}','now')"),db.prepare('INSERT INTO missing_table VALUES(1)')]));checks++;eq(sqlite.prepare("SELECT COUNT(*) n FROM support_monitor_latest WHERE entity_key='rollback'").get().n,0);
+insert('programs',{...program,id:'verified-ended-test-only',effective_period_json:'{"from":"2024-10-01","to":"2026-11-19"}'});
+m=await monitorStored(env,new Date('2026-11-20T00:00:00Z'));eq(m.ended,1);eq(JSON.parse(sqlite.prepare("SELECT state_json FROM support_monitor_latest WHERE entity_key='program:verified-ended-test-only'").get().state_json).basis,'verified_effective_end');
+const endedHistory=hcount();await monitorStored(env,new Date('2026-11-20T00:01:00Z'));eq(hcount(),endedHistory);
 console.log(`PASS ${checks} monitor checks: source delay/recovery, JST end boundary, verified/unknown, no source fetch, preservation, SQL history dedup, rollback, failure isolation`);
