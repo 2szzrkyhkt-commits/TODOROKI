@@ -1,0 +1,25 @@
+[
+  {
+    "url": "https://www.cfa.go.jp/policies/kokoseido/jidouteate/annai",
+    "checkedAt": "2026-11-16T11:05:00.054929Z",
+    "sha256": "a14fe7f49417399a5ca3309939870a5083ce8cf9abd5de24b1c15e62d0ff9722"
+  },
+  {
+    "url": "https://www.cfa.go.jp/policies/kokoseido/jidouteate/faq/ippan/",
+    "checkedAt": "2026-11-16T11:05:07.332253Z",
+    "sha256": "87299236bbb7cc1f21cbde49dcd0d696aa0e346410730f990aa0bac574da2a41"
+  },
+  {
+    "url": "https://lifedesign-information.cfa.go.jp/support-system/support-system02/",
+    "checkedAt": "2026-11-16T11:05:14.506098Z",
+    "sha256": "7a6dffc8035bd0f1b28f2f633471549842c054fb68d76bbfa5084d7902dfbace"
+  },
+  {
+    "url": "https://laws.e-gov.go.jp/api/2/law_data/346AC0000000073",
+    "checkedAt": "2026-11-16T11:05:21.460236Z",
+    "sha256": "7c5d9216d036f30bd0a046922a20c56921cd51c736ea9d9ee586be059502e582",
+    "lawId": "346AC0000000073",
+    "lawRevisionId": "346AC0000000073_20250601_504AC0000000068",
+    "revisionStatus": "CurrentEnforced"
+  }
+]

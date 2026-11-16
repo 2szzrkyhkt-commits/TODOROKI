@@ -32,3 +32,17 @@ Workers APIのinherit bindingを利用して既存設定を保持する。秘密
 - monitor-schema.sqlは専用D1へ追加のみ適用する。support_monitor_latestは各対象の最新状態・確認時刻、support_monitor_historyは初回と状態変更だけを保存する。履歴挿入と最新状態更新は対象ごとに同一トランザクション。古い監視呼出で最新状態を巻き戻さない。同一状態は履歴を重複追加しない。定期処理を止めてもデータは削除しない。
 - 所有者は専用D1のSELECTでentity_key/state_json/checked_atと履歴を確認できる。新しいログイン除外経路は設けず、既存fetchの403/Accessロックを保持する。外部への通知送信は行わない。
 - テスト：node test-monitor.mjs（Node 24のnode:sqlite、実SQLiteでの状態遷移/履歴/rollbackを検証）、node test.mjs（既存の認証・RPC・税法周期・障害分離の回帰）。本番のprogramsやsourcesへテスト値を注入しない。
+
+## T25 出典付き条件データ
+
+現在の収録対象は児童手当1制度。conditions-data.jsは公式案内・Q&A・所得制限案内・現行施行の児童手当法第4条から編集した25入力項目・16条件。各条件に出典/節/資料確認日/原資料ハッシュ、型、未入力の取扱い、個別確認の要否を付ける。年齢は高校在学の有無ではなく法定の年度末範囲。留学・再留学・父母指定・未成年後見・複数養育者の優先・別生計/同居・施設/里親・短期入所・公務員の申請先・認定請求/15日手続を分ける。
+
+これは条件を照合・保管する機能で、個人の受給可否の判定エンジン（T26）や金額計算（T27）ではない。制度の全体verification/statusをverified/activeへ昇格させない。過去の所得証明等の必要書類から所得制限を復活させず、現行の所得制限なしを独立データにする。個別確認の枝は自動判定不可として保持する。
+
+conditions-evidence.jsonは確認した4原資料のURL・取得日時・SHA256、法令のCurrentEnforced版IDのみを保存し、本文・画像は転載しない。公式資料をTODOROKIが項目へ編集した旨を記載。取得元の自動アクセス許可、enabled、next_attemptは変更しない。静的確認日以降の改正を自動で確認したとは表示しない。
+
+conditions-schema.sqlで専用D1に版テーブルを追加。既存SupportCollector.runの末尾で保存する。既存programsの自由文は保持し、新規資料は別版として追加する。同じ版と同じハッシュなら無書込、同じ版に異なる内容なら失敗とする。監視・収集が成功しても条件保存が失敗した場合はconditions.status=failedを記録する。Cron・タスク・bindingsの変更は不要。
+
+既存Access判定内のGET /api/conditions?program_id=jp-child-allowanceで出典付きJSONを読める。公開ロックを解除する経路はない。所有者のD1 SELECTでもdocument_json/content_hash/stored_atを確認できる。読取時にハッシュとスキーマを検証する。未入力・未確認はnull/要確認でありfalseではない。条件入力の実データは保存しない。
+
+検証：node test-conditions.mjs（92検証）、node test-monitor.mjs（59検証）、node test.mjs（既存認証/RPC/税法周期回帰）。T25は現在収録制度の条件構造と保管経路が対象。追加制度の網羅と原本照合はT24、一般公開はT29で継続する。

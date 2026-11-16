@@ -1,6 +1,6 @@
 import {WorkerEntrypoint} from 'cloudflare:workers';
 import {assets} from './embedded-assets.js';
-import {collectAndMonitor as collectDue} from './monitor.js';
+import {runSupport as collectDue,readConditions} from './conditions.js';
 const security={'Cache-Control':'no-store','X-Robots-Tag':'noindex, nofollow','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer','Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'"};
 export default {
  async fetch(request,env,ctx) {
@@ -13,7 +13,10 @@ export default {
   if(request.method!=='GET')return new Response('Method not allowed',{status:405,headers:security});
   if(u.pathname.startsWith('/admin'))return new Response('Not found',{status:404,headers:security});
   let response;
-  if(u.pathname==='/api/programs'||u.pathname==='/programs.json'){
+  if(u.pathname==='/api/conditions'){
+   const document=await readConditions(env,u.searchParams.get('program_id')||'');
+   response=document?Response.json(document):Response.json({error:'condition_document_not_found'},{status:404});
+  } else if(u.pathname==='/api/programs'||u.pathname==='/programs.json'){
    const q=(u.searchParams.get('q')||'').slice(0,100);
    const {results}=await env.DB.prepare('SELECT * FROM programs WHERE name LIKE ? ORDER BY name LIMIT 100').bind('%'+q+'%').all();
    response=Response.json(results);
