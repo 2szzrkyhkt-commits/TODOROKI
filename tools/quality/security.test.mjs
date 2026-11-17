@@ -49,3 +49,5 @@ for(const path of ['/pdf/M&Aと資本配分_企業価値を高める再編の見
 console.log('Distinct M&A PDFs retain individual canonical targets: 2 passed');
 
 await import('./income-tax.test.mjs');
+
+await import('../tax/history.test.mjs');
