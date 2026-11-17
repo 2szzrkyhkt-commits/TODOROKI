@@ -20,3 +20,6 @@ quality-history latest（2026-11-17T02:32:19.469689Z）に、6言語トップと
 対象は /、/en/、/es/、/pt/、/zh-Hans/、/zh-Hant/、/pdf-library のフッター。元の広告設定・認証・Cron・定期タスク3件は変更しない。TQ43のサムネイル検証や追加開発は、利用者の中止方針に従い今回の対象外。iPhone実機未確認。CIと本番の結果は確認後に既存TODO正本へ追記する。
 
 PR時の通常監査は変更前の本番ページを読むため、それだけを修正後の成功証拠にしない。footer-contrast.mjsで現在のPRソースを隔離HTTP配信し、JavaScript/広告/媒体/画像/外部通信を無効にしたフッターの色だけをaxeで検査する。7ページ×390/1440幅の14ケースでviolationsとincompleteの両方0を必須とし、既存CIでこの検証を実行する。媒体・カードを検証対象にはしない。
+
+
+CI初回でaxeの補助フレームがJavaScript無効設定と競合し、Execution context was destroyedで中断した。検査エンジンのJavaScriptは有効にし、HTTP経由のページスクリプト・広告・媒体・画像・外部通信は遮断するよう修正。色判定の成功条件は変更しない。

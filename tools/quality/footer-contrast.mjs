@@ -20,8 +20,8 @@ const origin='http://127.0.0.1:'+server.address().port,paths=['/','/en/','/es/',
 const browser=await chromium.launch(),results=[];
 try{
  for(const width of [390,1440]){
-  const context=await browser.newContext({viewport:{width,height:900},javaScriptEnabled:false});
-  await context.route('**/*',r=>r.request().url().startsWith(origin)&&!['image','media','font'].includes(r.request().resourceType())?r.continue():r.abort());
+  const context=await browser.newContext({viewport:{width,height:900}});
+  await context.route('**/*',r=>r.request().url().startsWith(origin)&&!['script','image','media','font'].includes(r.request().resourceType())?r.continue():r.abort());
   for(const p of paths){
    const page=await context.newPage();
    try{
