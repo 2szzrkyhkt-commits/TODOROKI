@@ -10,6 +10,7 @@ from datetime import datetime,timezone
 import unicodedata,re
 import argparse,hashlib,json,time,ssl,socket,subprocess,os,xml.etree.ElementTree as ET
 from criteria import CRITERIA
+from notification_policy import eligible
 ROOT=Path(__file__).resolve().parents[2]
 BASE='https://todoroki-gold.com/'
 AD_DOMAINS=('trafficgate.net','doubleclick.net','googlesyndication.com','googleadservices.com','a8.net','valuecommerce.com','moshimo.com')
@@ -50,6 +51,20 @@ def execution_metadata(environ=None):
   return value if re.fullmatch(r'[0-9]{1,24}',value) else None
  return {'event':event,'run_id':number('GITHUB_RUN_ID'),'run_attempt':number('GITHUB_RUN_ATTEMPT')}
 def fingerprint(x):return hashlib.sha256(json.dumps(x,sort_keys=True,ensure_ascii=False).encode()).hexdigest()[:24]
+def inconclusive_evidence(value):
+ if isinstance(value,dict):return value.get('kind')=='inconclusive' or bool(value.get('inconclusive')) or any(inconclusive_evidence(v) for v in value.values())
+ if isinstance(value,list):return any(inconclusive_evidence(v) for v in value)
+ return False
+def resolution_state(prior,current,rows,at):
+ old={**(prior or {}).get('unverified_findings',{}),**(prior or {}).get('findings',{})}
+ resolved=[];unverified={}
+ for key,finding in old.items():
+  if key in current:continue
+  row=rows.get(finding['id'],{})
+  verified=row.get('last_run')==at and row.get('result') in ('完了','一部完了') and not row.get('errors') and not inconclusive_evidence(row.get('evidence'))
+  if verified:resolved.append(key)
+  else:unverified[key]=finding
+ return old,resolved,unverified
 def resolve(page,url):
  u=urlsplit(urljoin(BASE+page.relative_to(ROOT).as_posix(),url))
  if u.netloc!=urlsplit(BASE).netloc:return None,u
@@ -177,7 +192,8 @@ def run(mode,out,previous=None,live=True):
   row['manual_method']='管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない' if row['classification']=='手動確認が必要' else None
  # A full 62-row ledger always exists; unimplemented/manual checks remain unknown.
  items=list(rows.values());current={fingerprint([x['id'],e]):{'id':x['id'],'detail':e} for x in items for e in x['errors']}
- old=prior.get('findings',{}) if prior else {};new={k:v for k,v in current.items() if k not in old};resolved=[k for k in old if k not in current]
+ old,resolved,unverified=resolution_state(prior,current,rows,now)
+ new={k:v for k,v in current.items() if k not in old}
  modes=dict(prior.get('completed_modes',{}) if prior else {})
  if mode!='hourly':
   modes['daily']=now
@@ -185,9 +201,9 @@ def run(mode,out,previous=None,live=True):
  if mode=='monthly':modes['monthly']=now
  execution=execution_metadata()
  scheduled={'at':now,**execution} if execution['event']=='schedule' else (prior or {}).get('last_scheduled_audit')
- report={'execution':execution,'last_scheduled_audit':scheduled,'completed_modes':modes,'schema':1,'criteria_status':'provisional-original-missing','at':now,'timezone':'Asia/Tokyo','mode':mode,'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'items':items,'counts':dict(Counter(x['result'] for x in items)),'findings':current,'new_findings':new,'resolved':resolved,'notification_candidates':{k:v for k,v in new.items() if v['id'] in ('TQ01','TQ02','TQ03','TQ06','TQ10','TQ18','TQ20','TQ26','TQ28','TQ29','TQ30','TQ31','TQ32','TQ33','TQ34','TQ35','TQ36','TQ37','TQ38','TQ39','TQ53','TQ54','TQ55','TQ57','TQ59')},'limitations':['No original checklist; no real iPhone test','Unimplemented checks remain unknown; no claim of complete automation']}
+ report={'execution':execution,'last_scheduled_audit':scheduled,'completed_modes':modes,'schema':1,'criteria_status':'provisional-original-missing','at':now,'timezone':'Asia/Tokyo','mode':mode,'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'items':items,'counts':dict(Counter(x['result'] for x in items)),'findings':current,'new_findings':new,'unverified_findings':unverified,'resolved':resolved,'notification_candidates':{k:v for k,v in new.items() if eligible(v)},'limitations':['No original checklist; no real iPhone test','Unimplemented checks remain unknown; no claim of complete automation']}
  out=Path(out);out.mkdir(parents=True,exist_ok=True);(out/'latest.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
- (out/'summary.md').write_text('# TODOROKI 暫定62項目監査\n\n'+now+'\n\n起動理由：'+execution['event']+' / run '+str(execution['run_id'] or '未確認')+'（ジョブ成功は実行履歴で別途確認）\n\n|ID|項目|判定|最終実行|\n|---|---|---|---|\n'+''.join(f"|{x['id']}|{x['name']}|{x['classification']}（{x['result']}）|{x['last_run'] or '未実行'}|\n" for x in items))
+ (out/'summary.md').write_text('# TODOROKI 暫定62項目監査\n\n'+now+'\n\n起動理由：'+execution['event']+' / run '+str(execution['run_id'] or '未確認')+'（ジョブ成功は実行履歴で別途確認）\n\n既知障害の復旧未確認：'+str(len(unverified))+'件（取得不能・未実行は復旧に数えない）\n\n|ID|項目|判定|最終実行|\n|---|---|---|---|\n'+''.join(f"|{x['id']}|{x['name']}|{x['classification']}（{x['result']}）|{x['last_run'] or '未実行'}|\n" for x in items))
  print(json.dumps(report['counts'],ensure_ascii=False));return report
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--mode',default='daily',choices=['hourly','daily','weekly','monthly','all']);p.add_argument('--out',default='quality-results');p.add_argument('--previous');p.add_argument('--offline',action='store_true');a=p.parse_args();run(a.mode,a.out,a.previous,not a.offline)
