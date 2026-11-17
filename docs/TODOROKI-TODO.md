@@ -900,3 +900,18 @@ SitesはプロジェクトIDを原本一覧と照合し、全11件のDB概要を
 - AdSense・定期タスク3件・Cron・アクセス権・秘密値・DB・追加費用の変更なし。本人ログイン/キー入力なし。次の既存対象はT04の残る記事品質確認とT03の当該監査結果確認。
 
 - 上記main監査はその後successで完了。Python30件・追加29件・390/1440px画面検証が再成功。2026-11-17T09:55:58.441849+00:00（18:55 JST）の本番公開チェックは52件すべてpassed。監査実行成功と公開チェックの正常性を個別確認した。全62項目合格やT04全記事審査完了の意味ではない。履歴保存ステップもsuccess（今回の不変履歴ファイルの独立読戻しは未実施）。
+
+
+### T41継続：定期実行の重複と実消費を実測（2026-11-17）
+
+- 開始/終了：完了21件／未完了24件。T41は契約・KV/R2消費未確認のためチェックしない。新規TODO・定期処理は作らない。
+- Cloudflareの現行10 WorkerのCronを読取し既存台帳と一致。SLOT本体/collectorは同時刻だが、本体の配備済scheduledはcollection disabledのscaffoldログだけで実収集なし。collectorだけがrunCollectionとdaily leaseを持つ。同時刻設定を二重収集と断定しない。両者のCronを維持。
+- GraphQLの2026-11-16 00:00〜11-17 00:00 UTCの8 Worker実測は合計11559 invocations/errors51。本体10619、EDINET288/例外48、EDGAR285/例外1、米国統計24/例外2、税法48、支援293、SLOT各1。行がないWorkerを0に補完せず、Adaptive集計を課金確定数や予約起動専用ログとしない。取得元拒否の再診断や手動再収集なし。
+- 同期間D1は読取5887行/書込805行。5 DBのメタデータによる確認時点の合計容量729088 bytes。個人データ・KV値の取得なし。公式Free参照枠と照合した比率はWorker日次11.559%・D1読取0.11774%/書込0.805%。現契約Free・請求0円・全商品無料を保証しない。
+- 契約subscriptions APIは403。OAuthでBilling Readを扱えないため取得不可。別キー・権限追加・迂回・本人ログインは要求しない。workers/account-settingsのdefault_usage_model=standardだけでプランを決めない。KV/R2/現契約は残作業として記録。
+- 取得済み集計を再現するネットワークなしのassessを追加。欠測/重複Worker/UTC一日未満/超過/未確認契約を検証し、不明を正常へ置換しない。ローカル17件と実測JSONの11559/51/未完了判定を確認。PR監査44061644651/job133964750328もsuccess、Python30件/追加17件成功。詳細 docs/cloud-usage-review-2026-11-17.md。
+- PR #47 https://github.com/2szzrkyhkt-commits/TODOROKI/pull/47 、実装44ced1c07f2d07bb506fd9d7e298fb8e8a71ed46、merge7c7db9279c8481ebf55deac82e8ae7ba6efe0d09。mainからコード/実測JSONを再取得し予定内容と全文一致。
+- 本番GitHub連携build77d2807f-92a3-4ae0-bc02-b274e3758c19は上記mergeでsuccess、19:09 JST完了。deployment9b948249-1723-41b9-8b02-a1933002d704、version9c076e07-a4c3-40d6-b5ff-2e77cab0646bを100%反映。変更は運用検証コード/証拠のみでサイトの表示/広告/収集ロジックを変更しない。
+- main監査44062048110/job133966138732は記録時点でTests/Browser checks成功、Run audit実行中。全体成功とはまだ記録しない。
+- 前回main監査44059621551のhistory/44059621551-1.jsonをquality-historyから独立読戻しし、event=push/run_id/source27315f3e/時刻18:55 JSTを照合。62項目内訳7完了/40一部/14未確認/1未完了で全合格ではない。45項目の完了数とは別。T03未完了維持。
+- AdSense・定期タスク3件・Cron・アクセス権・DBデータ・秘密値・追加費用の変更なし。次は独立したT04の残る記事品質改善。T41の未取得データを繰り返し同経路へ要求しない。
