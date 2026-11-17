@@ -1,3 +1,4 @@
+import {readCatalog} from './catalog.js';
 import {calculateStoredAmount,runSupportWithAmounts as collectDue} from './amounts.js';
 import {WorkerEntrypoint} from 'cloudflare:workers';
 import {assessStored,searchPrograms,readBoundedJSON} from './eligibility.js';
@@ -15,7 +16,9 @@ export default {
   if(request.method!=='GET'&&!(request.method==='POST'&&['/api/eligibility','/api/amounts'].includes(u.pathname)))return new Response('Method not allowed',{status:405,headers:security});
   if(u.pathname.startsWith('/admin'))return new Response('Not found',{status:404,headers:security});
   let response;
-  if(u.pathname==='/api/amounts'){
+  if(u.pathname==='/api/catalog'){
+   try{const result=await readCatalog(env.DB);response=result?Response.json(result):Response.json({error:'catalog_not_collected'},{status:404});}catch{response=Response.json({error:'catalog_unavailable'},{status:503});}
+  } else if(u.pathname==='/api/amounts'){
    if(request.method!=='POST')response=Response.json({error:'post_required'},{status:405});
    else {try{const body=await readBoundedJSON(request);const result=await calculateStoredAmount(env,body);response=result?Response.json(result):Response.json({error:'amount_rules_not_found'},{status:404});}catch(error){const inputError=['invalid_amount_input','invalid_json','invalid_content_type','input_too_large'].includes(error.message)||error instanceof SyntaxError;response=Response.json({error:inputError?'invalid_input':'amount_rules_unavailable'},{status:inputError?400:503});}}
   } else if(u.pathname==='/api/eligibility'){
@@ -40,3 +43,5 @@ export default {
 export class SupportCollector extends WorkerEntrypoint {
  async run(){return collectDue(this.env);}
 }
+
+
