@@ -21,6 +21,9 @@ for(const [name,engine] of Object.entries(weekly?{chromium,firefox,webkit}:{chro
    await page.screenshot({path:`${out}/${name}-${width}-${path.replaceAll('/','_')}.png`,fullPage:true});
    add(28,ui.headers!==1?[{path,name,width,headerCount:ui.headers}]:[],{path,name,width});
    add(29,ui.nav===0?[{path,name,width,missingNavigation:true}]:[],{path,name,width});
+   // Check the real current page before language-picker navigation changes its URL.
+   const footerAxe=await new AxeBuilder({page}).include('footer').withRules(['color-contrast']).analyze();
+   add(52,footerAxe.violations.map(x=>({path,name,width,id:x.id,scope:'footer',nodes:x.nodes.map(n=>n.target)})),{path,name,width,scope:'footer contrast only; full ARIA/focus audit remains separate',incomplete:footerAxe.incomplete.map(x=>x.id)});
    if(path==='/pdf-library'||path==='/boki1'){
     const input=page.locator('#search');
     if(await input.count()){
