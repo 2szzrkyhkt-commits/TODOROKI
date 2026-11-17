@@ -1,7 +1,45 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>税法を学ぶ | TODOROKI</title><meta name="description" content="税法を科目別に学ぶTODOROKIの学習プロジェクト。国の一次資料をもとに、法令検索・解説・確認問題を整備しています。"><link rel="canonical" href="https://todoroki-gold.com/tax-study"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><script src="/assets/privacy-controls.js" defer></script>
-<style>:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#080808;color:#f4f1e8;font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;line-height:1.85}a{color:#f4d77b}.wrap{width:min(960px,90%);margin:auto}header{border-bottom:1px solid #40351e;padding:22px 5%}header a{font-size:21px;font-weight:900;letter-spacing:.14em;text-decoration:none}main{padding:42px 0 64px}h1{font-size:clamp(28px,6vw,44px);line-height:1.4}h2{font-size:21px}.eyebrow{color:#d4af37;font-size:13px;letter-spacing:.12em}.status{display:inline-block;border:1px solid #79632b;border-radius:30px;padding:5px 16px;color:#f4d77b}.panel{background:#111;border:1px solid #3b321f;border-radius:16px;padding:24px;margin:24px 0}p,li{color:#c7c2b6}.subjects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;list-style:none;padding:0}.subjects li{padding:14px;background:#18150e;border:1px solid #40351e;border-radius:8px}.button{display:inline-block;border:1px solid #d4af37;border-radius:8px;padding:12px 20px;text-decoration:none}a:focus-visible{outline:2px solid white;outline-offset:4px}footer{border-top:1px solid #302715;padding:24px 0;color:#aaa;font-size:13px}@media(max-width:600px){.subjects{grid-template-columns:1fr}.panel{padding:20px}}</style></head>
-<body><header><a href="/">TODOROKI</a></header><main class="wrap"><div class="eyebrow">TAX LAW / STUDY</div><h1>税法を学ぶ</h1><span class="status">開発中・学習ツール公開準備中</span><p>国が公開する法令・一次資料をもとに、税法を科目別に整理して学ぶプロジェクトです。</p>
-<section class="panel" aria-labelledby="status"><h2 id="status">現在の公開状況</h2><p>このページは学習プロジェクトの入口です。法令の自動収集、検索、解説、確認問題の提供に向けて整備を進めています。学習ツール本体は、このページからはまだ利用できません。</p></section>
+<style>:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#080808;color:#f4f1e8;font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;line-height:1.85}a{color:#f4d77b}.wrap{width:min(960px,90%);margin:auto}header{border-bottom:1px solid #40351e;padding:22px 5%}header a{font-size:21px;font-weight:900;letter-spacing:.14em;text-decoration:none}main{padding:42px 0 64px}h1{font-size:clamp(28px,6vw,44px);line-height:1.4}h2{font-size:21px}.eyebrow{color:#d4af37;font-size:13px;letter-spacing:.12em}.status{display:inline-block;border:1px solid #79632b;border-radius:30px;padding:5px 16px;color:#f4d77b}.panel{background:#111;border:1px solid #3b321f;border-radius:16px;padding:24px;margin:24px 0}p,li{color:#c7c2b6}.subjects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;list-style:none;padding:0}.subjects li{padding:14px;background:#18150e;border:1px solid #40351e;border-radius:8px}.button{display:inline-block;border:1px solid #d4af37;border-radius:8px;padding:12px 20px;text-decoration:none}a:focus-visible{outline:2px solid white;outline-offset:4px}footer{border-top:1px solid #302715;padding:24px 0;color:#aaa;font-size:13px}@media(max-width:600px){.subjects{grid-template-columns:1fr}.panel{padding:20px}}</style><style>
+[hidden]{display:none!important}#income-tax input{display:block;width:100%;max-width:440px;padding:14px;border:1px solid #947c41;border-radius:8px;font:inherit;color:#fff;background:#080808}
+#income-tax label{font-weight:700}#taxable-income-hint,.tax-source{font-size:14px}.tax-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+#income-tax button{min-height:44px;padding:10px 18px;border:1px solid #d4af37;border-radius:8px;background:#241e0e;color:#f4d77b;font:inherit;cursor:pointer}
+#income-tax button:focus-visible,#income-tax input:focus-visible,summary:focus-visible{outline:2px solid #fff;outline-offset:4px}#income-tax-error{color:#ffb9b9}
+#income-tax-result{border-top:1px solid #79632b;margin-top:20px;padding-top:12px}.tax-amount{font-size:clamp(28px,7vw,42px);font-weight:800;color:#f4d77b;margin:8px 0}
+#income-tax dd{margin:0 0 10px}.tax-formula{overflow-wrap:anywhere}.tax-table-wrap{overflow-x:auto}#income-tax table{width:100%;border-collapse:collapse;font-size:14px;margin-top:12px}
+#income-tax th,#income-tax td{text-align:left;padding:10px;border:1px solid #564729}#income-tax summary{cursor:pointer;min-height:44px}
+</style><script type="module" src="/assets/income-tax-ui.mjs"></script></head>
+<body><header><a href="/">TODOROKI</a></header><main class="wrap"><div class="eyebrow">TAX LAW / STUDY</div><h1>税法を学ぶ</h1><span class="status">所得税の計算を公開・科目別教材は整備中</span><p>国が公開する法令・一次資料をもとに、税法を科目別に整理して学ぶプロジェクトです。</p>
+<section class="panel" aria-labelledby="status"><h2 id="status">現在の公開状況</h2><p>このページは学習プロジェクトの入口です。法令の自動収集、検索、解説、確認問題の提供に向けて整備を進めています。現在は所得税の速算表による計算を利用できます。科目別の検索・教材・確認問題は整備中です。</p></section>
+<section class="panel" aria-labelledby="income-tax-title" id="income-tax">
+<h2 id="income-tax-title">所得税の速算表で計算する</h2>
+<p>2026年分の学習用。<strong>所得控除を差し引いた後の課税所得</strong>を入力します。年収・給与収入をそのまま入力する計算機ではありません。</p>
+<p id="income-tax-scope">対象：総合課税の通常の所得税額（税額控除前）。復興特別所得税・防衛特別所得税・住民税、分離課税、税額控除、源泉徴収・予定納税、高額所得者の特例は含めません。最終的な申告・納付額は計算しません。</p>
+<form id="income-tax-form" novalidate>
+<label for="taxable-income">所得控除後の課税所得（円）</label>
+<p id="taxable-income-hint">0〜330,000,000円の整数。1,000円未満は自動で切り捨てます。カンマ・全角数字も入力できます。上限はこの計算機の取扱範囲です。</p>
+<input id="taxable-income" type="text" inputmode="numeric" autocomplete="off" maxlength="32" placeholder="例：7,000,000" aria-describedby="taxable-income-hint income-tax-error" disabled>
+<div class="tax-actions"><button type="submit" disabled>所得税額を計算</button><button type="button" id="income-tax-example" disabled>国税庁の例を試す</button><button type="reset" disabled>入力を消す</button></div>
+<p id="income-tax-error" role="alert"></p>
+</form>
+<noscript><p>JavaScriptを有効にすると入力計算を利用できます。国税庁の例：課税所得700万円の通常の所得税額は974,000円です（下記の対象範囲に限ります）。</p></noscript>
+<section id="income-tax-result" aria-live="polite" aria-atomic="true" hidden>
+<h3>通常の所得税額（税額控除前）</h3><p id="income-tax-amount" class="tax-amount"></p>
+<dl><dt>端数処理後の課税所得</dt><dd id="taxable-rounded"></dd><dt>切り捨てた金額</dt><dd id="tax-rounding"></dd></dl>
+<p id="income-tax-formula" class="tax-formula"></p><p>速算表の控除額は、段階ごとの税率計算を1本の式にまとめる調整額です。基礎控除などの所得控除とは異なります。</p>
+<p><strong>この金額に復興特別所得税などは含まれていません。</strong>申告・納付額の確認は<a href="https://www.keisan.nta.go.jp/">国税庁の確定申告書等作成コーナー</a>をご利用ください。</p>
+</section>
+<details><summary>計算に使う税率と控除額</summary><div class="tax-table-wrap"><table><caption>通常の所得税の速算表（課税所得の1,000円未満切捨て後）</caption><thead><tr><th scope="col">課税所得</th><th scope="col">税率</th><th scope="col">速算表の控除額</th></tr></thead><tbody>
+<tr><th scope="row">1,000〜1,949,000円</th><td>5%</td><td>0円</td></tr>
+<tr><th scope="row">1,950,000〜3,299,000円</th><td>10%</td><td>97,500円</td></tr>
+<tr><th scope="row">3,300,000〜6,949,000円</th><td>20%</td><td>427,500円</td></tr>
+<tr><th scope="row">6,950,000〜8,999,000円</th><td>23%</td><td>636,000円</td></tr>
+<tr><th scope="row">9,000,000〜17,999,000円</th><td>33%</td><td>1,536,000円</td></tr>
+<tr><th scope="row">18,000,000〜39,999,000円</th><td>40%</td><td>2,796,000円</td></tr>
+<tr><th scope="row">40,000,000円以上</th><td>45%</td><td>4,796,000円</td></tr>
+</tbody></table></div></details>
+<p class="tax-source">出典：<a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2260.htm">国税庁 No.2260「所得税の税率」</a>（法令等基準日：2026年4月1日、確認日：2026年11月17日）。今後の改正は自動反映されません。</p>
+<p class="tax-source">計算処理はブラウザ内で行います。この計算機は入力金額をサーバーに送信・保存しません。</p>
+</section>
 <section aria-labelledby="subjects"><h2 id="subjects">整備予定の税法科目</h2><ul class="subjects"><li>所得税法</li><li>法人税法</li><li>相続税法</li><li>消費税法</li><li>酒税法</li><li>国税徴収法</li><li>住民税</li><li>事業税</li><li>固定資産税</li></ul></section>
 <section class="panel" aria-labelledby="features"><h2 id="features">目指す学習機能</h2><ul><li>公式資料の収集と、出典・取得日・改正状況の確認</li><li>科目別・論点別の法令検索と条文の閲覧</li><li>条文に対応した解説・用語・確認問題</li></ul><p>公開時には、収録済みの範囲と未確認の資料を区別して表示します。</p></section><a class="button" href="/#study">学ぶ一覧へ戻る</a></main><footer><div class="wrap">© 2026 TODOROKI · <a href="/privacy">プライバシーポリシー</a> · <a href="/contact">お問い合わせ</a></div></footer></body></html>
