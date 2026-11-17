@@ -73,3 +73,5 @@ await import('./contextual-links-browser.mjs');
 
 await import('./behavior-evidence-browser.mjs');
 await import('./indicator-examples-browser.mjs');
+
+await import('./momentum-examples-browser.mjs');
