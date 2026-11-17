@@ -20,8 +20,10 @@ Changes:
   delivery behavior remain. A site HTTP failure now appears in health/history;
   this change does not add site-failure alerts or full-project monitoring.
 
-Verification: 22 isolated Node tests use synthetic storage, responses and an
-intercepted fetch. No real webhook, mail, production data write, authentication
+Verification: 26 isolated Node tests use synthetic storage, responses and an
+intercepted fetch. Unknown exception details are neither stored nor rethrown;
+corrupt history cannot prevent a failed heartbeat. Storage errors still reject
+execution and do not become a success. No real webhook, mail, production data write, authentication
 change or new periodic task. Tests cover the false-health defects, notification
 failure, retry bounds, 30-entry retention and omitted upstream response bodies.
 The existing quality workflow runs this test file; no workflow job/Cron is added.

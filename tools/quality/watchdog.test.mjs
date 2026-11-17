@@ -80,3 +80,23 @@ test('failure history keeps only 30 entries and does not persist upstream respon
  await mocked(f.fetcher,()=>assert.rejects(()=>scheduledAudit(f.env)));
  const failures=JSON.parse(f.data.get('failures'));assert.equal(failures.length,30);assert.equal(failures.at(-1).error,'watchdog site HTTP 404');
 });
+test('notification exceptions never persist or rethrow a URL/token from the upstream error',async()=>{
+ const f=fixture({runs:[]});const token='fixture-sensitive-url-token';
+ const fetcher=(url,options)=>url===f.env.ALERT_WEBHOOK?Promise.reject(new Error(token)):f.fetcher(url,options);
+ await mocked(fetcher,()=>assert.rejects(()=>scheduledAudit(f.env),/^Error: watchdog execution failed$/));
+ assert.ok(!f.data.get('failures').includes(token));assert.equal((await health(f)).status,503);
+});
+test('malformed GitHub response bodies are never copied into failure history',async()=>{
+ const f=fixture();const token='fixture-sensitive-body';
+ const fetcher=(url,options)=>String(url).startsWith('https://api.github.com/')?new Response(token):f.fetcher(url,options);
+ await mocked(fetcher,()=>assert.rejects(()=>scheduledAudit(f.env),/^Error: watchdog execution failed$/));
+ assert.ok(!f.data.get('failures').includes(token));assert.equal((await health(f)).status,503);
+});
+test('corrupt history cannot prevent recording an unhealthy heartbeat',async()=>{
+ const f=fixture({site:404});f.data.set('failures','fixture-sensitive-corrupt-history');
+ await mocked(f.fetcher,()=>assert.rejects(()=>scheduledAudit(f.env),/^Error: watchdog site HTTP 404$/));assert.equal((await health(f)).status,503);
+});
+test('unavailable state still rejects execution without rethrowing provider diagnostics',async()=>{
+ const f=fixture();f.env.STATE={get:async()=>{throw new Error('fixture-sensitive-provider-error')},put:async()=>{throw new Error('fixture-sensitive-provider-error')}};
+ await mocked(f.fetcher,()=>assert.rejects(()=>scheduledAudit(f.env),/^Error: watchdog execution failed$/));assert.equal((await health(f)).status,503);
+});

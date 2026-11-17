@@ -6,6 +6,11 @@ function fresh(at){
  const age=Date.now()-Date.parse(at);
  return typeof at==='string'&&Number.isFinite(age)&&age>=0&&age<MAX_AGE_MS;
 }
+function failureMessage(error){
+ const message=typeof error?.message==='string'?error.message:'';
+ // Never persist/rethrow arbitrary upstream errors, which may contain a URL or token.
+ return /^(watchdog (site HTTP \d{3}|scheduled audit stale|GitHub read \d{3}|GitHub response invalid)|notification \d{3}|ALERT_WEBHOOK not configured; notification not delivered|upstream (HTTP \d{3}|timeout|network error))$/.test(message)?message:'watchdog execution failed';
+}
 export default {
  async scheduled(event,env,ctx){ctx.waitUntil(scheduledAudit(env));},
  async fetch(request,env){
@@ -55,10 +60,16 @@ export async function scheduledAudit(env){
   if(!audit.ok)throw new Error('watchdog scheduled audit stale');
   await env.STATE.put('heartbeat',JSON.stringify({at,ok:true}));
  }catch(e){
-  const prior=JSON.parse(await env.STATE.get('failures')||'[]');
-  prior.push({at,error:String(e.message).slice(0,160)});
-  await env.STATE.put('failures',JSON.stringify(prior.slice(-30)));
-  await env.STATE.put('heartbeat',JSON.stringify({at,ok:false}));
-  throw e;
+  const message=failureMessage(e);
+  // Record failure before history; corrupt/unavailable history must not leave a healthy heartbeat.
+  try{await env.STATE.put('heartbeat',JSON.stringify({at,ok:false}));}catch{}
+  try{
+   const stored=JSON.parse(await env.STATE.get('failures')||'[]');
+   const prior=Array.isArray(stored)?stored:[];
+   prior.push({at,error:message});
+   await env.STATE.put('failures',JSON.stringify(prior.slice(-30)));
+  }catch{}
+  // Storage failures still reject the scheduled execution, without leaking provider diagnostics.
+  throw new Error(message);
  }
 }
