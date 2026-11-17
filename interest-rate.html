@@ -112,7 +112,8 @@ html{scroll-behavior:smooth}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 <link rel="stylesheet" href="/assets/navigation.css"><link rel="stylesheet" href="/assets/language-picker.css"><link rel="stylesheet" href="/assets/site-header.css"><script src="/assets/language-picker.js" defer></script>
-<link rel="stylesheet" href="/assets/site-quality.css"></head>
+<link rel="stylesheet" href="/assets/site-quality.css"><style id="reading-worked-styles">.reading-worked{margin:36px 0;padding:20px;border:1px solid #655027;border-radius:12px;background:#12110d;overflow-wrap:anywhere}.reading-worked h2{margin-top:0}.reading-worked .table-wrap{overflow-x:auto;max-width:100%}.reading-worked table{border-collapse:collapse;min-width:480px;width:100%;font-size:15px}.reading-worked th,.reading-worked td{padding:12px;text-align:left;border-bottom:1px solid #5b513b}.reading-worked caption{text-align:left;font-weight:bold;margin-bottom:10px}.reading-worked a{color:#f0cf81;text-decoration:underline;text-underline-offset:3px}.reading-worked :focus-visible{outline:3px solid #fff;outline-offset:3px}.reading-worked li{margin:12px 0}.reading-worked .review-date{font-size:14px;color:#c8c2b5}@media(max-width:480px){.reading-worked{padding:14px}.reading-worked h2{font-size:21px}}</style>
+</head>
 <body><a class="skip-link" href="#article-top">本文へ移動</a>
 <header class="site-header">
   <div class="wrap brand-row">
@@ -256,6 +257,21 @@ html{scroll-behavior:smooth}
       を合わせて考えることが重要となる。
     </p>
   </section>
+<section class="reading-worked" id="worked-reading" aria-labelledby="worked-title">
+<h2 id="worked-title">同じ「金利上昇」でも、何を計算するかで結果が違う</h2>
+<p class="review-date">計算例・読解手順の追記：2026年11月17日。以下はTODOROKIの仮定例で、現在の政策金利・借入金利・銘柄の目標株価ではありません。</p>
+<div class="table-wrap" role="region" aria-label="金利の異なる計算例" tabindex="0"><table>
+<caption>元本残高や将来額を固定して考える</caption>
+<thead><tr><th scope="col">例</th><th scope="col">条件・式</th><th scope="col">結果</th></tr></thead>
+<tbody><tr><th scope="row">1年間の単利</th><td>100万円×年3％</td><td>利息30,000円</td></tr><tr><th scope="row">割引率3％</th><td>1年後の100万円÷1.03</td><td>現在価値 約970,874円</td></tr><tr><th scope="row">割引率5％</th><td>1年後の100万円÷1.05</td><td>現在価値 約952,381円</td></tr></tbody></table></div>
+<p>利息の例は1年間に元本返済や借り増しがなく、金利も変わらない単利です。元利均等返済などの実際の返済総額には、そのまま使えません。現在価値の2例は同じ将来額を比較し、最後に1円へ四捨五入しています。企業全体のDCFは複数年のキャッシュフローや継続価値なども必要です。</p>
+<h3>表面利率と利回りを混同しない</h3>
+<p><a href="https://www.boj.or.jp/about/education/oshiete/glossary/market/m11.htm">日本銀行の国債金利の解説</a>では、債券価格と利回りが逆方向に動く関係を説明しています。固定利付債を保有中に市場金利が上がっても、その債券の決まった利息が同じだけ増えるわけではありません。購入価格や満期までの期間も確認します。</p>
+<h3>ニュースを読む順序</h3>
+<ol><li>政策金利・住宅ローン金利・国債利回りのどれが動いたのか、期間と公表日を確認する。</li><li>借入なら固定か変動か、利率が見直される時期と残高を見る。</li><li>企業なら借入の負担と事業の利益を別々に見る。利益の変化を固定したまま株価を決めつけない。</li><li>実質金利を読むときは、使う予想物価上昇率と対象期間を明示する。</li></ol>
+<p>実質金利の目安については<a href="https://www.boj.or.jp/about/press/koen_2024/ko241225a.htm">日本銀行の2024年12月25日講演</a>を参照。これは概念の出典であり、当時の政策説明を現在の政策として引用していません。</p>
+<p>お金の購買力へ戻るなら<a href="/inflation#worked-reading">インフレと預金の比較</a>、資金が出入りする時点を考えるなら<a href="/government-subsidies#worked-reading">補助金の立替資金の例</a>へ。関連用語は<a href="/site-map">記事検索</a>から探せます。</p>
+</section>
 <a href="https://line.me/R/share"
    target="_blank"
    rel="noopener noreferrer"

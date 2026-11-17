@@ -61,3 +61,5 @@ await import('./page-search.test.mjs');
 await import('./gasoline-dates.test.mjs');
 
 await import('../cloud-usage/report.test.mjs');
+
+await import('./economy-reading.test.mjs');
