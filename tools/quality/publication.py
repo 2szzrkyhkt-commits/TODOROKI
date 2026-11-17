@@ -30,7 +30,7 @@ def read_public(path):
  try:
   with build_opener(redirects).open(Request(url,headers={'User-Agent':'TODOROKI-Quality-Audit/1.0'}),timeout=20) as r:
    return {'status':r.status,'final_url':r.url,'text':'' if 'application/pdf' in r.headers.get('Content-Type','').lower() else r.read(5*1024*1024).decode('utf-8'),'robots':r.headers.get('X-Robots-Tag',''),'link':r.headers.get('Link',''),'redirects':redirects.steps}
- except HTTPError as e:return {'status':e.code,'inconclusive':e.code in (401,403,429)}
+ except HTTPError as e:return {'status':e.code,'inconclusive':e.code in (401,403,429),'robots':e.headers.get('X-Robots-Tag','') if e.headers else ''}
  except (URLError,TimeoutError,OSError) as e:return {'inconclusive':True,'reason':type(e).__name__}
  except ValueError:return {'inconclusive':False,'reason':'unexpected_redirect_or_invalid_response'}
 def run(root=ROOT,live=False,reader=read_public):
@@ -87,6 +87,11 @@ def run(root=ROOT,live=False,reader=read_public):
    r=reader(quote(path));r.pop('text','')
    if r.get('inconclusive'):checks.append({'check':'PDF canonical '+path,'state':'inconclusive',**r});continue
    add('PDF canonical '+path,r.get('status')==200 and r.get('link')=='<'+ORIGIN+quote(target,safe='/&')+'>; rel="canonical"',**r)
+  # GSC's historical 4xx/401 samples are retired sales APIs, never articles.
+  for path in ('/api/checkout','/api/purchases/confirm','/api/download/okamura-7994'):
+   r=reader(path);r.pop('text','')
+   if r.get('inconclusive'):checks.append({'check':'retired GSC sales API '+path,'state':'inconclusive',**r});continue
+   add('retired GSC sales API '+path,r.get('status')==410 and 'noindex' in r.get('robots','').lower() and all(ORIGIN+path not in urls for urls in sitemaps.values()),scope='intentional retirement; not an indexable article',**r)
   for path in ('/login','/pdf-viewer'):
    r=reader(path);text=r.pop('text','')
    if r.get('inconclusive'):checks.append({'check':'intentional noindex '+path,'state':'inconclusive',**r});continue
