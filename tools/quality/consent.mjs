@@ -58,3 +58,5 @@ await import('./boki-content.mjs');
 await import('./home-cards.mjs');
 
 await import('./income-tax-browser.mjs');
+
+await import('./tax-history-browser.mjs');
