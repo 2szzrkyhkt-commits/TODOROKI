@@ -1,0 +1,85 @@
+{
+  "scope": "todoroki-japan-support-dev",
+  "captured_at": "2026-11-17T11:51:38.885Z",
+  "snapshot_sha256": "a5fd699cf71b2bb3dbc7de6e23fa608f7f475168921924cbbf35ccca3a0bd86d",
+  "stable_bookmark": true,
+  "restored_tables": 13,
+  "restored_rows": 59,
+  "tables": [
+    {
+      "table": "collection_runs",
+      "rows": 5,
+      "sha256": "1361e4311b03441c9289be5b6e7e562c276a9f8592ffa93dd509f646cf154ebc"
+    },
+    {
+      "table": "incidents",
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "table": "jgrants_catalog",
+      "rows": 25,
+      "sha256": "1dd9f65398e96b98a6c4cf3df38288deabb107085af4494fadac220079c70e6c"
+    },
+    {
+      "table": "jgrants_jobs",
+      "rows": 8,
+      "sha256": "865520a3237880b2cde2c702f4c1b204710add8484042c4fc155439dd4b395e6"
+    },
+    {
+      "table": "programs",
+      "rows": 1,
+      "sha256": "715c70537f73431ae57767238166a4325ef55c6303574b143e73362b8a90b907"
+    },
+    {
+      "table": "revisions",
+      "rows": 3,
+      "sha256": "b1928689929caefe17ff152e64dc7de0495c41e2ade87a54cffb1882c6658447"
+    },
+    {
+      "table": "sources",
+      "rows": 3,
+      "sha256": "7aaee2010ce11e81c15dea5358053c75e8d1df6d407d0ac4dffab5742d6fb048"
+    },
+    {
+      "table": "support_amount_versions",
+      "rows": 1,
+      "sha256": "1b50e5097d49b2d9379862c4bf830987f39798b09a74207e6e1a78d091e69b76"
+    },
+    {
+      "table": "support_catalog_snapshots",
+      "rows": 1,
+      "sha256": "c83173cb44410670f369ea85c688685943718c8745734d1c3af602f3e6ffeacf"
+    },
+    {
+      "table": "support_condition_versions",
+      "rows": 1,
+      "sha256": "7ac837ca68d1d93fed3f6f477c48015ff0d51c50c2ccd6e08c9d886728af16b8"
+    },
+    {
+      "table": "support_feature_checks",
+      "rows": 2,
+      "sha256": "c501cc0939198ad6c150a5522f00f44374fb3dbd1d209cd7bcca54a0cc54cba7"
+    },
+    {
+      "table": "support_monitor_history",
+      "rows": 5,
+      "sha256": "cf0004d3a95edeee91ea2034889c80bca3ed7bfcd764d53d30a7773864262ea0"
+    },
+    {
+      "table": "support_monitor_latest",
+      "rows": 4,
+      "sha256": "2523e6051381151012db1f43046e978bb2c406411ba4c6c550af85a6a3e00fae"
+    }
+  ],
+  "schema_matches": true,
+  "integrity_check": "ok",
+  "foreign_key_violations": 0,
+  "production_writes": 0,
+  "restore_target": "isolated in-memory SQLite; not Cloudflare D1",
+  "limitations": [
+    "one database only",
+    "no R2/KV backup",
+    "not a recurring backup or cloud D1 import test"
+  ]
+}
