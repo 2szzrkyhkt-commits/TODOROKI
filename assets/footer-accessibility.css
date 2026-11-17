@@ -1,0 +1,9 @@
+/* Shared footer legibility: apply only to footer content. */
+footer {
+  background-color: #080808;
+  color: #b8b8b8;
+}
+footer .wrap, footer p, footer nav { color: inherit; }
+footer a { color: #e5c778; }
+footer a:hover, footer a:focus-visible { text-decoration: underline; }
+footer a:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
