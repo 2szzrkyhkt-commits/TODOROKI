@@ -39,7 +39,7 @@ for(const a of root.querySelectorAll('[data-tax-subject-link]'))a.addEventListen
 function applyHash(){
  let id;try{id=decodeURIComponent(location.hash.slice(1));}catch{return;}
  const lesson=course.lessons.find(l=>'tax-lesson-'+l.id===id);
- if(lesson){select.value=lesson.subject;search.value='';}
+ if(lesson&&select.value!==lesson.subject){select.value=lesson.subject;search.value='';}
 }
 select.value='income';applyHash();filter();updateProgress();
 window.addEventListener('hashchange',()=>{applyHash();filter();});
