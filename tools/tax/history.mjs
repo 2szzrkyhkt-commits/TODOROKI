@@ -54,7 +54,7 @@ async function bodyFor(env,id,law,fetcher){
  const digest=await sha(bytes);await save(env,'history:body:'+id,bytes);
  return {sha256:digest,bytes:bytes.byteLength,text,source_url:url};
 }
-export async function refreshHistory(env,law,{fetcher=fetch,now=new Date().toISOString()}={}){
+export async function refreshHistory(env,law,{fetcher=fetch,now=new Date().toISOString(),verifyRoutes}={}){
  if(!validLaw(law))throw Error('invalid law id');
  const {url,bytes}=await official('/law_revisions/'+encodeURIComponent(law),2*1024*1024,fetcher);
  const data=JSON.parse(new TextDecoder().decode(bytes));
@@ -80,7 +80,7 @@ export async function refreshHistory(env,law,{fetcher=fetch,now=new Date().toISO
  if(JSON.stringify(readback)!==JSON.stringify(snapshot))throw Error('history readback mismatch');
  const html=renderHistory(readback);
  const verification={at:now,law_id:law,official_revision_count:rows.length,readback_matches:true,metadata_diff_count:comparison.metadata?.length??0,xml_state:comparison.xml?.state??comparison.state,
- rendered_dates:readback.revisions.every(r=>!r.enforcement_date||html.includes(r.enforcement_date)),original_namespaces_written:false};
+ rendered_dates:readback.revisions.every(r=>!r.enforcement_date||html.includes(r.enforcement_date)),original_namespaces_written:false,...(verifyRoutes?{authenticated_routes:await verifyRoutes(readback)}:{})};
  if(!verification.rendered_dates)throw Error('history display mismatch');
  await save(env,'history:verification',JSON.stringify(verification));
  return verification;
@@ -93,12 +93,12 @@ export function renderHistory(s){
  const xml=s.comparison.xml;
  return '<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>税法改正履歴 | TODOROKI</title><style>body{margin:0;background:#080808;color:#eee;font:16px/1.8 system-ui}main{max-width:1000px;margin:auto;padding:24px}a{color:#e5c778}.scroll{overflow:auto}table{border-collapse:collapse;width:100%}td,th{border:1px solid #76633b;padding:10px;text-align:left}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#17140e;padding:12px}p{overflow-wrap:anywhere}</style><main><h1>'+esc(s.title)+'：改正履歴</h1><p>確認日時 '+esc(s.checked_at)+' ／ 施行状況の表示基準日（日本時間） '+esc(s.as_of)+'</p><p>'+esc(s.scope)+'</p><p><a href="'+esc(s.source_url)+'">公式の履歴データ</a></p><div class="scroll"><table><caption>取得日と施行日を区別した公式収録版</caption><tr><th>施行日</th><th>公布日</th><th>状態</th><th>改正法令</th><th>版ID</th></tr>'+s.revisions.map(r=>'<tr><td>'+esc(r.enforcement_date)+'</td><td>'+esc(r.promulgation_date)+'</td><td>'+esc(r.state)+'</td><td>'+esc(r.amendment_title)+'</td><td>'+esc(r.revision_id)+'</td></tr>').join('')+'</table></div><h2>選択2版のメタデータ差分</h2><p>前 '+esc(s.comparison.before)+' → 後 '+esc(s.comparison.after)+'</p><div class="scroll"><table><tr><th>項目</th><th>前</th><th>後</th></tr>'+changes+'</table></div><h2>本文XMLの変更区間</h2><p>検証状態 '+esc(xml?.state??s.comparison.state)+'。XMLの文字列比較であり、条文の法的意味や税額への影響の判定ではありません。</p>'+(xml?.state==='compared'?'<p>変更区間：前 '+xml.before_chars+'文字 → 後 '+xml.after_chars+'文字。'+(xml.excerpt_truncated?'抜粋は各2,000文字まで。全文の差分表示ではありません。':'')+'</p><h3>前</h3><pre>'+esc(xml.before_excerpt)+'</pre><h3>後</h3><pre>'+esc(xml.after_excerpt)+'</pre>':'')+'</main></html>';
 }
-export async function historyTick(env){
+export async function historyTick(env,{verifyRoutes}={}){
  const state=await env.TAX.get('history:state','json')||{queue:[],cursor:null};
  if(state.next_at&&Date.now()<Date.parse(state.next_at))return {state:'within_interval',next_at:state.next_at};
  if(!state.queue.length){const page=await env.TAX.list({prefix:'law:',limit:10,...(state.cursor?{cursor:state.cursor}:{})});state.queue=page.keys.map(k=>k.name);state.cursor=page.list_complete?null:page.cursor;}
  if(!state.queue.length)return {state:'no_stored_laws'};
- const key=state.queue[0],law=key.slice(4);const result=await refreshHistory(env,law);
+ const key=state.queue[0],law=key.slice(4);const result=await refreshHistory(env,law,{verifyRoutes});
  state.queue.shift();state.next_at=new Date(Date.now()+INTERVAL).toISOString();state.last_law_id=law;state.last_success=result.at;
  await save(env,'history:state',JSON.stringify(state));return {...result,next_at:state.next_at};
 }

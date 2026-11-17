@@ -78,6 +78,14 @@ try{
  const n=kv.writes.length;const second=await historyTick(env);eq(second.state,'within_interval');eq(kv.writes.length,n);
 }finally{globalThis.fetch=originalFetch;}
 eq(JSON.parse(kv.map.get('history:state')).queue.length,0);
+const self=memory();self.map.set('state',original.get('state'));self.map.set('law:'+law,JSON.stringify(meta));self.map.set('revision:'+recent,JSON.stringify(meta));self.map.set('raw:'+recent,raw);
+globalThis.fetch=fetcher;
+try{
+ const proof=await tick({TAX:self,SETUP_TOKEN:env.SETUP_TOKEN});
+ eq(proof.history.authenticated_routes.json_200_and_matches,true);
+ eq(proof.history.authenticated_routes.html_200_and_matches,true);
+ eq(JSON.parse(self.map.get('history:verification')).authenticated_routes.json_200_and_matches,true);
+}finally{globalThis.fetch=originalFetch;}
 const active=memory();active.map.set('state',JSON.stringify({seeded:true,queue:[{law_info:{law_id:law},revision_info:after}],saved:0,category:0,offset:0,page_loaded:true,next_offset:null}));
 active.map.set('history:state',JSON.stringify({queue:[],next_at:new Date(Date.now()+86400000).toISOString()}));
 globalThis.fetch=async()=>new Response(xmls.get(recent));

@@ -96,7 +96,15 @@ export async function listCatalog(env, {cursor, subject, query = ''} = {}) {
 export async function tick(env) {
  let report={},collectionFailure;
  try{report=await collectTax(env);}catch(e){collectionFailure=e;}
- try{report.history=await historyTick(env);}
+ try{report.history=await historyTick(env,{verifyRoutes:async snapshot=>{
+  const headers={Authorization:'Bearer '+env.SETUP_TOKEN};
+  const endpoint='https://internal.invalid/history?law_id='+encodeURIComponent(snapshot.law_id);
+  const json=await taxWorker.fetch(new Request(endpoint,{headers}),env);
+  if(json.status!==200||JSON.stringify(await json.json())!==JSON.stringify(snapshot))throw Error('authenticated JSON readback mismatch');
+  const html=await taxWorker.fetch(new Request(endpoint,{headers:{...headers,Accept:'text/html'}}),env);
+  if(html.status!==200||await html.text()!==renderHistory(snapshot))throw Error('authenticated HTML readback mismatch');
+  return {json_200_and_matches:true,html_200_and_matches:true,method:'in-process actual handler; existing credential stays in binding/request memory; no network transmission'};
+ }});}
  catch(e){report.history={state:'failed',error:String(e).slice(0,160)};console.error(JSON.stringify({event:'tax_history_failed',error:report.history.error}));}
  if(collectionFailure)throw collectionFailure;
  return report;
@@ -107,7 +115,7 @@ async function authorized(request,env) {
   const [a,b]=await Promise.all([crypto.subtle.digest('SHA-256',enc.encode(request.headers.get('Authorization')||'')),crypto.subtle.digest('SHA-256',enc.encode('Bearer '+env.SETUP_TOKEN))]);
   const aa=new Uint8Array(a),bb=new Uint8Array(b);let mismatch=0;for(let i=0;i<aa.length;i++)mismatch|=aa[i]^bb[i];return mismatch===0;
 }
-export default {
+const taxWorker = {
   async scheduled(controller,env,ctx) {ctx.waitUntil(tick(env));},
   async fetch(request,env) {
     const path=new URL(request.url).pathname;
@@ -133,3 +141,5 @@ export default {
     return new Response('Not found',{status:404});
   }
 };
+
+export default taxWorker;
