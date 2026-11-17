@@ -5,7 +5,8 @@ await new Promise(r=>server.listen(0,'127.0.0.1',r));const origin='http://127.0.
 try{for(const width of [390,1440]){
  const context=await browser.newContext({viewport:{width,height:900}});await context.route('**/*',r=>r.request().url().startsWith(origin)?r.continue():r.abort());const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto(origin+'/site-map');await page.locator('#page-query').waitFor();assert.equal(await page.locator('#page-query').isEnabled(),true);
- const initial=await page.locator('#page-search-count').innerText();assert.ok(initial.includes('195'));
+ const initial=await page.locator('#page-search-count').innerText();assert.equal(initial,'195ページが該当');
+ await page.locator('#page-query').fill('無料計算ツール一覧ページ');assert.equal(await page.locator('#page-search-count').innerText(),'1ページが該当');assert.ok(await page.locator('#site-map-entries a[href="/calculators/"]').isVisible());await page.locator('#page-search-reset').click();
  await page.locator('#page-query').fill('太平洋 ５２３３');assert.equal(await page.locator('#site-map-entries li:visible').count(),1);assert.ok((await page.locator('#site-map-entries li:visible').innerText()).includes('太平洋'));
  await page.locator('#page-query').fill('せめんと');assert.equal(await page.locator('#site-map-entries li:visible').count(),1);
  await page.locator('#page-query').fill('nvidia 不明語');assert.equal(await page.locator('#site-map-entries li:visible').count(),0);assert.equal(await page.locator('#page-search-empty').isVisible(),true);
