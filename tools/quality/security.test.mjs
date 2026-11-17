@@ -51,3 +51,5 @@ console.log('Distinct M&A PDFs retain individual canonical targets: 2 passed');
 await import('./income-tax.test.mjs');
 
 await import('../tax/history.test.mjs');
+
+await import('../tax/xml.test.mjs');
