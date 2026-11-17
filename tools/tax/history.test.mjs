@@ -1,8 +1,9 @@
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
-import {refreshHistory,getHistory,historyTick,compareMetadata,compareXml,effectiveState,renderHistory} from './history.mjs';
+import {refreshHistory,getHistory,historyTick,compareMetadata,compareXml,effectiveState,renderHistory,japanDay} from './history.mjs';
 import worker,{classify,collectTax,tick} from './worker.mjs';
 let checks=0;const eq=(a,b)=>{assert.deepEqual(a,b);checks++;};
+eq(japanDay('2026-11-16T15:00:00Z'),'2026-11-17');eq(japanDay('2026-11-16T14:59:59Z'),'2026-11-16');
 const law='133AC0000000067',old=law+'_20170401_429AC0000000004',recent=law+'_20180401_429AC0000000004';
 const date='2026-11-17T03:20:00.000Z';
 const before={law_revision_id:old,law_title:'国税犯則取締法',amendment_enforcement_date:'2017-04-01',amendment_promulgate_date:'2017-03-31',current_revision_status:'PreviousEnforced',repeal_status:'None',amendment_type:'3'};
