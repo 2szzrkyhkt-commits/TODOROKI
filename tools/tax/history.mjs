@@ -11,6 +11,7 @@ export function effectiveState(r,asOf){
  if(!validDate(d))return '施行日未確認';
  if(d>asOf)return '未施行';
  if(['Repeal','Expire','LossOfEffectiveness'].includes(r.repeal_status))return '廃止・失効版';
+ if(r.repeal_status==='Suspend')return '停止（公式区分）';
  if(r.current_revision_status==='PreviousEnforced')return '旧版';
  if(r.current_revision_status==='CurrentEnforced')return '現行版（公式区分）';
  return '施行日到来・現行性未確認';

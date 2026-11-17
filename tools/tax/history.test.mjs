@@ -49,6 +49,7 @@ eq(fetches.length,1);for(const [k,v]of firstRecords)eq(kv.map.get(k),v);
 eq(compareXml('abc','abc').state,'identical');eq(compareXml('abc','abx').before_excerpt,'c');eq(compareXml('','abc').after_excerpt,'abc');
 eq(compareXml('abc','').before_excerpt,'abc');eq(compareXml('X'.repeat(3000),'Y'.repeat(3001)).excerpt_truncated,true);
 eq(compareMetadata({law_title:'a'},{law_title:'a'}),[]);
+eq(effectiveState({...after,repeal_status:'Suspend',current_revision_status:'CurrentEnforced'},'2026-11-17'),'停止（公式区分）');
 for(const [r,expected]of [[{amendment_enforcement_date:null},'施行日未確認'],[{amendment_enforcement_date:'2026-99-99'},'施行日未確認'],[{amendment_enforcement_date:'2026-02-30'},'施行日未確認'],[{...after,amendment_enforcement_date:'2027-01-01'},'未施行'],[{...before,current_revision_status:'CurrentEnforced'},'現行版（公式区分）'],[{...before,current_revision_status:'unknown'},'施行日到来・現行性未確認']])eq(effectiveState(r,'2026-11-17'),expected);
 for(const id of ['',null,'../state',law+'_bad']){await assert.rejects(()=>getHistory(env,id));checks++;}
 for(const data of [{...index,law_info:{law_id:'340AC0000000033'}},{...index,revisions:[before,before]},{...index,revisions:[]},{...index,revisions:[{...before,law_revision_id:'bad'}]}]){
