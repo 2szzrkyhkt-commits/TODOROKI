@@ -13,3 +13,16 @@
 /validation/**
 /migration/**
 /docs/**
+/.gitignore
+/quality-results/**
+**/.env*
+**/.dev.vars*
+**/*.pem
+**/*.key
+**/*.p12
+**/*.pfx
+**/*.sqlite*
+**/*.db
+**/*.db-*
+**/__pycache__/**
+**/*.pyc
