@@ -1,6 +1,7 @@
 import {chromium,firefox,webkit} from 'playwright';
 import AxeBuilder from '@axe-core/playwright';
 import fs from 'node:fs/promises';
+import {imageInspector} from './image-probe.mjs';
 const out='quality-results';await fs.mkdir(out,{recursive:true});
 const results={};
 function add(id,errors,evidence){const r=results[id]??={errors:[],evidence:[]};r.errors.push(...errors);r.evidence.push(evidence);}
@@ -11,13 +12,14 @@ for(const [name,engine] of Object.entries(weekly?{chromium,firefox,webkit}:{chro
  try{for(const width of [390,1440]){
  const context=await browser.newContext({viewport:{width,height:900}});
  for(const path of paths){
-  const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
+  const page=await context.newPage();const inspectImages=imageInspector(page);const errors=[];page.on('pageerror',e=>errors.push(e.message));
   try{
    const response=await page.goto('https://todoroki-gold.com'+path,{waitUntil:'domcontentloaded',timeout:30000});
-   if(!response?.ok()){add(26,[],{path,name,width,inconclusive:`HTTP ${response?.status()}`});continue;}
+   if(!response?.ok()){const evidence={path,name,width,inconclusive:`HTTP ${response?.status()}`};add(26,[],evidence);add(43,[],evidence);continue;}
    await page.waitForTimeout(1500);
    add(26,errors.map(e=>({path,name,width,error:e})),{path,name,width});
-   const ui=await page.evaluate(()=>({headers:document.querySelectorAll('header.site-header').length,nav:document.querySelectorAll('header a[href]').length,overflow:document.documentElement.scrollWidth>innerWidth+2,brokenImages:[...document.images].filter(x=>(x.currentSrc||x.getAttribute('src'))&&(!x.complete||x.naturalWidth===0)).map(x=>x.getAttribute('src'))}));
+   const images=await inspectImages();
+   const ui=await page.evaluate(()=>({headers:document.querySelectorAll('header.site-header').length,nav:document.querySelectorAll('header a[href]').length,overflow:document.documentElement.scrollWidth>innerWidth+2}));
    await page.screenshot({path:`${out}/${name}-${width}-${path.replaceAll('/','_')}.png`,fullPage:true});
    add(28,ui.headers!==1?[{path,name,width,headerCount:ui.headers}]:[],{path,name,width});
    add(29,ui.nav===0?[{path,name,width,missingNavigation:true}]:[],{path,name,width});
@@ -61,13 +63,13 @@ for(const [name,engine] of Object.entries(weekly?{chromium,firefox,webkit}:{chro
    }
    {
     add(41,ui.overflow?[{path,name,width,overflow:true}]:[],{path,name,width});
-    add(43,ui.brokenImages.map(src=>({path,name,width,src})),{path,name,width});
+    add(43,images.broken.map(({src})=>({path,name,width,src})),{path,name,width,method:'CSS-rendered images; same-origin lazy decoding; hidden assets excluded',...images,...(images.unverified.length?{inconclusive:'image verification incomplete'}:{})});
     if(weekly){
     const axe=await new AxeBuilder({page}).analyze();
     add(52,axe.violations.filter(x=>['serious','critical'].includes(x.impact)).map(x=>({path,name,width,id:x.id,nodes:x.nodes.map(n=>n.target)})),{path,name,width,incomplete:axe.incomplete.map(x=>x.id)});
     }
    }
-  }catch(e){add(26,[],{path,name,width,inconclusive:e.message});}finally{await page.close();}
+  }catch(e){add(26,[],{path,name,width,inconclusive:e.message});add(43,[],{path,name,width,inconclusive:'page inspection failed'});}finally{await page.close();}
  }
  await context.close();
  }}finally{await browser.close();}
