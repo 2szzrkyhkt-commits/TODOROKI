@@ -23,6 +23,8 @@ def digest(value):
 
 def canonical_rows(rows):
     # Sort the serialized rows, retaining duplicate rows and JSON value types.
+    rows = [{k: {'$blob_hex': v.hex()} if isinstance(v, bytes) else v
+             for k, v in row.items()} for row in rows]
     return '\n'.join(sorted(json.dumps(row, sort_keys=True, ensure_ascii=False,
                                      separators=(',', ':'), allow_nan=False)
                             for row in rows)).encode('utf-8')
@@ -90,8 +92,16 @@ def verify(raw, expected_sha256):
             for row in rows:
                 if set(row) != set(columns):
                     raise ValueError('row columns differ from schema')
-                values = [row[c] for c in columns]
-                if any(type(v) not in (str, int, float, type(None)) for v in values):
+                values = []
+                for c in columns:
+                    value = row[c]
+                    if isinstance(value, dict):
+                        if (set(value) != {'$blob_hex'} or not isinstance(value['$blob_hex'], str)
+                                or not re.fullmatch(r'(?:[0-9a-f]{2})*', value['$blob_hex'])):
+                            raise ValueError('invalid binary encoding')
+                        value = bytes.fromhex(value['$blob_hex'])
+                    values.append(value)
+                if any(type(v) not in (str, int, float, bytes, type(None)) for v in values):
                     raise ValueError('unsupported SQLite value type')
                 quoted = ','.join('"' + c + '"' for c in columns)
                 placeholders = ','.join('?' for _ in columns)
