@@ -60,3 +60,5 @@ await import('./home-cards.mjs');
 await import('./income-tax-browser.mjs');
 
 await import('./tax-history-browser.mjs');
+
+await import('./tax-course-browser.mjs');
