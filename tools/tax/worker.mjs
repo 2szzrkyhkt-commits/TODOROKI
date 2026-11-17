@@ -1,3 +1,4 @@
+import {isLawXml} from './xml.mjs';
 import {historyTick,getHistory,renderHistory} from './history.mjs';
 const BASE = 'https://laws.e-gov.go.jp/api/2';
 const CATEGORIES = ['013', '036'];
@@ -29,8 +30,7 @@ async function archive(env, law) {
   url.searchParams.set('response_format','xml');url.searchParams.set('law_full_text_format','xml');url.searchParams.set('include_attached_file_content','false');
   const response=await fetch(url,{headers:{Accept:'application/xml','User-Agent':'TODOROKI-Tax-Collector/1.0'},signal:AbortSignal.timeout(60000)});
   const raw=await bounded(response,24*1024*1024);
-  const prefix=new TextDecoder().decode(raw.subarray(0,Math.min(raw.length,10000)));
-  if (!prefix.includes('<Law') || /<Error>|<Code>[1-9]/.test(prefix)) throw new Error('invalid law XML');
+  if (!isLawXml(raw)) throw new Error('invalid law XML');
   const sha256=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',raw)),b=>b.toString(16).padStart(2,'0')).join('');
   await env.TAX.put(`raw:${rev}`,raw);
   const meta={law_id:id,revision_id:rev,title:r.law_title,subjects:classify(r.law_title),classification:'名称による仮分類・条文分類未確認',source_url:url.href,collected_at:new Date().toISOString(),sha256,bytes:raw.length,revision_info:r};
