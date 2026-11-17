@@ -94,9 +94,11 @@ export async function listCatalog(env, {cursor, subject, query = ''} = {}) {
 }
 
 export async function tick(env) {
- const report=await collectTax(env);
+ let report={},collectionFailure;
+ try{report=await collectTax(env);}catch(e){collectionFailure=e;}
  try{report.history=await historyTick(env);}
  catch(e){report.history={state:'failed',error:String(e).slice(0,160)};console.error(JSON.stringify({event:'tax_history_failed',error:report.history.error}));}
+ if(collectionFailure)throw collectionFailure;
  return report;
 }
 async function authorized(request,env) {

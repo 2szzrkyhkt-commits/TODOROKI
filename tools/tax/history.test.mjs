@@ -86,7 +86,7 @@ try{
  eq(JSON.parse(active.map.get('law:'+law)).revision_id,recent);eq(JSON.parse(active.map.get('state')).category,1);
  const fail=memory();fail.map.set('state',JSON.stringify({seeded:true,queue:[{law_info:{law_id:law},revision_info:after}],saved:0,category:0,offset:0,page_loaded:true,next_offset:null}));
  globalThis.fetch=async()=>new Response('',{status:503});
- await assert.rejects(()=>tick({TAX:fail}));checks++;eq(JSON.parse(fail.map.get('state')).queue.length,1);eq(fail.map.has('history:state'),false);
+ await assert.rejects(()=>tick({TAX:fail}));checks++;eq(JSON.parse(fail.map.get('state')).queue.length,1);eq(fail.map.has('history:state'),false);eq(fail.reads.includes('history:state'),true);
 }finally{globalThis.fetch=originalFetch;}
 await import('node:fs/promises').then(async fs=>{await fs.mkdir('quality-results',{recursive:true});await fs.writeFile('quality-results/tax-history-fixture.html',html);});
 console.log('T21 history: '+checks+' assertions passed; synthetic XML fixture, official-style revision metadata, namespace preservation, readback, bounds, dates, authenticated JSON/HTML and cadence.');
