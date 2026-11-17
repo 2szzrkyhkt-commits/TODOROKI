@@ -57,3 +57,5 @@ await import('../tax/xml.test.mjs');
 await import('./tax-course.test.mjs');
 
 await import('./page-search.test.mjs');
+
+await import('./gasoline-dates.test.mjs');

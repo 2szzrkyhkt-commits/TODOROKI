@@ -64,3 +64,5 @@ await import('./tax-history-browser.mjs');
 await import('./tax-course-browser.mjs');
 
 await import('./page-search-browser.mjs');
+
+await import('./gasoline-dates-browser.mjs');
