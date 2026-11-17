@@ -73,3 +73,6 @@ for(const [name,engine] of Object.entries(weekly?{chromium,firefox,webkit}:{chro
  }}finally{await browser.close();}
 }
 await fs.writeFile(out+'/browser.json',JSON.stringify(results,null,2));
+
+// Assert the changed source as well as observing the currently deployed pages.
+await import('./footer-contrast.mjs');
