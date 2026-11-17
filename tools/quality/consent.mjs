@@ -66,3 +66,5 @@ await import('./tax-course-browser.mjs');
 await import('./page-search-browser.mjs');
 
 await import('./gasoline-dates-browser.mjs');
+
+await import('./economy-reading-browser.mjs');

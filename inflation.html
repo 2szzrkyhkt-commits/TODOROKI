@@ -137,7 +137,8 @@ html{scroll-behavior:smooth}
 @media(max-width:600px){.basics-related{padding:20px}}
 </style>
 <link rel="stylesheet" href="/assets/navigation.css"><link rel="stylesheet" href="/assets/language-picker.css"><link rel="stylesheet" href="/assets/site-header.css"><script src="/assets/language-picker.js" defer></script>
-<link rel="stylesheet" href="/assets/site-quality.css"></head>
+<link rel="stylesheet" href="/assets/site-quality.css"><style id="reading-worked-styles">.reading-worked{margin:36px 0;padding:20px;border:1px solid #655027;border-radius:12px;background:#12110d;overflow-wrap:anywhere}.reading-worked h2{margin-top:0}.reading-worked .table-wrap{overflow-x:auto;max-width:100%}.reading-worked table{border-collapse:collapse;min-width:480px;width:100%;font-size:15px}.reading-worked th,.reading-worked td{padding:12px;text-align:left;border-bottom:1px solid #5b513b}.reading-worked caption{text-align:left;font-weight:bold;margin-bottom:10px}.reading-worked a{color:#f0cf81;text-decoration:underline;text-underline-offset:3px}.reading-worked :focus-visible{outline:3px solid #fff;outline-offset:3px}.reading-worked li{margin:12px 0}.reading-worked .review-date{font-size:14px;color:#c8c2b5}@media(max-width:480px){.reading-worked{padding:14px}.reading-worked h2{font-size:21px}}</style>
+</head>
 <body><a class="skip-link" href="#article-top">本文へ移動</a>
   <header class="site-header">
   <div class="wrap brand-row">
@@ -255,7 +256,21 @@ html{scroll-behavior:smooth}
       インフレ時代に守るべきものは、お金の額面だけではない。
       そのお金で買える価値である。
     </div>
-  <a href="https://line.me/R/share"
+  <section class="reading-worked" id="worked-reading" aria-labelledby="worked-title">
+<h2 id="worked-title">自分の購買力を確かめる：額面・金利・物価を分ける</h2>
+<p class="review-date">計算例・読解手順の追記：2026年11月17日。以下はTODOROKIの仮定例で、現在の預金金利や将来の物価の予測ではありません。</p>
+<p>元金をP、毎年一定の預金金利をr、毎年一定の物価上昇率をp、年数をnとすると、年1回複利の税引前残高はP×(1＋r)<sup>n</sup>、開始時点の価格で表した購買力はP×{(1＋r)÷(1＋p)}<sup>n</sup>です。税金・手数料・途中の入出金は含めません。</p>
+<div class="table-wrap" role="region" aria-label="100万円の購買力の仮定比較" tabindex="0"><table>
+<caption>元金100万円・10年間・物価年3％という仮定</caption>
+<thead><tr><th scope="col">預金金利</th><th scope="col">10年後の額面</th><th scope="col">開始時点の価格での購買力</th></tr></thead>
+<tbody><tr><th scope="row">年0％</th><td>1,000,000円</td><td>約744,094円</td></tr><tr><th scope="row">年1％</th><td>約1,104,622円</td><td>約821,943円</td></tr><tr><th scope="row">年3％</th><td>約1,343,916円</td><td>1,000,000円</td></tr></tbody></table></div>
+<p>各値は式から計算して最後に1円へ四捨五入しています。金利年1％の例では額面は増えても、物価年3％に追いつかず購買力は減ります。同率の例も税引前の仮定なので、実際の手取りが物価に追いつくと保証するものではありません。</p>
+<h3>全国CPIと自分の家計は、分けて読む</h3>
+<p><a href="https://www.stat.go.jp/data/cpi/4-1.htm">総務省統計局のCPIの解説</a>では、品目ごとの価格の動きを支出割合で加重して指数を作ります。自分の食費・住居費などの比率が同じとは限りません。</p>
+<ol><li>家計簿で、同じ品目・数量の支払いがどう変わったかを確認する。</li><li>買う量が増えた影響と、単価の上昇を分ける。</li><li>預金の利息は税引後の受取額で確かめ、物価の対象期間をそろえる。</li><li>運用商品の値上がり予想と、生活費に必要な現金を分けて考える。</li></ol>
+<p>物価の見方から借入・株価への影響へ進むなら<a href="/interest-rate#worked-reading">金利の計算例</a>、補助金の資金計画へ進むなら<a href="/government-subsidies#worked-reading">補助額と立替資金の比較</a>、政策で店頭価格が変わる例なら<a href="/gasoline-subsidy-outlook-2026#reading-dates">ガソリン価格の時点の読み方</a>へ。別の用語や記事は<a href="/site-map">記事検索</a>から探せます。</p>
+</section>
+<a href="https://line.me/R/share"
    target="_blank"
    rel="noopener noreferrer"
    onclick="this.href='https://line.me/R/share?text='+encodeURIComponent(document.title+'\n'+location.href)"
