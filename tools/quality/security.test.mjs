@@ -55,3 +55,5 @@ await import('../tax/history.test.mjs');
 await import('../tax/xml.test.mjs');
 
 await import('./tax-course.test.mjs');
+
+await import('./page-search.test.mjs');
