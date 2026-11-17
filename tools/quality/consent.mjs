@@ -75,3 +75,4 @@ await import('./behavior-evidence-browser.mjs');
 await import('./indicator-examples-browser.mjs');
 
 await import('./momentum-examples-browser.mjs');
+await import('./donchian-examples-browser.mjs');
