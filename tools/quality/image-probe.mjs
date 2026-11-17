@@ -18,11 +18,11 @@ export function imageInspector(page,{timeoutMs=2000,budgetMs=10000,maxImages=100
    if(index>=maxImages){result.unverified.push({reason:'image_limit',count:images.length-index});break}
    let state=await img.evaluate(e=>{
     let hidden=false;for(let p=e;p;p=p.parentElement){const s=getComputedStyle(p);if(s.display==='none'||s.visibility==='hidden'||s.visibility==='collapse'){hidden=true;break}}
-    return {hidden,src:e.currentSrc||e.getAttribute('src')||'',complete:e.complete,naturalWidth:e.naturalWidth};
+    return {hidden,src:e.currentSrc||e.getAttribute('src')||'',attributeSrc:e.getAttribute('src'),complete:e.complete,naturalWidth:e.naturalWidth};
    });
    if(state.hidden){result.excludedHidden++;continue}
    const inline=state.src.startsWith('data:');
-   const src=inline?'inline-image':state.src;
+   const src=inline?'inline-image':state.attributeSrc||state.src;
    if(!src){result.unverified.push({reason:'unselected_source'});continue}
    let target;try{target=new URL(state.src,page.url())}catch{result.unverified.push({src,reason:'invalid_source'});continue}
    const own=target.origin===new URL(page.url()).origin;
