@@ -72,3 +72,4 @@ await import('./economy-reading-browser.mjs');
 await import('./contextual-links-browser.mjs');
 
 await import('./behavior-evidence-browser.mjs');
+await import('./indicator-examples-browser.mjs');
