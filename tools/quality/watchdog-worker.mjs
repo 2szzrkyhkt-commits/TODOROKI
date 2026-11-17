@@ -1,13 +1,24 @@
 // Deploy separately; never attach to the production website or its D1 database.
 // Required secret: GITHUB_TOKEN (fine-grained Actions read only).
 // Required binding: STATE (KV). Optional: ALERT_WEBHOOK (secret).
+const MAX_AGE_MS=3*3600000;
+function fresh(at){
+ const age=Date.now()-Date.parse(at);
+ return typeof at==='string'&&Number.isFinite(age)&&age>=0&&age<MAX_AGE_MS;
+}
+function failureMessage(error){
+ const message=typeof error?.message==='string'?error.message:'';
+ // Never persist/rethrow arbitrary upstream errors, which may contain a URL or token.
+ return /^(watchdog (site HTTP \d{3}|scheduled audit stale|GitHub read \d{3}|GitHub response invalid)|notification \d{3}|ALERT_WEBHOOK not configured; notification not delivered|upstream (HTTP \d{3}|timeout|network error))$/.test(message)?message:'watchdog execution failed';
+}
 export default {
  async scheduled(event,env,ctx){ctx.waitUntil(scheduledAudit(env));},
  async fetch(request,env){
   if(new URL(request.url).pathname!=='/health')return new Response('Not found',{status:404});
-  const value=await env.STATE.get('heartbeat','json');
-  const fresh=value&&Date.now()-Date.parse(value.at)<3*3600000;
-  return Response.json({at:value?.at||null,ok:Boolean(fresh&&value.ok)},{status:fresh&&value.ok?200:503,headers:{'Cache-Control':'no-store'}});
+  let value;
+  try{value=await env.STATE.get('heartbeat','json');}catch{value=null;}
+  const ok=fresh(value?.at)&&value?.ok===true;
+  return Response.json({at:typeof value?.at==='string'?value.at:null,ok},{status:ok?200:503,headers:{'Cache-Control':'no-store'}});
  }
 };
 export async function check(env){
@@ -15,8 +26,9 @@ export async function check(env){
  const res=await retryFetch(url,{headers:{Authorization:`Bearer ${env.GITHUB_TOKEN}`,'User-Agent':'TODOROKI-audit-watchdog','Accept':'application/vnd.github+json'}});
  if(!res.ok)throw new Error(`watchdog GitHub read ${res.status}`);
  const {workflow_runs:runs}=await res.json();
- const latest=runs.find(r=>r.conclusion==='success');
- const stale=!latest||Date.now()-Date.parse(latest.updated_at)>3*3600000;
+ if(!Array.isArray(runs))throw new Error('watchdog GitHub response invalid');
+ const latest=runs.find(r=>r.event==='schedule'&&r.head_branch==='main'&&r.status==='completed'&&r.conclusion==='success');
+ const stale=!latest||!fresh(latest.updated_at);
  const key=stale?'scheduled-audit-stale':'healthy';
  const prior=await env.STATE.get('status');
  // A separate monitor is essential; this worker cannot detect its own suspension.
@@ -26,6 +38,7 @@ export async function check(env){
   if(!sent.ok)throw new Error(`notification ${sent.status}`);
  }
  await env.STATE.put('status',key);
+ return {ok:!stale,state:key};
 }
 
 export async function retryFetch(url,options={},sleep=ms=>new Promise(r=>setTimeout(r,ms))){
@@ -42,13 +55,21 @@ export async function scheduledAudit(env){
  try{
   const response=await retryFetch('https://todoroki-gold.com/',{redirect:'follow'});
   await env.STATE.put('site-latest',JSON.stringify({at,status:response.status,ok:response.ok}));
-  await check(env);
+  const audit=await check(env);
+  if(!response.ok)throw new Error(`watchdog site HTTP ${response.status}`);
+  if(!audit.ok)throw new Error('watchdog scheduled audit stale');
   await env.STATE.put('heartbeat',JSON.stringify({at,ok:true}));
  }catch(e){
-  const prior=JSON.parse(await env.STATE.get('failures')||'[]');
-  prior.push({at,error:String(e.message).slice(0,160)});
-  await env.STATE.put('failures',JSON.stringify(prior.slice(-30)));
-  await env.STATE.put('heartbeat',JSON.stringify({at,ok:false}));
-  throw e;
+  const message=failureMessage(e);
+  // Record failure before history; corrupt/unavailable history must not leave a healthy heartbeat.
+  try{await env.STATE.put('heartbeat',JSON.stringify({at,ok:false}));}catch{}
+  try{
+   const stored=JSON.parse(await env.STATE.get('failures')||'[]');
+   const prior=Array.isArray(stored)?stored:[];
+   prior.push({at,error:message});
+   await env.STATE.put('failures',JSON.stringify(prior.slice(-30)));
+  }catch{}
+  // Storage failures still reject the scheduled execution, without leaking provider diagnostics.
+  throw new Error(message);
  }
 }
