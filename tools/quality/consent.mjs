@@ -68,3 +68,5 @@ await import('./page-search-browser.mjs');
 await import('./gasoline-dates-browser.mjs');
 
 await import('./economy-reading-browser.mjs');
+
+await import('./contextual-links-browser.mjs');
