@@ -81,13 +81,13 @@ class NotificationTests(unittest.TestCase):
    try:
     os.chdir(d)
     with patch.dict(os.environ,{'GITHUB_REPOSITORY':'fixture/repo','GITHUB_RUN_ID':'1'}),patch('subprocess.check_output',return_value=json.dumps(issues)),patch('subprocess.run') as send:
-     runpy.run_path(str(script));return send.call_count
+     runpy.run_path(str(script),run_name='__main__');return send.call_count
    finally:os.chdir(cwd)
  def test_healthy_sends_nothing(self):self.assertEqual(self.exercise({},[]),0)
  def test_same_open_finding_sends_nothing(self):
-  self.assertEqual(self.exercise({'fixture-key':{'id':'TQ01','detail':'fixture'}},[{'body':'<!-- todoroki-quality:fixture-key -->'}]),0)
+  self.assertEqual(self.exercise({'aaaaaaaaaaaaaaaaaaaaaaaa':{'id':'TQ01','detail':'fixture'}},[{'body':'<!-- todoroki-quality:aaaaaaaaaaaaaaaaaaaaaaaa -->'}]),0)
  def test_new_finding_sends_once(self):
-  self.assertEqual(self.exercise({'fixture-key':{'id':'TQ01','detail':'fixture'}},[]),1)
+  self.assertEqual(self.exercise({'aaaaaaaaaaaaaaaaaaaaaaaa':{'id':'TQ01','detail':'fixture'}},[]),1)
 
 class AdvertisingExclusionTests(unittest.TestCase):
  def test_ad_endpoint_never_requested(self):
