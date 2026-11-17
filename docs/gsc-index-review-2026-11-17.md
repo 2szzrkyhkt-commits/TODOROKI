@@ -1,6 +1,38 @@
-# GSC検索掲載の精査 — 2026-11-17
+# GSC検索掲載の精査とサイトマップ24件補完 — 2026-11-17
 
 既存TODO T02の継続。sc-domain:todoroki-gold.comの所有者管理画面を読み取り、必要な公開テストと登録依頼を実施した。新しいTODO・予約・広告設定は作らない。
+
+## 実装した修正：サイトマップの掲載漏れ24件
+
+最新mainのGit tree全件（truncated=false）と公開チェックを照合し、indexable HTML195件に対してsitemap.xmlが171件しかない問題を検出した。欠落24ファイルすべての現行main本文を取得し、noindexでないことと正しい自己canonicalを確認した。既存171 URLを維持して24 URLを追加し195件へ補完する。lastmodは推測して追加しない。login/pdf-viewerの意図的noindexは除外したまま。全195件の想定URLとの集合一致と重複0を検証した。
+
+追加対象：
+- /advantest-6857-earnings-analysis-2026
+- /agi
+- /ai-gold-rush-bits-atoms
+- /arbitrage-trading
+- /behavioral-economics
+- /fujikura-earnings-analysis-2026
+- /furukawa-electric-5801-earnings-2026
+- /government-owned-shares
+- /jt-russia-earnings-analysis-2026
+- /kioxia-earnings-analysis-2026
+- /kokusai-electric-6525-earnings-2026
+- /ngk-5333-valuation-2026-nov
+- /olympus-7733-earnings-2026
+- /recruit-6098-earnings-2026
+- /regulatory-capture-explained
+- /renesas-earnings-analysis-2026
+- /rohm-6963-earnings-2026
+- /sk-kaken-earnings-analysis-2026
+- /softbank-group-9984-earnings-2026
+- /starts-8850-earnings-2026
+- /sumitomo-electric-earnings-2026
+- /sumitomo-metal-mining-5713-earnings-2026
+- /taiheiyo-cement-5233-valuation-2026-nov
+- /tax-study
+
+publication.pyにindexable HTML sitemap coverage検査を追加し、新しい公開記事のサイトマップ掲載漏れをCIで失敗させる。非公開/noindexを機械的に追加しない。単なるsitemap内URLの同一オリジン検査では検出できなかった欠落を補う。
 
 ## 管理画面で確認した現在の集計
 
@@ -27,7 +59,7 @@
 
 現在mainのworker.jsではいずれも既存RETIRED_SALES_PATHSの対象で、410/noindex/no-storeを返す実装。決済・ダウンロードを起動せずGETだけを監査対象にする。古いGSCの400/401を現在の記事障害と解釈しない。既存の認証・販売終了処理を変更しない。
 
-この3経路の本番410/noindex・両サイトマップ非掲載をpublication.pyの読取監査へ追加した。HTTPErrorで失われていたX-Robots-Tagの証拠を保持し、403等の取得不能は合格でなくinconclusiveのまま。GETが200へ戻る・noindex欠落・サイトマップ混入を検出する。新規2テストを含むpublicationの9テスト成功。終了済みAPIを検索へ戻す修正はしない。
+この3経路の本番410/noindex・両サイトマップ非掲載をpublication.pyの読取監査へ追加した。HTTPErrorで失われていたX-Robots-Tagの証拠を保持し、403等の取得不能は合格でなくinconclusiveのまま。GETが200へ戻る・noindex欠落・サイトマップ混入を検出する。新規3テストを含むpublicationの10テスト成功。終了済みAPIを検索へ戻す修正はしない。
 
 ## 公開記事の実行結果
 

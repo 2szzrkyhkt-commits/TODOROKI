@@ -38,7 +38,7 @@ def run(root=ROOT,live=False,reader=read_public):
  def add(name,ok,**evidence):checks.append({'check':name,'state':'passed' if ok else 'failed',**evidence})
  ads=(root/'ads.txt').read_text();add('ads.txt authorized publisher',ads_authorized(ads))
  sitemaps={name:sitemap_urls((root/name).read_text()) for name in ('sitemap.xml','sitemap-pdfs.xml')}
- noindex=[];indexable=[];missing_consent=[];canonical_errors=[];ad_errors=[]
+ noindex=[];indexable=[];missing_consent=[];canonical_errors=[];ad_errors=[];indexable_urls=set()
  for p in root.rglob('*.html'):
   if any(x in p.parts for x in ('.git','node_modules','quality-results')):continue
   rel=p.relative_to(root).as_posix();text=p.read_text();policy=index_policy(text)
@@ -51,10 +51,12 @@ def run(root=ROOT,live=False,reader=read_public):
   indexable.append(rel)
   if '/assets/privacy-controls.js' not in text:missing_consent.append(rel)
   expected=ORIGIN+('/' if rel=='index.html' else '/'+rel[:-10] if rel.endswith('/index.html') else '/'+rel[:-5])
+  indexable_urls.add(expected)
   if policy['canonical']!=[expected]:canonical_errors.append(rel)
  for rel in noindex:
   clean=rel[:-5];url=ORIGIN+('/' if clean=='index' else '/'+clean)
   if url in sitemaps['sitemap.xml']:canonical_errors.append(rel)
+ add('indexable HTML sitemap coverage',not (indexable_urls-sitemaps['sitemap.xml']),indexable_count=len(indexable_urls),missing_urls=sorted(indexable_urls-sitemaps['sitemap.xml']))
  add('advertising publisher and consent-only loading',not ad_errors,errors=ad_errors,scope='source placement; Auto ads settings and actual delivery require AdSense owner')
  add('indexable pages use consent loader',not missing_consent,pages=len(indexable),missing=missing_consent)
  add('noindex policy and canonical inventory',not canonical_errors,noindex_pages=sorted(noindex),errors=canonical_errors,scope='source policy, not GSC exclusion reasons')

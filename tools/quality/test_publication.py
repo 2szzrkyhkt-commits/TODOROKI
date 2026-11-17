@@ -15,7 +15,7 @@ class PublicationTests(unittest.TestCase):
   with tempfile.TemporaryDirectory() as d:
    root=Path(d);(root/'ads.txt').write_text(ADS)
    (root/'index.html').write_text('<link rel="canonical" href="'+ORIGIN+'/"><script src="/assets/privacy-controls.js"></script>')
-   for n in ('sitemap.xml','sitemap-pdfs.xml'):(root/n).write_text('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"/>')
+   for n in ('sitemap.xml','sitemap-pdfs.xml'):(root/n).write_text('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>'+ORIGIN+'/</loc></url></urlset>')
    r=run(root,True,lambda p:{'status':403,'inconclusive':True})
    self.assertEqual(sum(x['state']=='inconclusive' for x in r['checks']),45)
    self.assertFalse(any(x['state']=='failed' for x in r['checks']))
@@ -42,6 +42,7 @@ class PublicationTests(unittest.TestCase):
    (root/'section').mkdir()
    for name,url in [('index.html','/'),('section/index.html','/section/'),('global-index.html','/global-index')]:
     (root/name).write_text('<link rel="canonical" href="'+ORIGIN+url+'"><script src="/assets/privacy-controls.js"></script>')
+   (root/'sitemap.xml').write_text('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+ORIGIN+u+'</loc></url>' for u in ['/','/section/','/global-index'])+'</urlset>')
    self.assertTrue(all(x['state']=='passed' for x in run(root)['checks']))
 
  def test_direct_ad_loader_and_wrong_publisher_are_rejected(self):
@@ -73,3 +74,14 @@ class PublicationTests(unittest.TestCase):
    self.assertEqual([x['state'] for x in retired({'status':403,'inconclusive':True})],['inconclusive']*3)
    (root/'sitemap.xml').write_text('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>'+ORIGIN+'/api/checkout</loc></url></urlset>')
    self.assertEqual(retired()[0]['state'],'failed')
+
+ def test_indexable_pages_missing_from_sitemap_are_detected(self):
+  with tempfile.TemporaryDirectory() as d:
+   root=Path(d);(root/'ads.txt').write_text(ADS)
+   for n in ('sitemap.xml','sitemap-pdfs.xml'):(root/n).write_text('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"/>')
+   (root/'article.html').write_text('<link rel="canonical" href="'+ORIGIN+'/article"><script src="/assets/privacy-controls.js"></script>')
+   (root/'private.html').write_text('<meta name="robots" content="noindex">')
+   c=next(x for x in run(root)['checks'] if x['check']=='indexable HTML sitemap coverage')
+   self.assertEqual(c['state'],'failed');self.assertEqual(c['missing_urls'],[ORIGIN+'/article']);self.assertEqual(c['indexable_count'],1)
+   (root/'sitemap.xml').write_text('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>'+ORIGIN+'/article</loc></url></urlset>')
+   self.assertEqual(next(x for x in run(root)['checks'] if x['check']=='indexable HTML sitemap coverage')['state'],'passed')
