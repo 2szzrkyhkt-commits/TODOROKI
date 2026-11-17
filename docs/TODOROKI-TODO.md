@@ -758,3 +758,18 @@ SitesはプロジェクトIDを原本一覧と照合し、全11件のDB概要を
 - quality-historyのhistory/43950687015-1.jsonをGitHubから読み戻し、execution.event=schedule、run_id=43950687015、run_attempt=1、監査時刻とsource_commitがログに一致。最新latest.jsonも読取し、push実行の記録になっていてもlast_scheduled_auditが同じ予約ID/時刻を保持することを確認した。latestだけを見て予約0件と判定しない。
 - 実行成功は監査の全検査正常を意味しない。保存結果にも実機未確認・未実装検査などのlimitationsが残る。通知判定ステップsuccessを外部通知の実配信成功と読み替えない。62項目原典との照合、未実装検査、iPhone実機、独立watchdog等は別の残作業としてT03を未完了維持。全プロジェクト通知のT45にもチェックしない。
 - 今回は読取と既存TODOへの証拠追記のみ。予約監査を再実装せず、既存10件の実動作証拠を回収した。次の独立作業はT03の未完了検査を正本と照合して進める。Google結果待ちでT02の同じ登録依頼を繰り返さない。
+
+
+## 2026-11-17 T03継続：6言語トップ・PDF一覧のフッター可読性を改善
+
+- 開始：完了18件／未完了27件。T03の一部修正であり、全62項目の完了チェックは付けない。
+- 直近quality-historyで検出されていた6言語トップと/pdf-libraryのフッターの文字・方針リンクを対象に、共通CSS assets/footer-accessibility.cssを追加。背景#080808・文字#b8b8b8・通常リンク#e5c778とし、キーボード選択時の下線/白2px輪郭を追加。既存のインライン金色リンク・本文・広告・カードの機能は維持。既存定期タスク3件・Cron・AdSense・認証・権限・費用を変更していない。
+- PR #40 https://github.com/2szzrkyhkt-commits/TODOROKI/pull/40 。実装ac1281333b5a5b1c7af4a172cf50f167c04692b4、最終head9046d74e930e7bc35f04171c6a5444472b53897f、マージ84981dea6f61888c220cfc59b15e589a0f7381ec。PR時の通常監査は変更前の本番を読むため、PRソースの隔離HTTP検査を別途必須化。7ページ×390/1440幅の14ケースでaxe color-contrastのviolations/incompleteがともに0。GitHub Actions44005795151/job133780724625はsuccess、Python30テスト等既存検証も成功。初回はJavaScript無効化と検査エンジンの競合で中断し、検査用JavaScriptを有効にしてページスクリプト/外部通信を遮断する方式へ修正後に成功した。検査基準を緩めていない。
+- 本番build9f3ccc35-34fd-4d0c-b2b0-9e6ab343ac0fはmerge84981deaを対象にsuccess、2026-11-17T02:53:57.607Z（11:53 JST）完了。deployment23807360-260e-4123-a732-943073fe379c、version a205d28d-76bf-4968-b4b0-d3257721fc8eを100%配備。既存GitHub連携による公開で、本体のbindings/settingsを直接上書きしていない。
+- 読み込み完了後の本番7ページ（/、/en/、/es/、/pt/、/zh-Hans/、/zh-Hant/、/pdf-library）で背景rgb(8,8,8)・文字rgb(184,184,184)、方針リンクrgb(229,199,120)への反映を実確認。ナビゲーション直後はCSS未適用の瞬間があったため、読み込み完了後の値で確認した。隔離PDF画面ではキーボード選択時の下線と白2px輪郭も確認済み。iPhone実機は未確認。14ケースはフッター色に限定した検証であり、全画面のアクセシビリティ合格を意味しない。
+- PRプレビュービルド071ed1f4-af25-4115-9014-382bdb1e1637は、既存wrangler設定にpreviewsブロックがないため失敗。本番ビルド成功とは別に記録。本番D1をプレビューへ接続して解消する変更は行わない。
+- T41の独立読取も試行。workers/account-settingsは取得できdefault_usage_model=standardだったが、subscriptions/billable-usageはHTTP403。前者は現行OAuthではBilling Readが提供されず、後者も許可されていない。権限を追加せず、無料枠の実消費/契約/請求は未確認としてT41を未完了維持。standardだけから無料/有料や費用0円と断定しない。
+
+- 反映後のmain監査44006186662/job133782008678もsuccess。2026-11-17T02:55:45.622505Z（11:55 JST）の本番公開52チェックは全件passed。隔離フッター14ケースも再成功。本番ブラウザ13ページ×2幅の26ケースで記録されたフッター色検査はerrors0/incomplete0。ただしフッターに限定した日次検査であり、全画面ARIA/フォーカスや62項目全体の合格ではない。暫定TQ52は「一部完了」のまま。
+- quality-history/latest.jsonを読み戻し、execution.event=push、run_id=44006186662、source_commit=84981dea6f61888c220cfc59b15e589a0f7381ec、監査時刻02:55:45.736937Zを照合。保存コミット876a605f30562a4ac336e1157b1a35a90714409a。last_scheduled_auditは43950687015（11/17 05:33 JST）を保持しており、今回のpush成功を新しい予約実行成功へ数えない。
+- 終了：完了18件／未完了27件。今回新規完了チェック0件。T03の残りは原典62項目との対応、フッター以外の全体アクセシビリティ、実機、未実装検査等。Google側結果待ちのT02・権限依存のT41を繰り返し調査せず、次の独立候補はT22（税額計算ツールの検証）。対象実装と出典・年度・検証範囲を確定してから実施し、検証のみで全税法機能完了とはしない。
