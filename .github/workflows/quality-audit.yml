@@ -41,6 +41,7 @@ jobs:
           node tools/quality/security.test.mjs
           python tools/quality/source-restore.py
           python tools/quality/publication.py
+          python tools/quality/t04_scope.py
       - name: Support collection policy and isolation regressions
         working-directory: tools/japan-support
         run: node test.mjs
@@ -81,6 +82,7 @@ jobs:
         run: |
           if [ "$MODE" != hourly ] && [ "$GITHUB_EVENT_NAME" != pull_request ]; then
             python tools/quality/publication.py --live
+            python tools/quality/t04_scope.py --live
           fi
           if [ "$GITHUB_EVENT_NAME" = pull_request ]; then
             python tools/quality/audit.py --offline --mode "$MODE"
