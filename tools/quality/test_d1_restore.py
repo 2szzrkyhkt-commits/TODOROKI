@@ -38,6 +38,19 @@ class RestoreTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             m.verify(b'{}', '0' * 64)
 
+    def test_binary_values_and_empty_binary_are_preserved(self):
+        for value in ['00ff1020', '']:
+            obj = self.fixture()
+            obj['schema'][0]['sql'] = 'CREATE TABLE parent(id TEXT PRIMARY KEY, value BLOB)'
+            obj['tables'][0]['rows'][0]['value'] = {'$blob_hex': value}
+            self.assertEqual(self.verify(obj)['integrity_check'], 'ok')
+
+    def test_invalid_binary_encodings_are_rejected(self):
+        for value in [{'$blob_hex': 'f'}, {'$blob_hex': 'FG'}, {'$blob_hex': 3},
+                      {'$blob_hex': '', 'extra': 'untrusted'}]:
+            obj = self.fixture(); obj['tables'][0]['rows'][0]['value'] = value
+            with self.assertRaises(ValueError): self.verify(obj)
+
     def test_changed_bookmark(self):
         obj = self.fixture(); obj['bookmark_after'] = 'new'
         with self.assertRaises(ValueError): self.verify(obj)
