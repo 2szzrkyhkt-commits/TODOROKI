@@ -16,3 +16,5 @@ const promises=[];await c.handler.scheduled({scheduledTime:Date.UTC(2026,10,14,3
 assert.equal((await c.handler.fetch()).status,200);console.log('PASS source policy, bounded payload, disabled collection, unchanged public denial, internal RPC, existing tax cadence and isolated support failure');
 
 await import('./jgrants.test.mjs');
+
+await import("./jgrants-monitor.test.mjs");

@@ -1,8 +1,9 @@
+import {monitorJgrants} from './jgrants-monitor.js';
 async function boundedText(res){const reader=res.body.getReader();const chunks=[];let size=0;try{for(;;){const {done,value}=await reader.read();if(done)break;size+=value.length;if(size>2000000)throw Error('body_too_large');chunks.push(value);}}finally{await reader.cancel().catch(()=>{});}const bytes=new Uint8Array(size);let offset=0;for(const c of chunks){bytes.set(c,offset);offset+=c.length;}return new TextDecoder().decode(bytes);}
 export const ATTRIBUTION='出典：Jグランツ。このコンテンツは、政府公式の補助金申請システムjGrantsのWeb-API機能を利用して取得した情報をもとにTODOROKIが整理したものです。内容は日本国政府及び自治体によって保証されたものではありません。';
 export const KEYWORDS=['補助','助成','支援','給付','奨学','減免','融資','交付'];
 export function normalize(row,now){if(!row||typeof row.id!=='string'||! /^[A-Za-z0-9]{1,18}$/.test(row.id)||typeof row.title!=='string'||!row.title.trim())throw Error('invalid_subsidy');return {id:row.id,title:row.title,region:row.target_area_search??null,maximum:row.subsidy_max_limit??null,start:row.acceptance_start_datetime??null,end:row.acceptance_end_datetime??null,institution:row.institution_name??null,employees:row.target_number_of_employees??null,source_url:'https://www.jgrants-portal.go.jp/subsidy/'+row.id,acquired_at:now,verification:'pending',attribution:ATTRIBUTION};}
-export async function runJgrants(env){
+async function runJgrantsCore(env){
  if(env.COLLECTION_ENABLED!=='true')return {status:'disabled'};
  const db=env.DB,now=new Date().toISOString();
  // A bounded persistence step. Snapshot is retained so execution can resume without re-fetching.
@@ -15,3 +16,14 @@ export async function runJgrants(env){
 }
 export async function readSubsidies(db,q=''){return db.prepare('SELECT record_json FROM jgrants_catalog WHERE title LIKE ? ORDER BY title LIMIT 100').bind('%'+q.slice(0,100)+'%').all();}
 
+
+// Observe the stored job after its fetch/persistence step; do not hide its failure.
+export async function runJgrants(env){
+ if(env.COLLECTION_ENABLED!=='true')return {status:'disabled'};
+ let result,error;
+ try{result=await runJgrantsCore(env);}catch(e){error=e;}
+ let monitor;
+ try{monitor=await monitorJgrants(env,KEYWORDS);}catch{monitor={status:'failed',code:'jgrants_monitor_storage_failed'};}
+ if(error)throw error;
+ return {...result,monitor};
+}
