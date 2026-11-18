@@ -63,6 +63,20 @@ export async function monitorStored(env,clock=new Date()) {
  const sourceMap=new Map(),states=[];
  for(const s of sources.results){const state=sourceState(s,clock,env.COLLECTION_ENABLED==='true');state.pendingChanges=Number(pending.results.find(r=>r.source_id===s.id)?.count||0);sourceMap.set(s.id,state);states.push(['source:'+s.id,state]);}
  for(const p of programs.results)states.push(['program:'+p.id,programState(p,clock,sourceMap.get(p.source_id))]);
+ await saveMonitorStates(db,states,now);
+ return {version:1,status:'saved',checkedAt:now,sources:sources.results.length,programs:programs.results.length,updateStopped:states.filter(([,s])=>s.status==='update_stopped').length,ended:states.filter(([,s])=>s.lifecycle==='ended').length,unconfirmed:states.filter(([,s])=>s.lifecycle==='unconfirmed').length};
+}
+export async function collectAndMonitor(env) {
+ let result,error;
+ try {result=await collectDue(env);}catch(e){error=e;}
+ let monitor;
+ try {monitor=await monitorStored(env);}catch {monitor={version:1,status:'failed',code:'monitor_storage_failed'};}
+ if(error)throw error;
+ return {...result,monitor};
+}
+
+// Shared transition persistence; callers provide only sanitized monitoring metadata.
+export async function saveMonitorStates(db,states,now) {
  const writes=[];
  for(const [key,state] of states){
   const json=JSON.stringify(state);
@@ -73,14 +87,5 @@ export async function monitorStored(env,clock=new Date()) {
  }
  // At most 40 entities per transaction to bound each write batch. Each entity
  // remains atomic; a later chunk failure is reported, never a successful scan.
- for(let i=0;i<writes.length;i+=80)await db.batch(writes.slice(i,i+80));
- return {version:1,status:'saved',checkedAt:now,sources:sources.results.length,programs:programs.results.length,updateStopped:states.filter(([,s])=>s.status==='update_stopped').length,ended:states.filter(([,s])=>s.lifecycle==='ended').length,unconfirmed:states.filter(([,s])=>s.lifecycle==='unconfirmed').length};
-}
-export async function collectAndMonitor(env) {
- let result,error;
- try {result=await collectDue(env);}catch(e){error=e;}
- let monitor;
- try {monitor=await monitorStored(env);}catch {monitor={version:1,status:'failed',code:'monitor_storage_failed'};}
- if(error)throw error;
- return {...result,monitor};
+ for(let i=0;i<writes.length;i+=80){const result=await db.batch(writes.slice(i,i+80));if(result.some(r=>!r.success))throw Error('monitor_write_failed');}
 }

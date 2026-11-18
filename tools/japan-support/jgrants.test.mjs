@@ -9,6 +9,7 @@ test('Workers-compatible manual mode fetches and checkpoints without following r
  const original=globalThis.fetch,db=fetchingDB();let calls=0;
  try{globalThis.fetch=async(url,options)=>{calls++;if(options.redirect==='error')throw Error('Workers rejects redirect:error');assert.equal(options.redirect,'manual');assert.equal(url.origin,'https://api.jgrants-portal.go.jp');assert.equal(url.searchParams.get('keyword'),'交付');return Response.json({result:[{id:'a012345',title:'合成の交付金'}]})};
  const r=await runJgrants({DB:db,COLLECTION_ENABLED:'true'});assert.equal(r.status,'fetched');assert.equal(r.count,1);assert.equal(calls,1);
+ assert.deepEqual(r.monitor,{status:'failed',code:'jgrants_monitor_storage_failed'}); // fixture has no monitor storage
  const saved=db.writes.find(w=>w.sql.includes('SET payload='));assert(saved);assert.equal(JSON.parse(saved.args[0])[0].id,'a012345');assert(saved.sql.includes('failures=0'));assert(saved.sql.includes('last_error=NULL'));
  }finally{globalThis.fetch=original;}
 });
