@@ -1,3 +1,4 @@
+import {runJgrants,readSubsidies,ATTRIBUTION} from './jgrants.js';
 import {readCatalog} from './catalog.js';
 import {calculateStoredAmount,runSupportWithAmounts as collectDue} from './amounts.js';
 import {WorkerEntrypoint} from 'cloudflare:workers';
@@ -16,7 +17,8 @@ export default {
   if(request.method!=='GET'&&!(request.method==='POST'&&['/api/eligibility','/api/amounts'].includes(u.pathname)))return new Response('Method not allowed',{status:405,headers:security});
   if(u.pathname.startsWith('/admin'))return new Response('Not found',{status:404,headers:security});
   let response;
-  if(u.pathname==='/api/catalog'){
+  if(u.pathname==='/api/subsidies'){const rows=await readSubsidies(env.DB,u.searchParams.get('q')||'');response=Response.json({items:rows.results.map(r=>JSON.parse(r.record_json)),attribution:ATTRIBUTION,verification:'pending',coverage:'Jグランツの指定キーワード検索。全国全制度の網羅を保証しません'});
+  } else if(u.pathname==='/api/catalog'){
    try{const result=await readCatalog(env.DB);response=result?Response.json(result):Response.json({error:'catalog_not_collected'},{status:404});}catch{response=Response.json({error:'catalog_unavailable'},{status:503});}
   } else if(u.pathname==='/api/amounts'){
    if(request.method!=='POST')response=Response.json({error:'post_required'},{status:405});
@@ -41,7 +43,5 @@ export default {
 
 // Internal-only capability; no public route can invoke a collection.
 export class SupportCollector extends WorkerEntrypoint {
- async run(){return collectDue(this.env);}
+ async run(){const results=await Promise.allSettled([collectDue(this.env),runJgrants(this.env)]);return results.map(r=>r.status==='fulfilled'?r.value:{status:'failed',error:String(r.reason)});}
 }
-
-
