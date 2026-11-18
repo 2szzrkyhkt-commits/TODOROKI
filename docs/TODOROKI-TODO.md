@@ -1494,3 +1494,14 @@ Cloudflare KVのstatusを読取。e-Govは保存446・初回走査1・待機2・
 - stagingの `src/balance-assets.js` だけをcontent-only配備。version `c40e3e04-1a21-4b6b-830b-0bbf80772ba1`、deployment `f8cbbffe-7841-4af0-8516-30e491845236`、06:15:48 JST、100%。全13モジュール読戻し一致・変更外12モジュールと設定不変を確認。アセットSHA256 `a2b8b67d451fe3b78a1d4e302c8f942ad59d49a8286ee580f5f33f104fdc5275`。
 - [staging /balance](https://todoroki-slot-staging.8njb5bzfbz.workers.dev/balance) の未認証302を確認。認証済み本番UIの成功証拠ではない。実収支データの取得/保存/送信なし。本番Worker・認証・定期実行・AdSense・T44は変更せず、draft/main未統合・本番ロック維持。
 - 残作業・再開条件：承認済み認証セッションでstagingの実操作を確認し、元の用途との適合確認と既存draft stackの本番反映条件を満たすこと。CIの合成試験を本番完了に読み替えない。
+
+## 2026-11-19 T03: 公開PDFビューアの停止を修正・本番実操作で確認
+
+- 開始・終了とも完了22件／未完了23件。今回チェック追加なし。T03全体の62項目完了とは区別する。
+- 10/27の歴史的62行と10/19の章別会話を再読。WordPress項目は現構成の同等機能で評価する利用者指示を確認したが、元目次画像の逐語確認は未達。既存H01–H62/TQ対応表を置換しない。
+- 旧指摘のabout連絡文は本番で「お問い合わせフォーム」→/contactの移動に成功。GA直書きがない学習/辞典ページも同意条件付き共通JSを読み込むため欠落と断定しない。共通6項目ナビを本番で確認。フォーム入力/送信・広告クリックは実施しない。
+- H40相当のPDF一覧を本番で操作。カテゴリ「投資・市場」＋「グレアム」で2件表示は成功したが、「PDFを見る」でloadingのまま停止。公開JSの `get('home').href` が共有ヘッダー置換後のnullでTypeErrorになることを実画面/consoleで再現。
+- [PR #82](https://github.com/2szzrkyhkt-commits/TODOROKI/pull/82)、修正commit `3b80f75da6aff85df53c65496200fb70ecab40b2`、main `88afc6edea4f80b776788cc480ef31f7c507bc07`。現ロゴへのfallbackと、ロゴ不在時に任意リンク設定だけをskipする最小差分。PDF許可パス・カタログ・広告・共通ヘッダー・設定は変更しない。
+- 新規19回帰（6言語×ヘッダー3状態＋カタログ失敗）成功、旧版は13失敗。既存Python77件・security検証成功。[PR CI 44416558347](https://github.com/2szzrkyhkt-commits/TODOROKI/actions/runs/44416558347) success。既存Python discoverへ試験を追加し、workflow/Cron/定期3件の定義は不変更。
+- 既存Cloudflare公開build `9e136a90-7f61-432e-adf6-f5377fc3e56f` はmain同一commitでsuccess（08:05:55 JST）。version `7b7d4a96-f254-4810-bb84-445f74352833`、deployment `c2888de0-ec32-44ad-b9c1-7065ad1cfa07`、100%。本番Chromeで同じURLを再読しグレアム投資基準4ページPDFの本文・タイトル・保存/直接表示リンクを確認。一覧へ戻るとカテゴリ/検索語/2件保持、別の収益力分析3ページPDFも本文表示成功。両画面を目視確認。[公開一覧](https://todoroki-gold.com/pdf-library)。全PDF・全実機の試験ではない。
+- main監査44417475206は本記録時点で実行中。PR成功/配備成功/今回の本番実操作と区別し、包括監査成功を先取りしない。原典・iPhone実機・フォーム受信・認証設定等の残要件は維持。T44保留・追加費用/破壊/権限拡大禁止を維持。
