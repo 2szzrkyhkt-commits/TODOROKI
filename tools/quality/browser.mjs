@@ -2,6 +2,7 @@ import {chromium,firefox,webkit} from 'playwright';
 import AxeBuilder from '@axe-core/playwright';
 import fs from 'node:fs/promises';
 import {imageInspector} from './image-probe.mjs';
+import {inspectHomeKeyboard} from './keyboard-probe.mjs';
 const out='quality-results';await fs.mkdir(out,{recursive:true});
 const results={};
 function add(id,errors,evidence){const r=results[id]??={errors:[],evidence:[]};r.errors.push(...errors);r.evidence.push(evidence);}
@@ -38,6 +39,18 @@ for(const [name,engine] of Object.entries(weekly?{chromium,firefox,webkit}:{chro
     }else add(31,[{path,missingSearch:true}],{path});
    }
    if(path==='/'){
+    // Use a fresh page so prior mouse/search/axe interactions cannot mask the starting tab order.
+    const keyboardPage=await context.newPage();
+    let loaded=false;
+    try{
+     const response=await keyboardPage.goto('https://todoroki-gold.com/',{waitUntil:'networkidle',timeout:30000});
+     if(!response?.ok())throw new Error(`HTTP ${response?.status()}`);
+     loaded=true;
+     add(44,[],{path,name,width,...await inspectHomeKeyboard(keyboardPage)});
+    }catch(e){
+     add(44,loaded?[{path,name,width,error:e.message}]:[],{path,name,width,...(!loaded?{inconclusive:e.message}:{scope:'Japanese homepage keyboard smoke check failed'})});
+    }finally{await keyboardPage.close();}
+
     const track=page.locator('.news-ticker-track');
     if(await track.count()){
      const a=await track.evaluate(e=>getComputedStyle(e).transform);await page.waitForTimeout(400);
