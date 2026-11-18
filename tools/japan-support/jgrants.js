@@ -10,7 +10,28 @@ async function runJgrantsCore(env){
  const pending=await db.prepare('SELECT * FROM jgrants_jobs WHERE payload IS NOT NULL AND cursor<item_count AND (lease_until IS NULL OR lease_until<?) ORDER BY checked_at LIMIT 1').bind(now).first();
  // Serve due snapshots before draining a different keyword. Never replace unsaved payload.
  const job=await db.prepare('SELECT * FROM jgrants_jobs WHERE next_attempt<=? AND (payload IS NULL OR cursor>=item_count) AND (lease_until IS NULL OR lease_until<?) ORDER BY next_attempt,keyword LIMIT 1').bind(now,now).first();
- if(pending&&!job){const lock=await db.prepare('UPDATE jgrants_jobs SET lease_until=? WHERE keyword=? AND (lease_until IS NULL OR lease_until<?)').bind(new Date(Date.now()+60000).toISOString(),pending.keyword,now).run();if(!lock.meta.changes)return {status:'leased'};const items=JSON.parse(pending.payload);const rows=items.slice(pending.cursor,pending.cursor+25).map(r=>normalize(r,pending.checked_at));await db.batch(rows.map(r=>db.prepare("INSERT INTO jgrants_catalog(id,title,record_json,acquired_at) VALUES(?,?,?,?) ON CONFLICT(id) DO UPDATE SET title=excluded.title,record_json=excluded.record_json,acquired_at=excluded.acquired_at").bind(r.id,r.title,JSON.stringify(r),r.acquired_at)));await db.prepare('UPDATE jgrants_jobs SET cursor=?,lease_until=NULL WHERE keyword=?').bind(pending.cursor+rows.length,pending.keyword).run();return {status:'saved',count:rows.length,keyword:pending.keyword};}
+ if(pending&&!job){
+  const lock=await db.prepare('UPDATE jgrants_jobs SET lease_until=? WHERE keyword=? AND (lease_until IS NULL OR lease_until<?)').bind(new Date(Date.now()+60000).toISOString(),pending.keyword,now).run();
+  if(!lock.meta.changes)return {status:'leased'};
+  const items=JSON.parse(pending.payload);
+  if(!Array.isArray(items)||items.length!==pending.item_count||!Number.isSafeInteger(pending.cursor)||pending.cursor<0||pending.cursor>=items.length||items.length>5000)throw Error('jgrants_snapshot_invalid');
+  const rows=items.slice(pending.cursor,pending.cursor+25).map(r=>normalize(r,pending.checked_at));
+  const writes=await db.batch(rows.map(r=>db.prepare("INSERT INTO jgrants_catalog(id,title,record_json,acquired_at) VALUES(?,?,?,?) ON CONFLICT(id) DO UPDATE SET title=excluded.title,record_json=excluded.record_json,acquired_at=excluded.acquired_at").bind(r.id,r.title,JSON.stringify(r),r.acquired_at)));
+  if(!Array.isArray(writes)||writes.length!==rows.length||writes.some(r=>r?.success!==true))throw Error('jgrants_catalog_write_failed');
+  // Duplicate source IDs use the same last-write-wins rule as the batch above.
+  const expected=new Map(rows.map(r=>[r.id,r]));
+  const readback=await db.prepare('SELECT id,title,record_json,acquired_at FROM jgrants_catalog WHERE id IN ('+[...expected.keys()].map(()=>'?').join(',')+')').bind(...expected.keys()).all();
+  if(readback.success!==true||!Array.isArray(readback.results)||readback.results.length!==expected.size)throw Error('jgrants_catalog_readback_failed');
+  const seen=new Set();
+  for(const saved of readback.results){const wanted=expected.get(saved.id);
+   if(!wanted||seen.has(saved.id)||saved.title!==wanted.title||saved.acquired_at!==wanted.acquired_at||saved.record_json!==JSON.stringify(wanted))throw Error('jgrants_catalog_readback_failed');
+   seen.add(saved.id);
+  }
+  // An error leaves the original snapshot and cursor intact; the existing lease expires.
+  const checkpoint=await db.prepare('UPDATE jgrants_jobs SET cursor=?,lease_until=NULL WHERE keyword=? AND cursor=? AND checked_at=?').bind(pending.cursor+rows.length,pending.keyword,pending.cursor,pending.checked_at).run();
+  if(checkpoint?.success!==true||checkpoint.meta?.changes!==1)throw Error('jgrants_checkpoint_failed');
+  return {status:'saved',count:rows.length,keyword:pending.keyword,readback:true};
+ }
  if(!job)return {status:'idle'};
  const lock=await db.prepare('UPDATE jgrants_jobs SET lease_until=? WHERE keyword=? AND (lease_until IS NULL OR lease_until<?)').bind(new Date(Date.now()+60000).toISOString(),job.keyword,now).run();if(!lock.meta.changes)return {status:'leased'};
  try{const u=new URL('https://api.jgrants-portal.go.jp/exp/v1/public/subsidies');u.search=new URLSearchParams({keyword:job.keyword,sort:'created_date',order:'DESC',acceptance:'0'});const res=await fetch(u,{redirect:'manual',signal:AbortSignal.timeout(15000)});if(!res.ok)throw Error('http_'+res.status);const data=JSON.parse(await boundedText(res));if(!Array.isArray(data.result)||data.result.length>5000)throw Error('invalid_response');for(const r of data.result)normalize(r,now);await db.prepare('UPDATE jgrants_jobs SET payload=?,cursor=0,item_count=?,checked_at=?,next_attempt=?,failures=0,lease_until=NULL,last_error=NULL WHERE keyword=?').bind(JSON.stringify(data.result),data.result.length,now,new Date(Date.now()+86400000).toISOString(),job.keyword).run();return {status:'fetched',keyword:job.keyword,count:data.result.length};}

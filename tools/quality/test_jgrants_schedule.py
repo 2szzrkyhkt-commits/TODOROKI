@@ -24,3 +24,18 @@ class JgrantsScheduleSQL(unittest.TestCase):
         self.assertIsNone(db.execute(query,(now,now)).fetchone())
         self.assertEqual(db.execute("SELECT cursor,item_count,payload FROM jgrants_jobs WHERE keyword='unfinished'").fetchone(),(875,922,'[]'))
         db.close()
+
+    def test_checkpoint_sql_rejects_stale_cursor_or_snapshot_and_replays(self):
+        source=(Path(__file__).resolve().parents[1]/'japan-support/jgrants.js').read_text()
+        query=re.search(r"prepare\('(UPDATE jgrants_jobs SET cursor=[^']+)'\)",source).group(1)
+        db=sqlite3.connect(':memory:')
+        db.execute('CREATE TABLE jgrants_jobs(keyword TEXT PRIMARY KEY,cursor INTEGER,checked_at TEXT,lease_until TEXT,payload TEXT)')
+        stamp='2026-11-18T05:35:12.507Z'
+        db.execute('INSERT INTO jgrants_jobs VALUES(?,?,?,?,?)',('支援',250,stamp,'leased','retained raw snapshot'))
+        for args in [(275,'支援',225,stamp),(275,'支援',250,'older snapshot')]:
+            self.assertEqual(db.execute(query,args).rowcount,0)
+        self.assertEqual(db.execute('SELECT cursor,lease_until,payload FROM jgrants_jobs').fetchone(),(250,'leased','retained raw snapshot'))
+        self.assertEqual(db.execute(query,(275,'支援',250,stamp)).rowcount,1)
+        self.assertEqual(db.execute(query,(275,'支援',250,stamp)).rowcount,0)
+        self.assertEqual(db.execute('SELECT cursor,lease_until,payload FROM jgrants_jobs').fetchone(),(275,None,'retained raw snapshot'))
+        db.close()

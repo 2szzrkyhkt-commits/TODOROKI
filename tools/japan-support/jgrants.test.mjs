@@ -26,7 +26,34 @@ test('upstream denial and malformed JSON preserve the successful snapshot and sc
  const db=fetchingDB();globalThis.fetch=async()=>response;assert.equal((await runJgrants({DB:db,COLLECTION_ENABLED:'true'})).status,'failed');assert(!db.writes.some(w=>w.sql.includes('SET payload=')||/DELETE/.test(w.sql)));assert(db.writes.some(w=>w.sql.includes('next_attempt=')&&w.sql.includes('failures=failures+1')));
  }}finally{globalThis.fetch=original;}
 });
-test('persistence resumes bounded batch and never modifies verified programs',async()=>{const sql=[];let updatedCursor;const payload=JSON.stringify(Array.from({length:40},(_,i)=>({id:'a'+i,title:'補助'+i})));const db={prepare(q){sql.push(q);return {bind(...args){if(q.includes('SET cursor='))updatedCursor=args[0];return this},async first(){return q.includes('payload IS NOT NULL')?{keyword:'補助',cursor:0,item_count:40,payload,checked_at:'today'}:null},async run(){return {meta:{changes:1}}}}},async batch(rows){assert.equal(rows.length,25)}};const r=await runJgrants({DB:db,COLLECTION_ENABLED:'true'});assert.equal(r.count,25);assert.equal(updatedCursor,25);assert(!sql.some(s=>s.includes('UPDATE programs')))});
+function persistingDB(mode='ok',input){
+ const items=input||Array.from({length:40},(_,i)=>({id:'a'+i,title:'補助'+i}));
+ const pending={keyword:'補助',cursor:0,item_count:items.length,payload:JSON.stringify(items),checked_at:'2026-11-18T05:35:12.507Z'};
+ const records=new Map(),sql=[],state={cursor:0};
+ return {pending,records,sql,state,repair(){mode='ok'},prepare(q){sql.push(q);return {sql:q,args:[],bind(...args){this.args=args;return this},async first(){return q.includes('payload IS NOT NULL')?pending:null},async run(){if(q.includes('SET cursor=')){if(mode==='checkpointFailure')return {success:false,meta:{changes:0}};if(mode==='checkpointConflict')return {success:true,meta:{changes:0}};state.cursor=this.args[0];assert.equal(this.args[2],pending.cursor);assert.equal(this.args[3],pending.checked_at);}return {success:true,meta:{changes:1}}},async all(){
+ if(!q.includes('FROM jgrants_catalog'))throw Error('monitor fixture unavailable');
+ if(mode==='throwRead')throw Error('read unavailable');
+ let rows=[...records.values()].map(x=>({...x}));
+ if(mode==='missing')rows.pop();
+ if(mode==='corrupt')rows[0].record_json=JSON.stringify({...JSON.parse(rows[0].record_json),maximum:999});
+ if(mode==='wrongTitle')rows[0].title='保存時に変化';
+ if(mode==='duplicateReadback')rows[1]={...rows[0]};
+ return {success:mode!=='readFailure',results:rows};
+ }}},async batch(statements){assert.equal(statements.length,Math.min(25,items.length));if(mode==='failedBatch')return statements.map(()=>({success:false,results:[]}));for(const q of statements){const [id,title,record_json,acquired_at]=q.args;records.set(id,{id,title,record_json,acquired_at});}return statements.map(()=>({success:true,results:[]}));}};
+}
+test('persistence resumes bounded batch, verifies readback and never modifies verified programs',async()=>{
+ const db=persistingDB();const r=await runJgrants({DB:db,COLLECTION_ENABLED:'true'});assert.equal(r.count,25);assert.equal(r.readback,true);assert.equal(db.state.cursor,25);assert.equal(db.records.size,25);assert(!db.sql.some(s=>s.includes('UPDATE programs')));
+});
+for(const mode of ['failedBatch','missing','corrupt','wrongTitle','duplicateReadback','readFailure','throwRead'])test('persistence does not advance a cursor after '+mode,async()=>{
+ const db=persistingDB(mode),payload=db.pending.payload;
+ await assert.rejects(()=>runJgrants({DB:db,COLLECTION_ENABLED:'true'}));
+ assert.equal(db.state.cursor,0);assert.equal(db.pending.payload,payload);assert(!db.sql.some(s=>s.includes('SET cursor=')));assert(!db.sql.some(s=>/DELETE|SET payload=/.test(s)));
+});
+test('repeated source IDs retain last-write semantics and advance the source-row cursor only after readback',async()=>{
+ const input=Array.from({length:25},(_,i)=>({id:'a'+i,title:'補助'+i}));input[24]={id:'a0',title:'同じIDの最後の値'};
+ const db=persistingDB('ok',input);const r=await runJgrants({DB:db,COLLECTION_ENABLED:'true'});
+ assert.equal(r.count,25);assert.equal(r.readback,true);assert.equal(db.state.cursor,25);assert.equal(db.records.size,24);assert.equal(db.records.get('a0').title,'同じIDの最後の値');
+});
 test('an overdue unfetched keyword is not starved by another keyword persistence',async()=>{
  const original=globalThis.fetch;let fetches=0,batches=0;const writes=[];
  const pending={keyword:'助成',cursor:0,item_count:40,payload:JSON.stringify(Array.from({length:40},(_,i)=>({id:'a'+i,title:'合成資料'}))),checked_at:'2026-11-18T02:15:00Z'};
@@ -43,3 +70,8 @@ test('a due fetch failure keeps another pending snapshot and does not add a pers
  try{globalThis.fetch=async()=>{fetches++;return new Response('',{status:503});};const r=await runJgrants({DB:db,COLLECTION_ENABLED:'true'});assert.equal(r.status,'failed');assert.equal(fetches,1);assert.equal(batches,0);assert.equal(pending.cursor,875);assert(!writes.some(x=>x.sql.includes('SET payload=')||x.sql.includes('SET cursor=')));assert(writes.some(x=>x.sql.includes('failures=failures+1')));
  }finally{globalThis.fetch=original;}
 });
+
+for(const mode of ['checkpointFailure','checkpointConflict'])test('verified records are not reported saved after '+mode,async()=>{const db=persistingDB(mode);await assert.rejects(()=>runJgrants({DB:db,COLLECTION_ENABLED:'true'}),/jgrants_checkpoint_failed/);assert.equal(db.state.cursor,0);assert.equal(db.records.size,25);});
+test('snapshot array and declared item count must agree before writing',async()=>{const db=persistingDB();db.pending.payload='[]';await assert.rejects(()=>runJgrants({DB:db,COLLECTION_ENABLED:'true'}),/jgrants_snapshot_invalid/);assert.equal(db.state.cursor,0);assert.equal(db.records.size,0);});
+
+test('a retained snapshot resumes after failed readback without duplicating records',async()=>{const db=persistingDB('corrupt');const payload=db.pending.payload;await assert.rejects(()=>runJgrants({DB:db,COLLECTION_ENABLED:'true'}),/jgrants_catalog_readback_failed/);assert.equal(db.state.cursor,0);db.repair();const result=await runJgrants({DB:db,COLLECTION_ENABLED:'true'});assert.equal(result.readback,true);assert.equal(result.count,25);assert.equal(db.state.cursor,25);assert.equal(db.records.size,25);assert.equal(db.pending.payload,payload);});
