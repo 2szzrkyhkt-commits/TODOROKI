@@ -67,3 +67,5 @@ await import('./economy-reading.test.mjs');
 await import('./behavior-evidence.test.mjs');
 
 await import('./image-probe.test.mjs');
+
+await import('../tax/nta.test.mjs');
