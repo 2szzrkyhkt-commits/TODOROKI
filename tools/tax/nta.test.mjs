@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import {ntaURL,ntaLinks,ntaHTML,ntaTick,robotsAllows,NTA_SEEDS} from './nta.mjs';
+import {tick} from './worker.mjs';
 const base=NTA_SEEDS[0],doc='https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1000.htm';
 let cases=0;
 function test(name,fn){return Promise.resolve().then(fn).then(()=>{cases++;console.log('NTA PASS '+name);});}
@@ -69,5 +70,13 @@ await test('Retry-After wins over local delay; valid and truncated PDF differ',a
 });
 await test('storage bound stops without deleting or claiming scan completion',async()=>{
  const kv=new KV();await kv.put('nta:state',JSON.stringify({queue:NTA_SEEDS.map(url=>({url,due:0,attempts:0})),known:[...NTA_SEEDS],bytes:64*1024*1024,saved:0,scans:0}));const r=await ntaTick({TAX:kv},{fetcher:fetcher().fetch,now:100000});assert.equal(r.blocked,'STORAGE_BUDGET');assert.equal(r.completed_scans,0);assert.equal(r.queue_remaining,2);assert.equal(r.pages_saved,0);
+});
+await test('e-Gov failure is retained; NTA succeeds; shared status is written once',async()=>{
+ const kv=new KV();kv.put=async(k,v)=>{kv.writes.push(k);kv.map.set(k,typeof v==='string'?new TextEncoder().encode(v):new Uint8Array(v));};
+ await kv.put('state',JSON.stringify({seeded:true,category:0,offset:0,scans:0,saved:5,page_loaded:true,next_offset:null,queue:[{law_info:{law_id:'133AC0000000067'},revision_info:{law_revision_id:'test-revision',law_title:'公式法令の試験'}}]}));
+ await kv.put('history:state',JSON.stringify({queue:[],next_at:new Date(Date.now()+86400000).toISOString()}));kv.writes=[];
+ const original=globalThis.fetch,fx=fetcher();globalThis.fetch=async(u,o)=>String(u).startsWith('https://www.nta.go.jp/')?fx.fetch(u,o):new Response('',{status:503});
+ try{await assert.rejects(()=>tick({TAX:kv}),/law downloads failed/);}finally{globalThis.fetch=original;}
+ const status=await kv.get('status','json');assert.equal(status.total_saved,5);assert.equal(status.failed.length,1);assert.equal(status.nta.pages_saved,2);assert.equal(kv.writes.filter(k=>k==='status').length,1);assert.equal((await kv.get('state','json')).queue.length,1);
 });
 console.log('T20 NTA: '+cases+' isolated cases passed; no live requests or production writes.');

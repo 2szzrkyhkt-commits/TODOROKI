@@ -39,7 +39,7 @@ async function archive(env, law) {
   await env.TAX.put(`law:${id}`,JSON.stringify(meta));
   return true;
 }
-export async function collectTax(env) {
+export async function collectTax(env,{persistStatus=true}={}) {
   let state=await env.TAX.get('state','json') || {category:0,offset:0,queue:[],next_offset:null,saved:0,scans:0,seeded:false};
   const report={at:new Date().toISOString(),saved:0,skipped:0,failed:[],phase:'collect',scope:'国税・地方財政の候補法令。通達・条例・旧版の遡及収集・試験年度確定は未対応。'};
   try {
@@ -72,12 +72,14 @@ export async function collectTax(env) {
     }
     state.last_run=report.at;state.last_error=report.failed.length?report.failed:null;
     await env.TAX.put('state',JSON.stringify(state));
-    await env.TAX.put('status',JSON.stringify({...report,total_saved:state.saved,completed_scans:state.scans,queue_remaining:state.queue.length}));
+    const result={...report,total_saved:state.saved,completed_scans:state.scans,queue_remaining:state.queue.length};
+    if(persistStatus)await env.TAX.put('status',JSON.stringify(result));
     console.log(JSON.stringify({event:'tax_tick',...report,total_saved:state.saved}));
-    if(report.failed.length)throw new Error(`${report.failed.length} law downloads failed; retained for retry`);
-    return {...report,total_saved:state.saved,queue_remaining:state.queue.length};
+    if(report.failed.length){const e=new Error(`${report.failed.length} law downloads failed; retained for retry`);e.collectionReport=result;throw e;}
+    return result;
   } catch(e) {
     console.error(JSON.stringify({event:'tax_tick_failed',error:String(e)}));
+    e.collectionReport??={...report,phase:'failed',collection_error:'COLLECTION_TICK_FAILED',total_saved:state.saved,completed_scans:state.scans,queue_remaining:state.queue.length};
     throw e;
   }
 }
@@ -96,7 +98,7 @@ export async function listCatalog(env, {cursor, subject, query = ''} = {}) {
 
 export async function tick(env) {
  let report={},collectionFailure;
- try{report=await collectTax(env);}catch(e){collectionFailure=e;}
+ try{report=await collectTax(env,{persistStatus:false});}catch(e){report=e.collectionReport;collectionFailure=e;}
  try{report.history=await historyTick(env,{verifyRoutes:async snapshot=>{
   const headers={Authorization:'Bearer '+env.SETUP_TOKEN};
   const endpoint='https://internal.invalid/history?law_id='+encodeURIComponent(snapshot.law_id);
@@ -110,7 +112,8 @@ export async function tick(env) {
  // Independent source family: an e-Gov failure must not masquerade as an NTA failure.
  try{report.nta=await ntaTick(env);}
  catch{report.nta={state:'failed',at:new Date().toISOString(),code:'NTA_STORAGE_OR_STATE_FAILED'};}
- const status=await env.TAX.get('status','json')||{};
+ // One write to the shared status key per tick (KV same-key rate limit).
+ const status=report.phase==='idle'?(await env.TAX.get('status','json')||{}):report;
  await env.TAX.put('status',JSON.stringify({...status,nta:report.nta}));
  if(collectionFailure)throw collectionFailure;
  return report;
