@@ -48,9 +48,12 @@ export function ntaLinks(html,base) {
   }
   return [...found];
 }
-export function ntaHTML(bytes,contentType='') {
+export function ntaEncoding(bytes,contentType='') {
   const prefix=new TextDecoder().decode(bytes.slice(0,4096));
-  const charset=contentType.match(/charset\s*=\s*["']?([\w-]+)/i)?.[1]||prefix.match(/charset\s*=\s*["']?([\w-]+)/i)?.[1]||'utf-8';
+  return (contentType.match(/charset\s*=\s*["']?([\w-]+)/i)?.[1]||prefix.match(/charset\s*=\s*["']?([\w-]+)/i)?.[1]||'utf-8').toLowerCase();
+}
+export function ntaHTML(bytes,contentType='') {
+  const charset=ntaEncoding(bytes,contentType);
   const html=new TextDecoder(charset,{fatal:true}).decode(bytes);
   if(!/<html\b/i.test(html)||!/<\/html\s*>/i.test(html)||!/<h1\b/i.test(html)||/<title[^>]*>\s*(?:403|404|Access Denied|Error)/i.test(html))throw Error('INVALID_HTML');
   return html;
@@ -72,7 +75,7 @@ async function saveVerified(kv,key,value) {
 export async function ntaTick(env,{fetcher=fetch,now=Date.now()}={}) {
   const kv=env.TAX;
   let state=await kv.get(PREFIX+'state','json')||{schema:1,queue:NTA_SEEDS.map(url=>({url,attempts:0,due:0})),known:[...NTA_SEEDS],saved:0,bytes:0,scans:0};
-  let report={at:new Date(now).toISOString(),state:'collecting',saved:0,checked:0,failed:[],notice:NOTICE};
+  let report={at:new Date(now).toISOString(),state:'collecting',saved:0,checked:0,failed:[],verified:[],notice:NOTICE};
   if(state.blocked||state.next_at>now)return {...report,state:state.blocked?'blocked':'waiting',...summary(state)};
   let robotsReady=true;
   if(!state.robots||now-state.robots.at>=24*3600000){
@@ -85,8 +88,14 @@ export async function ntaTick(env,{fetcher=fetch,now=Date.now()}={}) {
   }
   // Two documents at most, plus one robots refresh per day, on the existing cadence.
   for(let n=0;robotsReady&&n<2;n++) {
-    const at=state.queue.findIndex(q=>q.due<=now);if(at<0)break;
+    // Existing queues may contain hundreds of Tax Answer URLs before any circular.
+    // Alternate families without adding requests or moving not-yet-due failures.
+    const family=url=>new URL(url).pathname.startsWith('/law/tsutatsu/')?'tsutatsu':'taxanswer';
+    let at=state.queue.findIndex(q=>q.due<=now&&family(q.url)===(state.next_family||'taxanswer'));
+    if(at<0)at=state.queue.findIndex(q=>q.due<=now);if(at<0)break;
     const item=state.queue[at];if(!ntaURL(item.url))throw Error('INVALID_QUEUE_URL');
+    const selectedFamily=family(item.url);
+    state.next_family=selectedFamily==='taxanswer'?'tsutatsu':'taxanswer';
     try {
       if(!robotsAllows(state.robots.text,item.url)){state.blocked='ROBOTS_DISALLOW';throw Error('ROBOTS_DISALLOW');}
       const r=await fetcher(item.url,{redirect:'manual',headers:{'User-Agent':'TODOROKI-Tax-Collector/1.0','Accept':'text/html,application/pdf'},signal:AbortSignal.timeout(15000)});
@@ -111,7 +120,8 @@ export async function ntaTick(env,{fetcher=fetch,now=Date.now()}={}) {
       const changed=previous?.sha256!==hash;
       if(changed&&state.bytes+raw.length>MAX_BYTES){state.blocked='STORAGE_BUDGET';throw Error('STORAGE_BUDGET');}
       const title=html?html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1\s*>/i)?.[1].replace(/<[^>]*>/g,'').replace(/\s+/g,' ').trim():null;
-      const meta={url:item.url,source:'国税庁',source_url:item.url,checked_at:report.at,sha256:hash,bytes:raw.length,raw_key:key,content_type:type,title:title||'国税庁公式資料',links,license_url:'https://www.nta.go.jp/chuijiko/copy.htm',notice:NOTICE};
+      const encoding=pdf?null:ntaEncoding(raw,type);
+      const meta={url:item.url,source:'国税庁',source_url:item.url,checked_at:report.at,sha256:hash,bytes:raw.length,raw_key:key,content_type:type,encoding,title:title||'国税庁公式資料',links,license_url:'https://www.nta.go.jp/chuijiko/copy.htm',notice:NOTICE};
       if(changed){
         // Reserve before writing so a failed metadata write cannot undercount storage.
         state.bytes+=raw.length;
@@ -123,7 +133,8 @@ export async function ntaTick(env,{fetcher=fetch,now=Date.now()}={}) {
       if(!previous)state.saved++;
       state.queue.splice(at,1);state.known.push(...additions);
       state.queue.push(...additions.map(url=>({url,attempts:0,due:0})));
-      report.last_verified={url:item.url,sha256:hash,bytes:raw.length,readback:true};
+      report.last_verified={url:item.url,sha256:hash,bytes:raw.length,encoding,title:meta.title.slice(0,300),source_family:selectedFamily,readback:true};
+      report.verified.push(report.last_verified);
     } catch(e) {
       // Do not rotate/dequeue a failed target or mistake it for a completed scan.
       const code=/^(HTTP_\d+|SIZE_LIMIT|CONTENT_TYPE|INVALID_HTML|INVALID_PDF|READBACK_MISMATCH|URL_BUDGET|STORAGE_BUDGET|ROBOTS_DISALLOW)$/.test(e.message)?e.message:'FETCH_OR_STORAGE_FAILED';

@@ -9,7 +9,7 @@ on:
         options: [hourly, daily, weekly, monthly]
         default: daily
   pull_request:
-    paths: ['tools/quality/**', 'tools/japan-support/**', '.github/workflows/quality-audit.yml']
+    paths: ['tools/quality/**', 'tools/japan-support/**', 'tools/tax/**', '.github/workflows/quality-audit.yml']
   push:
     branches: [main]
   deployment_status:

@@ -83,4 +83,21 @@ await test('e-Gov failure is retained; NTA succeeds; shared status is written on
  try{await assert.rejects(()=>tick({TAX:bad}),/isolated state-read failure/);}finally{globalThis.fetch=original;}
  assert.equal((await bad.get('status','json')).nta.pages_saved,2);assert.equal((await bad.get('status','json')).phase,'failed');
 });
+const circular='https://www.nta.go.jp/law/tsutatsu/kihon/shotoku/01.htm';
+async function oldQueue(queue,next_family){const kv=new KV();await kv.put('nta:state',JSON.stringify({schema:1,queue:queue.map(q=>typeof q==='string'?{url:q,attempts:0,due:0}:q),known:queue.map(q=>typeof q==='string'?q:q.url),saved:0,bytes:0,scans:0,...(next_family?{next_family}:{})}));return kv;}
+await test('legacy FIFO queue serves both source families within two requests',async()=>{
+ const urls=Array.from({length:20},(_,i)=>doc.replace('1000',String(1000+i)));const kv=await oldQueue([...urls,circular]);const fx=fetcher();const r=await ntaTick({TAX:kv},{fetcher:fx.fetch,now:100000});
+ assert.deepEqual(fx.calls.filter(u=>!u.endsWith('robots.txt')),[urls[0],circular]);assert.deepEqual(r.verified.map(x=>x.source_family),['taxanswer','tsutatsu']);assert.equal(r.queue_remaining,19);assert.equal(r.checked,2);
+ const state=await kv.get('nta:state','json');assert.equal(state.next_family,'taxanswer');assert.deepEqual(state.queue.map(x=>x.url),urls.slice(1));assert.equal(state.known.length,21);
+});
+await test('future retry is not pulled forward; the available family uses the budget',async()=>{
+ const future={url:circular,attempts:4,due:999999999},other=doc.replace('1000','2000');const kv=await oldQueue([future,doc,other],'tsutatsu'),fx=fetcher();const r=await ntaTick({TAX:kv},{fetcher:fx.fetch,now:100000});
+ assert.deepEqual(fx.calls.filter(u=>!u.endsWith('robots.txt')),[doc,other]);assert.equal(r.completed_scans,0);assert.deepEqual((await kv.get('nta:state','json')).queue,[future]);
+ const again=await ntaTick({TAX:kv},{fetcher:fx.fetch,now:110000});assert.equal(again.checked,0);assert.equal(again.queue_remaining,1);assert.equal(fx.calls.length,3);
+});
+await test('persisted family turn and Shift JIS evidence survive a restart',async()=>{
+ const kv=await oldQueue([doc,circular],'tsutatsu');const bytes=new Uint8Array([...Buffer.from('<html><meta charset="shift_jis"><h1>'),0x90,0xc5,...Buffer.from('</h1></html>')]);
+ const fx=fetcher(u=>u===circular?response(bytes,'text/html'):response(html('UTF8')));const r=await ntaTick({TAX:kv},{fetcher:fx.fetch,now:100000});
+ assert.deepEqual(fx.calls.filter(u=>!u.endsWith('robots.txt')),[circular,doc]);assert.equal(r.verified.length,2);assert.equal(r.verified[0].encoding,'shift_jis');assert.equal(r.verified[0].title,'税');assert.equal(r.verified[0].bytes,bytes.length);assert.equal(r.verified[0].readback,true);assert.equal(r.verified[1].encoding,'utf-8');
+});
 console.log('T20 NTA: '+cases+' isolated cases passed; no live requests or production writes.');
