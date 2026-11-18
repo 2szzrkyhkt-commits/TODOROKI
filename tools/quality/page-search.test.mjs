@@ -22,7 +22,7 @@ const html=await fs.readFile('site-map.html','utf8'),xml=await fs.readFile('site
 const entries=html.split('<div id="site-map-entries">')[1].split('</div></main>')[0];
 const paths=[...entries.matchAll(/<a[^>]+href="([^"]+)"/g)].map(m=>m[1]);
 const expected=[...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>new URL(m[1]).pathname);
-eq([...new Set(paths)].sort(),[...new Set(expected)].sort());eq(new Set(expected).size,195);
+eq([...new Set(paths)].sort(),[...new Set(expected)].sort());eq(expected.length,new Set(expected).size);assert.ok(expected.length>=195);checks++;eq(Number(html.match(/id="page-search-count"[^>]*>(\d+)ページを掲載/)[1]),expected.length);
 for(const p of expected){const file=p.endsWith('/')?p.slice(1)+'index.html':p.slice(1)+'.html';await fs.access(file);checks++;}
 assert.ok(html.includes('<noscript>')&&html.includes('id="page-query"')&&html.includes('role="search"'));checks++;
 const article=await fs.readFile('nvidia-jensen-huang-spy-allegations-2026.html','utf8');
@@ -30,4 +30,4 @@ for(const target of ['https://nvidianews.nvidia.com/news/nvidia-announces-ceo-tr
 assert.ok(article.includes('id="scenario-check"')&&article.includes('仮説')&&article.includes('11月14日時点の範囲'));checks++;
 assert.ok(article.includes('"dateModified":"2026-11-17"')&&article.includes('2026年11月17日追記'));checks++;
 const investment=await fs.readFile('investment-list.html','utf8');assert.ok(investment.includes('/nvidia-jensen-huang-spy-allegations-2026#scenario-check'));checks++;
-console.log(`T04 page discovery: ${checks} assertions passed; XML/HTML 195 URL equality, real targets, Unicode/AND/language filters, no-JS links and verified-source article navigation.`);
+console.log(`T04 page discovery: ${checks} assertions passed; XML/HTML ${expected.length} URL equality, real targets, Unicode/AND/language filters, no-JS links and verified-source article navigation.`);

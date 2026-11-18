@@ -9,7 +9,7 @@ on:
         options: [hourly, daily, weekly, monthly]
         default: daily
   pull_request:
-    paths: ['tools/quality/**', 'tools/japan-support/**', 'tools/tax/**', '.github/workflows/quality-audit.yml']
+    paths: ['tools/sync-page-discovery.mjs', 'tools/quality/**', 'tools/japan-support/**', 'tools/tax/**', '.github/workflows/quality-audit.yml']
   push:
     branches: [main]
     paths-ignore: ['docs/TODOROKI-TODO.md']
@@ -18,7 +18,7 @@ permissions:
   contents: read
 concurrency:
   group: quality-${{ github.event_name == 'pull_request' && github.head_ref || 'production' }}
-  cancel-in-progress: false
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 jobs:
   audit:
     if: github.event_name != 'deployment_status' || github.event.deployment_status.state == 'success'
@@ -37,6 +37,8 @@ jobs:
           python-version: '3.12'
       - name: Tests
         run: |
+          node tools/sync-page-discovery.mjs
+          node tools/quality/page-discovery-sync.test.mjs
           python -m unittest discover -s tools/quality -p 'test_*.py' -v
           node --test tools/quality/watchdog.test.mjs
           node tools/quality/security.test.mjs
@@ -78,6 +80,7 @@ jobs:
         run: |
           node tools/quality/consent.mjs
           node tools/quality/browser.mjs
+          node tools/quality/page-search-browser.mjs
       - name: Run audit
         if: always() && !cancelled()
         env:
