@@ -1458,3 +1458,10 @@ Cloudflare KVのstatusを読取。e-Govは保存446・初回走査1・待機2・
 - 未認証の公開URLはCloudflare Accessログインへの302。公開されていないことを確認したが、認証後の実環境503を確認した証拠ではない。既存403ロックのソースも維持。
 - 一般公開・権限拡大・Cron／定期タスク・AdSense・T44・既存データは変更していない。
 - 残作業・再開条件：承認済みの認証環境で成功／異常APIを検証し、原TODOの正確性・安全性と収録範囲の条件を満たしてから公開判定。今回の修正のみでT29を完了にしない。
+
+## 2026-11-19 T03: キーボード操作監査を実装・実行
+
+- PR #78、mainコミット `3fd4c27b5cfdaa8af96035ec1e43314b339a99f2`。既存監査にTQ44の部分検証を追加。定期実行の定義は変更しない。
+- [CI 44334069738](https://github.com/2szzrkyhkt-commits/TODOROKI/actions/runs/44334069738) success。保存artifact `quality-44334069738-1` の browser.json をダウンロードして実内容を確認。TQ44 errors=[]、Chromium幅390/1440の両方で初回Tab→本文スキップ→記事フォーカス→Space停止→Enter再開の全手順を記録。統合cloud Chromeでも本番同経路を手動確認した。
+- ローカルはPython 76 tests、Node quality 41 tests合格（新規keyboard fixture 6件を含む）。Firefox/WebKit・全ページ操作・iPhone実機等は今回未検証であり、成功扱いしない。
+- docs/keyboard-audit-2026-11-19.md の「CI待ち」は作成時点の記録。この後続記録がCI結果。T03全体の完了条件は未達、開始・終了とも完了22件／未完了23件。チェック追加なし。
