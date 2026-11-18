@@ -1465,3 +1465,13 @@ Cloudflare KVのstatusを読取。e-Govは保存446・初回走査1・待機2・
 - [CI 44334069738](https://github.com/2szzrkyhkt-commits/TODOROKI/actions/runs/44334069738) success。保存artifact `quality-44334069738-1` の browser.json をダウンロードして実内容を確認。TQ44 errors=[]、Chromium幅390/1440の両方で初回Tab→本文スキップ→記事フォーカス→Space停止→Enter再開の全手順を記録。統合cloud Chromeでも本番同経路を手動確認した。
 - ローカルはPython 76 tests、Node quality 41 tests合格（新規keyboard fixture 6件を含む）。Firefox/WebKit・全ページ操作・iPhone実機等は今回未検証であり、成功扱いしない。
 - docs/keyboard-audit-2026-11-19.md の「CI待ち」は作成時点の記録。この後続記録がCI結果。T03全体の完了条件は未達、開始・終了とも完了22件／未完了23件。チェック追加なし。
+
+## 2026-11-19 T29: 監視結果の保存失敗を成功扱いしない修正
+
+- 開始・終了とも完了22件／未完了23件。T29全体は未完了、一般公開保留を維持。
+- 条件判定と金額計算の監視結果保存でD1の `success:false` を無視して `passed` を返す不具合を実関数の隔離試験で再現。保存結果が `success:true` の場合のみ成功扱いし、それ以外は既存の固定failed応答へ変更。実DB障害が発生したという報告ではない。
+- [PR #80](https://github.com/2szzrkyhkt-commits/TODOROKI/pull/80)、main `b3cbd9abbeb2c494894172003eb0d3c7b904a810`。[CI 44387502300](https://github.com/2szzrkyhkt-commits/TODOROKI/actions/runs/44387502300) success。新規18回帰テスト成功（旧コードでは12失敗）、支援統合70テストと既存条件・判定・金額・監視・一覧検証すべて成功。
+- 既存非公開Workerへcontent-only配備。version `b0872768-fdd6-4e12-ab44-d134ffd17af9`、deployment `97043a89-0b89-43a7-aa47-8d3d2dee3c1c`、2026-11-19 05:10:51 JST。13モジュール再読照合成功、変更外11モジュール・設定不変、100%反映。外部URLはAccessの302で非公開維持。
+- 手動起動せず既存周期後に専用D1の対象2行だけ確認。eligibility は05:15:13.567 JSTにpassed5/failed0、amountsは05:15:16.216 JSTにpassed6/failed0。両方配備後の保存記録。意図的障害の本番試験ではない。
+- Cron／定期タスク3件・認証・権限・スキーマ・収集範囲・AdSense・T44は変更しない。故障データの本番注入も実施しない。
+- 残作業・再開条件は、承認済みの認証環境で画面/APIを確認し、制度別出典・収録範囲・公開安全性の元条件を満たすこと。今回の限定修正をT29完了へ読み替えない。
