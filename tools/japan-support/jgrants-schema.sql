@@ -1,0 +1,2 @@
+CREATE TABLE IF NOT EXISTS jgrants_jobs(keyword TEXT PRIMARY KEY,next_attempt TEXT NOT NULL,payload TEXT,cursor INTEGER NOT NULL DEFAULT 0,item_count INTEGER NOT NULL DEFAULT 0,checked_at TEXT,lease_until TEXT,failures INTEGER NOT NULL DEFAULT 0,last_error TEXT);
+CREATE TABLE IF NOT EXISTS jgrants_catalog(id TEXT PRIMARY KEY,title TEXT NOT NULL,record_json TEXT NOT NULL,acquired_at TEXT NOT NULL);
