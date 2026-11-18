@@ -42,7 +42,8 @@ test('missing, unexpected, duplicate jobs and failed persistence remain unconfir
  await assert.rejects(()=>monitorJgrants({DB:dbFor(keys.map(keyword=>({...base,keyword})),{fail:true})},keys,now),/monitor_write_failed/);
 });
 test('a fatal collection failure is still thrown after monitoring is attempted',async()=>{
- let writes=0;const db={prepare(sql){return {bind(){return this},async first(){return {keyword:'助成',payload:'broken JSON',cursor:0,item_count:1}},async run(){return {meta:{changes:1}}},async all(){return {success:true,results:keys.map(keyword=>({...base,keyword}))}}}},async batch(batch){writes+=batch.length;return batch.map(()=>({success:true}))}};
- await assert.rejects(()=>runJgrants({DB:db,COLLECTION_ENABLED:'true'}),SyntaxError);
- assert.equal(writes,16);
+ let writes=0;const db={prepare(sql){return {bind(){return this},async first(){return sql.includes('payload IS NOT NULL')?{keyword:'助成',payload:'broken JSON',cursor:0,item_count:1}:null},async run(){return {meta:{changes:1}}},async all(){return {success:true,results:keys.map(keyword=>({...base,keyword}))}}}},async batch(batch){writes+=batch.length;return batch.map(()=>({success:true}))}};
+ const original=globalThis.fetch;try{globalThis.fetch=()=>{throw Error('isolated fixture must not fetch')};
+ await assert.rejects(()=>runJgrants({DB:db,COLLECTION_ENABLED:'true'}),SyntaxError);assert.equal(writes,16);
+ }finally{globalThis.fetch=original;}
 });
