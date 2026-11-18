@@ -20,3 +20,5 @@ await import('./jgrants.test.mjs');
 await import("./jgrants-monitor.test.mjs");
 
 await import('./national-index.test.mjs');
+
+await import("./test-api-errors.mjs");
