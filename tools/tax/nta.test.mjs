@@ -100,4 +100,41 @@ await test('persisted family turn and Shift JIS evidence survive a restart',asyn
  const fx=fetcher(u=>u===circular?response(bytes,'text/html'):response(html('UTF8')));const r=await ntaTick({TAX:kv},{fetcher:fx.fetch,now:100000});
  assert.deepEqual(fx.calls.filter(u=>!u.endsWith('robots.txt')),[circular,doc]);assert.equal(r.verified.length,2);assert.equal(r.verified[0].encoding,'shift_jis');assert.equal(r.verified[0].title,'税');assert.equal(r.verified[0].bytes,bytes.length);assert.equal(r.verified[0].readback,true);assert.equal(r.verified[1].encoding,'utf-8');
 });
+// Failed metadata writes leave conservative reservations on the retained queue item.
+async function retryFixture({bytes=0}={}) {
+ const kv=await oldQueue([doc]);const state=await kv.get('nta:state','json');state.bytes=bytes;await kv.put('nta:state',JSON.stringify(state));
+ const put=kv.put.bind(kv),get=kv.get.bind(kv);let failMeta=true,failRaw=false,corruptRaw=false,title='A';
+ kv.put=async(k,v)=>{if((failMeta&&k.startsWith('nta:page:'))||(failRaw&&k.startsWith('nta:raw:')))throw Error('synthetic storage failure');return put(k,v);};
+ kv.get=async(k,t)=>corruptRaw&&k.startsWith('nta:raw:')&&t==='arrayBuffer'?new Uint8Array([0]).buffer:get(k,t);
+ const fx=fetcher(()=>response(html(title)));
+ return {kv,fx,set(options){({failMeta=failMeta,failRaw=failRaw,corruptRaw=corruptRaw,title=title}=options);},run:now=>ntaTick({TAX:kv},{fetcher:fx.fetch,now}),size:()=>new TextEncoder().encode(html(title)).length};
+}
+await test('metadata failure retains one reservation across same-content retries and completion',async()=>{
+ const f=await retryFixture(),size=f.size();let r=await f.run(100000);assert.equal(r.stored_version_bytes,size);assert.equal(r.failed.length,1);
+ const first=await f.kv.get('nta:state','json');assert.equal(first.queue[0].due,3700000);
+ r=await f.run(3700000);assert.equal(r.stored_version_bytes,size);assert.equal((await f.kv.get('nta:state','json')).queue[0].reserved_raw_keys.length,1);assert.equal((await f.kv.get('nta:state','json')).queue[0].due,10900000);
+ f.set({failMeta:false});r=await f.run(10900000);assert.equal(r.stored_version_bytes,size);assert.equal(r.completed_scans,1);assert.equal(r.pages_saved,1);
+ assert.equal(Object.hasOwn((await f.kv.get('nta:state','json')).queue[0],'reserved_raw_keys'),false);
+});
+await test('A failure then B failure then A retry preserves both reservations without double counting',async()=>{
+ const f=await retryFixture();const a=f.size();await f.run(100000);f.set({title:'BBB'});const b=f.size();let r=await f.run(3700000);assert.equal(r.stored_version_bytes,a+b);
+ const state=await f.kv.get('nta:state','json');assert.equal(new Set(state.queue[0].reserved_raw_keys).size,2);
+ f.set({title:'A',failMeta:false});r=await f.run(10900000);assert.equal(r.stored_version_bytes,a+b);assert.equal(r.completed_scans,1);
+});
+await test('reserved same hash can finish at the cap but changed hash cannot exceed it',async()=>{
+ const size=new TextEncoder().encode(html('A')).length,cap=64*1024*1024;
+ const f=await retryFixture({bytes:cap-size});await f.run(100000);f.set({failMeta:false});let r=await f.run(3700000);assert.equal(r.blocked,null);assert.equal(r.completed_scans,1);assert.equal(r.stored_version_bytes,cap);
+ const g=await retryFixture({bytes:cap-size});await g.run(100000);g.set({title:'B',failMeta:false});r=await g.run(3700000);assert.equal(r.blocked,'STORAGE_BUDGET');assert.equal(r.completed_scans,0);assert.equal(r.stored_version_bytes,cap);
+});
+await test('reserved retry must still verify raw bytes and cannot claim success on corruption',async()=>{
+ const f=await retryFixture();await f.run(100000);f.set({failMeta:false,corruptRaw:true});const r=await f.run(3700000);
+ assert.equal(r.stored_version_bytes,f.size());assert.equal(r.failed[0].code,'READBACK_MISMATCH');assert.equal(r.completed_scans,0);assert.equal(r.queue_remaining,1);assert.equal(r.pages_saved,0);
+});
+await test('failed raw write keeps conservative reservation and retry reattempts storage',async()=>{
+ const f=await retryFixture();f.set({failRaw:true});await f.run(100000);assert.equal([...f.kv.map.keys()].filter(k=>k.startsWith('nta:raw:')).length,0);
+ f.set({failRaw:false,failMeta:false});const r=await f.run(3700000);assert.equal(r.stored_version_bytes,f.size());assert.equal(r.completed_scans,1);assert.equal([...f.kv.map.keys()].filter(k=>k.startsWith('nta:raw:')).length,1);
+});
+await test('legacy queue without reservation retains its existing byte total and reserves conservatively',async()=>{
+ const f=await retryFixture({bytes:1234});f.set({failMeta:false});const r=await f.run(100000);assert.equal(r.stored_version_bytes,1234+f.size());assert.equal(r.completed_scans,1);
+});
 console.log('T20 NTA: '+cases+' isolated cases passed; no live requests or production writes.');
