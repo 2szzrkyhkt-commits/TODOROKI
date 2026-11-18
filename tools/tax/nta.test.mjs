@@ -77,6 +77,10 @@ await test('e-Gov failure is retained; NTA succeeds; shared status is written on
  await kv.put('history:state',JSON.stringify({queue:[],next_at:new Date(Date.now()+86400000).toISOString()}));kv.writes=[];
  const original=globalThis.fetch,fx=fetcher();globalThis.fetch=async(u,o)=>String(u).startsWith('https://www.nta.go.jp/')?fx.fetch(u,o):new Response('',{status:503});
  try{await assert.rejects(()=>tick({TAX:kv}),/law downloads failed/);}finally{globalThis.fetch=original;}
- const status=await kv.get('status','json');assert.equal(status.total_saved,5);assert.equal(status.failed.length,1);assert.equal(status.nta.pages_saved,2);assert.equal(kv.writes.filter(k=>k==='status').length,1);assert.equal((await kv.get('state','json')).queue.length,1);
+ const status=await kv.get('status','json');assert.equal(status.total_saved,5);assert.equal(status.failed.length,1);assert.equal(status.nta.pages_saved,2);assert.equal(kv.writes.filter(k=>k==='status').length,1);assert.equal((await kv.get('state','json')).queue.length,1);assert.equal(Object.hasOwn(status,'history'),false);
+ const bad=new KV(),get=bad.get.bind(bad);bad.put=async(k,v)=>{bad.writes.push(k);bad.map.set(k,typeof v==='string'?new TextEncoder().encode(v):new Uint8Array(v));};bad.get=async(k,t)=>{if(k==='state')throw Error('isolated state-read failure');return get(k,t);};
+ globalThis.fetch=fx.fetch;
+ try{await assert.rejects(()=>tick({TAX:bad}),/isolated state-read failure/);}finally{globalThis.fetch=original;}
+ assert.equal((await bad.get('status','json')).nta.pages_saved,2);assert.equal((await bad.get('status','json')).phase,'failed');
 });
 console.log('T20 NTA: '+cases+' isolated cases passed; no live requests or production writes.');

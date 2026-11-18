@@ -98,7 +98,7 @@ export async function listCatalog(env, {cursor, subject, query = ''} = {}) {
 
 export async function tick(env) {
  let report={},collectionFailure;
- try{report=await collectTax(env,{persistStatus:false});}catch(e){report=e.collectionReport;collectionFailure=e;}
+ try{report=await collectTax(env,{persistStatus:false});}catch(e){report=e.collectionReport||{phase:'failed',collection_error:'COLLECTION_TICK_FAILED'};collectionFailure=e;}
  try{report.history=await historyTick(env,{verifyRoutes:async snapshot=>{
   const headers={Authorization:'Bearer '+env.SETUP_TOKEN};
   const endpoint='https://internal.invalid/history?law_id='+encodeURIComponent(snapshot.law_id);
@@ -113,7 +113,8 @@ export async function tick(env) {
  try{report.nta=await ntaTick(env);}
  catch{report.nta={state:'failed',at:new Date().toISOString(),code:'NTA_STORAGE_OR_STATE_FAILED'};}
  // One write to the shared status key per tick (KV same-key rate limit).
- const status=report.phase==='idle'?(await env.TAX.get('status','json')||{}):report;
+ const {history,nta,...collection}=report;
+ const status=report.phase==='idle'?(await env.TAX.get('status','json')||{}):collection;
  await env.TAX.put('status',JSON.stringify({...status,nta:report.nta}));
  if(collectionFailure)throw collectionFailure;
  return report;
