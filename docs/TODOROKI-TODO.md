@@ -1117,3 +1117,14 @@ SitesはプロジェクトIDを原本一覧と照合し、全11件のDB概要を
 - T07/T08：米国本番v27の既存認証でcollection-statusを読取（HTTP200）。diagnostics.checkedAt10:46:53 JST、lastBatchFinishedAt/nativeSchedulerVerifiedAt10:46:50、lastDataSuccessAt10:46:47。state=running/phase=monitoring、lastError=null、保存会社4517/10期充足検証2395。APIのsaved4509やprocessed66137は会社総数と同一視しない。
 - 対象6050=保存4517+保留資料なし22+対象外1511、未解決0/未保存再試行0。保留22の内訳はSEC_HTTP_404・NO_XBRL_ANNUAL_FILINGS13、SEC_COMPANYFACTS_NOT_AVAILABLE9。次回予定は11/20 15:11 JST頃だが実行成功を保証しない。latestはlastError=SEC_HTTP_403を保持し、lastCheckedAt09:57:59/lastSweepAt10:46:33。現在も常に403と断定せず、最新開示連携は正常完了としない。強制再試行・停止解除・新規ジョブ・キー変更なし。
 - 次はT20の全対象一覧と初回収集/保存照合の不足を詰める。既存周期で候補が増えるため、待機966から完了日を保証しない。T07/T08は日本EDINET403と米国latest403/資料なし保留を区別し、全社10期完了へ読み替えない。
+
+## 2026-11-18 Jグランツ停止修復（T29）
+- 開始22件/未完了23件、今回の45項目としての新規完了0件、現在22件/23件。収集障害の修復と全国制度の網羅/公開完成は分ける。
+- 別Workで11/17配備済みのworker.js/jgrants.jsがmain未収録だったため現行配備と照合して回収。残る9モジュールはmainと末尾空白以外一致。古いZIP全体やmainの旧bundleで上書きせず、実配備の11モジュールを保持しjgrants.jsのredirect:error→manualのみ変更。専用DBに既存の2テーブルもスキーマとして記録し、本番へ再適用しない。
+- [PR #65](https://github.com/2szzrkyhkt-commits/TODOROKI/pull/65)、実装05fe1d95c9537b2f00fa67bb21487bc75b4d479d、main ed56de98bb5222cd7c4dbc26743faccc392c55e1。[PR CI44221448614](https://github.com/2szzrkyhkt-commits/TODOROKI/actions/runs/44221448614)/job134524036666 success後にマージ。旧オプションでは回帰2件失敗、修正後Jグランツ6件成功。71 Python、既存security、支援監視59/条件92/照合1079/金額598/自治体カタログ93検証成功。
+- 支援Worker deployment d5c1882e-54bc-4b41-99db-b5a0009226ca、version5c235776-a201-4ee1-9a5e-dd7c5249814e、11:13:41 JSTに100%反映。直前版eb56fb2f-c539-44f1-bc1c-69a50bf0a920と全ソースleaseを確認して配備。11モジュール全文読戻し一致（変更外10モジュールは旧版と完全一致）、設定/binding差分0。認証・Access・DB接続・Cron/定期3件・秘密値・EDINET/税法coordinatorは変更なし。
+- 修正前は8検索語それぞれ失敗22、checked_atなし、catalog25件は11/17初回保存のまま。原因はWorkersのInvalid redirect valueで外部取得前に失敗。manualでも3xxは非2xxとして失敗/再試行し、Locationへ追従しない。403/不正JSONでも旧正常スナップショットを保持する回帰を確認。
+- 既存周期により「助成」はchecked_at=2026-11-18T02:15:12.825Z（11:15:12 JST）、一覧922件取得、failures0/last_error=null。11:21の読取りではcursor25、catalog47件へ増加。先頭25件を元APIスナップショットとD1上で独立照合し、ID重複0、8項目/取得日時/pending/出典・加工表示は全一致・不一致0。取得922件と個別保存25件を混同せず、他7語の旧エラーを一括解消済みにしない。既存の25件/周期・日次取得・1時間失敗待機を維持し、手動収集やカーソル/失敗回数の書換えなし。
+- 外形URL https://todoroki-japan-support-dev.8njb5bzfbz.workers.dev/api/subsidies は403/Cloudflare1010。クライアントが遮断されており、Access本人UIの成功/侵入試験の証拠には使わない。迂回せず既存管理APIの限定SELECTで上記保存証拠を取得。公開ロックのコード/設定は不変。
+- 記録時点の[main監査44222735841](https://github.com/2szzrkyhkt-commits/TODOROKI/actions/runs/44222735841)はin_progress。PR成功と本番収集再開の別証拠は確認済みだが、このmain監査は成功扱いしない。
+- T29残作業：8語巡回/重複を含む収録範囲の把握、Jグランツ外の国の給付/助成/減免等の不足、各制度の条件/金額・権利確認、本人UI/安全性/公開準備。Jグランツのキーワード検索や1市CSVを全国網羅としない。次はmain監査の結末と保存カーソル進行を確認し、このT29不足とT20初回収集を継続する。
