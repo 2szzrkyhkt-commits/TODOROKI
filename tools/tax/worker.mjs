@@ -23,25 +23,45 @@ async function api(path, params) {
   const raw=await bounded(response,2*1024*1024);
   return {data:JSON.parse(new TextDecoder().decode(raw)),url:url.href};
 }
+const rawDigest=async raw=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',raw)),b=>b.toString(16).padStart(2,'0')).join('');
+async function verifyOriginal(kv,rev,meta) {
+  if(meta.revision_id!==rev||!Number.isSafeInteger(meta.bytes)||meta.bytes<=0||meta.bytes>24*1024*1024||!/^[a-f0-9]{64}$/.test(meta.sha256))throw Error('invalid archive metadata');
+  const raw=await kv.get(`raw:${rev}`,'arrayBuffer');
+  if(!raw||raw.byteLength!==meta.bytes||!isLawXml(new Uint8Array(raw))||await rawDigest(raw)!==meta.sha256)throw Error('archive raw readback mismatch');
+}
+async function writeVerifiedJSON(kv,key,value) {
+  const json=JSON.stringify(value);await kv.put(key,json);
+  if(await kv.get(key)!==json)throw Error('archive metadata readback mismatch');
+}
 async function archive(env, law) {
   const r=law.revision_info, id=law.law_info.law_id, rev=r.law_revision_id;
   if (!rev || !id) throw new Error('missing revision id');
-  if (await env.TAX.get(`revision:${rev}`)) return false;
+  const previous=await env.TAX.get(`revision:${rev}`,'json');
+  if(previous) {
+    if(previous.law_id!==id)throw Error('archive law id mismatch');
+    await verifyOriginal(env.TAX,rev,previous);
+    const current=await env.TAX.get(`law:${id}`,'json');
+    // Recover a missing index after a partial write; never replace a different revision.
+    if(!current)await writeVerifiedJSON(env.TAX,`law:${id}`,previous);
+    else if(current.law_id!==id||!current.revision_id)throw Error('invalid archive index');
+    return {created:false,verified:{law_id:id,revision_id:rev,sha256:previous.sha256,bytes:previous.bytes,readback:true,index_repaired:!current}};
+  }
   const url=new URL(`${BASE}/law_data/${encodeURIComponent(rev)}`);
   url.searchParams.set('response_format','xml');url.searchParams.set('law_full_text_format','xml');url.searchParams.set('include_attached_file_content','false');
   const response=await fetch(url,{headers:{Accept:'application/xml','User-Agent':'TODOROKI-Tax-Collector/1.0'},signal:AbortSignal.timeout(60000)});
   const raw=await bounded(response,24*1024*1024);
   if (!isLawXml(raw)) throw new Error('invalid law XML');
-  const sha256=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',raw)),b=>b.toString(16).padStart(2,'0')).join('');
+  const sha256=await rawDigest(raw);
   await env.TAX.put(`raw:${rev}`,raw);
   const meta={law_id:id,revision_id:rev,title:r.law_title,subjects:classify(r.law_title),classification:'名称による仮分類・条文分類未確認',source_url:url.href,collected_at:new Date().toISOString(),sha256,bytes:raw.length,revision_info:r};
-  await env.TAX.put(`revision:${rev}`,JSON.stringify(meta));
-  await env.TAX.put(`law:${id}`,JSON.stringify(meta));
-  return true;
+  await verifyOriginal(env.TAX,rev,meta);
+  await writeVerifiedJSON(env.TAX,`revision:${rev}`,meta);
+  await writeVerifiedJSON(env.TAX,`law:${id}`,meta);
+  return {created:true,verified:{law_id:id,revision_id:rev,sha256,bytes:raw.length,readback:true,index_repaired:false}};
 }
 export async function collectTax(env,{persistStatus=true}={}) {
   let state=await env.TAX.get('state','json') || {category:0,offset:0,queue:[],next_offset:null,saved:0,scans:0,seeded:false};
-  const report={at:new Date().toISOString(),saved:0,skipped:0,failed:[],phase:'collect',scope:'国税・地方財政の候補法令。通達・条例・旧版の遡及収集・試験年度確定は未対応。'};
+  const report={at:new Date().toISOString(),saved:0,skipped:0,failed:[],verified:[],phase:'collect',scope:'国税・地方財政の候補法令。通達・条例・旧版の遡及収集・試験年度確定は未対応。'};
   try {
     if (!state.seeded) {
       const seed=await env.TAX.get('seed','json');
@@ -60,7 +80,7 @@ export async function collectTax(env,{persistStatus=true}={}) {
     // Single scheduled writer; manual setup invocations must not overlap with cron.
     const pending=state.queue.splice(0,3), retry=[];
     for(const law of pending) {
-      try {if(await archive(env,law)){report.saved++;state.saved++;}else report.skipped++;}
+      try {const result=await archive(env,law);report.verified.push(result.verified);if(result.created){report.saved++;state.saved++;}else report.skipped++;}
       catch(e) {const fail={id:law.law_info?.law_id,error:String(e).slice(0,300)};report.failed.push(fail);retry.push(law);console.error(JSON.stringify({event:'tax_archive_failed',...fail}));}
     }
     // Rotate failures rather than blocking every subsequent law in the same page.
