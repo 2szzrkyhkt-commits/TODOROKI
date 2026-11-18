@@ -24,3 +24,7 @@ https://developers.cloudflare.com/workers/ci-cd/builds/configuration/
 不正canonicalと不明URLの停止を検証。既存Python71・security・検索を併用。
 本番のGoogle掲載やGSCの転送検証の結末は別であり、T02は未完了維持。
 配備/公開検証の結果はTODO正本へ別途記録する。
+
+旧版PRの長い検査が最新版を塞いだため、同じPR branchの新しい実行は旧版を取消す。
+本番側のgroupとcancel=falseは維持し、品質履歴の同時書込を増やさない。
+既存のcron式と定期Automation3件は変更しない。

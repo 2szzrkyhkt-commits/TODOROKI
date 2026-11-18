@@ -18,7 +18,7 @@ permissions:
   contents: read
 concurrency:
   group: quality-${{ github.event_name == 'pull_request' && github.head_ref || 'production' }}
-  cancel-in-progress: false
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 jobs:
   audit:
     if: github.event_name != 'deployment_status' || github.event.deployment_status.state == 'success'
