@@ -17,7 +17,7 @@ METHODS = {
  22:'Inspect PDF magic bytes; content rendering remains unverified',
  23:'Compare PDF catalog paths with source tree, including Unicode normalization',
  25:'Group PDF SHA256 hashes; duplicates are evidence for review, not automatic deletions',
- **{i:'Playwright read-only browser smoke check; per-page/browser evidence in browser.json' for i in (26,28,29,30,31,32,33,34,41,43,52)}
+ **{i:'Playwright read-only browser smoke check; per-page/browser evidence in browser.json' for i in (26,28,29,30,31,32,33,34,41,43,44,52)}
 }
 for criterion in CRITERIA:
  number=int(criterion['id'][2:])
