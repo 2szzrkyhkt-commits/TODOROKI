@@ -118,13 +118,18 @@ export async function ntaTick(env,{fetcher=fetch,now=Date.now()}={}) {
       const id=await sha(new TextEncoder().encode(item.url)),hash=await sha(raw),key=PREFIX+'raw:'+id+':'+hash;
       const previous=await kv.get(PREFIX+'page:'+id,'json');
       const changed=previous?.sha256!==hash;
-      if(changed&&state.bytes+raw.length>MAX_BYTES){state.blocked='STORAGE_BUDGET';throw Error('STORAGE_BUDGET');}
+      // Queue-local reservations survive failed metadata saves. Never reduce legacy totals.
+      const reserved=Array.isArray(item.reserved_raw_keys)&&item.reserved_raw_keys.includes(key);
+      if(changed&&!reserved&&state.bytes+raw.length>MAX_BYTES){state.blocked='STORAGE_BUDGET';throw Error('STORAGE_BUDGET');}
       const title=html?html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1\s*>/i)?.[1].replace(/<[^>]*>/g,'').replace(/\s+/g,' ').trim():null;
       const encoding=pdf?null:ntaEncoding(raw,type);
       const meta={url:item.url,source:'国税庁',source_url:item.url,checked_at:report.at,sha256:hash,bytes:raw.length,raw_key:key,content_type:type,encoding,title:title||'国税庁公式資料',links,license_url:'https://www.nta.go.jp/chuijiko/copy.htm',notice:NOTICE};
       if(changed){
         // Reserve before writing so a failed metadata write cannot undercount storage.
-        state.bytes+=raw.length;
+        if(!reserved){
+          state.bytes+=raw.length;
+          item.reserved_raw_keys=[...(Array.isArray(item.reserved_raw_keys)?item.reserved_raw_keys:[]),key];
+        }
         await saveVerified(kv,key,raw);
       }
       else {const old=await kv.get(key,'arrayBuffer');if(!old||await sha(old)!==hash)throw Error('READBACK_MISMATCH');}
