@@ -18,3 +18,5 @@ assert.equal((await c.handler.fetch()).status,200);console.log('PASS source poli
 await import('./jgrants.test.mjs');
 
 await import("./jgrants-monitor.test.mjs");
+
+await import('./national-index.test.mjs');
