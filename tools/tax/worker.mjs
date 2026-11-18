@@ -1,5 +1,6 @@
 import {isLawXml} from './xml.mjs';
 import {historyTick,getHistory,renderHistory} from './history.mjs';
+import {ntaTick} from './nta.mjs';
 const BASE = 'https://laws.e-gov.go.jp/api/2';
 const CATEGORIES = ['013', '036'];
 export const SUBJECTS = ['所得税法','法人税法','相続税法','消費税法','酒税法','住民税','事業税','固定資産税','国税徴収法'];
@@ -106,6 +107,11 @@ export async function tick(env) {
   return {json_200_and_matches:true,html_200_and_matches:true,method:'in-process actual handler; existing credential stays in binding/request memory; no network transmission'};
  }});}
  catch(e){report.history={state:'failed',error:String(e).slice(0,160)};console.error(JSON.stringify({event:'tax_history_failed',error:report.history.error}));}
+ // Independent source family: an e-Gov failure must not masquerade as an NTA failure.
+ try{report.nta=await ntaTick(env);}
+ catch{report.nta={state:'failed',at:new Date().toISOString(),code:'NTA_STORAGE_OR_STATE_FAILED'};}
+ const status=await env.TAX.get('status','json')||{};
+ await env.TAX.put('status',JSON.stringify({...status,nta:report.nta}));
  if(collectionFailure)throw collectionFailure;
  return report;
 }
