@@ -32,7 +32,9 @@ const markup="<header class=\"site-header\">\n  <div class=\"wrap brand-row\">\n
 function update(){
  const header=document.querySelector('header.site-header')||document.querySelector('body > header');
  if(!header)return;
- header.outerHTML=markup;
+ // Keep the explicitly authored homepage header and its OFUSE controls.
+ // This does not change privacy preferences or optional-tag activation.
+ if(header.dataset.preserveHeader!=='ofuse')header.outerHTML=markup;
  if(!document.querySelector('link[href^="/assets/site-header.css"]')){
   const css=document.createElement('link');css.rel='stylesheet';css.href='/assets/site-header.css';document.head.append(css);
  }
