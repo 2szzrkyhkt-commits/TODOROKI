@@ -90,6 +90,6 @@ export async function checkStoredEligibility(env,clock=new Date()) {
 
 export async function runSupportWithEligibility(env) {
  let result,error;try{result=await runSupport(env)}catch(e){error=e}
- let eligibilityCheck;try{const check=await checkStoredEligibility(env);await env.DB.prepare("INSERT INTO support_feature_checks(feature_id,result_json,checked_at) VALUES(?,?,?) ON CONFLICT(feature_id) DO UPDATE SET result_json=excluded.result_json,checked_at=excluded.checked_at").bind('eligibility',JSON.stringify(check),check.checkedAt).run();eligibilityCheck={status:'passed',passed:check.passed,sourceReviewRequired:check.sourceReviewRequired};}catch{eligibilityCheck={status:'failed',code:'eligibility_check_failed'}}
+ let eligibilityCheck;try{const check=await checkStoredEligibility(env);const persisted=await env.DB.prepare("INSERT INTO support_feature_checks(feature_id,result_json,checked_at) VALUES(?,?,?) ON CONFLICT(feature_id) DO UPDATE SET result_json=excluded.result_json,checked_at=excluded.checked_at").bind('eligibility',JSON.stringify(check),check.checkedAt).run();if(persisted?.success!==true)throw Error('eligibility_check_storage_failed');eligibilityCheck={status:'passed',passed:check.passed,sourceReviewRequired:check.sourceReviewRequired};}catch{eligibilityCheck={status:'failed',code:'eligibility_check_failed'}}
  if(error)throw error;return {...result,eligibilityCheck};
 }
