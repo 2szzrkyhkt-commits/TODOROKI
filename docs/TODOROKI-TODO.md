@@ -97,7 +97,7 @@ D1実測：制度1件はpending/pendingのまま。取得元は有効1件・無�
 - [ ] 無料ブログの記事公開を安定化 **〔3記事公開確認・継続公開連携の検証待ち〕** <!-- todo:T36 project:TODOROKI LIFE・その他収益化 -->
 - [ ] 収益化の申請・広告導線を整備 **〔検証待ち〕** <!-- todo:T37 project:TODOROKI LIFE・その他収益化 -->
 - [ ] 検索流入と成果報酬を計測 **〔保留〕** <!-- todo:T38 project:TODOROKI LIFE・その他収益化 -->
-- [ ] 他の無料媒体への展開を検証 **〔既存Bloggerのアカウント選択待ち〕** <!-- todo:T39 project:TODOROKI LIFE・その他収益化 -->
+- [ ] 他の無料媒体への展開を検証 **〔既存Bloggerの再認証・所有者確認待ち〕** <!-- todo:T39 project:TODOROKI LIFE・その他収益化 -->
 
 確認：専用Worker/D1と毎日8時JSTの下書きAutomationが存在。現行指示では公開API・シークレット未接続のため自動公開をしない。下書き保存と公開を混同しない。実収益・成果報酬計測は未確認。
 
@@ -1211,3 +1211,21 @@ SitesはプロジェクトIDを原本一覧と照合し、全11件のDB概要を
 - [main監査44256820027](https://github.com/2szzrkyhkt-commits/TODOROKI/actions/runs/44256820027)/job134642374223はsuccess確定。Python73/支援25/監視26、本番公開52/52・T04対象33ページ成功。quality-history/history/44256820027-1.json（bloba6f34df8e6025bdcd6ca8baa948c4d3ffd5aaa22）のsource d68289aad094c8d7108763754f7993b5021efcdd/run/push/attempt1を読戻し一致。暫定62項目7完了/14未確認/41一部を45項目完了と混同しない。
 - [デジタル庁公式API仕様](https://developers.digital.go.jp/documents/jgrants/api/)で一覧と詳細を区別し、詳細の応答例に公募要領等の添付dataが含まれることを確認。今回は詳細API呼出/添付取得・保存・転載や取得元追加を実施していない。institution_nameの意味を発行機関と推定せず、未収録値を架空補完しない。
 - 終了：完了22件/未完了23件、今回の45項目新規完了0件。次の完了目標T29：既存周期の一覧保存残・個別の条件/金額/出典確認・Jグランツ外の国の支援制度不足を進める。T39はBloggerの所有者アカウント選択が再開条件、T20はNTA初回収集未達。本人操作を要する箇所だけ保留し、新規の定期タスク・認証/公開範囲変更・有料機能を作らない。
+
+## 2026-11-18 T29 国の生活支援索引を既存周期へ追加
+- 開始22件/未完了23件。今回の45項目としての新規完了0件、終了22件/23件。追加は国の公式索引1資料・7事業名の候補保存であり、全国全制度・各制度の条件/金額・一般公開の完了ではない。T24等の既存完了を再加算しない。
+- 最新main ee5da953（別Work PR #75・OFUSEヘッダー維持）と正本/配備を照合し、ヘッダーや既存収集の重複実装を避けた。開始時18:53 JSTの支援cursor1150/1862、catalog1735件、8語のfailures0。前回修正version8f617b37の稼働継続を確認。
+- T39：前回のBloggerタブは終了しており通常SIGN INから現在状態を確認。既存Googleアカウント2件が両方Signed out。所有者選択に加え再認証が必要で、アカウントを推定して選ばず保留。認証情報入力/新規登録/規約同意/公開なし。再開条件は本人の既存Blogger再認証と所有ブログ確認。個人アカウント情報を公開台帳へ書かない。
+- T29のJグランツ外の国の収録不足に対応し、[厚生労働省の生活困窮者自立支援制度](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000059425.html)の固定HTMLを追加。自立相談支援、住居確保給付金の支給、就労準備、家計改善、就労訓練、子どもの学習・生活支援、居住支援の7見出しを抽出する。旧コロナ支援リーフレットは掲載終了告知があり採用しない。
+- [利用条件](https://www.mhlw.go.jp/chosakuken/index.html)、[例外一覧](https://www.mhlw.go.jp/chosakuken/exhibit.html)、[PDL1.0](https://www.digital.go.jp/resources/open_data/public_data_license_v1.0)、robotsを確認。出典/加工主体を保持し、画像・ロゴ・第三者サイト・添付PDF・リンク先巡回・本文転載を追加しない。レビューURL/ハッシュ/独立7見出しはtools/japan-support/national-source-review.json、[実装範囲](national-support-index-review-2026-11-18.md)。
+- [PR #76](https://github.com/2szzrkyhkt-commits/TODOROKI/pull/76)、実装9591fc59c7fe2b9f3410c58b7f070e77dd4dfadf、main6c908f753e060f98092be7cfe670d2b57be26f77。既存revisionsへpendingの索引候補を保存し、programs/受給条件/金額/公開状態は更新しない。候補JSON全体のSHA256を保存キーとし、受信本文ハッシュを別記。新規保存後と304時に全文ハッシュとスキーマを読戻し、欠落/改変やチェックポイント失敗は失敗として扱う。
+- 抽出境界・script/template/comment内見出しの除外、不正/重複/空/上限、304/302/403・保存欠落/改変・失敗応答・登録再実行の状態保持を検証。初回ローカル1件は模擬DBログのundefined.sqlで失敗したためfixtureを修正し、最終支援36/36・Python76/76・security成功。[PR監査44282634674](https://github.com/2szzrkyhkt-commits/TODOROKI/actions/runs/44282634674)/job134727054376もsuccess後にマージ。Python76/支援36/監視26と390/1440px確認成功。
+- 配備前のWorker script/settings全量取得は、秘密情報が露出し得るとして自動承認レビューに拒否された。迂回せず、Cloudflare側で現行値を保持したままハッシュだけ返す方法へ変更して許可・完了。配備版/全12モジュール/設定ハッシュのleaseを検証後、collector.js変更とnational-index.js追加だけを適用。秘密値やAccess設定値を外部へ返さず、既存秘密bindingをその場で保持する。
+- 支援Worker deployment4d587bb5-f860-4fbe-995d-63b6f55bc43c、version279e419c-2071-41dc-a19f-e2b4d753212d、19:13:12.897 JSTに100%。全13モジュール読戻し一致、変更外11モジュール保持、設定ハッシュ一致。認証/公開ロック・bindings・DBスキーマ・coordinator・Cron・定期タスク3件・AdSense・有料機能の変更なし。
+- 配備読戻し成功後、確認済みの固定sourceを1行だけINSERTし読戻し確認。interval86400秒/1資料・512KiB・15秒・redirect manual・既存リース/待機を維持。新規Cron/ジョブは作らず既存収集処理へ取得元を追加。ON CONFLICT DO NOTHINGで再実行時に既存sourceの待機/失敗数/設定をリセットしない。
+- 19:15:12.702 JSTの既存周期でHTTP200/status=ok、failures0、次回19日19:15:12.702 JST。revisionsにpending1文書・itemCount7、保存JSONハッシュb15a616be5dd58216495ffa06ae06455b4706cdc7ab043bc9085d3de3f6a5b63の読戻し一致。7項目ともverification=pending/eligibility=not_evaluated/amount=not_calculated/localAvailability=unconfirmed、公表日null・全国網羅でない旨を保持。
+- 初回独立サンプル60701 bytes/SHA256 65e98871b06f64c529f15671658c99fc65aa930d497ada843c9a0ff6c9719f7bとWorker本文のハッシュは異なり、同一扱いしなかった。再独立取得60412 bytes/SHA256 31133975567a37a042fab3f57fdc153067b05f27fa499461f6b6d27b5151ea03がWorker記録と一致。標準HTMLParserによる7見出しと全候補JSONの独立再構成もarchive hash b15a616bで完全一致。初回サンプルとの差にはHTMLコメント部分があり、サーバ生成条件までは断定しない。
+- 19:19 JSTの限定SELECTで新sourceのcollection_runs1/revisions1・failures0、既存programs1件、catalog1819件。新source監視はwithin_interval/pendingChanges1。支援cursor1275/1862で他7語も失敗0。7事業名をJグランツのcatalog件数や検証済み制度数へ加算しない。検証用の本番データ注入・手動収集・期限前倒しなし。
+- [main監査44283218759](https://github.com/2szzrkyhkt-commits/TODOROKI/actions/runs/44283218759)/job134729101088はsuccess確定。Python76/支援36/監視26・本番公開52/52・T04対象33ページ成功。quality-history/history/44283218759-1.json（blobf4658a4bf7620c351de9174c56be76168cffdfdc）のsource6c908f7/run/push/attempt1一致を読戻し。暫定62項目7完了/14未確認/41一部を45項目完了と混同しない。本体自動ビルド83884266-6811-42c0-ae54-0013981425d1もsource6c908f7でsuccess。
+- T20の開始時statusは18:30 JSTの記録でNTA保存36/既知2016/待機1980/初回走査0・failed[]。現在時刻の記録へ読み替えない。税法KVはstatusのみ読取。T16停止方針、T44既知のR2/KV制約、T37認証待ちを維持し同じ失敗診断を繰り返さない。
+- 次の完了目標T29：一覧候補の個別出典/条件/金額/地域の確認と、他の国の給付・助成・減免等の不足を継続する。タイトル索引の追加を条件構造化・公開準備完了へ読み替えず、元の完了条件を狭めない。
