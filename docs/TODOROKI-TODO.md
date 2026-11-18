@@ -1485,3 +1485,12 @@ Cloudflare KVのstatusを読取。e-Govは保存446・初回走査1・待機2・
 - 手動起動せず06:00 JSTの既存周期を待ち、許可済みstatusのみ確認。06:00:14.329 JSTのNTAは保存2・読戻し2成功・失敗0・blockedなし。累計保存82、待機2572、初回走査0。新規候補追加で待機数が増える場合があり、未完了のまま維持。
 - 64MiB予算、1回2文書の上限、既存backoff、取得範囲、Cron／定期3件、AdSense、権限、T44は変更していない。意図的な本番保存障害は起こしていない。
 - 残作業は既存周期による初回全対象の収集と原本照合。今回の正常収集2件を全件完了に読み替えない。
+
+## 2026-11-19 T34: 日付条件による端末内の店舗履歴比較を staging へ反映
+
+- 開始・終了とも完了22件／未完了23件。T34全体は未完了。元要望「収支表と連携して、日別に行くべき店を絞れるようにする」を原会話で再確認。詳細な曜日・末尾日・イベント条件は指定されていないため、予測やイベント推測を行わず明示的な日付条件の過去記録比較を実装。
+- [SLOT draft PR #8](https://github.com/2szzrkyhkt-commits/TODOROKI-SLOT/pull/8)、commit `3a425592c23d5ca9c37d238c62e466e3fdc88b63`。既存draft #7上の差分。対象日・過去期間・全曜日/同曜日・最低記録日数で比較。同店同日を合算し、将来日・曖昧店舗は除外理由を表示。損失・記録不足・投資0の未定義回収率を隠さず、店舗名順で表示する。利益順ランキングや勝利予測は行わない。
+- 78 unit tests成功。[CI 44399045767](https://github.com/2szzrkyhkt-commits/TODOROKI-SLOT/actions/runs/44399045767) success。Chromium/Firefox/WebKit × 390/1440pxの6ブラウザ条件でCSV読込・日付条件・境界・再計算・キーボード・消去・注入対策・外部送信/永続保存0を検証。合成データのみ使用。artifact `balance-browser-synthetic` を取得しスマホ/PC画面も目視確認。既存の非定期PR CIへ試験を追加し、起動条件・権限・定期3件は不変更。
+- stagingの `src/balance-assets.js` だけをcontent-only配備。version `c40e3e04-1a21-4b6b-830b-0bbf80772ba1`、deployment `f8cbbffe-7841-4af0-8516-30e491845236`、06:15:48 JST、100%。全13モジュール読戻し一致・変更外12モジュールと設定不変を確認。アセットSHA256 `a2b8b67d451fe3b78a1d4e302c8f942ad59d49a8286ee580f5f33f104fdc5275`。
+- [staging /balance](https://todoroki-slot-staging.8njb5bzfbz.workers.dev/balance) の未認証302を確認。認証済み本番UIの成功証拠ではない。実収支データの取得/保存/送信なし。本番Worker・認証・定期実行・AdSense・T44は変更せず、draft/main未統合・本番ロック維持。
+- 残作業・再開条件：承認済み認証セッションでstagingの実操作を確認し、元の用途との適合確認と既存draft stackの本番反映条件を満たすこと。CIの合成試験を本番完了に読み替えない。
