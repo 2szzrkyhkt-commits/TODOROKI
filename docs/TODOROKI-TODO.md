@@ -1087,3 +1087,16 @@ SitesはプロジェクトIDを原本一覧と照合し、全11件のDB概要を
 - T02：認証済みGSCの検証詳細で開始11/14・保留8/失敗0を確認。ページレポートの最終更新日は11/13のまま。 https://search.google.com/search-console/index/validation?resource_id=sc-domain:todoroki-gold.com&item_key=CAMYFCAC 。検索掲載完了や検証通過と判定せず、登録依頼を重複させない。新しい本人操作は要求していない。
 - T07/T08：日本Connectのstatus読取で最新/過去ともneeds_attention・EDINET_HTTP_403、キー設定あり。収集側index1471/10期充足0、publicationUpdatedAt11/15。安全停止を解除せず、既存の認証/利用制限の確認を待つ。10期データ収集が現在も正常進行中とは報告しない。米国の当日状態は未確認。
 - 次はT20の全対象一覧・初回国税庁収集/原本照合と、上記main監査の結果確認。NTAは既存30分周期でクラウド収集を継続する設定であり、アシスタントが無期限に裏で開発を続ける意味ではない。追加費用を伴う機能の有効化・重要アクセス制御の変更はしない。
+
+## 2026-11-18 継続記録：T20取得順・T03/T41依存準備
+- 開始22件/未完了23件、今回の全項目完了0件、現在22件/23件。全対象初回収集・原典62項目/手動検証・請求実測が未達のためチェックを増やさない。
+- [PR #63](https://github.com/2szzrkyhkt-commits/TODOROKI/pull/63)：実装2c736a4c67de8c64c47af133c18b49a1fa67c949、main 217b992e583fbccb5446b798fcdd5ecbaa857eda。旧FIFOで通達先頭まで約8日かかる取得順を両元交互へ変更。一周期2件・robots/失敗待機/保存上限を維持。既存キュー/原本/メタデータ削除なし。status.nta.verifiedへ当周期2件のURL/区分/宣言文字コード/タイトル/原本SHA256・サイズ/読戻しを追加。
+- [PR CI 44214975809](https://github.com/2szzrkyhkt-commits/TODOROKI/actions/runs/44214975809) success。71 Python・26監視・NTA16隔離ケース、390/1440px検査を確認。新規3ケースは旧キューでの両元取得、将来の再試行期限、取得順永続化/Shift_JIS証跡を検証。
+- 税法Worker deployment 5ac48abf-8187-49d0-9709-b933cfeacc14、version 9e9a486e-995a-4cdf-a283-83972107af01、100%、配備時刻10:30:26 JST。4モジュール全文一致、binding不変、版注釈以外の設定変更0。EDINET coordinator/Cron/認証/環境変数の変更、新規Worker/ジョブ/定期、秘密値の取得/コピーなし。KV直接読取は許可済みstate/statusを維持。
+- 配備直前の10:30:12 JST周期は旧コード：NTA saved2/checked2、累計4、known838、queue834、failed[]、blocked=null、completed_scans0。最後のTax Answer1000.htmは27049 bytes/SHA256 9e21d8bb0a2d209620d147c16db9349759a60ee67044bc34aed846dcd3843bd7/readback=true。新版の実稼働成功へ読み替えない。
+- 再開時は11:00 JST以降の既存周期のstatus.nta.verifiedを読み、両元とShift_JIS資料を照合する。独立取得した通達 https://www.nta.go.jp/law/tsutatsu/kihon/shotoku/01.htm は38254 bytes、SHA256 74710f9540adcb9b7e6b181ba716e93be44be38195cc0c7dfe1a8e02fcf16e4f、タイトル「通達目次 / 所得税基本通達」。公式原本の独立取得であり、新版Workerが保存した証拠はまだない。本文改訂があれば取得日時を分け再照合する。
+- [PR #64](https://github.com/2szzrkyhkt-commits/TODOROKI/pull/64)：実装668457d740a7723d43570b99016901a059d41906、main e4e10d1bf2cf0fa9b4fb5afcb5972d41686c7e74。daily依存準備をChromiumのみへ合わせ、weekly/monthlyは3種維持。Playwright/axe・検査本体・Cron・権限・通知/保存は不変。正本単独pushのみ総合品質監査を省き、他ファイルを含むpushは従来どおり。
+- [PR CI 44215977411](https://github.com/2szzrkyhkt-commits/TODOROKI/actions/runs/44215977411) success。実YAMLから抽出した準備スクリプトのdaily/weekly/monthly・未知値分岐を模擬npm/npxで確認し、Browser checks以降は変更前と一致。最終mainにPR #63/#64双方が共存することを読戻し確認。
+- 記録時点：[main 44216303422](https://github.com/2szzrkyhkt-commits/TODOROKI/actions/runs/44216303422) in_progress、最終main [44216732690](https://github.com/2szzrkyhkt-commits/TODOROKI/actions/runs/44216732690) pending。成功扱いしない。前回main 44210886334はsuccess確定、本番52/T04対象33成功、不変履歴history/44210886334-1.jsonのsource/run/eventを読戻し照合。
+- T01：AdSense管理画面は現在の既存Googleアカウントが未関連付けと表示。他の既存アカウント候補はあるが所有者一致/実配信は未確認。新規ログイン・アカウント作成・AdSense設定変更なしで保留。他項目は継続可能。
+- 次の完了目標はT20。まず新版の既存周期結果と上記main CIを照合し、全対象一覧・初回収集/原本照合の不足を詰める。定期タスク3件・AdSense設定・追加費用を伴う有効化・重要認証/アクセス制御は変更しない。
