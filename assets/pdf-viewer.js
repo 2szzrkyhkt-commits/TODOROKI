@@ -16,7 +16,9 @@
   const state = new URLSearchParams();
   if (query.get('category') && query.get('category') !== 'all') state.set('category', query.get('category'));
   if (query.get('q')) state.set('q', query.get('q'));
-  get('home').href = base;
+  // The shared header replaces the original #home anchor before this script runs.
+  const home = get('home') || document.querySelector('header a.logo');
+  if (home) home.href = base;
   get('back').href = base + 'pdf-library.html' + (state.size ? '?' + state : '');
   document.querySelectorAll('header a[href]').forEach(link => {
     const path = new URL(link.href, location.origin).pathname.replace(/\.html$/, '').replace(/\/$/, '');
