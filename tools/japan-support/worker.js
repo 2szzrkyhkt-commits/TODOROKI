@@ -17,7 +17,8 @@ export default {
   if(request.method!=='GET'&&!(request.method==='POST'&&['/api/eligibility','/api/amounts'].includes(u.pathname)))return new Response('Method not allowed',{status:405,headers:security});
   if(u.pathname.startsWith('/admin'))return new Response('Not found',{status:404,headers:security});
   let response;
-  if(u.pathname==='/api/subsidies'){const rows=await readSubsidies(env.DB,u.searchParams.get('q')||'');response=Response.json({items:rows.results.map(r=>JSON.parse(r.record_json)),attribution:ATTRIBUTION,verification:'pending',coverage:'Jグランツの指定キーワード検索。全国全制度の網羅を保証しません'});
+  if(u.pathname==='/api/subsidies'){
+   try{const rows=await readSubsidies(env.DB,u.searchParams.get('q')||'');if(rows.success===false||!Array.isArray(rows.results))throw Error('subsidies_read_failed');response=Response.json({items:rows.results.map(r=>JSON.parse(r.record_json)),attribution:ATTRIBUTION,verification:'pending',coverage:'Jグランツの指定キーワード検索。全国全制度の網羅を保証しません'});}catch{response=Response.json({error:'subsidies_unavailable'},{status:503});}
   } else if(u.pathname==='/api/catalog'){
    try{const result=await readCatalog(env.DB);response=result?Response.json(result):Response.json({error:'catalog_not_collected'},{status:404});}catch{response=Response.json({error:'catalog_unavailable'},{status:503});}
   } else if(u.pathname==='/api/amounts'){
@@ -29,12 +30,10 @@ export default {
   } else if(u.pathname==='/api/search'){
    try{response=Response.json(await searchPrograms(env,{q:u.searchParams.get('q')||'',region:u.searchParams.get('region')||'all',category:u.searchParams.get('category')||'all'}));}catch{response=Response.json({error:'search_unavailable'},{status:400});}
   } else if(u.pathname==='/api/conditions'){
-   const document=await readConditions(env,u.searchParams.get('program_id')||'');
-   response=document?Response.json(document):Response.json({error:'condition_document_not_found'},{status:404});
+   try{const document=await readConditions(env,u.searchParams.get('program_id')||'');response=document?Response.json(document):Response.json({error:'condition_document_not_found'},{status:404});}catch{response=Response.json({error:'conditions_unavailable'},{status:503});}
   } else if(u.pathname==='/api/programs'||u.pathname==='/programs.json'){
    const q=(u.searchParams.get('q')||'').slice(0,100);
-   const {results}=await env.DB.prepare('SELECT * FROM programs WHERE name LIKE ? ORDER BY name LIMIT 100').bind('%'+q+'%').all();
-   response=Response.json(results);
+   try{const rows=await env.DB.prepare('SELECT * FROM programs WHERE name LIKE ? ORDER BY name LIMIT 100').bind('%'+q+'%').all();if(rows.success===false||!Array.isArray(rows.results))throw Error('programs_read_failed');response=Response.json(rows.results);}catch{response=Response.json({error:'programs_unavailable'},{status:503});}
   } else response=assets[u.pathname]?new Response(assets[u.pathname].body,{headers:{'Content-Type':assets[u.pathname].type}}):new Response('Not found',{status:404});
   const secured=new Response(response.body,response);for(const [k,v]of Object.entries(security))secured.headers.set(k,v);return secured;
  },
