@@ -1100,3 +1100,20 @@ SitesはプロジェクトIDを原本一覧と照合し、全11件のDB概要を
 - 記録時点：[main 44216303422](https://github.com/2szzrkyhkt-commits/TODOROKI/actions/runs/44216303422) in_progress、最終main [44216732690](https://github.com/2szzrkyhkt-commits/TODOROKI/actions/runs/44216732690) pending。成功扱いしない。前回main 44210886334はsuccess確定、本番52/T04対象33成功、不変履歴history/44210886334-1.jsonのsource/run/eventを読戻し照合。
 - T01：AdSense管理画面は現在の既存Googleアカウントが未関連付けと表示。他の既存アカウント候補はあるが所有者一致/実配信は未確認。新規ログイン・アカウント作成・AdSense設定変更なしで保留。他項目は継続可能。
 - 次の完了目標はT20。まず新版の既存周期結果と上記main CIを照合し、全対象一覧・初回収集/原本照合の不足を詰める。定期タスク3件・AdSense設定・追加費用を伴う有効化・重要認証/アクセス制御は変更しない。
+
+## 2026-11-18 11時 継続記録：新版の実収集・統合main監査
+- 開始22件/未完了23件、今回の45項目としての新規完了0件、現在22件/23件。T20は既知候補966件が待機し初回走査0、T03は原典/手動確認が残るため、部分検証成功でチェックを増やさない。
+- T20：2026-11-18T02:00:12.843Z（11:00:12 JST）の既存周期で新版WorkerがTax Answerと通達を1件ずつ処理。saved2/checked2、failed[]、blocked=null、累計pages_saved6/known972/queue_remaining966/completed_scans0、保存原本版累計281822 bytes。既存2資料/周期を維持し、手動収集・追加Cron・本人操作なし。法令側はidleでstatus.atが08:00のまま、NTA側の時刻と混同しない。
+
+|公式原本|宣言文字コード|bytes|SHA256|独立照合|
+|---|---|---:|---|---|
+|https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1800.htm|utf-8|20027|d006cc1183a8d21acbd342a3d02e82b410eab5f2d7cec77ef187d8066c7f6e64|見出し/文字コード/サイズ/ハッシュ/readback全一致|
+|https://www.nta.go.jp/law/tsutatsu/kihon/shotoku/01.htm|shift_jis|38254|74710f9540adcb9b7e6b181ba716e93be44be38195cc0c7dfe1a8e02fcf16e4f|見出し/文字コード/サイズ/ハッシュ/readback全一致|
+
+- 公式原本はWorkerと別にPython urllib・厳密文字コード変換・HTMLParserで独立取得/解析。タイトルはそれぞれ「No.1800 パート収入はいくらまで所得税がかからないか」「通達目次 / 所得税基本通達」。前回まで未検証だったShift_JISの実Worker処理と、旧FIFOからの両元取得を実証。全NTA資料の網羅・初回一巡・すべての保存原本照合を証明したものではない。
+- [main監査44216303422](https://github.com/2szzrkyhkt-commits/TODOROKI/actions/runs/44216303422) success、source217b992e583fbccb5446b798fcdd5ecbaa857eda。不変履歴blob31155e99ed22957e24be38522626d1b3d40502eeのsource/run/eventを照合。本番公開52チェック/T04対象33ページ成功。
+- [最終main監査44216732690](https://github.com/2szzrkyhkt-commits/TODOROKI/actions/runs/44216732690) job134515063531 success、source e4e10d1bf2cf0fa9b4fb5afcb5972d41686c7e74。71 Python/26監視/NTA16成功、MODE=daily、Chromium/Chromium Headless Shellのみ準備、ブラウザ検証・本番公開52チェック・T04対象33ページ・通知判定/履歴保存成功。不変履歴history/44216732690-1.json（blob5343a37d2b00a9dfb2297dff739a6f37d3061c6e）を読戻し、source/run/push一致を確認。暫定監査内訳7完了/14未確認/41一部完了、findings0/unverified_findings1であり、45項目の完了件数とは別。
+- 統合ソース928a23aの隔離worktreeでも71 Python・26監視・security suite（NTA16等）がexit0。模擬503/403/読戻し破損等の期待失敗ログを本番失敗とは数えない。今回新たなコード修正/再配備は不要で、前回実装PR #63/#64の実動作検証を完了。
+- T07/T08：米国本番v27の既存認証でcollection-statusを読取（HTTP200）。diagnostics.checkedAt10:46:53 JST、lastBatchFinishedAt/nativeSchedulerVerifiedAt10:46:50、lastDataSuccessAt10:46:47。state=running/phase=monitoring、lastError=null、保存会社4517/10期充足検証2395。APIのsaved4509やprocessed66137は会社総数と同一視しない。
+- 対象6050=保存4517+保留資料なし22+対象外1511、未解決0/未保存再試行0。保留22の内訳はSEC_HTTP_404・NO_XBRL_ANNUAL_FILINGS13、SEC_COMPANYFACTS_NOT_AVAILABLE9。次回予定は11/20 15:11 JST頃だが実行成功を保証しない。latestはlastError=SEC_HTTP_403を保持し、lastCheckedAt09:57:59/lastSweepAt10:46:33。現在も常に403と断定せず、最新開示連携は正常完了としない。強制再試行・停止解除・新規ジョブ・キー変更なし。
+- 次はT20の全対象一覧と初回収集/保存照合の不足を詰める。既存周期で候補が増えるため、待機966から完了日を保証しない。T07/T08は日本EDINET403と米国latest403/資料なし保留を区別し、全社10期完了へ読み替えない。
