@@ -125,6 +125,28 @@ a {
 @media(prefers-reduced-motion:reduce){.site-header a{transition:none}}
 
 .locale-switch{display:inline-flex;align-items:center;flex-shrink:0;gap:3px;border:1px solid #78612e;border-radius:7px;padding:3px;color:#f4d77b;font-size:12px;font-weight:800;letter-spacing:.05em}.locale-switch span,.locale-switch a{padding:6px 7px;border-radius:4px;line-height:1.4}.locale-switch span{background:#d4af37;color:#080808}.locale-switch a{color:#f4d77b}.locale-switch a:hover{background:#292111;text-decoration:none}.locale-switch a:focus-visible{outline:2px solid #fff;outline-offset:2px}@media(max-width:600px){.site-header .brand-row{gap:8px}.site-header .logo{font-size:19px;letter-spacing:.09em}.site-header .account-link{padding:6px 8px;font-size:11px}.locale-switch{font-size:11px}.locale-switch span,.locale-switch a{padding:5px 5px}}
+
+/* OFUSE support button: responsive sticky header placement */
+.site-header .brand-row{gap:clamp(8px,1.2vw,18px)}
+.ofuse-header-desktop{display:block;flex:0 1 205px;min-width:125px;max-width:205px;margin-left:auto;line-height:0}
+.ofuse-header-desktop img,.ofuse-header-mobile img{display:block;width:100%;height:auto}
+.ofuse-mobile-row{display:none}
+@media(min-width:961px){
+ .site-header .desktop-links{gap:clamp(7px,1vw,15px);margin-left:0}
+ .site-header .desktop-links a{font-size:clamp(11px,.9vw,13px)}
+ .site-header .logo{font-size:clamp(19px,1.6vw,24px);letter-spacing:.11em}
+}
+@media(max-width:960px){
+ .ofuse-header-desktop{display:none}
+ .ofuse-mobile-row{display:flex;justify-content:center;align-items:center;min-height:52px;padding:5px 12px;border-top:1px solid #302715}
+ .ofuse-header-mobile{display:block;width:min(270px,82vw);line-height:0}
+ .site-header.ofuse-scrolled .ofuse-mobile-row{min-height:36px;padding:2px 10px}
+ .site-header.ofuse-scrolled .ofuse-header-mobile{width:190px}
+ .site-header.ofuse-scrolled .mobile-links{display:none}
+ .site-header.ofuse-scrolled .brand-row{min-height:54px}
+}
+@media(max-width:380px){.ofuse-header-mobile{width:min(245px,80vw)}}
+
 /* 表紙 */
 
 .hero {
@@ -455,12 +477,14 @@ footer {
       <a href="/#study">学ぶ</a>
       <a href="/#company-analysis">ツール</a>
     </nav>
+    <a class="ofuse-header-desktop" href="https://ofuse.me/todoroki_gold" target="_blank" rel="noopener noreferrer" aria-label="OFUSEでTODOROKIを応援する（外部サイト）"><img src="/assets/todoroki-ofuse-button-3.png" alt="TODOROKIを応援する" width="1209" height="238" decoding="async"></a>
     <label class="todoroki-language-picker">🌐 <select data-todoroki-language aria-label="表示言語 / Language"><option value="ja" selected>日本語</option><option value="en">English</option><option value="es">Español</option><option value="pt">Português</option><option value="zh-Hant">繁體中文</option><option value="zh-Hans">简体中文</option></select></label>
     <a class="account-link" href="/login">
       <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="6" r="3"/><path d="M4 18v-2a6 6 0 0 1 12 0v2"/></svg>
       ログイン
     </a>
   </div>
+  <div class="ofuse-mobile-row"><a class="ofuse-header-mobile" href="https://ofuse.me/todoroki_gold" target="_blank" rel="noopener noreferrer" aria-label="OFUSEでTODOROKIを応援する（外部サイト）"><img src="/assets/todoroki-ofuse-button-3.png" alt="TODOROKIを応援する" width="1209" height="238" decoding="async"></a></div>
   <nav class="mobile-links" aria-label="メインメニュー">
     <a href="/#latest-articles">新着記事</a>
     <a href="/#articles">基礎</a>
@@ -832,14 +856,6 @@ footer {
 </main>
 
 <!-- TODOROKI support: first-party link; no third-party widget script -->
-<section class="todoroki-support" aria-label="TODOROKIの活動支援" style="background:#080808;text-align:center;padding:30px 16px 40px">
-  <p style="color:#d7c28c;margin:0 0 14px">無料の投資・経済情報を継続するために</p>
-  <a href="https://ofuse.me/todoroki_gold" target="_blank" rel="noopener noreferrer" aria-label="OFUSEでTODOROKIを応援する（外部サイト）" style="display:inline-block;max-width:min(100%,460px);text-decoration:none;border-radius:999px">
-    <img src="/assets/todoroki-ofuse-button-3.png" alt="TODOROKIを応援する" width="1209" height="238" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:999px">
-  </a>
-  <p style="color:#aaa;font-size:12px;margin:12px 0 0">OFUSEの支援ページが開きます。支援は任意です。</p>
-</section>
-
 <!-- フッター -->
 
 <footer>
@@ -934,6 +950,9 @@ footer {
  }
  window.requestAnimationFrame(frame);
 })();
+</script>
+<script>
+(function(){const h=document.querySelector('.site-header');if(!h)return;let previous=false;function update(){const next=window.scrollY>180;if(next!==previous){h.classList.toggle('ofuse-scrolled',next);previous=next}}window.addEventListener('scroll',update,{passive:true});update()})();
 </script>
 <script src="/assets/site-motion.js" defer></script>
 </body>
