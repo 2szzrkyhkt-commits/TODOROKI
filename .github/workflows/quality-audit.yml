@@ -80,6 +80,7 @@ jobs:
         run: |
           node tools/quality/consent.mjs
           node tools/quality/browser.mjs
+          node tools/quality/page-search-browser.mjs
       - name: Run audit
         if: always() && !cancelled()
         env:
