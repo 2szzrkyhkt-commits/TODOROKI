@@ -1,6 +1,6 @@
 import {isLawXml} from './xml.mjs';
 import {historyTick,getHistory,renderHistory} from './history.mjs';
-import {ntaTick} from './nta.mjs';
+import {ntaTick,ntaURL} from './nta.mjs';
 const BASE = 'https://laws.e-gov.go.jp/api/2';
 const CATEGORIES = ['013', '036'];
 export const SUBJECTS = ['所得税法','法人税法','相続税法','消費税法','酒税法','住民税','事業税','固定資産税','国税徴収法'];
@@ -116,6 +116,27 @@ export async function listCatalog(env, {cursor, subject, query = ''} = {}) {
     notice:'検索・科目絞り込みは取得ページ単位。続きがある場合はnext_cursorで取得。簿記論・財務諸表論の教材は未収録。'};
 }
 
+const ntaCatalogHeaders={'Cache-Control':'no-store','X-Robots-Tag':'noindex','X-Content-Type-Options':'nosniff','Content-Security-Policy':"default-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"};
+export async function listNtaCatalog(env,{cursor}={}) {
+  if(cursor!=null&&(typeof cursor!=='string'||!cursor.length||cursor.length>2048||/[\x00-\x1f\x7f]/.test(cursor)))throw Error('invalid cursor');
+  const page=await env.TAX.list({prefix:'nta:page:',limit:20,...(cursor?{cursor}:{})});
+  if(!page||!Array.isArray(page.keys)||page.keys.length>20||typeof page.list_complete!=='boolean'||(!page.list_complete&&(typeof page.cursor!=='string'||!page.cursor.length||page.cursor.length>2048||/[\x00-\x1f\x7f]/.test(page.cursor))))throw Error('invalid catalog page');
+  const pages=[];let unverified=0;
+  for(const key of page.keys){
+    if(!key||typeof key.name!=='string'||!/^nta:page:[a-f0-9]{64}$/.test(key.name)){unverified++;continue;}
+    const m=await env.TAX.get(key.name,'json');
+    if(!m||typeof m.url!=='string'||ntaURL(m.url)!==m.url||m.source!=='国税庁'||m.source_url!==m.url||!/^[a-f0-9]{64}$/.test(m.sha256)||typeof m.sha256!=='string'||!Number.isSafeInteger(m.bytes)||m.bytes<=0||m.bytes>4*1024*1024||typeof m.title!=='string'||!m.title.trim()||typeof m.checked_at!=='string'||!/^\d{4}-\d{2}-\d{2}T/.test(m.checked_at)||!Number.isFinite(Date.parse(m.checked_at))){unverified++;continue;}
+    const id=await rawDigest(new TextEncoder().encode(m.url));
+    if(key.name!=='nta:page:'+id||m.raw_key!=='nta:raw:'+id+':'+m.sha256){unverified++;continue;}
+    pages.push({title:m.title.slice(0,300),source:'国税庁',source_url:m.url,checked_at:m.checked_at,sha256:m.sha256,bytes:m.bytes,source_family:new URL(m.url).pathname.startsWith('/law/tsutatsu/')?'tsutatsu':'taxanswer'});
+  }
+  return {pages,next_cursor:page.list_complete?null:page.cursor,page_scanned:page.keys.length,unverified,notice:'保存済みメタデータの一覧です。原本の再照合・全資料の網羅・法的適用判断を示しません。'};
+}
+const ntaEscape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+export function renderNtaCatalog(data){
+  return '<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>国税庁 保存資料一覧</title><h1>国税庁 保存資料一覧</h1><p>'+ntaEscape(data.notice)+'</p><p>今回確認 '+data.page_scanned+'件／未確認 '+data.unverified+'件</p><ul>'+data.pages.map(m=>'<li><a rel="noreferrer" href="'+ntaEscape(m.source_url)+'">'+ntaEscape(m.title)+'</a> <time>'+ntaEscape(m.checked_at)+'</time> '+m.bytes+' bytes <code>'+ntaEscape(m.sha256)+'</code></li>').join('')+'</ul>'+(data.next_cursor?'<a href="/nta-catalog?cursor='+ntaEscape(encodeURIComponent(data.next_cursor))+'">次の保存資料</a>':'<p>この一覧の末尾です。</p>')+'</html>';
+}
+
 export async function tick(env) {
  let report={},collectionFailure;
  try{report=await collectTax(env,{persistStatus:false});}catch(e){report=e.collectionReport||{phase:'failed',collection_error:'COLLECTION_TICK_FAILED'};collectionFailure=e;}
@@ -158,6 +179,15 @@ const taxWorker = {
        if(request.headers.get('Accept')?.includes('text/html'))return new Response(renderHistory(data),{status:data?200:404,headers:{...headers,'Content-Type':'text/html; charset=utf-8'}});
        return Response.json(data??{state:'not_collected'},{status:data?200:404,headers});
       }catch{return Response.json({error:'Invalid or unavailable law history'},{status:400,headers:{'Cache-Control':'no-store'}});}
+    }
+    if(request.method==='GET'&&path==='/nta-catalog') {
+      if(!await authorized(request,env))return Response.json({error:'Unauthorized'},{status:401,headers:ntaCatalogHeaders});
+      const u=new URL(request.url),cursor=u.searchParams.get('cursor');
+      if([...u.searchParams.keys()].some(k=>k!=='cursor')||u.searchParams.getAll('cursor').length>1||(cursor!==null&&(!cursor.length||cursor.length>2048||/[\x00-\x1f\x7f]/.test(cursor))))return Response.json({error:'Invalid parameters'},{status:400,headers:ntaCatalogHeaders});
+      try{
+        const data=await listNtaCatalog(env,{cursor});
+        return request.headers.get('Accept')?.includes('text/html')?new Response(renderNtaCatalog(data),{headers:{...ntaCatalogHeaders,'Content-Type':'text/html; charset=utf-8'}}):Response.json(data,{headers:ntaCatalogHeaders});
+      }catch{return Response.json({error:'Catalog unavailable'},{status:503,headers:ntaCatalogHeaders});}
     }
     if(request.method==='GET'&&path==='/catalog') {
       if(!await authorized(request,env)) return Response.json({error:'Unauthorized'},{status:401});
