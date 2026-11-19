@@ -137,4 +137,30 @@ await test('failed raw write keeps conservative reservation and retry reattempts
 await test('legacy queue without reservation retains its existing byte total and reserves conservatively',async()=>{
  const f=await retryFixture({bytes:1234});f.set({failMeta:false});const r=await f.run(100000);assert.equal(r.stored_version_bytes,1234+f.size());assert.equal(r.completed_scans,1);
 });
+await test('large legacy queue: overlapping discoveries across both sources enqueue once',async()=>{
+ const shared='https://www.nta.go.jp/law/tsutatsu/shared.htm';
+ const old=Array.from({length:3000},(_,i)=>doc.replace('1000',String(10000+i)));
+ const kv=await oldQueue([doc,circular,...old]);
+ const append=old.slice(0,300).map(u=>`<a href="${u}">既知</a>`).join('')+`<a href="${shared}">新規</a>`;
+ const fx=fetcher(()=>response(html('公式資料',append)));
+ const result=await ntaTick({TAX:kv},{fetcher:fx.fetch,now:100000});
+ const state=await kv.get('nta:state','json');
+ assert.deepEqual(fx.calls.slice(1),[doc,circular]);
+ assert.equal(result.saved,2);assert.equal(result.known,3003);assert.equal(result.completed_scans,0);
+ assert.equal(state.known.filter(u=>u===shared).length,1);
+ assert.deepEqual(state.queue.map(q=>q.url),[...old,shared]);
+});
+await test('failed save does not hide a link found by the other source in the same tick',async()=>{
+ const shared='https://www.nta.go.jp/law/tsutatsu/shared.htm';
+ const kv=await oldQueue([doc,circular]);const put=kv.put.bind(kv);
+ let failed=false;
+ kv.put=async(k,v)=>{if(!failed&&k.startsWith('nta:page:')){failed=true;throw Error('synthetic metadata failure');}return put(k,v);};
+ const fx=fetcher(()=>response(html('公式資料',`<a href="${shared}">新規</a>`)));
+ const result=await ntaTick({TAX:kv},{fetcher:fx.fetch,now:100000});
+ const state=await kv.get('nta:state','json');
+ assert.equal(result.saved,1);assert.equal(result.failed.length,1);
+ assert.equal(state.known.filter(u=>u===shared).length,1);
+ assert.deepEqual(state.queue.map(q=>q.url),[doc,shared]);
+});
+
 console.log('T20 NTA: '+cases+' isolated cases passed; no live requests or production writes.');
