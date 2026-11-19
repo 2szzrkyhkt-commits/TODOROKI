@@ -5,6 +5,43 @@ const validRevision=(id,law)=>typeof id==='string'&&id.startsWith(law+'_')&&/^[0
 const sha=async b=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',b)),n=>n.toString(16).padStart(2,'0')).join('');
 const validDate=d=>{if(!/^\d{4}-\d{2}-\d{2}$/.test(d||''))return false;const n=new Date(d+'T00:00:00Z');return !Number.isNaN(n.valueOf())&&n.toISOString().slice(0,10)===d;};
 async function save(env,key,value){if(!key.startsWith('history:'))throw Error('history namespace violation');return env.TAX.put(key,value);}
+// Shared e-Gov host gate for collector and history, within the existing binding.
+// One tick shares the in-memory latch; a fresh invocation reads the persisted gate.
+export function createEgovFetcher(env,{fetcher=fetch,clock=()=>Date.now()}={}){
+ let gate,loaded=false;
+ const stop=()=>{const e=Error(gate.code);e.egovStop=true;e.egovGate={...gate};return e;};
+ return async(url,options)=>{
+  if(!loaded){
+   try{
+    gate=await env.TAX.get('history:upstream','json');if(gate==null)gate={};
+    if(!gate||typeof gate!=='object'||Array.isArray(gate)||(Object.keys(gate).length&&(!['blocked','rate_limited'].includes(gate.state)||typeof gate.code!=='string'||(gate.state==='rate_limited'&&(!Number.isSafeInteger(gate.until)||gate.until<0||gate.until>8640000000000000)))))throw Error('invalid gate');
+   }catch{gate={state:'blocked',code:'EGOV_GATE_STORAGE_UNAVAILABLE'};}
+   loaded=true;
+  }
+  const started=clock();
+  if(gate.state==='blocked'||gate.until>started)throw stop();
+  const response=await fetcher(url,options),received=Math.max(started,clock());
+  if(![401,403,429].includes(response.status))return response;
+  if(response.status===429){
+   const retry=(response.headers.get('retry-after')||'').trim();let until=received+3600000;
+   if(/^\d+$/.test(retry)){
+    const proposed=received+Number(retry)*1000;
+    if(!Number.isSafeInteger(proposed)||proposed>8640000000000000)gate={state:'blocked',code:'EGOV_RETRY_AFTER_UNREPRESENTABLE'};
+    else gate={state:'rate_limited',code:'EGOV_HTTP_429',until:Math.max(gate.until||0,until,proposed)};
+   }else{
+    // Only HTTP date shapes, not JavaScript's permissive numeric date parsing.
+    const date=/^(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)(?:day)?[, ]/.test(retry)?Date.parse(retry):NaN;
+    gate={state:'rate_limited',code:'EGOV_HTTP_429',until:Math.max(gate.until||0,until,Number.isFinite(date)?date:0)};
+   }
+  }else gate={state:'blocked',code:'EGOV_HTTP_'+response.status};
+  // Latch before storage: a failed write must not permit history later in this tick.
+  try{
+   const json=JSON.stringify(gate);await save(env,'history:upstream',json);
+   if(await env.TAX.get('history:upstream')!==json)throw Error('gate readback mismatch');
+  }catch{gate={state:'blocked',code:'EGOV_GATE_STORAGE_UNAVAILABLE'};}
+  throw stop();
+ };
+}
 export const japanDay=iso=>new Date(Date.parse(iso)+9*3600000).toISOString().slice(0,10);
 export function effectiveState(r,asOf){
  const d=r.amendment_enforcement_date;
@@ -55,8 +92,9 @@ async function bodyFor(env,id,law,fetcher){
  const digest=await sha(bytes);await save(env,'history:body:'+id,bytes);
  return {sha256:digest,bytes:bytes.byteLength,text,source_url:url};
 }
-export async function refreshHistory(env,law,{fetcher=fetch,now=new Date().toISOString(),verifyRoutes}={}){
+export async function refreshHistory(env,law,{fetcher=fetch,now=new Date().toISOString(),verifyRoutes,egovFetch}={}){
  if(!validLaw(law))throw Error('invalid law id');
+ fetcher=egovFetch||createEgovFetcher(env,{fetcher});
  const {url,bytes}=await official('/law_revisions/'+encodeURIComponent(law),2*1024*1024,fetcher);
  const data=JSON.parse(new TextDecoder().decode(bytes));
  if(data.law_info?.law_id!==law||!Array.isArray(data.revisions)||!data.revisions.length||data.revisions.length>500)throw Error('invalid official revision index');
@@ -66,7 +104,7 @@ export async function refreshHistory(env,law,{fetcher=fetch,now=new Date().toISO
  // Compare the newest two listed dates; neither is silently labelled currently applicable.
  const selected=rows.slice(0,2),bodies=[];
  for(const r of selected){
-  let body;try{body=await bodyFor(env,r.law_revision_id,law,fetcher);}catch(e){body={unavailable:String(e).slice(0,160)};}
+  let body;try{body=await bodyFor(env,r.law_revision_id,law,fetcher);}catch(e){if(e.egovStop)throw e;body={unavailable:String(e).slice(0,160)};}
   bodies.push(body);
   const key='history:record:'+r.law_revision_id;
   if(!await env.TAX.get(key))await save(env,key,JSON.stringify({law_id:law,revision_id:r.law_revision_id,revision_info:r,first_seen_at:now,index_source_url:url,sha256:body.sha256??null,body_source_url:body.source_url??null}));
@@ -94,12 +132,13 @@ export function renderHistory(s){
  const xml=s.comparison.xml;
  return '<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>税法改正履歴 | TODOROKI</title><style>body{margin:0;background:#080808;color:#eee;font:16px/1.8 system-ui}main{max-width:1000px;margin:auto;padding:24px}a{color:#e5c778}.scroll{overflow:auto}table{border-collapse:collapse;width:100%}td,th{border:1px solid #76633b;padding:10px;text-align:left}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#17140e;padding:12px}p{overflow-wrap:anywhere}</style><main><h1>'+esc(s.title)+'：改正履歴</h1><p>確認日時 '+esc(s.checked_at)+' ／ 施行状況の表示基準日（日本時間） '+esc(s.as_of)+'</p><p>'+esc(s.scope)+'</p><p><a href="'+esc(s.source_url)+'">公式の履歴データ</a></p><div class="scroll"><table><caption>取得日と施行日を区別した公式収録版</caption><tr><th>施行日</th><th>公布日</th><th>状態</th><th>改正法令</th><th>版ID</th></tr>'+s.revisions.map(r=>'<tr><td>'+esc(r.enforcement_date)+'</td><td>'+esc(r.promulgation_date)+'</td><td>'+esc(r.state)+'</td><td>'+esc(r.amendment_title)+'</td><td>'+esc(r.revision_id)+'</td></tr>').join('')+'</table></div><h2>選択2版のメタデータ差分</h2><p>前 '+esc(s.comparison.before)+' → 後 '+esc(s.comparison.after)+'</p><div class="scroll"><table><tr><th>項目</th><th>前</th><th>後</th></tr>'+changes+'</table></div><h2>本文XMLの変更区間</h2><p>検証状態 '+esc(xml?.state??s.comparison.state)+'。XMLの文字列比較であり、条文の法的意味や税額への影響の判定ではありません。</p>'+(xml?.state==='compared'?'<p>変更区間：前 '+xml.before_chars+'文字 → 後 '+xml.after_chars+'文字。'+(xml.excerpt_truncated?'抜粋は各2,000文字まで。全文の差分表示ではありません。':'')+'</p><h3>前</h3><pre>'+esc(xml.before_excerpt)+'</pre><h3>後</h3><pre>'+esc(xml.after_excerpt)+'</pre>':'')+'</main></html>';
 }
-export async function historyTick(env,{verifyRoutes}={}){
+export async function historyTick(env,{verifyRoutes,egovFetch}={}){
  const state=await env.TAX.get('history:state','json')||{queue:[],cursor:null};
  if(state.next_at&&Date.now()<Date.parse(state.next_at))return {state:'within_interval',next_at:state.next_at};
  if(!state.queue.length){const page=await env.TAX.list({prefix:'law:',limit:10,...(state.cursor?{cursor:state.cursor}:{})});state.queue=page.keys.map(k=>k.name);state.cursor=page.list_complete?null:page.cursor;}
  if(!state.queue.length)return {state:'no_stored_laws'};
- const key=state.queue[0],law=key.slice(4);const result=await refreshHistory(env,law,{verifyRoutes});
+ const key=state.queue[0],law=key.slice(4);const result=await refreshHistory(env,law,{verifyRoutes,egovFetch});
  state.queue.shift();state.next_at=new Date(Date.now()+INTERVAL).toISOString();state.last_law_id=law;state.last_success=result.at;
  await save(env,'history:state',JSON.stringify(state));return {...result,next_at:state.next_at};
 }
+
