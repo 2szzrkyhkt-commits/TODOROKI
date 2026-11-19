@@ -1505,3 +1505,12 @@ Cloudflare KVのstatusを読取。e-Govは保存446・初回走査1・待機2・
 - 新規19回帰（6言語×ヘッダー3状態＋カタログ失敗）成功、旧版は13失敗。既存Python77件・security検証成功。[PR CI 44416558347](https://github.com/2szzrkyhkt-commits/TODOROKI/actions/runs/44416558347) success。既存Python discoverへ試験を追加し、workflow/Cron/定期3件の定義は不変更。
 - 既存Cloudflare公開build `9e136a90-7f61-432e-adf6-f5377fc3e56f` はmain同一commitでsuccess（08:05:55 JST）。version `7b7d4a96-f254-4810-bb84-445f74352833`、deployment `c2888de0-ec32-44ad-b9c1-7065ad1cfa07`、100%。本番Chromeで同じURLを再読しグレアム投資基準4ページPDFの本文・タイトル・保存/直接表示リンクを確認。一覧へ戻るとカテゴリ/検索語/2件保持、別の収益力分析3ページPDFも本文表示成功。両画面を目視確認。[公開一覧](https://todoroki-gold.com/pdf-library)。全PDF・全実機の試験ではない。
 - main監査44417475206は当初の記録時点で実行中。その後の読取でcompleted/successを確認（audit job135201432394、Browser checks・Run audit・Notify only new important findings・Persist history成功）。この1実行の成功は全62項目・全プロジェクト通知の完了証拠ではない。原典・iPhone実機・フォーム受信・認証設定等の残要件は維持。T44保留・追加費用/破壊/権限拡大禁止を維持。
+
+## 2026-11-19 T45: 修正後の既存schedule起動と不変履歴を照合
+
+- 開始・終了とも完了22件／未完了23件。T45は未完了維持。設定変更・手動起動・疑似通知は実施しない。
+- [run 44407044080](https://github.com/2szzrkyhkt-commits/TODOROKI/actions/runs/44407044080) はevent=schedule、06:59:10 JST起動、completed/success。job135164942014の監査・通知判定・履歴保存成功。hourlyのためブラウザ検査はskipであり、実施済みに読み替えない。
+- [不変履歴](https://github.com/2szzrkyhkt-commits/TODOROKI/blob/quality-history/history/44407044080-1.json) のexecution/last_scheduled_audit/run_attempt=1/source_commitを照合。記録時刻06:59:31 JST、source `f9cc1ddbf16e4cb5d606275bac9a17f1b7974236`。PR #77の修正main `63f66f017fe51bd56dd9ab15a4cd07296221cc1f` に対しGitHub compareでahead13/behind0/merge_base一致を確認。修正後の予約成功未確認という旧記録はこの範囲で解消。PDF PR #82より前の実行でありPDF修正の証拠ではない。
+- 保存結果はfindings1（TQ20の外部参照HTTP503）、unverified1（旧外部参照履歴）、new_findings0、resolved0、notification_candidates0。既存通知基準は重要IDの許可リストでTQ20の外部参照障害を即時通知から除外。今回実通知0で正しく、通知配送・復旧経路の実証にはならない。基準・しきい値は変更しない。
+- 既存10 Workers一覧に独立watchdog配備なし。雛形の正常判定は3時間以内の成功scheduleを要求するが未配備のため実稼働証拠なし。新規Cron/通知先/権限を作らない。
+- 既存失敗run44237284439ではTestsとRun auditがfailure、通知・履歴保存がskip。最新成功実行で解消したことと、今後の前段失敗時にも独立して障害を通知できることは別。現workflowのsuccess条件を変更せず、失敗を成功扱いする変更も行わない。全サービスの通知・復旧・重複抑制を検証できる既存実行経路の不足が残る。
