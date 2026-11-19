@@ -76,7 +76,7 @@ export async function ntaTick(env,{fetcher=fetch,now=Date.now()}={}) {
   const kv=env.TAX;
   let state=await kv.get(PREFIX+'state','json')||{schema:1,queue:NTA_SEEDS.map(url=>({url,attempts:0,due:0})),known:[...NTA_SEEDS],saved:0,bytes:0,scans:0};
   let report={at:new Date(now).toISOString(),state:'collecting',saved:0,checked:0,failed:[],verified:[],notice:NOTICE};
-  if(state.blocked||state.next_at>now)return {...report,state:state.blocked?'blocked':'waiting',...summary(state)};
+  if(state.blocked||state.next_at>now)return {...report,state:state.blocked?'blocked':'waiting',...summary(state,now)};
   let robotsReady=true;
   if(!state.robots||now-state.robots.at>=24*3600000){
     try{
@@ -151,11 +151,26 @@ export async function ntaTick(env,{fetcher=fetch,now=Date.now()}={}) {
     }
   }
   if(!state.queue.length){state.scans++;state.next_at=now+24*3600000;state.queue=state.known.map(url=>({url,attempts:0,due:0}));report.state='scan_complete';}
+  const diagnostics=summary(state,now);
+  // Priority: access/budget block, observed failure, completed scan, then due-wait.
+  // Queue deadlines are diagnostic only; never advance retries or add requests.
   if(state.blocked)report.state='blocked';else if(report.failed.length)report.state='retry_wait';
+  else if(report.state!=='scan_complete'&&state.queue.length&&diagnostics.due_count===0&&diagnostics.deferred_count===state.queue.length)report.state='retry_wait';
   state.last_run=report.at;
   await saveVerified(kv,PREFIX+'state',JSON.stringify(state));
-  report={...report,...summary(state)};
+  report={...report,...diagnostics};
   await saveVerified(kv,PREFIX+'status',JSON.stringify(report));
   return report;
 }
-function summary(s){return {known:s.known.length,pages_saved:s.saved,queue_remaining:s.queue.length,stored_version_bytes:s.bytes,completed_scans:s.scans,blocked:s.blocked||null,next_at:s.next_at||null};}
+function summary(s,now){
+  let due_count=0,deferred_count=0,next_retry_at=null;
+  // One bounded pass over the existing queue; no URLs or per-target data exposed.
+  // next_retry_at is the earliest future queue deadline in epoch milliseconds,
+  // not a promise to run then: blocked and next_at still take precedence.
+  for(const item of s.queue){
+    if(item.due<=now)due_count++;
+    else if(item.due>now){deferred_count++;if(next_retry_at===null||item.due<next_retry_at)next_retry_at=item.due;}
+  }
+  return {known:s.known.length,pages_saved:s.saved,queue_remaining:s.queue.length,stored_version_bytes:s.bytes,completed_scans:s.scans,blocked:s.blocked||null,next_at:s.next_at||null,due_count,deferred_count,next_retry_at};
+}
+

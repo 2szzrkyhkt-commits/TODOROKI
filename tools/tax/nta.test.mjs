@@ -163,4 +163,44 @@ await test('failed save does not hide a link found by the other source in the sa
  assert.deepEqual(state.queue.map(q=>q.url),[doc,shared]);
 });
 
+await test('all-future deadlines report retry wait with aggregate-only diagnostics',async()=>{
+ const queue=[{url:doc,attempts:2,due:300000},{url:circular,attempts:1,due:200000}];
+ const kv=await oldQueue(queue),fx=fetcher();const r=await ntaTick({TAX:kv},{fetcher:fx.fetch,now:100000});
+ assert.equal(r.state,'retry_wait');assert.equal(r.checked,0);assert.equal(r.due_count,0);assert.equal(r.deferred_count,2);assert.equal(r.next_retry_at,200000);
+ assert.equal(fx.calls.length,1);assert.deepEqual((await kv.get('nta:state','json')).queue,queue);
+ assert.equal(r.completed_scans,0);assert.equal(JSON.stringify({due_count:r.due_count,deferred_count:r.deferred_count,next_retry_at:r.next_retry_at}).includes('https:'),false);
+});
+await test('mixed deadlines remain collecting while due work remains; exact due is eligible',async()=>{
+ const urls=[doc,circular,doc.replace('1000','2000')];
+ const queue=[...urls.map(url=>({url,attempts:0,due:100000})),{url:doc.replace('1000','3000'),attempts:1,due:200000}];
+ const kv=await oldQueue(queue),fx=fetcher();const r=await ntaTick({TAX:kv},{fetcher:fx.fetch,now:100000});
+ assert.equal(r.checked,2);assert.equal(r.state,'collecting');assert.equal(r.due_count,1);assert.equal(r.deferred_count,1);assert.equal(r.next_retry_at,200000);assert.equal(r.completed_scans,0);
+ assert.deepEqual((await kv.get('nta:state','json')).queue,queue.slice(2));
+});
+await test('successful due work leaving only future deadlines reports retry wait',async()=>{
+ const future={url:circular,attempts:3,due:200000};const kv=await oldQueue([doc,future]),fx=fetcher();
+ const r=await ntaTick({TAX:kv},{fetcher:fx.fetch,now:100000});assert.equal(r.checked,1);assert.equal(r.saved,1);assert.equal(r.state,'retry_wait');assert.equal(r.due_count,0);assert.equal(r.deferred_count,1);assert.equal(r.next_retry_at,200000);
+ assert.deepEqual((await kv.get('nta:state','json')).queue,[future]);
+});
+await test('scan complete and inter-scan wait outrank queue diagnostics without extra work',async()=>{
+ const kv=new KV(),fx=fetcher();const r=await ntaTick({TAX:kv},{fetcher:fx.fetch,now:100000});
+ assert.equal(r.state,'scan_complete');assert.equal(r.completed_scans,1);assert.equal(r.due_count,2);assert.equal(r.deferred_count,0);assert.equal(r.next_retry_at,null);
+ const before=await kv.get('nta:state'),writes=kv.writes.length,calls=fx.calls.length;
+ const wait=await ntaTick({TAX:kv},{fetcher:fx.fetch,now:110000});assert.equal(wait.state,'waiting');assert.equal(wait.due_count,2);assert.equal(wait.next_retry_at,null);assert.equal(wait.next_at,86500000);
+ assert.equal(kv.writes.length,writes);assert.equal(fx.calls.length,calls);assert.equal(await kv.get('nta:state'),before);
+});
+await test('access block outranks failure, inter-scan wait and all-future deadlines',async()=>{
+ const kv=await oldQueue([doc]),fx=fetcher(()=>new Response('',{status:403}));const r=await ntaTick({TAX:kv},{fetcher:fx.fetch,now:100000});
+ assert.equal(r.state,'blocked');assert.equal(r.failed.length,1);assert.equal(r.due_count,0);assert.equal(r.deferred_count,1);assert.equal(r.next_retry_at,3700000);
+ const s=await kv.get('nta:state','json');s.next_at=999999999;await kv.put('nta:state',JSON.stringify(s));
+ const before=await kv.get('nta:state'),writes=kv.writes.length,calls=fx.calls.length;
+ const again=await ntaTick({TAX:kv},{fetcher:fx.fetch,now:110000});assert.equal(again.state,'blocked');assert.equal(again.checked,0);assert.equal(again.next_retry_at,3700000);
+ assert.equal(kv.writes.length,writes);assert.equal(fx.calls.length,calls);assert.equal(await kv.get('nta:state'),before);
+});
+await test('observed failure outranks remaining due work and preserves retry deadline',async()=>{
+ const queue=[doc,circular,doc.replace('1000','2000')];const kv=await oldQueue(queue),fx=fetcher(()=>new Response('',{status:429,headers:{'Retry-After':'172800'}}));
+ const r=await ntaTick({TAX:kv},{fetcher:fx.fetch,now:100000});assert.equal(r.state,'retry_wait');assert.equal(r.checked,2);assert.equal(r.due_count,1);assert.equal(r.deferred_count,2);assert.equal(r.next_retry_at,172900000);assert.equal(r.completed_scans,0);assert.equal(r.queue_remaining,3);
+});
+
 console.log('T20 NTA: '+cases+' isolated cases passed; no live requests or production writes.');
+
