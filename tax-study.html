@@ -21,20 +21,20 @@
 .tax-course :is(button,select,input,summary):focus-visible{outline:2px solid #fff;outline-offset:4px}.course-lesson summary{cursor:pointer;min-height:44px;padding:12px 0}
 [data-tax-feedback]{background:#1c1a13;border-left:3px solid #d4af37;padding:14px;color:#f4f1e8}.course-small,.course-sources{font-size:14px}.course-sources{border-top:1px solid #3b321f;margin-top:20px}.course-sources ul{padding-left:20px}
 @media(max-width:600px){.course-controls{padding:16px}.course-lesson h3{font-size:20px}}
-</style><script type="module" src="/assets/tax-course-ui.mjs"></script></head>
+</style><script type="module" src="/assets/tax-course-ui.mjs"></script><script type="module" src="/assets/tax-source-filter.mjs"></script></head>
 <body><header><a href="/">TODOROKI</a></header><main class="wrap"><div class="eyebrow">TAX LAW / STUDY</div><h1>税法を学ぶ</h1><span class="status">11科目の基礎教材・所得税計算を公開</span><p>国が公開する法令・一次資料をもとに、税法を科目別に整理して学ぶプロジェクトです。</p>
 <section class="panel" aria-labelledby="status"><h2 id="status">現在の公開状況</h2><p>このページは学習プロジェクトの入口です。法令の自動収集、検索、解説、確認問題の提供に向けて整備を進めています。現在は所得税の速算表による計算を利用できます。11科目の基礎解説・確認問題と科目別／キーワード検索を利用できます。詳細な試験範囲の教材は今後も拡充します。</p></section>
 
 <!-- tax-source-release:start -->
 <section class="panel" id="tax-source-release" aria-labelledby="tax-source-release-title">
-<h2 id="tax-source-release-title">公式税務資料を読む：初回公開2件</h2>
-<p>税目：<strong>所得税</strong>。国税庁の公式ページへのリンクを、資料の種類別に整理しました。</p>
-<p><strong>収集・保存を確認した資料から選んだ、固定のリンク一覧です。</strong>確認時点：<time datetime="2026-11-19T18:00:00+09:00">2026年11月19日18:00（日本時間）</time>。保存内容の読戻し確認は、解説の法的な正確性や、すべての改正への対応を保証するものではありません。</p>
-<h3>タックスアンサー（一般向け案内）</h3>
-<ul><li><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1900.htm">国税庁 No.1900 給与所得者で確定申告が必要な人</a><br>公式ページの法令等基準日：2026年4月1日。申告の要否は、公式本文の条件・例外を確認してください。</li></ul>
-<h3>所得税基本通達（法令解釈通達）</h3>
-<ul><li><a href="https://www.nta.go.jp/law/tsutatsu/kihon/shotoku/01/03.htm">国税庁 所得税基本通達：公社債・預貯金・棚卸資産（2－10〜2－13）</a><br>上の案内とは資料の性質が異なります。適用する条文・改正の注記を公式本文で確認してください。</li></ul>
-<p>この2件は税法全体の一部です。<strong>この一覧は自動同期されません。</strong>内部の収集進捗、全件収録、全文検索、教材・計算機の更新状況とは別です。資料本文の転載や保存データの直接配信は行わず、リンクから国税庁の公開本文を開きます。</p>
+<h2 id="tax-source-release-title">公式税務資料を読む：選定公開6件</h2>
+<p>税目：<strong>所得税</strong>。この一覧の6件はすべて国税庁の公式資料です。資料の種類と題名・番号で絞り込めます。本文の全文検索ではありません。</p>
+<p><strong>収集・保存を確認した資料から選んだ、固定のリンク一覧です。</strong>保存内容の読戻し確認は、解説の法的な正確性や、すべての改正への対応を保証するものではありません。</p>
+<div class="course-controls"><label for="tax-source-kind">資料の種類</label><select id="tax-source-kind" disabled><option value="all">すべて</option><option value="answer">タックスアンサー</option><option value="circular">所得税基本通達</option></select><label for="tax-source-query">この6件の題名・番号で検索</label><input id="tax-source-query" type="search" maxlength="100" placeholder="例：1901、減価償却" disabled><p id="tax-source-count" role="status" aria-live="polite">6件表示／全6件</p></div><noscript><p>JavaScriptが無効でも、以下の全6件の公式リンクを利用できます。</p></noscript><p id="tax-source-empty" hidden>該当する資料はありません。検索語や種類を変えてください。</p>
+<div data-tax-source-group><h3>タックスアンサー（一般向け案内）</h3><ul><li data-tax-source-kind="answer"><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1900.htm">国税庁 No.1900 給与所得者で確定申告が必要な人</a><br>保存・読戻し確認：<time datetime="2026-11-19T18:00:00+09:00">2026年11月19日 18:00（日本時間）</time>。</li><li data-tax-source-kind="answer"><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1901.htm">国税庁 No.1901 同族会社の役員で確定申告の必要な人</a><br>保存・読戻し確認：<time datetime="2026-11-19T18:30:00+09:00">2026年11月19日 18:30（日本時間）</time>。</li><li data-tax-source-kind="answer"><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1902.htm">国税庁 No.1902 災害減免法による所得税の軽減免除</a><br>保存・読戻し確認：<time datetime="2026-11-19T19:00:00+09:00">2026年11月19日 19:00（日本時間）</time>。</li></ul></div>
+<div data-tax-source-group><h3>所得税基本通達（法令解釈通達）</h3><ul><li data-tax-source-kind="circular"><a href="https://www.nta.go.jp/law/tsutatsu/kihon/shotoku/01/03.htm">国税庁 所得税基本通達：公社債・預貯金・棚卸資産（2－10〜2－13）</a><br>保存・読戻し確認：<time datetime="2026-11-19T18:00:00+09:00">2026年11月19日 18:00（日本時間）</time>。</li><li data-tax-source-kind="circular"><a href="https://www.nta.go.jp/law/tsutatsu/kihon/shotoku/01/04.htm">国税庁 所得税基本通達：減価償却資産（第19号関係）</a><br>保存・読戻し確認：<time datetime="2026-11-19T18:30:00+09:00">2026年11月19日 18:30（日本時間）</time>。</li><li data-tax-source-kind="circular"><a href="https://www.nta.go.jp/law/tsutatsu/kihon/shotoku/01/05.htm">国税庁 所得税基本通達：繰延資産（第20号関係）</a><br>保存・読戻し確認：<time datetime="2026-11-19T19:00:00+09:00">2026年11月19日 19:00（日本時間）</time>。</li></ul></div>
+<p>タックスアンサーの法令等基準日：2026年4月1日。申告の要否・適用条件・例外は公式本文をご確認ください。基本通達は一般向け案内とは資料の性質が異なります。適用する条文・改正の注記を確認してください。</p>
+<p>この6件は税法全体の一部です。<strong>この一覧は自動同期されません。</strong>内部の収集進捗、全件収録、全文検索、教材・計算機の更新状況とは別です。資料本文の転載や保存データの直接配信は行わず、リンクから国税庁の公開本文を開きます。自治体の条例を網羅した一覧ではありません。</p>
 <p><a href="#income-tax">所得税の計算機へ</a> · <a href="#tax-course">11科目の基礎教材へ</a></p>
 </section>
 <!-- tax-source-release:end -->
