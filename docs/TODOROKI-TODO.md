@@ -90,6 +90,7 @@ D1実測：制度1件はpending/pendingのまま。取得元は有効1件・無�
 - [x] Cloudflare Access・本番公開設定を確認 **〔完了〕** <!-- todo:T30 project:TODOROKI SLOT -->
   - 本番とstagingのWorkerを宛先とするAccount membersポリシーを確認。一般公開への変更はしていない。本番の認証済み利用者操作は別途未確認。
 - [ ] 合法的な公式機種データ収集を実装 **〔保留〕** <!-- todo:T31 project:TODOROKI SLOT -->
+  - 2026-11-19：SANKYO公式ポータルの規約（2026-05-22改定）と機種情報サイトを確認。両ホストのrobots取得はアクセス確認HTMLとなり、有効なrobots規則・明示的な自動取得許諾・再掲載可能な公式APIを確認できなかった。許可元・SANKYOの取得/保存/公開はいずれも0。公式リンクは個別条件に従い、仕様値の許諾・適合取得経路が明確になるまで停止。[SLOT PR #9](https://github.com/2szzrkyhkt-commits/TODOROKI-SLOT/pull/9)。
 - [ ] 機種データの保存・画面表示を検証 **〔検証待ち〕** <!-- todo:T32 project:TODOROKI SLOT -->
 - [ ] メーカー別・機種別の検索を整備 **〔進行中〕** <!-- todo:T33 project:TODOROKI SLOT -->
 - [ ] 収支表・店舗別分析を連携 **〔非公開ステージ実装済・本番/画面確認待ち〕** <!-- todo:T34 project:TODOROKI SLOT -->
@@ -97,6 +98,7 @@ D1実測：制度1件はpending/pendingのまま。取得元は有効1件・無�
   - 2026-11-18：既存MAXBET列のCSV取込・店舗/機種タグ明示選択・全体/店舗/月別集計をブラウザ内で実装。私有SLOT PR #7（f109c0c、下書きPR #6上の差分）・既存含む70テスト/CI成功。stage版24e099ea-466d-47b8-8f31-8fb37a39fe65へ反映し13モジュール読戻し一致、認証設定/バインディング・本番ソース不変。実ブラウザ検証は環境/URLポリシーで失敗・未確認。本番全拒否ロックは解除せず、未完了維持。
   - 2026-11-17継続：既存MAXBET収支表の列を確認。日付、投資額、回収額、収支（自動）、店舗・機種タグ、メモ、年月/年（自動）、元データID、更新日時。実収支値や個別IDをGitHub/公開画面へ転記しない。タグには店舗/機種が混在するため自動で断定せず、次に端末内の列/タグ対応と取込・分析を実装検証する。元ファイルは変更していない。
 - [ ] 自動更新とデータ取得元の監視を整備 **〔進行中〕** <!-- todo:T35 project:TODOROKI SLOT -->
+  - 2026-11-19：[SLOT下書きPR #9](https://github.com/2szzrkyhkt-commits/TODOROKI-SLOT/pull/9)で既存collectorに403/429発生時の同一origin停止・後続周期の無断再試行防止を実装。模擬試験を含む[Collector CI 63件](https://github.com/2szzrkyhkt-commits/TODOROKI-SLOT/actions/runs/44468066971)とCatalog CI成功。許諾未確認のSANKYO自動取得なし、本番配備/D1/Cron/Access変更なし。実データ更新は未達、T31〜T35の完了チェック変更なし。
 
 本番D1実測：verified機種1件、verified事実3件。取得元1件はallowed=0。2026-11-14 10:00:51 JSTの収集はno_approved_sources、checked_sources=0。規約未確認の取得元を強制的に有効化しない。本番と専用collectorの両方が毎日10時JSTのCronを持つ。重複取得の有無は処理内容・ロックを照合してから判断する。
 
