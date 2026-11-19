@@ -1,5 +1,5 @@
 import {isLawXml} from './xml.mjs';
-import {historyTick,getHistory,renderHistory} from './history.mjs';
+import {historyTick,getHistory,renderHistory,createEgovFetcher} from './history.mjs';
 import {ntaTick,ntaURL} from './nta.mjs';
 const BASE = 'https://laws.e-gov.go.jp/api/2';
 const CATEGORIES = ['013', '036'];
@@ -17,9 +17,9 @@ async function bounded(response, max) {
   finally {await reader.cancel();}
   const data=new Uint8Array(total);let at=0;for(const c of chunks){data.set(c,at);at+=c.byteLength;}return data;
 }
-async function api(path, params) {
+async function api(path, params,egovFetch) {
   const url=new URL(BASE+path);Object.entries(params).forEach(([k,v])=>url.searchParams.set(k,String(v)));
-  const response=await fetch(url,{headers:{Accept:'application/json','User-Agent':'TODOROKI-Tax-Collector/1.0'},signal:AbortSignal.timeout(45000)});
+  const response=await egovFetch(url,{headers:{Accept:'application/json','User-Agent':'TODOROKI-Tax-Collector/1.0'},signal:AbortSignal.timeout(45000)});
   const raw=await bounded(response,2*1024*1024);
   return {data:JSON.parse(new TextDecoder().decode(raw)),url:url.href};
 }
@@ -33,7 +33,7 @@ async function writeVerifiedJSON(kv,key,value) {
   const json=JSON.stringify(value);await kv.put(key,json);
   if(await kv.get(key)!==json)throw Error('archive metadata readback mismatch');
 }
-async function archive(env, law) {
+async function archive(env, law,egovFetch) {
   const r=law.revision_info, id=law.law_info.law_id, rev=r.law_revision_id;
   if (!rev || !id) throw new Error('missing revision id');
   const previous=await env.TAX.get(`revision:${rev}`,'json');
@@ -48,7 +48,7 @@ async function archive(env, law) {
   }
   const url=new URL(`${BASE}/law_data/${encodeURIComponent(rev)}`);
   url.searchParams.set('response_format','xml');url.searchParams.set('law_full_text_format','xml');url.searchParams.set('include_attached_file_content','false');
-  const response=await fetch(url,{headers:{Accept:'application/xml','User-Agent':'TODOROKI-Tax-Collector/1.0'},signal:AbortSignal.timeout(60000)});
+  const response=await egovFetch(url,{headers:{Accept:'application/xml','User-Agent':'TODOROKI-Tax-Collector/1.0'},signal:AbortSignal.timeout(60000)});
   const raw=await bounded(response,24*1024*1024);
   if (!isLawXml(raw)) throw new Error('invalid law XML');
   const sha256=await rawDigest(raw);
@@ -59,7 +59,7 @@ async function archive(env, law) {
   await writeVerifiedJSON(env.TAX,`law:${id}`,meta);
   return {created:true,verified:{law_id:id,revision_id:rev,sha256,bytes:raw.length,readback:true,index_repaired:false}};
 }
-export async function collectTax(env,{persistStatus=true}={}) {
+export async function collectTax(env,{persistStatus=true,egovFetch=createEgovFetcher(env)}={}) {
   let state=await env.TAX.get('state','json') || {category:0,offset:0,queue:[],next_offset:null,saved:0,scans:0,seeded:false};
   const report={at:new Date().toISOString(),saved:0,skipped:0,failed:[],verified:[],phase:'collect',scope:'国税・地方財政の候補法令。通達・条例・旧版の遡及収集・試験年度確定は未対応。'};
   try {
@@ -70,7 +70,7 @@ export async function collectTax(env,{persistStatus=true}={}) {
     }
     if (!state.queue.length) {
       if(state.next_scan_at && Date.now()<state.next_scan_at) {report.phase='idle';return report;}
-      const {data,url}=await api('/laws',{category_cd:CATEGORIES[state.category],limit:50,offset:state.offset});
+      const {data,url}=await api('/laws',{category_cd:CATEGORIES[state.category],limit:50,offset:state.offset},egovFetch);
       if(!Array.isArray(data.laws))throw new Error('invalid catalog');
       if(data.next_offset!=null && data.next_offset<=state.offset)throw new Error('invalid pagination');
       await env.TAX.put(`catalog:${CATEGORIES[state.category]}:${state.offset}`,JSON.stringify({source_url:url,checked_at:report.at,...data}));
@@ -79,9 +79,16 @@ export async function collectTax(env,{persistStatus=true}={}) {
     }
     // Single scheduled writer; manual setup invocations must not overlap with cron.
     const pending=state.queue.splice(0,3), retry=[];
-    for(const law of pending) {
-      try {const result=await archive(env,law);report.verified.push(result.verified);if(result.created){report.saved++;state.saved++;}else report.skipped++;}
-      catch(e) {const fail={id:law.law_info?.law_id,error:String(e).slice(0,300)};report.failed.push(fail);retry.push(law);console.error(JSON.stringify({event:'tax_archive_failed',...fail}));}
+    for(let i=0;i<pending.length;i++) {
+      const law=pending[i];
+      try {const result=await archive(env,law,egovFetch);report.verified.push(result.verified);if(result.created){report.saved++;state.saved++;}else report.skipped++;}
+      catch(e) {const fail={id:law.law_info?.law_id,error:String(e).slice(0,300)};report.failed.push(fail);retry.push(law);console.error(JSON.stringify({event:'tax_archive_failed',...fail}));
+       if(e.egovStop){
+        // Preserve failed and unattempted work ahead of the untouched page tail.
+        state.queue=[...retry,...pending.slice(i+1),...state.queue];retry.length=0;
+        report.phase=e.egovGate.state;report.egov=e.egovGate;break;
+       }
+      }
     }
     // Rotate failures rather than blocking every subsequent law in the same page.
     state.queue.push(...retry);
@@ -99,7 +106,8 @@ export async function collectTax(env,{persistStatus=true}={}) {
     return result;
   } catch(e) {
     console.error(JSON.stringify({event:'tax_tick_failed',error:String(e)}));
-    e.collectionReport??={...report,phase:'failed',collection_error:'COLLECTION_TICK_FAILED',total_saved:state.saved,completed_scans:state.scans,queue_remaining:state.queue.length};
+    if(e.egovStop){report.phase=e.egovGate.state;report.egov=e.egovGate;}
+    e.collectionReport??={...report,phase:report.egov?report.phase:'failed',collection_error:'COLLECTION_TICK_FAILED',total_saved:state.saved,completed_scans:state.scans,queue_remaining:state.queue.length};
     throw e;
   }
 }
@@ -139,8 +147,9 @@ export function renderNtaCatalog(data){
 
 export async function tick(env) {
  let report={},collectionFailure;
- try{report=await collectTax(env,{persistStatus:false});}catch(e){report=e.collectionReport||{phase:'failed',collection_error:'COLLECTION_TICK_FAILED'};collectionFailure=e;}
- try{report.history=await historyTick(env,{verifyRoutes:async snapshot=>{
+ const egovFetch=createEgovFetcher(env);
+ try{report=await collectTax(env,{persistStatus:false,egovFetch});}catch(e){report=e.collectionReport||{phase:'failed',collection_error:'COLLECTION_TICK_FAILED'};collectionFailure=e;}
+ try{report.history=await historyTick(env,{egovFetch,verifyRoutes:async snapshot=>{
   const headers={Authorization:'Bearer '+env.SETUP_TOKEN};
   const endpoint='https://internal.invalid/history?law_id='+encodeURIComponent(snapshot.law_id);
   const json=await taxWorker.fetch(new Request(endpoint,{headers}),env);
@@ -149,14 +158,14 @@ export async function tick(env) {
   if(html.status!==200||await html.text()!==renderHistory(snapshot))throw Error('authenticated HTML readback mismatch');
   return {json_200_and_matches:true,html_200_and_matches:true,method:'in-process actual handler; existing credential stays in binding/request memory; no network transmission'};
  }});}
- catch(e){report.history={state:'failed',error:String(e).slice(0,160)};console.error(JSON.stringify({event:'tax_history_failed',error:report.history.error}));}
+ catch(e){report.history={state:e.egovGate?.state||'failed',error:String(e).slice(0,160)};if(e.egovStop)report.egov=e.egovGate;console.error(JSON.stringify({event:'tax_history_failed',error:report.history.error}));}
  // Independent source family: an e-Gov failure must not masquerade as an NTA failure.
  try{report.nta=await ntaTick(env);}
  catch{report.nta={state:'failed',at:new Date().toISOString(),code:'NTA_STORAGE_OR_STATE_FAILED'};}
  // One write to the shared status key per tick (KV same-key rate limit).
  const {history,nta,...collection}=report;
  const status=report.phase==='idle'?(await env.TAX.get('status','json')||{}):collection;
- await env.TAX.put('status',JSON.stringify({...status,nta:report.nta}));
+ await env.TAX.put('status',JSON.stringify({...status,...(report.egov?{egov:report.egov}:{}),nta:report.nta}));
  if(collectionFailure)throw collectionFailure;
  return report;
 }
@@ -203,3 +212,4 @@ const taxWorker = {
 };
 
 export default taxWorker;
+
