@@ -56,6 +56,7 @@ export async function searchPrograms(env,filters={}) {
  const escaped=q.replace(/[\\%_]/g,m=>'\\'+m);
  const sql="SELECT id,name,category,region_level,agency,summary,application_url,verification,status FROM programs WHERE (name LIKE ? ESCAPE '\\' OR summary LIKE ? ESCAPE '\\') AND (?='all' OR region_level=? OR (?='local' AND region_level IN ('prefecture','municipality'))) AND (?='all' OR category=?) ORDER BY name LIMIT 101";
  const r=await env.DB.prepare(sql).bind('%'+escaped+'%','%'+escaped+'%',region,region,region,category,category).all();
+ if(r?.success===false||!Array.isArray(r?.results))throw Error('search_storage_failed');
  if(r.results.length>100)throw Error('search_scope_limit');return {programs:r.results,coverage:'現在収録1制度。検索結果0件は支援制度が存在しないことを意味しません。'};
 }
 export async function assessStored(env,programId,answers,clock=new Date()) {
