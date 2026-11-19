@@ -1,7 +1,10 @@
 // Isolated worker contract tests: no live writes, no mail, no production DB.
 import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
-const code=await fs.readFile('worker.js','utf8');
+const source=await fs.readFile(new URL('../../worker.js',import.meta.url),'utf8');
+// The Worker is imported as a data module for Node versions without .js ESM detection.
+// Resolve its local ESM imports against the actual Worker file, not the data URL.
+const code=source.replace(/^(\s*import\s+[^\n]+?\s+from\s+)(['"])(\.\/[^'"\n]+)\2/gm,(_,prefix,quote,path)=>prefix+JSON.stringify(new URL(path,new URL('../../worker.js',import.meta.url)).href));
 const worker=(await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'))).default;
 const origin='https://todoroki-gold.com';
 let calls=0;
@@ -70,3 +73,4 @@ await import('./image-probe.test.mjs');
 
 await import('../tax/nta.test.mjs');
 await import('../tax/egov-readback.test.mjs');
+
