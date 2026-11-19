@@ -1514,3 +1514,12 @@ Cloudflare KVのstatusを読取。e-Govは保存446・初回走査1・待機2・
 - 保存結果はfindings1（TQ20の外部参照HTTP503）、unverified1（旧外部参照履歴）、new_findings0、resolved0、notification_candidates0。既存通知基準は重要IDの許可リストでTQ20の外部参照障害を即時通知から除外。今回実通知0で正しく、通知配送・復旧経路の実証にはならない。基準・しきい値は変更しない。
 - 既存10 Workers一覧に独立watchdog配備なし。雛形の正常判定は3時間以内の成功scheduleを要求するが未配備のため実稼働証拠なし。新規Cron/通知先/権限を作らない。
 - 既存失敗run44237284439ではTestsとRun auditがfailure、通知・履歴保存がskip。最新成功実行で解消したことと、今後の前段失敗時にも独立して障害を通知できることは別。現workflowのsuccess条件を変更せず、失敗を成功扱いする変更も行わない。全サービスの通知・復旧・重複抑制を検証できる既存実行経路の不足が残る。
+
+## 2026-11-19 T29: 検索DB失敗を「制度0件」の成功にしない修正
+
+- 開始・終了とも完了22件／未完了23件。全体公開条件は未達、チェック追加なし。
+- 実searchProgramsと実Worker handlerの隔離試験で、D1 success:false/results:[]がHTTP200・制度0件、success:false/候補配列もHTTP200となる不具合を再現。DB例外は400だった。明示的失敗・不正results・例外を固定503にし、通常0件200・入力不正/件数上限400・未認証403/DB読取0・安全ヘッダーを維持。実DB障害を起こしていない。
+- [PR #83](https://github.com/2szzrkyhkt-commits/TODOROKI/pull/83)、最終head `e1112725add2247f6984a8ca5f57208e88a15598`、squash main `55696a8a6e1fd488a339e63ef3fb6b8fbcecdce3`。作業中にdraftの基底tree参照欠落を検知し、main/配備前に復元。最終compareは予定4ファイル、43追加1削除のみを確認。mainには修正済み最終差分のみ統合。
+- 新規15回帰成功（旧版8失敗）、総合85件と既存個別検査成功。[最終head CI 44438926022](https://github.com/2szzrkyhkt-commits/TODOROKI/actions/runs/44438926022) success。
+- 既存非公開Workerへcontent-only差分配備。version `6e94facd-ad70-4f5a-a5b9-5960e800988c`、deployment `4257a4ca-bb8d-4378-938d-ebb7014dd22d`、10:53:00 JST、100%。全13モジュール読戻し一致・変更外11モジュール/設定不変・deployment安定を確認。外部/api/searchはAccessログインへの302、非公開維持。
+- 認証済み実API/UIでの異常応答は未確認。合成試験・配備コード一致を本番認証後の操作成功に読み替えない。認証・公開・DBデータ・定期3件/Cron・AdSense・権限・T44の変更なし。原TODOの安全性/正確性と公開前検証が引き続き残る。
