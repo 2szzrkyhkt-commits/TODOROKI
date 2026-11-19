@@ -55,14 +55,14 @@ await test('robots denial prevents document requests',async()=>{
  const kv=new KV();let count=0;const r=await ntaTick({TAX:kv},{fetcher:async()=>{count++;return response('User-agent: *\nDisallow: /','text/plain');},now:100000});assert.equal(count,1);assert.equal(r.blocked,'ROBOTS_DISALLOW');assert.equal(r.pages_saved,0);
 });
 await test('404, redirect, 429, invalid PDF and content type remain queued',async()=>{
- for(const status of [302,404,429,500]){const kv=new KV(),f=fetcher(()=>new Response('',{status}));const r=await ntaTick({TAX:kv},{fetcher:f.fetch,now:100000});assert.equal(r.queue_remaining,2);assert.equal(r.completed_scans,0);assert.equal(r.pages_saved,0);assert.equal(r.failed.length,2);assert.ok((await kv.get('nta:state','json')).queue.every(x=>x.due>100000));}
+ for(const status of [302,404,429,500]){const kv=new KV(),f=fetcher(()=>new Response('',{status}));const r=await ntaTick({TAX:kv},{fetcher:f.fetch,now:100000});assert.equal(r.queue_remaining,2);assert.equal(r.completed_scans,0);assert.equal(r.pages_saved,0);assert.equal(r.failed.length,status===429?1:2);assert.ok((await kv.get('nta:state','json')).queue[0].due>100000);}
  const kv=new KV(),f=fetcher(()=>response('fake','application/pdf'));assert.equal((await ntaTick({TAX:kv},{fetcher:f.fetch,now:100000})).pages_saved,0);
 });
 await test('readback corruption cannot produce a success report',async()=>{
  const kv=new KV();kv.corrupt=true;await assert.rejects(()=>ntaTick({TAX:kv},{fetcher:fetcher().fetch,now:100000}),/READBACK_MISMATCH/);
 });
 await test('Retry-After wins over local delay; valid and truncated PDF differ',async()=>{
- const kv=new KV(),f=fetcher(()=>new Response('',{status:429,headers:{'Retry-After':'172800'}}));await ntaTick({TAX:kv},{fetcher:f.fetch,now:100000});assert.ok((await kv.get('nta:state','json')).queue.every(q=>q.due===172900000));
+ const kv=new KV(),f=fetcher(()=>new Response('',{status:429,headers:{'Retry-After':'172800'}}));await ntaTick({TAX:kv},{fetcher:f.fetch,now:100000});assert.equal((await kv.get('nta:state','json')).queue[0].due,172900000);assert.equal((await kv.get('nta:state','json')).queue[1].due,0);
  for(const valid of [true,false]){
   const store=new KV(),pdf=doc.replace('.htm','.pdf');await store.put('nta:state',JSON.stringify({queue:[{url:pdf,due:0,attempts:0}],known:[pdf],saved:0,bytes:0,scans:0}));
   const fx=fetcher(()=>response('%PDF-1.7\nsynthetic\n'+(valid?'%%EOF':''),'application/pdf'));const r=await ntaTick({TAX:store},{fetcher:fx.fetch,now:100000});assert.equal(r.pages_saved,valid?1:0);assert.equal(r.completed_scans,valid?1:0);
@@ -199,7 +199,96 @@ await test('access block outranks failure, inter-scan wait and all-future deadli
 });
 await test('observed failure outranks remaining due work and preserves retry deadline',async()=>{
  const queue=[doc,circular,doc.replace('1000','2000')];const kv=await oldQueue(queue),fx=fetcher(()=>new Response('',{status:429,headers:{'Retry-After':'172800'}}));
- const r=await ntaTick({TAX:kv},{fetcher:fx.fetch,now:100000});assert.equal(r.state,'retry_wait');assert.equal(r.checked,2);assert.equal(r.due_count,1);assert.equal(r.deferred_count,2);assert.equal(r.next_retry_at,172900000);assert.equal(r.completed_scans,0);assert.equal(r.queue_remaining,3);
+ const r=await ntaTick({TAX:kv},{fetcher:fx.fetch,now:100000});assert.equal(r.state,'rate_limited');assert.equal(r.checked,1);assert.equal(r.due_count,2);assert.equal(r.deferred_count,1);assert.equal(r.next_retry_at,172900000);assert.equal(r.completed_scans,0);assert.equal(r.queue_remaining,3);
+});
+
+await test('document 429 persists host cooldown, suppresses other family and resumes at exact deadline',async()=>{
+ const kv=await oldQueue([doc,circular]),fx=fetcher(()=>new Response('',{status:429,headers:{'Retry-After':'7200'}}));
+ const r=await ntaTick({TAX:kv},{fetcher:fx.fetch,now:100000});assert.equal(r.rate_limit_until,7300000);assert.equal(r.state,'rate_limited');assert.equal(r.checked,1);assert.deepEqual(fx.calls,[base.replace('/taxes/shiraberu/taxanswer/code/index.htm','/robots.txt'),doc]);
+ const state=await kv.get('nta:state','json');assert.deepEqual(state.queue[1],{url:circular,attempts:0,due:0});assert.equal(state.queue[0].due,7300000);assert.equal(state.scans,0);
+ const before=await kv.get('nta:state'),writes=kv.writes.length;
+ const wait=await ntaTick({TAX:kv},{fetcher:async()=>{throw Error('must not fetch');},now:7299999});assert.equal(wait.state,'rate_limited');assert.equal(wait.checked,0);assert.equal(await kv.get('nta:state'),before);assert.equal(kv.writes.length,writes);
+ const good=fetcher(),resumed=await ntaTick({TAX:kv},{fetcher:good.fetch,now:7300000});assert.equal(resumed.checked,2);assert.deepEqual(good.calls,[circular,doc]);assert.equal(resumed.state,'scan_complete');
+});
+await test('429 parser respects HTTP date and conservative fallbacks including extreme integers',async()=>{
+ const now=Date.parse('2026-11-19T00:00:00Z');
+ for(const [value,expected] of [['7200',now+7200000],['Thu, 19 Nov 2026 02:00:00 GMT',now+7200000],['Wednesday, 18-Nov-26 02:00:00 GMT',now+3600000],['0',now+3600000],['-1',now+3600000],['1.5',now+3600000],['garbage',now+3600000],['',now+3600000]]){
+  const kv=await oldQueue([doc,circular]),fx=fetcher(()=>new Response('',{status:429,headers:{'Retry-After':value}}));
+  const r=await ntaTick({TAX:kv},{fetcher:fx.fetch,now});assert.equal(r.rate_limit_until,expected,value);assert.equal(r.checked,1);assert.equal(r.state,'rate_limited');
+ }
+ const kv=await oldQueue([doc,circular]),fx=fetcher(()=>new Response('',{status:429,headers:{'Retry-After':'9'.repeat(400)}}));
+ const r=await ntaTick({TAX:kv},{fetcher:fx.fetch,now});assert.equal(r.state,'blocked');assert.equal(r.blocked,'RETRY_AFTER_UNREPRESENTABLE');assert.equal(r.checked,1);assert.equal(r.queue_remaining,2);
+ await ntaTick({TAX:kv},{fetcher:async()=>{throw Error('must not fetch');},now:now+999999999});
+});
+await test('robots 429 persists cooldown with absent or expired cache and no document fetch',async()=>{
+ for(const cached of [false,true]){
+  const kv=await oldQueue([doc,circular]);if(cached){const s=await kv.get('nta:state','json');s.robots={at:0,text:robots};await kv.put('nta:state',JSON.stringify(s));}
+  let calls=0;const fetch=async u=>{calls++;assert.equal(u,'https://www.nta.go.jp/robots.txt');return new Response('',{status:429,headers:{'Retry-After':'172800'}});};
+  const now=100000000,r=await ntaTick({TAX:kv},{fetcher:fetch,now});assert.equal(r.state,'rate_limited');assert.equal(r.checked,0);assert.equal(r.rate_limit_until,now+172800000);assert.equal(calls,1);assert.equal(r.completed_scans,0);assert.equal(r.failed[0].code,'HTTP_429');
+  const again=await ntaTick({TAX:kv},{fetcher:fetch,now:now+86400001});assert.equal(again.state,'rate_limited');assert.equal(calls,1);
+ }
+});
+await test('robots 401/403 stops permanently; blocks outrank all cooldowns',async()=>{
+ for(const status of [401,403]){
+  const kv=await oldQueue([doc,circular]);let calls=0;const fx=async()=>{calls++;return new Response('',{status});};
+  const r=await ntaTick({TAX:kv},{fetcher:fx,now:100000});assert.equal(r.blocked,'UPSTREAM_ACCESS_DENIED');assert.equal(r.state,'blocked');assert.equal(r.checked,0);assert.equal(r.queue_remaining,2);
+  const s=await kv.get('nta:state','json');s.rate_limit_until=999999999;s.next_at=999999999;await kv.put('nta:state',JSON.stringify(s));
+  const later=await ntaTick({TAX:kv},{fetcher:fx,now:1000000000});assert.equal(later.state,'blocked');assert.equal(calls,1);
+ }
+});
+await test('existing host cooldown outranks scan wait, preserves longer deadline and performs no IO',async()=>{
+ const kv=await oldQueue([doc]);const s=await kv.get('nta:state','json');s.rate_limit_until=999999999;s.next_at=200000;await kv.put('nta:state',JSON.stringify(s));const writes=kv.writes.length;
+ const r=await ntaTick({TAX:kv},{fetcher:async()=>{throw Error('must not fetch');},now:100000});assert.equal(r.state,'rate_limited');assert.equal(r.rate_limit_until,999999999);assert.equal(kv.writes.length,writes);
+});
+await test('429 cannot be reported successful when cooldown state persistence fails',async()=>{
+ const kv=await oldQueue([doc,circular]),put=kv.put.bind(kv);kv.put=async(k,v)=>{if(k==='nta:state')throw Error('synthetic state failure');return put(k,v);};
+ const fx=fetcher(()=>new Response('',{status:429}));await assert.rejects(()=>ntaTick({TAX:kv},{fetcher:fx.fetch,now:100000}),/synthetic state failure/);assert.equal(fx.calls.length,2);assert.equal(await kv.get('nta:status'),null);
+});
+
+await test('robots 429 fallback, unrepresentable delay and empty queue never claim scan completion',async()=>{
+ for(const header of [null,'not-a-date','9'.repeat(400)]){
+  const kv=await oldQueue([]);let calls=0;const r=await ntaTick({TAX:kv},{fetcher:async()=>{calls++;return new Response('',{status:429,headers:header?{'Retry-After':header}:{}});},now:100000});
+  assert.equal(calls,1);assert.equal(r.checked,0);assert.equal(r.completed_scans,0);
+  if(header?.length>300){assert.equal(r.state,'blocked');assert.equal(r.blocked,'RETRY_AFTER_UNREPRESENTABLE');}
+  else {assert.equal(r.state,'rate_limited');assert.equal(r.rate_limit_until,3700000);}
+ }
+});
+
+await test('late document 429 measures numeric Retry-After from response receipt',async()=>{
+ const kv=await oldQueue([doc,circular]),start=100000,receipt=start+45000;let time=start;
+ const fx=fetcher(()=>{time=receipt;return new Response('',{status:429,headers:{'Retry-After':'7200'}});});
+ const r=await ntaTick({TAX:kv},{fetcher:fx.fetch,now:start,clock:()=>time});assert.equal(r.rate_limit_until,receipt+7200000);assert.equal(r.checked,1);assert.equal((await kv.get('nta:state','json')).queue[0].due,receipt+7200000);
+ const wait=await ntaTick({TAX:kv},{fetcher:async()=>{throw Error('premature fetch');},now:start+7200000});assert.equal(wait.state,'rate_limited');
+});
+await test('late robots 429 measures numeric Retry-After from response receipt',async()=>{
+ const kv=await oldQueue([doc,circular]),start=100000,receipt=start+45000;let time=start,calls=0;
+ const r=await ntaTick({TAX:kv},{now:start,clock:()=>time,fetcher:async u=>{calls++;assert.equal(u,'https://www.nta.go.jp/robots.txt');time=receipt;return new Response('',{status:429,headers:{'Retry-After':'7200'}});}});
+ assert.equal(r.rate_limit_until,receipt+7200000);assert.equal(r.checked,0);assert.equal(calls,1);assert.equal((await kv.get('nta:state','json')).rate_limit_until,receipt+7200000);
+});
+await test('absolute Retry-After date is not shifted by late response on either path',async()=>{
+ const start=Date.parse('2026-11-19T00:00:00Z'),receipt=start+45000,deadline=start+7200000;
+ for(const target of ['robots','document']){
+  const kv=await oldQueue([doc,circular]);let time=start;
+  const r=await ntaTick({TAX:kv},{now:start,clock:()=>time,fetcher:async u=>{
+   if(target==='document'&&u.endsWith('robots.txt'))return response(robots,'text/plain');
+   time=receipt;return new Response('',{status:429,headers:{'Retry-After':new Date(deadline).toUTCString()}});
+  }});assert.equal(r.rate_limit_until,deadline);assert.equal((await kv.get('nta:state','json')).rate_limit_until,deadline);
+ }
+});
+await test('default production clock resamples Date.now for both 429 response paths',async()=>{
+ const original=Date.now,start=100000,receipt=145000;
+ try{for(const target of ['robots','document']){
+  let time=start;Date.now=()=>time;const kv=await oldQueue([doc,circular]);
+  const r=await ntaTick({TAX:kv},{fetcher:async u=>{if(target==='document'&&u.endsWith('robots.txt'))return response(robots,'text/plain');time=receipt;return new Response('',{status:429,headers:{'Retry-After':'7200'}});}});
+  assert.equal(r.rate_limit_until,receipt+7200000);
+ }}finally{Date.now=original;}
+});
+await test('late 429 conservative fallback also starts at receipt on both paths',async()=>{
+ for(const target of ['robots','document']){
+  const kv=await oldQueue([doc,circular]);let time=100000;
+  const r=await ntaTick({TAX:kv},{now:100000,clock:()=>time,fetcher:async u=>{if(target==='document'&&u.endsWith('robots.txt'))return response(robots,'text/plain');time=145000;return new Response('',{status:429,headers:{'Retry-After':'0'}});}});
+  assert.equal(r.rate_limit_until,3745000);
+ }
 });
 
 console.log('T20 NTA: '+cases+' isolated cases passed; no live requests or production writes.');

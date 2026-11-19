@@ -72,19 +72,41 @@ async function saveVerified(kv,key,value) {
   const want=typeof value==='string'?new TextEncoder().encode(value):value;
   if(!got||await sha(got)!==await sha(want))throw Error('READBACK_MISMATCH');
 }
-export async function ntaTick(env,{fetcher=fetch,now=Date.now()}={}) {
+// Host-wide cooldown stays in the existing state key. It does not authorize retries.
+function rateLimitUntil(header,now,fallback,previous=0) {
+  const value=(header||'').trim();let deadline=0;
+  if(/^\d+$/.test(value)){
+    const seconds=Number(value);deadline=now+seconds*1000;
+    if(!Number.isSafeInteger(deadline)||deadline>8640000000000000)throw Error('RETRY_AFTER_UNREPRESENTABLE');
+  }else if(/^(?:(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun), \d{2} [A-Z][a-z]{2} \d{4} \d{2}:\d{2}:\d{2} GMT|(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), \d{2}-[A-Z][a-z]{2}-\d{2} \d{2}:\d{2}:\d{2} GMT|(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun) [A-Z][a-z]{2} [ \d]\d \d{2}:\d{2}:\d{2} \d{4})$/.test(value)){
+    const date=Date.parse(value);if(Number.isFinite(date))deadline=date;
+  }
+  return Math.max(previous||0,fallback,deadline);
+}
+export async function ntaTick(env,{fetcher=fetch,now,clock}={}) {
+  // Explicit now keeps existing fixtures deterministic; production samples real
+  // time again at response receipt rather than shortening Retry-After by latency.
+  const readClock=clock||(now===undefined?()=>Date.now():()=>now);
+  now??=readClock();
   const kv=env.TAX;
   let state=await kv.get(PREFIX+'state','json')||{schema:1,queue:NTA_SEEDS.map(url=>({url,attempts:0,due:0})),known:[...NTA_SEEDS],saved:0,bytes:0,scans:0};
   let report={at:new Date(now).toISOString(),state:'collecting',saved:0,checked:0,failed:[],verified:[],notice:NOTICE};
-  if(state.blocked||state.next_at>now)return {...report,state:state.blocked?'blocked':'waiting',...summary(state,now)};
+  if(state.blocked||state.rate_limit_until>now||state.next_at>now)return {...report,state:state.blocked?'blocked':state.rate_limit_until>now?'rate_limited':'waiting',...summary(state,now)};
   let robotsReady=true;
   if(!state.robots||now-state.robots.at>=24*3600000){
     try{
       const r=await fetcher('https://www.nta.go.jp/robots.txt',{redirect:'manual',signal:AbortSignal.timeout(15000),headers:{'User-Agent':'TODOROKI-Tax-Collector/1.0'}});
+      const receivedAt=Math.max(now,readClock());
+      if(r.status===401||r.status===403){state.blocked='UPSTREAM_ACCESS_DENIED';throw Error('HTTP_'+r.status);}
+      if(r.status===429){
+        try{state.rate_limit_until=rateLimitUntil(r.headers.get('retry-after'),receivedAt,receivedAt+3600000,state.rate_limit_until);}
+        catch(e){state.blocked='RETRY_AFTER_UNREPRESENTABLE';throw e;}
+        throw Error('HTTP_429');
+      }
       if(r.status!==200)throw Error('ROBOTS_HTTP');
       const raw=await bounded(r,64*1024),text=new TextDecoder('utf-8',{fatal:true}).decode(raw);
       robotsAllows(text,NTA_SEEDS[0]);state.robots={at:now,text,sha256:await sha(raw)};
-    }catch{robotsReady=false;report.failed.push({url:'https://www.nta.go.jp/robots.txt',code:'ROBOTS_UNAVAILABLE'});}
+    }catch(e){robotsReady=false;report.failed.push({url:'https://www.nta.go.jp/robots.txt',code:/^(HTTP_(401|403|429)|RETRY_AFTER_UNREPRESENTABLE)$/.test(e.message)?e.message:'ROBOTS_UNAVAILABLE'});}
   }
   const knownURLs=new Set(state.known);
   // Two documents at most, plus one robots refresh per day, on the existing cadence.
@@ -100,11 +122,13 @@ export async function ntaTick(env,{fetcher=fetch,now=Date.now()}={}) {
     try {
       if(!robotsAllows(state.robots.text,item.url)){state.blocked='ROBOTS_DISALLOW';throw Error('ROBOTS_DISALLOW');}
       const r=await fetcher(item.url,{redirect:'manual',headers:{'User-Agent':'TODOROKI-Tax-Collector/1.0','Accept':'text/html,application/pdf'},signal:AbortSignal.timeout(15000)});
+      const receivedAt=Math.max(now,readClock());
       report.checked++;
       if(r.status===401||r.status===403){state.blocked='UPSTREAM_ACCESS_DENIED';throw Error('HTTP_'+r.status);}
       if(r.status!==200){
         const error=Error('HTTP_'+r.status),retry=r.headers.get('retry-after');
-        if(retry){const seconds=Number(retry),date=Date.parse(retry);error.retryAt=Number.isFinite(seconds)&&seconds>=0?now+seconds*1000:Number.isFinite(date)?date:0;}
+        if(r.status===429){error.rateLimited=true;error.retryAfter=retry;error.receivedAt=receivedAt;}
+        else if(retry){const seconds=Number(retry),date=Date.parse(retry);error.retryAt=Number.isFinite(seconds)&&seconds>=0?now+seconds*1000:Number.isFinite(date)?date:0;}
         throw error;
       }
       const type=r.headers.get('content-type')||'',pdf=/[.]pdf$/i.test(item.url);
@@ -146,15 +170,20 @@ export async function ntaTick(env,{fetcher=fetch,now=Date.now()}={}) {
       // Do not rotate/dequeue a failed target or mistake it for a completed scan.
       const code=/^(HTTP_\d+|SIZE_LIMIT|CONTENT_TYPE|INVALID_HTML|INVALID_PDF|READBACK_MISMATCH|URL_BUDGET|STORAGE_BUDGET|ROBOTS_DISALLOW)$/.test(e.message)?e.message:'FETCH_OR_STORAGE_FAILED';
       item.attempts++;item.due=Math.max(Number.isFinite(e.retryAt)?e.retryAt:0,now+Math.min(24*3600000,3600000*2**Math.min(item.attempts-1,5)));
+      if(e.rateLimited){
+        try{state.rate_limit_until=rateLimitUntil(e.retryAfter,e.receivedAt,Math.max(item.due,e.receivedAt+Math.min(24*3600000,3600000*2**Math.min(item.attempts-1,5))),state.rate_limit_until);item.due=state.rate_limit_until;}
+        catch{state.blocked='RETRY_AFTER_UNREPRESENTABLE';}
+      }
       report.failed.push({url:item.url,code});
-      if(state.blocked)break;
+      // A host 429 suppresses the second document, regardless of source family.
+      if(state.blocked||e.rateLimited)break;
     }
   }
-  if(!state.queue.length){state.scans++;state.next_at=now+24*3600000;state.queue=state.known.map(url=>({url,attempts:0,due:0}));report.state='scan_complete';}
+  if(robotsReady&&!state.blocked&&!(state.rate_limit_until>now)&&!state.queue.length){state.scans++;state.next_at=now+24*3600000;state.queue=state.known.map(url=>({url,attempts:0,due:0}));report.state='scan_complete';}
   const diagnostics=summary(state,now);
-  // Priority: access/budget block, observed failure, completed scan, then due-wait.
+  // Priority: permanent block, host cooldown, observed failure, completed scan, due-wait.
   // Queue deadlines are diagnostic only; never advance retries or add requests.
-  if(state.blocked)report.state='blocked';else if(report.failed.length)report.state='retry_wait';
+  if(state.blocked)report.state='blocked';else if(state.rate_limit_until>now)report.state='rate_limited';else if(report.failed.length)report.state='retry_wait';
   else if(report.state!=='scan_complete'&&state.queue.length&&diagnostics.due_count===0&&diagnostics.deferred_count===state.queue.length)report.state='retry_wait';
   state.last_run=report.at;
   await saveVerified(kv,PREFIX+'state',JSON.stringify(state));
@@ -171,6 +200,6 @@ function summary(s,now){
     if(item.due<=now)due_count++;
     else if(item.due>now){deferred_count++;if(next_retry_at===null||item.due<next_retry_at)next_retry_at=item.due;}
   }
-  return {known:s.known.length,pages_saved:s.saved,queue_remaining:s.queue.length,stored_version_bytes:s.bytes,completed_scans:s.scans,blocked:s.blocked||null,next_at:s.next_at||null,due_count,deferred_count,next_retry_at};
+  return {known:s.known.length,pages_saved:s.saved,queue_remaining:s.queue.length,stored_version_bytes:s.bytes,completed_scans:s.scans,blocked:s.blocked||null,next_at:s.next_at||null,rate_limit_until:s.rate_limit_until||null,due_count,deferred_count,next_retry_at};
 }
 
