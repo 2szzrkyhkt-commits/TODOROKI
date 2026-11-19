@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<script src="/assets/privacy-controls.js" defer></script>
+<!-- Google tag (gtag.js) -->
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>加重移動平均線（WMA）とは？計算方法とSMA・EMAとの違い｜TODOROKI</title>
+<meta name="description" content="加重移動平均線（WMA）の仕組みを5日分の計算例で解説。SMA・EMA・VWAPとの違い、線の傾きやクロスの見方、ダマシへの注意点を整理します。">
+<link rel="canonical" href="https://todoroki-gold.com/weighted-moving-average">
+<link rel="alternate" hreflang="ja" href="https://todoroki-gold.com/weighted-moving-average">
+<link rel="alternate" hreflang="x-default" href="https://todoroki-gold.com/weighted-moving-average">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="TODOROKI">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="加重移動平均線（WMA）とは？計算方法とSMA・EMAとの違い｜TODOROKI">
+<meta property="og:description" content="加重移動平均線（WMA）の仕組みを5日分の計算例で解説。SMA・EMA・VWAPとの違い、線の傾きやクロスの見方、ダマシへの注意点を整理します。">
+<meta property="og:url" content="https://todoroki-gold.com/weighted-moving-average">
+<style>:root{color-scheme:dark}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#080808;color:#eae6dd;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP",sans-serif;line-height:1.95}header{padding:24px 6%;border-bottom:1px solid #302819}.logo{color:#d8b85c;font-weight:800;letter-spacing:3px;text-decoration:none}main{max-width:850px;margin:60px auto 80px;padding:0 24px}a{color:#d8b85c;text-underline-offset:5px}.tag{color:#d8b85c;font-size:12px;font-weight:700;letter-spacing:.08em}h1{font-size:clamp(28px,5vw,42px);line-height:1.5;margin:14px 0 24px}h2{font-size:22px;line-height:1.6;margin:42px 0 14px}p{font-size:16px;margin:0 0 22px}.lead{font-size:18px;color:#bbb}.related{margin-top:48px;padding:24px;border:1px solid #4b3d20;border-radius:12px;background:#12110d}.related h2{margin-top:0}.related ul{padding-left:22px}.related li{margin:12px 0;color:#bbb}.button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;border:1px solid #d8b85c;border-radius:6px;text-decoration:none}.button:hover{background:#211c10}.navigation{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:36px}a:focus-visible{outline:2px solid #fff;outline-offset:4px}#article-top{scroll-margin-top:24px}footer{padding:25px 20px;border-top:1px solid #302819;text-align:center;color:#777;font-size:13px}footer a{margin:0 10px}@media(max-width:600px){main{margin-top:38px}.related{padding:20px}.button{width:100%;text-align:center}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}.article-links{list-style:none;padding:0!important}.article-links li{padding:16px 0;border-bottom:1px solid #302819}.article-links li:last-child{border-bottom:0}.article-links a{font-weight:700}.article-links p{font-size:14px;color:#aaa;margin:8px 0 0}.chart,.formula,.callout{padding:20px;border:1px solid #4b3d20;border-radius:12px;background:#12110d;margin:26px 0}.chart svg{width:100%;height:auto;display:block}.chart p,.sources{font-size:12px;color:#bbb}.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:12px}table{width:100%;border-collapse:collapse;font-size:14px;margin:24px 0}th,td{padding:12px;border-bottom:1px solid #4b3d20;text-align:left}th{color:#d8b85c}section{scroll-margin-top:24px}</style>
+<link rel="stylesheet" href="/assets/navigation.css"><link rel="stylesheet" href="/assets/language-picker.css"><link rel="stylesheet" href="/assets/site-header.css"><script src="/assets/language-picker.js" defer></script>
+<link rel="stylesheet" href="/assets/site-quality.css"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "加重移動平均線（WMA）とは？計算方法とSMA・EMAとの違い", "description": "加重移動平均線（WMA）の仕組みを5日分の計算例で解説。SMA・EMA・VWAPとの違い、線の傾きやクロスの見方、ダマシへの注意点を整理します。", "datePublished": "2026-10-30", "dateModified": "2026-10-30", "inLanguage": "ja", "author": {"@type": "Organization", "name": "TODOROKI"}, "mainEntityOfPage": "https://todoroki-gold.com/weighted-moving-average"}</script></head>
+<body><a class="skip-link" href="#article-top">本文へ移動</a>
+<header class="site-header">
+  <div class="wrap brand-row">
+    <a class="logo" href="/" aria-label="TODOROKI トップページ">TODOROKI</a>
+    <nav class="desktop-links" aria-label="メインメニュー">
+        <a href="/#articles">記事</a>
+        <a href="/#themes">テーマ</a>
+        <a href="/glossary">用語辞典</a>
+        <a href="/pdf-library">PDF資料</a>
+        <a href="/boki1">簿記を学ぶ</a>
+        <a href="/#company-analysis">ツール</a>
+        <a href="/#about">TODOROKIについて</a>
+        <a href="/#social">SNS</a>
+    </nav>
+    <label class="todoroki-language-picker">🌐 <select data-todoroki-language aria-label="表示言語 / Language"><option value="ja" selected>日本語</option><option value="en">English</option><option value="es">Español</option><option value="pt">Português</option><option value="zh-Hant">繁體中文</option><option value="zh-Hans">简体中文</option></select></label>
+    <a class="account-link" href="/login">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="6" r="3"/><path d="M4 18v-2a6 6 0 0 1 12 0v2"/></svg>
+      ログイン
+    </a>
+  </div>
+  <nav class="mobile-links" aria-label="メインメニュー">
+        <a href="/#articles">記事</a>
+        <a href="/#themes">テーマ</a>
+        <a href="/glossary">用語辞典</a>
+        <a href="/pdf-library">PDF資料</a>
+        <a href="/boki1">簿記を学ぶ</a>
+        <a href="/#company-analysis">ツール</a>
+        <a href="/#about" aria-label="TODOROKIについて">このサイト</a>
+        <a href="/#social">SNS</a>
+  </nav>
+</header>
+<main id="article-top">
+<article><p class="tag">TECHNICAL ANALYSIS ／ <time datetime="2026-10-30">2026年10月30日</time></p><h1>加重移動平均線（WMA）とは？<br>計算方法とSMA・EMAとの違い</h1><p class="lead">加重移動平均線は、最近の価格ほど大きな重みを付けて計算する移動平均線です。同じ期間の単純移動平均線より直近の値動きを反映しやすく、トレンドの変化を確認する手がかりになります。</p>
+<section><h2>WMAは「新しい価格」を重く扱う</h2><p>ここで扱うWMA（Weighted Moving Average）は、古い価格から順に1、2、3…と重みを増やす線形加重移動平均線です。LWMAと表示するチャートもあります。5日WMAなら、最も古い日の重みは1、最新日の重みは5です。</p><p>単純移動平均線（SMA）は5日間をすべて同じ比重で扱います。WMAは直近の変化を強く反映しますが、将来の株価を先読みする指標ではありません。</p></section>
+<section><h2>5日WMAを実際に計算する</h2><p>次の終値は計算を説明するための架空の数値です。最新日を含む直近5営業日で計算します。</p><table><caption>古い日から新しい日へ重みを増やす例</caption><thead><tr><th scope="col">日</th><th scope="col">終値</th><th scope="col">重み</th><th scope="col">価格×重み</th></tr></thead><tbody><tr><td>4営業日前</td><td>1,000円</td><td>1</td><td>1,000</td></tr><tr><td>3営業日前</td><td>1,020円</td><td>2</td><td>2,040</td></tr><tr><td>2営業日前</td><td>1,010円</td><td>3</td><td>3,030</td></tr><tr><td>1営業日前</td><td>1,040円</td><td>4</td><td>4,160</td></tr><tr><td>最新日</td><td>1,030円</td><td>5</td><td>5,150</td></tr></tbody></table><div class="formula"><strong>WMA＝（価格×重み）の合計÷重みの合計</strong><br>15,380÷（1＋2＋3＋4＋5）<br>＝約1,025.33円</div><p>同じ5日間のSMAは5,100÷5＝1,020円です。この例では最近の価格が古い価格より高いため、WMAがSMAを上回ります。下落が続く場面では逆の関係になることもあります。</p><p>n期間なら最新価格の重みをn、1本前をn−1、最も古い価格を1とし、分母はn×（n＋1）÷2です。翌日は最も古い価格を外し、残った価格の重みを1ずつ下げ、新しい価格に重みnを付けて計算し直します。</p></section>
+<section><h2>SMA・EMA・VWAPとの違い</h2><table><thead><tr><th scope="col">指標</th><th scope="col">重みの付け方</th><th scope="col">特徴</th></tr></thead><tbody><tr><td>SMA</td><td>期間内を均等に扱う</td><td>一定期間の平均をつかむ</td></tr><tr><td>WMA</td><td>期間内の新しい価格ほど線形に重くする</td><td>最近の変化に反応しやすい</td></tr><tr><td>EMA</td><td>古い価格の影響を指数的に減らす</td><td>前回のEMAを使って順次更新する</td></tr><tr><td>VWAP</td><td>取引の出来高で重みを付ける</td><td>売買量を反映した平均価格を見る</td></tr></tbody></table><p>WMAの「加重」は時間の新しさによる重みで、出来高を使うVWAPとは別のものです。EMAも直近を重視しますが計算方法が異なり、WMAと同じ線にはなりません。どれが常に優れているという関係ではありません。</p></section>
+<section><h2>チャートでは3つを順番に確認する</h2><p><strong>① 線の傾き：</strong>上向きなら直近を重視した平均価格が上昇、下向きなら低下しています。横ばいなら方向感が弱い可能性があります。</p><p><strong>② 価格との位置：</strong>上向きのWMAより価格が上で推移しているか、下向きのWMAより下にあるかを見ます。平均線に近づいたときの反発や突破は確認材料ですが、必ず支持線・抵抗線になるわけではありません。</p><p><strong>③ 短期線と長期線：</strong>短期WMAが長期WMAを上抜けるクロスは上昇方向への変化、下抜けるクロスは下降方向への変化を考える材料です。交差だけで決めず、直近の高値・安値の更新と出来高も確認します。</p></section>
+<section><h2>期間設定と使うときの注意点</h2><p>日足の5期間は5営業日、5分足の20期間は5分足20本を意味します。短い設定ほど小さな変化に反応し、長い設定ほど大きな流れを見やすくなります。例えば日足の5・25期間を比較できますが、これは説明用の設定例で、最適値や利益を保証するものではありません。</p><p>WMAも過去の価格から計算するため、変化には遅れて反応します。一定範囲を上下するレンジ相場では価格や短期線が何度も交差し、直後に逆方向へ動く「ダマシ」が起こりやすくなります。ニュースによる急変にも注意が必要です。</p><p>チャートで比較するときは、時間足・期間・適用価格（終値など）をそろえます。取引中の足を含む線は価格とともに変化するため、確定した足での交差かも確認しましょう。</p><div class="callout"><strong>反応が速いことと、売買判断が正確なことは別です。</strong><br>WMAは最近の値動きを整理する道具です。線の傾き、価格の位置、高値・安値、出来高を組み合わせて読みます。</div></section>
+<section class="related"><h2>参考資料</h2><ul><li><a href="https://www.oanda.jp/lab-education/technical_analysis/moving_average/weighted_moving_average/" rel="noopener">OANDA証券：加重移動平均線の計算方法と特徴</a></li><li><a href="https://www.tradingview.com/support/solutions/43000502589-moving-averages/" rel="noopener">TradingView：Moving Averages</a></li></ul><p class="sources">計算の説明は公開資料を確認し、例示と解説はTODOROKIが独自に作成しています。</p></section>
+<section class="related"><h2>関連記事</h2><ul class="article-links"><li><a href="/moving-average-basics">移動平均線の見方 →</a></li><li><a href="/technical-analysis">テクニカル分析とは？ →</a></li><li><a href="/volume-basics">出来高の見方 →</a></li></ul></section></article>
+    <aside aria-label="広告：Fujisan.co.jp" style="margin:36px 0;padding:20px 0;border-top:1px solid #383226;border-bottom:1px solid #383226;">
+      <p style="margin:0 0 10px;font-size:12px;color:#c8c2b5;">PR｜雑誌のオンライン書店 Fujisan.co.jp</p>
+      <!-- TG-Affiliate Banner Space -->
+      <a href="https://ad2.trafficgate.net/t/r/205/394/319542_399447" target="_blank" rel="nofollow sponsored noopener" style="display:block;max-width:728px;">
+        <img data-consent-src="https://srv2.trafficgate.net/t/b/205/394/319542_399447" width="728" height="90" alt="雑誌の定期購読をFujisan.co.jpで探す" loading="lazy" style="display:block;max-width:100%;height:auto;" />
+      </a>
+      <!-- /TG-Affiliate Banner Space -->
+    </aside>
+<nav class="navigation" aria-label="記事ナビゲーション"><a href="/investment-list#technical-analysis">← テクニカル分析の欄へ</a><a href="#article-top">↑ 記事の先頭へ</a></nav>
+</main>
+<footer>© TODOROKI <a href="/about">このサイトについて</a><a href="/contact">お問い合わせ</a><nav class="todoroki-info-nav" aria-label="TODOROKI"><a href="/privacy">プライバシー</a></nav><p><a href="/site-map">サイトマップ</a></p><nav class="todoroki-info-nav" aria-label="運営方針 / Policies" style="margin:16px 0;font-size:13px"><a href="/editorial-policy">編集・利用方針 / Editorial policy</a> · <a href="/data-use">広告・外部送信 / Data use</a> · <a href="/sources">資料の出典 / Sources</a></nav></footer>
+</body>
+</html>

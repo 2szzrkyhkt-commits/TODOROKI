@@ -1,0 +1,472 @@
+{
+  "en": [
+    {
+      "title": "Does Japan have “too many” companies?",
+      "subtitle": "INDUSTRIAL RESTRUCTURING × CAPITAL ALLOCATION",
+      "blocks": [
+        {
+          "text": "Combining smaller pools of capital could create the scale to compete globally."
+        },
+        {
+          "text": "Many Japanese industries contain multiple strong companies. In motorcycles, Honda, Yamaha, Suzuki and Kawasaki are four globally active competitors. This demonstrates Japan's competitiveness, but in some industries capital, equipment, talent and R&D may also be fragmented."
+        },
+        {
+          "text": "Compete on a small scale domestically\n↓ M&A, business acquisitions and joint operations ↓\nCompete on a large scale in global markets"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "The benefits of consolidation",
+      "subtitle": "What changes when resources are combined?",
+      "blocks": [
+        {
+          "text": "01 Concentrate capital\nReduce duplicate investment and direct funds to areas requiring huge commitments, such as semiconductors, AI, batteries and overseas factories."
+        },
+        {
+          "text": "02 Economies of scale\nLarger procurement, production facilities, logistics and distribution networks may lower unit costs."
+        },
+        {
+          "text": "03 Combine technologies\nBring together patents, engineers and production expertise spread across companies to strengthen R&D."
+        },
+        {
+          "text": "04 Remove duplication\nIntegrate shared accounting, HR, IT, logistics and purchasing functions, reallocating capital to growth areas."
+        },
+        {
+          "text": "05 From domestic to global competition\nBeyond fighting over a limited domestic market, invest heavily in overseas distribution, brands and service networks. This creates scope to pursue global market share."
+        },
+        {
+          "text": "The value of M&A is capital reallocation, rather than merely becoming larger."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "Size also has side effects",
+      "subtitle": "Consolidation is not all good news",
+      "blocks": [
+        {
+          "text": "Weaker competition\nToo few companies may reduce pressure on prices and product development, and limit consumer choice."
+        },
+        {
+          "text": "Corporate bureaucracy\nLarger organizations require more approvals and coordination, risking slower decisions."
+        },
+        {
+          "text": "Overpaying\nEven a good business delivers worse returns on invested capital if bought at an excessive price."
+        },
+        {
+          "text": "Integration failure\nDifferences in culture, systems and HR policies may prevent expected synergies."
+        },
+        {
+          "text": "Loss of talent and technology\nDisruption or changes in employment terms during restructuring may drive key engineers away."
+        },
+        {
+          "text": "The harms of monopoly\nExcessive concentration may create competition-policy problems, higher prices and stagnant innovation."
+        },
+        {
+          "text": "“Four companies → one company” does not automatically make an industry stronger. Preserve competition's benefits while eliminating wasteful duplication."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "Choose where to consolidate",
+      "subtitle": "CONCLUSION | Do not combine everything",
+      "blocks": [
+        {
+          "text": "What should be retained\nCompetition in product development / brands / customer relationships / distinctive technologies / new ideas."
+        },
+        {
+          "text": "What could be consolidated\nCommon components / procurement / basic research / logistics / IT infrastructure / administrative functions / major capital equipment / overseas infrastructure."
+        },
+        {
+          "text": "The question is not the number of companies.\nBenefits of competition\nVS\nDisadvantages of fragmented capital"
+        },
+        {
+          "text": "Use M&A to improve capital efficiency, rather than merely increase scale."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    }
+  ],
+  "es": [
+    {
+      "title": "¿Tiene Japón “demasiadas” empresas?",
+      "subtitle": "REESTRUCTURACIÓN INDUSTRIAL × ASIGNACIÓN DE CAPITAL",
+      "blocks": [
+        {
+          "text": "Unir pequeños capitales puede crear una escala capaz de competir mundialmente."
+        },
+        {
+          "text": "Muchas industrias japonesas tienen varias empresas fuertes. En motocicletas, Honda, Yamaha, Suzuki y Kawasaki son cuatro competidores globales. Demuestra la competitividad japonesa, pero en algunos sectores capital, equipos, talento e I+D pueden estar fragmentados."
+        },
+        {
+          "text": "Competir a pequeña escala dentro de Japón\n↓ Fusiones, adquisiciones de negocios y cooperación ↓\nCompetir a gran escala en mercados mundiales"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "Ventajas de la consolidación",
+      "subtitle": "¿Qué cambia al reunir recursos?",
+      "blocks": [
+        {
+          "text": "01 Concentrar capital\nReducir inversiones duplicadas y dirigir fondos a semiconductores, IA, baterías y fábricas exteriores que exigen grandes inversiones."
+        },
+        {
+          "text": "02 Economías de escala\nAmpliar compras, instalaciones productivas, logística y redes comerciales puede reducir el coste unitario."
+        },
+        {
+          "text": "03 Unir tecnologías\nCombinar patentes, ingenieros y conocimientos productivos dispersos entre empresas refuerza la I+D."
+        },
+        {
+          "text": "04 Eliminar duplicaciones\nIntegrar contabilidad, recursos humanos, TI, logística y compras compartibles permite reasignar capital a áreas de crecimiento."
+        },
+        {
+          "text": "05 De la competencia nacional a la mundial\nAdemás de disputarse un mercado nacional limitado, invertir a gran escala en redes comerciales, marcas y servicios extranjeros permite aspirar a cuota mundial."
+        },
+        {
+          "text": "El valor de las adquisiciones es reasignar capital, más que aumentar tamaño."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "El tamaño también tiene efectos adversos",
+      "subtitle": "No todo son ventajas",
+      "blocks": [
+        {
+          "text": "Competencia debilitada\nDemasiadas pocas empresas pueden reducir la presión sobre precios y desarrollo de productos, y limitar opciones del consumidor."
+        },
+        {
+          "text": "Burocracia empresarial\nOrganizaciones mayores exigen más aprobaciones y coordinación, con decisiones más lentas."
+        },
+        {
+          "text": "Pagar demasiado\nIncluso un buen negocio da peor rentabilidad sobre el capital si se compra demasiado caro."
+        },
+        {
+          "text": "Fracaso de integración\nLas diferencias culturales, de sistemas y de políticas de personal pueden impedir las sinergias esperadas."
+        },
+        {
+          "text": "Pérdida de talento y tecnología\nLa confusión o los cambios laborales durante la reorganización pueden alejar a ingenieros clave."
+        },
+        {
+          "text": "Daños del monopolio\nLa concentración excesiva puede generar problemas de competencia, precios altos e innovación estancada."
+        },
+        {
+          "text": "Pasar de “cuatro empresas → una” no fortalece automáticamente. Hay que conservar las ventajas de competir y eliminar duplicaciones inútiles."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "Elegir dónde consolidar",
+      "subtitle": "CONCLUSIÓN | No unirlo todo",
+      "blocks": [
+        {
+          "text": "Qué conservar\nCompetencia en desarrollo de productos / marcas / contacto con clientes / tecnologías propias / ideas nuevas."
+        },
+        {
+          "text": "Qué puede consolidarse\nComponentes comunes / compras / investigación básica / logística / infraestructura informática / administración / grandes equipos de capital / infraestructura exterior."
+        },
+        {
+          "text": "La pregunta no es cuántas empresas hay.\nVentajas de la competencia\nFRENTE A\nDesventajas del capital fragmentado"
+        },
+        {
+          "text": "Usar las adquisiciones para mejorar la eficiencia del capital, más que para crecer en tamaño."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    }
+  ],
+  "pt": [
+    {
+      "title": "O Japão tem empresas “demais”?",
+      "subtitle": "REESTRUTURAÇÃO INDUSTRIAL × ALOCAÇÃO DE CAPITAL",
+      "blocks": [
+        {
+          "text": "Reunir pequenos capitais pode criar escala para competir globalmente."
+        },
+        {
+          "text": "Muitas indústrias japonesas têm várias empresas fortes. Em motocicletas, Honda, Yamaha, Suzuki e Kawasaki são quatro concorrentes globais. Isso demonstra competitividade, mas em alguns setores capital, equipamentos, talentos e P&D também podem estar fragmentados."
+        },
+        {
+          "text": "Competir em pequena escala no mercado doméstico\n↓ M&A, aquisições de negócios e cooperação ↓\nCompetir em grande escala nos mercados mundiais"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "Benefícios da consolidação",
+      "subtitle": "O que muda ao reunir recursos?",
+      "blocks": [
+        {
+          "text": "01 Concentrar capital\nReduzir investimentos duplicados e direcionar recursos a semicondutores, IA, baterias e fábricas no exterior, que exigem grandes aportes."
+        },
+        {
+          "text": "02 Economias de escala\nAmpliar compras, instalações produtivas, logística e redes comerciais pode reduzir o custo unitário."
+        },
+        {
+          "text": "03 Reunir tecnologias\nCombinar patentes, engenheiros e conhecimentos de produção dispersos entre empresas fortalece P&D."
+        },
+        {
+          "text": "04 Eliminar duplicações\nIntegrar contabilidade, RH, TI, logística e compras compartilháveis permite realocar capital para áreas de crescimento."
+        },
+        {
+          "text": "05 Da competição doméstica à global\nAlém de disputar um mercado interno limitado, investir fortemente em redes comerciais, marcas e serviços no exterior cria espaço para conquistar participação global."
+        },
+        {
+          "text": "O valor do M&A é realocar capital, além de simplesmente aumentar o tamanho."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "O tamanho também tem efeitos colaterais",
+      "subtitle": "Nem tudo são vantagens",
+      "blocks": [
+        {
+          "text": "Competição enfraquecida\nSe o número de empresas cair demais, isso pode reduzir a pressão sobre preços e desenvolvimento de produtos e limitar a escolha do consumidor."
+        },
+        {
+          "text": "Burocracia empresarial\nOrganizações maiores exigem mais aprovações e coordenação, arriscando decisões lentas."
+        },
+        {
+          "text": "Pagar caro demais\nAté um bom negócio gera retorno pior sobre o capital se comprado por preço excessivo."
+        },
+        {
+          "text": "Falha de integração\nDiferenças culturais, de sistemas e políticas de pessoal podem impedir as sinergias esperadas."
+        },
+        {
+          "text": "Perda de talentos e tecnologia\nConfusão ou mudanças nas condições de trabalho durante a reorganização podem afastar engenheiros essenciais."
+        },
+        {
+          "text": "Danos do monopólio\nConcentração excessiva pode gerar problemas concorrenciais, preços maiores e estagnação da inovação."
+        },
+        {
+          "text": "Passar de “quatro empresas → uma” não fortalece automaticamente. É preciso preservar os benefícios da concorrência e eliminar duplicações inúteis."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "Escolher onde consolidar",
+      "subtitle": "CONCLUSÃO | Não reunir tudo",
+      "blocks": [
+        {
+          "text": "O que preservar\nCompetição no desenvolvimento de produtos / marcas / contato com clientes / tecnologias próprias / novas ideias."
+        },
+        {
+          "text": "O que pode ser consolidado\nComponentes comuns / compras / pesquisa básica / logística / infraestrutura de TI / administração / grandes equipamentos de capital / infraestrutura no exterior."
+        },
+        {
+          "text": "A questão não é a quantidade de empresas.\nBenefícios da competição\nVERSUS\nDesvantagens do capital fragmentado"
+        },
+        {
+          "text": "Usar M&A para elevar a eficiência do capital, além de simplesmente aumentar a escala."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "日本企业“太多”了吗？",
+      "subtitle": "产业重组 × 资本配置",
+      "blocks": [
+        {
+          "text": "汇聚小规模资本，有可能形成能在全球竞争的大资本。"
+        },
+        {
+          "text": "日本许多行业内存在多家强势企业。摩托车领域有本田、雅马哈、铃木、川崎四家全球企业。这既证明日本的竞争力，也意味着某些行业的资本、设备、人才和研发可能过度分散。"
+        },
+        {
+          "text": "在国内小规模竞争\n↓ 并购、业务收购与共同运营 ↓\n在全球市场大规模竞争"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "整合的好处",
+      "subtitle": "集中资源会改变什么？",
+      "blocks": [
+        {
+          "text": "01 集中资本\n减少重复投资，将资金投向半导体、AI、电池、海外工厂等需要巨额投资的领域。"
+        },
+        {
+          "text": "02 规模经济\n扩大采购、生产设备、物流和销售网络，有可能降低单位成本。"
+        },
+        {
+          "text": "03 汇聚技术\n结合分散在各公司的专利、工程师和生产诀窍，提高研发能力。"
+        },
+        {
+          "text": "04 削减重复\n整合可共用的会计、人事、IT、物流、采购等功能，把资本重新配置到成长领域。"
+        },
+        {
+          "text": "05 从国内竞争走向全球竞争\n不只争夺有限的国内市场，还能大规模投资海外销售网络、品牌和服务网络，形成争取全球份额的空间。"
+        },
+        {
+          "text": "并购的价值是“重新配置资本”，而非单纯做大。"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "巨型化也有副作用",
+      "subtitle": "并非全是好事",
+      "blocks": [
+        {
+          "text": "竞争减弱\n企业数量过少，价格竞争和产品开发的压力可能下降，消费者选择也可能减少。"
+        },
+        {
+          "text": "巨型企业官僚化\n组织越大，审批和协调越多，决策可能变慢。"
+        },
+        {
+          "text": "买得太贵\n即使是优质业务，购买价格过高也会降低投入资本的回报。"
+        },
+        {
+          "text": "整合失败\n企业文化、系统和人事制度差异，可能使预期协同效应无法实现。"
+        },
+        {
+          "text": "人才与技术流失\n重组时的混乱或待遇变化，可能导致关键工程师离开。"
+        },
+        {
+          "text": "垄断的弊端\n过度集中可能引发竞争政策问题，导致涨价和创新停滞。"
+        },
+        {
+          "text": "并非简单地把“4家 → 1家”就会变强。需要在保留竞争好处的同时，仅减少无效重复。"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "不是全部合并，而是选择“整合哪里”",
+      "subtitle": "结论",
+      "blocks": [
+        {
+          "text": "应保留的部分\n产品开发竞争 / 品牌 / 客户接点 / 独有技术 / 新想法。"
+        },
+        {
+          "text": "可考虑整合的部分\n通用零部件 / 采购 / 基础研究 / 物流 / IT基础设施 / 管理部门 / 巨额设备 / 海外基础设施。"
+        },
+        {
+          "text": "应问的不是“企业数量”。\n竞争带来的好处\n对比\n资本分散的弊端"
+        },
+        {
+          "text": "并购应服务于提高资本效率，而非追求规模。"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "日本企業「太多」了嗎？",
+      "subtitle": "產業重組 × 資本配置",
+      "blocks": [
+        {
+          "text": "匯聚小規模資本，有可能形成能在全球競爭的大資本。"
+        },
+        {
+          "text": "日本許多產業內存在多家強勢企業。機車領域有本田、山葉、鈴木、川崎四家全球企業。這既證明日本的競爭力，也意味著某些產業的資本、設備、人才和研發可能過度分散。"
+        },
+        {
+          "text": "在國內小規模競爭\n↓ 併購、業務收購與共同營運 ↓\n在全球市場大規模競爭"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "整合的好處",
+      "subtitle": "集中資源會改變什麼？",
+      "blocks": [
+        {
+          "text": "01 集中資本\n減少重複投資，將資金投向半導體、AI、電池、海外工廠等需要鉅額投資的領域。"
+        },
+        {
+          "text": "02 規模經濟\n擴大採購、生產設備、物流和銷售網路，有可能降低單位成本。"
+        },
+        {
+          "text": "03 匯聚技術\n結合分散在各公司的專利、工程師和生產訣竅，提高研發能力。"
+        },
+        {
+          "text": "04 削減重複\n整合可共用的會計、人事、IT、物流、採購等功能，把資本重新配置到成長領域。"
+        },
+        {
+          "text": "05 從國內競爭走向全球競爭\n不只爭奪有限的國內市場，還能大規模投資海外銷售網路、品牌和服務網路，形成爭取全球市占的空間。"
+        },
+        {
+          "text": "併購的價值是「重新配置資本」，而非單純做大。"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "巨型化也有副作用",
+      "subtitle": "並非全是好事",
+      "blocks": [
+        {
+          "text": "競爭減弱\n企業數量過少，價格競爭和產品開發的壓力可能下降，消費者選擇也可能減少。"
+        },
+        {
+          "text": "巨型企業官僚化\n組織越大，審批和協調越多，決策可能變慢。"
+        },
+        {
+          "text": "買得太貴\n即使是優質業務，購買價格過高也會降低投入資本的回報。"
+        },
+        {
+          "text": "整合失敗\n企業文化、系統和人事制度差異，可能使預期綜效無法實現。"
+        },
+        {
+          "text": "人才與技術流失\n重組時的混亂或待遇變化，可能導致關鍵工程師離開。"
+        },
+        {
+          "text": "壟斷的弊端\n過度集中可能引發競爭政策問題，導致漲價和創新停滯。"
+        },
+        {
+          "text": "並非簡單地把「4家 → 1家」就會變強。需要在保留競爭好處的同時，僅減少無效重複。"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "不是全部合併，而是選擇「整合哪裡」",
+      "subtitle": "結論",
+      "blocks": [
+        {
+          "text": "應保留的部分\n產品開發競爭 / 品牌 / 客戶接點 / 獨有技術 / 新想法。"
+        },
+        {
+          "text": "可考慮整合的部分\n通用零組件 / 採購 / 基礎研究 / 物流 / IT基礎設施 / 管理部門 / 鉅額設備 / 海外基礎設施。"
+        },
+        {
+          "text": "應問的不是「企業數量」。\n競爭帶來的好處\n對比\n資本分散的弊端"
+        },
+        {
+          "text": "併購應服務於提高資本效率，而非追求規模。"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    }
+  ]
+}

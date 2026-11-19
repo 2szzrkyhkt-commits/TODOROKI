@@ -1,0 +1,39 @@
+{
+  "terms": {
+    "url": "https://www.mhlw.go.jp/chosakuken/index.html",
+    "sha256": "094afd93700b959f3d8d99ae1b7dbf5f8f4d4bf5a70c525f6f9c06f72d0b7265",
+    "bytes": 51805
+  },
+  "exceptions": {
+    "url": "https://www.mhlw.go.jp/chosakuken/exhibit.html",
+    "sha256": "221d82a35dc409286ce0b5db3fb77ba2487d879d752d4750a88da3f71c3b4060",
+    "bytes": 6051
+  },
+  "robots": {
+    "url": "https://www.mhlw.go.jp/robots.txt",
+    "sha256": "d410a20234092a01e07cc6531920a5fedda6a96faaa073d94b95bd4c4a436144"
+  },
+  "source": {
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000059425.html",
+    "sha256": "65e98871b06f64c529f15671658c99fc65aa930d497ada843c9a0ff6c9719f7b",
+    "bytes": 60701
+  },
+  "sourceId": "mhlw-livelihood-index",
+  "reviewedAt": "2026-11-18T10:07:06.655322+00:00",
+  "scope": [
+    "One fixed national-ministry HTML index; seven program headings only.",
+    "PDL1.0 attribution and modification notice; logos/photos/third-party content/linked documents excluded.",
+    "Selected /stf/ page is outside observed robots disallow paths.",
+    "Fixed 86400-second interval; existing one-document/15-second/512-KiB/conditional request/manual redirect bounds.",
+    "Pending candidates only; no eligibility, amount, local availability or nationwide coverage assertion."
+  ],
+  "independentNames": [
+    "自立相談支援事業",
+    "住居確保給付金の支給",
+    "就労準備支援事業",
+    "家計改善支援事業",
+    "就労訓練事業",
+    "子どもの学習・生活支援事業",
+    "居住支援事業"
+  ]
+}

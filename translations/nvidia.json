@@ -1,0 +1,127 @@
+{
+  "en": [
+    {
+      "title": "What kind of company is NVIDIA?",
+      "subtitle": "INVESTMENT / ECONOMY / BUSINESS",
+      "blocks": [
+        {
+          "h": "Core business",
+          "text": "Provides high-speed computing infrastructure for AI training and inference. Its offerings include GPUs, networking and software."
+        },
+        {
+          "h": "Main products",
+          "text": "GeForce: gaming GPUs.\nData centers: AI GPUs and systems.\nDRIVE: a platform for autonomous driving and in-vehicle AI."
+        },
+        {
+          "h": "Competitive strengths",
+          "text": "Software development environments such as CUDA. Communication technology connecting large numbers of GPUs is another strength."
+        },
+        {
+          "h": "What investors should watch",
+          "text": "Cloud companies’ capital expenditure, competition and export controls. Also watch supply constraints and share-price levels.\nTODOROKI | Investment and economics: numbers before intuition."
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "es": [
+    {
+      "title": "¿Qué tipo de empresa es NVIDIA?",
+      "subtitle": "INVESTMENT / ECONOMY / BUSINESS",
+      "blocks": [
+        {
+          "h": "Actividad principal",
+          "text": "Ofrece infraestructura de computación de alta velocidad para entrenar y ejecutar inferencias de IA. Además de GPU, desarrolla redes y software."
+        },
+        {
+          "h": "Productos principales",
+          "text": "GeForce: GPU para videojuegos.\nCentros de datos: GPU y sistemas para IA.\nDRIVE: plataforma para conducción autónoma e IA a bordo."
+        },
+        {
+          "h": "Ventajas competitivas",
+          "text": "Entornos de desarrollo de software como CUDA. Otra fortaleza es la tecnología de comunicación que conecta grandes cantidades de GPU."
+        },
+        {
+          "h": "Aspectos a vigilar al invertir",
+          "text": "El gasto de capital de las empresas de nube, la competencia y los controles de exportación. Vigilar también las restricciones de oferta y el nivel de la cotización.\nTODOROKI | Inversión y economía: cifras antes que intuición."
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "pt": [
+    {
+      "title": "Que tipo de empresa é a NVIDIA?",
+      "subtitle": "INVESTMENT / ECONOMY / BUSINESS",
+      "blocks": [
+        {
+          "h": "Negócio principal",
+          "text": "Fornece infraestrutura de computação de alta velocidade para treinamento e inferência de IA. Além de GPUs, oferece redes e software."
+        },
+        {
+          "h": "Principais produtos",
+          "text": "GeForce: GPUs para jogos.\nData centers: GPUs e sistemas para IA.\nDRIVE: plataforma para direção autônoma e IA embarcada."
+        },
+        {
+          "h": "Vantagens competitivas",
+          "text": "Ambientes de desenvolvimento de software, como CUDA. A tecnologia de comunicação que conecta grandes quantidades de GPUs também é um ponto forte."
+        },
+        {
+          "h": "Pontos a observar ao investir",
+          "text": "Investimentos de capital das empresas de nuvem, concorrência e controles de exportação. Observar também restrições de oferta e o nível do preço das ações.\nTODOROKI | Investimento e economia: números antes da intuição."
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "英伟达是一家怎样的企业？",
+      "subtitle": "INVESTMENT / ECONOMY / BUSINESS",
+      "blocks": [
+        {
+          "h": "业务核心",
+          "text": "提供支持AI训练与推理的高速计算基础设施。除GPU外，也开展网络与软件业务。"
+        },
+        {
+          "h": "主要产品",
+          "text": "GeForce：游戏用GPU。\n数据中心：AI用GPU及系统。\nDRIVE：自动驾驶与车载AI平台。"
+        },
+        {
+          "h": "竞争力",
+          "text": "CUDA等软件开发环境。连接大量GPU的通信技术也是其优势。"
+        },
+        {
+          "h": "投资关注点",
+          "text": "云企业的资本开支、竞争及出口管制。也应注意供给限制与股价水平。\nTODOROKI | 投资与经济，以数字而非感觉判断。"
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "輝達是一家怎樣的企業？",
+      "subtitle": "INVESTMENT / ECONOMY / BUSINESS",
+      "blocks": [
+        {
+          "h": "業務核心",
+          "text": "提供支援AI訓練與推論的高速運算基礎設施。除GPU外，也發展網路與軟體業務。"
+        },
+        {
+          "h": "主要產品",
+          "text": "GeForce：遊戲用GPU。\n資料中心：AI用GPU及系統。\nDRIVE：自動駕駛與車載AI平台。"
+        },
+        {
+          "h": "競爭力",
+          "text": "CUDA等軟體開發環境。連接大量GPU的通訊技術也是其優勢。"
+        },
+        {
+          "h": "投資關注點",
+          "text": "雲端企業的資本支出、競爭及出口管制。也應注意供給限制與股價水準。\nTODOROKI | 投資與經濟，以數字而非感覺判斷。"
+        }
+      ],
+      "dense": false
+    }
+  ]
+}

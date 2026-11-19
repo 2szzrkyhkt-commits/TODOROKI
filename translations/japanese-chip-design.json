@@ -1,0 +1,417 @@
+{
+  "en": [
+    {
+      "title": "Japan’s semiconductors are more than manufacturing",
+      "subtitle": "SEMICONDUCTOR DESIGN | Japanese strengths | As of September 24, 2026",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "Focus on design, IP and custom SoCs",
+          "text": "In advanced logic semiconductors, US firms are prominent in design and Taiwanese firms in manufacturing. When assessing Japanese companies, look beyond manufacturing share to firms creating added value through design."
+        },
+        {
+          "h": "Creating chips without owning factories",
+          "text": "Fabless firms own no manufacturing plants. They design circuits and SoCs to customer specifications and outsource manufacturing, operating without carrying huge production facilities themselves."
+        },
+        {
+          "h": "Four areas linked to demand for dedicated chips",
+          "text": "Custom SoC / ASIC: chips dedicated to customers’ applications.\nLSI design: planning and circuit design for large-scale integrated circuits.\nGPU / NPU and other IP: reusable design assets for graphics processing and AI computation.\nHigh-speed interfaces: technologies for rapid data transmission between chips and devices."
+        },
+        {
+          "h": "",
+          "text": "AI, data centers, automotive applications, robots and high-speed communications are expected to generate demand for application-optimized semiconductors."
+        }
+      ]
+    },
+    {
+      "title": "Five stocks involved in semiconductor design",
+      "subtitle": "JAPANESE LISTED FIRMS | Design, fabless and design IP | September 24, 2026",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "Socionext / 6526 | Custom SoCs and ASICs",
+          "text": "Supports customers from product planning and specification through design, production and quality control. Designs advanced SoCs for data centers, networks and automotive applications."
+        },
+        {
+          "h": "MegaChips / 6875 | ASIC, ASSP and system LSI",
+          "text": "A fabless model supporting system design using CPUs and various IP, low-power design and design for testability. Broad applications include communications, factory automation and image processing."
+        },
+        {
+          "h": "THine Electronics / 6769 | Mixed-signal and high-speed interfaces",
+          "text": "Fabless firm planning and designing LSIs combining analog and digital technology. Focuses on high-speed transmission and power control, with strengths in peripheral technologies moving data rapidly."
+        },
+        {
+          "h": "Digital Media Professionals / 3652 | GPU/NPU IP and edge-AI SoCs",
+          "text": "Known as DMP. Offers GPU/AI IP licensing and semiconductor products. Design assets include NPUs, 2D/3D GPUs and stereo vision, linking it to image recognition and robots."
+        },
+        {
+          "h": "Axell / 6730 | Application-specific LSI and image/audio processing",
+          "text": "LSI design cultivated for amusement applications is its core. The focus is whether it can expand image/audio processing and other technologies into additional applications and markets."
+        }
+      ]
+    },
+    {
+      "title": "Four ways to assess design themes",
+      "subtitle": "TECHNOLOGY AND EARNINGS STRUCTURE | As of September 24, 2026",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "1. Can the company participate upstream in design?",
+          "text": "Check involvement in customer product planning, overall architecture and specifications, beyond circuit layout and wiring. Upstream proposal capabilities create added value."
+        },
+        {
+          "h": "2. Does it own reusable IP?",
+          "text": "GPU, NPU and high-speed interface design IP can be deployed across products. Examine how license fees and royalties contribute to earnings."
+        },
+        {
+          "h": "3. Does it connect with growth applications?",
+          "text": "Generative AI, data centers, networks, automotive advanced driver-assistance systems and robots. Verify contributions to orders and sales, beyond mere association."
+        },
+        {
+          "h": "4. Understand dependence on external manufacturing",
+          "text": "Fabless firms can limit capital spending but depend on external semiconductor foundries. Access to advanced processes, production capacity and manufacturing costs pose risks."
+        },
+        {
+          "h": "Semiconductor stocks play different roles",
+          "text": "Equipment, materials, design/IP and IDMs integrating design and manufacturing have different earnings structures. These five companies are organized around design itself and design assets."
+        },
+        {
+          "h": "Use global manufacturing capacity through design",
+          "text": "Japan’s semiconductor story extends beyond recovering manufacturing share. Firms leveraging global production capacity through custom SoCs and design IP also merit attention."
+        }
+      ]
+    }
+  ],
+  "es": [
+    {
+      "title": "Los semiconductores japoneses van más allá de fabricar",
+      "subtitle": "DISEÑO DE SEMICONDUCTORES | Fortalezas japonesas | 24 de septiembre de 2026",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "Atención al diseño, la IP y los SoC a medida",
+          "text": "En lógica avanzada destacan las empresas estadounidenses en diseño y las taiwanesas en fabricación. Al estudiar Japón, mire también a quienes crean valor añadido mediante diseño, además de su cuota de fabricación."
+        },
+        {
+          "h": "Crear chips sin fábricas propias",
+          "text": "Las empresas fabless diseñan circuitos y SoC según las especificaciones del cliente y externalizan la fabricación. Así operan sin mantener enormes instalaciones productivas propias."
+        },
+        {
+          "h": "Cuatro áreas vinculadas a chips específicos",
+          "text": "SoC a medida / ASIC: chips dedicados al uso del cliente.\nDiseño LSI: planificación y diseño de circuitos integrados de gran escala.\nIP de GPU, NPU y otras: activos de diseño reutilizables para gráficos y cálculo de IA.\nInterfaces de alta velocidad: transmisión rápida de datos entre chips y equipos."
+        },
+        {
+          "h": "",
+          "text": "Se espera demanda de semiconductores optimizados para IA, centros de datos, automoción, robots y comunicaciones rápidas."
+        }
+      ]
+    },
+    {
+      "title": "Cinco acciones ligadas al diseño de semiconductores",
+      "subtitle": "COTIZADAS JAPONESAS | Diseño, fabless e IP | 24 de septiembre de 2026",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "Socionext / 6526 | SoC a medida y ASIC",
+          "text": "Apoya desde la planificación y especificaciones del cliente hasta diseño, producción y control de calidad. Diseña SoC avanzados para centros de datos, redes y automoción."
+        },
+        {
+          "h": "MegaChips / 6875 | ASIC, ASSP y LSI de sistema",
+          "text": "Fabless que realiza diseño de sistemas con CPU y diversas IP, bajo consumo y diseño orientado a pruebas. Destaca por aplicaciones amplias: comunicaciones, automatización industrial y procesamiento de imágenes."
+        },
+        {
+          "h": "THine Electronics / 6769 | Señal mixta e interfaces rápidas",
+          "text": "Fabless que planifica y diseña LSI combinando tecnología analógica y digital. Sus ejes son transmisión rápida y control de alimentación; destaca en tecnologías periféricas que transportan datos rápidamente."
+        },
+        {
+          "h": "Digital Media Professionals / 3652 | IP GPU/NPU y SoC para IA en el borde",
+          "text": "Conocida como DMP. Ofrece licencias de IP GPU/IA y productos semiconductores. Posee diseños NPU, GPU 2D/3D y visión estereoscópica, vinculados a reconocimiento de imágenes y robots."
+        },
+        {
+          "h": "Axell / 6730 | LSI específico y procesamiento de imagen/audio",
+          "text": "Su núcleo es el diseño LSI desarrollado para entretenimiento. Importa si puede extender sus tecnologías de imagen/audio a otras aplicaciones y mercados."
+        }
+      ]
+    },
+    {
+      "title": "Cuatro criterios para seleccionar temas de diseño",
+      "subtitle": "TECNOLOGÍA Y ESTRUCTURA DE BENEFICIOS | 24 de septiembre de 2026",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "1. ¿Participa en las fases iniciales?",
+          "text": "Compruebe si interviene en planificación del producto, arquitectura global y especificaciones del cliente, además de colocación y cableado del circuito. Proponer desde etapas iniciales aporta valor."
+        },
+        {
+          "h": "2. ¿Tiene IP reutilizable?",
+          "text": "La IP de GPU, NPU e interfaces rápidas puede desplegarse en varios productos. Examine cómo licencias y regalías contribuyen a beneficios."
+        },
+        {
+          "h": "3. ¿Está vinculada a aplicaciones en crecimiento?",
+          "text": "IA generativa, centros de datos, redes, asistencia avanzada al conductor y robots. Verifique pedidos y ventas, no solo la vinculación temática."
+        },
+        {
+          "h": "4. Entienda la dependencia de fabricantes externos",
+          "text": "Fabless reduce inversión en instalaciones, pero depende de fundiciones externas. Acceso a procesos avanzados, capacidad reservada y costes de fabricación son riesgos."
+        },
+        {
+          "h": "Distintas funciones entre acciones del mismo sector",
+          "text": "Equipos, materiales, diseño/IP e IDM que integran diseño y fabricación tienen estructuras de ingresos distintas. Las cinco empresas se agrupan por su relación con el diseño y sus activos."
+        },
+        {
+          "h": "Aprovechar capacidad fabril mundial mediante diseño",
+          "text": "El enfoque sobre Japón no se limita a recuperar cuota fabril. También puede atender a empresas que usan capacidad mundial mediante SoC a medida e IP de diseño."
+        }
+      ]
+    }
+  ],
+  "pt": [
+    {
+      "title": "Semicondutores japoneses vão além da fabricação",
+      "subtitle": "DESIGN DE SEMICONDUTORES | Forças japonesas | Em 24 de setembro de 2026",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "Olhar para design, IP e SoCs personalizados",
+          "text": "Na lógica avançada, empresas dos EUA se destacam em design e as de Taiwan em fabricação. Ao avaliar empresas japonesas, observe também quem cria valor agregado por design, além da participação na fabricação."
+        },
+        {
+          "h": "Criar chips sem fábricas próprias",
+          "text": "Empresas fabless projetam circuitos e SoCs conforme especificações dos clientes e terceirizam a fabricação. Assim operam sem manter enormes instalações próprias."
+        },
+        {
+          "h": "Quatro áreas ligadas a chips dedicados",
+          "text": "SoC personalizado / ASIC: chips específicos para a aplicação do cliente.\nDesign de LSI: planejamento e projeto de grandes circuitos integrados.\nIP de GPU, NPU e outras: ativos de design reutilizáveis para gráficos e cálculo de IA.\nInterfaces de alta velocidade: transmissão rápida de dados entre chips e equipamentos."
+        },
+        {
+          "h": "",
+          "text": "Espera-se demanda por semicondutores otimizados para IA, data centers, aplicações automotivas, robôs e comunicações rápidas."
+        }
+      ]
+    },
+    {
+      "title": "Cinco ações ligadas ao design de semicondutores",
+      "subtitle": "LISTADAS JAPONESAS | Design, fabless e IP | 24 de setembro de 2026",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "Socionext / 6526 | SoCs personalizados e ASICs",
+          "text": "Apoia do planejamento e especificação do produto do cliente ao design, produção e controle de qualidade. Projeta SoCs avançados para data centers, redes e aplicações automotivas."
+        },
+        {
+          "h": "MegaChips / 6875 | ASIC, ASSP e LSI de sistema",
+          "text": "Fabless que desenvolve sistemas com CPUs e várias IPs, baixo consumo e design para testes. Tem aplicações amplas em comunicações, automação industrial e processamento de imagens."
+        },
+        {
+          "h": "THine Electronics / 6769 | Sinais mistos e interfaces rápidas",
+          "text": "Fabless que planeja e projeta LSIs combinando analógico e digital. Foca transmissão rápida e controle de alimentação, com destaque em tecnologias periféricas que transportam dados rapidamente."
+        },
+        {
+          "h": "Digital Media Professionals / 3652 | IP GPU/NPU e SoCs de IA de borda",
+          "text": "Conhecida como DMP. Oferece licenciamento de IP GPU/IA e produtos semicondutores. Possui projetos de NPU, GPUs 2D/3D e visão estéreo, ligados a reconhecimento de imagens e robôs."
+        },
+        {
+          "h": "Axell / 6730 | LSI específico e processamento de imagem/áudio",
+          "text": "O núcleo é o design LSI desenvolvido para entretenimento. O foco é se consegue expandir tecnologias de imagem/áudio para outras aplicações e mercados."
+        }
+      ]
+    },
+    {
+      "title": "Quatro critérios para selecionar temas de design",
+      "subtitle": "TECNOLOGIA E ESTRUTURA DE RESULTADOS | Em 24 de setembro de 2026",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "1. Participa desde as fases iniciais?",
+          "text": "Verifique envolvimento no planejamento do produto, arquitetura geral e especificações do cliente, além de posicionamento e conexões do circuito. Propostas nas fases iniciais agregam valor."
+        },
+        {
+          "h": "2. Possui IP reutilizável?",
+          "text": "IP de GPU, NPU e interfaces rápidas pode ser usada em diversos produtos. Veja como licenças e royalties contribuem para resultados."
+        },
+        {
+          "h": "3. Conecta-se a aplicações em crescimento?",
+          "text": "IA generativa, data centers, redes, sistemas avançados de assistência ao motorista e robôs. Confira contribuições a pedidos e vendas, além da associação temática."
+        },
+        {
+          "h": "4. Entenda a dependência de fabricação externa",
+          "text": "Fabless reduz investimento em instalações, mas depende de fundições externas. Acesso a processos avançados, capacidade de produção e custos são riscos."
+        },
+        {
+          "h": "Ações de semicondutores têm papéis diferentes",
+          "text": "Equipamentos, materiais, design/IP e IDMs que integram design e fabricação têm estruturas de receita distintas. As cinco empresas foram organizadas pelo vínculo com design e seus ativos."
+        },
+        {
+          "h": "Usar capacidade mundial de fabricação pelo design",
+          "text": "O olhar para o Japão vai além de recuperar participação fabril. Empresas que usam capacidade mundial por meio de SoCs personalizados e IP de design também merecem atenção."
+        }
+      ]
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "日本半导体不只有“制造”",
+      "subtitle": "半导体设计 | 日本企业的优势 | 截至2026年9月24日",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "关注设计、IP与定制SoC",
+          "text": "先进逻辑半导体领域，美国企业在设计、台湾企业在制造方面具有较大影响力。观察日本企业时，不仅要看制造份额，也应关注通过设计创造附加价值的企业。"
+        },
+        {
+          "h": "不拥有工厂，也能创造芯片",
+          "text": "无晶圆厂企业没有自有制造工厂，按客户规格设计电路和SoC，将制造委托外部。无需自行承担庞大的制造设备，也能开展业务。"
+        },
+        {
+          "h": "带动专用芯片需求的四个领域",
+          "text": "定制SoC、ASIC：针对客户用途的专用芯片。\nLSI设计：大规模集成电路的规划与电路设计。\nGPU、NPU等IP：用于图像处理和AI计算的可重复使用设计资产。\n高速接口：在芯片或设备之间高速传输数据的技术。"
+        },
+        {
+          "h": "",
+          "text": "AI、数据中心、车载、机器人、高速通信等领域，预计将产生针对用途优化的半导体需求。"
+        }
+      ]
+    },
+    {
+      "title": "涉及半导体设计的五只股票",
+      "subtitle": "日本上市企业 | 设计、无晶圆厂、设计IP | 截至2026年9月24日",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "Socionext / 6526 | 定制SoC、ASIC",
+          "text": "从客户产品规划、规格制定，到设计、生产与质量管理提供支持。面向数据中心、网络、车载等领域，设计先进SoC。"
+        },
+        {
+          "h": "MegaChips / 6875 | ASIC、ASSP、系统LSI",
+          "text": "采用无晶圆厂模式，支持使用CPU及各种IP的系统设计、低功耗和可测试性设计。应用广泛，涵盖通信、工厂自动化、图像处理等。"
+        },
+        {
+          "h": "THine Electronics / 6769 | 混合信号、高速接口",
+          "text": "规划和设计结合模拟与数字技术的LSI的无晶圆厂企业。以高速传输和电源控制为轴心，在快速传送数据的周边技术方面具有特色。"
+        },
+        {
+          "h": "Digital Media Professionals / 3652 | GPU、NPU IP与边缘AI SoC",
+          "text": "简称DMP。提供GPU、AI相关IP许可与半导体产品。拥有NPU、2D和3D GPU、立体视觉等设计资产，与图像识别和机器人相关。"
+        },
+        {
+          "h": "Axell / 6730 | 专用LSI、图像与音频处理",
+          "text": "核心是在娱乐设备领域积累的LSI设计。焦点是能否将图像、音频处理等技术扩展至其他用途与市场。"
+        }
+      ]
+    },
+    {
+      "title": "筛选设计主题的四个视角",
+      "subtitle": "解读技术与收益结构 | 截至2026年9月24日",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "1. 能否从设计上游参与",
+          "text": "不只看电路布局布线，还要确认能否从客户产品规划、整体架构和规格制定阶段参与。上游提案能力有助于创造附加价值。"
+        },
+        {
+          "h": "2. 是否拥有可复用IP",
+          "text": "GPU、NPU、高速接口等设计IP易于扩展至多个产品。应看许可费和版税如何贡献收益。"
+        },
+        {
+          "h": "3. 是否连接增长用途",
+          "text": "生成式AI、数据中心、网络、车载先进驾驶辅助系统、机器人等。不能只看相关性，还须确认对订单和销售的贡献。"
+        },
+        {
+          "h": "4. 掌握对外部制造的依赖",
+          "text": "无晶圆厂模式能抑制设备投资，但依赖外部晶圆代工企业。先进制程采购能力、产能配额和制造费用等构成风险。"
+        },
+        {
+          "h": "同为半导体股，角色也不同",
+          "text": "制造设备、材料、设计与IP，以及设计制造一体化的IDM，收益结构各异。这五家公司按与设计本身或设计资产的关系整理。"
+        },
+        {
+          "h": "用设计利用全球制造能力",
+          "text": "观察日本半导体，不只看制造份额能否恢复，也可关注通过定制SoC和设计IP利用全球制造能力的企业。"
+        }
+      ]
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "日本半導體不只有「製造」",
+      "subtitle": "半導體設計 | 日本企業的優勢 | 截至2026年9月24日",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "關注設計、IP與客製SoC",
+          "text": "先進邏輯半導體領域，美國企業在設計、台灣企業在製造方面具有較大影響力。觀察日本企業時，不僅要看製造市占，也應關注透過設計創造附加價值的企業。"
+        },
+        {
+          "h": "不擁有工廠，也能創造晶片",
+          "text": "無晶圓廠企業沒有自有製造工廠，按客戶規格設計電路和SoC，將製造委託外部。無需自行承擔龐大的製造設備，也能開展業務。"
+        },
+        {
+          "h": "帶動專用晶片需求的四個領域",
+          "text": "客製SoC、ASIC：針對客戶用途的專用晶片。\nLSI設計：大規模積體電路的規劃與電路設計。\nGPU、NPU等IP：用於影像處理和AI運算的可重複使用設計資產。\n高速介面：在晶片或設備之間高速傳輸資料的技術。"
+        },
+        {
+          "h": "",
+          "text": "AI、資料中心、車載、機器人、高速通訊等領域，預計將產生針對用途最佳化的半導體需求。"
+        }
+      ]
+    },
+    {
+      "title": "涉及半導體設計的五檔股票",
+      "subtitle": "日本上市企業 | 設計、無晶圓廠、設計IP | 截至2026年9月24日",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "Socionext / 6526 | 客製SoC、ASIC",
+          "text": "從客戶產品規劃、規格制定，到設計、生產與品質管理提供支援。面向資料中心、網路、車載等領域，設計先進SoC。"
+        },
+        {
+          "h": "MegaChips / 6875 | ASIC、ASSP、系統LSI",
+          "text": "採用無晶圓廠模式，支援使用CPU及各種IP的系統設計、低功耗和可測試性設計。應用廣泛，涵蓋通訊、工廠自動化、影像處理等。"
+        },
+        {
+          "h": "THine Electronics / 6769 | 混合訊號、高速介面",
+          "text": "規劃和設計結合類比與數位技術的LSI的無晶圓廠企業。以高速傳輸和電源控制為軸心，在快速傳送資料的周邊技術方面具有特色。"
+        },
+        {
+          "h": "Digital Media Professionals / 3652 | GPU、NPU IP與邊緣AI SoC",
+          "text": "簡稱DMP。提供GPU、AI相關IP授權與半導體產品。擁有NPU、2D和3D GPU、立體視覺等設計資產，與影像辨識和機器人相關。"
+        },
+        {
+          "h": "Axell / 6730 | 專用LSI、影像與音訊處理",
+          "text": "核心是在娛樂設備領域累積的LSI設計。焦點是能否將影像、音訊處理等技術擴展至其他用途與市場。"
+        }
+      ]
+    },
+    {
+      "title": "篩選設計主題的四個視角",
+      "subtitle": "解讀技術與收益結構 | 截至2026年9月24日",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "1. 能否從設計上游參與",
+          "text": "不只看電路佈局佈線，還要確認能否從客戶產品規劃、整體架構和規格制定階段參與。上游提案能力有助於創造附加價值。"
+        },
+        {
+          "h": "2. 是否擁有可重用IP",
+          "text": "GPU、NPU、高速介面等設計IP易於擴展至多個產品。應看授權費和權利金如何貢獻收益。"
+        },
+        {
+          "h": "3. 是否連結成長用途",
+          "text": "生成式AI、資料中心、網路、車載先進駕駛輔助系統、機器人等。不能只看相關性，還須確認對訂單和銷售的貢獻。"
+        },
+        {
+          "h": "4. 掌握對外部製造的依賴",
+          "text": "無晶圓廠模式能抑制設備投資，但依賴外部晶圓代工企業。先進製程取得能力、產能配額和製造費用等構成風險。"
+        },
+        {
+          "h": "同為半導體股，角色也不同",
+          "text": "製造設備、材料、設計與IP，以及設計製造一體化的IDM，收益結構各異。這五家公司按與設計本身或設計資產的關係整理。"
+        },
+        {
+          "h": "用設計利用全球製造能力",
+          "text": "觀察日本半導體，不只看製造市占能否恢復，也可關注透過客製SoC和設計IP利用全球製造能力的企業。"
+        }
+      ]
+    }
+  ]
+}

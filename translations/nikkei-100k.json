@@ -1,0 +1,682 @@
+{
+  "en": [
+    {
+      "title": "A Nikkei of 100,000 is no longer a fantasy",
+      "subtitle": "NIKKEI 225 / SCENARIO | Starting from the October 2, 2026 close of ¥68,309",
+      "blocks": [
+        {
+          "table": [
+            [
+              "Current",
+              "Target",
+              "Multiple"
+            ],
+            [
+              "¥68,309",
+              "¥100,000",
+              "1.46x"
+            ],
+            [
+              "+46.4% to ¥100,000",
+              "Gap: ¥31,691",
+              "Roughly 50% higher"
+            ]
+          ],
+          "widths": [
+            170,
+            170,
+            170
+          ]
+        },
+        {
+          "h": "100,000 is about 1.46 times, not 1.5 times.",
+          "text": "If the current level is already close to 70,000, the index does not need to double from a much lower starting point. If earnings growth and stock valuations hold up for several years, the figure comes within numerical reach."
+        },
+        {
+          "text": "The focus is not “will it rise?” but “over how many years, and what must grow to get there?”"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "What annual return reaches 100,000?",
+      "subtitle": "REQUIRED RETURN",
+      "blocks": [
+        {
+          "table": [
+            [
+              "Period",
+              "Annual return",
+              "Interpretation"
+            ],
+            [
+              "3 years",
+              "+13.5% a year",
+              "a very strong rise is needed."
+            ],
+            [
+              "5 years",
+              "+7.9% a year",
+              "a level that can realistically be discussed."
+            ],
+            [
+              "7 years",
+              "+5.6% a year",
+              "a longer horizon lowers the hurdle."
+            ]
+          ],
+          "widths": [
+            80,
+            135,
+            295
+          ]
+        },
+        {
+          "h": "Key point",
+          "text": "Reaching 100,000 in five years requires compound growth of about 7.9% annually. It does not require repeated annual gains of 20-30%. If earnings keep growing and the P/E ratio does not collapse, reaching the target becomes a possibility to consider."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Earnings and valuation drive the Nikkei",
+      "subtitle": "EPS × PER | Share price ≈ EPS × P/E ratio",
+      "blocks": [
+        {
+          "h": "Two broad routes",
+          "text": "For the index to reach 100,000, companies’ earnings per share (EPS) can grow, or the valuation multiple investors pay (P/E) can rise. If both happen, the rise accelerates."
+        },
+        {
+          "h": "Route A: EPS growth",
+          "text": "Higher sales, price increases, productivity and share buybacks."
+        },
+        {
+          "h": "Route B: a higher P/E ratio",
+          "text": "Growth expectations, capital efficiency and market valuation."
+        },
+        {
+          "h": "Example: EPS grows 7% annually",
+          "text": "Even with an unchanged P/E ratio, earnings become about 1.46 times larger in around 5.7 years. The index would theoretically approach the multiple corresponding to 100,000."
+        },
+        {
+          "text": "This is an example of the conditions needed, calculated using compounding, not a forecast."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "What could block the path to 100,000?",
+      "subtitle": "WHAT COULD BREAK THE CASE",
+      "blocks": [
+        {
+          "h": "Earnings fail to grow",
+          "text": "Wages, raw materials and interest costs squeeze profits, halting EPS growth."
+        },
+        {
+          "h": "The P/E ratio contracts",
+          "text": "Higher interest rates or risk aversion reduce the valuation of the same earnings."
+        },
+        {
+          "h": "A stronger yen and weaker external demand",
+          "text": "Yen-translated earnings at exporters or overseas demand could weaken."
+        },
+        {
+          "h": "High-priced shares fall back",
+          "text": "The Nikkei is strongly affected by certain high-priced stocks."
+        },
+        {
+          "h": "Conclusion",
+          "text": "Reaching 100,000 in 1-2 years would require substantial earnings growth or higher valuations. Over 5-7 years, the calculation requires compound growth of roughly 5-8% annually. 100,000 is not “just around the corner,” but neither is it an absurd figure anymore."
+        },
+        {
+          "text": "A Nikkei of 100,000 does not mean all Japanese stocks rise uniformly by 46%."
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "es": [
+    {
+      "title": "Un Nikkei de 100.000 ya no es una fantasía",
+      "subtitle": "NIKKEI 225 / ESCENARIO | Punto de partida: cierre del 2 de octubre de 2026, 68.309 yenes",
+      "blocks": [
+        {
+          "table": [
+            [
+              "Actual",
+              "Objetivo",
+              "Múltiplo"
+            ],
+            [
+              "68.309 yenes",
+              "100.000 yenes",
+              "1,46 veces"
+            ],
+            [
+              "+46,4% hasta 100.000",
+              "Diferencia: 31.691 yenes",
+              "Cerca del 50% de subida"
+            ]
+          ],
+          "widths": [
+            170,
+            170,
+            170
+          ]
+        },
+        {
+          "h": "100.000 equivale a unas 1,46 veces, no a 1,5.",
+          "text": "Si el punto de partida ya ronda los 70.000, el índice no necesita duplicarse desde un nivel mucho menor. Con varios años de crecimiento de beneficios y valoraciones sostenidas, la cifra entra matemáticamente en el alcance."
+        },
+        {
+          "text": "La cuestión es «en cuántos años y qué debe crecer para llegar», además de si subirá."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "¿Qué rentabilidad anual permite llegar a 100.000?",
+      "subtitle": "RENTABILIDAD NECESARIA",
+      "blocks": [
+        {
+          "table": [
+            [
+              "Plazo",
+              "Rentabilidad anual",
+              "Interpretación"
+            ],
+            [
+              "3 años",
+              "+13,5% anual",
+              "exige una subida muy fuerte."
+            ],
+            [
+              "5 años",
+              "+7,9% anual",
+              "un nivel que puede debatirse de forma realista."
+            ],
+            [
+              "7 años",
+              "+5,6% anual",
+              "el horizonte largo reduce el obstáculo."
+            ]
+          ],
+          "widths": [
+            80,
+            135,
+            295
+          ]
+        },
+        {
+          "h": "Punto clave",
+          "text": "Llegar a 100.000 en cinco años exige un crecimiento compuesto de aproximadamente el 7,9% anual. No hace falta subir un 20-30% cada año. Si los beneficios siguen creciendo y el PER no se desploma, puede considerarse la posibilidad de alcanzar el objetivo."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Beneficios y valoración mueven el Nikkei",
+      "subtitle": "EPS × PER | Cotización ≈ beneficio por acción × PER",
+      "blocks": [
+        {
+          "h": "Dos caminos principales",
+          "text": "Para que el índice llegue a 100.000, puede crecer el beneficio por acción (EPS), o aumentar el múltiplo de valoración que pagan los inversores (PER). Si ocurren ambos, la subida se acelera."
+        },
+        {
+          "h": "Ruta A: crecimiento del EPS",
+          "text": "Más ventas, subidas de precios, productividad y recompra de acciones."
+        },
+        {
+          "h": "Ruta B: subida del PER",
+          "text": "Expectativas de crecimiento, eficiencia del capital y valoración del mercado."
+        },
+        {
+          "h": "Ejemplo: EPS crece un 7% anual",
+          "text": "Incluso con PER constante, los beneficios se multiplican por unas 1,46 veces en unos 5,7 años. En teoría, el índice se acercaría al múltiplo correspondiente a 100.000."
+        },
+        {
+          "text": "Es un ejemplo de condiciones de llegada calculadas con capitalización compuesta, no una previsión."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "¿Qué puede frenar el camino a 100.000?",
+      "subtitle": "FACTORES QUE PUEDEN INVALIDAR EL ESCENARIO",
+      "blocks": [
+        {
+          "h": "Falta de crecimiento de beneficios",
+          "text": "Salarios, materias primas e intereses presionan los beneficios y frenan el EPS."
+        },
+        {
+          "h": "Contracción del PER",
+          "text": "Los tipos más altos o la aversión al riesgo reducen la valoración de los mismos beneficios."
+        },
+        {
+          "h": "Yen más fuerte y menor demanda exterior",
+          "text": "Pueden debilitarse los beneficios de exportadores convertidos a yenes y la demanda exterior."
+        },
+        {
+          "h": "Caída de acciones de alto precio",
+          "text": "El Nikkei está muy influido por ciertas acciones de elevado precio unitario."
+        },
+        {
+          "h": "Conclusión",
+          "text": "Llegar a 100.000 en 1-2 años exigiría un fuerte crecimiento de beneficios o de valoración. En 5-7 años, el cálculo requiere aproximadamente un 5-8% anual compuesto. No está «a la vuelta de la esquina», pero ya no es una cifra disparatada."
+        },
+        {
+          "text": "Un Nikkei de 100.000 no implica que todas las acciones japonesas suban un 46% de forma uniforme."
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "pt": [
+    {
+      "title": "Nikkei em 100.000 já não é fantasia",
+      "subtitle": "NIKKEI 225 / CENÁRIO | Partindo do fechamento de 2 de outubro de 2026: ¥68.309",
+      "blocks": [
+        {
+          "table": [
+            [
+              "Atual",
+              "Meta",
+              "Múltiplo"
+            ],
+            [
+              "¥68.309",
+              "¥100.000",
+              "1,46 vez"
+            ],
+            [
+              "+46,4% até 100.000",
+              "Diferença: ¥31.691",
+              "Alta próxima de 50%"
+            ]
+          ],
+          "widths": [
+            170,
+            170,
+            170
+          ]
+        },
+        {
+          "h": "100.000 corresponde a cerca de 1,46 vez, não 1,5.",
+          "text": "Se o nível atual já está perto de 70.000, o índice não precisa dobrar a partir de um patamar muito menor. Se os lucros crescerem e as avaliações se sustentarem por vários anos, o número entra no alcance matemático."
+        },
+        {
+          "text": "O foco é “em quantos anos e o que precisa crescer para chegar”, além de saber se vai subir."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Qual retorno anual leva a 100.000?",
+      "subtitle": "RETORNO NECESSÁRIO",
+      "blocks": [
+        {
+          "table": [
+            [
+              "Prazo",
+              "Retorno anual",
+              "Interpretação"
+            ],
+            [
+              "3 anos",
+              "+13,5% ao ano",
+              "exige alta muito forte."
+            ],
+            [
+              "5 anos",
+              "+7,9% ao ano",
+              "patamar que pode ser discutido de forma realista."
+            ],
+            [
+              "7 anos",
+              "+5,6% ao ano",
+              "o horizonte longo reduz a barreira."
+            ]
+          ],
+          "widths": [
+            80,
+            135,
+            295
+          ]
+        },
+        {
+          "h": "Ponto principal",
+          "text": "Chegar a 100.000 em cinco anos exige crescimento composto de cerca de 7,9% ao ano. Não é preciso subir 20-30% todos os anos. Se os lucros continuarem crescendo e o P/L não despencar, é possível considerar o alcance da meta."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Lucros e avaliação movem o Nikkei",
+      "subtitle": "EPS × PER | Preço da ação ≈ lucro por ação × P/L",
+      "blocks": [
+        {
+          "h": "Dois caminhos principais",
+          "text": "Para o índice chegar a 100.000, o lucro por ação (EPS) pode crescer, ou o múltiplo de avaliação pago pelos investidores (P/L) pode subir. Se ambos ocorrerem, a alta acelera."
+        },
+        {
+          "h": "Rota A: crescimento do EPS",
+          "text": "Aumento de vendas, reajustes de preços, produtividade e recompra de ações."
+        },
+        {
+          "h": "Rota B: alta do P/L",
+          "text": "Expectativas de crescimento, eficiência do capital e avaliação do mercado."
+        },
+        {
+          "h": "Exemplo: EPS cresce 7% ao ano",
+          "text": "Mesmo com P/L constante, os lucros se tornam cerca de 1,46 vez maiores em aproximadamente 5,7 anos. Teoricamente, o índice se aproximaria do múltiplo correspondente a 100.000."
+        },
+        {
+          "text": "É um exemplo das condições necessárias calculadas por capitalização composta, não uma previsão."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "O que pode bloquear o caminho a 100.000?",
+      "subtitle": "FATORES QUE PODEM INVALIDAR O CENÁRIO",
+      "blocks": [
+        {
+          "h": "Lucros não crescem",
+          "text": "Salários, matérias-primas e juros pressionam os lucros e interrompem o crescimento do EPS."
+        },
+        {
+          "h": "O P/L diminui",
+          "text": "Juros mais altos ou aversão ao risco reduzem a avaliação dos mesmos lucros."
+        },
+        {
+          "h": "Iene mais forte e demanda externa fraca",
+          "text": "Podem enfraquecer os lucros dos exportadores convertidos em ienes e a demanda externa."
+        },
+        {
+          "h": "Queda de ações de preço elevado",
+          "text": "O Nikkei sofre forte influência de algumas ações de alto preço unitário."
+        },
+        {
+          "h": "Conclusão",
+          "text": "Chegar a 100.000 em 1-2 anos exigiria grande crescimento dos lucros ou da avaliação. Em 5-7 anos, o cálculo requer cerca de 5-8% ao ano de crescimento composto. Não está “logo ali”, mas já não é um número absurdo."
+        },
+        {
+          "text": "Nikkei em 100.000 não significa alta uniforme de 46% em todas as ações japonesas."
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "日经平均10万日元，已不再是天方夜谭",
+      "subtitle": "日经225 / 情景分析 | 以2026年10月2日收盘68,309日元为起点",
+      "blocks": [
+        {
+          "table": [
+            [
+              "现值",
+              "目标",
+              "倍数"
+            ],
+            [
+              "68,309日元",
+              "100,000日元",
+              "1.46倍"
+            ],
+            [
+              "距10万日元+46.4%",
+              "差额31,691日元",
+              "约上涨五成即可达到"
+            ]
+          ],
+          "widths": [
+            170,
+            170,
+            170
+          ]
+        },
+        {
+          "h": "10万日元不是1.5倍，而是约1.46倍。",
+          "text": "如果目前已接近7万日元，需要的并不是指数从很低的起点翻倍。只要企业利润增长和股价估值维持数年，从数字上就进入可达范围。"
+        },
+        {
+          "text": "焦点不只是“会不会涨”，而是“多少年、什么增长才能达到”。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "达到10万日元，需要多高年回报率？",
+      "subtitle": "所需回报率",
+      "blocks": [
+        {
+          "table": [
+            [
+              "期间",
+              "年回报率",
+              "说明"
+            ],
+            [
+              "3年",
+              "每年+13.5%",
+              "需要相当强劲的上涨。"
+            ],
+            [
+              "5年",
+              "每年+7.9%",
+              "可现实地讨论的水平。"
+            ],
+            [
+              "7年",
+              "每年+5.6%",
+              "长期而言门槛降低。"
+            ]
+          ],
+          "widths": [
+            80,
+            135,
+            295
+          ]
+        },
+        {
+          "h": "要点",
+          "text": "5年达到10万日元，需要约7.9%的年复合增长率，并不需要每年持续上涨20-30%。若利润持续增长，且市盈率没有大幅崩塌，就可以考虑达到目标的可能性。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "驱动日经平均的是企业利润与估值",
+      "subtitle": "EPS × PER | 股价 ≈ 每股收益 × 市盈率",
+      "blocks": [
+        {
+          "h": "两条主要路径",
+          "text": "指数达到10万日元，主要靠企业每股收益（EPS）增长，或投资者愿意支付的估值倍数（PER）上升。两者同时发生，上涨会加快。"
+        },
+        {
+          "h": "路径A：EPS增长",
+          "text": "销售额增长、提价、生产率提高、回购股份。"
+        },
+        {
+          "h": "路径B：PER上升",
+          "text": "增长预期、资本效率、市场估值。"
+        },
+        {
+          "h": "示例：EPS每年增长7%",
+          "text": "即使PER不变，利润也会在约5.7年后增至约1.46倍。理论上，指数也会接近相当于10万日元的倍数。"
+        },
+        {
+          "text": "这不是未来预测，而是通过复利计算举例说明达到目标的条件。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "什么会阻碍通往10万日元的道路？",
+      "subtitle": "可能破坏该情景的因素",
+      "blocks": [
+        {
+          "h": "利润不增长",
+          "text": "工资、原材料和利息负担压缩利润，EPS增长停止。"
+        },
+        {
+          "h": "PER收缩",
+          "text": "利率上升或避险情绪，使同样利润对应的股价估值下降。"
+        },
+        {
+          "h": "日元升值、外需减速",
+          "text": "出口企业以日元换算的利润和海外需求可能转弱。"
+        },
+        {
+          "h": "高价股回落",
+          "text": "日经平均受到部分高价股的显著影响。"
+        },
+        {
+          "h": "结论",
+          "text": "若要在1-2年达到10万日元，需要大幅利润增长或估值上升。若时间跨度为5-7年，计算上约每年5-8%的复合增长即可达到。不能说10万日元“近在眼前”，但也已不再是荒诞的数字。"
+        },
+        {
+          "text": "注意：日经10万日元，并不等于所有日本股票一律上涨46%。"
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "日經平均10萬日圓，已不再是天方夜譚",
+      "subtitle": "日經225 / 情境分析 | 以2026年10月2日收盤68,309日圓為起點",
+      "blocks": [
+        {
+          "table": [
+            [
+              "現值",
+              "目標",
+              "倍數"
+            ],
+            [
+              "68,309日圓",
+              "100,000日圓",
+              "1.46倍"
+            ],
+            [
+              "距10萬日圓+46.4%",
+              "差額31,691日圓",
+              "約上漲五成即可達到"
+            ]
+          ],
+          "widths": [
+            170,
+            170,
+            170
+          ]
+        },
+        {
+          "h": "10萬日圓不是1.5倍，而是約1.46倍。",
+          "text": "如果目前已接近7萬日圓，需要的並不是指數從很低的起點翻倍。只要企業獲利成長和股價估值維持數年，從數字上就進入可達範圍。"
+        },
+        {
+          "text": "焦點不只是「會不會漲」，而是「多少年、什麼成長才能達到」。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "達到10萬日圓，需要多高年報酬率？",
+      "subtitle": "所需報酬率",
+      "blocks": [
+        {
+          "table": [
+            [
+              "期間",
+              "年報酬率",
+              "說明"
+            ],
+            [
+              "3年",
+              "每年+13.5%",
+              "需要相當強勁的上漲。"
+            ],
+            [
+              "5年",
+              "每年+7.9%",
+              "可現實地討論的水準。"
+            ],
+            [
+              "7年",
+              "每年+5.6%",
+              "長期而言門檻降低。"
+            ]
+          ],
+          "widths": [
+            80,
+            135,
+            295
+          ]
+        },
+        {
+          "h": "要點",
+          "text": "5年達到10萬日圓，需要約7.9%的年複合成長率，並不需要每年持續上漲20-30%。若獲利持續成長，且本益比沒有大幅崩跌，就可以考慮達到目標的可能性。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "驅動日經平均的是企業獲利與估值",
+      "subtitle": "EPS × PER | 股價 ≈ 每股盈餘 × 本益比",
+      "blocks": [
+        {
+          "h": "兩條主要路徑",
+          "text": "指數達到10萬日圓，主要靠企業每股盈餘（EPS）成長，或投資者願意支付的估值倍數（PER）上升。兩者同時發生，上漲會加快。"
+        },
+        {
+          "h": "路徑A：EPS成長",
+          "text": "營收成長、提價、生產力提高、買回股份。"
+        },
+        {
+          "h": "路徑B：PER上升",
+          "text": "成長預期、資本效率、市場估值。"
+        },
+        {
+          "h": "範例：EPS每年成長7%",
+          "text": "即使PER不變，獲利也會在約5.7年後增至約1.46倍。理論上，指數也會接近相當於10萬日圓的倍數。"
+        },
+        {
+          "text": "這不是未來預測，而是透過複利計算舉例說明達到目標的條件。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "什麼會阻礙通往10萬日圓的道路？",
+      "subtitle": "可能破壞該情境的因素",
+      "blocks": [
+        {
+          "h": "獲利不成長",
+          "text": "工資、原材料和利息負擔壓縮獲利，EPS成長停止。"
+        },
+        {
+          "h": "PER收縮",
+          "text": "利率上升或避險情緒，使同樣獲利對應的股價估值下降。"
+        },
+        {
+          "h": "日圓升值、外需減速",
+          "text": "出口企業以日圓換算的獲利和海外需求可能轉弱。"
+        },
+        {
+          "h": "高價股回落",
+          "text": "日經平均受到部分高價股的顯著影響。"
+        },
+        {
+          "h": "結論",
+          "text": "若要在1-2年達到10萬日圓，需要大幅獲利成長或估值上升。若時間跨度為5-7年，計算上約每年5-8%的複合成長即可達到。不能說10萬日圓「近在眼前」，但也已不再是荒誕的數字。"
+        },
+        {
+          "text": "注意：日經10萬日圓，並不等於所有日本股票一律上漲46%。"
+        }
+      ],
+      "dense": false
+    }
+  ]
+}

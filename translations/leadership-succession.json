@@ -1,0 +1,472 @@
+{
+  "en": [
+    {
+      "title": "Leadership succession changes a company",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "01 MANAGEMENT SHIFT"
+        },
+        {
+          "text": "Succession is more than a younger president. It replaces the decision-making process itself: who allocates the company's people, assets and money, where they go and how they are used."
+        },
+        {
+          "text": "Generational succession = reallocation of management resources. A turning point when company value is reassessed."
+        }
+      ]
+    },
+    {
+      "title": "Why does succession change corporate value?",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "02 WHY IT MATTERS"
+        },
+        {
+          "h": "From defensive to proactive management",
+          "text": "Instead of only accumulating cash, management may direct funds toward capital investment, R&D, M&A and overseas expansion."
+        },
+        {
+          "h": "Restructure old businesses",
+          "text": "Review unprofitable operations, customary transactions and inefficient assets, concentrating capital on the core business."
+        },
+        {
+          "h": "Focus on capital efficiency",
+          "text": "Awareness of ROE, ROIC and shareholder returns may strengthen the idea of growing the capital entrusted to management."
+        },
+        {
+          "h": "Renew technology and talent",
+          "text": "Digital transformation, AI, new sales methods and promoting younger employees may change the organization's decision-making speed."
+        }
+      ]
+    },
+    {
+      "title": "What should investors examine?",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "03 INVESTOR VIEW"
+        },
+        {
+          "h": "Successor",
+          "text": "Has one been chosen? Family succession, internal promotion or a professional manager?"
+        },
+        {
+          "h": "Use of cash",
+          "text": "Will surplus funds sit idle or go to growth investment, M&A and share buybacks?"
+        },
+        {
+          "h": "Unprofitable businesses",
+          "text": "Is there willingness to restructure loss-making and low-return businesses?"
+        },
+        {
+          "h": "Capital efficiency",
+          "text": "Does management treat ROE and ROIC as performance indicators?"
+        },
+        {
+          "h": "Evidence of change",
+          "text": "Have actual actions changed: medium-term plans, board composition, investment amounts and business disposals?"
+        }
+      ]
+    },
+    {
+      "title": "Opportunity: good assets × old management",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "04 OPPORTUNITY & RISK"
+        },
+        {
+          "text": "Companies may have excellent technology, brands, customers, real estate and cash, yet fail to use them fully. If succession improves capital allocation, dormant corporate value may emerge."
+        },
+        {
+          "h": "Younger leadership does not guarantee success",
+          "text": "Loss of technology, business relationships or corporate culture, an incapable successor and reckless M&A can make the transition itself a risk."
+        },
+        {
+          "text": "Look at the ability to reallocate management resources, rather than age. Succession can be a catalyst for a change in corporate value."
+        }
+      ]
+    }
+  ],
+  "es": [
+    {
+      "title": "El relevo generacional cambia la empresa",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "01 CAMBIO DE DIRECCIÓN"
+        },
+        {
+          "text": "No es solo un presidente más joven. Cambia la propia toma de decisiones: quién asigna personas, activos y dinero de la empresa, hacia dónde y cómo."
+        },
+        {
+          "text": "Relevo generacional = reasignación de recursos empresariales. Un punto de inflexión que permite reevaluar el valor de la empresa."
+        }
+      ]
+    },
+    {
+      "title": "¿Por qué cambia el valor empresarial?",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "02 POR QUÉ IMPORTA"
+        },
+        {
+          "h": "De gestión defensiva a activa",
+          "text": "En lugar de solo acumular efectivo, se pueden dirigir fondos a inversión, I+D, fusiones y adquisiciones y expansión exterior."
+        },
+        {
+          "h": "Reordenar estructuras antiguas",
+          "text": "Revisar negocios no rentables, transacciones habituales y activos ineficientes permite concentrar capital en la actividad principal."
+        },
+        {
+          "h": "Atención a la eficiencia del capital",
+          "text": "ROE, ROIC y retribución al accionista pueden reforzar la idea de hacer crecer el capital confiado a la dirección."
+        },
+        {
+          "h": "Renovar tecnología y talento",
+          "text": "Transformación digital, IA, nuevos métodos de venta y promoción de jóvenes pueden cambiar la rapidez de decisión de la organización."
+        }
+      ]
+    },
+    {
+      "title": "¿Qué debe observar el inversor?",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "03 VISIÓN DEL INVERSOR"
+        },
+        {
+          "h": "Sucesor",
+          "text": "¿Está elegido? ¿Sucesión familiar, promoción interna o gestor profesional?"
+        },
+        {
+          "h": "Uso del efectivo",
+          "text": "¿Se deja ocioso o se destina a crecimiento, adquisiciones y recompra de acciones?"
+        },
+        {
+          "h": "Negocios no rentables",
+          "text": "¿Hay voluntad de reorganizar actividades deficitarias o de bajo rendimiento?"
+        },
+        {
+          "h": "Eficiencia del capital",
+          "text": "¿Se utilizan ROE y ROIC como indicadores de gestión?"
+        },
+        {
+          "h": "Pruebas del cambio",
+          "text": "¿Cambian las acciones reales: planes a medio plazo, consejo, inversión o venta de negocios?"
+        }
+      ]
+    },
+    {
+      "title": "Oportunidad: buenos activos × gestión antigua",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "04 OPORTUNIDAD Y RIESGO"
+        },
+        {
+          "text": "Algunas empresas poseen buena tecnología, marcas, clientes, inmuebles y efectivo, pero no los aprovechan. Si el relevo mejora la asignación del capital, puede aflorar valor empresarial latente."
+        },
+        {
+          "h": "Rejuvenecer no garantiza el éxito",
+          "text": "Perder tecnología, relaciones comerciales o cultura, un sucesor incapaz o adquisiciones temerarias pueden convertir el propio relevo en un riesgo."
+        },
+        {
+          "text": "Observar la capacidad de reasignar recursos, no la edad. El relevo puede catalizar un cambio en el valor empresarial."
+        }
+      ]
+    }
+  ],
+  "pt": [
+    {
+      "title": "A sucessão geracional muda a empresa",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "01 MUDANÇA DE GESTÃO"
+        },
+        {
+          "text": "Não se trata apenas de um presidente mais jovem. Muda a própria tomada de decisão: quem aloca pessoas, ativos e dinheiro da empresa, para onde e como."
+        },
+        {
+          "text": "Sucessão geracional = realocação de recursos empresariais. Um ponto de virada em que o valor da empresa é reavaliado."
+        }
+      ]
+    },
+    {
+      "title": "Por que a sucessão muda o valor da empresa?",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "02 POR QUE IMPORTA"
+        },
+        {
+          "h": "De gestão defensiva a proativa",
+          "text": "Em vez de só acumular caixa, os recursos podem ir para investimento, P&D, fusões e aquisições e expansão externa."
+        },
+        {
+          "h": "Reorganizar estruturas antigas",
+          "text": "Rever negócios não rentáveis, transações habituais e ativos ineficientes permite concentrar capital no negócio principal."
+        },
+        {
+          "h": "Atenção à eficiência do capital",
+          "text": "ROE, ROIC e retorno aos acionistas podem reforçar a ideia de ampliar o capital confiado à gestão."
+        },
+        {
+          "h": "Renovar tecnologia e talentos",
+          "text": "Transformação digital, IA, novos métodos de venda e promoção de jovens podem alterar a velocidade decisória da organização."
+        }
+      ]
+    },
+    {
+      "title": "O que o investidor deve observar?",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "03 VISÃO DO INVESTIDOR"
+        },
+        {
+          "h": "Sucessor",
+          "text": "Já foi escolhido? Sucessão familiar, promoção interna ou gestor profissional?"
+        },
+        {
+          "h": "Uso do caixa",
+          "text": "Recursos excedentes ficam parados ou vão para crescimento, aquisições e recompra de ações?"
+        },
+        {
+          "h": "Negócios não rentáveis",
+          "text": "Há disposição para reorganizar operações deficitárias ou de baixo retorno?"
+        },
+        {
+          "h": "Eficiência do capital",
+          "text": "ROE e ROIC são considerados indicadores de gestão?"
+        },
+        {
+          "h": "Provas de mudança",
+          "text": "As ações reais mudaram: planos de médio prazo, composição da diretoria, investimentos ou venda de negócios?"
+        }
+      ]
+    },
+    {
+      "title": "Oportunidade: bons ativos × gestão antiga",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "04 OPORTUNIDADE E RISCO"
+        },
+        {
+          "text": "Empresas podem ter ótima tecnologia, marcas, clientes, imóveis e caixa, mas não aproveitá-los plenamente. Se a sucessão melhorar a alocação de capital, o valor latente pode aparecer."
+        },
+        {
+          "h": "Rejuvenescer não garante sucesso",
+          "text": "Perder tecnologia, relações comerciais ou cultura, um sucessor sem capacidade ou aquisições imprudentes podem tornar a própria troca um risco."
+        },
+        {
+          "text": "Observe a capacidade de realocar recursos, não a idade. A sucessão pode ser catalisadora de uma mudança no valor da empresa."
+        }
+      ]
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "经营者世代交替会改变公司",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "01 管理层更替"
+        },
+        {
+          "text": "世代交替不只是“总裁年轻化”，而是决定公司的人、物、资金由谁、向何处、如何分配的决策机制本身更换的时刻。"
+        },
+        {
+          "text": "世代交替＝经营资源重新分配。也是公司价值重新评估的转折点。"
+        }
+      ]
+    },
+    {
+      "title": "为何世代交替会改变企业价值",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "02 为何重要"
+        },
+        {
+          "h": "从防守经营转向进取经营",
+          "text": "不再只是积累现金，也可能把资金投向设备投资、研发、并购、海外拓展等。"
+        },
+        {
+          "h": "整理旧业务结构",
+          "text": "检讨亏损业务、惯例交易、低效资产，将资本集中于核心业务。"
+        },
+        {
+          "h": "重视资本效率",
+          "text": "围绕ROE、ROIC、股东回报等，更重视“如何增值受托资本”的思维可能加强。"
+        },
+        {
+          "h": "更新技术与人才",
+          "text": "数字化转型、AI、新销售方法、提拔年轻人等，可能改变组织决策速度。"
+        }
+      ]
+    },
+    {
+      "title": "投资者应关注哪些要点",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "03 投资者视角"
+        },
+        {
+          "h": "接班人",
+          "text": "是否确定？是创始家族继承、内部晋升，还是职业经理人？"
+        },
+        {
+          "h": "现金用途",
+          "text": "闲置剩余资金，还是投入成长投资、并购、股票回购？"
+        },
+        {
+          "h": "不盈利业务",
+          "text": "是否愿意整理亏损、低收益业务？"
+        },
+        {
+          "h": "资本效率",
+          "text": "是否把ROE、ROIC作为经营指标？"
+        },
+        {
+          "h": "变化证据",
+          "text": "中期计划、董事构成、投资金额、业务出售等实际行动是否改变？"
+        }
+      ]
+    },
+    {
+      "title": "机会在于“优质资产×旧式经营”",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "04 机会与风险"
+        },
+        {
+          "text": "有些公司拥有优良技术、品牌、客户基础、房地产、现金，却未能充分利用。若世代交替改善资本分配，沉睡的企业价值可能显现。"
+        },
+        {
+          "h": "年轻化不等于成功",
+          "text": "技术、交易关系、企业文化流失，接班人能力不足，鲁莽并购等，都可能令更替本身成为风险。"
+        },
+        {
+          "text": "要看的不是年龄，而是重新分配经营资源的能力。世代交替可能成为企业价值改变的催化剂。"
+        }
+      ]
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "經營者世代交替會改變公司",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "01 管理層更替"
+        },
+        {
+          "text": "世代交替不只是「總裁年輕化」，而是決定公司的人、物、資金由誰、向何處、如何分配的決策機制本身更換的時刻。"
+        },
+        {
+          "text": "世代交替＝經營資源重新分配。也是公司價值重新評估的轉折點。"
+        }
+      ]
+    },
+    {
+      "title": "為何世代交替會改變企業價值",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "02 為何重要"
+        },
+        {
+          "h": "從防守經營轉向進取經營",
+          "text": "不再只是累積現金，也可能把資金投向設備投資、研發、併購、海外拓展等。"
+        },
+        {
+          "h": "整理舊業務結構",
+          "text": "檢討虧損業務、慣例交易、低效資產，將資本集中於核心業務。"
+        },
+        {
+          "h": "重視資本效率",
+          "text": "圍繞ROE、ROIC、股東回報等，更重視「如何增值受託資本」的思維可能加強。"
+        },
+        {
+          "h": "更新技術與人才",
+          "text": "數位轉型、AI、新銷售方法、提拔年輕人等，可能改變組織決策速度。"
+        }
+      ]
+    },
+    {
+      "title": "投資者應關注哪些要點",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "03 投資者視角"
+        },
+        {
+          "h": "接班人",
+          "text": "是否確定？是創始家族繼承、內部晉升，還是專業經理人？"
+        },
+        {
+          "h": "現金用途",
+          "text": "閒置剩餘資金，還是投入成長投資、併購、股票回購？"
+        },
+        {
+          "h": "不獲利業務",
+          "text": "是否願意整理虧損、低收益業務？"
+        },
+        {
+          "h": "資本效率",
+          "text": "是否把ROE、ROIC作為經營指標？"
+        },
+        {
+          "h": "變化證據",
+          "text": "中期計畫、董事組成、投資金額、業務出售等實際行動是否改變？"
+        }
+      ]
+    },
+    {
+      "title": "機會在於「優質資產×舊式經營」",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "04 機會與風險"
+        },
+        {
+          "text": "有些公司擁有優良技術、品牌、客戶基礎、不動產、現金，卻未能充分利用。若世代交替改善資本分配，沉睡的企業價值可能顯現。"
+        },
+        {
+          "h": "年輕化不等於成功",
+          "text": "技術、交易關係、企業文化流失，接班人能力不足，魯莽併購等，都可能令更替本身成為風險。"
+        },
+        {
+          "text": "要看的不是年齡，而是重新分配經營資源的能力。世代交替可能成為企業價值改變的催化劑。"
+        }
+      ]
+    }
+  ]
+}

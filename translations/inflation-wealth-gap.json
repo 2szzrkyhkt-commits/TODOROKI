@@ -1,0 +1,472 @@
+{
+  "en": [
+    {
+      "title": "Deposits are strong in deflation. Capital allocation makes the difference in inflation.",
+      "subtitle": "MONEY & INFLATION",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "",
+          "text": "Even the same ¥10 million changes in “strength” with the economic environment."
+        },
+        {
+          "h": "DEFLATION",
+          "text": "Prices fall → cash’s relative purchasing power rises.\nSimply keeping deposits and waiting can make real value easier to preserve."
+        },
+        {
+          "h": "INFLATION",
+          "text": "Prices rise → cash’s purchasing power falls.\nAsset growth differs according to what you hold."
+        },
+        {
+          "h": "",
+          "text": "From the ability to save to the ability to invest."
+        }
+      ]
+    },
+    {
+      "title": "Why do deposits tend to be advantageous in deflation?",
+      "subtitle": "DEFLATION",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "¥1 million",
+          "text": "When prices fall, the same ¥1 million buys more."
+        },
+        {
+          "h": "In other words",
+          "text": "Even with low interest rates, allowing for falling prices, cash’s “real value” can rise."
+        },
+        {
+          "h": "",
+          "text": "Meanwhile, the real burden of debt tends to increase.\nIn deflation, even “doing nothing” has value."
+        }
+      ]
+    },
+    {
+      "title": "In inflation, deposits alone lose purchasing power",
+      "subtitle": "INFLATION",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "",
+          "text": "Example: hold ¥10 million at 0% interest.\nPrices +3% × 10 years.\nThe bank balance stays at ¥10 million, but…"
+        },
+        {
+          "h": "Purchasing power ≈ ¥7.44 million",
+          "text": "Simple calculation: ¥10 million ÷ 1.03^10."
+        },
+        {
+          "h": "Key point",
+          "text": "Can you secure an after-tax return above inflation over the long term?"
+        }
+      ]
+    },
+    {
+      "title": "Income is not the only source of inequality",
+      "subtitle": "WEALTH GAP",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "1. Surplus funds",
+          "text": "Do you have money available to invest?"
+        },
+        {
+          "h": "2. Asset selection",
+          "text": "What do you own: stocks, real estate, businesses, etc.?"
+        },
+        {
+          "h": "3. Investment knowledge",
+          "text": "Can you judge price and value?"
+        },
+        {
+          "h": "4. Compounding",
+          "text": "Differences accumulate as time passes."
+        },
+        {
+          "h": "",
+          "text": "Inequality in an inflationary era\n= “whether you own assets” × “how you allocate them” × “time”"
+        },
+        {
+          "h": "",
+          "text": "Investing does not guarantee profits. Beware of overpaying and poor asset choices."
+        }
+      ]
+    }
+  ],
+  "es": [
+    {
+      "title": "Los depósitos ganan fuerza en deflación. En inflación, la asignación de capital marca diferencias.",
+      "subtitle": "DINERO E INFLACIÓN",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "",
+          "text": "Los mismos 10 millones de yenes cambian de «fuerza» según el entorno económico."
+        },
+        {
+          "h": "DEFLACIÓN",
+          "text": "Bajan los precios → sube el poder adquisitivo relativo del efectivo.\nDepositar y esperar puede facilitar conservar el valor real."
+        },
+        {
+          "h": "INFLACIÓN",
+          "text": "Suben los precios → cae el poder adquisitivo del efectivo.\nEl crecimiento patrimonial depende de qué se posee."
+        },
+        {
+          "h": "",
+          "text": "De la capacidad de ahorrar a la capacidad de invertir."
+        }
+      ]
+    },
+    {
+      "title": "¿Por qué suelen favorecer los depósitos en deflación?",
+      "subtitle": "DEFLACIÓN",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "1 millón de yenes",
+          "text": "Si bajan los precios, el mismo millón permite comprar más."
+        },
+        {
+          "h": "Es decir",
+          "text": "Incluso con tipos bajos, al considerar la caída de los precios, puede aumentar el «valor real» del efectivo."
+        },
+        {
+          "h": "",
+          "text": "En cambio, la carga real de la deuda tiende a crecer.\nEn deflación, incluso «no hacer nada» tiene valor."
+        }
+      ]
+    },
+    {
+      "title": "En inflación, solo con depósitos se pierde poder adquisitivo",
+      "subtitle": "INFLACIÓN",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "",
+          "text": "Ejemplo: mantener 10 millones de yenes al 0% de interés.\nPrecios +3% × 10 años.\nAunque el saldo siga en 10 millones…"
+        },
+        {
+          "h": "Poder adquisitivo ≈ 7,44 millones de yenes",
+          "text": "Cálculo simple: 10 millones de yenes ÷ 1,03^10."
+        },
+        {
+          "h": "Punto clave",
+          "text": "¿Puede obtener a largo plazo una rentabilidad después de impuestos superior a la inflación?"
+        }
+      ]
+    },
+    {
+      "title": "Los ingresos no son la única causa de desigualdad",
+      "subtitle": "BRECHA PATRIMONIAL",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "1. Dinero excedente",
+          "text": "¿Hay fondos disponibles para invertir?"
+        },
+        {
+          "h": "2. Selección de activos",
+          "text": "¿Qué posee: acciones, inmuebles, negocios, etc.?"
+        },
+        {
+          "h": "3. Conocimiento inversor",
+          "text": "¿Puede valorar precio y valor?"
+        },
+        {
+          "h": "4. Capitalización compuesta",
+          "text": "Las diferencias se acumulan con el tiempo."
+        },
+        {
+          "h": "",
+          "text": "Desigualdad en tiempos de inflación\n= «tener activos» × «cómo asignarlos» × «tiempo»"
+        },
+        {
+          "h": "",
+          "text": "Invertir no garantiza beneficios. Cuidado con pagar precios excesivos y elegir mal los activos."
+        }
+      ]
+    }
+  ],
+  "pt": [
+    {
+      "title": "Depósitos são fortes na deflação. Na inflação, a alocação de capital faz diferença.",
+      "subtitle": "DINHEIRO E INFLAÇÃO",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "",
+          "text": "Os mesmos ¥10 milhões mudam de “força” conforme o ambiente econômico."
+        },
+        {
+          "h": "DEFLAÇÃO",
+          "text": "Preços caem → o poder de compra relativo do dinheiro sobe.\nSó manter depósitos e esperar pode facilitar a preservação do valor real."
+        },
+        {
+          "h": "INFLAÇÃO",
+          "text": "Preços sobem → o poder de compra do dinheiro cai.\nO crescimento patrimonial varia conforme os ativos mantidos."
+        },
+        {
+          "h": "",
+          "text": "Da capacidade de poupar à capacidade de investir."
+        }
+      ]
+    },
+    {
+      "title": "Por que os depósitos tendem a ser vantajosos na deflação?",
+      "subtitle": "DEFLAÇÃO",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "¥1 milhão",
+          "text": "Se os preços caem, o mesmo ¥1 milhão compra mais."
+        },
+        {
+          "h": "Ou seja",
+          "text": "Mesmo com juros baixos, considerando a queda dos preços, o “valor real” do dinheiro pode aumentar."
+        },
+        {
+          "h": "",
+          "text": "Por outro lado, o peso real das dívidas tende a aumentar.\nNa deflação, até “não fazer nada” tem valor."
+        }
+      ]
+    },
+    {
+      "title": "Na inflação, só depósitos perdem poder de compra",
+      "subtitle": "INFLAÇÃO",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "",
+          "text": "Exemplo: manter ¥10 milhões a juros de 0%.\nPreços +3% × 10 anos.\nO saldo continua em ¥10 milhões, mas…"
+        },
+        {
+          "h": "Poder de compra ≈ ¥7,44 milhões",
+          "text": "Cálculo simples: ¥10 milhões ÷ 1,03^10."
+        },
+        {
+          "h": "Ponto importante",
+          "text": "É possível obter, no longo prazo, um retorno após impostos superior à inflação?"
+        }
+      ]
+    },
+    {
+      "title": "A renda não é a única causa da desigualdade",
+      "subtitle": "DESIGUALDADE PATRIMONIAL",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "1. Recursos excedentes",
+          "text": "Há dinheiro disponível para investir?"
+        },
+        {
+          "h": "2. Escolha de ativos",
+          "text": "O que você possui: ações, imóveis, negócios etc.?"
+        },
+        {
+          "h": "3. Conhecimento de investimentos",
+          "text": "Consegue avaliar preço e valor?"
+        },
+        {
+          "h": "4. Juros compostos",
+          "text": "As diferenças se acumulam com o tempo."
+        },
+        {
+          "h": "",
+          "text": "Desigualdade na era da inflação\n= “ter ativos” × “como alocá-los” × “tempo”"
+        },
+        {
+          "h": "",
+          "text": "Investir não garante lucro. Atenção a pagar caro demais e a escolher ativos inadequados."
+        }
+      ]
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "通缩时，“存款”占优势。通胀时，“资本配置”拉开差距。",
+      "subtitle": "金钱与通胀",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "",
+          "text": "同样是1,000万日元，其“实力”也会随经济环境变化。"
+        },
+        {
+          "h": "通缩",
+          "text": "物价下跌 → 现金的相对购买力上升\n即使只是存钱等待，也更容易守住实际价值。"
+        },
+        {
+          "h": "通胀",
+          "text": "物价上涨 → 现金购买力下降\n持有什么资产，会使资产增长出现差异。"
+        },
+        {
+          "h": "",
+          "text": "从“储蓄能力”转向“投资运用能力”。"
+        }
+      ]
+    },
+    {
+      "title": "为什么通缩时存款往往更有利？",
+      "subtitle": "通缩",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "100万日元",
+          "text": "物价下跌，同样的100万日元可以买到更多东西。"
+        },
+        {
+          "h": "也就是说",
+          "text": "即使利率很低，考虑物价下跌幅度，现金的“实际价值”仍可能上升。"
+        },
+        {
+          "h": "",
+          "text": "另一方面，债务的实际负担往往加重。\n通缩时，“什么也不做”也有价值。"
+        }
+      ]
+    },
+    {
+      "title": "通胀时，只持有存款会侵蚀购买力",
+      "subtitle": "通胀",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "",
+          "text": "例：以0%利率持有1,000万日元。\n物价每年+3% × 10年。\n即使账户余额仍是1,000万日元……"
+        },
+        {
+          "h": "购买力 ≈ 744万日元",
+          "text": "注：1,000万日元 ÷ 1.03^10 的简单计算。"
+        },
+        {
+          "h": "关键",
+          "text": "能否长期取得超过通胀率的“税后回报”？"
+        }
+      ]
+    },
+    {
+      "title": "造成差距的不只是“收入”",
+      "subtitle": "财富差距",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "① 闲余资金",
+          "text": "是否有可用于投资的钱？"
+        },
+        {
+          "h": "② 资产选择",
+          "text": "持有股票、房地产、企业等什么资产？"
+        },
+        {
+          "h": "③ 投资知识",
+          "text": "能否判断价格与价值？"
+        },
+        {
+          "h": "④ 复利",
+          "text": "时间越长，差距越会积累。"
+        },
+        {
+          "h": "",
+          "text": "通胀时代的差距\n＝“是否持有资产”×“如何配置”×“时间”"
+        },
+        {
+          "h": "",
+          "text": "投资并非一定盈利。应注意高价买入和资产选择失误。"
+        }
+      ]
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "通縮時，「存款」占優勢。通膨時，「資本配置」拉開差距。",
+      "subtitle": "金錢與通膨",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "",
+          "text": "同樣是1,000萬日圓，其「實力」也會隨經濟環境變化。"
+        },
+        {
+          "h": "通縮",
+          "text": "物價下跌 → 現金的相對購買力上升\n即使只是存錢等待，也更容易守住實際價值。"
+        },
+        {
+          "h": "通膨",
+          "text": "物價上漲 → 現金購買力下降\n持有什麼資產，會使資產增長出現差異。"
+        },
+        {
+          "h": "",
+          "text": "從「儲蓄能力」轉向「投資運用能力」。"
+        }
+      ]
+    },
+    {
+      "title": "為什麼通縮時存款往往更有利？",
+      "subtitle": "通縮",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "100萬日圓",
+          "text": "物價下跌，同樣的100萬日圓可以買到更多東西。"
+        },
+        {
+          "h": "也就是說",
+          "text": "即使利率很低，考慮物價下跌幅度，現金的「實際價值」仍可能上升。"
+        },
+        {
+          "h": "",
+          "text": "另一方面，債務的實際負擔往往加重。\n通縮時，「什麼也不做」也有價值。"
+        }
+      ]
+    },
+    {
+      "title": "通膨時，只持有存款會侵蝕購買力",
+      "subtitle": "通膨",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "",
+          "text": "例：以0%利率持有1,000萬日圓。\n物價每年+3% × 10年。\n即使帳戶餘額仍是1,000萬日圓……"
+        },
+        {
+          "h": "購買力 ≈ 744萬日圓",
+          "text": "註：1,000萬日圓 ÷ 1.03^10 的簡單計算。"
+        },
+        {
+          "h": "關鍵",
+          "text": "能否長期取得超過通膨率的「稅後報酬」？"
+        }
+      ]
+    },
+    {
+      "title": "造成差距的不只是「收入」",
+      "subtitle": "財富差距",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "① 閒餘資金",
+          "text": "是否有可用於投資的錢？"
+        },
+        {
+          "h": "② 資產選擇",
+          "text": "持有股票、不動產、企業等什麼資產？"
+        },
+        {
+          "h": "③ 投資知識",
+          "text": "能否判斷價格與價值？"
+        },
+        {
+          "h": "④ 複利",
+          "text": "時間越長，差距越會累積。"
+        },
+        {
+          "h": "",
+          "text": "通膨時代的差距\n＝「是否持有資產」×「如何配置」×「時間」"
+        },
+        {
+          "h": "",
+          "text": "投資並非一定獲利。應注意高價買入和資產選擇失誤。"
+        }
+      ]
+    }
+  ]
+}

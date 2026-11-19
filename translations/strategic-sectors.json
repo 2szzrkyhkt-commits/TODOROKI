@@ -1,0 +1,837 @@
+{
+  "en": [
+    {
+      "title": "Takaichi administration: 17 strategic sectors",
+      "subtitle": "Reading Japan’s next growth drivers | Prioritizing crisis-management and growth investment through public-private cooperation",
+      "blocks": [
+        {
+          "h": "This is not a list of thematic stocks",
+          "text": "The 17 sectors are priority policy areas in which the government combines investment promotion, R&D, procurement, regulatory reform and other measures to strengthen Japan’s supply capacity, economic security and international competitiveness."
+        },
+        {
+          "h": "What investors should examine",
+          "text": "① Policy continuity: look for a long-term roadmap rather than one-year subsidies.\n② Induced private investment: will capital expenditure and demand spread beyond government spending itself?\n③ Link to earnings: does the theme lead to orders, profits and cash flow?\n④ Valuation: even national policy offers no margin of safety if you overpay."
+        },
+        {
+          "h": "Conclusion",
+          "text": "National policy is a tailwind. Base investment decisions on business value."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "The government’s 17 strategic sectors",
+      "subtitle": "All 17 policy priorities at a glance",
+      "dense": true,
+      "blocks": [
+        {
+          "table": [
+            [
+              "Sector",
+              "Sector"
+            ],
+            [
+              "AI and semiconductors",
+              "Synthetic biology and biotech"
+            ],
+            [
+              "Digital and cybersecurity",
+              "Drug discovery and advanced medicine"
+            ],
+            [
+              "Information and communications",
+              "Resources, energy security and GX"
+            ],
+            [
+              "Quantum",
+              "Fusion energy"
+            ],
+            [
+              "Defense industry",
+              "Disaster prevention and national resilience"
+            ],
+            [
+              "Aviation and space",
+              "Port logistics"
+            ],
+            [
+              "Marine",
+              "Foodtech"
+            ],
+            [
+              "Shipbuilding",
+              "Content"
+            ],
+            [
+              "Materials (critical minerals, parts and materials)",
+              ""
+            ]
+          ],
+          "widths": [
+            255,
+            255
+          ],
+          "compact": true
+        },
+        {
+          "h": "Common policy goals",
+          "text": "◆ Strengthen supply capacity\n◆ Economic security\n◆ Deploy advanced technology in society\n◆ Expand domestic investment"
+        }
+      ]
+    },
+    {
+      "title": "Large public-private investment areas",
+      "subtitle": "Amounts show priorities | Cabinet Office, June 2026; periods differ by item",
+      "dense": true,
+      "blocks": [
+        {
+          "table": [
+            [
+              "Area",
+              "JPY trillion"
+            ],
+            [
+              "Semiconductors (core of physical AI)",
+              "68.0"
+            ],
+            [
+              "Cloud/data centers and storage batteries",
+              "32.7"
+            ],
+            [
+              "Games",
+              "24.5"
+            ],
+            [
+              "Drug discovery: novel, competitive products",
+              "23.4"
+            ],
+            [
+              "Vertical AI",
+              "23.1"
+            ],
+            [
+              "Biopharmaceuticals, regenerative medicine, etc.",
+              "20.8"
+            ],
+            [
+              "Next-generation wireless (5G/Beyond 5G, etc.)",
+              "20.5"
+            ],
+            [
+              "Biomanufacturing",
+              "12.8"
+            ]
+          ],
+          "widths": [
+            380,
+            130
+          ],
+          "compact": true
+        },
+        {
+          "text": "Some items overlap across sectors for the same technology; take care when summing. These are projected public-private investment amounts, not corporate profits or government budgets themselves."
+        }
+      ]
+    },
+    {
+      "title": "“Buy because it is national policy” is risky",
+      "subtitle": "An investor’s approach: policy theme → orders → profits/CF → stock price",
+      "blocks": [
+        {
+          "h": "1 Policy connection",
+          "text": "Which products and technologies are covered by the roadmap?"
+        },
+        {
+          "h": "2 Competitive advantage",
+          "text": "Does the company have market share, technology, customers and barriers to entry?"
+        },
+        {
+          "h": "3 Contribution to performance",
+          "text": "Will operating profit and operating cash flow grow, as well as sales?"
+        },
+        {
+          "h": "4 Financial resilience",
+          "text": "Does it have the financial capacity to support large investments?"
+        },
+        {
+          "h": "5 Margin of safety",
+          "text": "Is it inexpensive relative to P/E, P/B, earning power and asset value?"
+        },
+        {
+          "h": "Key points",
+          "text": "◆ The 17 sectors map where policy funds may flow.\n◆ Policy themes and shareholder returns are not synonymous.\n◆ Ultimately select by earning power, cash flow and price: the margin of safety."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "es": [
+    {
+      "title": "Gobierno de Takaichi: 17 sectores estratégicos",
+      "subtitle": "Las próximas fuentes de crecimiento de Japón | Priorizar inversión de crisis y crecimiento con cooperación público-privada",
+      "blocks": [
+        {
+          "h": "No es una lista de acciones temáticas",
+          "text": "Los 17 sectores son prioridades de política en las que el gobierno combina promoción de inversiones, I+D, contratación, reforma regulatoria y otras medidas para fortalecer la capacidad de oferta, la seguridad económica y la competitividad internacional de Japón."
+        },
+        {
+          "h": "Aspectos que deben examinar los inversores",
+          "text": "① Continuidad: buscar una hoja de ruta a largo plazo más que ayudas de un solo año.\n② Inversión privada inducida: ¿se amplían el gasto de capital y la demanda más allá del gasto público?\n③ Conexión con beneficios: ¿el tema genera pedidos, beneficios y flujo de caja?\n④ Valoración: incluso con apoyo nacional, pagar demasiado elimina el margen de seguridad."
+        },
+        {
+          "h": "Conclusión",
+          "text": "La política nacional es un viento a favor. La decisión de inversión debe basarse en el valor empresarial."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "Los 17 sectores estratégicos del gobierno",
+      "subtitle": "Las 17 prioridades de política de un vistazo",
+      "dense": true,
+      "blocks": [
+        {
+          "table": [
+            [
+              "Sector",
+              "Sector"
+            ],
+            [
+              "IA y semiconductores",
+              "Biología sintética y biotecnología"
+            ],
+            [
+              "Digital y ciberseguridad",
+              "Descubrimiento de fármacos y medicina avanzada"
+            ],
+            [
+              "Información y comunicaciones",
+              "Recursos, seguridad energética y GX"
+            ],
+            [
+              "Cuántica",
+              "Energía de fusión"
+            ],
+            [
+              "Industria de defensa",
+              "Prevención de desastres y resiliencia nacional"
+            ],
+            [
+              "Aviación y espacio",
+              "Logística portuaria"
+            ],
+            [
+              "Ámbito marítimo",
+              "Tecnología alimentaria"
+            ],
+            [
+              "Construcción naval",
+              "Contenidos"
+            ],
+            [
+              "Materiales (minerales críticos, piezas y materiales)",
+              ""
+            ]
+          ],
+          "widths": [
+            255,
+            255
+          ],
+          "compact": true
+        },
+        {
+          "h": "Objetivos comunes",
+          "text": "◆ Fortalecer la capacidad de oferta\n◆ Seguridad económica\n◆ Aplicación social de tecnologías avanzadas\n◆ Ampliar la inversión nacional"
+        }
+      ]
+    },
+    {
+      "title": "Áreas de gran inversión público-privada",
+      "subtitle": "Las cifras muestran prioridades | Oficina del Gabinete, junio de 2026; los períodos varían por partida",
+      "dense": true,
+      "blocks": [
+        {
+          "table": [
+            [
+              "Área",
+              "Billones JPY"
+            ],
+            [
+              "Semiconductores (núcleo de IA física)",
+              "68.0"
+            ],
+            [
+              "Nube/centros de datos y baterías de almacenamiento",
+              "32.7"
+            ],
+            [
+              "Videojuegos",
+              "24.5"
+            ],
+            [
+              "Fármacos: productos novedosos y competitivos",
+              "23.4"
+            ],
+            [
+              "IA vertical",
+              "23.1"
+            ],
+            [
+              "Biofármacos, medicina regenerativa, etc.",
+              "20.8"
+            ],
+            [
+              "Redes inalámbricas de próxima generación (5G/Beyond 5G, etc.)",
+              "20.5"
+            ],
+            [
+              "Biofabricación",
+              "12.8"
+            ]
+          ],
+          "widths": [
+            380,
+            130
+          ],
+          "compact": true
+        },
+        {
+          "text": "Algunas partidas de una misma tecnología se solapan entre sectores; cuidado con sumarlas. Son importes previstos de inversión público-privada, no beneficios empresariales ni presupuestos públicos en sí."
+        }
+      ]
+    },
+    {
+      "title": "«Comprar por ser política nacional» es arriesgado",
+      "subtitle": "Enfoque inversor: política → pedidos → beneficios/flujo de caja → cotización",
+      "blocks": [
+        {
+          "h": "1 Conexión con la política",
+          "text": "¿Qué productos y tecnologías están incluidos en la hoja de ruta?"
+        },
+        {
+          "h": "2 Ventaja competitiva",
+          "text": "¿Cuenta con cuota de mercado, tecnología, clientes y barreras de entrada?"
+        },
+        {
+          "h": "3 Contribución a resultados",
+          "text": "¿Aumentarán el beneficio operativo y el flujo de caja operativo, además de las ventas?"
+        },
+        {
+          "h": "4 Resistencia financiera",
+          "text": "¿Tiene capacidad financiera para sostener grandes inversiones?"
+        },
+        {
+          "h": "5 Margen de seguridad",
+          "text": "¿Es barata en relación con PER, precio/valor contable, capacidad de generar beneficios y valor de activos?"
+        },
+        {
+          "h": "Puntos clave",
+          "text": "◆ Los 17 sectores cartografían adónde se dirige el dinero de política pública.\n◆ Temática política y rentabilidad para el accionista no son sinónimos.\n◆ Seleccionar por beneficios, flujo de caja y precio: el margen de seguridad."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "pt": [
+    {
+      "title": "Governo Takaichi: 17 setores estratégicos",
+      "subtitle": "Os próximos eixos de crescimento do Japão | Priorizar investimentos em gestão de crises e crescimento por cooperação público-privada",
+      "blocks": [
+        {
+          "h": "Não é uma lista de ações temáticas",
+          "text": "Os 17 setores são prioridades de política em que o governo combina promoção de investimentos, P&D, compras públicas, reforma regulatória e outras medidas para fortalecer a capacidade de oferta, a segurança econômica e a competitividade internacional do Japão."
+        },
+        {
+          "h": "Pontos que investidores devem analisar",
+          "text": "① Continuidade: buscar um roteiro de longo prazo, mais que subsídios de um único ano.\n② Investimento privado induzido: gastos de capital e demanda se expandem além do gasto público em si?\n③ Ligação aos lucros: o tema gera pedidos, lucros e fluxo de caixa?\n④ Avaliação: mesmo com política nacional, pagar caro elimina a margem de segurança."
+        },
+        {
+          "h": "Conclusão",
+          "text": "A política nacional é um vento favorável. Decisões de investimento devem se basear no valor da empresa."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "Os 17 setores estratégicos do governo",
+      "subtitle": "As 17 prioridades de política em uma página",
+      "dense": true,
+      "blocks": [
+        {
+          "table": [
+            [
+              "Setor",
+              "Setor"
+            ],
+            [
+              "IA e semicondutores",
+              "Biologia sintética e biotecnologia"
+            ],
+            [
+              "Digital e cibersegurança",
+              "Descoberta de fármacos e medicina avançada"
+            ],
+            [
+              "Informação e comunicações",
+              "Recursos, segurança energética e GX"
+            ],
+            [
+              "Quântica",
+              "Energia de fusão"
+            ],
+            [
+              "Indústria de defesa",
+              "Prevenção de desastres e resiliência nacional"
+            ],
+            [
+              "Aviação e espaço",
+              "Logística portuária"
+            ],
+            [
+              "Marítimo",
+              "Foodtech"
+            ],
+            [
+              "Construção naval",
+              "Conteúdo"
+            ],
+            [
+              "Materiais (minerais críticos, peças e materiais)",
+              ""
+            ]
+          ],
+          "widths": [
+            255,
+            255
+          ],
+          "compact": true
+        },
+        {
+          "h": "Objetivos comuns",
+          "text": "◆ Fortalecer a capacidade de oferta\n◆ Segurança econômica\n◆ Aplicação social de tecnologias avançadas\n◆ Ampliar o investimento doméstico"
+        }
+      ]
+    },
+    {
+      "title": "Áreas de grandes investimentos público-privados",
+      "subtitle": "Os valores mostram prioridades | Gabinete, junho de 2026; períodos variam por item",
+      "dense": true,
+      "blocks": [
+        {
+          "table": [
+            [
+              "Área",
+              "JPY trilhões"
+            ],
+            [
+              "Semicondutores (núcleo da IA física)",
+              "68.0"
+            ],
+            [
+              "Nuvem/data centers e baterias de armazenamento",
+              "32.7"
+            ],
+            [
+              "Jogos",
+              "24.5"
+            ],
+            [
+              "Fármacos: produtos novos e competitivos",
+              "23.4"
+            ],
+            [
+              "IA vertical",
+              "23.1"
+            ],
+            [
+              "Biofármacos, medicina regenerativa etc.",
+              "20.8"
+            ],
+            [
+              "Redes sem fio de próxima geração (5G/Beyond 5G etc.)",
+              "20.5"
+            ],
+            [
+              "Biomanufatura",
+              "12.8"
+            ]
+          ],
+          "widths": [
+            380,
+            130
+          ],
+          "compact": true
+        },
+        {
+          "text": "Alguns itens da mesma tecnologia se sobrepõem entre setores; cuidado ao somar. São valores previstos de investimentos público-privados, não os próprios lucros empresariais ou orçamentos públicos."
+        }
+      ]
+    },
+    {
+      "title": "“Comprar porque é política nacional” é arriscado",
+      "subtitle": "Visão do investidor: política → pedidos → lucros/fluxo de caixa → preço da ação",
+      "blocks": [
+        {
+          "h": "1 Ligação com a política",
+          "text": "Quais produtos e tecnologias estão abrangidos pelo roteiro?"
+        },
+        {
+          "h": "2 Vantagem competitiva",
+          "text": "A empresa tem participação de mercado, tecnologia, clientes e barreiras à entrada?"
+        },
+        {
+          "h": "3 Contribuição aos resultados",
+          "text": "O lucro operacional e o fluxo de caixa operacional aumentarão, além das vendas?"
+        },
+        {
+          "h": "4 Resistência financeira",
+          "text": "Tem capacidade financeira para sustentar grandes investimentos?"
+        },
+        {
+          "h": "5 Margem de segurança",
+          "text": "Está barata em relação a P/L, P/VP, capacidade de gerar lucros e valor dos ativos?"
+        },
+        {
+          "h": "Pontos principais",
+          "text": "◆ Os 17 setores mapeiam para onde vão recursos de política pública.\n◆ Temas de política e retorno ao acionista não são sinônimos.\n◆ Selecione por lucros, fluxo de caixa e preço: a margem de segurança."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "高市政权“战略17领域”",
+      "subtitle": "把握日本下一个增长轴 | 通过官民合作重点推进危机管理投资与增长投资",
+      "blocks": [
+        {
+          "h": "这不是“题材股清单”",
+          "text": "17领域是政府为增强日本供给能力、经济安全与国际竞争力，将投资促进、研发、采购、监管改革等相结合的政策重点领域。"
+        },
+        {
+          "h": "投资者应关注的要点",
+          "text": "①政策持续性：比起单年度补贴，更应看有无长期路线图。\n②带动民间投资：比起政府支出本身，更应看设备投资与需求是否扩大。\n③衔接利润：不只看题材，还要看能否带来订单、利润及现金流。\n④估值：即使是国策，追高买入也会使安全边际消失。"
+        },
+        {
+          "h": "结论",
+          "text": "国策是“顺风”。投资判断应基于企业价值。"
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "政府提出的战略17领域",
+      "subtitle": "一页掌握17领域 | 政策重点领域一览",
+      "dense": true,
+      "blocks": [
+        {
+          "table": [
+            [
+              "领域",
+              "领域"
+            ],
+            [
+              "AI与半导体",
+              "合成生物学与生物技术"
+            ],
+            [
+              "数字与网络安全",
+              "药物研发与先进医疗"
+            ],
+            [
+              "信息通信",
+              "资源、能源安全与GX"
+            ],
+            [
+              "量子",
+              "核聚变能源"
+            ],
+            [
+              "国防产业",
+              "防灾与国土韧性"
+            ],
+            [
+              "航空与航天",
+              "港口物流"
+            ],
+            [
+              "海洋",
+              "食品科技"
+            ],
+            [
+              "造船",
+              "内容产业"
+            ],
+            [
+              "材料（重要矿物、零部件及材料）",
+              ""
+            ]
+          ],
+          "widths": [
+            255,
+            255
+          ],
+          "compact": true
+        },
+        {
+          "h": "政策共同点",
+          "text": "◆增强供给能力\n◆经济安全\n◆先进技术的社会应用\n◆扩大国内投资"
+        }
+      ]
+    },
+    {
+      "title": "官民投资金额较大的领域",
+      "subtitle": "从金额看重点 | 内阁府2026年6月资料，各项目期间不同",
+      "dense": true,
+      "blocks": [
+        {
+          "table": [
+            [
+              "领域",
+              "万亿日元"
+            ],
+            [
+              "半导体（物理AI核心）",
+              "68.0"
+            ],
+            [
+              "云、数据中心及储能电池",
+              "32.7"
+            ],
+            [
+              "游戏",
+              "24.5"
+            ],
+            [
+              "药物研发：新颖且具竞争力的产品",
+              "23.4"
+            ],
+            [
+              "垂直领域AI",
+              "23.1"
+            ],
+            [
+              "生物医药、再生医疗等",
+              "20.8"
+            ],
+            [
+              "下一代无线通信（5G/Beyond5G等）",
+              "20.5"
+            ],
+            [
+              "生物制造",
+              "12.8"
+            ]
+          ],
+          "widths": [
+            380,
+            130
+          ],
+          "compact": true
+        },
+        {
+          "text": "部分项目中同一技术横跨多个领域，简单加总需谨慎。金额为官民投资预期金额，并非“企业利润”或“政府预算”本身。"
+        }
+      ]
+    },
+    {
+      "title": "“因为是国策就买入”很危险",
+      "subtitle": "投资者的使用方法：政策题材 → 订单 → 利润与现金流 → 股价，逐步确认",
+      "blocks": [
+        {
+          "h": "1 与政策的联系",
+          "text": "哪些产品与技术属于路线图对象？"
+        },
+        {
+          "h": "2 竞争优势",
+          "text": "是否具备市场份额、技术、客户及进入壁垒？"
+        },
+        {
+          "h": "3 对业绩的贡献",
+          "text": "除营业收入外，营业利润与经营现金流是否增加？"
+        },
+        {
+          "h": "4 财务韧性",
+          "text": "是否有支持大规模投资的资金实力？"
+        },
+        {
+          "h": "5 安全边际",
+          "text": "相较PER、PBR、盈利能力与资产价值，是否便宜？"
+        },
+        {
+          "h": "要点",
+          "text": "◆17领域是政策资金流向的“地图”。\n◆政策题材与股东回报并非同义。\n◆最终根据盈利能力、现金流与价格，也就是安全边际来筛选。"
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "高市政權「戰略17領域」",
+      "subtitle": "掌握日本下一個成長軸 | 透過官民合作重點推進危機管理投資與成長投資",
+      "blocks": [
+        {
+          "h": "這不是「題材股清單」",
+          "text": "17領域是政府為增強日本供給能力、經濟安全與國際競爭力，將投資促進、研發、採購、監管改革等相結合的政策重點領域。"
+        },
+        {
+          "h": "投資者應關注的要點",
+          "text": "①政策持續性：比起單年度補貼，更應看有無長期路線圖。\n②帶動民間投資：比起政府支出本身，更應看設備投資與需求是否擴大。\n③銜接利潤：不只看題材，還要看能否帶來訂單、利潤及現金流。\n④估值：即使是國策，追高買入也會使安全邊際消失。"
+        },
+        {
+          "h": "結論",
+          "text": "國策是「順風」。投資判斷應基於企業價值。"
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "政府提出的戰略17領域",
+      "subtitle": "一頁掌握17領域 | 政策重點領域一覽",
+      "dense": true,
+      "blocks": [
+        {
+          "table": [
+            [
+              "領域",
+              "領域"
+            ],
+            [
+              "AI與半導體",
+              "合成生物學與生物技術"
+            ],
+            [
+              "數位與網路安全",
+              "藥物研發與先進醫療"
+            ],
+            [
+              "資訊通訊",
+              "資源、能源安全與GX"
+            ],
+            [
+              "量子",
+              "核融合能源"
+            ],
+            [
+              "國防產業",
+              "防災與國土韌性"
+            ],
+            [
+              "航空與太空",
+              "港口物流"
+            ],
+            [
+              "海洋",
+              "食品科技"
+            ],
+            [
+              "造船",
+              "內容產業"
+            ],
+            [
+              "材料（重要礦物、零組件及材料）",
+              ""
+            ]
+          ],
+          "widths": [
+            255,
+            255
+          ],
+          "compact": true
+        },
+        {
+          "h": "政策共同點",
+          "text": "◆增強供給能力\n◆經濟安全\n◆先進技術的社會應用\n◆擴大國內投資"
+        }
+      ]
+    },
+    {
+      "title": "官民投資金額較大的領域",
+      "subtitle": "從金額看重點 | 內閣府2026年6月資料，各項目期間不同",
+      "dense": true,
+      "blocks": [
+        {
+          "table": [
+            [
+              "領域",
+              "兆日圓"
+            ],
+            [
+              "半導體（實體AI核心）",
+              "68.0"
+            ],
+            [
+              "雲端、資料中心及儲能電池",
+              "32.7"
+            ],
+            [
+              "遊戲",
+              "24.5"
+            ],
+            [
+              "藥物研發：新穎且具競爭力的產品",
+              "23.4"
+            ],
+            [
+              "垂直領域AI",
+              "23.1"
+            ],
+            [
+              "生物醫藥、再生醫療等",
+              "20.8"
+            ],
+            [
+              "下一代無線通訊（5G/Beyond5G等）",
+              "20.5"
+            ],
+            [
+              "生物製造",
+              "12.8"
+            ]
+          ],
+          "widths": [
+            380,
+            130
+          ],
+          "compact": true
+        },
+        {
+          "text": "部分項目中同一技術橫跨多個領域，簡單加總需謹慎。金額為官民投資預期金額，並非「企業利潤」或「政府預算」本身。"
+        }
+      ]
+    },
+    {
+      "title": "「因為是國策就買入」很危險",
+      "subtitle": "投資者的使用方法：政策題材 → 訂單 → 利潤與現金流 → 股價，逐步確認",
+      "blocks": [
+        {
+          "h": "1 與政策的聯繫",
+          "text": "哪些產品與技術屬於路線圖對象？"
+        },
+        {
+          "h": "2 競爭優勢",
+          "text": "是否具備市占率、技術、客戶及進入障礙？"
+        },
+        {
+          "h": "3 對業績的貢獻",
+          "text": "除營業收入外，營業利潤與營運現金流是否增加？"
+        },
+        {
+          "h": "4 財務韌性",
+          "text": "是否有支援大規模投資的資金實力？"
+        },
+        {
+          "h": "5 安全邊際",
+          "text": "相較PER、PBR、獲利能力與資產價值，是否便宜？"
+        },
+        {
+          "h": "要點",
+          "text": "◆17領域是政策資金流向的「地圖」。\n◆政策題材與股東回報並非同義。\n◆最終根據獲利能力、現金流與價格，也就是安全邊際來篩選。"
+        }
+      ],
+      "dense": true
+    }
+  ]
+}

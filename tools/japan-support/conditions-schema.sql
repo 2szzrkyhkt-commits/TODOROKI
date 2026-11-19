@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS support_condition_versions(program_id TEXT NOT NULL,version TEXT NOT NULL,content_hash TEXT NOT NULL,document_json TEXT NOT NULL,stored_at TEXT NOT NULL,PRIMARY KEY(program_id,version));

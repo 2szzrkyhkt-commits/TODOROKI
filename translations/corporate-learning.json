@@ -1,0 +1,352 @@
+{
+  "en": [
+    {
+      "title": "Can people keep improving through self-study alone?",
+      "subtitle": "CORPORATE GOVERNANCE × INVESTING",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "People who can study without a teacher are a minority",
+          "text": "Set goals, discover weaknesses, discipline yourself and keep improving. Few people can do all of this entirely alone."
+        },
+        {
+          "h": "Is corporate management similar?",
+          "text": "Managers are human too. Past successes, internal assumptions, entanglements and the status quo can make it hard to identify their company’s problems unaided."
+        }
+      ]
+    },
+    {
+      "title": "Engagement funds are a company’s external instructors",
+      "subtitle": "MOVING COMPANIES FROM OUTSIDE",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "It does not end with buying shares",
+          "text": "They engage with portfolio-company management and encourage improvements in capital allocation, business restructuring, growth strategy and governance to increase corporate value."
+        },
+        {
+          "h": "Shareholders who encourage improvement, rather than enemies",
+          "text": "Their role extends beyond short-term share-price movements: they ask management questions to draw out the company’s inherent value."
+        }
+      ]
+    },
+    {
+      "title": "Outside directors can be management’s teachers",
+      "subtitle": "AN EXTERNAL PERSPECTIVE INSIDE THE COMPANY",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "Supervise management and introduce different viewpoints",
+          "text": "They scrutinize strategy and capital allocation from experiences and positions different from management’s. The ability to question “what everyone inside takes for granted” matters greatly."
+        },
+        {
+          "h": "Merely appointing them is not enough",
+          "text": "The key is not their number, but whether they can ask necessary questions, debate management and improve decision quality."
+        }
+      ]
+    },
+    {
+      "title": "The better the company, the better it can use outside perspectives",
+      "subtitle": "WHAT INVESTORS SHOULD LOOK FOR",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "School",
+          "text": "Student → self-study has limits → receives guidance from a teacher"
+        },
+        {
+          "h": "Company",
+          "text": "Manager → internal resources have limits → outside directors supervise and advise"
+        },
+        {
+          "h": "Shareholder",
+          "text": "Company → self-directed reform has limits → engagement encourages change"
+        },
+        {
+          "h": "Conclusion",
+          "text": "Receiving outside opinions is not weakness. Companies that absorb external wisdom and change themselves may become stronger over the long term."
+        }
+      ]
+    }
+  ],
+  "es": [
+    {
+      "title": "¿Se puede seguir mejorando solo con estudio autónomo?",
+      "subtitle": "GOBIERNO CORPORATIVO × INVERSIÓN",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "Quienes pueden estudiar sin profesor son minoría",
+          "text": "Fijar metas, detectar debilidades, disciplinarse y mejorar continuamente. Pocos pueden hacerlo completamente solos."
+        },
+        {
+          "h": "¿No ocurre lo mismo al dirigir empresas?",
+          "text": "Los directivos también son humanos. Los éxitos pasados, las ideas asumidas dentro de la empresa, los compromisos y el statu quo dificultan detectar por sí solos los problemas propios."
+        }
+      ]
+    },
+    {
+      "title": "Los fondos de engagement son profesores externos de la empresa",
+      "subtitle": "IMPULSAR EMPRESAS DESDE FUERA",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "No se limitan a comprar acciones",
+          "text": "Dialogan con los directivos de las participadas y promueven mejoras en asignación de capital, reorganización de negocios, estrategia de crecimiento y gobierno corporativo para aumentar el valor empresarial."
+        },
+        {
+          "h": "Accionistas que promueven mejoras, no enemigos",
+          "text": "Además de mover el precio a corto plazo, plantean preguntas a los directivos para sacar a la luz el valor inherente de la empresa."
+        }
+      ]
+    },
+    {
+      "title": "Los consejeros externos pueden enseñar a la dirección",
+      "subtitle": "UNA MIRADA EXTERNA DENTRO DE LA EMPRESA",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "Supervisar e incorporar otras perspectivas",
+          "text": "Desde experiencias y posiciones distintas, revisan la estrategia y la asignación de capital. Poder cuestionar «lo normal dentro de la empresa» tiene gran importancia."
+        },
+        {
+          "h": "Nombrarlos no basta",
+          "text": "Lo importante no es cuántos son, sino si plantean las preguntas necesarias, debaten y mejoran la calidad de las decisiones."
+        }
+      ]
+    },
+    {
+      "title": "Las mejores empresas saben usar miradas externas",
+      "subtitle": "LO ESENCIAL PARA EL INVERSOR",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "Escuela",
+          "text": "Alumno → el estudio autónomo tiene límites → recibe orientación del profesor"
+        },
+        {
+          "h": "Empresa",
+          "text": "Directivo → lo interno tiene límites → consejeros externos supervisan y asesoran"
+        },
+        {
+          "h": "Accionista",
+          "text": "Empresa → la autorreforma tiene límites → el engagement impulsa cambios"
+        },
+        {
+          "h": "Conclusión",
+          "text": "Recibir opiniones externas no es debilidad. Las empresas capaces de incorporar sabiduría externa y transformarse pueden fortalecerse a largo plazo."
+        }
+      ]
+    }
+  ],
+  "pt": [
+    {
+      "title": "É possível continuar evoluindo só com estudo autônomo?",
+      "subtitle": "GOVERNANÇA CORPORATIVA × INVESTIMENTO",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "Quem consegue estudar sem professor é minoria",
+          "text": "Definir metas, descobrir fraquezas, disciplinar-se e melhorar continuamente. Poucas pessoas conseguem fazer tudo isso inteiramente sozinhas."
+        },
+        {
+          "h": "A gestão empresarial não seria semelhante?",
+          "text": "Gestores também são humanos. Sucessos passados, pressupostos internos, vínculos e o status quo dificultam identificar sozinhos os problemas da própria empresa."
+        }
+      ]
+    },
+    {
+      "title": "Fundos de engajamento são instrutores externos da empresa",
+      "subtitle": "MOVER EMPRESAS A PARTIR DE FORA",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "Não termina na compra de ações",
+          "text": "Dialogam com gestores das investidas e incentivam melhorias na alocação de capital, reorganização de negócios, estratégia de crescimento e governança, buscando elevar o valor da empresa."
+        },
+        {
+          "h": "Acionistas que incentivam melhorias, não inimigos",
+          "text": "Seu papel vai além de movimentar a cotação no curto prazo: fazem perguntas à gestão para revelar o valor que a empresa já possui."
+        }
+      ]
+    },
+    {
+      "title": "Conselheiros externos podem ensinar a gestão",
+      "subtitle": "UM OLHAR EXTERNO DENTRO DA EMPRESA",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "Supervisionar gestores e trazer perspectivas diferentes",
+          "text": "Analisam estratégia e alocação de capital com experiências e posições distintas das da gestão. Poder questionar “o que é normal aqui dentro” faz grande diferença."
+        },
+        {
+          "h": "Apenas nomeá-los não basta",
+          "text": "O importante não é a quantidade, mas a capacidade de fazer as perguntas necessárias, debater e melhorar a qualidade das decisões."
+        }
+      ]
+    },
+    {
+      "title": "Empresas melhores sabem usar o olhar externo",
+      "subtitle": "O ESSENCIAL PARA O INVESTIDOR",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "Escola",
+          "text": "Aluno → o estudo autônomo tem limites → recebe orientação do professor"
+        },
+        {
+          "h": "Empresa",
+          "text": "Gestor → recursos internos têm limites → conselheiros externos supervisionam e aconselham"
+        },
+        {
+          "h": "Acionista",
+          "text": "Empresa → a autorreforma tem limites → o engajamento estimula mudanças"
+        },
+        {
+          "h": "Conclusão",
+          "text": "Receber opiniões externas não é fraqueza. Empresas que incorporam conhecimento externo e se transformam podem se fortalecer no longo prazo."
+        }
+      ]
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "人能否只靠“自学”持续成长？",
+      "subtitle": "公司治理 × 投资",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "没有老师也能学习的人是少数",
+          "text": "设定目标、发现弱点、自我约束、持续改善。能完全独自做到这些的人并不多。"
+        },
+        {
+          "h": "企业经营不也是如此吗？",
+          "text": "经营者也是人。成功经验、内部常识、各种牵绊和维持现状的倾向，都会使其难以仅靠自己发现公司的问题。"
+        }
+      ]
+    },
+    {
+      "title": "参与式投资基金是企业的“外部讲师”",
+      "subtitle": "从外部推动企业",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "不止于买入股票",
+          "text": "与被投企业管理层对话，推动资本配置、业务整顿、增长战略和治理等方面的改善，以提升企业价值。"
+        },
+        {
+          "h": "是促进改善的股东，而非敌人",
+          "text": "其作用不只是短期推动股价，还通过向管理层提问，挖掘公司本来具有的价值。"
+        }
+      ]
+    },
+    {
+      "title": "外部董事可以成为管理层的“老师”",
+      "subtitle": "公司内部的外部视角",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "监督经营者，引入不同观点",
+          "text": "从不同于管理层的经历和立场，检验战略和资本配置。能质疑“公司内部理所当然的事”，意义重大。"
+        },
+        {
+          "h": "仅仅设立职位没有意义",
+          "text": "关键不是人数，而是能否提出管理层必须面对的问题、展开讨论、提高决策质量。"
+        }
+      ]
+    },
+    {
+      "title": "越优秀的企业，越能利用“外部视角”",
+      "subtitle": "投资者应关注的本质",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "学校",
+          "text": "学生 → 自学存在局限 → 接受老师指导"
+        },
+        {
+          "h": "企业",
+          "text": "经营者 → 仅靠内部存在局限 → 外部董事监督并提供建议"
+        },
+        {
+          "h": "股东",
+          "text": "企业 → 仅靠自我改革存在局限 → 通过参与式对话推动变化"
+        },
+        {
+          "h": "结论",
+          "text": "听取外部意见不是软弱。能够吸收外部智慧、改变自身的企业，才有可能在长期变得更强。"
+        }
+      ]
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "人能否只靠「自學」持續成長？",
+      "subtitle": "公司治理 × 投資",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "沒有老師也能學習的人是少數",
+          "text": "設定目標、發現弱點、自我約束、持續改善。能完全獨自做到這些的人並不多。"
+        },
+        {
+          "h": "企業經營不也是如此嗎？",
+          "text": "經營者也是人。成功經驗、內部常識、各種牽絆和維持現狀的傾向，都會使其難以僅靠自己發現公司的問題。"
+        }
+      ]
+    },
+    {
+      "title": "參與式投資基金是企業的「外部講師」",
+      "subtitle": "從外部推動企業",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "不止於買入股票",
+          "text": "與被投企業管理層對話，推動資本配置、業務整頓、成長策略和治理等方面的改善，以提升企業價值。"
+        },
+        {
+          "h": "是促進改善的股東，而非敵人",
+          "text": "其作用不只是短期推動股價，還透過向管理層提問，挖掘公司本來具有的價值。"
+        }
+      ]
+    },
+    {
+      "title": "外部董事可以成為管理層的「老師」",
+      "subtitle": "公司內部的外部視角",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "監督經營者，引入不同觀點",
+          "text": "從不同於管理層的經歷和立場，檢驗策略和資本配置。能質疑「公司內部理所當然的事」，意義重大。"
+        },
+        {
+          "h": "僅僅設立職位沒有意義",
+          "text": "關鍵不是人數，而是能否提出管理層必須面對的問題、展開討論、提高決策品質。"
+        }
+      ]
+    },
+    {
+      "title": "越優秀的企業，越能利用「外部視角」",
+      "subtitle": "投資者應關注的本質",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "學校",
+          "text": "學生 → 自學存在侷限 → 接受老師指導"
+        },
+        {
+          "h": "企業",
+          "text": "經營者 → 僅靠內部存在侷限 → 外部董事監督並提供建議"
+        },
+        {
+          "h": "股東",
+          "text": "企業 → 僅靠自我改革存在侷限 → 透過參與式對話推動變化"
+        },
+        {
+          "h": "結論",
+          "text": "聽取外部意見不是軟弱。能夠吸收外部智慧、改變自身的企業，才有可能在長期變得更強。"
+        }
+      ]
+    }
+  ]
+}

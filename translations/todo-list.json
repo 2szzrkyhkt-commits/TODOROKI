@@ -1,0 +1,157 @@
+{
+  "en": [
+    {
+      "title": "To-do lists | Managing action",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "INVESTMENT / ECONOMY / BUSINESS"
+        },
+        {
+          "h": "What is a to-do list?",
+          "text": "A tool that lists what needs doing and helps you act. It prevents forgotten tasks and helps organize priorities."
+        },
+        {
+          "h": "Four basic fields",
+          "text": "Task name, deadline, priority and completion checkbox. Break large goals into concrete actions."
+        },
+        {
+          "h": "Typical uses",
+          "text": "Daily: today's actions. Deadline-based: managing due dates. Routine: managing daily and weekly habits."
+        },
+        {
+          "h": "How to keep using it",
+          "text": "Choose “check P/E ratios for 30 minutes” rather than “study stocks.” Use paper or an app, whichever is easy to review."
+        },
+        {
+          "text": "TODOROKI | Investing and economics: numbers over intuition."
+        }
+      ]
+    }
+  ],
+  "es": [
+    {
+      "title": "Lista de tareas | Gestionar la acción",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "INVERSIÓN / ECONOMÍA / NEGOCIOS"
+        },
+        {
+          "h": "¿Qué es una lista de tareas?",
+          "text": "Herramienta que enumera lo que hay que hacer y facilita actuar. Ayuda a evitar olvidos y ordenar prioridades."
+        },
+        {
+          "h": "Cuatro campos básicos",
+          "text": "Nombre de la tarea, fecha límite, prioridad y casilla de completado. Dividir los grandes objetivos en acciones concretas."
+        },
+        {
+          "h": "Usos habituales",
+          "text": "Diaria: acciones de hoy. Con fecha límite: gestionar plazos. Rutina: gestionar hábitos diarios y semanales."
+        },
+        {
+          "h": "Cómo mantener el hábito",
+          "text": "Mejor “revisar el PER durante 30 minutos” que “estudiar acciones”. Elegir papel o una aplicación según facilite la revisión."
+        },
+        {
+          "text": "TODOROKI | Inversión y economía: cifras antes que intuición."
+        }
+      ]
+    }
+  ],
+  "pt": [
+    {
+      "title": "Lista de tarefas | Gerenciar ações",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "INVESTIMENTO / ECONOMIA / NEGÓCIOS"
+        },
+        {
+          "h": "O que é uma lista de tarefas?",
+          "text": "Ferramenta que enumera o que precisa ser feito e ajuda a agir. Evita esquecimentos e organiza prioridades."
+        },
+        {
+          "h": "Quatro campos básicos",
+          "text": "Nome da tarefa, prazo, prioridade e marcação de conclusão. Divida objetivos grandes em ações concretas."
+        },
+        {
+          "h": "Usos típicos",
+          "text": "Diário: ações de hoje. Com prazo: controle de vencimentos. Rotina: gestão de hábitos diários e semanais."
+        },
+        {
+          "h": "Como manter o uso",
+          "text": "Prefira “verificar o P/L por 30 minutos” a “estudar ações”. Escolha papel ou aplicativo, conforme a facilidade de revisar."
+        },
+        {
+          "text": "TODOROKI | Investimento e economia: números acima da intuição."
+        }
+      ]
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "待办清单｜管理行动的基础",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "投资 / 经济 / 商业"
+        },
+        {
+          "h": "什么是待办清单",
+          "text": "把需要做的事列成清单、帮助执行的工具。有助于防止遗漏及整理优先顺序。"
+        },
+        {
+          "h": "基本四项",
+          "text": "任务名称、截止时间、优先级、完成勾选。把大目标拆成具体行动。"
+        },
+        {
+          "h": "典型用法",
+          "text": "每日型：今天的行动。期限型：管理截止日期。例行型：管理每天、每周的习惯。"
+        },
+        {
+          "h": "坚持的诀窍",
+          "text": "把“学习股票”改为“查看市盈率30分钟”。无论纸张还是应用，选择方便回顾的方法。"
+        },
+        {
+          "text": "TODOROKI｜投资与经济，用数字而非感觉。"
+        }
+      ]
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "待辦清單｜管理行動的基礎",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "投資 / 經濟 / 商業"
+        },
+        {
+          "h": "什麼是待辦清單",
+          "text": "把需要做的事列成清單、幫助執行的工具。有助於防止遺漏及整理優先順序。"
+        },
+        {
+          "h": "基本四項",
+          "text": "任務名稱、截止時間、優先級、完成勾選。把大目標拆成具體行動。"
+        },
+        {
+          "h": "典型用法",
+          "text": "每日型：今天的行動。期限型：管理截止日期。例行型：管理每天、每週的習慣。"
+        },
+        {
+          "h": "堅持的訣竅",
+          "text": "把「學習股票」改為「查看本益比30分鐘」。無論紙張還是應用程式，選擇方便回顧的方法。"
+        },
+        {
+          "text": "TODOROKI｜投資與經濟，用數字而非感覺。"
+        }
+      ]
+    }
+  ]
+}

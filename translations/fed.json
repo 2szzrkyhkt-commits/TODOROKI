@@ -1,0 +1,542 @@
+{
+  "en": [
+    {
+      "title": "What is the FRB?",
+      "subtitle": "The board at the core of the US central banking system",
+      "blocks": [
+        {
+          "h": "Federal Reserve Board",
+          "text": "The Federal Reserve Board is the Board of Governors of the Federal Reserve System."
+        },
+        {
+          "h": "Its role",
+          "text": "The Board is a central part of the US central banking system, known as the Fed. It is involved in monetary policy and bank supervision, pursuing price stability and maximum employment."
+        },
+        {
+          "h": "“Fed” and “FRB” are not identical terms",
+          "text": "The Fed refers to the Federal Reserve System as a whole. FRB here refers to the Board within that system. Its organizational structure differs from the Bank of Japan."
+        }
+      ]
+    },
+    {
+      "title": "The FRB and the FOMC",
+      "subtitle": "The Board and regional Reserve Banks participate in monetary policy decisions",
+      "blocks": [
+        {
+          "h": "FRB: Federal Reserve Board",
+          "text": "The Board is a central institution of the US central banking system. It is responsible for monetary policy and bank supervision, among other duties. Its governors also serve on the FOMC."
+        },
+        {
+          "h": "FOMC: Federal Open Market Committee",
+          "text": "The Board’s governors and regional Reserve Bank presidents participate in the FOMC. It decides monetary policy, including the target for policy interest rates."
+        },
+        {
+          "h": "Reading financial news",
+          "text": "A news report that “the FRB raised rates” often refers to a decision by the FOMC."
+        }
+      ]
+    },
+    {
+      "title": "The effects of rate hikes and cuts",
+      "subtitle": "Interest rates affect both business activity and equity valuations",
+      "blocks": [
+        {
+          "h": "Typical channels of influence",
+          "table": [
+            [
+              "Channel",
+              "Rate hikes",
+              "Rate cuts"
+            ],
+            [
+              "Borrowing costs",
+              "Increase",
+              "Decrease"
+            ],
+            [
+              "Consumption and investment",
+              "Restrained",
+              "Supported"
+            ],
+            [
+              "Corporate earnings",
+              "Face headwinds",
+              "Receive support"
+            ],
+            [
+              "Equity valuations",
+              "Downward pressure",
+              "Potential upward support"
+            ]
+          ]
+        },
+        {
+          "h": "Stocks do not always move in a fixed direction",
+          "text": "Economic conditions, inflation and differences from market expectations matter. Even when rates are cut, stocks may fall if concerns about an economic downturn are strong."
+        }
+      ]
+    },
+    {
+      "title": "US monetary policy and Japanese stocks",
+      "subtitle": "Effects spread through US rates, exchange rates and US equities",
+      "blocks": [
+        {
+          "h": "01  Monetary policy",
+          "text": "FOMC decisions and the outlook for future policy."
+        },
+        {
+          "h": "02  US interest rates",
+          "text": "Effects on bond yields and companies’ financing costs."
+        },
+        {
+          "h": "03  USD/JPY",
+          "text": "Influenced by the US-Japan interest-rate differential and market expectations, among other factors."
+        },
+        {
+          "h": "04  US stocks",
+          "text": "Changes in earnings expectations, equity valuations and capital flows."
+        },
+        {
+          "h": "05  Japanese stocks",
+          "text": "Exchange-rate movements and US equity trends affect different industries."
+        },
+        {
+          "h": "Several channels operate at the same time",
+          "text": "Policy alone does not determine the direction of exchange rates or stock prices."
+        }
+      ]
+    }
+  ],
+  "es": [
+    {
+      "title": "¿Qué es el FRB?",
+      "subtitle": "El órgano directivo central del sistema de banca central de EE. UU.",
+      "blocks": [
+        {
+          "h": "Federal Reserve Board",
+          "text": "El Federal Reserve Board es la Junta de Gobernadores del Sistema de la Reserva Federal."
+        },
+        {
+          "h": "Su función",
+          "text": "La Junta es una parte central del sistema de banca central estadounidense, conocido como Fed. Participa en la política monetaria y la supervisión bancaria, buscando estabilidad de precios y máximo empleo."
+        },
+        {
+          "h": "“Fed” y “FRB” no significan exactamente lo mismo",
+          "text": "Fed se refiere al Sistema de la Reserva Federal en su conjunto. Aquí, FRB designa la Junta dentro de ese sistema. Su organización es diferente de la del Banco de Japón."
+        }
+      ]
+    },
+    {
+      "title": "El FRB y el FOMC",
+      "subtitle": "La Junta y los bancos regionales participan en las decisiones monetarias",
+      "blocks": [
+        {
+          "h": "FRB: Junta de la Reserva Federal",
+          "text": "Es una institución central del sistema de banca central de EE. UU. Se ocupa, entre otras funciones, de la política monetaria y la supervisión bancaria. Sus gobernadores también forman parte del FOMC."
+        },
+        {
+          "h": "FOMC: Comité Federal de Mercado Abierto",
+          "text": "Participan los gobernadores de la Junta y presidentes de los bancos regionales de la Reserva Federal. Decide la política monetaria, incluido el objetivo para los tipos de interés oficiales."
+        },
+        {
+          "h": "Cómo leer las noticias financieras",
+          "text": "La expresión “el FRB subió los tipos” suele referirse a una decisión del FOMC."
+        }
+      ]
+    },
+    {
+      "title": "Efectos de subir o bajar los tipos",
+      "subtitle": "Los tipos afectan a la actividad empresarial y la valoración de las acciones",
+      "blocks": [
+        {
+          "h": "Canales habituales de influencia",
+          "table": [
+            [
+              "Canal",
+              "Subida de tipos",
+              "Bajada de tipos"
+            ],
+            [
+              "Coste del crédito",
+              "Aumenta",
+              "Disminuye"
+            ],
+            [
+              "Consumo e inversión",
+              "Se frenan",
+              "Reciben apoyo"
+            ],
+            [
+              "Beneficios empresariales",
+              "Presión negativa",
+              "Apoyo"
+            ],
+            [
+              "Valoración de acciones",
+              "Presión a la baja",
+              "Posible apoyo al alza"
+            ]
+          ]
+        },
+        {
+          "h": "Las acciones no siguen siempre una dirección fija",
+          "text": "Importan la economía, la inflación y las diferencias respecto a las expectativas del mercado. Incluso con bajadas de tipos, las acciones pueden caer si predomina el temor a una desaceleración."
+        }
+      ]
+    },
+    {
+      "title": "Política monetaria de EE. UU. y bolsa japonesa",
+      "subtitle": "Efectos a través de tipos estadounidenses, divisas y acciones",
+      "blocks": [
+        {
+          "h": "01  Política monetaria",
+          "text": "Decisiones del FOMC y perspectivas de la política futura."
+        },
+        {
+          "h": "02  Tipos de interés estadounidenses",
+          "text": "Influyen en la rentabilidad de los bonos y el coste de financiación empresarial."
+        },
+        {
+          "h": "03  USD/JPY",
+          "text": "Influyen el diferencial de tipos entre EE. UU. y Japón y las expectativas del mercado, entre otros factores."
+        },
+        {
+          "h": "04  Acciones estadounidenses",
+          "text": "Cambian las expectativas de beneficios, las valoraciones y los flujos de capital."
+        },
+        {
+          "h": "05  Acciones japonesas",
+          "text": "El cambio y las tendencias bursátiles de EE. UU. repercuten en los distintos sectores."
+        },
+        {
+          "h": "Varios canales actúan a la vez",
+          "text": "La política por sí sola no determina la dirección del cambio ni de las cotizaciones."
+        }
+      ]
+    }
+  ],
+  "pt": [
+    {
+      "title": "O que é o FRB?",
+      "subtitle": "O conselho central do sistema de banco central dos Estados Unidos",
+      "blocks": [
+        {
+          "h": "Federal Reserve Board",
+          "text": "O Federal Reserve Board é o Conselho de Governadores do Sistema da Reserva Federal."
+        },
+        {
+          "h": "Sua função",
+          "text": "O Conselho é uma parte central do sistema de banco central dos EUA, conhecido como Fed. Atua na política monetária e na supervisão bancária, buscando estabilidade de preços e máximo emprego."
+        },
+        {
+          "h": "“Fed” e “FRB” não são exatamente a mesma coisa",
+          "text": "Fed se refere ao Sistema da Reserva Federal como um todo. Aqui, FRB designa o Conselho dentro desse sistema. Sua estrutura organizacional difere da do Banco do Japão."
+        }
+      ]
+    },
+    {
+      "title": "O FRB e o FOMC",
+      "subtitle": "O Conselho e os bancos regionais participam das decisões monetárias",
+      "blocks": [
+        {
+          "h": "FRB: Conselho da Reserva Federal",
+          "text": "É uma instituição central do sistema de banco central dos EUA. Atua na política monetária e na supervisão bancária, entre outras funções. Seus governadores também integram o FOMC."
+        },
+        {
+          "h": "FOMC: Comitê Federal de Mercado Aberto",
+          "text": "Participam os governadores do Conselho e presidentes dos bancos regionais da Reserva Federal. Decide a política monetária, incluindo a meta para os juros de política monetária."
+        },
+        {
+          "h": "Como interpretar notícias financeiras",
+          "text": "A expressão “o FRB elevou os juros” geralmente se refere a uma decisão do FOMC."
+        }
+      ]
+    },
+    {
+      "title": "Efeitos de altas e cortes de juros",
+      "subtitle": "Os juros afetam a atividade empresarial e a avaliação das ações",
+      "blocks": [
+        {
+          "h": "Canais habituais de influência",
+          "table": [
+            [
+              "Canal",
+              "Alta de juros",
+              "Corte de juros"
+            ],
+            [
+              "Custo do crédito",
+              "Aumenta",
+              "Diminui"
+            ],
+            [
+              "Consumo e investimento",
+              "São contidos",
+              "Recebem apoio"
+            ],
+            [
+              "Lucros das empresas",
+              "Enfrentam pressão",
+              "Recebem suporte"
+            ],
+            [
+              "Avaliação das ações",
+              "Pressão de queda",
+              "Possível apoio à alta"
+            ]
+          ]
+        },
+        {
+          "h": "As ações não seguem sempre a mesma direção",
+          "text": "Importam a economia, a inflação e as diferenças em relação às expectativas do mercado. Mesmo com cortes de juros, as ações podem cair se houver forte preocupação com uma piora econômica."
+        }
+      ]
+    },
+    {
+      "title": "Política monetária dos EUA e ações japonesas",
+      "subtitle": "Efeitos por meio dos juros dos EUA, do câmbio e das ações americanas",
+      "blocks": [
+        {
+          "h": "01  Política monetária",
+          "text": "Decisões do FOMC e perspectivas para a política futura."
+        },
+        {
+          "h": "02  Juros dos EUA",
+          "text": "Afetam os rendimentos dos títulos e o custo de financiamento das empresas."
+        },
+        {
+          "h": "03  USD/JPY",
+          "text": "Influenciado pelo diferencial de juros entre EUA e Japão e pelas expectativas do mercado, entre outros fatores."
+        },
+        {
+          "h": "04  Ações dos EUA",
+          "text": "Mudanças nas expectativas de lucro, nas avaliações e nos fluxos de capital."
+        },
+        {
+          "h": "05  Ações japonesas",
+          "text": "O câmbio e as tendências das ações dos EUA repercutem nos diferentes setores."
+        },
+        {
+          "h": "Vários canais atuam ao mesmo tempo",
+          "text": "A política, sozinha, não determina a direção do câmbio nem dos preços das ações."
+        }
+      ]
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "什么是FRB？",
+      "subtitle": "美国中央银行体系的核心理事会",
+      "blocks": [
+        {
+          "h": "Federal Reserve Board",
+          "text": "即美国联邦储备系统理事会。"
+        },
+        {
+          "h": "FRB的职责",
+          "text": "FRB是美国中央银行体系“Fed”的核心理事会，参与货币政策、银行监管等事务，致力于实现物价稳定与充分就业。"
+        },
+        {
+          "h": "“Fed”与“FRB”严格来说不同",
+          "text": "Fed指美国中央银行体系的整体。本文中的FRB指该体系中的理事会。它的组织结构与日本银行不同。"
+        }
+      ]
+    },
+    {
+      "title": "FRB与FOMC的区别",
+      "subtitle": "货币政策决策由理事会与地区联储银行共同参与",
+      "blocks": [
+        {
+          "h": "FRB：联邦储备系统理事会",
+          "text": "是美国中央银行体系的核心理事会，承担货币政策与银行监管等职责。理事也属于FOMC成员。"
+        },
+        {
+          "h": "FOMC：联邦公开市场委员会",
+          "text": "由FRB理事与地区联储银行行长等参与，决定货币政策，包括政策利率的目标水平。"
+        },
+        {
+          "h": "如何理解财经新闻",
+          "text": "新闻中“FRB加息”的说法，往往指FOMC作出的决定。"
+        }
+      ]
+    },
+    {
+      "title": "加息与降息的影响",
+      "subtitle": "利率同时影响企业活动和股票估值",
+      "blocks": [
+        {
+          "h": "典型影响路径",
+          "table": [
+            [
+              "影响领域",
+              "加息",
+              "降息"
+            ],
+            [
+              "借款成本",
+              "上升",
+              "下降"
+            ],
+            [
+              "消费与投资",
+              "受到抑制",
+              "获得支持"
+            ],
+            [
+              "企业盈利",
+              "面临压力",
+              "获得支撑"
+            ],
+            [
+              "股票估值",
+              "面临下行压力",
+              "可能获得上行支持"
+            ]
+          ]
+        },
+        {
+          "h": "股价并不一定沿固定方向变动",
+          "text": "经济状况、通胀以及政策与市场预期的差异都很重要。即使降息，如果市场非常担忧经济恶化，股价也可能下跌。"
+        }
+      ]
+    },
+    {
+      "title": "美国货币政策与日本股票",
+      "subtitle": "通过美国利率、汇率与美国股票等路径传导",
+      "blocks": [
+        {
+          "h": "01  货币政策",
+          "text": "FOMC的决定与未来政策展望。"
+        },
+        {
+          "h": "02  美国利率",
+          "text": "影响债券收益率及企业融资成本。"
+        },
+        {
+          "h": "03  美元兑日元汇率",
+          "text": "受美日利差、市场预期等因素影响。"
+        },
+        {
+          "h": "04  美国股票",
+          "text": "盈利预期、股票估值与资金流向发生变化。"
+        },
+        {
+          "h": "05  日本股票",
+          "text": "汇率及美股走势向日本各行业传导。"
+        },
+        {
+          "h": "多条路径同时发挥作用",
+          "text": "汇率与股价的方向，并不只由政策决定。"
+        }
+      ]
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "什麼是FRB？",
+      "subtitle": "美國中央銀行體系的核心理事會",
+      "blocks": [
+        {
+          "h": "Federal Reserve Board",
+          "text": "即美國聯邦準備理事會。"
+        },
+        {
+          "h": "FRB的職責",
+          "text": "FRB是美國中央銀行體系「Fed」的核心理事會，參與貨幣政策、銀行監理等事務，致力於實現物價穩定與充分就業。"
+        },
+        {
+          "h": "「Fed」與「FRB」嚴格來說不同",
+          "text": "Fed指美國中央銀行體系的整體。本文中的FRB指該體系中的理事會。它的組織結構與日本銀行不同。"
+        }
+      ]
+    },
+    {
+      "title": "FRB與FOMC的區別",
+      "subtitle": "貨幣政策決策由理事會與地區聯準銀行共同參與",
+      "blocks": [
+        {
+          "h": "FRB：聯邦準備理事會",
+          "text": "是美國中央銀行體系的核心理事會，承擔貨幣政策與銀行監理等職責。理事也屬於FOMC成員。"
+        },
+        {
+          "h": "FOMC：聯邦公開市場委員會",
+          "text": "由FRB理事與地區聯準銀行總裁等參與，決定貨幣政策，包括政策利率的目標水準。"
+        },
+        {
+          "h": "如何理解財經新聞",
+          "text": "新聞中「FRB升息」的說法，往往指FOMC作出的決定。"
+        }
+      ]
+    },
+    {
+      "title": "升息與降息的影響",
+      "subtitle": "利率同時影響企業活動和股票估值",
+      "blocks": [
+        {
+          "h": "典型影響路徑",
+          "table": [
+            [
+              "影響領域",
+              "升息",
+              "降息"
+            ],
+            [
+              "借款成本",
+              "上升",
+              "下降"
+            ],
+            [
+              "消費與投資",
+              "受到抑制",
+              "獲得支持"
+            ],
+            [
+              "企業獲利",
+              "面臨壓力",
+              "獲得支撐"
+            ],
+            [
+              "股票估值",
+              "面臨下行壓力",
+              "可能獲得上行支持"
+            ]
+          ]
+        },
+        {
+          "h": "股價並不一定沿固定方向變動",
+          "text": "經濟狀況、通膨以及政策與市場預期的差異都很重要。即使降息，如果市場非常擔憂經濟惡化，股價也可能下跌。"
+        }
+      ]
+    },
+    {
+      "title": "美國貨幣政策與日本股票",
+      "subtitle": "透過美國利率、匯率與美國股票等路徑傳導",
+      "blocks": [
+        {
+          "h": "01  貨幣政策",
+          "text": "FOMC的決定與未來政策展望。"
+        },
+        {
+          "h": "02  美國利率",
+          "text": "影響債券殖利率及企業融資成本。"
+        },
+        {
+          "h": "03  美元兌日圓匯率",
+          "text": "受美日利差、市場預期等因素影響。"
+        },
+        {
+          "h": "04  美國股票",
+          "text": "獲利預期、股票估值與資金流向發生變化。"
+        },
+        {
+          "h": "05  日本股票",
+          "text": "匯率及美股走勢向日本各產業傳導。"
+        },
+        {
+          "h": "多條路徑同時發揮作用",
+          "text": "匯率與股價的方向，並不只由政策決定。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,507 @@
+{
+  "en": [
+    {
+      "title": "SpaceX and Starship",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "SPACE TRANSPORTATION | Aiming for full reuse to change space-transport costs"
+        },
+        {
+          "h": "What is SpaceX?",
+          "text": "A US space company developing and operating rockets and spacecraft. It also provides the Starlink satellite communications service."
+        },
+        {
+          "h": "What is Starship?",
+          "text": "A super-heavy space-transport system comprising the upper-stage spacecraft Starship and the first-stage Super Heavy booster. It aims to operate with both stages reused."
+        },
+        {
+          "h": "The concept: size, reuse and frequent operation",
+          "text": "Carrying large payloads at once and using vehicles repeatedly aims to reduce space-transport costs substantially. Beyond satellite launches, it envisages transport to the Moon and Mars. Distinguish the full-reuse concept from stable commercial operations."
+        }
+      ]
+    },
+    {
+      "title": "What would successful implementation change?",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "HOW IT WORKS | Greater capacity and frequency expand options for space use"
+        },
+        {
+          "h": "Satellite communications | Many satellites into orbit",
+          "text": "Efficiently launching many satellites could facilitate building and renewing networks, potentially increasing communications capacity."
+        },
+        {
+          "h": "Moon and Mars | Moving people and supplies",
+          "text": "The concept includes personnel and supplies for lunar activities and future Mars transport. Long-term operations still face technical, safety and other challenges."
+        },
+        {
+          "h": "Space industry | More equipment and applications",
+          "text": "Moving large equipment and supplies could broaden space activities such as research, observation and manufacturing."
+        },
+        {
+          "h": "The key: repeated operation",
+          "text": "Transport costs depend on reuse counts, maintenance costs and launch frequency. Beyond successful flights, the efficiency of sustained operations determines commercial viability."
+        }
+      ]
+    },
+    {
+      "title": "Connections with Japanese companies",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "JAPANESE COMPANIES | Distinguish SpaceX business ties from broader space-industry involvement"
+        },
+        {
+          "h": "KDDI (9433) | Starlink communications services",
+          "text": "Offers “au Starlink Direct” and has signed a service agreement with SpaceX for next-generation “Starlink Mobile V2” satellites. This is a communications link, distinct from supplying Starship parts."
+        },
+        {
+          "h": "Toray (3402) | Carbon-fiber composites for space",
+          "text": "Supplies materials for rockets, satellites and other uses. It is involved in lightweight space equipment, but uses and adopted materials depend on the vehicle. This document has not confirmed direct supply to Starship."
+        },
+        {
+          "h": "Mitsubishi Electric (6503) | Satellites and space equipment",
+          "text": "Works in satellites, onboard equipment and ground facilities. It has links to expanding space use, but this does not establish direct Starship dealings or effects on orders and profits."
+        },
+        {
+          "h": "NEC (6701) | Satellites, ground facilities and data",
+          "text": "Works in satellites, ground facilities and data processing/analysis. It has links to expanding space use, but this does not establish direct Starship dealings or effects on orders and profits."
+        }
+      ]
+    },
+    {
+      "title": "Space-market growth and corporate earnings",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "INDUSTRY STRUCTURE | More transport does not automatically increase each company's profit"
+        },
+        {
+          "h": "Communications | Adoption and profitability",
+          "text": "Wider satellite-communications use may expand service coverage and applications. Effects on operators' earnings depend on user numbers, contract terms, equipment costs and operating costs."
+        },
+        {
+          "h": "Materials | Each vehicle uses different materials",
+          "text": "More rocket and satellite production may increase material demand. Effects depend on designs, adopted materials and supply agreements. Starship's success alone does not determine any company's profit growth."
+        },
+        {
+          "h": "Space equipment | Demand growth and competition",
+          "text": "Demand for satellites, ground facilities and data use may grow. Some fields may also face competition from SpaceX and others. Market growth and individual companies' earnings are separate issues."
+        },
+        {
+          "text": "Starship aims to transport large amounts of supplies to space repeatedly. If lower transport costs are achieved, possibilities for space use expand."
+        }
+      ]
+    }
+  ],
+  "es": [
+    {
+      "title": "SpaceX y Starship",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "TRANSPORTE ESPACIAL | La reutilización total busca cambiar la estructura de costes"
+        },
+        {
+          "h": "¿Qué es SpaceX?",
+          "text": "Empresa espacial estadounidense que desarrolla y opera cohetes y naves. También ofrece comunicaciones por satélite mediante Starlink."
+        },
+        {
+          "h": "¿Qué es Starship?",
+          "text": "Sistema de transporte espacial superpesado formado por la nave superior Starship y el propulsor de primera etapa Super Heavy. Aspira a reutilizar ambas etapas."
+        },
+        {
+          "h": "La idea: gran tamaño, reutilización y alta frecuencia",
+          "text": "Transportar grandes cargas y usar repetidamente los vehículos busca reducir mucho los costes. Además de lanzar satélites, contempla la Luna y Marte. Conviene distinguir la idea de reutilización total de una operación comercial estable."
+        }
+      ]
+    },
+    {
+      "title": "¿Qué cambiaría si se consigue?",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "FUNCIONAMIENTO | Más capacidad y frecuencia amplían los usos del espacio"
+        },
+        {
+          "h": "Comunicaciones | Muchos satélites a órbita",
+          "text": "Lanzar muchos satélites de forma eficiente facilitaría crear y renovar redes y podría aumentar la capacidad de comunicación."
+        },
+        {
+          "h": "Luna y Marte | Personas y suministros",
+          "text": "Se prevé transportar personal y suministros para actividades lunares y, en el futuro, hacia Marte. Persisten retos técnicos, de seguridad y otros para operar a largo plazo."
+        },
+        {
+          "h": "Industria espacial | Más equipos y aplicaciones",
+          "text": "Llevar grandes equipos y suministros podría ampliar la investigación, la observación y la fabricación en el espacio."
+        },
+        {
+          "h": "La clave es operar repetidamente",
+          "text": "El coste depende de las reutilizaciones, el mantenimiento y la frecuencia de lanzamiento. Además del éxito de un vuelo, la eficiencia continuada determina la viabilidad comercial."
+        }
+      ]
+    },
+    {
+      "title": "Vínculos con empresas japonesas",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "EMPRESAS JAPONESAS | Separar los vínculos con SpaceX de la industria espacial general"
+        },
+        {
+          "h": "KDDI (9433) | Servicios con Starlink",
+          "text": "Ofrece “au Starlink Direct” y firmó con SpaceX un acuerdo de servicio para los satélites de nueva generación “Starlink Mobile V2”. Es un vínculo de comunicaciones, distinto del suministro de piezas a Starship."
+        },
+        {
+          "h": "Toray (3402) | Compuestos de fibra de carbono",
+          "text": "Materiales para cohetes, satélites y otros usos espaciales. Contribuye a aligerar equipos, pero el uso y material dependen del vehículo. Este documento no confirma suministro directo a Starship."
+        },
+        {
+          "h": "Mitsubishi Electric (6503) | Satélites y equipos",
+          "text": "Opera en satélites, equipos de a bordo e instalaciones terrestres. Se vincula al mayor uso espacial, pero esto no demuestra operaciones directas con Starship ni efectos en pedidos o beneficios."
+        },
+        {
+          "h": "NEC (6701) | Satélites, instalaciones y datos",
+          "text": "Participa en satélites, instalaciones terrestres y procesamiento y análisis de datos. Ese vínculo no demuestra operaciones directas con Starship ni efectos en pedidos o beneficios."
+        }
+      ]
+    },
+    {
+      "title": "Mercado espacial y beneficios empresariales",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "ESTRUCTURA INDUSTRIAL | Más transporte no implica más beneficio para cada empresa"
+        },
+        {
+          "h": "Comunicaciones | Adopción y rentabilidad",
+          "text": "Más uso de comunicaciones por satélite puede ampliar cobertura y aplicaciones. El efecto sobre beneficios depende de usuarios, contratos, equipos y costes operativos."
+        },
+        {
+          "h": "Materiales | Diferencias entre vehículos",
+          "text": "Producir más cohetes y satélites puede elevar la demanda de materiales. El efecto depende del diseño, los materiales elegidos y los contratos. El éxito de Starship por sí solo no determina el beneficio de una empresa."
+        },
+        {
+          "h": "Equipos | Demanda y competencia",
+          "text": "Se espera más demanda de satélites, instalaciones terrestres y datos, pero en algunos ámbitos también puede haber competencia con SpaceX y otros. El crecimiento del mercado y los ingresos de cada empresa son asuntos distintos."
+        },
+        {
+          "text": "Starship busca transportar grandes cantidades de suministros al espacio repetidamente. Si se abarata el transporte, se amplían los posibles usos del espacio."
+        }
+      ]
+    }
+  ],
+  "pt": [
+    {
+      "title": "SpaceX e Starship",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "TRANSPORTE ESPACIAL | A reutilização total busca mudar a estrutura de custos"
+        },
+        {
+          "h": "O que é SpaceX?",
+          "text": "Empresa espacial dos EUA que desenvolve e opera foguetes e naves. Também oferece comunicação por satélite com o Starlink."
+        },
+        {
+          "h": "O que é Starship?",
+          "text": "Sistema superpesado de transporte espacial formado pela nave superior Starship e pelo propulsor de primeiro estágio Super Heavy. Busca operar reutilizando ambos os estágios."
+        },
+        {
+          "h": "A ideia: porte, reutilização e alta frequência",
+          "text": "Levar grandes cargas de uma vez e reutilizar veículos busca reduzir muito o custo espacial. Além de satélites, contempla transporte à Lua e a Marte. A proposta de reutilização total deve ser distinguida da operação comercial estável."
+        }
+      ]
+    },
+    {
+      "title": "O que muda se funcionar?",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "FUNCIONAMENTO | Mais capacidade e frequência ampliam as opções de uso do espaço"
+        },
+        {
+          "h": "Comunicações | Muitos satélites em órbita",
+          "text": "Lançar muitos satélites com eficiência pode facilitar a construção e renovação das redes e aumentar a capacidade de comunicação."
+        },
+        {
+          "h": "Lua e Marte | Pessoas e suprimentos",
+          "text": "Prevê transporte de pessoal e suprimentos para atividades lunares e, no futuro, a Marte. Operações longas ainda enfrentam desafios técnicos, de segurança e outros."
+        },
+        {
+          "h": "Indústria espacial | Mais equipamentos e usos",
+          "text": "Levar grandes equipamentos e suprimentos pode ampliar pesquisa, observação e fabricação no espaço."
+        },
+        {
+          "h": "A chave é operar repetidamente",
+          "text": "O custo depende das reutilizações, manutenção e frequência de lançamentos. Além de voos bem-sucedidos, a eficiência contínua determina a viabilidade comercial."
+        }
+      ]
+    },
+    {
+      "title": "Conexões com empresas japonesas",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "EMPRESAS JAPONESAS | Separar relações com a SpaceX e atuação no setor espacial"
+        },
+        {
+          "h": "KDDI (9433) | Serviços Starlink",
+          "text": "Oferece “au Starlink Direct” e firmou com a SpaceX um contrato de serviço para os satélites de nova geração “Starlink Mobile V2”. É uma conexão em comunicações, distinta de fornecer peças ao Starship."
+        },
+        {
+          "h": "Toray (3402) | Compósitos de fibra de carbono",
+          "text": "Fornece materiais para foguetes, satélites e outros usos espaciais. Atua na redução de peso, mas usos e materiais dependem do veículo. Este documento não confirma fornecimento direto ao Starship."
+        },
+        {
+          "h": "Mitsubishi Electric (6503) | Satélites e equipamentos",
+          "text": "Atua em satélites, equipamentos de bordo e instalações terrestres. Tem relação com a expansão do uso espacial, mas isso não comprova negócios diretos com Starship nem efeitos em pedidos ou lucros."
+        },
+        {
+          "h": "NEC (6701) | Satélites, instalações e dados",
+          "text": "Atua em satélites, instalações terrestres e processamento e análise de dados. Essa relação não comprova negócios diretos com Starship nem efeitos em pedidos ou lucros."
+        }
+      ]
+    },
+    {
+      "title": "Mercado espacial e lucros empresariais",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "ESTRUTURA INDUSTRIAL | Mais transporte não implica mais lucro em cada empresa"
+        },
+        {
+          "h": "Comunicações | Adoção e rentabilidade",
+          "text": "Mais comunicação por satélite pode ampliar cobertura e aplicações. O efeito nos lucros depende de usuários, contratos, equipamentos e custos operacionais."
+        },
+        {
+          "h": "Materiais | Cada veículo usa materiais distintos",
+          "text": "Mais produção de foguetes e satélites pode ampliar a demanda. O impacto depende de projetos, materiais adotados e contratos. O sucesso do Starship sozinho não determina o lucro de uma empresa."
+        },
+        {
+          "h": "Equipamentos | Demanda e competição",
+          "text": "Espera-se mais demanda por satélites, instalações e uso de dados, mas algumas áreas podem enfrentar concorrência da SpaceX e de outras empresas. Crescimento do mercado e receitas individuais são questões diferentes."
+        },
+        {
+          "text": "Starship busca levar grandes volumes de suprimentos ao espaço repetidamente. Se o custo cair, as possibilidades de uso do espaço se ampliam."
+        }
+      ]
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "SpaceX与Starship",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "宇宙运输｜以完全重复使用挑战宇宙运输成本结构"
+        },
+        {
+          "h": "什么是SpaceX",
+          "text": "开发、运营火箭与宇宙飞船的美国航天企业，也开展Starlink卫星通信服务。"
+        },
+        {
+          "h": "什么是Starship",
+          "text": "由上级飞船Starship与第一级大型助推器Super Heavy组成的超重型宇宙运输系统，目标是实现两级重复使用。"
+        },
+        {
+          "h": "构想核心：大型化、重复使用、高频运营",
+          "text": "通过一次运送大量货物、反复使用飞行器，力争大幅降低宇宙运输成本。除发射卫星外，也考虑月球、火星运输。应区分完全重复使用构想与稳定商业运营。"
+        }
+      ]
+    },
+    {
+      "title": "实现后会改变什么",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "运作机制｜运输能力和频率提升，拓展宇宙利用选择"
+        },
+        {
+          "h": "卫星通信｜大量卫星入轨",
+          "text": "若能高效发射大量卫星，将更容易建设、更新通信网络，也可能扩大通信容量。"
+        },
+        {
+          "h": "月球、火星｜人员与物资运输",
+          "text": "设想运送支持月面活动的人员、物资，以及未来的火星运输。长期运营仍存在技术、安全等课题。"
+        },
+        {
+          "h": "宇宙产业｜设备与用途拓展",
+          "text": "若能运输大型设备和大量物资，宇宙中的研究、观测、制造等活动范围可能扩大。"
+        },
+        {
+          "h": "关键在于能否反复运营",
+          "text": "运输费随重复使用次数、维护费、发射频率等变化。除了飞行成功，持续运营效率也左右商业可行性。"
+        }
+      ]
+    },
+    {
+      "title": "与日本企业的联系",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "日本企业｜区分与SpaceX的业务关系及宇宙产业整体参与"
+        },
+        {
+          "h": "KDDI（9433）｜利用Starlink的通信服务",
+          "text": "开展“au Starlink Direct”，并与SpaceX签订下一代卫星“Starlink Mobile V2”的服务提供协议。这是通信领域联系，不同于向Starship提供零部件。"
+        },
+        {
+          "h": "东丽（3402）｜航天用碳纤维复合材料",
+          "text": "为火箭、卫星等用途提供材料，涉及航天设备轻量化，但用途和采用材料因机型而异。本资料未确认向Starship直接供货。"
+        },
+        {
+          "h": "三菱电机（6503）｜卫星与航天设备",
+          "text": "开展卫星、机载设备、地面设施等业务。与宇宙利用扩大有联系，但并不表明与Starship直接交易，或对订单、利润的影响。"
+        },
+        {
+          "h": "NEC（6701）｜卫星、地面设施、数据利用",
+          "text": "涉及卫星、地面设施及数据处理、分析。与宇宙利用扩大有联系，但并不表明与Starship直接交易，或对订单、利润的影响。"
+        }
+      ]
+    },
+    {
+      "title": "宇宙市场扩大与企业收益",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "产业结构｜运输量增加未必直接增加各公司利润"
+        },
+        {
+          "h": "通信｜服务普及与盈利性",
+          "text": "卫星通信利用扩大，可能增加服务范围和用途；但对通信商收益的影响取决于用户数、合同条件、设备费、运营费等。"
+        },
+        {
+          "h": "材料｜采用材料因机型而异",
+          "text": "火箭、卫星增产可能扩大材料需求，但影响取决于设计、采用材料及供货合同。Starship成功本身不能决定个别企业利润增长。"
+        },
+        {
+          "h": "航天设备｜需求扩大与竞争并存",
+          "text": "卫星、地面设施、数据利用需求有望扩大，但部分业务也可能与SpaceX等竞争。市场成长和个别企业获得的收益是不同问题。"
+        },
+        {
+          "text": "Starship目标是反复向宇宙运送大量物资的机制。若运输成本下降得以实现，宇宙利用的可能性将扩大。"
+        }
+      ]
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "SpaceX與Starship",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "太空運輸｜以完全重複使用挑戰太空運輸成本結構"
+        },
+        {
+          "h": "什麼是SpaceX",
+          "text": "開發、營運火箭與太空船的美國航太企業，也提供Starlink衛星通訊服務。"
+        },
+        {
+          "h": "什麼是Starship",
+          "text": "由上級太空船Starship與第一級大型助推器Super Heavy組成的超重型太空運輸系統，目標是實現兩級重複使用。"
+        },
+        {
+          "h": "構想核心：大型化、重複使用、高頻營運",
+          "text": "透過一次運送大量貨物、反覆使用飛行器，力求大幅降低太空運輸成本。除發射衛星外，也考慮月球、火星運輸。應區分完全重複使用構想與穩定商業營運。"
+        }
+      ]
+    },
+    {
+      "title": "實現後會改變什麼",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "運作機制｜運輸能力和頻率提升，拓展太空利用選擇"
+        },
+        {
+          "h": "衛星通訊｜大量衛星入軌",
+          "text": "若能高效發射大量衛星，將更容易建設、更新通訊網路，也可能擴大通訊容量。"
+        },
+        {
+          "h": "月球、火星｜人員與物資運輸",
+          "text": "設想運送支援月面活動的人員、物資，以及未來的火星運輸。長期營運仍存在技術、安全等課題。"
+        },
+        {
+          "h": "太空產業｜設備與用途拓展",
+          "text": "若能運輸大型設備和大量物資，太空中的研究、觀測、製造等活動範圍可能擴大。"
+        },
+        {
+          "h": "關鍵在於能否反覆營運",
+          "text": "運輸費隨重複使用次數、維護費、發射頻率等變化。除了飛行成功，持續營運效率也左右商業可行性。"
+        }
+      ]
+    },
+    {
+      "title": "與日本企業的聯繫",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "日本企業｜區分與SpaceX的業務關係及太空產業整體參與"
+        },
+        {
+          "h": "KDDI（9433）｜利用Starlink的通訊服務",
+          "text": "提供「au Starlink Direct」，並與SpaceX簽訂下一代衛星「Starlink Mobile V2」的服務提供協議。這是通訊領域聯繫，不同於向Starship提供零組件。"
+        },
+        {
+          "h": "東麗（3402）｜航太用碳纖維複合材料",
+          "text": "為火箭、衛星等用途提供材料，涉及航太設備輕量化，但用途和採用材料因機型而異。本資料未確認向Starship直接供貨。"
+        },
+        {
+          "h": "三菱電機（6503）｜衛星與航太設備",
+          "text": "經營衛星、機載設備、地面設施等業務。與太空利用擴大有聯繫，但並不表明與Starship直接交易，或對訂單、利潤的影響。"
+        },
+        {
+          "h": "NEC（6701）｜衛星、地面設施、資料利用",
+          "text": "涉及衛星、地面設施及資料處理、分析。與太空利用擴大有聯繫，但並不表明與Starship直接交易，或對訂單、利潤的影響。"
+        }
+      ]
+    },
+    {
+      "title": "太空市場擴大與企業收益",
+      "subtitle": "",
+      "dense": true,
+      "blocks": [
+        {
+          "text": "產業結構｜運輸量增加未必直接增加各公司利潤"
+        },
+        {
+          "h": "通訊｜服務普及與獲利能力",
+          "text": "衛星通訊利用擴大，可能增加服務範圍和用途；但對電信商收益的影響取決於用戶數、合約條件、設備費、營運費等。"
+        },
+        {
+          "h": "材料｜採用材料因機型而異",
+          "text": "火箭、衛星增產可能擴大材料需求，但影響取決於設計、採用材料及供貨合約。Starship成功本身不能決定個別企業利潤成長。"
+        },
+        {
+          "h": "航太設備｜需求擴大與競爭並存",
+          "text": "衛星、地面設施、資料利用需求有望擴大，但部分業務也可能與SpaceX等競爭。市場成長和個別企業獲得的收益是不同問題。"
+        },
+        {
+          "text": "Starship目標是反覆向太空運送大量物資的機制。若運輸成本下降得以實現，太空利用的可能性將擴大。"
+        }
+      ]
+    }
+  ]
+}

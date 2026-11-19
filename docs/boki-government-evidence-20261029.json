@@ -1,0 +1,1017 @@
+{
+  "checked": "2026-10-29",
+  "publicationMethod": "旧論点を政府公表資料により再構成。市販教材の転載許諾を得たという判断ではない。",
+  "rights": [
+    {
+      "url": "https://www.fsa.go.jp/rules/",
+      "section": "1・著作権とPDL準拠／出典・加工表示"
+    },
+    {
+      "url": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "1、1.1、1.2"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "public-source-20261029-26",
+      "title": "取引発生時の換算",
+      "body": "外貨の金額をまず取引時点の相場で円に直して記録します。その後に決算や決済を迎えたときは、項目の性質に応じて換算し直すかを判断します。",
+      "tag": "為替換算会計",
+      "topic": "為替換算会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a924b.htm",
+      "sourceLabel": "外貨建取引等会計処理基準・改訂意見書（三1）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=80",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "三1",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-27",
+      "title": "金融資産と金融負債",
+      "body": "預金や売掛金は、現金や現金を受け取る権利に着目して金融資産に含めます。買掛金や借入金は支払義務に対応する金融負債です。設備のような事業用資産とは区別します。",
+      "tag": "金融資産および金融負債",
+      "topic": "金融資産および金融負債",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第一・一）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=109",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "第一・一",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-41",
+      "title": "保有目的による区分",
+      "body": "有価証券の評価方法は、価格の有無だけでなく、保有する目的でも変わります。売買目的、満期保有目的の債券、子会社・関連会社株式、その他の区分を先に確かめます。",
+      "tag": "有価証券",
+      "topic": "有価証券",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第三・二）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=109",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "第三・二",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-42",
+      "title": "売買目的有価証券",
+      "body": "短期的な値動きから利益を得る目的で保有する有価証券は、決算時の時価へ評価を更新します。この区分の評価差額は、その期の損益として扱います。",
+      "tag": "有価証券",
+      "topic": "有価証券",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第三・二1）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=109",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "第三・二1",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-43",
+      "title": "満期保有目的の債券",
+      "body": "満期まで持つ意図で取得した債券では、購入額と額面の差が金利の調整を表すかを確認します。金利調整なら、その差を償却原価法で残りの期間へ配分します。",
+      "tag": "有価証券",
+      "topic": "有価証券",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第三・二2・注5）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=109",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "第三・二2・注5",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-44",
+      "title": "償却原価法の計算",
+      "body": "債券の金利調整差額は、利息と合わせて期間配分を考えます。定額法を使う設問なら、額面との差を残存年数で割り、帳簿価額を毎期調整します。",
+      "tag": "有価証券",
+      "topic": "有価証券",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第三・二2・注5）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=109",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "第三・二2・注5",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-45",
+      "title": "その他有価証券",
+      "body": "その他有価証券の評価では、対象の種類と時価評価の適用条件を確認します。純資産へ入れる評価差額には税効果も反映します。売買目的の評価差額と混同しないようにします。",
+      "tag": "有価証券",
+      "topic": "有価証券",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第三・二4）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=109",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "第三・二4",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-54",
+      "title": "社債の発行と償還",
+      "body": "社債を発行して受け取る資金は、売上ではなく借入れの性質を持ちます。償還するときは、支払額と直前の負債の帳簿価額を確認して処理します。",
+      "tag": "社債",
+      "topic": "社債",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第三・五／第二・二3）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=109",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "第三・五／第二・二3",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-55",
+      "title": "社債の償却原価",
+      "body": "社債は、額面で発行する場合と額面以外で発行する場合があります。発行時の収入額と返済額の金利調整差額を、償却原価へ反映していきます。",
+      "tag": "社債",
+      "topic": "社債",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第三・五）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=109",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "第三・五",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-56",
+      "title": "デリバティブ",
+      "body": "先渡し・先物・スワップ・オプションなどでは、契約から生じる正味の権利や義務を考えます。対象の価格や金利などの変化が契約の価値に影響します。",
+      "tag": "デリバティブ取引",
+      "topic": "デリバティブ取引",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第一・一）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=109",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "第一・一",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-57",
+      "title": "ヘッジ会計の考え方",
+      "body": "ヘッジ会計は、要件を満たすリスク管理取引について、対象と手段の損益が別々の期に現れるずれを調整する考え方です。契約しただけで自動的に適用できるわけではありません。",
+      "tag": "ヘッジ会計",
+      "topic": "ヘッジ会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第五・一）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=109",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "第五・一",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-58",
+      "title": "外貨建金銭債権の決済",
+      "body": "外貨建の債権債務を決済すると、当初に記録した円の金額と、回収・支払時の円の金額が異なることがあります。この差は原則として為替差損益になります。",
+      "tag": "為替換算会計",
+      "topic": "為替換算会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a924b.htm",
+      "sourceLabel": "外貨建取引等会計処理基準・改訂意見書（三2）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=80",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "三2",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-86",
+      "title": "期末の外貨建金銭債権",
+      "body": "外貨建の金銭債権債務は、原則として期末の為替相場で円換算します。換算差額は通常、当期の為替差損益へ反映します。前払金など異なる性質の項目と区別します。",
+      "tag": "為替換算会計",
+      "topic": "為替換算会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a924b.htm",
+      "sourceLabel": "外貨建取引等会計処理基準・改訂意見書（三2）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=80",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "三2",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-87",
+      "title": "期末換算の計算",
+      "body": "期末の外貨建債権の換算差額は、外貨額が変わらなくても発生します。まず換算後の円の残高を求め、その直前の帳簿価額との差を計算します。",
+      "tag": "為替換算会計",
+      "topic": "為替換算会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a924b.htm",
+      "sourceLabel": "外貨建取引等会計処理基準・改訂意見書（三2）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=80",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "三2",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-88",
+      "title": "金融資産の消滅",
+      "body": "金融資産を帳簿から外すときは、権利を使い終えたか、失ったか、権利への支配が相手へ移ったかを確かめます。入金の有無だけでは譲渡か借入れかを判断できません。",
+      "tag": "金融資産および金融負債",
+      "topic": "金融資産および金融負債",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第二・二1）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=109",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "第二・二1",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-89",
+      "title": "金融資産の譲渡と支配",
+      "body": "譲渡した金融資産の支配移転には、譲受人の権利が法的に守られること、利益を享受できること、実質的な買戻しの権利・義務がないことなどの要件があります。",
+      "tag": "金融資産および金融負債",
+      "topic": "金融資産および金融負債",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第二・二1）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=109",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "第二・二1",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-90",
+      "title": "金融負債の消滅",
+      "body": "金融負債を消すかどうかは、契約上の義務を果たしたか、義務そのものが消えたか、第一次債務者として免責されたかに着目します。支払資金を別途準備しただけとは区別します。",
+      "tag": "金融資産および金融負債",
+      "topic": "金融資産および金融負債",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第二・二2）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=109",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "第二・二2",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-91",
+      "title": "債権譲渡の対価",
+      "body": "債権の消滅に伴い、新しい資産や負債が生じる場合があります。学習例では、現金受取額に新たな資産の時価を加え、新たな負債の時価を引いて対価を整理します。",
+      "tag": "金融資産および金融負債",
+      "topic": "金融資産および金融負債",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第二・二3）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=109",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "第二・二3",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-92",
+      "title": "譲渡原価の配分",
+      "body": "資産の一部だけが消滅し、残りを引き続き持つ場合、従前の帳簿価額を時価の割合で配分します。譲渡した部分と残した部分で配分額の合計が元の残高に一致するか検算します。",
+      "tag": "金融資産および金融負債",
+      "topic": "金融資産および金融負債",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第二・二3）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=109",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "第二・二3",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-97",
+      "title": "デリバティブの期末評価",
+      "body": "デリバティブから生じる正味の債権債務は、原則として期末時価で評価します。評価差額の損益処理と、要件を満たすヘッジ会計の特別な処理を分けて学びます。",
+      "tag": "デリバティブ取引",
+      "topic": "デリバティブ取引",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第三・四）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=109",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "第三・四",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-101",
+      "title": "繰延ヘッジ",
+      "body": "繰延ヘッジでは、ヘッジ対象の損益が現れるまで、ヘッジ手段に係る損益等の認識時期を調整します。繰り延べる場所や税効果についても適用基準を確認します。",
+      "tag": "ヘッジ会計",
+      "topic": "ヘッジ会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第五・四）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=109",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "第五・四",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-102",
+      "title": "時価ヘッジ",
+      "body": "時価ヘッジでは、所定の場合にヘッジ対象側の相場変動も損益へ反映し、手段側の損益との対応を図ります。対象を全く評価しない方法とは異なります。",
+      "tag": "ヘッジ会計",
+      "topic": "ヘッジ会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第五・四）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=109",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "第五・四",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-103",
+      "title": "ヘッジ会計の適用要件",
+      "body": "ヘッジ会計の適用には、リスク管理方針との関係が客観的に確認できることや、効果が定期的に確認されることなどが必要です。会計処理の選択前に、管理と記録を確かめます。",
+      "tag": "ヘッジ会計",
+      "topic": "ヘッジ会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第五・三）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=109",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "第五・三",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-175",
+      "title": "在外支店と在外子会社",
+      "body": "在外支店は本店と同じ法人の一部です。在外子会社は別の企業として、その財務諸表を連結へ取り込みます。この違いにより換算の手順や差額の表示が変わります。",
+      "tag": "本支店会計",
+      "topic": "本支店会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a924b.htm",
+      "sourceLabel": "外貨建取引等会計処理基準・改訂意見書（三7・8）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=80",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "三7・8",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-176",
+      "title": "外貨現金の換算",
+      "body": "在外支店で保有する外貨現金は、通常は決算相場で円へ換算します。現金の換算と、原価評価している商品等の換算は分けて計算します。",
+      "tag": "本支店会計",
+      "topic": "本支店会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a924b.htm",
+      "sourceLabel": "外貨建取引等会計処理基準・改訂意見書（三7／照合先・外貨基準一2）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=80",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "三7／照合先・外貨基準一2",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-177",
+      "title": "外貨建買掛金の換算",
+      "body": "外貨建買掛金は将来の支払義務であり、通常は期末の相場で換算します。換算後の円の負債残高と、それまでの帳簿残高を比べて差額を把握します。",
+      "tag": "本支店会計",
+      "topic": "本支店会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a924b.htm",
+      "sourceLabel": "外貨建取引等会計処理基準・改訂意見書（三2・7）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=80",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "三2・7",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-178",
+      "title": "棚卸資産の換算",
+      "body": "在外支店の商品を取得原価で評価している単純な場合は、取得時の相場に基づく円の原価を用います。簿価切下げや非貨幣性項目の換算特例を適用する場面とは区別します。",
+      "tag": "本支店会計",
+      "topic": "本支店会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a924b.htm",
+      "sourceLabel": "外貨建取引等会計処理基準・改訂意見書（三7／照合先・外貨基準二）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=80",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "三7／照合先・外貨基準二",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-179",
+      "title": "支店の損益項目",
+      "body": "在外支店の収益費用には、所定の条件のもとで期中平均相場を使える取扱いがあります。取得時相場で記録した費用性資産の費用化などは、別の扱いを確認します。",
+      "tag": "本支店会計",
+      "topic": "本支店会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a924b.htm",
+      "sourceLabel": "外貨建取引等会計処理基準・改訂意見書（三7／照合先・外貨基準二1）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=80",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "三7／照合先・外貨基準二1",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-180",
+      "title": "本店勘定の換算",
+      "body": "本店勘定は本店側の支店勘定と対応する内部残高です。未達等を整理して双方の記録を突き合わせ、外部の金銭債務と同じ発想で無条件に換算しないようにします。",
+      "tag": "本支店会計",
+      "topic": "本支店会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a924b.htm",
+      "sourceLabel": "外貨建取引等会計処理基準・改訂意見書（三7／照合先・外貨基準二2）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=80",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "三7／照合先・外貨基準二2",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-181",
+      "title": "換算後の資産合計",
+      "body": "資産合計を円換算するときは、項目ごとに適切な相場を用いてから合計します。先に外貨残高を全部足して一つの相場を掛けると、異なる換算基準を混ぜるおそれがあります。",
+      "tag": "本支店会計",
+      "topic": "本支店会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a924b.htm",
+      "sourceLabel": "外貨建取引等会計処理基準・改訂意見書（三7／照合先・外貨基準二）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=80",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "三7／照合先・外貨基準二",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-182",
+      "title": "換算差額の計算",
+      "body": "支店項目を所定の方法で換算した後、貸借の対応から換算差額を確認します。差額が生じた理由を確認し、単に金額を合わせるための不明勘定にしないようにします。",
+      "tag": "本支店会計",
+      "topic": "本支店会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a924b.htm",
+      "sourceLabel": "外貨建取引等会計処理基準・改訂意見書（三7／照合先・外貨基準二3）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=80",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "三7／照合先・外貨基準二3",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-183",
+      "title": "支店換算差額の処理",
+      "body": "在外支店に認められる換算方法を用いた結果、本店の方法との差で生じる換算差額は、当期の為替差損益として処理します。在外子会社の純資産に関する換算差額とは区別します。",
+      "tag": "本支店会計",
+      "topic": "本支店会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a924b.htm",
+      "sourceLabel": "外貨建取引等会計処理基準・改訂意見書（三7／照合先・外貨基準二3）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=80",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "三7／照合先・外貨基準二3",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-184",
+      "title": "非貨幣性項目の特例",
+      "body": "在外支店の非貨幣性項目が重要でない場合には、所定の貸借対照表項目を決算相場で換算する特例があります。本店勘定等を除くことや重要性の条件を確認します。",
+      "tag": "本支店会計",
+      "topic": "本支店会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a924b.htm",
+      "sourceLabel": "外貨建取引等会計処理基準・改訂意見書（三7／照合先・外貨基準二2）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=80",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "三7／照合先・外貨基準二2",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-256",
+      "title": "決算時の評価益の例",
+      "body": "売買目的有価証券の期末評価では、時価と直前の帳簿価額との差を求めます。評価益と売却益は、売却したかどうかという点でも区別します。",
+      "tag": "有価証券",
+      "topic": "有価証券",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第三・二1）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=109",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "第三・二1",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-307",
+      "title": "一部譲渡後に残る債権",
+      "body": "金融資産の一部譲渡で譲渡部分だけが消滅要件を満たす場合、残存部分は引き続き資産として残ります。帳簿価額の配分と、消す範囲を別々に確かめます。",
+      "tag": "金融資産および金融負債",
+      "topic": "金融資産および金融負債",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第二・二3）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=109",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "第二・二3",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-308",
+      "title": "一部譲渡の残存額の計算",
+      "body": "譲渡前の帳簿価額を、譲渡部分と残存部分の時価の比率で分けます。残存額の計算でも、分母には両部分の時価の合計を用います。",
+      "tag": "金融資産および金融負債",
+      "topic": "金融資産および金融負債",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第二・二3）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=109",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "第二・二3",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "public-source-20261029-309",
+      "title": "一部譲渡損益の総合例",
+      "body": "譲渡に伴う現金、新たに取得した資産、負担した負債を整理して対価を求め、その対価と譲渡原価を比べます。負債の発生を対価へ加えてしまわないように注意します。",
+      "tag": "金融資産および金融負債",
+      "topic": "金融資産および金融負債",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第二・二3）",
+      "verificationUrl": "https://www.asb-j.jp/jp/accounting_standards_system/details.html?topics_id=109",
+      "rightsUrl": "https://www.fsa.go.jp/rules/",
+      "licenseUrl": "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+      "section": "第二・二3",
+      "reviewed": "2026-10-29"
+    }
+  ],
+  "questions": [
+    {
+      "q": "USD640の売掛金を1ドル134円で最初に計上する。円の金額は？",
+      "a": [
+        "85,760円",
+        "86,400円",
+        "134,000円"
+      ],
+      "correct": 0,
+      "ex": "640×134＝85,760円。決算・決済時の相場は、最初の計上額とは分けて扱います。",
+      "topic": "為替換算会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a924b.htm",
+      "sourceLabel": "外貨建取引等会計処理基準・改訂意見書（三1）"
+    },
+    {
+      "q": "金融負債に分類される例は？",
+      "a": [
+        "仕入先への買掛金",
+        "自社で使う工作機械",
+        "保有する普通預金"
+      ],
+      "correct": 0,
+      "ex": "買掛金は仕入先へ支払う義務です。預金は金融資産、工作機械は通常、有形固定資産です。",
+      "topic": "金融資産および金融負債",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第一・一）"
+    },
+    {
+      "q": "有価証券の決算評価を始める前に確認するものは？",
+      "a": [
+        "保有目的の区分",
+        "株券の紙の色",
+        "取得した曜日だけ"
+      ],
+      "correct": 0,
+      "ex": "区分により時価評価か取得原価・償却原価かなどが変わります。全ての有価証券へ一律の方法を当てはめません。",
+      "topic": "有価証券",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第三・二）"
+    },
+    {
+      "q": "売買目的有価証券の決算評価差額は基本的にどこへ反映する？",
+      "a": [
+        "当期の損益",
+        "必ず資本金",
+        "一切記録しない"
+      ],
+      "correct": 0,
+      "ex": "売買目的という区分を前提に、時価評価による差額を当期損益へ計上します。",
+      "topic": "有価証券",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第三・二1）"
+    },
+    {
+      "q": "満期保有目的の債券で、取得額と額面の差が金利調整なら検討する方法は？",
+      "a": [
+        "償却原価法",
+        "必ず全額を当期売上にする",
+        "毎日額面へ戻す"
+      ],
+      "correct": 0,
+      "ex": "満期保有の意図などの区分要件を確認したうえで、金利調整差額を償却原価へ反映します。",
+      "topic": "有価証券",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第三・二2・注5）"
+    },
+    {
+      "q": "額面600,000円、取得584,000円、差額は金利調整。残存4年、設問で定額法を指定。当期1年分の増額は？",
+      "a": [
+        "4,000円",
+        "16,000円",
+        "146,000円"
+      ],
+      "correct": 0,
+      "ex": "（600,000−584,000）÷4＝4,000円。取得直後から1年間保有し、端数・期中取得は考えません。",
+      "topic": "有価証券",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第三・二2・注5）"
+    },
+    {
+      "q": "市場価格のあるその他有価証券の株式。全部純資産直入法、評価差益8,000円、税率30％、他の調整なし。税効果控除後の差額金は？",
+      "a": [
+        "5,600円",
+        "8,000円",
+        "2,400円"
+      ],
+      "correct": 0,
+      "ex": "税効果は8,000×30％＝2,400円。差額金は8,000−2,400＝5,600円。実務では適用税率・基準を確認します。",
+      "topic": "有価証券",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第三・二4）"
+    },
+    {
+      "q": "社債の償還直前の帳簿価額と支払額がともに600,000円。他の費用なし。償還による差額損益は？",
+      "a": [
+        "0円",
+        "600,000円の利益",
+        "600,000円の損失"
+      ],
+      "correct": 0,
+      "ex": "負債600,000円を消し、同額を支払うため差額は0円です。未払利息等は別に考えます。",
+      "topic": "社債",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第三・五／第二・二3）"
+    },
+    {
+      "q": "社債の発行収入と償還額の金利調整差額について用いる基本的な考え方は？",
+      "a": [
+        "償却原価として期間配分する",
+        "直ちに全額を売上とする",
+        "帳簿から常に除外する"
+      ],
+      "correct": 0,
+      "ex": "発行時と償還時の金額だけでなく、保有期間に対応する利息と帳簿価額の変化を確認します。",
+      "topic": "社債",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第三・五）"
+    },
+    {
+      "q": "金融商品に係る会計基準でデリバティブの例に挙げられるものは？",
+      "a": [
+        "スワップ取引",
+        "通常の機械の減価償却",
+        "材料の実地棚卸だけ"
+      ],
+      "correct": 0,
+      "ex": "金融資産・負債の範囲には、スワップなどの契約により生じる正味の債権・債務が含まれます。",
+      "topic": "デリバティブ取引",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第一・一）"
+    },
+    {
+      "q": "ヘッジ会計の目的に沿う説明は？",
+      "a": [
+        "対象と手段の損益の認識時期を対応させる",
+        "どの契約でも損失を消せる",
+        "値下がりを必ず防ぐ"
+      ],
+      "correct": 0,
+      "ex": "会計上の対応を図る仕組みであり、取引の経済的な損失やリスクそのものを消す制度ではありません。",
+      "topic": "ヘッジ会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第五・一）"
+    },
+    {
+      "q": "USD640の売掛金を134円で計上し、136円で全額回収。他の条件なし。為替差損益は？",
+      "a": [
+        "為替差益1,280円",
+        "為替差損1,280円",
+        "為替差益85,760円"
+      ],
+      "correct": 0,
+      "ex": "回収額87,040円−帳簿価額85,760円＝1,280円の差益です。ヘッジ会計等は考えません。",
+      "topic": "為替換算会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a924b.htm",
+      "sourceLabel": "外貨建取引等会計処理基準・改訂意見書（三2）"
+    },
+    {
+      "q": "ヘッジ等の条件のない外貨建売掛金の原則的な期末換算相場は？",
+      "a": [
+        "決算時の為替相場",
+        "常に設立時の相場",
+        "翌期の予想相場だけ"
+      ],
+      "correct": 0,
+      "ex": "金銭債権債務の原則です。外貨建の全資産を同じ方法で換算するという意味ではありません。",
+      "topic": "為替換算会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a924b.htm",
+      "sourceLabel": "外貨建取引等会計処理基準・改訂意見書（三2）"
+    },
+    {
+      "q": "売掛金USD350を142円で計上し、未回収のまま期末146円。為替差損益は？",
+      "a": [
+        "為替差益1,400円",
+        "為替差損1,400円",
+        "為替差益51,100円"
+      ],
+      "correct": 0,
+      "ex": "350×（146−142）＝1,400円。換算後残高は51,100円、当初残高は49,700円です。",
+      "topic": "為替換算会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a924b.htm",
+      "sourceLabel": "外貨建取引等会計処理基準・改訂意見書（三2）"
+    },
+    {
+      "q": "売掛金の回収により契約上の権利を行使し終えた。基本的な処理は？",
+      "a": [
+        "その売掛金の消滅を認識する",
+        "同じ売掛金を永久に残す",
+        "必ず資本金へ振り替える"
+      ],
+      "correct": 0,
+      "ex": "回収した金額に対応する債権を取り崩します。一部回収なら未回収部分まで消さないようにします。",
+      "topic": "金融資産および金融負債",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第二・二1）"
+    },
+    {
+      "q": "金融資産の譲渡による消滅認識で確認するものは？",
+      "a": [
+        "支配移転の所定の要件",
+        "契約書の文字の色だけ",
+        "振込先銀行の名称だけ"
+      ],
+      "correct": 0,
+      "ex": "資金を受け取ったという事実だけでは足りず、譲渡後に誰が権利を支配するかを検討します。",
+      "topic": "金融資産および金融負債",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第二・二1）"
+    },
+    {
+      "q": "借入金を契約どおり全額返済した。対応する借入金の扱いは？",
+      "a": [
+        "消滅を認識する",
+        "売上へ振り替えて残す",
+        "同額の資産へ変える"
+      ],
+      "correct": 0,
+      "ex": "契約上の返済義務を履行した部分について負債を取り崩します。返済以外に残る義務があれば別途確認します。",
+      "topic": "金融資産および金融負債",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第二・二2）"
+    },
+    {
+      "q": "消滅要件を満たす譲渡。現金94,000円、新資産時価3,000円、新負債時価4,000円。他の条件なし。対価は？",
+      "a": [
+        "93,000円",
+        "101,000円",
+        "87,000円"
+      ],
+      "correct": 0,
+      "ex": "94,000＋3,000−4,000＝93,000円です。譲渡原価との差額が譲渡損益になります。",
+      "topic": "金融資産および金融負債",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第二・二3）"
+    },
+    {
+      "q": "帳簿価額180,000円、譲渡部分時価135,000円、残存部分時価45,000円。譲渡部分の原価は？",
+      "a": [
+        "135,000円",
+        "45,000円",
+        "180,000円"
+      ],
+      "correct": 0,
+      "ex": "180,000×135,000÷（135,000＋45,000）＝135,000円。残存部分は45,000円です。",
+      "topic": "金融資産および金融負債",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第二・二3）"
+    },
+    {
+      "q": "ヘッジ会計等を適用しないデリバティブの評価差額は原則どこへ計上する？",
+      "a": [
+        "当期損益",
+        "必ず資本金",
+        "常に帳簿外"
+      ],
+      "correct": 0,
+      "ex": "原則は時価評価と当期損益への反映です。ヘッジ会計の適用可否は別途要件を確認します。",
+      "topic": "デリバティブ取引",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第三・四）"
+    },
+    {
+      "q": "繰延ヘッジの基本的な考え方は？",
+      "a": [
+        "対象の損益認識まで手段の損益等を繰り延べる",
+        "損失を永久に消す",
+        "手段を必ず取得原価のままにする"
+      ],
+      "correct": 0,
+      "ex": "認識時期を対応させる処理です。対象の消滅等が起きたときの処理も別に確認する必要があります。",
+      "topic": "ヘッジ会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第五・四）"
+    },
+    {
+      "q": "時価ヘッジで対応を図る方法は？",
+      "a": [
+        "対象側の相場変動も損益へ反映する",
+        "全取引を資本金へ振り替える",
+        "対象も手段も記録しない"
+      ],
+      "correct": 0,
+      "ex": "適用できる対象と要件の確認が前提です。全ての資産を自由に時価ヘッジへ変更できるわけではありません。",
+      "topic": "ヘッジ会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第五・四）"
+    },
+    {
+      "q": "ヘッジ会計の適用に必要な確認として適切なのは？",
+      "a": [
+        "リスク管理方針との整合と効果の定期確認",
+        "契約の呼び名がヘッジであることだけ",
+        "損失が出なかったことだけ"
+      ],
+      "correct": 0,
+      "ex": "取引時の要件だけでなく、その後の効果確認も重要です。具体的な適用は基準・実務指針に従います。",
+      "topic": "ヘッジ会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第五・三）"
+    },
+    {
+      "q": "在外支店と在外子会社の換算で適切な姿勢は？",
+      "a": [
+        "同じ処理と決めず区別する",
+        "全ての差額を同じ勘定にする",
+        "どちらも常に換算不要とする"
+      ],
+      "correct": 0,
+      "ex": "在外支店の換算差額と、在外子会社の為替換算調整勘定を混同しないようにします。",
+      "topic": "本支店会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a924b.htm",
+      "sourceLabel": "外貨建取引等会計処理基準・改訂意見書（三7・8）"
+    },
+    {
+      "q": "外貨現金USD360、決算相場154円。円換算額は？",
+      "a": [
+        "55,440円",
+        "36,000円",
+        "51,840円"
+      ],
+      "correct": 0,
+      "ex": "360×154＝55,440円です。現金以外の項目へ同じ相場を無条件に適用する例ではありません。",
+      "topic": "本支店会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a924b.htm",
+      "sourceLabel": "外貨建取引等会計処理基準・改訂意見書（三7／照合先・外貨基準一2）"
+    },
+    {
+      "q": "在外支店の買掛金USD450、期末154円。ヘッジ等なし。円換算額は？",
+      "a": [
+        "69,300円",
+        "45,000円",
+        "55,440円"
+      ],
+      "correct": 0,
+      "ex": "450×154＝69,300円です。仕入商品の評価額とは別に買掛金の残高を計算します。",
+      "topic": "本支店会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a924b.htm",
+      "sourceLabel": "外貨建取引等会計処理基準・改訂意見書（三2・7）"
+    },
+    {
+      "q": "支店の商品USD420を取得原価評価。取得時136円、切下げ・特例なし。円換算額は？",
+      "a": [
+        "57,120円",
+        "64,680円",
+        "42,000円"
+      ],
+      "correct": 0,
+      "ex": "420×136＝57,120円です。期末相場154円を使うという条件ではありません。",
+      "topic": "本支店会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a924b.htm",
+      "sourceLabel": "外貨建取引等会計処理基準・改訂意見書（三7／照合先・外貨基準二）"
+    },
+    {
+      "q": "在外支店の収益費用に期中平均相場を使う取扱いについて正しいものは？",
+      "a": [
+        "除外される項目などの条件がある",
+        "どの費用も例外なく平均相場にする",
+        "本店勘定だけに使う"
+      ],
+      "correct": 0,
+      "ex": "費用性資産の費用化額等を区別します。平均相場を使えるという一文だけで全項目を処理しません。",
+      "topic": "本支店会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a924b.htm",
+      "sourceLabel": "外貨建取引等会計処理基準・改訂意見書（三7／照合先・外貨基準二1）"
+    },
+    {
+      "q": "在外支店の本店勘定について先に確認するものは？",
+      "a": [
+        "本店側の支店勘定との対応",
+        "商品の売価だけ",
+        "銀行の営業時間だけ"
+      ],
+      "correct": 0,
+      "ex": "本支店の内部残高をそろえてから合算・消去します。外貨基準の特例でも支店の本店勘定等は区別されています。",
+      "topic": "本支店会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a924b.htm",
+      "sourceLabel": "外貨建取引等会計処理基準・改訂意見書（三7／照合先・外貨基準二2）"
+    },
+    {
+      "q": "支店の外貨現金USD180を154円、原価評価の商品USD420を取得時136円で換算。他の資産なし。合計は？",
+      "a": [
+        "84,840円",
+        "92,400円",
+        "81,600円"
+      ],
+      "correct": 0,
+      "ex": "現金27,720円＋商品57,120円＝84,840円。商品には切下げや換算特例を適用しない前提です。",
+      "topic": "本支店会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a924b.htm",
+      "sourceLabel": "外貨建取引等会計処理基準・改訂意見書（三7／照合先・外貨基準二）"
+    },
+    {
+      "q": "換算後の支店資産84,840円、外部負債30,800円、本店勘定36,000円、当期利益9,640円。他の項目なし。差額は？",
+      "a": [
+        "為替差益8,400円",
+        "為替差損8,400円",
+        "為替差益18,040円"
+      ],
+      "correct": 0,
+      "ex": "84,840−30,800−36,000−9,640＝8,400円。貸借を一致させる貸方の差額を為替差益として扱う設例です。",
+      "topic": "本支店会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a924b.htm",
+      "sourceLabel": "外貨建取引等会計処理基準・改訂意見書（三7／照合先・外貨基準二3）"
+    },
+    {
+      "q": "在外支店を本店と異なる認められた方法で換算した差額の基本的な処理先は？",
+      "a": [
+        "当期の為替差損益",
+        "必ず為替換算調整勘定",
+        "必ず売上高"
+      ],
+      "correct": 0,
+      "ex": "在外支店の取扱いです。在外子会社の財務諸表換算と区別して説明します。",
+      "topic": "本支店会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a924b.htm",
+      "sourceLabel": "外貨建取引等会計処理基準・改訂意見書（三7／照合先・外貨基準二3）"
+    },
+    {
+      "q": "非貨幣性項目が重要でない支店の換算特例でも区別する項目は？",
+      "a": [
+        "支店の本店勘定等",
+        "全ての外貨現金",
+        "全ての買掛金"
+      ],
+      "correct": 0,
+      "ex": "原則の方法と例外の条件を区別します。特例を使えば全ての残高を無条件に決算相場へ変えるという意味ではありません。",
+      "topic": "本支店会計",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a924b.htm",
+      "sourceLabel": "外貨建取引等会計処理基準・改訂意見書（三7／照合先・外貨基準二2）"
+    },
+    {
+      "q": "売買目的有価証券の帳簿42,000円、期末時価47,600円。他の調整なし。評価益は？",
+      "a": [
+        "5,600円",
+        "47,600円",
+        "42,000円"
+      ],
+      "correct": 0,
+      "ex": "47,600−42,000＝5,600円です。売却代金を受け取った設例ではありません。",
+      "topic": "有価証券",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第三・二1）"
+    },
+    {
+      "q": "譲渡部分だけが消滅要件を満たし、残存部分の権利を保有している。残存部分の扱いは？",
+      "a": [
+        "配分後の帳簿価額を残す",
+        "全ての債権を必ずゼロにする",
+        "全額を売上にする"
+      ],
+      "correct": 0,
+      "ex": "一部消滅の処理では、残存部分まで消去しません。時価比率による帳簿価額の配分を確認します。",
+      "topic": "金融資産および金融負債",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第二・二3）"
+    },
+    {
+      "q": "帳簿180,000円、譲渡部分時価180,000円、残存部分時価60,000円。残存部分の帳簿価額は？",
+      "a": [
+        "45,000円",
+        "60,000円",
+        "135,000円"
+      ],
+      "correct": 0,
+      "ex": "180,000×60,000÷（180,000＋60,000）＝45,000円。譲渡部分135,000円と合わせて元の180,000円になります。",
+      "topic": "金融資産および金融負債",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第二・二3）"
+    },
+    {
+      "q": "消滅要件を満たす譲渡。原価135,000円、現金133,000円、新資産4,000円、新負債6,000円。譲渡損益は？",
+      "a": [
+        "譲渡損4,000円",
+        "譲渡益8,000円",
+        "譲渡損2,000円"
+      ],
+      "correct": 0,
+      "ex": "対価は133,000＋4,000−6,000＝131,000円。131,000−135,000＝マイナス4,000円、したがって譲渡損です。",
+      "topic": "金融資産および金融負債",
+      "sourceUrl": "https://www.fsa.go.jp/p_mof/singikai/kaikei/tosin/1a921c.htm",
+      "sourceLabel": "金融商品に係る会計基準（第二・二3）"
+    }
+  ]
+}

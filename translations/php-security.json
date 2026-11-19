@@ -1,0 +1,502 @@
+{
+  "en": [
+    {
+      "title": "What happened to PHP?",
+      "subtitle": "01 / OVERVIEW | PHP2Shell: an issue in PHP itself, which powers websites",
+      "blocks": [
+        {
+          "text": "Risk of attack even before login\nOn October 21, 2026, the PHP development team released fixes for two critical vulnerabilities. Under the right conditions, an unauthenticated attacker could execute unauthorized code on the server."
+        },
+        {
+          "text": "What is PHP?\nA server-side programming language used by WordPress and other systems. It generates pages and processes user input."
+        },
+        {
+          "text": "CVE-2026-109618\nHandling of an out-of-memory condition can leave internal data incomplete; invalid memory operations may lead to code execution."
+        },
+        {
+          "text": "CVE-2026-109619\nStale internal state involving freed memory may remain and be used in a subsequent request, potentially leading to code execution."
+        },
+        {
+          "text": "Both have a severity of 9.2 / 10\n“Critical” under CVSS v4.0. Whether an attack succeeds also depends on the configuration and settings."
+        },
+        {
+          "text": "Strengthening the admin password alone does not address the root problem.\nTODOROKI / CYBER SECURITY / 2026.10.23"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "What are the risks?",
+      "subtitle": "02 / RISK | The damage depends on PHP's permissions and accessible information",
+      "blocks": [
+        {
+          "text": "01 Information leakage\nServer configuration, credentials and information in accessible databases could be stolen."
+        },
+        {
+          "text": "02 Website tampering\nRewritten pages or links and fake input forms could also harm users."
+        },
+        {
+          "text": "03 Service disruption and persistent intrusion\nDisrupted processing or malicious files could stop business operations or enable re-entry."
+        },
+        {
+          "text": "Not just WordPress\nPHP's official guidance broadly covers PHP environments processing web requests, including PHP-FPM, Apache mod_php, php-cgi, FrankenPHP and LiteSpeed."
+        },
+        {
+          "text": "For mod_php in particular, there are demonstrations of an attack succeeding before application code runs. A login screen alone is no assurance."
+        },
+        {
+          "text": "These are possible consequences, not a claim that every website has already been compromised.\nTODOROKI / CYBER SECURITY / 2026.10.23"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "The fundamental fix: update PHP itself",
+      "subtitle": "03 / UPDATE | Check separately from WordPress core and plugin updates",
+      "blocks": [
+        {
+          "text": "Versions containing these fixes\nPHP 8.2: 8.2.35\nPHP 8.3: 8.3.36\nPHP 8.4: 8.4.27\nPHP 8.5: 8.5.12"
+        },
+        {
+          "text": "Use the fixed version above or a later version in the same branch, or a package whose distributor has applied these fixes. Do not judge by the displayed version alone; also check the provider's announcement."
+        },
+        {
+          "text": "Check → preserve → update → inspect\n1. Check the server control panel or provider for PHP use and patch status.\n2. Back up files and databases and check compatibility.\n3. Update PHP, restart required processes and check for missed updates.\n4. Check page display, login behavior, suspicious files and traffic."
+        },
+        {
+          "text": "Regular support for PHP itself has ended for PHP 8.1 and earlier. Ask the distributor about available fixes and move toward a supported branch."
+        },
+        {
+          "text": "For shared hosting, ask: “Have these two CVEs been addressed?”\nTODOROKI / CYBER SECURITY / 2026.10.23"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "What if you cannot update?",
+      "subtitle": "04 / ACTION | Temporary measures, incident response and steps for ordinary users",
+      "blocks": [
+        {
+          "text": "Do not assume temporary measures make you safe\nOfficial settings changes can reduce some attack paths, but only updating fully resolves the issue. Consult the administrator and consider restricting access or temporarily stopping affected services."
+        },
+        {
+          "text": "Do not copy configuration values blindly\nDisabling upload progress is a mitigation for specific paths. Changing memory limits can affect availability; assess the entire environment."
+        },
+        {
+          "text": "If intrusion is suspected, updating is not the end\nA fixed version does not remove malicious files already installed. Preserve logs and other evidence, investigate the scope and, if needed, restore from a safe environment and change credentials."
+        },
+        {
+          "text": "Ordinary users should check official notices\nThe operator must fix its server. Read service warnings and stop entering information into unusual login or payment screens. Follow announced procedures through the official app or a known official website."
+        },
+        {
+          "text": "“Displaying normally” alone does not establish safety.\nTODOROKI / CYBER SECURITY / 2026.10.23"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    }
+  ],
+  "es": [
+    {
+      "title": "¿Qué ha ocurrido con PHP?",
+      "subtitle": "01 / PANORAMA | PHP2Shell: un problema del propio PHP que sostiene los sitios web",
+      "blocks": [
+        {
+          "text": "Riesgo de ataque incluso antes de iniciar sesión\nEl 21 de octubre de 2026, el equipo de PHP publicó correcciones para dos vulnerabilidades críticas. Si se dan ciertas condiciones, un atacante sin autenticar puede ejecutar código no autorizado en el servidor."
+        },
+        {
+          "text": "¿Qué es PHP?\nLenguaje de programación del servidor usado por WordPress y otros sistemas. Genera páginas y procesa los datos introducidos."
+        },
+        {
+          "text": "CVE-2026-109618\nEl tratamiento de la falta de memoria puede dejar datos internos incompletos; operaciones de memoria indebidas podrían permitir ejecutar código."
+        },
+        {
+          "text": "CVE-2026-109619\nPuede persistir un estado interno antiguo relacionado con memoria liberada y usarse en una petición posterior, posibilitando la ejecución de código."
+        },
+        {
+          "text": "Ambas tienen una gravedad de 9.2 / 10\n“Crítica” en CVSS v4.0. El éxito real del ataque también depende de la configuración y los ajustes."
+        },
+        {
+          "text": "Reforzar solo la contraseña de administración no resuelve el problema de raíz.\nTODOROKI / CIBERSEGURIDAD / 2026.10.23"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "¿Cuáles son los riesgos?",
+      "subtitle": "02 / RIESGO | El daño depende de los permisos de PHP y de la información accesible",
+      "blocks": [
+        {
+          "text": "01 Filtración de información\nPodrían robarse ajustes del servidor, credenciales e información de bases de datos accesibles."
+        },
+        {
+          "text": "02 Manipulación del sitio\nModificar páginas o enlaces e instalar formularios falsos también podría perjudicar a los usuarios."
+        },
+        {
+          "text": "03 Interrupción del servicio e intrusión persistente\nObstaculizar procesos o instalar archivos maliciosos podría detener la actividad o permitir nuevas intrusiones."
+        },
+        {
+          "text": "No afecta solo a WordPress\nPHP advierte ampliamente sobre los entornos que procesan peticiones web, incluidos PHP-FPM, mod_php de Apache, php-cgi, FrankenPHP y LiteSpeed."
+        },
+        {
+          "text": "En particular, existen demostraciones en mod_php de ataques que funcionan antes de ejecutarse el código de la aplicación. Una pantalla de inicio de sesión no basta para confiarse."
+        },
+        {
+          "text": "Son daños posibles; no significa que todos los sitios estén comprometidos.\nTODOROKI / CIBERSEGURIDAD / 2026.10.23"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "La solución de raíz: actualizar PHP",
+      "subtitle": "03 / ACTUALIZACIÓN | Comprobar por separado del núcleo de WordPress y sus complementos",
+      "blocks": [
+        {
+          "text": "Versiones que incorporan estas correcciones\nPHP 8.2: 8.2.35\nPHP 8.3: 8.3.36\nPHP 8.4: 8.4.27\nPHP 8.5: 8.5.12"
+        },
+        {
+          "text": "Usar estas versiones corregidas o posteriores de la misma rama, o paquetes cuyo distribuidor haya aplicado los arreglos. No juzgar solo por la versión mostrada; consultar también el aviso del proveedor."
+        },
+        {
+          "text": "Comprobar → preservar → actualizar → inspeccionar\n1. Consultar en el panel o al proveedor si se usa PHP y su estado de corrección.\n2. Respaldar archivos y bases de datos y comprobar compatibilidad.\n3. Actualizar PHP, reiniciar los procesos necesarios y buscar actualizaciones omitidas.\n4. Revisar la visualización, el acceso, archivos y comunicaciones sospechosos."
+        },
+        {
+          "text": "El soporte ordinario de PHP 8.1 y anteriores ha finalizado. Consultar al distribuidor sobre las correcciones y avanzar hacia una rama con soporte."
+        },
+        {
+          "text": "En alojamiento compartido, preguntar: “¿Se han corregido estos dos CVE?”\nTODOROKI / CIBERSEGURIDAD / 2026.10.23"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "¿Qué hacer si no se puede actualizar?",
+      "subtitle": "04 / ACCIÓN | Medidas temporales, respuesta a incidentes y acciones de los usuarios",
+      "blocks": [
+        {
+          "text": "No considerar seguras las medidas temporales por sí solas\nLos cambios oficiales de ajustes reducen algunas vías de ataque, pero solo actualizar resuelve completamente el problema. Consultar al administrador y valorar restringir el acceso o detener temporalmente los servicios afectados."
+        },
+        {
+          "text": "No copiar valores de configuración sin evaluarlos\nDesactivar el progreso de subida mitiga rutas concretas. Cambiar los límites de memoria puede afectar a la disponibilidad; evaluar todo el entorno."
+        },
+        {
+          "text": "Si se sospecha una intrusión, no terminar con la actualización\nLa versión corregida no elimina archivos maliciosos ya instalados. Preservar registros y pruebas e investigar el alcance. Si es necesario, restaurar desde un entorno seguro y cambiar credenciales."
+        },
+        {
+          "text": "Los usuarios deben consultar los avisos oficiales\nCorresponde al operador corregir su servidor. Revisar las advertencias y dejar de introducir datos en pantallas de acceso o pago extrañas. Realizar los trámites anunciados desde la aplicación oficial o una web oficial conocida."
+        },
+        {
+          "text": "Que “se muestre normalmente” no demuestra seguridad.\nTODOROKI / CIBERSEGURIDAD / 2026.10.23"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    }
+  ],
+  "pt": [
+    {
+      "title": "O que aconteceu com o PHP?",
+      "subtitle": "01 / VISÃO GERAL | PHP2Shell: um problema no próprio PHP que sustenta sites",
+      "blocks": [
+        {
+          "text": "Risco de ataque mesmo antes do login\nEm 21 de outubro de 2026, a equipe do PHP publicou correções para duas vulnerabilidades críticas. Em determinadas condições, um invasor não autenticado pode executar código não autorizado no servidor."
+        },
+        {
+          "text": "O que é PHP?\nLinguagem de programação do lado do servidor usada pelo WordPress e outros sistemas. Gera páginas e processa dados inseridos."
+        },
+        {
+          "text": "CVE-2026-109618\nO tratamento da falta de memória pode deixar dados internos incompletos; operações inválidas de memória podem levar à execução de código."
+        },
+        {
+          "text": "CVE-2026-109619\nUm estado interno antigo ligado à memória liberada pode permanecer e ser usado em uma requisição posterior, podendo levar à execução de código."
+        },
+        {
+          "text": "Ambas têm gravidade de 9.2 / 10\n“Crítica” no CVSS v4.0. O sucesso real do ataque também depende da configuração e dos ajustes."
+        },
+        {
+          "text": "Reforçar apenas a senha administrativa não resolve a causa do problema.\nTODOROKI / SEGURANÇA CIBERNÉTICA / 2026.10.23"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "Quais são os riscos?",
+      "subtitle": "02 / RISCO | Os danos dependem das permissões do PHP e das informações acessíveis",
+      "blocks": [
+        {
+          "text": "01 Vazamento de informações\nConfigurações do servidor, credenciais e dados de bancos acessíveis podem ser roubados."
+        },
+        {
+          "text": "02 Alteração do site\nPáginas ou links modificados e formulários falsos também podem prejudicar os usuários."
+        },
+        {
+          "text": "03 Interrupção do serviço e invasão persistente\nInterferir no processamento ou instalar arquivos maliciosos pode paralisar operações ou permitir novas invasões."
+        },
+        {
+          "text": "Não se limita ao WordPress\nA orientação oficial abrange amplamente ambientes PHP que processam requisições web, incluindo PHP-FPM, mod_php do Apache, php-cgi, FrankenPHP e LiteSpeed."
+        },
+        {
+          "text": "No mod_php, em particular, há demonstrações de ataques que funcionam antes da execução do código da aplicação. Uma tela de login não basta para ficar tranquilo."
+        },
+        {
+          "text": "São danos possíveis; não significa que todos os sites já foram invadidos.\nTODOROKI / SEGURANÇA CIBERNÉTICA / 2026.10.23"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "A solução fundamental: atualizar o PHP",
+      "subtitle": "03 / ATUALIZAÇÃO | Verificar separadamente do núcleo e dos plugins do WordPress",
+      "blocks": [
+        {
+          "text": "Versões que contêm estas correções\nPHP 8.2: 8.2.35\nPHP 8.3: 8.3.36\nPHP 8.4: 8.4.27\nPHP 8.5: 8.5.12"
+        },
+        {
+          "text": "Usar essas versões corrigidas ou posteriores da mesma série, ou pacotes cujo distribuidor tenha aplicado as correções. Não julgar apenas pela versão exibida; consultar também o comunicado do fornecedor."
+        },
+        {
+          "text": "Verificar → preservar → atualizar → inspecionar\n1. Verificar no painel ou com o provedor se PHP é utilizado e o estado das correções.\n2. Fazer backup dos arquivos e bancos de dados e verificar compatibilidade.\n3. Atualizar PHP, reiniciar processos necessários e verificar atualizações pendentes.\n4. Conferir exibição, login, arquivos e comunicações suspeitos."
+        },
+        {
+          "text": "O suporte regular do PHP 8.1 e anteriores terminou. Consultar o distribuidor sobre correções e avançar para uma série com suporte."
+        },
+        {
+          "text": "Em hospedagem compartilhada, perguntar: “Estes dois CVEs foram corrigidos?”\nTODOROKI / SEGURANÇA CIBERNÉTICA / 2026.10.23"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "E se não for possível atualizar?",
+      "subtitle": "04 / AÇÃO | Medidas temporárias, resposta a incidentes e ações dos usuários",
+      "blocks": [
+        {
+          "text": "Não considerar apenas medidas temporárias como segurança\nMudanças oficiais de configuração podem reduzir alguns caminhos de ataque, mas apenas a atualização resolve totalmente. Consultar o administrador e considerar restrição de acesso ou suspensão temporária dos serviços afetados."
+        },
+        {
+          "text": "Não copiar valores de configuração sem avaliar\nDesativar o progresso de upload mitiga caminhos específicos. Mudar limites de memória pode afetar a disponibilidade; avaliar todo o ambiente."
+        },
+        {
+          "text": "Se houver suspeita de invasão, não encerrar na atualização\nA versão corrigida não remove arquivos maliciosos já instalados. Preservar logs e evidências e investigar o alcance. Se necessário, restaurar a partir de um ambiente seguro e mudar credenciais."
+        },
+        {
+          "text": "Usuários devem consultar comunicados oficiais\nCabe ao operador corrigir o servidor. Ler alertas e parar de inserir dados em telas de login ou pagamento incomuns. Seguir os procedimentos anunciados pelo aplicativo oficial ou site oficial conhecido."
+        },
+        {
+          "text": "“Exibir normalmente” por si só não comprova segurança.\nTODOROKI / SEGURANÇA CIBERNÉTICA / 2026.10.23"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "PHP发生了什么？",
+      "subtitle": "01 / 概览 | PHP2Shell：支撑网站运行的PHP本身出现问题",
+      "blocks": [
+        {
+          "text": "登录前也可能遭到攻击\n2026年10月21日，PHP开发团队发布了两项严重漏洞的修复版本。条件满足时，未经身份验证的攻击者可能在服务器上执行非法代码。"
+        },
+        {
+          "text": "什么是PHP？\nWordPress等系统使用的服务器端编程语言，负责生成页面和处理输入内容。"
+        },
+        {
+          "text": "CVE-2026-109618\n内存不足时的处理可能使内部数据处于不完整状态，非法内存操作可能导致代码执行。"
+        },
+        {
+          "text": "CVE-2026-109619\n与已释放内存有关的旧内部状态可能残留，并在后续请求中被使用，从而可能导致代码执行。"
+        },
+        {
+          "text": "两项严重性评分均为9.2 / 10\n按CVSS v4.0属于“严重”。实际攻击是否成功也取决于架构和配置。"
+        },
+        {
+          "text": "仅加强管理后台密码无法从根本上防御。\nTODOROKI / 网络安全 / 2026.10.23"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "有哪些危险？",
+      "subtitle": "02 / 风险 | 损害范围取决于PHP的权限及可访问的信息",
+      "blocks": [
+        {
+          "text": "01 信息泄露\n服务器配置、身份凭据以及可连接数据库中的信息等可能被窃取。"
+        },
+        {
+          "text": "02 网站遭到篡改\n页面或链接被改写、设置虚假输入页面等，也可能使损害波及用户。"
+        },
+        {
+          "text": "03 服务停止及入侵长期化\n干扰处理或植入恶意文件可能造成营业中断或再次入侵。"
+        },
+        {
+          "text": "不只是WordPress\nPHP官方广泛提醒处理网络请求的PHP环境注意，包括PHP-FPM、Apache的mod_php、php-cgi、FrankenPHP、LiteSpeed等。"
+        },
+        {
+          "text": "尤其是mod_php，已有在应用代码运行前攻击便能成功的演示案例。仅设置登录页面并不能放心。"
+        },
+        {
+          "text": "这里列出的是可能的损害，并不意味着所有网站都已被入侵。\nTODOROKI / 网络安全 / 2026.10.23"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "根本对策是更新PHP本身",
+      "subtitle": "03 / 更新 | 与WordPress本体及插件更新分开确认",
+      "blocks": [
+        {
+          "text": "包含本次修复的版本\nPHP 8.2：8.2.35\nPHP 8.3：8.3.36\nPHP 8.4：8.4.27\nPHP 8.5：8.5.12"
+        },
+        {
+          "text": "使用同系列上述修复版及之后的版本，或使用发行方已应用本次修复的软件包。不要只凭显示的版本判断，也要查看提供方公告。"
+        },
+        {
+          "text": "确认 → 保全 → 更新 → 检查\n1. 在服务器控制面板或向签约服务商确认是否使用PHP及修复状况。\n2. 备份文件和数据库，确认兼容性。\n3. 更新PHP，重启必要进程，检查有无遗漏更新。\n4. 检查页面显示、登录行为以及可疑文件和通信。"
+        },
+        {
+          "text": "PHP 8.1及更早版本的常规支持已经结束。应向发行方确认修复供应情况，并推进迁移到仍受支持的系列。"
+        },
+        {
+          "text": "租用服务器应确认：“本次两个CVE是否已经处理？”\nTODOROKI / 网络安全 / 2026.10.23"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "无法更新时怎么办？",
+      "subtitle": "04 / 行动 | 应急措施、入侵后处理及普通用户可做之事",
+      "blocks": [
+        {
+          "text": "不要仅凭应急措施判断“安全”\n官方有可减少部分攻击路径的配置变更，但彻底解决只能靠更新。应与管理员商量，并考虑限制访问或暂时停止相关服务。"
+        },
+        {
+          "text": "不要照抄配置值\n禁用上传进度功能等只是针对特定路径的缓解措施。调整内存限制也可能影响可用性，须结合整体环境判断。"
+        },
+        {
+          "text": "怀疑已遭入侵，不能更新后就结束\n修复版本不会自动删除已经植入的恶意文件。应保全日志等证据，调查入侵范围；必要时从安全环境恢复并更换身份凭据。"
+        },
+        {
+          "text": "普通用户应查看官方指引\n对方服务器由运营方修复。应查看服务警示，在不自然的登录或支付页面停止输入。按公告办理手续时，应通过官方应用或已知的官方网站进入。"
+        },
+        {
+          "text": "仅仅“显示正常”并不能判断安全性。\nTODOROKI / 网络安全 / 2026.10.23"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "PHP發生了什麼？",
+      "subtitle": "01 / 概覽 | PHP2Shell：支撐網站運作的PHP本身出現問題",
+      "blocks": [
+        {
+          "text": "登入前也可能遭到攻擊\n2026年10月21日，PHP開發團隊發布了兩項嚴重漏洞的修復版本。條件滿足時，未經身分驗證的攻擊者可能在伺服器上執行非法程式碼。"
+        },
+        {
+          "text": "什麼是PHP？\nWordPress等系統使用的伺服器端程式語言，負責產生頁面和處理輸入內容。"
+        },
+        {
+          "text": "CVE-2026-109618\n記憶體不足時的處理可能使內部資料處於不完整狀態，非法記憶體操作可能導致程式碼執行。"
+        },
+        {
+          "text": "CVE-2026-109619\n與已釋放記憶體有關的舊內部狀態可能殘留，並在後續請求中被使用，從而可能導致程式碼執行。"
+        },
+        {
+          "text": "兩項嚴重性評分均為9.2 / 10\n按CVSS v4.0屬於「嚴重」。實際攻擊是否成功也取決於架構和設定。"
+        },
+        {
+          "text": "僅加強管理後台密碼無法從根本上防禦。\nTODOROKI / 網路安全 / 2026.10.23"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "有哪些危險？",
+      "subtitle": "02 / 風險 | 損害範圍取決於PHP的權限及可存取的資訊",
+      "blocks": [
+        {
+          "text": "01 資訊外洩\n伺服器設定、身分憑證以及可連接資料庫中的資訊等可能被竊取。"
+        },
+        {
+          "text": "02 網站遭到竄改\n頁面或連結被改寫、設置虛假輸入頁面等，也可能使損害波及使用者。"
+        },
+        {
+          "text": "03 服務停止及入侵長期化\n干擾處理或植入惡意檔案可能造成營業中斷或再次入侵。"
+        },
+        {
+          "text": "不只是WordPress\nPHP官方廣泛提醒處理網路請求的PHP環境注意，包括PHP-FPM、Apache的mod_php、php-cgi、FrankenPHP、LiteSpeed等。"
+        },
+        {
+          "text": "尤其是mod_php，已有在應用程式碼運作前攻擊便能成功的示範案例。僅設置登入頁面並不能放心。"
+        },
+        {
+          "text": "這裡列出的是可能的損害，並不意味著所有網站都已被入侵。\nTODOROKI / 網路安全 / 2026.10.23"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "根本對策是更新PHP本身",
+      "subtitle": "03 / 更新 | 與WordPress本體及外掛更新分開確認",
+      "blocks": [
+        {
+          "text": "包含本次修復的版本\nPHP 8.2：8.2.35\nPHP 8.3：8.3.36\nPHP 8.4：8.4.27\nPHP 8.5：8.5.12"
+        },
+        {
+          "text": "使用同系列上述修復版及之後的版本，或使用發行方已套用本次修復的套件。不要只憑顯示的版本判斷，也要查看提供方公告。"
+        },
+        {
+          "text": "確認 → 保全 → 更新 → 檢查\n1. 在伺服器控制面板或向簽約服務商確認是否使用PHP及修復狀況。\n2. 備份檔案和資料庫，確認相容性。\n3. 更新PHP，重新啟動必要程序，檢查有無遺漏更新。\n4. 檢查頁面顯示、登入行為以及可疑檔案和通訊。"
+        },
+        {
+          "text": "PHP 8.1及更早版本的常規支援已經結束。應向發行方確認修復供應情況，並推進遷移到仍受支援的系列。"
+        },
+        {
+          "text": "租用伺服器應確認：「本次兩個CVE是否已經處理？」\nTODOROKI / 網路安全 / 2026.10.23"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "無法更新時怎麼辦？",
+      "subtitle": "04 / 行動 | 應急措施、入侵後處理及一般使用者可做之事",
+      "blocks": [
+        {
+          "text": "不要僅憑應急措施判斷「安全」\n官方有可減少部分攻擊路徑的設定變更，但徹底解決只能靠更新。應與管理員商量，並考慮限制存取或暫時停止相關服務。"
+        },
+        {
+          "text": "不要照抄設定值\n停用上傳進度功能等只是針對特定路徑的緩解措施。調整記憶體限制也可能影響可用性，須結合整體環境判斷。"
+        },
+        {
+          "text": "懷疑已遭入侵，不能更新後就結束\n修復版本不會自動刪除已經植入的惡意檔案。應保全日誌等證據，調查入侵範圍；必要時從安全環境復原並更換身分憑證。"
+        },
+        {
+          "text": "一般使用者應查看官方指引\n對方伺服器由營運方修復。應查看服務警示，在不自然的登入或付款頁面停止輸入。按公告辦理手續時，應透過官方應用程式或已知的官方網站進入。"
+        },
+        {
+          "text": "僅僅「顯示正常」並不能判斷安全性。\nTODOROKI / 網路安全 / 2026.10.23"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    }
+  ]
+}

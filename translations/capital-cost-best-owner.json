@@ -1,0 +1,412 @@
+{
+  "en": [
+    {
+      "title": "Inflation raises the cost of capital",
+      "subtitle": "The yardstick for assessing companies changes",
+      "blocks": [
+        {
+          "text": "As inflation becomes entrenched, companies move away from a world where cheap funding is taken for granted."
+        },
+        {
+          "text": "Inflation → higher interest rates → higher borrowing costs → higher returns required by shareholders → higher WACC (cost of capital)."
+        },
+        {
+          "text": "Caution\nInflation does not always mean a higher cost of capital. However, when persistent inflation coincides with rising interest rates, corporate funding costs tend to increase."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "Even profitable businesses can destroy value",
+      "subtitle": "Look at the difference between ROIC and WACC",
+      "blocks": [
+        {
+          "text": "Example in a low-rate environment\nROIC 5% > WACC 3%\nReturns on invested capital exceed the cost of capital. This tends to create corporate value."
+        },
+        {
+          "text": "After the cost of capital rises\nROIC 5% < WACC 7%\nAlthough profitable, the business falls short of the required return. It may destroy corporate value."
+        },
+        {
+          "text": "The formula to watch\nROIC - WACC\nThe more positive, larger and more sustainable this gap, the stronger the business."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "Why the “best owner” matters",
+      "subtitle": "Who can make the most of this business?",
+      "blocks": [
+        {
+          "text": "There is no need to keep a business out of inertia when it cannot exceed its cost of capital."
+        },
+        {
+          "text": "01 Improve it internally\nRaise ROIC above the cost of capital."
+        },
+        {
+          "text": "02 Consider selling\nTo a company that can operate it better than you."
+        },
+        {
+          "text": "03 Reallocate capital\nDirect sale proceeds toward a high-return core business and growth areas."
+        },
+        {
+          "text": "04 Increase corporate value\nPlace limited capital where it can earn the most."
+        },
+        {
+          "text": "BEST OWNER\nThe owner best able to improve a business's competitiveness, profitability and growth. M&A and business sales can be tools for capital efficiency, rather than simply withdrawal."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "Investors should assess capital allocation",
+      "subtitle": "Inflation makes differences between managers more visible",
+      "blocks": [
+        {
+          "text": "1. Does ROIC sufficiently exceed WACC?\n2. Are low-return businesses being retained out of inertia?\n3. Is the company truly the best owner?\n4. Can it make rational decisions on sales and exits?\n5. Can released capital be reinvested in high-return businesses?"
+        },
+        {
+          "text": "Conclusion\nIn a low-rate environment, even low returns could more easily exceed the cost of capital. Once that cost rises, the same ROIC may cease to create value."
+        },
+        {
+          "text": "That is why “who should own it” and “where capital should go” matter alongside “what to own.”"
+        },
+        {
+          "text": "In an inflationary era, capital allocation separates companies' value."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    }
+  ],
+  "es": [
+    {
+      "title": "La inflación eleva el coste de capital",
+      "subtitle": "Cambia el criterio para evaluar a las empresas",
+      "blocks": [
+        {
+          "text": "Cuando la inflación se arraiga, las empresas se alejan de un mundo donde se da por sentada la financiación barata."
+        },
+        {
+          "text": "Inflación → subida de tipos → mayor coste de endeudamiento → mayor rentabilidad exigida por los accionistas → mayor WACC (coste de capital)."
+        },
+        {
+          "text": "Precaución\nLa inflación no implica siempre un mayor coste de capital. Pero cuando una inflación persistente coincide con subidas de tipos, la financiación empresarial tiende a encarecerse."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "Puede haber beneficio y destrucción de valor",
+      "subtitle": "Observar la diferencia entre ROIC y WACC",
+      "blocks": [
+        {
+          "text": "Ejemplo con tipos bajos\nROIC 5% > WACC 3%\nLa rentabilidad del capital invertido supera su coste. Es más fácil crear valor empresarial."
+        },
+        {
+          "text": "Tras subir el coste de capital\nROIC 5% < WACC 7%\nAunque hay beneficios, no se alcanza la rentabilidad exigida. Puede destruirse valor empresarial."
+        },
+        {
+          "text": "La fórmula que observar\nROIC - WACC\nCuanto más positiva, amplia y sostenible sea esta diferencia, mayor será la fortaleza."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "Por qué importa el “mejor propietario”",
+      "subtitle": "¿Quién puede aprovechar mejor ese negocio?",
+      "blocks": [
+        {
+          "text": "No es necesario conservar por inercia un negocio que no supera su coste de capital."
+        },
+        {
+          "text": "01 Mejorarlo internamente\nElevar el ROIC por encima del coste de capital."
+        },
+        {
+          "text": "02 Considerar la venta\nA una empresa que pueda gestionarlo mejor."
+        },
+        {
+          "text": "03 Reasignar capital\nDestinar lo obtenido a la actividad principal de alta rentabilidad y a áreas de crecimiento."
+        },
+        {
+          "text": "04 Aumentar el valor empresarial\nLlevar el capital limitado donde más pueda rendir."
+        },
+        {
+          "text": "MEJOR PROPIETARIO\nQuien más puede mejorar la competitividad, rentabilidad y crecimiento del negocio. Las fusiones y adquisiciones y las ventas pueden mejorar la eficiencia del capital, en lugar de ser solo una retirada."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "El inversor debe evaluar la asignación de capital",
+      "subtitle": "La inflación hace más visibles las diferencias entre directivos",
+      "blocks": [
+        {
+          "text": "1. ¿Supera el ROIC suficientemente al WACC?\n2. ¿Se conservan por inercia negocios poco rentables?\n3. ¿Es la empresa realmente el mejor propietario?\n4. ¿Puede decidir racionalmente sobre ventas y salidas?\n5. ¿Puede reinvertir el capital liberado en negocios de alta rentabilidad?"
+        },
+        {
+          "text": "Conclusión\nCon tipos bajos, incluso rentabilidades pequeñas superaban más fácilmente el coste de capital. Si este sube, el mismo ROIC deja de crear valor."
+        },
+        {
+          "text": "Por ello importan “quién debe poseerlo” y “adónde dirigir el capital”, además de “qué poseer”."
+        },
+        {
+          "text": "En una era inflacionaria, la asignación de capital diferencia el valor empresarial."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    }
+  ],
+  "pt": [
+    {
+      "title": "A inflação eleva o custo de capital",
+      "subtitle": "Muda o critério para avaliar empresas",
+      "blocks": [
+        {
+          "text": "Quando a inflação se consolida, as empresas se afastam de um mundo em que o financiamento barato é dado como certo."
+        },
+        {
+          "text": "Inflação → juros maiores → custo da dívida maior → retorno exigido pelos acionistas maior → WACC (custo de capital) maior."
+        },
+        {
+          "text": "Cuidado\nInflação nem sempre implica aumento do custo de capital. Mas, quando a inflação persistente coincide com juros em alta, o financiamento empresarial tende a encarecer."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "Até empresas lucrativas podem destruir valor",
+      "subtitle": "Observar a diferença entre ROIC e WACC",
+      "blocks": [
+        {
+          "text": "Exemplo em ambiente de juros baixos\nROIC 5% > WACC 3%\nO retorno do capital investido supera o custo de capital. Isso tende a criar valor empresarial."
+        },
+        {
+          "text": "Após o aumento do custo de capital\nROIC 5% < WACC 7%\nMesmo com lucro, o retorno exigido não é alcançado. Pode haver destruição de valor empresarial."
+        },
+        {
+          "text": "A fórmula a observar\nROIC - WACC\nQuanto mais positiva, ampla e sustentável for essa diferença, maior a força da empresa."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "Por que importa o “melhor proprietário”",
+      "subtitle": "Quem pode aproveitar melhor esse negócio?",
+      "blocks": [
+        {
+          "text": "Não é necessário manter por inércia um negócio que não supera seu custo de capital."
+        },
+        {
+          "text": "01 Melhorar internamente\nElevar o ROIC acima do custo de capital."
+        },
+        {
+          "text": "02 Considerar a venda\nPara uma empresa capaz de operá-lo melhor."
+        },
+        {
+          "text": "03 Realocar capital\nDirecionar os recursos da venda ao negócio principal de alto retorno e a áreas de crescimento."
+        },
+        {
+          "text": "04 Aumentar o valor empresarial\nColocar o capital limitado onde pode render mais."
+        },
+        {
+          "text": "MELHOR PROPRIETÁRIO\nQuem mais pode elevar a competitividade, rentabilidade e crescimento do negócio. M&A e vendas de negócios podem melhorar a eficiência do capital, além de representar uma saída."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "Investidores devem avaliar a alocação de capital",
+      "subtitle": "A inflação evidencia diferenças entre gestores",
+      "blocks": [
+        {
+          "text": "1. O ROIC supera suficientemente o WACC?\n2. Negócios de baixo retorno são mantidos por inércia?\n3. A empresa é realmente o melhor proprietário?\n4. Consegue decidir racionalmente sobre vendas e saídas?\n5. Consegue reinvestir o capital liberado em negócios de alto retorno?"
+        },
+        {
+          "text": "Conclusão\nCom juros baixos, até retornos pequenos superavam mais facilmente o custo de capital. Quando esse custo sobe, o mesmo ROIC deixa de criar valor."
+        },
+        {
+          "text": "Por isso, “quem deve possuir” e “para onde direcionar o capital” importam junto de “o que possuir”."
+        },
+        {
+          "text": "Na era da inflação, a alocação de capital diferencia o valor das empresas."
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "通胀时代，资本成本上升",
+      "subtitle": "评估企业的尺度改变了",
+      "blocks": [
+        {
+          "text": "当通胀持续存在，企业便逐渐告别“廉价资金理所当然”的世界。"
+        },
+        {
+          "text": "通胀 → 利率上升 → 借款成本上升 → 股东要求的回报上升 → WACC（资本成本）上升。"
+        },
+        {
+          "text": "注意\n通胀并不必然导致资本成本上升。但当持续通胀与利率上升叠加时，企业融资成本往往更容易提高。"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "即使盈利，也可能“破坏价值”",
+      "subtitle": "观察ROIC与WACC之差",
+      "blocks": [
+        {
+          "text": "低利率时代的示例\nROIC 5% > WACC 3%\n投入资本的回报高于资本成本，更容易创造企业价值。"
+        },
+        {
+          "text": "资本成本上升后\nROIC 5% < WACC 7%\n虽然产生利润，却达不到所要求的收益率，可能损害企业价值。"
+        },
+        {
+          "text": "应关注的公式\nROIC - WACC\n这一差额越为正、越大、越能持续，企业就越强。"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "因此“最佳所有者”更加重要",
+      "subtitle": "谁拥有这项业务，才能将其价值发挥到最大？",
+      "blocks": [
+        {
+          "text": "无法超过资本成本的业务，没有必要仅凭惯性继续持有。"
+        },
+        {
+          "text": "01 自行改善\n提高ROIC，使其超过资本成本。"
+        },
+        {
+          "text": "02 考虑出售\n交给比自己更善于经营的企业。"
+        },
+        {
+          "text": "03 重新配置资本\n将出售所得投向高回报主业和成长领域。"
+        },
+        {
+          "text": "04 提升企业价值\n把有限资本配置到最能赚钱的地方。"
+        },
+        {
+          "text": "最佳所有者\n最能提高该业务竞争力、盈利力和成长力的拥有者。并购和业务出售不只是“撤退”，也能成为提高资本效率的手段。"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "投资者应关注“资本配置能力”",
+      "subtitle": "通胀时代，管理者之间的差异更容易显现",
+      "blocks": [
+        {
+          "text": "1. ROIC是否充分超过WACC？\n2. 是否仅凭惯性保留低回报业务？\n3. 自己真的是最佳所有者吗？\n4. 能否理性决定出售或退出？\n5. 能否将释放的资本再投入高回报业务？"
+        },
+        {
+          "text": "结论\n低利率时代，即使收益率不高，也较容易超过资本成本。但资本成本上升后，同样的ROIC便可能无法创造价值。"
+        },
+        {
+          "text": "因此，除了“持有什么”，还要关注“应该由谁持有”和“资本应配置到哪里”。"
+        },
+        {
+          "text": "通胀时代，“资本配置”决定企业价值的差异。"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "通膨時代，資本成本上升",
+      "subtitle": "評估企業的尺度改變了",
+      "blocks": [
+        {
+          "text": "當通膨持續存在，企業便逐漸告別「廉價資金理所當然」的世界。"
+        },
+        {
+          "text": "通膨 → 利率上升 → 借款成本上升 → 股東要求的回報上升 → WACC（資本成本）上升。"
+        },
+        {
+          "text": "注意\n通膨並不必然導致資本成本上升。但當持續通膨與利率上升疊加時，企業融資成本往往更容易提高。"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "即使盈利，也可能「破壞價值」",
+      "subtitle": "觀察ROIC與WACC之差",
+      "blocks": [
+        {
+          "text": "低利率時代的示例\nROIC 5% > WACC 3%\n投入資本的回報高於資本成本，更容易創造企業價值。"
+        },
+        {
+          "text": "資本成本上升後\nROIC 5% < WACC 7%\n雖然產生利潤，卻達不到所要求的收益率，可能損害企業價值。"
+        },
+        {
+          "text": "應關注的公式\nROIC - WACC\n這一差額越為正、越大、越能持續，企業就越強。"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "因此「最佳所有者」更加重要",
+      "subtitle": "誰擁有這項業務，才能將其價值發揮到最大？",
+      "blocks": [
+        {
+          "text": "無法超過資本成本的業務，沒有必要僅憑慣性繼續持有。"
+        },
+        {
+          "text": "01 自行改善\n提高ROIC，使其超過資本成本。"
+        },
+        {
+          "text": "02 考慮出售\n交給比自己更善於經營的企業。"
+        },
+        {
+          "text": "03 重新配置資本\n將出售所得投向高回報主業和成長領域。"
+        },
+        {
+          "text": "04 提升企業價值\n把有限資本配置到最能賺錢的地方。"
+        },
+        {
+          "text": "最佳所有者\n最能提高該業務競爭力、盈利力和成長力的擁有者。併購和業務出售不只是「撤退」，也能成為提高資本效率的手段。"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    },
+    {
+      "title": "投資者應關注「資本配置能力」",
+      "subtitle": "通膨時代，管理者之間的差異更容易顯現",
+      "blocks": [
+        {
+          "text": "1. ROIC是否充分超過WACC？\n2. 是否僅憑慣性保留低回報業務？\n3. 自己真的是最佳所有者嗎？\n4. 能否理性決定出售或退出？\n5. 能否將釋放的資本再投入高回報業務？"
+        },
+        {
+          "text": "結論\n低利率時代，即使收益率不高，也較容易超過資本成本。但資本成本上升後，同樣的ROIC便可能無法創造價值。"
+        },
+        {
+          "text": "因此，除了「持有什麼」，還要關注「應該由誰持有」和「資本應配置到哪裡」。"
+        },
+        {
+          "text": "通膨時代，「資本配置」決定企業價值的差異。"
+        }
+      ],
+      "dense": true,
+      "body_size": 12
+    }
+  ]
+}

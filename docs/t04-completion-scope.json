@@ -1,0 +1,62 @@
+{
+  "decision_date": "2026-11-17",
+  "decision": "対象記事群で区切る",
+  "structural_scope": "sitemap.xml掲載の全195公開ページ",
+  "groups": {
+    "foundation": [
+      "/candlestick-basics",
+      "/volume-basics",
+      "/valuation-per-pbr",
+      "/cash-flow-financial-health"
+    ],
+    "ma_and_reading_paths": [
+      "/business-ma",
+      "/company-comparison-method",
+      "/password-copy-paste-security",
+      "/company-data-leak-prevention"
+    ],
+    "discovery": [
+      "/site-map",
+      "/investment-list",
+      "/nvidia-jensen-huang-spy-allegations-2026"
+    ],
+    "dated_update": [
+      "/gasoline-subsidy-outlook-2026"
+    ],
+    "economy": [
+      "/inflation",
+      "/interest-rate",
+      "/government-subsidies"
+    ],
+    "contextual_reading": [
+      "/open-house-group-3288-earnings-2026",
+      "/nyk-9101-earnings-2026",
+      "/yamada-hd-9831-earnings-2026",
+      "/en/anthropic-ipo-ai-safety-2026",
+      "/es/anthropic-ipo-ai-safety-2026",
+      "/pt/anthropic-ipo-ai-safety-2026",
+      "/zh-Hans/anthropic-ipo-ai-safety-2026",
+      "/zh-Hant/anthropic-ipo-ai-safety-2026"
+    ],
+    "behavior": [
+      "/consumer-protection-solutions",
+      "/discounted-utility",
+      "/social-preferences"
+    ],
+    "indicator_examples": [
+      "/rsi-basics",
+      "/atr-basics",
+      "/vwap-basics",
+      "/macd-basics",
+      "/stochastic-basics",
+      "/dmi-adx-basics",
+      "/donchian-channels"
+    ]
+  },
+  "not_claimed": [
+    "全記事の内容・出典・独自性審査完了",
+    "全PDF・全翻訳の内容保証",
+    "Google登録・広告配信・収益の保証",
+    "iPhone実機の動作確認"
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "en": [
+    {
+      "title": "Technology behind evolving robotic hands and Japanese companies",
+      "subtitle": "TECHNOLOGY / ROBOTICS | Approaching the human hand",
+      "blocks": [
+        {
+          "h": "",
+          "text": "A robotic hand needs not only drives to move its fingers, but precision parts supporting joints, sensors measuring force and tactile technology detecting contact and slipping. Combined with control technology, these allow it to handle fragile objects and objects of different shapes."
+        },
+        {
+          "h": "From gripping to handling with controlled force",
+          "text": "To broaden tasks in logistics, shops and homes, hands must adapt to shape, hardness and weight, beyond gripping predefined objects. In addition to finger count, important factors include force control, slip detection, compactness, light weight, power consumption, durability and mass-production cost."
+        },
+        {
+          "h": "Six elements behind hand motion",
+          "text": "Skeleton/joints: bearings and precision mechanical parts support smooth motion.\nDrives: small motors and actuators move the fingers.\nPower transmission: reducers and similar parts adjust speed and force.\nForce sensing: force/torque sensors measure applied force.\nTouch: detects pressure and slipping to identify contact conditions.\nControl: AI and other systems adjust movement based on sensor data."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "Related Japanese companies and business challenges",
+      "subtitle": "TECHNOLOGY / ROBOTICS",
+      "blocks": [
+        {
+          "h": "MinebeaMitsumi | 6479",
+          "text": "Makes miniature bearings, actuators, strain gauges and other products. Works with Harmonic Drive Systems on joint development of robotic hands."
+        },
+        {
+          "h": "Harmonic Drive Systems | 6324",
+          "text": "Offers precision reducers and actuators. Has technology related to miniaturizing and improving the accuracy of joints, including robotic-hand drives."
+        },
+        {
+          "h": "THK | 6481",
+          "text": "In addition to linear-motion parts, offers picking robot hands and suction hands. Works in end-effector technology for handling goods in logistics and production."
+        },
+        {
+          "h": "NSK | 6471",
+          "text": "Makes bearings, precision mechanical parts, actuators and other products. Compactness, light weight and power transmission are important technologies for robotic joints and end effectors."
+        },
+        {
+          "h": "NISSHA | 7915",
+          "text": "Offers thin pressure-sensing technology and related products, a relevant field for giving robotic fingers and palms the ability to sense contact."
+        },
+        {
+          "h": "Separate market growth from company results",
+          "text": "Even if the market grows, business effects vary by adopting customers, mass-production timing, unit prices and margins. Prototype development and volume adoption are different stages. At companies with large non-robotics businesses, adoption need not immediately drive rapid company-wide growth."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "es": [
+    {
+      "title": "Tecnologías que impulsan las manos robóticas y empresas japonesas",
+      "subtitle": "TECHNOLOGY / ROBOTICS | Acercarse a la mano humana",
+      "blocks": [
+        {
+          "h": "",
+          "text": "Una mano robótica necesita, además de actuadores para mover los dedos, piezas de precisión para las articulaciones, sensores de fuerza y tecnología táctil que detecte contacto y deslizamiento. Combinados con el control, permiten manipular objetos frágiles y de formas diversas."
+        },
+        {
+          "h": "De agarrar a manipular regulando la fuerza",
+          "text": "Para ampliar las tareas en logística, tiendas y hogares, deben adaptarse a forma, dureza y peso, además de agarrar objetos predeterminados. Importan no solo el número de dedos, sino el control de fuerza, detección de deslizamiento, tamaño y peso reducidos, consumo, durabilidad y coste de producción en serie."
+        },
+        {
+          "h": "Seis elementos del movimiento de la mano",
+          "text": "Estructura/articulaciones: rodamientos y piezas mecánicas de precisión facilitan movimientos suaves.\nAccionamiento: pequeños motores y actuadores mueven los dedos.\nTransmisión: reductores y otras piezas ajustan velocidad y fuerza.\nFuerza: sensores de fuerza/par miden la fuerza aplicada.\nTacto: detecta presión y deslizamiento para conocer el contacto.\nControl: IA y otros sistemas ajustan el movimiento según los sensores."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "Empresas japonesas relacionadas y retos del negocio",
+      "subtitle": "TECHNOLOGY / ROBOTICS",
+      "blocks": [
+        {
+          "h": "MinebeaMitsumi | 6479",
+          "text": "Fabrica rodamientos pequeños, actuadores, galgas extensométricas y otros productos. Trabaja con Harmonic Drive Systems en el desarrollo conjunto de manos robóticas."
+        },
+        {
+          "h": "Harmonic Drive Systems | 6324",
+          "text": "Ofrece reductores y actuadores de precisión. Posee tecnología para miniaturizar y aumentar la precisión de articulaciones, incluidos los accionamientos de manos robóticas."
+        },
+        {
+          "h": "THK | 6481",
+          "text": "Además de componentes de movimiento lineal, ofrece manos robóticas de picking y de succión. Desarrolla tecnología de efectores finales para manipular objetos en logística y producción."
+        },
+        {
+          "h": "NSK | 6471",
+          "text": "Fabrica rodamientos, piezas mecánicas de precisión, actuadores y otros productos. El tamaño y peso reducidos y la transmisión son importantes para articulaciones y efectores finales."
+        },
+        {
+          "h": "NISSHA | 7915",
+          "text": "Ofrece tecnología de detección de presión de poco espesor y productos afines, un campo relevante para dotar a dedos y palmas robóticos de detección de contacto."
+        },
+        {
+          "h": "Separar crecimiento del mercado y resultados empresariales",
+          "text": "Aunque crezca el mercado, el efecto depende de clientes que adopten la tecnología, fechas de producción en serie, precios unitarios y márgenes. Prototipos y adopción en volumen son etapas distintas. En empresas con grandes negocios ajenos a robótica, la difusión no implica un crecimiento inmediato y rápido del conjunto."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "pt": [
+    {
+      "title": "Tecnologias por trás da evolução das mãos robóticas e empresas japonesas",
+      "subtitle": "TECHNOLOGY / ROBOTICS | Aproximando-se da mão humana",
+      "blocks": [
+        {
+          "h": "",
+          "text": "Uma mão robótica precisa não só de acionamentos para os dedos, mas de peças de precisão para as articulações, sensores de força e tecnologia tátil que detecte contato e deslizamento. Combinados ao controle, permitem manipular objetos frágeis e de formas diferentes."
+        },
+        {
+          "h": "De agarrar a manipular dosando a força",
+          "text": "Para ampliar tarefas em logística, lojas e residências, é preciso adaptar-se à forma, dureza e peso, além de agarrar objetos definidos. Além do número de dedos, importam controle de força, detecção de deslizamento, tamanho e peso reduzidos, consumo de energia, durabilidade e custo de produção em massa."
+        },
+        {
+          "h": "Seis elementos do movimento da mão",
+          "text": "Estrutura/articulações: rolamentos e peças mecânicas de precisão sustentam movimentos suaves.\nAcionamento: pequenos motores e atuadores movem os dedos.\nTransmissão: redutores e similares ajustam velocidade e força.\nForça: sensores de força/torque medem a força aplicada.\nTato: detecta pressão e deslizamento para identificar o contato.\nControle: IA e outros sistemas ajustam o movimento com base nos sensores."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "Empresas japonesas relacionadas e desafios do negócio",
+      "subtitle": "TECHNOLOGY / ROBOTICS",
+      "blocks": [
+        {
+          "h": "MinebeaMitsumi | 6479",
+          "text": "Produz rolamentos de pequeno diâmetro, atuadores, extensômetros e outros produtos. Trabalha com a Harmonic Drive Systems no desenvolvimento conjunto de mãos robóticas."
+        },
+        {
+          "h": "Harmonic Drive Systems | 6324",
+          "text": "Oferece redutores e atuadores de precisão. Possui tecnologia para miniaturizar e aumentar a precisão das articulações, incluindo acionamentos de mãos robóticas."
+        },
+        {
+          "h": "THK | 6481",
+          "text": "Além de componentes de movimento linear, oferece mãos robóticas de picking e de sucção. Atua em tecnologia de extremidades para manipular objetos em logística e produção."
+        },
+        {
+          "h": "NSK | 6471",
+          "text": "Produz rolamentos, peças mecânicas de precisão, atuadores e outros produtos. Tamanho e peso reduzidos e transmissão de potência são importantes nas articulações e extremidades robóticas."
+        },
+        {
+          "h": "NISSHA | 7915",
+          "text": "Oferece tecnologia fina de sensoriamento de pressão e produtos relacionados, uma área relevante para dar a dedos e palmas robóticos a capacidade de detectar contato."
+        },
+        {
+          "h": "Separe expansão do mercado de resultados empresariais",
+          "text": "Mesmo com expansão do mercado, os efeitos dependem de clientes que adotem a tecnologia, datas de produção em massa, preços unitários e margens. Protótipos e adoção em volume são etapas distintas. Em empresas com grandes negócios fora da robótica, a difusão não implica crescimento imediato e acelerado dos resultados totais."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "支撑机器人手发展的技术与日本企业",
+      "subtitle": "TECHNOLOGY / ROBOTICS | 向人类的手靠近",
+      "blocks": [
+        {
+          "h": "",
+          "text": "机器人手不仅需要驱动手指的装置，还需要支撑关节的精密零部件、测量力的传感器，以及捕捉接触与滑动的触觉技术。结合控制技术，可操作易碎物及不同形状的物体。"
+        },
+        {
+          "h": "从“抓取”到“控制力度操作”",
+          "text": "要扩大物流、商店与家庭等场景的工作范围，不仅要抓住指定物品，还需配合其形状、硬度及重量进行操作。除手指数目外，力度控制、滑动检测、小型轻量化、耗电、耐久性及量产成本也很重要。"
+        },
+        {
+          "h": "支撑手部动作的6个要素",
+          "text": "骨架与关节：轴承、精密机械零部件支持平滑运动。\n驱动部：小型电机、执行器驱动手指。\n动力传递：减速器等调节转速与力。\n力觉：力觉、扭矩传感器测量所施加的力。\n触觉：捕捉压力与滑动，掌握物体接触状态。\n控制：基于传感器信息，通过AI等调节动作。"
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "相关日本企业与业务课题",
+      "subtitle": "TECHNOLOGY / ROBOTICS",
+      "blocks": [
+        {
+          "h": "MinebeaMitsumi | 6479",
+          "text": "经营小径轴承、执行器、应变片等，与Harmonic Drive Systems共同开发机器人手。"
+        },
+        {
+          "h": "Harmonic Drive Systems | 6324",
+          "text": "提供精密减速器与执行器。具备涉及机器人手驱动部等关节小型化、高精度化的技术。"
+        },
+        {
+          "h": "THK | 6481",
+          "text": "除直线运动零部件外，也提供分拣机器人手与吸附手，涉及在物流及生产现场操作物品的末端技术。"
+        },
+        {
+          "h": "NSK | 6471",
+          "text": "经营轴承、精密机械零部件及执行器等。小型轻量化与动力传递，是构成机器人关节及末端的重要技术。"
+        },
+        {
+          "h": "NISSHA | 7915",
+          "text": "提供薄型压力感测技术等，属于赋予机器人手指及手掌接触状态感知能力的相关技术领域。"
+        },
+        {
+          "h": "区分市场扩大与企业业绩",
+          "text": "即使机器人手市场扩大，对业务的影响也因采用企业、量产时间、零部件单价及利润率而异。样机开发与量产采用是不同阶段。非机器人业务较大的企业，普及也未必立即带来全公司业绩快速增长。"
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "支撐機器人手發展的技術與日本企業",
+      "subtitle": "TECHNOLOGY / ROBOTICS | 向人類的手靠近",
+      "blocks": [
+        {
+          "h": "",
+          "text": "機器人手不僅需要驅動手指的裝置，還需要支撐關節的精密零組件、測量力的感測器，以及捕捉接觸與滑動的觸覺技術。結合控制技術，可操作易碎物及不同形狀的物體。"
+        },
+        {
+          "h": "從「抓取」到「控制力度操作」",
+          "text": "要擴大物流、商店與家庭等場景的工作範圍，不僅要抓住指定物品，還需配合其形狀、硬度及重量進行操作。除手指數目外，力度控制、滑動偵測、小型輕量化、耗電、耐久性及量產成本也很重要。"
+        },
+        {
+          "h": "支撐手部動作的6個要素",
+          "text": "骨架與關節：軸承、精密機械零組件支援平滑運動。\n驅動部：小型馬達、致動器驅動手指。\n動力傳遞：減速器等調節轉速與力。\n力覺：力覺、扭矩感測器測量所施加的力。\n觸覺：捕捉壓力與滑動，掌握物體接觸狀態。\n控制：基於感測器資訊，透過AI等調節動作。"
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "相關日本企業與業務課題",
+      "subtitle": "TECHNOLOGY / ROBOTICS",
+      "blocks": [
+        {
+          "h": "MinebeaMitsumi | 6479",
+          "text": "經營小徑軸承、致動器、應變規等，與Harmonic Drive Systems共同開發機器人手。"
+        },
+        {
+          "h": "Harmonic Drive Systems | 6324",
+          "text": "提供精密減速器與致動器。具備涉及機器人手驅動部等關節小型化、高精度化的技術。"
+        },
+        {
+          "h": "THK | 6481",
+          "text": "除直線運動零組件外，也提供揀選機器人手與吸附手，涉及在物流及生產現場操作物品的末端技術。"
+        },
+        {
+          "h": "NSK | 6471",
+          "text": "經營軸承、精密機械零組件及致動器等。小型輕量化與動力傳遞，是構成機器人關節及末端的重要技術。"
+        },
+        {
+          "h": "NISSHA | 7915",
+          "text": "提供薄型壓力感測技術等，屬於賦予機器人手指及手掌接觸狀態感知能力的相關技術領域。"
+        },
+        {
+          "h": "區分市場擴大與企業業績",
+          "text": "即使機器人手市場擴大，對業務的影響也因採用企業、量產時間、零組件單價及利潤率而異。原型開發與量產採用是不同階段。非機器人業務較大的企業，普及也未必立即帶來全公司業績快速成長。"
+        }
+      ],
+      "dense": true
+    }
+  ]
+}

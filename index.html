@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta name="google-adsense-account" content="ca-pub-7179318481718851">
+<script src="/assets/privacy-controls.js" defer></script>
+  <meta name="impact-site-verification" value="cf3c93cb-4fe9-42cc-8251-1da2c4e99c80">
+  <!-- Google tag (gtag.js) -->
+
+
+  
+<meta name="google-site-verification" content="D7M3kF5dj_59HkmFGW0ipyIBRET7mbAIiyCfXTO-YtU" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TODOROKI | 投資・経済を読み解く</title>
+
+<meta name="description"
+content="TODOROKIは、株式投資・企業分析・経済を数字で読み解く情報サイト。投資の基礎から企業価値の考え方まで解説。">
+<link rel="canonical" href="https://todoroki-gold.com/">
+<link rel="alternate" hreflang="ja" href="https://todoroki-gold.com/">
+<link rel="alternate" hreflang="en" href="https://todoroki-gold.com/en/">
+<link rel="alternate" hreflang="es" href="https://todoroki-gold.com/es/">
+<link rel="alternate" hreflang="pt" href="https://todoroki-gold.com/pt/">
+<link rel="alternate" hreflang="zh-Hans" href="https://todoroki-gold.com/zh-Hans/">
+<link rel="alternate" hreflang="zh-Hant" href="https://todoroki-gold.com/zh-Hant/">
+<link rel="alternate" hreflang="x-default" href="https://todoroki-gold.com/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+<meta property="og:site_name" content="TODOROKI">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TODOROKI｜投資・経済を読み解く">
+<meta property="og:description" content="投資・経済を、感覚より数字で。企業分析から市場の仕組みまで。">
+<meta property="og:url" content="https://todoroki-gold.com/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "TODOROKI",
+  "alternateName": [
+    "とどろき",
+    "トドロキ",
+    "轟",
+    "Todoroki",
+    "とどろき金",
+    "トドロキ金",
+    "轟金",
+    "とどろきゴールド",
+    "トドロキゴールド",
+    "TODOROKI GOLD"
+  ],
+  "url": "https://todoroki-gold.com/",
+  "inLanguage": "ja",
+  "description": "投資・経済を感覚より数字で考える個人メディア。企業分析から市場の仕組みまで。"
+}
+</script>
+<style>
+
+:root {
+  --black: #080808;
+  --panel: #111111;
+  --gold: #d4af37;
+  --lightgold: #f4d77b;
+  --white: #f4f1e8;
+  --gray: #aaaaaa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: -apple-system, BlinkMacSystemFont,
+  "Segoe UI", "Noto Sans JP", sans-serif;
+  line-height: 1.8;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrap {
+  width: min(1080px, 92%);
+  margin: auto;
+}
+
+/* ヘッダー */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(8,8,8,.96);
+  border-bottom:1px solid rgba(212,175,55,.28);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)
+}
+.site-header::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#d4af37 30%,#f4d77b 50%,#d4af37 70%,transparent)}
+.site-header .brand-row{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:88px}
+.site-header .logo{display:inline-block;flex-shrink:0;color:var(--lightgold);font-size:24px;font-weight:900;letter-spacing:.18em;line-height:1.2}
+.site-header .desktop-links{display:flex;align-items:center;gap:22px;margin-left:auto}
+.site-header .desktop-links a{font-size:13px;color:#bbb;white-space:nowrap;transition:color .2s}
+.site-header .desktop-links a:hover{color:var(--lightgold)}
+.site-header .account-link{display:inline-flex;align-items:center;justify-content:center;gap:8px;flex-shrink:0;min-height:40px;padding:7px 15px;border:1px solid #655329;border-radius:5px;color:var(--lightgold);font-size:12px;font-weight:600;letter-spacing:.04em;transition:background .2s,border-color .2s}
+.site-header .account-link:hover{background:#211c10;border-color:var(--gold)}
+.site-header .account-link svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.5}
+.site-header .mobile-links{display:none}
+.site-header a:focus-visible{outline:2px solid var(--lightgold);outline-offset:4px}
+@media(max-width:960px){
+  .site-header .brand-row{min-height:72px;gap:16px}
+  .site-header .logo{font-size:23px;letter-spacing:.16em}
+  .site-header .desktop-links{display:none}
+  .site-header .account-link{min-height:38px;padding:6px 12px}
+  .site-header .mobile-links{display:flex;align-items:center;gap:12px;overflow-x:auto;white-space:nowrap;flex-wrap:nowrap;padding:0 4% 0;border-top:1px solid #211e16;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .site-header .mobile-links::-webkit-scrollbar{display:none}
+  .site-header .mobile-links a{display:inline-flex;align-items:center;flex-shrink:0;min-height:48px;padding:0 2px;color:#c5b995;font-size:13px;letter-spacing:.03em}
+  .site-header .mobile-links a:hover{color:var(--lightgold)}
+}
+@media(prefers-reduced-motion:reduce){.site-header a{transition:none}}
+
+.locale-switch{display:inline-flex;align-items:center;flex-shrink:0;gap:3px;border:1px solid #78612e;border-radius:7px;padding:3px;color:#f4d77b;font-size:12px;font-weight:800;letter-spacing:.05em}.locale-switch span,.locale-switch a{padding:6px 7px;border-radius:4px;line-height:1.4}.locale-switch span{background:#d4af37;color:#080808}.locale-switch a{color:#f4d77b}.locale-switch a:hover{background:#292111;text-decoration:none}.locale-switch a:focus-visible{outline:2px solid #fff;outline-offset:2px}@media(max-width:600px){.site-header .brand-row{gap:8px}.site-header .logo{font-size:19px;letter-spacing:.09em}.site-header .account-link{padding:6px 8px;font-size:11px}.locale-switch{font-size:11px}.locale-switch span,.locale-switch a{padding:5px 5px}}
+
+/* 表紙 */
+
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background: #000;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  z-index: 0;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,0.70),
+      rgba(0,0,0,0.25),
+      rgba(0,0,0,0.60)
+    ),
+    linear-gradient(
+      0deg,
+      rgba(0,0,0,0.80),
+      transparent 65%
+    );
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  padding: 90px 0;
+}
+
+.eyebrow {
+  color: var(--lightgold);
+  letter-spacing: 0.25em;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-size: clamp(48px, 11vw, 100px);
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+  margin: 15px 0;
+}
+
+.hero h2 {
+  font-size: clamp(21px, 4vw, 34px);
+  margin: 25px 0 12px;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 auto 35px;
+  color: #dddddd;
+  font-size: 16px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 30px;
+  border: 1px solid var(--gold);
+  border-radius: 50px;
+  color: var(--lightgold);
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--gold);
+  color: #000;
+}
+
+/* 共通 */
+
+section {
+  padding: 75px 0;
+}
+
+.section-title {
+  font-size: 29px;
+  margin: 0 0 10px;
+  letter-spacing: 0.05em;
+}
+
+.rule {
+  width: 65px;
+  height: 2px;
+  background: var(--gold);
+  margin-bottom: 35px;
+}
+
+/* 記事 */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: linear-gradient(145deg, #171717, #0c0c0c);
+  border: 1px solid #342c1c;
+  border-radius: 16px;
+  padding: 27px;
+  min-height: 200px;
+}
+
+.tag {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.card h3 {
+  margin: 12px 0;
+  font-size: 20px;
+}
+
+.card p {
+  color: var(--gray);
+  font-size: 14px;
+}
+
+/* TODOROKIについて */
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.about p {
+  color: #cccccc;
+}
+
+/* 締めの動画 */
+
+.end-video {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  background: #000;
+}
+
+.end-video video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* SNS */
+
+.social {
+  text-align: center;
+  background: linear-gradient(180deg, #080808, #151108);
+  border-top: 1px solid #302715;
+}
+
+.social h2 {
+  color: var(--lightgold);
+  letter-spacing: 0.1em;
+}
+
+.social p {
+  color: var(--gray);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.social-links a {
+  min-width: 135px;
+  padding: 12px 20px;
+  border: 1px solid var(--gold);
+  border-radius: 50px;
+  color: var(--lightgold);
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background: var(--gold);
+  color: #000;
+}
+
+/* フッター */
+
+footer {
+  text-align: center;
+  padding: 35px 0;
+  border-top: 1px solid #302715;
+  color: #777777;
+  font-size: 13px;
+}
+
+/* スマートフォン */
+
+@media (max-width: 720px) {
+
+
+
+  .hero {
+    min-height: 75vh;
+  }
+
+  .hero-inner {
+    padding: 75px 0;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  section {
+    padding: 55px 0;
+  }
+
+  .cards,
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .end-video {
+    height: 280px;
+  }
+
+  .social-links a {
+    min-width: 130px;
+  }
+
+}
+/* 記事カード全体をクリック可能にする */
+.card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-link .card {
+  height: 100%;
+  cursor: pointer;
+}
+
+.card-link:hover .card {
+  border-color: #d9b76e;
+}
+
+
+
+
+.page-return{margin:32px auto;text-align:center}
+.page-return a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 24px;border:1px solid #d8b85c;border-radius:6px;color:#d8b85c;text-decoration:none;font-size:14px}
+.page-return a:hover{background:#211c10}
+.page-return a:focus-visible{outline:2px solid #fff;outline-offset:4px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Consistent, single-line section headings on desktop and mobile. */
+.section-title{font-size:clamp(15px, 4.2vw, 29px);letter-spacing:0.01em;white-space:nowrap;}
+
+
+/* Homepage latest-article ticker */
+.news-ticker[hidden]{display:none!important}
+.news-ticker{display:flex;align-items:center;min-height:48px;background:#100f0b;border-block:1px solid #665225;overflow:hidden;color:#f4d77b}
+.news-ticker-label{position:relative;z-index:1;flex:none;padding:12px 16px;background:#d4af37;color:#080808;font-size:12px;font-weight:900;letter-spacing:.07em;white-space:nowrap}
+.news-ticker-window{min-width:0;flex:1;overflow:hidden}
+.news-ticker-track{display:flex;width:max-content;align-items:center;animation:none;will-change:transform}
+.news-ticker-group{display:flex;align-items:center;flex:none;gap:28px;padding-inline:14px;white-space:nowrap;width:max-content}
+.news-ticker-group a{display:inline-block;font-size:13px;font-weight:600;color:#f4d77b;max-width:80vw;overflow:hidden;text-overflow:ellipsis;vertical-align:middle}
+.news-ticker-group a:hover{text-decoration:underline;color:#fff}
+.news-ticker-group a:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.news-ticker-group a::before{content:'◆';font-size:8px;margin-right:12px;color:#b69a50}
+@media(hover:hover) and (pointer:fine){.news-ticker:hover .news-ticker-track{animation-play-state:paused}}
+.news-ticker:focus-within .news-ticker-track{animation-play-state:paused}
+.news-ticker[data-playing="true"] .news-ticker-track{animation-play-state:running!important}
+.news-ticker-toggle:focus-visible{position:relative!important;width:auto!important;height:auto!important;padding:10px 12px!important;margin:0!important;overflow:visible!important;clip:auto!important;white-space:normal!important;border:1px solid #665225!important}
+.news-ticker-toggle{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important;flex:none;border:0;border-left:1px solid #665225;background:#16130c;color:#f4d77b;padding:10px 12px;min-height:48px;cursor:pointer;font-size:12px}
+@keyframes todoroki-ticker{to{transform:translateX(-50%)}}
+@media(max-width:600px){.news-ticker-label{padding:12px 9px;font-size:10px}.news-ticker-group{gap:18px}.news-ticker-group a{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.news-ticker-window{scrollbar-width:thin}}
+#glossary,#pdf-library{scroll-margin-top:150px}.reference-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.reference-cards .card{height:100%}@media(max-width:720px){.reference-cards{grid-template-columns:1fr}}
+</style>
+<link rel="stylesheet" href="/assets/language-picker.css"><link rel="stylesheet" href="/assets/site-header.css"><script src="/assets/language-picker.js?v=20261105-header" defer></script><link rel="stylesheet" href="/assets/site-quality.css"><style>#latest-articles [hidden]{display:none!important}</style><style>
+.site-header .desktop-links .study-nav>summary{font-family:inherit;font-size:13px;font-weight:inherit;letter-spacing:inherit;line-height:inherit;color:#bbb;white-space:nowrap}
+.site-header .mobile-links .study-nav>summary{font-family:inherit;font-size:13px;font-weight:inherit;letter-spacing:.03em;line-height:inherit;color:#c5b995;white-space:nowrap;min-height:48px;display:flex;align-items:center;padding:0 2px}
+.site-header .study-nav>summary:hover{color:var(--lightgold)}
+.site-header .study-nav>summary:focus-visible{outline:2px solid var(--lightgold);outline-offset:4px}
+.site-header .study-nav>div a{font-family:inherit;font-size:13px;font-weight:inherit;letter-spacing:inherit}
+</style><style>#latest-articles .selection-label{display:block;margin:0 0 12px;color:#e6c66b;font-size:12px;font-weight:700}#latest-articles .article-thumbnail{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin:0 0 18px;background:#16130d}#latest-articles .card-link:focus-visible{outline:2px solid #e6c66b;outline-offset:5px}</style>
+<link rel="stylesheet" href="/assets/footer-accessibility.css"><style>
+/* OFUSE support button: responsive sticky header placement */
+.site-header[data-preserve-header="ofuse"] .brand-row{gap:clamp(8px,1.2vw,18px)}
+.ofuse-header-desktop{display:block;flex:0 1 205px;min-width:125px;max-width:205px;margin-left:auto;line-height:0}
+.ofuse-header-desktop img,.ofuse-header-mobile img{display:block;width:100%;height:auto}
+.ofuse-mobile-row{display:none}
+@media(min-width:1201px){
+ .site-header[data-preserve-header="ofuse"] .desktop-links{gap:clamp(7px,1vw,15px);margin-left:0}
+ .site-header[data-preserve-header="ofuse"] .desktop-links a{font-size:clamp(11px,.9vw,13px)}
+ .site-header[data-preserve-header="ofuse"] .logo{font-size:clamp(19px,1.6vw,24px);letter-spacing:.11em}
+}
+@media(max-width:1200px){
+ .ofuse-header-desktop{display:none}
+ .ofuse-mobile-row{display:flex;justify-content:center;align-items:center;min-height:52px;padding:5px 12px;border-top:1px solid #302715}
+ .ofuse-header-mobile{display:block;width:min(270px,82vw);line-height:0}
+ .site-header[data-preserve-header="ofuse"].ofuse-scrolled .ofuse-mobile-row{min-height:36px;padding:2px 10px}
+ .site-header[data-preserve-header="ofuse"].ofuse-scrolled .ofuse-header-mobile{width:190px}
+ .site-header[data-preserve-header="ofuse"].ofuse-scrolled .mobile-links{display:none}
+ .site-header[data-preserve-header="ofuse"].ofuse-scrolled .brand-row{min-height:54px}
+}
+@media(max-width:380px){.ofuse-header-mobile{width:min(245px,80vw)}}
+</style></head>
+
+<body id="page-top"><a class="skip-link" href="#main-content">本文へ移動</a>
+
+<!-- ヘッダー -->
+
+<header class="site-header" data-preserve-header="ofuse">
+  <div class="wrap brand-row">
+    <a class="logo" href="/" aria-label="TODOROKI トップページ">TODOROKI</a>
+    <nav class="desktop-links" aria-label="メインメニュー">
+      <a href="/#latest-articles">新着記事</a>
+      <a href="/#articles">基礎</a>
+      <a href="/#themes">テーマ</a>
+      <a href="/#pdf-library">用語・PDF</a>
+      <a href="/#study">学ぶ</a>
+      <a href="/#company-analysis">ツール</a>
+    </nav>
+    <a class="ofuse-header-desktop" href="https://ofuse.me/todoroki_gold" target="_blank" rel="noopener noreferrer" aria-label="OFUSEでTODOROKIを応援する（外部サイト）"><img src="/assets/todoroki-ofuse-button-3.png" alt="TODOROKIを応援する" width="1209" height="238" decoding="async"></a>
+    <label class="todoroki-language-picker">🌐 <select data-todoroki-language aria-label="表示言語 / Language"><option value="ja" selected>日本語</option><option value="en">English</option><option value="es">Español</option><option value="pt">Português</option><option value="zh-Hant">繁體中文</option><option value="zh-Hans">简体中文</option></select></label>
+    <a class="account-link" href="/login">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="6" r="3"/><path d="M4 18v-2a6 6 0 0 1 12 0v2"/></svg>
+      ログイン
+    </a>
+  </div>
+  <div class="ofuse-mobile-row"><a class="ofuse-header-mobile" href="https://ofuse.me/todoroki_gold" target="_blank" rel="noopener noreferrer" aria-label="OFUSEでTODOROKIを応援する（外部サイト）"><img src="/assets/todoroki-ofuse-button-3.png" alt="TODOROKIを応援する" width="1209" height="238" decoding="async"></a></div>
+  <nav class="mobile-links" aria-label="メインメニュー">
+    <a href="/#latest-articles">新着記事</a>
+    <a href="/#articles">基礎</a>
+    <a href="/#themes">テーマ</a>
+      <a href="/#pdf-library">用語・PDF</a>
+    <a href="/#study">学ぶ</a>
+    <a href="/#company-analysis">ツール</a>
+  </nav>
+</header>
+
+<main id="main-content">
+<div class="news-ticker" id="news-ticker" aria-label="新着記事"><span class="news-ticker-label">LATEST NEWS</span><div class="news-ticker-window"><nav class="news-ticker-track" aria-label="新着記事へのリンク"><div class="news-ticker-group"><a href="/nvidia-jensen-huang-spy-allegations-2026">NVIDIAフアン氏辞任｜スパイ疑惑は未立証</a><a href="/nintendo-earnings-analysis-2026-nov">任天堂決算｜49.1%増益でも割高？</a><a href="/us-midterm-election-2026-checks-balances">米国中間選挙で議会が変わる</a><a href="/yen-carry-trade-fx-outlook-2026">円キャリートレードと為替見通し</a><a href="/murder-accountability-and-prison-labor">殺人犯の出所後の生活と刑事責任</a><a href="/monetary-policy-weekly-20261030">金利据え置きでも安心できない？</a><a href="/gasoline-subsidy-outlook-2026">ガソリン補助金が底をつく？</a><a href="/gmo-stock-recovery-data-breach">GMOの株価は戻る？</a><a href="/company-data-leak-prevention">企業の情報漏洩対策15選</a><a href="/ai-bubble-collapse-or-correction">AIバブルは崩壊したのか？</a><a href="/password-copy-paste-security">パスワードのコピペは危険？</a></div><div class="news-ticker-group" aria-hidden="true"><a tabindex="-1" href="/nintendo-earnings-analysis-2026-nov">任天堂決算｜49.1%増益でも割高？</a><a tabindex="-1" href="/us-midterm-election-2026-checks-balances">米国中間選挙で議会が変わる</a><a tabindex="-1" href="/yen-carry-trade-fx-outlook-2026">円キャリートレードと為替見通し</a><a tabindex="-1" href="/murder-accountability-and-prison-labor">殺人犯の出所後の生活と刑事責任</a><a tabindex="-1" href="/monetary-policy-weekly-20261030">金利据え置きでも安心できない？</a><a tabindex="-1" href="/gasoline-subsidy-outlook-2026">ガソリン補助金が底をつく？</a><a tabindex="-1" href="/gmo-stock-recovery-data-breach">GMOの株価は戻る？</a><a tabindex="-1" href="/company-data-leak-prevention">企業の情報漏洩対策15選</a><a tabindex="-1" href="/ai-bubble-collapse-or-correction">AIバブルは崩壊したのか？</a><a tabindex="-1" href="/password-copy-paste-security">パスワードのコピペは危険？</a></div></nav></div><button type="button" class="news-ticker-toggle" aria-label="テロップを一時停止">停止</button></div>
+
+
+<!-- 表紙 -->
+
+<section class="hero">
+
+  <video
+    class="hero-video"
+    aria-hidden="true"
+    autoplay
+    muted
+    loop
+    playsinline
+    webkit-playsinline
+    preload="auto">
+
+    <source
+      src="todoroki-hero-clean.mp4"
+      type="video/mp4">
+
+  </video>
+
+  <div class="wrap hero-inner">
+
+    <div class="eyebrow">
+      INVESTMENT × ECONOMY
+    </div>
+
+    <h1>TODOROKI</h1>
+
+    <h2>数字の向こう側を読む</h2>
+
+      <p>
+  投資・経済を、感覚より数字で<br>
+  企業分析から市場の仕組みまで
+</p>
+    
+
+    <a class="btn" href="#articles">
+      記事を読む
+    </a>
+
+  </div>
+
+</section>
+
+<!-- 基礎を学ぶ -->
+
+<section id="latest-articles" aria-labelledby="latest-articles-title" style="scroll-margin-top: 145px;"><div class="wrap"><h2 id="latest-articles-title" class="section-title">ARTICLES｜新着・よく読まれた記事</h2><p class="small" style="color:#c5bdab;line-height:1.8">新着3件＋よく読まれた記事3件。閲覧順位はGA4の2026年11月7〜13日のページビューに基づく掲載候補内の集計です（同数はURL順）。アクセス数が少ないため参考順位としてご覧ください。順位は自動更新ではありません。</p><div class="rule"></div><div class="cards"><a href="/taiheiyo-cement-5233-valuation-2026-nov" class="card-link"><article class="card"><span class="tag">INVESTMENT / <time datetime="2026-11-17">2026.11.17</time></span><h3>太平洋セメント決算｜PBR0.62倍は割安？買い目安3,500円を検証</h3><p>増収・営業減益と通期下方修正、FCF赤字を踏まえて安全域を分析。</p></article></a><a href="/advantest-6857-earnings-analysis-2026" class="card-link"><article class="card"><img class="article-thumbnail" src="/assets/thumb-advantest-6857-earnings-analysis-2026.svg" alt="" width="640" height="360" loading="lazy" decoding="async"><span class="tag">INVESTMENT / <time datetime="2026-11-12">2026.11.12</time></span><h3>アドバンテスト決算｜営業利益96.5%増でも割安か？</h3><p>AI半導体テスタの成長、FCF・オーナー利益と株価の安全域を分析。</p></article></a><a href="/mhi-7011-earnings-analysis-2026" class="card-link"><article class="card"><img class="article-thumbnail" src="/assets/thumb-mhi-7011-earnings-analysis-2026.svg" alt="" width="640" height="360" loading="lazy" decoding="async"><span class="tag">INVESTMENT / <time datetime="2026-11-11">2026.11.11</time></span><h3>三菱重工決算｜45.3%増益でも割安ではない？</h3><p>防衛・エナジー成長とFCF、PER・PBR、安全域を検証。</p></article></a><a href="/yamada-hd-9831-earnings-2026" class="card-link"><article class="card"><span class="tag">INVESTMENT / <time datetime="2026-11-09">2026.11.09</time></span><h3>ヤマダHD決算｜営業利益32.1%増、割安株価は？</h3><p>純利益予想328億円に上方修正。資産売却と600円以下の評価根拠を検証。</p></article></a><a href="/nyk-9101-earnings-2026" class="card-link"><article class="card"><span class="tag">INVESTMENT / <time datetime="2026-11-09">2026.11.09</time></span><h3>日本郵船決算｜純利益106.9%増、割安株価は？</h3><p>営業CF減少とPER・PBRを検証。6,000円以下を暫定評価。</p></article></a><a href="/open-house-group-3288-earnings-2026" class="card-link"><article class="card"><img class="article-thumbnail" src="/assets/thumb-open-house-group-3288-earnings-2026.svg" alt="" width="640" height="360" loading="lazy" decoding="async"><span class="tag">INVESTMENT / <time datetime="2026-11-09">2026.11.09</time></span><h3>オープンハウス決算｜割安株価はいくら？</h3><p>営業利益24.6%増でも営業CF赤字。適正株価と安全域を検証。</p></article></a><a href="/ai-gold-rush-bits-atoms" class="card-link"><article class="card"><img class="article-thumbnail" src="/assets/thumb-ai-gold-rush-bits-atoms.svg" alt="" width="640" height="360" loading="lazy" decoding="async"><span class="tag">TECHNOLOGY / <time datetime="2026-11-12">2026.11.12</time></span><h3>AIの次のゴールドラッシュ｜ビットとアトム</h3><p>Microsoft・NVIDIA・Caterpillarを例に、設備投資・FCF・企業価値を読み解く。</p></article></a><a href="/jt-russia-earnings-analysis-2026" class="card-link"><article class="card"><span class="tag">INVESTMENT / <time datetime="2026-11-09">2026.11.09</time></span><h3>JT決算｜ロシア全法人一時管理、株価の安全域は？</h3><p>営業利益24.2%増でも、ロシア利益25%のリスク。配当と割安株価を検証。</p></article></a><a href="/sumitomo-metal-mining-5713-earnings-2026" class="card-link"><article class="card"><img class="article-thumbnail" src="/assets/thumb-sumitomo-metal-mining-5713-earnings-2026.svg" alt="" width="640" height="360" loading="lazy" decoding="async"><span class="tag">INVESTMENT / <time datetime="2026-11-11">2026.11.11</time></span><h3>住友金属鉱山決算｜純利益67%増、7,500円は割安か？</h3><p>通期下方修正とFCF約690億円、PER・PBR・安全域を検証。</p></article></a><a href="/kokusai-electric-6525-earnings-2026" class="card-link"><article class="card"><img class="article-thumbnail" src="/assets/thumb-kokusai-electric-6525-earnings-2026.svg" alt="" width="640" height="360" loading="lazy" decoding="async"><span class="tag">INVESTMENT / <time datetime="2026-11-10">2026.11.10</time></span><h3>KOKUSAI ELECTRIC決算｜営業利益62%増、割安か？</h3><p>AI向け半導体装置の好調とFCF・DCF・中国リスクを検証。</p></article></a><a href="/starts-8850-earnings-2026" class="card-link"><article class="card"><span class="tag">INVESTMENT / <time datetime="2026-11-10">2026.11.10</time></span><h3>スターツ決算｜PER7.9倍は割安か？</h3><p>不動産管理の増益、FCF、オーナー利益と割安価格を検証。</p></article></a><a href="/furukawa-electric-5801-earnings-2026" class="card-link"><article class="card"><span class="tag">INVESTMENT / <time datetime="2026-11-10">2026.11.10</time></span><h3>古河電工決算｜営業利益3倍、割安か？</h3><p>データセンター需要、株式売却益、FCFとPER別株価を検証。</p></article></a><a href="/rohm-6963-earnings-2026" class="card-link"><article class="card"><span class="tag">INVESTMENT / <time datetime="2026-11-10">2026.11.10</time></span><h3>ローム決算｜営業利益128.5%増、割安か？</h3><p>SiC事業、FCF赤字、PER・PBRと安全域を検証。</p></article></a><a href="/inpex-1605-earnings-2026" class="card-link"><article class="card"><img class="article-thumbnail" src="/assets/thumb-inpex-1605-earnings-2026.svg" alt="" width="640" height="360" loading="lazy" decoding="async"><span class="tag">INVESTMENT / <time datetime="2026-11-13">2026.11.13</time></span><h3>INPEX決算｜純利益38.9%増、割安か？</h3><p>通期上方修正・配当112円・PER・PBR・安全域を分析。</p></article></a><a href="/olympus-7733-earnings-2026" class="card-link"><article class="card"><img class="article-thumbnail" src="/assets/thumb-olympus-7733-earnings-2026.svg" alt="" width="640" height="360" loading="lazy" decoding="async"><span class="tag">INVESTMENT / <time datetime="2026-11-13">2026.11.13</time></span><h3>オリンパス決算｜営業利益84%増でも割安か？</h3><p>関税還付・FDA規制・FCFとPER別株価を検証。</p></article></a><a href="/sumitomo-electric-earnings-2026" class="card-link"><article class="card"><span class="tag">INVESTMENT / <time datetime="2026-11-09">2026.11.09</time></span><h3>住友電工決算｜純利益62.7%増、割安株価は？</h3><p>営業CF減少の理由とPER・PBR・オーナー利益を検証。</p></article></a><a href="/kioxia-earnings-analysis-2026" class="card-link"><article class="card"><img class="article-thumbnail" src="/assets/thumb-kioxia-earnings-analysis-2026.svg" alt="" width="640" height="360" loading="lazy" decoding="async"><span class="tag">INVESTMENT / <time datetime="2026-11-07">2026.11.07</time></span><h3>キオクシア決算｜営業利益率76.9%は続く？</h3><p>中間決算からキャッシュフロー・PBR・安全域を検証。</p></article></a><a href="/nintendo-earnings-analysis-2026-nov" class="card-link"><article class="card"><span class="tag">INVESTMENT / <time datetime="2026-11-05">2026.11.05</time></span><h3>任天堂決算｜49.1%増益でも割高？</h3><p>終値8,880円のPER・PBR・安全域を分析。</p></article></a><a href="/us-midterm-election-2026-checks-balances" class="card-link"><article class="card"><span class="tag">POLITICS / <time datetime="2026-11-05">2026.11.05</time></span><h3>米国中間選挙で議会が変わる</h3><p>民主党が上下両院を奪還。トランプ大統領への議会の抑制と金融市場への影響を解説。</p></article></a><a href="/yen-carry-trade-fx-outlook-2026" class="card-link"><article class="card"><span class="tag">ECONOMY / <time datetime="2026-11-03">2026.11.03</time></span><h3>円キャリートレードと為替見通し</h3><p>円高・円安の3シナリオと、巻き戻しが株式市場に与える影響を解説。</p></article></a><a href="/murder-accountability-and-prison-labor" class="card-link"><article class="card"><span class="tag">SOCIETY / <time datetime="2026-11-01">2026.11.01</time></span><h3>殺人犯の出所後の生活と刑事責任</h3><p>働く場所がない、社会保障に頼る、家庭を築く。被害者の失われた人生と刑務所内労働を考える。</p></article></a><a href="/monetary-policy-weekly-20261030" class="card-link"><article class="card"><span class="tag">ECONOMY / <time datetime="2026-10-30">2026.10.30</time></span><h3>金利据え置きでも安心できない？</h3><p>FRB・ECBの政策発表と日銀の物価指標から、投資家が読むべきポイントを解説。</p></article></a><a href="/gasoline-subsidy-outlook-2026" class="card-link"><article class="card"><span class="tag">CURRENT AFFAIRS / <time datetime="2026-10-29">2026.10.29</time></span><h3>ガソリン補助金が底をつく？</h3><p>2022年からの補助金と価格の推移、財源不足と今後の見通しを解説。</p></article></a><a href="/gmo-stock-recovery-data-breach" class="card-link"><article class="card"><span class="tag">CURRENT AFFAIRS / <time datetime="2026-10-29">2026.10.29</time></span><h3>GMOの株価は戻る？</h3><p>情報漏洩後の回復を左右する補償費用・顧客離れ・信用を解説。</p></article></a><a href="/company-data-leak-prevention" class="card-link"><article class="card"><span class="tag">SCIENCE &amp; TECHNOLOGY / <time datetime="2026-10-28">2026.10.28</time></span><h3>企業の情報漏洩対策15選</h3><p>外部業者に頼らず自社で始められる情報セキュリティ対策を解説。</p></article></a><a href="/ai-bubble-collapse-or-correction" class="card-link"><article class="card"><span class="tag">CURRENT AFFAIRS / <time datetime="2026-10-28">2026.10.28</time></span><h3>AIバブルは崩壊したのか？</h3><p>株価調整との違いと、投資家が見るべき指標を解説。</p></article></a><a href="/password-copy-paste-security" class="card-link"><article class="card"><span class="tag">SCIENCE &amp; TECHNOLOGY / <time datetime="2026-10-28">2026.10.28</time></span><h3>パスワードのコピペは危険？</h3><p>盗まれる仕組みと、安全にログインする方法を解説。</p></article></a><a href="/coreweave-shock-2026" class="card-link"><article class="card"><span class="tag">CURRENT AFFAIRS / <time datetime="2026-10-28">2026.10.28</time></span><h3>コアウィーブショックとは？</h3><p>AIブームを揺らした借金と設備投資、株価下落の背景を解説。</p></article></a><a href="/anthropic-ipo-ai-safety-2026" class="card-link" hidden><article class="card"><span class="tag">CURRENT AFFAIRS / <time datetime="2026-10-27">2026.10.27</time></span><h3>アンソロピックの上場申請とAIの安全性</h3><p>上場申請、安全性試験の問題、急成長と巨額赤字の内訳を読み解く。</p></article></a><a href="/gmo-cyberattack-2026" class="card-link" hidden><article class="card"><span class="tag">CURRENT AFFAIRS / <time datetime="2026-10-26">2026.10.26</time></span><h3>GMOとはどんな会社？サイバー攻撃と補償問題</h3><p>インターネットを支えるGMOの事業と、2026年10月の不正アクセス、顧客補償を解説。</p></article></a><a href="/yasuo-fukuda-reforms" class="card-link" hidden><article class="card"><span class="tag">CURRENT AFFAIRS / <time datetime="2026-10-26">2026.10.26</time></span><h3>福田康夫が日本に残した改革</h3><p>消費者庁構想、道路特定財源の一般財源化、北海道洞爺湖サミットを解説。</p></article></a></div><p><a href="/current-affairs" style="color:#d4af37">時事ネタの記事一覧を見る →</a></p><p id="latest-empty" hidden></p></div></section>
+
+<section id="articles">
+
+  <div class="wrap">
+
+    <h2 class="section-title">
+      BASICS｜基礎を学ぶ
+    </h2>
+
+    <div class="rule"></div>
+
+    <div class="cards">
+
+      <a href="/investment" class="card-link">
+  <article class="card">
+
+    <span class="tag">INVESTMENT</span>
+
+    <h3>企業価値をどう見るか</h3>
+
+    <p>
+      PERやPBRだけに頼らず、
+      利益・キャッシュフロー・安全域から
+      企業を考える。
+    </p>
+
+  </article>
+</a>
+      <a href="/price-value" class="card-link">
+  <article class="card">
+
+    <span class="tag">INVESTMENT</span>
+
+    <h3>価格と価値の違い</h3>
+
+    <p>
+      株価と企業価値は必ずしも一致しない。
+      安全域と割安株投資の考え方から、
+      価格と価値の違いを解説する。
+    </p>
+
+  </article>
+</a>
+      <a href="/inflation" class="card-link">
+  <article class="card">
+    <span class="tag">ECONOMY</span>
+    <h3>インフレ時代の資産形成</h3>
+    <p>
+      インフレで預金の購買力はどう変わるのか。
+      物価上昇と株式投資、
+      資産形成の考え方を解説する。
+    </p>
+  </article>
+</a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- 新着記事 -->
+
+
+<!-- テーマ -->
+
+
+
+<section id="themes">
+
+  <div class="wrap">
+
+    <h2 class="section-title">THEMES｜テーマ</h2>
+
+    <div class="rule"></div>
+
+    <div class="cards">
+
+<a href="/investment-list" class="card-link">
+ <div class="card">
+         <span class="tag">INVESTMENT</span>
+<h3>株式投資</h3>
+    <p>
+      企業分析、バリュエーション、
+      投資判断。
+    </p>
+    </div>
+</a>
+      
+      <a href="/technical-analysis" class="card-link"><div class="card"><span class="tag">TECHNICAL ANALYSIS</span><h3>テクニカル分析</h3><p>株価や出来高から、値動きの方向や勢いを考える。</p></div></a>
+      <a href="/fundamental-analysis" class="card-link"><div class="card"><span class="tag">FUNDAMENTAL ANALYSIS</span><h3>ファンダメンタルズ分析</h3><p>企業の事業、利益、財務から企業価値を考える。</p></div></a>
+      <a href="/economy-list" class="card-link">
+  <div class="card">
+    <span class="tag">ECONOMY</span>
+    <h3>経済</h3>
+    <p>
+      インフレ、金利、財政、
+      産業構造をわかりやすく。
+    </p>
+  </div>
+</a>
+      
+      <a href="/business-list" class="card-link">
+  <div class="card">
+    <span class="tag">BUSINESS</span>
+    <h3>企業・経営</h3>
+    <p>
+      資本配分、競争優位、
+      経営者の意思決定。
+    </p>
+  </div>
+</a>
+      <a href="/current-affairs" class="card-link"><div class="card"><span class="tag">CURRENT AFFAIRS</span><h3>時事・ニュース解説</h3><p>企業・経済・社会の最新ニュースを、背景から読み解く。</p></div></a>
+      <a href="/politics-society" class="card-link">
+        <div class="card">
+          <span class="tag">POLITICS &amp; SOCIETY</span>
+          <h3>政治・社会</h3>
+          <p>政治、財政、国際情勢と社会の仕組み。</p>
+        </div>
+      </a>
+      <a href="/science-technology" class="card-link">
+        <div class="card">
+          <span class="tag">SCIENCE &amp; TECHNOLOGY</span>
+          <h3>科学・技術</h3>
+          <p>半導体、AI、宇宙などの技術と産業。</p>
+        </div>
+      </a>
+      <a href="/human-behavior" class="card-link">
+        <div class="card">
+          <span class="tag">OTHER TOPICS</span>
+          <h3>その他</h3>
+          <p>さまざまなテーマを扱った解説資料。</p>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- PDFライブラリー -->
+
+<section id="pdf-library">
+  <div class="wrap">
+
+    <h2 class="section-title">用語辞典・PDFライブラリー</h2>
+    <div class="rule"></div>
+
+    <div class="reference-cards">
+    <a href="/glossary" class="card-link" id="glossary">
+      <article class="card">
+        <span class="tag">GLOSSARY</span>
+        <h3>用語辞典</h3>
+        <p>投資・経済・会計・技術の専門用語をわかりやすく解説。</p>
+        <span style="color:#d4af37;font-weight:bold;">用語辞典を見る →</span>
+      </article>
+    </a>
+    <a href="/pdf-library" class="card-link">
+      <article class="card">
+
+        <span class="tag">TODOROKI ARCHIVE</span>
+
+        <h3>投資・経済の資料ライブラリー</h3>
+
+        <p>
+          企業分析、株式投資、経済、金融、
+          経営戦略などの解説資料を公開。
+          黒金PDFを無料で閲覧できます。
+        </p>
+
+        <span style="color:#d4af37;font-weight:bold;">
+          PDF資料一覧を見る →
+        </span>
+
+      </article>
+    </a>
+    </div>
+
+  </div>
+</section>
+<section id="study" aria-labelledby="study-title"><div class="wrap"><h2 id="study-title" class="section-title">STUDY｜学ぶ</h2><div class="rule"></div><div class="cards">
+<a href="/boki1" class="card-link"><article class="card"><span class="tag">ACCOUNTING / STUDY</span><h3>簿記1級を学ぶ</h3><p>商業簿記・会計学・工業簿記・原価計算を解説と確認問題で学ぶ。</p><span style="color:#d4af37;font-weight:bold">学習を始める →</span></article></a>
+<a href="/behavioral-economics" class="card-link"><article class="card"><span class="tag">BEHAVIORAL ECONOMICS / STUDY</span><h3>行動経済学を学ぶ</h3><p>認知バイアス・意思決定・投資家心理を体系的に学ぶ。</p><span style="color:#d4af37;font-weight:bold">学習を始める →</span></article></a>
+
+<a href="/tax-study" class="card-link"><article class="card"><span class="tag">TAX LAW / 開発中</span><h3>税法を学ぶ</h3><p>国の一次資料をもとに、税法を科目別に学ぶツールを準備中。開発内容と公開状況を確認できます。</p><span style="color:#d4af37;font-weight:bold">開発状況を見る →</span></article></a>
+</div></div></section>
+
+<!-- 企業分析ツール -->
+<section id="company-analysis" aria-labelledby="company-analysis-title" style="scroll-margin-top:145px;padding:35px 0 10px;"><div class="wrap"><h2 id="company-analysis-title" class="section-title">TOOLS｜ツール</h2><p style="margin:10px 0 18px"><a href="/calculators/" style="color:#d4af37;font-weight:700">無料計算ツールの一覧を見る →</a></p><div class="rule"></div><div class="cards"><a href="/break-even/" class="card-link"><article class="card"><span class="tag">FREE CALCULATOR / ACCOUNTING</span><h3>損益分岐点計算ツール</h3><p>固定費・変動費・販売単価から必要売上と販売数量を計算。簿記学習にも対応。</p><span style="color:#d4af37;font-weight:bold;">無料で計算する →</span></article></a><a href="/compound-interest/" class="card-link"><article class="card"><span class="tag">FREE CALCULATOR</span><h3>複利・積立投資シミュレーター</h3><p>積立額・年利・期間を入力して、将来資産と元本・運用損益をグラフで確認。</p><span style="color:#d4af37;font-weight:bold;">無料で計算する →</span></article></a><a href="/api/tools/equity" class="card-link" target="_blank" rel="noopener"><article class="card"><span class="tag">EDINET / β VERSION</span><h3>企業分析ツール β版</h3><p>EDINETの通期決算をもとに、利益・EPS・キャッシュフローの推移や財務数値を確認できます。出典と計算根拠も表示しています。</p><span style="color:#d4af37;font-weight:bold;">企業分析ツールを開く ↗</span></article></a><a href="/us-equity" class="card-link"><article class="card"><span class="tag">EDGAR / 開発中</span><h3>米国企業分析ツール</h3><p>NYSE・NASDAQ・NYSE American上場企業を対象に、EDGARの通期財務データを使う分析ツールを開発中です。専用ページで対象市場と開発状況を確認できます。</p><span style="color:#d4af37;font-weight:bold;">米国企業分析ツールへ →</span></article></a><a href="/api/tools/jp" class="card-link" target="_blank" rel="noopener"><article class="card"><span class="tag">ECONOMIC DATA / 法人企業統計</span><h3>日本経済データ</h3><p>財務省の法人企業統計をもとに、業界別の売上高・営業利益・経常利益・設備投資をグラフで比較。22業界区分の数値表と出典も確認できます。</p><span style="color:#d4af37;font-weight:bold;">日本経済データを開く ↗</span></article></a><a href="/api/tools/us" class="card-link" target="_blank" rel="noopener"><article class="card"><span class="tag">U.S. ECONOMIC DATA / 米国政府統計</span><h3>米国経済データ</h3><p>米国国勢調査局の公式統計をもとに、5業界の売上高・営業利益・税引後利益をグラフで比較。数値表・出典・CSV保存にも対応しています。</p><span style="color:#d4af37;font-weight:bold;">米国経済データを開く ↗</span></article></a></div><p style="color:#aaa;font-size:13px;margin-top:14px;">日本・米国経済データの収録期間は2025年4～6月期〜2026年4～6月期です。自動更新ではありません。</p><p style="color:#aaa;font-size:13px;margin-top:14px;">現在は検証中の参考ツールです。現在株価などの市場データは収録していません。数値の確認状況・収録決算期・更新日をツール内でご確認ください。</p></div></section>
+
+<div class="wrap">
+<aside aria-label="広告：Fujisan.co.jp" style="margin:32px 0;padding:18px 0;border-top:1px solid #383226;border-bottom:1px solid #383226;">
+  <p style="margin:0 0 10px;font-size:12px;color:#c8c2b5;">PR｜雑誌のオンライン書店 Fujisan.co.jp</p>
+  <!-- TG-Affiliate Banner Space -->
+  <a href="https://ad2.trafficgate.net/t/r/205/394/319542_399447" target="_blank" rel="nofollow sponsored noopener" style="display:block;max-width:728px;">
+    <img data-consent-src="https://srv2.trafficgate.net/t/b/205/394/319542_399447" width="728" height="90" alt="雑誌の定期購読をFujisan.co.jpで探す" loading="lazy" style="display:block;max-width:100%;height:auto;">
+  </a>
+  <!-- /TG-Affiliate Banner Space -->
+</aside>
+</div>
+  <!-- TODOROKIについて -->
+
+<section id="about">
+
+  <div class="wrap about">
+
+    <div>
+
+      <h2 class="section-title">
+        ABOUT TODOROKI
+      </h2>
+
+      <div class="rule"></div>
+
+      <p>
+  TODOROKI（とどろき）は、
+  投資と経済を自分の頭で考えるための場所です。
+</p>
+
+      <p>
+        短期的な値動きだけではなく、
+        企業の価値、社会の変化、
+        資本の流れを長い目で追います。
+      </p>
+
+      <p>
+        難しいテーマも、
+        できるだけシンプルに。
+      </p>
+
+    </div>
+
+    <!-- 締めの動画 -->
+
+    <div class="end-video">
+
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        webkit-playsinline
+        preload="auto">
+
+        <source
+          src="todoroki-hero-clean.mp4"
+          type="video/mp4">
+
+      </video>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SNS -->
+
+<section id="social" class="social">
+
+  <div class="wrap">
+
+    <h2>FOLLOW TODOROKI</h2>
+
+    <p>
+      企業分析・経済考察・動画を発信中。
+    </p>
+
+    <div class="social-links">
+
+      <a
+        href="https://x.com/todoroki_gold"
+        target="_blank"
+        rel="noopener noreferrer">
+        X
+      </a>
+
+      <a
+        href="https://www.youtube.com/@todoroki_gold"
+        target="_blank"
+        rel="noopener noreferrer">
+        YouTube
+      </a>
+
+      <a
+        href="https://www.instagram.com/todoroki_blackgold/"
+        target="_blank"
+        rel="noopener noreferrer">
+        Instagram
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@todoroki_gold"
+        target="_blank"
+        rel="noopener noreferrer">
+        TikTok
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<div class="page-return"><a href="#page-top">↑ ページの先頭へ</a></div>
+</main>
+
+<!-- TODOROKI support: first-party link; no third-party widget script -->
+<!-- フッター -->
+
+<footer>
+
+  
+<div class="wrap">
+  © 2026 TODOROKI. All rights reserved.
+
+  <div style="margin-top:12px;">
+    <a href="/privacy" style="color:#d4af37; text-decoration:none;">
+      プライバシーポリシー
+    </a>
+    <a href="/about" style="color:#d4af37; text-decoration:none; margin-left:15px;">TODOROKIについて</a>
+<a href="/contact" style="color:#d4af37; text-decoration:none; margin-left:15px;">お問い合わせ</a>
+  </div>
+</div>
+
+
+<p><a href="/site-map">サイトマップ</a></p><nav class="todoroki-info-nav" aria-label="運営方針 / Policies" style="margin:16px 0;font-size:13px"><a href="/editorial-policy">編集・利用方針 / Editorial policy</a> · <a href="/data-use">広告・外部送信 / Data use</a> · <a href="/sources">資料の出典 / Sources</a></nav></footer>
+
+<script>
+/* Three recent articles plus three observed popular articles, without duplicates. */
+(function () {
+ var section=document.getElementById('latest-articles');if(!section)return;
+ var parts=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
+ function part(t){return parts.find(function(p){return p.type===t;}).value;}
+ var day=Date.parse(part('year')+'-'+part('month')+'-'+part('day')+'T00:00:00Z');
+ var cards=Array.from(section.querySelectorAll('.cards > .card-link'));
+ cards.sort(function(a,b){return b.querySelector('time').dateTime.localeCompare(a.querySelector('time').dateTime);});
+ var selected=[],seen=new Set();
+ function choose(card,label){
+  if(!card||seen.has(card.getAttribute('href')))return false;
+  seen.add(card.getAttribute('href'));selected.push(card);
+  var badge=document.createElement('span');badge.className='selection-label';badge.textContent=label;
+  card.querySelector('.card').prepend(badge);return true;
+ }
+ cards.filter(function(card){var age=(day-Date.parse(card.querySelector('time').dateTime+'T00:00:00Z'))/86400000;return age>=0&&age<14;}).slice(0,3).forEach(function(card){choose(card,'新着');});
+ // GA4 page views, 2026-11-07 through 2026-11-13; ties use URL order.
+ var popular=["/kioxia-earnings-analysis-2026","/advantest-6857-earnings-analysis-2026","/kokusai-electric-6525-earnings-2026","/open-house-group-3288-earnings-2026","/rohm-6963-earnings-2026","/sumitomo-electric-earnings-2026","/ai-gold-rush-bits-atoms","/furukawa-electric-5801-earnings-2026","/jt-russia-earnings-analysis-2026","/mhi-7011-earnings-analysis-2026","/nintendo-earnings-analysis-2026-nov","/nyk-9101-earnings-2026","/starts-8850-earnings-2026","/sumitomo-metal-mining-5713-earnings-2026","/yamada-hd-9831-earnings-2026"];
+ var popularCount=0;
+ popular.forEach(function(href){if(popularCount>=3)return;var card=cards.find(function(c){return c.getAttribute('href')===href;});if(choose(card,'よく読まれた記事'))popularCount++;});
+ cards.forEach(function(card){card.hidden=!seen.has(card.getAttribute('href'));});
+ selected.concat(cards.filter(function(c){return c.hidden;})).forEach(function(card){section.querySelector('.cards').appendChild(card);});
+ var empty=document.getElementById('latest-empty');empty.textContent=selected.length?'':'現在、表示できる記事はありません。';empty.hidden=selected.length>0;
+})();
+</script>
+
+<script>
+/* Smooth continuous marquee driven by animation frames, with explicit pause control. */
+(function(){
+ var ticker=document.getElementById('news-ticker');if(!ticker)return;
+ /* Use the article list as the single source; hidden cards are also eligible. */
+ var section=document.getElementById('latest-articles');
+ var articles=section?Array.from(section.querySelectorAll('.cards > .card-link')):[];
+ var today=new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+ var seen=new Set();
+ var latest=articles.map(function(card,index){
+   var time=card.querySelector('time'),heading=card.querySelector('h3');
+   return {href:card.getAttribute('href'),title:heading?heading.textContent.trim():'',date:time?time.dateTime:'',index:index};
+ }).filter(function(article){
+   if(!article.href||!article.href.startsWith('/')||article.href.startsWith('//')||!article.title||!/^\d{4}-\d{2}-\d{2}$/.test(article.date)||article.date>today||seen.has(article.href))return false;
+   seen.add(article.href);return true;
+ }).sort(function(a,b){return b.date.localeCompare(a.date)||a.index-b.index;}).slice(0,10);
+ if(latest.length){
+   var primary=document.createElement('div');primary.className='news-ticker-group';
+   latest.forEach(function(article){var link=document.createElement('a');link.setAttribute('href',article.href);link.textContent=article.title;primary.appendChild(link);});
+   var duplicate=primary.cloneNode(true);duplicate.setAttribute('aria-hidden','true');
+   duplicate.querySelectorAll('a').forEach(function(link){link.tabIndex=-1;});
+   ticker.querySelector('.news-ticker-track').replaceChildren(primary,duplicate);
+ }
+ var groups=ticker.querySelectorAll('.news-ticker-group');
+ var track=ticker.querySelector('.news-ticker-track');
+ var btn=ticker.querySelector('.news-ticker-toggle');
+ if(groups.length!==2||!track||!btn)return;
+ var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ var playing=true, position=0, previous=0, width=0;
+ function measure(){width=groups[0].getBoundingClientRect().width;groups[1].style.width=width+'px';if(width>0)position%=width;}
+ function label(){ticker.dataset.playing=String(playing);btn.textContent=playing?'停止':'再生';btn.setAttribute('aria-label',playing?'テロップを一時停止':'テロップを再生');}
+ btn.addEventListener('click',function(){playing=!playing;previous=0;label();});
+ var hovered=false;
+ if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){ticker.addEventListener('mouseenter',function(){hovered=true});ticker.addEventListener('mouseleave',function(){hovered=false;previous=0});}
+ window.addEventListener('resize',measure,{passive:true});
+ measure();label();
+ function frame(now){
+   if(!width)measure();
+   if(previous&&playing&&!hovered&&!document.hidden&&width){
+     position=(position+Math.min((now-previous)/1000,0.1)*75)%width;
+     track.style.transform='translate3d('+(-position)+'px,0,0)';
+   }
+   previous=now;
+   window.requestAnimationFrame(frame);
+ }
+ window.requestAnimationFrame(frame);
+})();
+</script>
+<script>
+(function(){const h=document.querySelector('.site-header');if(!h)return;let previous=false;function update(){const next=window.scrollY>180;if(next!==previous){h.classList.toggle('ofuse-scrolled',next);previous=next}}window.addEventListener('scroll',update,{passive:true});update()})();
+</script>
+<script src="/assets/site-motion.js" defer></script>
+</body>
+</html>
+

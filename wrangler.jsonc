@@ -1,0 +1,28 @@
+{
+  "name": "todoroki",
+  "main": "worker.js",
+  "compatibility_date": "2026-10-08",
+  "keep_vars": true,
+  "build": { "command": "node tools/sync-page-discovery.mjs" },
+  "workers_dev": true,
+  "preview_urls": false,
+  "assets": {
+    "directory": "./",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/api/*",
+      "/pdf/*",
+      "/premium",
+      "/premium/",
+      "/premium.html",
+      "/premium.html/"
+    ]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "todoroki-members",
+      "database_id": "1c5c2222-a57e-4098-bbb3-878774c676d6"
+    }
+  ]
+}

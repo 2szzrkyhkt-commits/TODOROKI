@@ -1,0 +1,142 @@
+{
+  "en": [
+    {
+      "title": "Semiconductor types",
+      "subtitle": "Understanding materials and uses | INVESTMENT / ECONOMY / BUSINESS",
+      "blocks": [
+        {
+          "h": "Classification by material",
+          "text": "Si: the mainstream material for CPUs, GPUs and memory. SiC: high-voltage power control. GaN: power supplies and high-frequency applications. GaAs: used in high-frequency communications and other applications."
+        },
+        {
+          "h": "Classification by use",
+          "text": "Logic: computation. Memory: storage. Power: power control. Analog: signal processing. Sensors: detection of light, temperature, pressure and more."
+        },
+        {
+          "h": "Avoid confusion",
+          "text": "SiC is a material; power semiconductor is a classification by use. Consider materials and uses together."
+        },
+        {
+          "h": "Use in company analysis",
+          "text": "NVIDIA focuses on design; TSMC on contract manufacturing. Evaluate materials, uses and business models separately."
+        },
+        {
+          "text": "TODOROKI | Investment and economics, guided by numbers rather than intuition."
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "es": [
+    {
+      "title": "Tipos de semiconductores",
+      "subtitle": "Comprender los materiales y usos | INVERSIÓN / ECONOMÍA / EMPRESA",
+      "blocks": [
+        {
+          "h": "Clasificación por material",
+          "text": "Si: material predominante en CPU, GPU y memorias. SiC: control de potencia de alta tensión. GaN: fuentes de alimentación y alta frecuencia. GaAs: comunicaciones de alta frecuencia y otros usos."
+        },
+        {
+          "h": "Clasificación por uso",
+          "text": "Lógica: cálculo. Memoria: almacenamiento. Potencia: control de energía. Analógicos: procesamiento de señales. Sensores: detección de luz, temperatura, presión y otras magnitudes."
+        },
+        {
+          "h": "Puntos que no deben confundirse",
+          "text": "SiC es un material; semiconductor de potencia es una clasificación por uso. Hay que combinar ambas perspectivas."
+        },
+        {
+          "h": "Aplicación al análisis empresarial",
+          "text": "NVIDIA se centra en el diseño; TSMC, en la fabricación por encargo. Evaluar por separado materiales, usos y modelos de negocio."
+        },
+        {
+          "text": "TODOROKI | Inversión y economía: números antes que intuición."
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "pt": [
+    {
+      "title": "Tipos de semicondutores",
+      "subtitle": "Entender materiais e aplicações | INVESTIMENTO / ECONOMIA / NEGÓCIOS",
+      "blocks": [
+        {
+          "h": "Classificação por material",
+          "text": "Si: material predominante em CPUs, GPUs e memórias. SiC: controle de potência de alta tensão. GaN: fontes de alimentação e alta frequência. GaAs: comunicações de alta frequência e outras aplicações."
+        },
+        {
+          "h": "Classificação por aplicação",
+          "text": "Lógica: cálculo. Memória: armazenamento. Potência: controle de energia. Analógicos: processamento de sinais. Sensores: detecção de luz, temperatura, pressão e outras grandezas."
+        },
+        {
+          "h": "Pontos que não devem ser confundidos",
+          "text": "SiC é um material; semicondutor de potência é uma classificação por aplicação. Considere materiais e aplicações em conjunto."
+        },
+        {
+          "h": "Uso na análise de empresas",
+          "text": "A NVIDIA se concentra no projeto; a TSMC, na fabricação por encomenda. Avalie separadamente materiais, aplicações e modelos de negócio."
+        },
+        {
+          "text": "TODOROKI | Investimento e economia: números antes da intuição."
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "半导体的种类",
+      "subtitle": "从材料与用途理解 | 投资 / 经济 / 商业",
+      "blocks": [
+        {
+          "h": "按材料分类",
+          "text": "Si：CPU、GPU、存储器的主流材料。SiC：用于高耐压的电力控制。GaN：用于电源和高频领域。GaAs：用于高频通信等领域。"
+        },
+        {
+          "h": "按用途分类",
+          "text": "逻辑：计算。存储器：存储。功率：电力控制。模拟：信号处理。传感器：检测光、温度、压力等。"
+        },
+        {
+          "h": "避免混淆的要点",
+          "text": "SiC是材料分类，功率半导体是用途分类。应将材料与用途结合起来考虑。"
+        },
+        {
+          "h": "如何用于企业分析",
+          "text": "NVIDIA以设计为主，TSMC以晶圆代工为主。应分别评价材料、用途和商业模式。"
+        },
+        {
+          "text": "TODOROKI | 投资与经济，用数字而非直觉判断。"
+        }
+      ],
+      "dense": false
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "半導體的種類",
+      "subtitle": "從材料與用途理解 | 投資 / 經濟 / 商業",
+      "blocks": [
+        {
+          "h": "按材料分類",
+          "text": "Si：CPU、GPU、記憶體的主流材料。SiC：用於高耐壓的電力控制。GaN：用於電源和高頻領域。GaAs：用於高頻通訊等領域。"
+        },
+        {
+          "h": "按用途分類",
+          "text": "邏輯：計算。記憶體：儲存。功率：電力控制。類比：訊號處理。感測器：偵測光、溫度、壓力等。"
+        },
+        {
+          "h": "避免混淆的要點",
+          "text": "SiC是材料分類，功率半導體是用途分類。應將材料與用途結合起來考慮。"
+        },
+        {
+          "h": "如何用於企業分析",
+          "text": "NVIDIA以設計為主，TSMC以晶圓代工為主。應分別評價材料、用途和商業模式。"
+        },
+        {
+          "text": "TODOROKI | 投資與經濟，用數字而非直覺判斷。"
+        }
+      ],
+      "dense": false
+    }
+  ]
+}

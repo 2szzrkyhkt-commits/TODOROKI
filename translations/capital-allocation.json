@@ -1,0 +1,372 @@
+{
+  "en": [
+    {
+      "title": "Do Japanese companies not know how to use money?",
+      "subtitle": "CAPITAL ALLOCATION / 01 | The real issue is where excess capital goes, rather than a capital shortage",
+      "blocks": [
+        {
+          "h": "Conclusion",
+          "text": "Some Japanese companies have prioritized safety and built large cash holdings, leaving more capital inside the company than is necessary."
+        },
+        {
+          "h": "The important distinction",
+          "text": "Large cash holdings are not bad in themselves. The issue is whether the cash is necessary for crisis response or is surplus capital with no use.\nWhen does “defensive management” turn into “inefficiency”?"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Why do Japanese companies hold cash?",
+      "subtitle": "CONSERVATIVE MANAGEMENT / 02 | Think of management and financial conservatism, separately from accounting conservatism",
+      "blocks": [
+        {
+          "h": "Holding cash",
+          "text": "Stabilizes liquidity and makes it easier to withstand unexpected shocks such as recessions and financial crises."
+        },
+        {
+          "h": "Investing",
+          "text": "Capital expenditure, R&D and M&A carry failure risks. Without investing, responsibility for such failures is less likely to arise."
+        },
+        {
+          "h": "There is therefore a rationale",
+          "text": "Prioritizing safety by maintaining substantial funds is rational. Accumulating unlimited cash solely “for safety,” however, is a separate matter.\nSafety reserves ≠ surplus funds."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "When safety lowers capital efficiency",
+      "subtitle": "CAPITAL EFFICIENCY / 03 | A simplified example",
+      "blocks": [
+        {
+          "h": "",
+          "text": "Capital ¥10 billion → profit ¥1 billion\nReturn: 10%\n↓ Accumulate ¥10 billion of unused cash\nCapital ¥20 billion → profit ¥1 billion\nReturn: 5%"
+        },
+        {
+          "h": "",
+          "text": "The company has become safer, but its ability to grow capital has declined. This is the trade-off between safety and capital efficiency.\nHow to use each extra yen: that is management."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "A weakness can become a margin of safety",
+      "subtitle": "VALUE INVESTING / 04",
+      "blocks": [
+        {
+          "h": "",
+          "text": "Some companies accumulate cash and securities through overly conservative management, while the market does not fully recognize their value."
+        },
+        {
+          "h": "Graham’s perspective",
+          "text": "Is the share price sufficiently low relative to asset value? Management inefficiency can create a “margin of safety” in the stock price."
+        },
+        {
+          "h": "Buffett’s perspective",
+          "text": "Having many assets is not enough. Can excess capital be reinvested at high returns? If not, can it be returned appropriately to shareholders?"
+        },
+        {
+          "h": "What investors examine",
+          "text": "Net cash, operating cash flow, P/B, ROE and ROIC. Most important is “how management will use the excess capital next.”\nJapanese companies’ “inefficiency” can become an opportunity for value investors."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "es": [
+    {
+      "title": "¿No saben las empresas japonesas cómo usar el dinero?",
+      "subtitle": "ASIGNACIÓN DE CAPITAL / 01 | El verdadero problema es dónde colocar el capital sobrante",
+      "blocks": [
+        {
+          "h": "Conclusión",
+          "text": "Algunas empresas japonesas han priorizado la seguridad y acumulado efectivo, dejando dentro de la empresa más capital del necesario."
+        },
+        {
+          "h": "La distinción importante",
+          "text": "Tener mucho efectivo no es malo en sí. La cuestión es si hace falta para responder a crisis o si es capital sobrante sin destino.\n¿Cuándo se convierte la «gestión defensiva» en «ineficiencia»?"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "¿Por qué acumulan efectivo las empresas japonesas?",
+      "subtitle": "GESTIÓN CONSERVADORA / 02 | Conservadurismo de gestión y financiero, distinto del contable",
+      "blocks": [
+        {
+          "h": "Mantener efectivo",
+          "text": "Estabiliza la liquidez y facilita resistir perturbaciones imprevistas, como recesiones y crisis financieras."
+        },
+        {
+          "h": "Invertir",
+          "text": "Las inversiones en equipos, I+D y fusiones y adquisiciones conllevan riesgo de fracaso. Sin invertir, es menos probable tener que asumir esa responsabilidad."
+        },
+        {
+          "h": "Por tanto, hay una lógica",
+          "text": "Priorizar la seguridad manteniendo abundante liquidez es razonable. Acumular efectivo sin límite solo «por seguridad» es otra cuestión.\nReservas de seguridad ≠ fondos excedentes."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Cuando la seguridad reduce la eficiencia del capital",
+      "subtitle": "EFICIENCIA DEL CAPITAL / 03 | Ejemplo simplificado",
+      "blocks": [
+        {
+          "h": "",
+          "text": "Capital: 10.000 millones de yenes → beneficio: 1.000 millones\nRentabilidad: 10%\n↓ Acumular 10.000 millones de yenes de efectivo sin utilizar\nCapital: 20.000 millones → beneficio: 1.000 millones\nRentabilidad: 5%"
+        },
+        {
+          "h": "",
+          "text": "La empresa es más segura, pero ha disminuido su capacidad de hacer crecer el capital. Aquí aparece el equilibrio entre seguridad y eficiencia del capital.\nDecidir cómo utilizar cada yen sobrante: eso es gestionar."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Una debilidad puede convertirse en margen de seguridad",
+      "subtitle": "INVERSIÓN EN VALOR / 04",
+      "blocks": [
+        {
+          "h": "",
+          "text": "Algunas empresas acumulan efectivo y valores por una gestión excesivamente conservadora, y el mercado no reconoce plenamente su valor."
+        },
+        {
+          "h": "La perspectiva de Graham",
+          "text": "¿Es la acción suficientemente barata respecto al valor de los activos? La ineficiencia de gestión puede crear un «margen de seguridad» en el precio."
+        },
+        {
+          "h": "La perspectiva de Buffett",
+          "text": "No basta con tener muchos activos. ¿Puede reinvertirse el capital sobrante con alta rentabilidad? Si no, ¿puede devolverse adecuadamente a los accionistas?"
+        },
+        {
+          "h": "Qué analizan los inversores",
+          "text": "Efectivo neto, flujo de caja operativo, precio/valor contable, ROE y ROIC. Lo más importante es «cómo utilizará la dirección el capital sobrante a continuación».\nLa «ineficiencia» japonesa puede ofrecer oportunidades a inversores en valor."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "pt": [
+    {
+      "title": "Empresas japonesas não sabem usar o dinheiro?",
+      "subtitle": "ALOCAÇÃO DE CAPITAL / 01 | O verdadeiro problema é onde aplicar o capital excedente",
+      "blocks": [
+        {
+          "h": "Conclusão",
+          "text": "Algumas empresas japonesas priorizaram a segurança e acumularam caixa, deixando na empresa mais capital do que o necessário."
+        },
+        {
+          "h": "A distinção importante",
+          "text": "Ter muito caixa não é ruim por si só. A questão é se ele é necessário para enfrentar crises ou se é capital excedente sem destino.\nQuando a “gestão defensiva” se torna “ineficiência”?"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Por que empresas japonesas acumulam caixa?",
+      "subtitle": "GESTÃO CONSERVADORA / 02 | Conservadorismo de gestão e financeiro, distinto do contábil",
+      "blocks": [
+        {
+          "h": "Manter caixa",
+          "text": "Estabiliza a liquidez e facilita resistir a choques imprevistos, como recessões e crises financeiras."
+        },
+        {
+          "h": "Investir",
+          "text": "Investimentos em equipamentos, P&D e fusões e aquisições envolvem risco de fracasso. Sem investir, é menos provável ter de assumir responsabilidade por essas falhas."
+        },
+        {
+          "h": "Portanto, há uma lógica",
+          "text": "Priorizar a segurança mantendo recursos elevados é racional. Acumular caixa sem limites apenas “por segurança”, porém, é outra questão.\nReservas de segurança ≠ recursos excedentes."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Quando a segurança reduz a eficiência do capital",
+      "subtitle": "EFICIÊNCIA DO CAPITAL / 03 | Exemplo simplificado",
+      "blocks": [
+        {
+          "h": "",
+          "text": "Capital: ¥ 10 bilhões → lucro: ¥ 1 bilhão\nRentabilidade: 10%\n↓ Acumular ¥ 10 bilhões de caixa não utilizado\nCapital: ¥ 20 bilhões → lucro: ¥ 1 bilhão\nRentabilidade: 5%"
+        },
+        {
+          "h": "",
+          "text": "A empresa ficou mais segura, mas sua capacidade de ampliar o capital diminuiu. Esse é o equilíbrio entre segurança e eficiência do capital.\nDecidir como usar cada iene excedente: isso é gestão."
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "Uma fraqueza pode virar margem de segurança",
+      "subtitle": "INVESTIMENTO EM VALOR / 04",
+      "blocks": [
+        {
+          "h": "",
+          "text": "Algumas empresas acumulam caixa e títulos por uma gestão conservadora demais, enquanto o mercado não reconhece plenamente seu valor."
+        },
+        {
+          "h": "A perspectiva de Graham",
+          "text": "A ação está suficientemente barata em relação ao valor dos ativos? A ineficiência da gestão pode criar uma “margem de segurança” no preço."
+        },
+        {
+          "h": "A perspectiva de Buffett",
+          "text": "Ter muitos ativos não basta. O capital excedente pode ser reinvestido com alto retorno? Se não, pode ser devolvido adequadamente aos acionistas?"
+        },
+        {
+          "h": "O que investidores analisam",
+          "text": "Caixa líquido, fluxo de caixa operacional, preço/valor patrimonial, ROE e ROIC. O mais importante é “como a administração usará o capital excedente a seguir”.\nA “ineficiência” das empresas japonesas pode oferecer oportunidades a investidores em valor."
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "日本企业不懂“如何花钱”吗？",
+      "subtitle": "资本配置 / 01 | 真正的问题不是资本不足，而是多余资本投向哪里",
+      "blocks": [
+        {
+          "h": "结论",
+          "text": "部分日本企业因重视安全而持有大量现金，结果超过所需金额的资本滞留在公司内部。"
+        },
+        {
+          "h": "重要视角",
+          "text": "现金多本身不是坏事。问题在于，这些现金是危机应对所需，还是没有用途的剩余资本。\n“防守型经营”何时会变成“低效率”？"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "日本企业为什么持有大量现金？",
+      "subtitle": "保守经营 / 02 | 应理解为经营与财务上的保守性，与会计上的保守主义区分",
+      "blocks": [
+        {
+          "h": "持有现金",
+          "text": "资金周转更稳定，也更容易承受经济衰退、金融危机等意外冲击。"
+        },
+        {
+          "h": "进行投资",
+          "text": "设备投资、研发和并购存在失败风险。不投资，也就较少产生对这些失败负责的情况。"
+        },
+        {
+          "h": "所以具有合理性",
+          "text": "优先考虑安全，保持充裕资金，这种判断具有合理性。但仅以“为了安全”为由无限积累现金，则是另一回事。\n安全资金 ≠ 剩余资金。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "安全性降低资本效率的瞬间",
+      "subtitle": "资本效率 / 03 | 简化示例",
+      "blocks": [
+        {
+          "h": "",
+          "text": "资本100亿日元 → 利润10亿日元\n收益率10%\n↓ 积累100亿日元不用的现金\n资本200亿日元 → 利润10亿日元\n收益率5%"
+        },
+        {
+          "h": "",
+          "text": "公司变得更安全了，但使资本增长的能力下降了。这就是“安全性”与“资本效率”之间的取舍。\n如何使用多余的一日元，这就是经营。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "弱点变成“安全边际”",
+      "subtitle": "价值投资 / 04",
+      "blocks": [
+        {
+          "h": "",
+          "text": "有些公司因经营过于保守，积累现金和有价证券，而市场并未充分评价其价值。"
+        },
+        {
+          "h": "格雷厄姆的视角",
+          "text": "股价相对资产价值是否足够便宜？经营低效有时会在股价方面形成“安全边际”。"
+        },
+        {
+          "h": "巴菲特的视角",
+          "text": "仅仅资产多还不够。能否将剩余资本以高收益率再投资？若做不到，能否适当地返还给股东？"
+        },
+        {
+          "h": "投资者观察的重点",
+          "text": "净现金、经营现金流、PBR、ROE与ROIC。最重要的是“管理层接下来如何使用剩余资本”。\n日本企业的“低效率”，可能成为价值投资者的机会。"
+        }
+      ],
+      "dense": true
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "日本企業不懂「如何花錢」嗎？",
+      "subtitle": "資本配置 / 01 | 真正的問題不是資本不足，而是多餘資本投向哪裡",
+      "blocks": [
+        {
+          "h": "結論",
+          "text": "部分日本企業因重視安全而持有大量現金，結果超過所需金額的資本滯留在公司內部。"
+        },
+        {
+          "h": "重要視角",
+          "text": "現金多本身不是壞事。問題在於，這些現金是危機應對所需，還是沒有用途的剩餘資本。\n「防守型經營」何時會變成「低效率」？"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "日本企業為什麼持有大量現金？",
+      "subtitle": "保守經營 / 02 | 應理解為經營與財務上的保守性，與會計上的保守主義區分",
+      "blocks": [
+        {
+          "h": "持有現金",
+          "text": "資金周轉更穩定，也更容易承受經濟衰退、金融危機等意外衝擊。"
+        },
+        {
+          "h": "進行投資",
+          "text": "設備投資、研發和併購存在失敗風險。不投資，也就較少產生對這些失敗負責的情況。"
+        },
+        {
+          "h": "所以具有合理性",
+          "text": "優先考慮安全，保持充裕資金，這種判斷具有合理性。但僅以「為了安全」為由無限累積現金，則是另一回事。\n安全資金 ≠ 剩餘資金。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "安全性降低資本效率的瞬間",
+      "subtitle": "資本效率 / 03 | 簡化範例",
+      "blocks": [
+        {
+          "h": "",
+          "text": "資本100億日圓 → 利潤10億日圓\n收益率10%\n↓ 累積100億日圓不用的現金\n資本200億日圓 → 利潤10億日圓\n收益率5%"
+        },
+        {
+          "h": "",
+          "text": "公司變得更安全了，但使資本成長的能力下降了。這就是「安全性」與「資本效率」之間的取捨。\n如何使用多餘的一日圓，這就是經營。"
+        }
+      ],
+      "dense": false
+    },
+    {
+      "title": "弱點變成「安全邊際」",
+      "subtitle": "價值投資 / 04",
+      "blocks": [
+        {
+          "h": "",
+          "text": "有些公司因經營過於保守，累積現金和有價證券，而市場並未充分評價其價值。"
+        },
+        {
+          "h": "葛拉漢的視角",
+          "text": "股價相對資產價值是否足夠便宜？經營低效有時會在股價方面形成「安全邊際」。"
+        },
+        {
+          "h": "巴菲特的視角",
+          "text": "僅僅資產多還不夠。能否將剩餘資本以高收益率再投資？若做不到，能否適當地返還給股東？"
+        },
+        {
+          "h": "投資者觀察的重點",
+          "text": "淨現金、營業現金流、PBR、ROE與ROIC。最重要的是「管理層接下來如何使用剩餘資本」。\n日本企業的「低效率」，可能成為價值投資者的機會。"
+        }
+      ],
+      "dense": true
+    }
+  ]
+}

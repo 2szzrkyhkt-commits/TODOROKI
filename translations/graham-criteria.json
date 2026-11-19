@@ -1,0 +1,687 @@
+{
+  "en": [
+    {
+      "title": "Graham’s investment criteria",
+      "subtitle": "Seven company-selection tests for the defensive investor",
+      "blocks": [
+        {
+          "h": "The seven criteria",
+          "table": [
+            [
+              "Criterion",
+              "What to check"
+            ],
+            [
+              "1. Adequate size",
+              "Avoid companies that are too small."
+            ],
+            [
+              "2. Strong finances",
+              "Current ratio of at least 200%; assess long-term debt."
+            ],
+            [
+              "3. Earnings stability",
+              "Positive earnings in every one of the past 10 years."
+            ],
+            [
+              "4. Dividend record",
+              "Uninterrupted dividends for at least 20 years."
+            ],
+            [
+              "5. Earnings growth",
+              "EPS growth of at least 33% over 10 years."
+            ],
+            [
+              "6. Reasonable P/E",
+              "No more than 15 times average EPS for the past 3 years."
+            ],
+            [
+              "7. Reasonable P/B",
+              "A guideline of 1.5 or less; also check P/E multiplied by P/B."
+            ]
+          ]
+        },
+        {
+          "h": "Finances, earnings and price",
+          "text": "Company-size thresholds were based on the US market of Graham’s era and should not be applied unchanged to Japanese stocks today."
+        }
+      ]
+    },
+    {
+      "title": "Criteria 1-5: company quality",
+      "subtitle": "Size, finances, earnings and dividend continuity",
+      "blocks": [
+        {
+          "h": "1. Adequate company size",
+          "text": "Avoid overly small companies. For Japanese stocks today, consider business scale, liquidity and financial resilience, rather than relying only on the historical sales threshold."
+        },
+        {
+          "h": "2. Strong financial condition",
+          "text": "Current assets ÷ current liabilities ≥ 2.0. Long-term debt should not exceed net current assets: current assets minus current liabilities. These tests mainly concern industrial companies; utilities have separate criteria."
+        },
+        {
+          "h": "3. Earnings stability",
+          "text": "Positive earnings in every one of the past 10 years. A positive 10-year average is insufficient: check for losses in each individual year."
+        },
+        {
+          "h": "4. Dividend record",
+          "text": "At least 20 years of uninterrupted dividends. This tests continuity, not consecutive dividend increases."
+        },
+        {
+          "h": "5. Earnings growth",
+          "text": "EPS should increase at least 33% over 10 years. Compare 3-year average EPS at the beginning and end to reduce single-year fluctuations."
+        }
+      ]
+    },
+    {
+      "title": "Criteria 6-7: the price paid",
+      "subtitle": "Consider company quality separately from purchase price",
+      "blocks": [
+        {
+          "h": "6. P/E of 15 or less",
+          "text": "Current share price ÷ average EPS for the past 3 years ≤ 15. Averaging can reduce the illusion of cheapness created by a temporarily strong year."
+        },
+        {
+          "h": "7. P/B guideline of 1.5 or less",
+          "text": "Current share price ÷ book value per share ≤ 1.5. However, assess P/E and P/B together. A low P/E can allow a P/B above 1.5."
+        },
+        {
+          "h": "Combining P/E and P/B",
+          "text": "P/E × P/B ≤ 22.5.\nFor example, P/E of 9 and P/B of 2 produce 18. Looking at P/B alone misses this combined test."
+        },
+        {
+          "h": "The core idea",
+          "text": "Sound finances and stable, growing earnings do not ensure a good investment if the purchase price is too high. Assess both business quality and price.\nA good company and a good investment are not the same thing."
+        }
+      ]
+    },
+    {
+      "title": "Applying the criteria to Japan today",
+      "subtitle": "Separate Graham’s tests from additional checks of your own",
+      "blocks": [
+        {
+          "h": "Original criteria and additional analysis",
+          "compact": true,
+          "table": [
+            [
+              "Graham’s criterion",
+              "Additional checks"
+            ],
+            [
+              "Current ratio ≥ 200%; long-term debt ≤ net current assets",
+              "Equity ratio; operating cash flow and free cash flow"
+            ],
+            [
+              "Profits in every year for 10 years",
+              "Earnings volatility; one-off gains and losses"
+            ],
+            [
+              "10-year EPS growth ≥ 33%",
+              "EPS direction over the latest 3-5 years"
+            ],
+            [
+              "P/E ≤ 15; P/B guideline ≤ 1.5; P/E × P/B ≤ 22.5",
+              "Underlying earnings excluding temporary factors; margin of safety at the current price"
+            ],
+            [
+              "At least 20 years of uninterrupted dividends",
+              "If dividends are not a priority, explicitly recognize that this changes the criterion."
+            ]
+          ]
+        },
+        {
+          "h": "Relaxing a test is an independent choice",
+          "text": "Allowing some loss-making years or dropping the dividend requirement differs from the original seven criteria. Separately assess compliance with the original tests and suitability for your own investment policy."
+        }
+      ]
+    }
+  ],
+  "es": [
+    {
+      "title": "Los criterios de inversión de Graham",
+      "subtitle": "Siete condiciones para seleccionar empresas como inversor defensivo",
+      "blocks": [
+        {
+          "h": "Los siete criterios",
+          "table": [
+            [
+              "Criterio",
+              "Qué comprobar"
+            ],
+            [
+              "1. Tamaño suficiente",
+              "Evitar empresas demasiado pequeñas."
+            ],
+            [
+              "2. Finanzas sólidas",
+              "Ratio corriente de al menos el 200%; revisar la deuda a largo plazo."
+            ],
+            [
+              "3. Beneficios estables",
+              "Beneficio positivo en cada uno de los últimos 10 años."
+            ],
+            [
+              "4. Historial de dividendos",
+              "Dividendos ininterrumpidos durante al menos 20 años."
+            ],
+            [
+              "5. Crecimiento del beneficio",
+              "El BPA aumenta al menos un 33% en 10 años."
+            ],
+            [
+              "6. PER razonable",
+              "Hasta 15 veces el BPA medio de los últimos 3 años."
+            ],
+            [
+              "7. Precio/valor contable razonable",
+              "Referencia de 1,5 o menos; comprobar también el producto con el PER."
+            ]
+          ]
+        },
+        {
+          "h": "Finanzas, beneficios y precio",
+          "text": "Los umbrales de tamaño correspondían a EE. UU. en la época de Graham; no deben trasladarse sin cambios a las acciones japonesas actuales."
+        }
+      ]
+    },
+    {
+      "title": "Criterios 1-5: calidad empresarial",
+      "subtitle": "Tamaño, finanzas, beneficios y continuidad de dividendos",
+      "blocks": [
+        {
+          "h": "1. Tamaño empresarial suficiente",
+          "text": "Evitar empresas demasiado pequeñas. En Japón hoy conviene considerar escala, liquidez y resistencia financiera, además del antiguo umbral de ventas."
+        },
+        {
+          "h": "2. Situación financiera sólida",
+          "text": "Activo corriente ÷ pasivo corriente ≥ 2,0. La deuda a largo plazo no debe superar los activos corrientes netos: activo corriente menos pasivo corriente. Son criterios principalmente para empresas industriales; los servicios públicos tienen otros."
+        },
+        {
+          "h": "3. Estabilidad de beneficios",
+          "text": "Beneficio positivo en cada uno de los últimos 10 años. No basta una media positiva: hay que comprobar que no hubo pérdidas en ningún año."
+        },
+        {
+          "h": "4. Historial de dividendos",
+          "text": "Al menos 20 años de dividendos ininterrumpidos. Se exige continuidad, no aumentos consecutivos."
+        },
+        {
+          "h": "5. Crecimiento de beneficios",
+          "text": "El BPA debe crecer al menos un 33% en 10 años. Comparar medias de 3 años al principio y al final reduce las fluctuaciones anuales."
+        }
+      ]
+    },
+    {
+      "title": "Criterios 6-7: el precio pagado",
+      "subtitle": "Separar calidad empresarial y precio de compra",
+      "blocks": [
+        {
+          "h": "6. PER de 15 o menos",
+          "text": "Cotización actual ÷ BPA medio de los últimos 3 años ≤ 15. La media reduce la falsa apariencia de precio bajo por un año excepcional."
+        },
+        {
+          "h": "7. Referencia de precio/valor contable de 1,5",
+          "text": "Cotización actual ÷ valor contable por acción ≤ 1,5. Debe analizarse junto al PER: un PER bajo puede permitir una relación superior a 1,5."
+        },
+        {
+          "h": "Combinar ambos indicadores",
+          "text": "PER × precio/valor contable ≤ 22,5.\nPor ejemplo, PER de 9 y precio/valor contable de 2 dan un producto de 18. Mirar solo el segundo indicador omite esta combinación."
+        },
+        {
+          "h": "La idea central",
+          "text": "Unas finanzas sólidas y beneficios estables y crecientes no aseguran una buena inversión si el precio es excesivo. Evaluar calidad y precio.\nUna buena empresa y una buena inversión no son lo mismo."
+        }
+      ]
+    },
+    {
+      "title": "Aplicación al Japón actual",
+      "subtitle": "Distinguir los criterios de Graham de los controles adicionales",
+      "blocks": [
+        {
+          "h": "Criterios originales y análisis adicional",
+          "compact": true,
+          "table": [
+            [
+              "Criterio de Graham",
+              "Comprobaciones adicionales"
+            ],
+            [
+              "Ratio corriente ≥ 200%; deuda a largo plazo ≤ activos corrientes netos",
+              "Proporción de patrimonio neto; flujo de caja operativo y libre"
+            ],
+            [
+              "Beneficio anual positivo durante 10 años",
+              "Volatilidad del beneficio; ganancias y pérdidas extraordinarias"
+            ],
+            [
+              "Crecimiento del BPA en 10 años ≥ 33%",
+              "Dirección del BPA en los últimos 3-5 años"
+            ],
+            [
+              "PER ≤ 15; precio/valor contable de referencia ≤ 1,5; producto ≤ 22,5",
+              "Beneficio subyacente sin factores temporales; margen de seguridad al precio actual"
+            ],
+            [
+              "Dividendos ininterrumpidos durante al menos 20 años",
+              "Si no se priorizan dividendos, reconocer expresamente el cambio del criterio."
+            ]
+          ]
+        },
+        {
+          "h": "Flexibilizar es una decisión propia",
+          "text": "Permitir algunos ejercicios con pérdidas o eliminar la condición de dividendos difiere de los siete criterios originales. Separar su cumplimiento de la adecuación a la política personal de inversión."
+        }
+      ]
+    }
+  ],
+  "pt": [
+    {
+      "title": "Os critérios de investimento de Graham",
+      "subtitle": "Sete condições para selecionar empresas como investidor defensivo",
+      "blocks": [
+        {
+          "h": "Os sete critérios",
+          "table": [
+            [
+              "Critério",
+              "O que verificar"
+            ],
+            [
+              "1. Tamanho suficiente",
+              "Evitar empresas pequenas demais."
+            ],
+            [
+              "2. Finanças sólidas",
+              "Liquidez corrente de pelo menos 200%; avaliar a dívida de longo prazo."
+            ],
+            [
+              "3. Estabilidade dos lucros",
+              "Lucro positivo em cada um dos últimos 10 anos."
+            ],
+            [
+              "4. Histórico de dividendos",
+              "Dividendos ininterruptos por pelo menos 20 anos."
+            ],
+            [
+              "5. Crescimento dos lucros",
+              "Aumento de pelo menos 33% no LPA em 10 anos."
+            ],
+            [
+              "6. P/L razoável",
+              "Até 15 vezes o LPA médio dos últimos 3 anos."
+            ],
+            [
+              "7. P/VP razoável",
+              "Referência de 1,5 ou menos; verificar também o produto com o P/L."
+            ]
+          ]
+        },
+        {
+          "h": "Finanças, lucros e preço",
+          "text": "Os limites de tamanho se baseavam nos EUA da época de Graham; não devem ser aplicados sem mudanças às ações japonesas atuais."
+        }
+      ]
+    },
+    {
+      "title": "Critérios 1-5: qualidade empresarial",
+      "subtitle": "Tamanho, finanças, lucros e continuidade dos dividendos",
+      "blocks": [
+        {
+          "h": "1. Tamanho empresarial suficiente",
+          "text": "Evitar empresas pequenas demais. No Japão atual, considerar escala, liquidez e resistência financeira, além do antigo limite de vendas."
+        },
+        {
+          "h": "2. Situação financeira sólida",
+          "text": "Ativo circulante ÷ passivo circulante ≥ 2,0. A dívida de longo prazo não deve superar o ativo circulante líquido: ativo circulante menos passivo circulante. Os testes se destinam principalmente a empresas industriais; serviços públicos têm critérios próprios."
+        },
+        {
+          "h": "3. Estabilidade dos lucros",
+          "text": "Lucro positivo em cada um dos últimos 10 anos. Uma média positiva não basta: verificar se não houve prejuízo em nenhum ano."
+        },
+        {
+          "h": "4. Histórico de dividendos",
+          "text": "Pelo menos 20 anos de dividendos ininterruptos. Exige continuidade, não aumentos consecutivos."
+        },
+        {
+          "h": "5. Crescimento dos lucros",
+          "text": "O LPA deve crescer pelo menos 33% em 10 anos. Comparar médias de 3 anos no início e no fim reduz as oscilações anuais."
+        }
+      ]
+    },
+    {
+      "title": "Critérios 6-7: o preço pago",
+      "subtitle": "Separar qualidade empresarial e preço de compra",
+      "blocks": [
+        {
+          "h": "6. P/L de 15 ou menos",
+          "text": "Preço atual da ação ÷ LPA médio dos últimos 3 anos ≤ 15. A média reduz a falsa impressão de preço baixo causada por um ano excepcional."
+        },
+        {
+          "h": "7. Referência de P/VP de 1,5 ou menos",
+          "text": "Preço atual ÷ valor patrimonial por ação ≤ 1,5. Avaliar junto com o P/L: um P/L baixo pode permitir P/VP acima de 1,5."
+        },
+        {
+          "h": "Combinação de P/L e P/VP",
+          "text": "P/L × P/VP ≤ 22,5.\nPor exemplo, P/L de 9 e P/VP de 2 resultam em 18. Olhar apenas o P/VP deixa de considerar essa combinação."
+        },
+        {
+          "h": "A ideia central",
+          "text": "Finanças sólidas e lucros estáveis e crescentes não garantem um bom investimento se o preço for alto demais. Avaliar qualidade e preço.\nUma boa empresa e um bom investimento não são a mesma coisa."
+        }
+      ]
+    },
+    {
+      "title": "Aplicação ao Japão atual",
+      "subtitle": "Separar os critérios de Graham das verificações adicionais",
+      "blocks": [
+        {
+          "h": "Critérios originais e análise adicional",
+          "compact": true,
+          "table": [
+            [
+              "Critério de Graham",
+              "Verificações adicionais"
+            ],
+            [
+              "Liquidez corrente ≥ 200%; dívida de longo prazo ≤ ativo circulante líquido",
+              "Proporção de patrimônio líquido; fluxos de caixa operacional e livre"
+            ],
+            [
+              "Lucro anual positivo por 10 anos",
+              "Oscilação dos lucros; ganhos e perdas não recorrentes"
+            ],
+            [
+              "Crescimento do LPA em 10 anos ≥ 33%",
+              "Direção do LPA nos últimos 3-5 anos"
+            ],
+            [
+              "P/L ≤ 15; referência de P/VP ≤ 1,5; produto ≤ 22,5",
+              "Lucro recorrente sem fatores temporários; margem de segurança ao preço atual"
+            ],
+            [
+              "Dividendos ininterruptos por pelo menos 20 anos",
+              "Se dividendos não forem prioridade, reconhecer expressamente a mudança do critério."
+            ]
+          ]
+        },
+        {
+          "h": "Flexibilizar é uma decisão própria",
+          "text": "Aceitar alguns anos de prejuízo ou retirar a exigência de dividendos difere dos sete critérios originais. Separar seu cumprimento da adequação à política pessoal de investimento."
+        }
+      ]
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "格雷厄姆的投资标准",
+      "subtitle": "面向防御型投资者的七项企业筛选条件",
+      "blocks": [
+        {
+          "h": "七项条件",
+          "table": [
+            [
+              "条件",
+              "核查内容"
+            ],
+            [
+              "1. 足够的企业规模",
+              "避免规模过小的企业。"
+            ],
+            [
+              "2. 稳健的财务状况",
+              "流动比率至少200%，并检查长期负债。"
+            ],
+            [
+              "3. 盈利稳定性",
+              "过去10年，每年盈利。"
+            ],
+            [
+              "4. 股息记录",
+              "连续派息至少20年。"
+            ],
+            [
+              "5. 盈利增长",
+              "10年内每股收益（EPS）增长至少33%。"
+            ],
+            [
+              "6. 合理的市盈率",
+              "股价不超过过去3年平均EPS的15倍。"
+            ],
+            [
+              "7. 合理的市净率",
+              "以不超过1.5倍为参考，同时核查与市盈率的乘积。"
+            ]
+          ]
+        },
+        {
+          "h": "从财务、盈利与价格三个方面筛选",
+          "text": "企业规模的金额门槛基于格雷厄姆时代的美国市场，不应原样套用到今天的日本股票。"
+        }
+      ]
+    },
+    {
+      "title": "条件1至5：核查企业质量",
+      "subtitle": "观察规模、财务、盈利与派息的持续性",
+      "blocks": [
+        {
+          "h": "1. 足够的企业规模",
+          "text": "旨在避免规模过小的企业。分析今天的日本股票，应结合业务规模、流动性与财务韧性，而非仅依赖当年的销售额门槛。"
+        },
+        {
+          "h": "2. 稳健的财务状况",
+          "text": "流动资产 ÷ 流动负债 ≥ 2.0。长期负债不应超过净流动资产，即流动资产减去流动负债。这些主要是一般实业公司的标准，公用事业企业另有标准。"
+        },
+        {
+          "h": "3. 盈利稳定性",
+          "text": "过去10年，每年盈利。并非10年平均盈利即可，而应确认各年均未亏损。"
+        },
+        {
+          "h": "4. 股息记录",
+          "text": "连续派息至少20年。要求的是长期持续派息，并非连续提高股息。"
+        },
+        {
+          "h": "5. 盈利增长",
+          "text": "10年内EPS至少增长33%。为降低单年波动影响，应比较期初与期末各自的3年平均EPS。"
+        }
+      ]
+    },
+    {
+      "title": "条件6至7：核查股价水平",
+      "subtitle": "区分企业质量与买入价格",
+      "blocks": [
+        {
+          "h": "6. 市盈率不超过15倍",
+          "text": "当前股价 ÷ 过去3年平均EPS ≤ 15。相比仅使用最近一年的利润，平均值可减轻暂时业绩良好造成的低估错觉。"
+        },
+        {
+          "h": "7. 市净率以不超过1.5倍为参考",
+          "text": "当前股价 ÷ 每股净资产 ≤ 1.5。但应结合市盈率判断。市盈率较低时，市净率超过1.5倍也可能被允许。"
+        },
+        {
+          "h": "市盈率与市净率的组合",
+          "text": "市盈率 × 市净率 ≤ 22.5。\n例如，市盈率9倍、市净率2倍，乘积为18。仅凭市净率判断，会遗漏这一组合思路。"
+        },
+        {
+          "h": "七项条件的核心",
+          "text": "即使财务稳健、盈利稳定增长，买入价格过高也未必是好投资。应同时核查企业质量与价格。\n好公司与好投资并不等同。"
+        }
+      ]
+    },
+    {
+      "title": "如何应用于今天的日本股票",
+      "subtitle": "区分格雷厄姆标准与自行增加的核查项目",
+      "blocks": [
+        {
+          "h": "原有标准与额外分析",
+          "compact": true,
+          "table": [
+            [
+              "格雷厄姆标准",
+              "额外核查项目"
+            ],
+            [
+              "流动比率≥200%；长期负债≤净流动资产",
+              "权益比率；经营现金流与自由现金流"
+            ],
+            [
+              "过去10年，每年盈利",
+              "利润波动幅度；是否有一次性收益或损失"
+            ],
+            [
+              "10年EPS增长率≥33%",
+              "最近3至5年EPS的方向"
+            ],
+            [
+              "市盈率≤15；市净率参考值≤1.5；两者乘积≤22.5",
+              "剔除暂时因素后的盈利能力；当前股价的安全边际"
+            ],
+            [
+              "连续派息至少20年",
+              "若不重视股息，也应明确这是对标准的修改。"
+            ]
+          ]
+        },
+        {
+          "h": "放宽条件属于自主判断",
+          "text": "允许部分年份亏损、删除股息条件等，与原有七项条件不同。应分别核查是否符合原典，以及是否符合自己的投资方针。"
+        }
+      ]
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "葛拉漢的投資標準",
+      "subtitle": "面向防禦型投資人的七項企業篩選條件",
+      "blocks": [
+        {
+          "h": "七項條件",
+          "table": [
+            [
+              "條件",
+              "核查內容"
+            ],
+            [
+              "1. 足夠的企業規模",
+              "避免規模過小的企業。"
+            ],
+            [
+              "2. 穩健的財務狀況",
+              "流動比率至少200%，並檢查長期負債。"
+            ],
+            [
+              "3. 獲利穩定性",
+              "過去10年，每年獲利。"
+            ],
+            [
+              "4. 股息紀錄",
+              "連續配息至少20年。"
+            ],
+            [
+              "5. 獲利成長",
+              "10年內每股盈餘（EPS）成長至少33%。"
+            ],
+            [
+              "6. 合理的本益比",
+              "股價不超過過去3年平均EPS的15倍。"
+            ],
+            [
+              "7. 合理的股價淨值比",
+              "以不超過1.5倍為參考，同時核查與本益比的乘積。"
+            ]
+          ]
+        },
+        {
+          "h": "從財務、獲利與價格三方面篩選",
+          "text": "企業規模的金額門檻基於葛拉漢時代的美國市場，不應原樣套用到今天的日本股票。"
+        }
+      ]
+    },
+    {
+      "title": "條件1至5：核查企業品質",
+      "subtitle": "觀察規模、財務、獲利與配息的持續性",
+      "blocks": [
+        {
+          "h": "1. 足夠的企業規模",
+          "text": "旨在避免規模過小的企業。分析今天的日本股票，應結合業務規模、流動性與財務韌性，而非僅依賴當年的銷售額門檻。"
+        },
+        {
+          "h": "2. 穩健的財務狀況",
+          "text": "流動資產 ÷ 流動負債 ≥ 2.0。長期負債不應超過淨流動資產，即流動資產減去流動負債。這些主要是一般實業公司的標準，公用事業企業另有標準。"
+        },
+        {
+          "h": "3. 獲利穩定性",
+          "text": "過去10年，每年獲利。並非10年平均獲利即可，而應確認各年均未虧損。"
+        },
+        {
+          "h": "4. 股息紀錄",
+          "text": "連續配息至少20年。要求的是長期持續配息，並非連續提高股息。"
+        },
+        {
+          "h": "5. 獲利成長",
+          "text": "10年內EPS至少成長33%。為降低單年波動影響，應比較期初與期末各自的3年平均EPS。"
+        }
+      ]
+    },
+    {
+      "title": "條件6至7：核查股價水準",
+      "subtitle": "區分企業品質與買進價格",
+      "blocks": [
+        {
+          "h": "6. 本益比不超過15倍",
+          "text": "目前股價 ÷ 過去3年平均EPS ≤ 15。相較僅使用最近一年的獲利，平均值可減輕暫時業績良好造成的低估錯覺。"
+        },
+        {
+          "h": "7. 股價淨值比以不超過1.5倍為參考",
+          "text": "目前股價 ÷ 每股淨值 ≤ 1.5。但應結合本益比判斷。本益比較低時，股價淨值比超過1.5倍也可能被允許。"
+        },
+        {
+          "h": "本益比與股價淨值比的組合",
+          "text": "本益比 × 股價淨值比 ≤ 22.5。\n例如，本益比9倍、股價淨值比2倍，乘積為18。僅憑股價淨值比判斷，會遺漏這一組合思路。"
+        },
+        {
+          "h": "七項條件的核心",
+          "text": "即使財務穩健、獲利穩定成長，買進價格過高也未必是好投資。應同時核查企業品質與價格。\n好公司與好投資並不等同。"
+        }
+      ]
+    },
+    {
+      "title": "如何應用於今天的日本股票",
+      "subtitle": "區分葛拉漢標準與自行增加的核查項目",
+      "blocks": [
+        {
+          "h": "原有標準與額外分析",
+          "compact": true,
+          "table": [
+            [
+              "葛拉漢標準",
+              "額外核查項目"
+            ],
+            [
+              "流動比率≥200%；長期負債≤淨流動資產",
+              "權益比率；營業現金流與自由現金流"
+            ],
+            [
+              "過去10年，每年獲利",
+              "獲利波動幅度；是否有一次性收益或損失"
+            ],
+            [
+              "10年EPS成長率≥33%",
+              "最近3至5年EPS的方向"
+            ],
+            [
+              "本益比≤15；股價淨值比參考值≤1.5；兩者乘積≤22.5",
+              "剔除暫時因素後的獲利能力；目前股價的安全邊際"
+            ],
+            [
+              "連續配息至少20年",
+              "若不重視股息，也應明確這是對標準的修改。"
+            ]
+          ]
+        },
+        {
+          "h": "放寬條件屬於自主判斷",
+          "text": "允許部分年份虧損、刪除股息條件等，與原有七項條件不同。應分別核查是否符合原典，以及是否符合自己的投資方針。"
+        }
+      ]
+    }
+  ]
+}

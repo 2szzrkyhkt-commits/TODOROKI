@@ -1,0 +1,752 @@
+{
+  "en": [
+    {
+      "title": "Japanese equity megatrends",
+      "subtitle": "Growth fields and industries supporting adoption",
+      "blocks": [
+        {
+          "table": [
+            [
+              "Field",
+              "Supporting areas",
+              "Examples of related Japanese companies"
+            ],
+            [
+              "AI semiconductors",
+              "Production equipment, materials and inspection",
+              "Tokyo Electron / Advantest / DISCO / SCREEN Holdings"
+            ],
+            [
+              "AI data centers",
+              "Electricity supply, power receiving and transformation equipment, cooling",
+              "Hitachi / Mitsubishi Electric / Fuji Electric / J-POWER"
+            ],
+            [
+              "Optical communications and photonics-electronics convergence",
+              "Optical fiber, optical components and R&D",
+              "Fujikura / Furukawa Electric / Sumitomo Electric Industries / NTT"
+            ],
+            [
+              "AI infrastructure",
+              "Data centers and networks",
+              "NTT / KDDI / SoftBank / Sakura Internet"
+            ],
+            [
+              "Autonomous driving",
+              "Sensors, semiconductors and control",
+              "Toyota Motor / DENSO / Sony Group / Renesas Electronics"
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            111,
+            160,
+            239
+          ]
+        },
+        {
+          "text": "Companies participate differently: product supply, facility operation, R&D and more. A theme connection alone cannot establish the scale of its contribution to sales or profits."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "Medium- and long-term technologies",
+      "subtitle": "Stages from R&D to adoption vary by technology and use",
+      "blocks": [
+        {
+          "table": [
+            [
+              "Field",
+              "Supporting areas",
+              "Examples of related Japanese companies"
+            ],
+            [
+              "Physical AI",
+              "Industrial robots and factory automation (FA)",
+              "FANUC / Yaskawa Electric / Mitsubishi Electric"
+            ],
+            [
+              "Humanoids",
+              "Reducers, motors and sensors",
+              "Harmonic Drive Systems / Nabtesco / Nidec / Murata Manufacturing"
+            ],
+            [
+              "Space",
+              "Satellites, rockets and related equipment",
+              "Mitsubishi Heavy Industries / IHI / NEC / SKY Perfect JSAT Holdings"
+            ],
+            [
+              "Quantum computers",
+              "Computing, communications, cryogenics and measurement",
+              "Fujitsu / NEC / NTT / Hitachi"
+            ],
+            [
+              "Nuclear fusion",
+              "Reactor equipment, materials and heavy electrical equipment",
+              "Mitsubishi Heavy Industries / IHI / Hitachi / Mitsubishi Electric"
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            111,
+            160,
+            239
+          ]
+        },
+        {
+          "h": "Reading the time horizon",
+          "text": "Some areas, such as space and industrial robots, are already commercialized; other applications remain centered on R&D. Adoption speed depends on technology, cost, institutions and demand. A single commercialization timeframe cannot easily describe an entire field."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "Connections between themes and company analysis",
+      "subtitle": "Assess technology, earnings, finances and share prices separately",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "Industries supporting AI adoption are interconnected",
+          "text": "Wider AI use involves semiconductors, data centers, power equipment, cooling and optical communications. Robots and autonomous driving also require motors, sensors, reducers and control technology."
+        },
+        {
+          "table": [
+            [
+              "Assessment axis",
+              "What to examine"
+            ],
+            [
+              "Theme connection",
+              "Which products and services are involved? Is there demand shared across several fields?"
+            ],
+            [
+              "Earnings contribution",
+              "Does demand growth appear in related-business sales, profits and orders?"
+            ],
+            [
+              "Finances and cash generation",
+              "Check equity ratio, current ratio, operating cash flow and free cash flow."
+            ],
+            [
+              "Share price and corporate value",
+              "Assess P/E and P/B alongside growth and profitability."
+            ],
+            [
+              "Forecast uncertainty",
+              "Check effects of adoption delays, competition and capital-investment changes on results."
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            150,
+            360
+          ]
+        },
+        {
+          "text": "Participation in a growth field is not the same as profit growth or a rising share price. Use the theme map as a starting point, then assess each business and its price."
+        }
+      ]
+    }
+  ],
+  "es": [
+    {
+      "title": "Megatendencias de la bolsa japonesa",
+      "subtitle": "Sectores de crecimiento e industrias que apoyan su adopción",
+      "blocks": [
+        {
+          "table": [
+            [
+              "Sector",
+              "Áreas de apoyo",
+              "Ejemplos de empresas japonesas relacionadas"
+            ],
+            [
+              "Semiconductores para IA",
+              "Equipos, materiales e inspección",
+              "Tokyo Electron / Advantest / DISCO / SCREEN Holdings"
+            ],
+            [
+              "Centros de datos de IA",
+              "Electricidad, recepción y transformación eléctrica, refrigeración",
+              "Hitachi / Mitsubishi Electric / Fuji Electric / J-POWER"
+            ],
+            [
+              "Comunicación óptica y convergencia fotónica-electrónica",
+              "Fibra, componentes ópticos e I+D",
+              "Fujikura / Furukawa Electric / Sumitomo Electric Industries / NTT"
+            ],
+            [
+              "Infraestructura de IA",
+              "Centros de datos y redes",
+              "NTT / KDDI / SoftBank / Sakura Internet"
+            ],
+            [
+              "Conducción autónoma",
+              "Sensores, semiconductores y control",
+              "Toyota Motor / DENSO / Sony Group / Renesas Electronics"
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            111,
+            160,
+            239
+          ]
+        },
+        {
+          "text": "Cada empresa participa de distinta forma: productos, instalaciones o I+D. La relación temática por sí sola no permite medir la contribución a ventas o beneficios."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "Tecnologías a medio y largo plazo",
+      "subtitle": "La fase entre I+D y adopción depende de la tecnología y el uso",
+      "blocks": [
+        {
+          "table": [
+            [
+              "Sector",
+              "Áreas de apoyo",
+              "Ejemplos de empresas japonesas relacionadas"
+            ],
+            [
+              "IA física",
+              "Robots industriales y automatización de fábricas (FA)",
+              "FANUC / Yaskawa Electric / Mitsubishi Electric"
+            ],
+            [
+              "Humanoides",
+              "Reductores, motores y sensores",
+              "Harmonic Drive Systems / Nabtesco / Nidec / Murata Manufacturing"
+            ],
+            [
+              "Espacio",
+              "Satélites, cohetes y equipos",
+              "Mitsubishi Heavy Industries / IHI / NEC / SKY Perfect JSAT Holdings"
+            ],
+            [
+              "Ordenadores cuánticos",
+              "Cálculo, comunicaciones, criogenia y medición",
+              "Fujitsu / NEC / NTT / Hitachi"
+            ],
+            [
+              "Fusión nuclear",
+              "Equipos de reactores, materiales y equipos eléctricos pesados",
+              "Mitsubishi Heavy Industries / IHI / Hitachi / Mitsubishi Electric"
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            111,
+            160,
+            239
+          ]
+        },
+        {
+          "h": "Interpretar el horizonte temporal",
+          "text": "Algunas áreas, como espacio y robótica industrial, ya son comerciales; otras aplicaciones se centran en I+D. La adopción depende de tecnología, costes, instituciones y demanda. Es difícil asignar un único plazo de comercialización a todo un sector."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "Vínculos temáticos y análisis empresarial",
+      "subtitle": "Separar tecnología, resultados, finanzas y cotización",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "Las industrias que apoyan la IA están interconectadas",
+          "text": "La expansión de la IA requiere semiconductores, centros de datos, equipos eléctricos, refrigeración y comunicaciones ópticas. Robótica y conducción autónoma necesitan además motores, sensores, reductores y control."
+        },
+        {
+          "table": [
+            [
+              "Eje de evaluación",
+              "Qué revisar"
+            ],
+            [
+              "Relación temática",
+              "¿Qué productos o servicios participan? ¿Comparten demanda varios sectores?"
+            ],
+            [
+              "Aporte a resultados",
+              "¿La mayor demanda aparece en ventas, beneficios y pedidos del negocio?"
+            ],
+            [
+              "Finanzas y generación de caja",
+              "Revisar proporción de patrimonio, liquidez corriente, flujo operativo y flujo libre."
+            ],
+            [
+              "Cotización y valor empresarial",
+              "Evaluar PER y precio/valor contable junto con crecimiento y rentabilidad."
+            ],
+            [
+              "Incertidumbre",
+              "Revisar retrasos de adopción, competencia y cambios de inversión y sus efectos."
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            150,
+            360
+          ]
+        },
+        {
+          "text": "Participar en un sector creciente no equivale a más beneficios o a una cotización al alza. La relación temática es el punto de partida para revisar cada negocio y su precio."
+        }
+      ]
+    }
+  ],
+  "pt": [
+    {
+      "title": "Megatendências das ações japonesas",
+      "subtitle": "Áreas de crescimento e setores que apoiam a adoção",
+      "blocks": [
+        {
+          "table": [
+            [
+              "Área",
+              "Atividades de apoio",
+              "Exemplos de empresas japonesas relacionadas"
+            ],
+            [
+              "Semicondutores para IA",
+              "Equipamentos, materiais e inspeção",
+              "Tokyo Electron / Advantest / DISCO / SCREEN Holdings"
+            ],
+            [
+              "Data centers de IA",
+              "Eletricidade, recepção e transformação elétrica, refrigeração",
+              "Hitachi / Mitsubishi Electric / Fuji Electric / J-POWER"
+            ],
+            [
+              "Comunicação óptica e convergência fotônica-eletrônica",
+              "Fibra, componentes ópticos e P&D",
+              "Fujikura / Furukawa Electric / Sumitomo Electric Industries / NTT"
+            ],
+            [
+              "Infraestrutura de IA",
+              "Data centers e redes",
+              "NTT / KDDI / SoftBank / Sakura Internet"
+            ],
+            [
+              "Direção autônoma",
+              "Sensores, semicondutores e controle",
+              "Toyota Motor / DENSO / Sony Group / Renesas Electronics"
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            111,
+            160,
+            239
+          ]
+        },
+        {
+          "text": "As empresas participam de formas distintas: produtos, operação de instalações e P&D. A relação com o tema, sozinha, não revela a contribuição às vendas e aos lucros."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "Tecnologias de médio e longo prazo",
+      "subtitle": "A fase entre P&D e adoção varia conforme tecnologia e uso",
+      "blocks": [
+        {
+          "table": [
+            [
+              "Área",
+              "Atividades de apoio",
+              "Exemplos de empresas japonesas relacionadas"
+            ],
+            [
+              "IA física",
+              "Robôs industriais e automação de fábricas (FA)",
+              "FANUC / Yaskawa Electric / Mitsubishi Electric"
+            ],
+            [
+              "Humanoides",
+              "Redutores, motores e sensores",
+              "Harmonic Drive Systems / Nabtesco / Nidec / Murata Manufacturing"
+            ],
+            [
+              "Espaço",
+              "Satélites, foguetes e equipamentos",
+              "Mitsubishi Heavy Industries / IHI / NEC / SKY Perfect JSAT Holdings"
+            ],
+            [
+              "Computadores quânticos",
+              "Computação, comunicação, criogenia e medição",
+              "Fujitsu / NEC / NTT / Hitachi"
+            ],
+            [
+              "Fusão nuclear",
+              "Equipamentos de reatores, materiais e equipamentos elétricos pesados",
+              "Mitsubishi Heavy Industries / IHI / Hitachi / Mitsubishi Electric"
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            111,
+            160,
+            239
+          ]
+        },
+        {
+          "h": "Como ler o horizonte temporal",
+          "text": "Áreas como espaço e robôs industriais já são comerciais; outras aplicações ainda se concentram em P&D. A adoção depende de tecnologia, custos, instituições e demanda. É difícil atribuir um único prazo de comercialização a um setor inteiro."
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "Conexões temáticas e análise empresarial",
+      "subtitle": "Separar tecnologia, resultados, finanças e preço das ações",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "As indústrias que apoiam a IA são interligadas",
+          "text": "A expansão da IA envolve semicondutores, data centers, equipamentos elétricos, refrigeração e comunicação óptica. Robôs e direção autônoma também exigem motores, sensores, redutores e controle."
+        },
+        {
+          "table": [
+            [
+              "Eixo de análise",
+              "O que verificar"
+            ],
+            [
+              "Relação com o tema",
+              "Quais produtos e serviços participam? Existe demanda comum a várias áreas?"
+            ],
+            [
+              "Contribuição aos resultados",
+              "A demanda crescente aparece em vendas, lucros e pedidos do negócio?"
+            ],
+            [
+              "Finanças e geração de caixa",
+              "Verificar proporção de capital próprio, liquidez corrente, fluxo operacional e fluxo livre."
+            ],
+            [
+              "Preço e valor empresarial",
+              "Avaliar P/L e P/VP junto com crescimento e rentabilidade."
+            ],
+            [
+              "Incerteza das previsões",
+              "Verificar impactos de atrasos, competição e mudanças de investimento nos resultados."
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            150,
+            360
+          ]
+        },
+        {
+          "text": "Participar de uma área em crescimento não equivale a ampliar lucros ou valorizar ações. Use o mapa temático como entrada para analisar cada negócio e seu preço."
+        }
+      ]
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "日本股票的宏观趋势",
+      "subtitle": "梳理成长领域及支撑普及的相关产业",
+      "blocks": [
+        {
+          "table": [
+            [
+              "领域",
+              "支撑普及的环节",
+              "日本相关企业示例"
+            ],
+            [
+              "AI半导体",
+              "制造设备、材料、检测",
+              "东京电子／爱德万测试／迪思科／SCREEN Holdings"
+            ],
+            [
+              "AI数据中心",
+              "电力供应、受变电设备、冷却",
+              "日立制作所／三菱电机／富士电机／电源开发（J-POWER）"
+            ],
+            [
+              "光通信、光电融合",
+              "光纤、光学部件、研发",
+              "藤仓／古河电气工业／住友电气工业／NTT"
+            ],
+            [
+              "AI基础设施",
+              "数据中心、网络",
+              "NTT／KDDI／软银／樱花互联网"
+            ],
+            [
+              "自动驾驶",
+              "传感器、半导体、控制",
+              "丰田汽车／电装／索尼集团／瑞萨电子"
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            111,
+            160,
+            239
+          ]
+        },
+        {
+          "text": "各公司参与方式不同，包括产品供应、设施运营、研发等。仅凭主题关联，不能判断对销售额、利润的贡献大小。"
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "中长期技术与相关产业",
+      "subtitle": "从研发到普及的阶段因技术、用途而异",
+      "blocks": [
+        {
+          "table": [
+            [
+              "领域",
+              "支撑普及的环节",
+              "日本相关企业示例"
+            ],
+            [
+              "物理AI",
+              "工业机器人、工厂自动化（FA）",
+              "发那科／安川电机／三菱电机"
+            ],
+            [
+              "人形机器人",
+              "减速器、电机、传感器",
+              "哈默纳科／纳博特斯克／尼得科／村田制作所"
+            ],
+            [
+              "宇宙",
+              "卫星、火箭、相关设备",
+              "三菱重工业／IHI／NEC／SKY Perfect JSAT Holdings"
+            ],
+            [
+              "量子计算机",
+              "计算、通信、极低温、测量",
+              "富士通／NEC／NTT／日立制作所"
+            ],
+            [
+              "核聚变",
+              "反应堆相关设备、材料、重型电气设备",
+              "三菱重工业／IHI／日立制作所／三菱电机"
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            111,
+            160,
+            239
+          ]
+        },
+        {
+          "h": "如何看时间轴",
+          "text": "宇宙、工业机器人等有些领域已商业化，也有以研发为主的用途。普及速度随技术、成本、制度、需求变化，难以用单一实用化年限描述整个领域。"
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "主题联系与企业分析",
+      "subtitle": "分别确认技术发展、企业收益、财务及股价",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "支撑AI普及的产业相互关联",
+          "text": "AI利用扩大涉及半导体、数据中心、电力设备、冷却、光通信等基础设施。机器人、自动驾驶除此之外还需电机、传感器、减速器、控制技术等。"
+        },
+        {
+          "table": [
+            [
+              "检查维度",
+              "检查内容"
+            ],
+            [
+              "主题关系",
+              "涉及哪些产品、服务？多个领域是否存在共同需求？"
+            ],
+            [
+              "收益贡献",
+              "需求扩大是否反映在相关业务的销售额、利润、订单中？"
+            ],
+            [
+              "财务与现金创造力",
+              "确认股东权益比率、流动比率、经营现金流、自由现金流。"
+            ],
+            [
+              "股价与企业价值",
+              "结合成长性、盈利性评估市盈率、市净率等。"
+            ],
+            [
+              "预测不确定性",
+              "确认普及延迟、竞争、资本开支变化等对业绩的影响。"
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            150,
+            360
+          ]
+        },
+        {
+          "text": "参与成长领域不等于利润增长或股价上涨。以关联梳理为入口，逐一确认业务实态与价格。"
+        }
+      ]
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "日本股票的宏觀趨勢",
+      "subtitle": "梳理成長領域及支撐普及的相關產業",
+      "blocks": [
+        {
+          "table": [
+            [
+              "領域",
+              "支撐普及的環節",
+              "日本相關企業示例"
+            ],
+            [
+              "AI半導體",
+              "製造設備、材料、檢測",
+              "東京威力科創／愛德萬測試／迪思科／SCREEN Holdings"
+            ],
+            [
+              "AI資料中心",
+              "電力供應、受變電設備、冷卻",
+              "日立製作所／三菱電機／富士電機／電源開發（J-POWER）"
+            ],
+            [
+              "光通訊、光電融合",
+              "光纖、光學零件、研發",
+              "藤倉／古河電氣工業／住友電氣工業／NTT"
+            ],
+            [
+              "AI基礎設施",
+              "資料中心、網路",
+              "NTT／KDDI／軟銀／櫻花網路"
+            ],
+            [
+              "自動駕駛",
+              "感測器、半導體、控制",
+              "豐田汽車／電裝／索尼集團／瑞薩電子"
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            111,
+            160,
+            239
+          ]
+        },
+        {
+          "text": "各公司參與方式不同，包括產品供應、設施營運、研發等。僅憑主題關聯，不能判斷對營收、利潤的貢獻大小。"
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "中長期技術與相關產業",
+      "subtitle": "從研發到普及的階段因技術、用途而異",
+      "blocks": [
+        {
+          "table": [
+            [
+              "領域",
+              "支撐普及的環節",
+              "日本相關企業示例"
+            ],
+            [
+              "物理AI",
+              "工業機器人、工廠自動化（FA）",
+              "發那科／安川電機／三菱電機"
+            ],
+            [
+              "人形機器人",
+              "減速機、馬達、感測器",
+              "哈默納科／納博特斯克／尼得科／村田製作所"
+            ],
+            [
+              "太空",
+              "衛星、火箭、相關設備",
+              "三菱重工業／IHI／NEC／SKY Perfect JSAT Holdings"
+            ],
+            [
+              "量子電腦",
+              "計算、通訊、極低溫、量測",
+              "富士通／NEC／NTT／日立製作所"
+            ],
+            [
+              "核融合",
+              "反應爐相關設備、材料、重型電氣設備",
+              "三菱重工業／IHI／日立製作所／三菱電機"
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            111,
+            160,
+            239
+          ]
+        },
+        {
+          "h": "如何看時間軸",
+          "text": "太空、工業機器人等有些領域已商業化，也有以研發為主的用途。普及速度隨技術、成本、制度、需求變化，難以用單一實用化年限描述整個領域。"
+        }
+      ],
+      "dense": true
+    },
+    {
+      "title": "主題聯繫與企業分析",
+      "subtitle": "分別確認技術發展、企業收益、財務及股價",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "支撐AI普及的產業相互關聯",
+          "text": "AI利用擴大涉及半導體、資料中心、電力設備、冷卻、光通訊等基礎設施。機器人、自動駕駛除此之外還需馬達、感測器、減速機、控制技術等。"
+        },
+        {
+          "table": [
+            [
+              "檢查面向",
+              "檢查內容"
+            ],
+            [
+              "主題關係",
+              "涉及哪些產品、服務？多個領域是否存在共同需求？"
+            ],
+            [
+              "收益貢獻",
+              "需求擴大是否反映在相關業務的營收、利潤、訂單中？"
+            ],
+            [
+              "財務與現金創造力",
+              "確認股東權益比率、流動比率、營業現金流、自由現金流。"
+            ],
+            [
+              "股價與企業價值",
+              "結合成長性、獲利能力評估本益比、股價淨值比等。"
+            ],
+            [
+              "預測不確定性",
+              "確認普及延遲、競爭、資本支出變化等對業績的影響。"
+            ]
+          ],
+          "compact": true,
+          "widths": [
+            150,
+            360
+          ]
+        },
+        {
+          "text": "參與成長領域不等於利潤成長或股價上漲。以關聯梳理為入口，逐一確認業務實況與價格。"
+        }
+      ]
+    }
+  ]
+}

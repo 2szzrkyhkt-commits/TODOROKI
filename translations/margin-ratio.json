@@ -1,0 +1,147 @@
+{
+  "en": [
+    {
+      "title": "Stock lending ratio: reading margin supply, demand and prices",
+      "subtitle": "INVESTMENT / ECONOMY / BUSINESS",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "What is the stock lending ratio?",
+          "text": "Japan Securities Finance’s outstanding loans divided by outstanding shares lent. Its coverage differs from the exchange’s margin buying-to-selling ratio."
+        },
+        {
+          "h": "Reading the ratio",
+          "text": "2.5: outstanding loans are 2.5 times outstanding shares lent.\n0.5: outstanding shares lent are twice outstanding loans."
+        },
+        {
+          "h": "Relationship with share prices",
+          "text": "Selling to close long positions can weigh on prices. Short sellers’ repurchases can sometimes trigger a short squeeze."
+        },
+        {
+          "h": "What to check",
+          "text": "Check changes in balances, trading volume, share prices and business results together. Do not decide trades from the ratio alone."
+        },
+        {
+          "h": "TODOROKI",
+          "text": "Investment and economics: numbers before intuition."
+        }
+      ]
+    }
+  ],
+  "es": [
+    {
+      "title": "Ratio de préstamos de valores: demanda de margen y cotización",
+      "subtitle": "INVERSIÓN / ECONOMÍA / EMPRESA",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "Qué es este ratio",
+          "text": "Es el saldo de financiación de Japan Securities Finance dividido entre el saldo de acciones prestadas. Su universo de cálculo difiere del ratio de compras y ventas a crédito de la bolsa."
+        },
+        {
+          "h": "Cómo interpretarlo",
+          "text": "2,5 veces: el saldo de financiación es 2,5 veces el saldo de acciones prestadas.\n0,5 veces: el saldo de acciones prestadas duplica el saldo de financiación."
+        },
+        {
+          "h": "Relación con la cotización",
+          "text": "Las ventas para cerrar posiciones compradoras pueden presionar el precio. Las recompras de los vendedores en corto pueden provocar una subida forzada por el cierre de cortos."
+        },
+        {
+          "h": "Qué comprobar",
+          "text": "Examine conjuntamente la evolución de saldos, volumen, cotización y resultados. No decida operaciones solo por el ratio."
+        },
+        {
+          "h": "TODOROKI",
+          "text": "Inversión y economía: cifras antes que intuición."
+        }
+      ]
+    }
+  ],
+  "pt": [
+    {
+      "title": "Índice de empréstimo de ações: margem e cotação",
+      "subtitle": "INVESTIMENTO / ECONOMIA / NEGÓCIOS",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "O que é o índice",
+          "text": "É o saldo de financiamento da Japan Securities Finance dividido pelo saldo de ações emprestadas. Seu universo de cálculo difere do índice de compras e vendas a crédito da bolsa."
+        },
+        {
+          "h": "Como interpretar",
+          "text": "2,5 vezes: o saldo de financiamento é 2,5 vezes o saldo de ações emprestadas.\n0,5 vez: o saldo de ações emprestadas é o dobro do saldo de financiamento."
+        },
+        {
+          "h": "Relação com a cotação",
+          "text": "Vendas para encerrar posições compradas podem pressionar a cotação. Recompras dos vendidos podem provocar uma alta por fechamento de posições vendidas."
+        },
+        {
+          "h": "O que verificar",
+          "text": "Analise em conjunto a evolução dos saldos, o volume, a cotação e os resultados. Não decida operações apenas pelo índice."
+        },
+        {
+          "h": "TODOROKI",
+          "text": "Investimento e economia: números antes da intuição."
+        }
+      ]
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "贷借倍率：解读信用交易供需与股价",
+      "subtitle": "投资 / 经济 / 商业",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "什么是贷借倍率",
+          "text": "将日本证券金融公司的融资余额除以融券余额所得的指标。\n其统计对象与交易所的信用倍率不同。"
+        },
+        {
+          "h": "如何解读倍率",
+          "text": "2.5倍：融资余额是融券余额的2.5倍。\n0.5倍：融券余额是融资余额的2倍。"
+        },
+        {
+          "h": "与股价的关系",
+          "text": "多头为偿还融资而卖出，可能给股价带来压力。空头买回股票，有时会引发逼空上涨。"
+        },
+        {
+          "h": "应确认的要点",
+          "text": "同时确认余额变化、成交量、股价与业绩。不要仅凭倍率决定买卖。"
+        },
+        {
+          "h": "TODOROKI",
+          "text": "投资与经济，以数字优先于感觉。"
+        }
+      ]
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "貸借倍率：解讀信用交易供需與股價",
+      "subtitle": "投資 / 經濟 / 商業",
+      "dense": true,
+      "blocks": [
+        {
+          "h": "什麼是貸借倍率",
+          "text": "將日本證券金融公司的融資餘額除以融券餘額所得的指標。\n其統計對象與交易所的信用倍率不同。"
+        },
+        {
+          "h": "如何解讀倍率",
+          "text": "2.5倍：融資餘額是融券餘額的2.5倍。\n0.5倍：融券餘額是融資餘額的2倍。"
+        },
+        {
+          "h": "與股價的關係",
+          "text": "多頭為償還融資而賣出，可能給股價帶來壓力。空頭買回股票，有時會引發軋空上漲。"
+        },
+        {
+          "h": "應確認的要點",
+          "text": "同時確認餘額變化、成交量、股價與業績。不要僅憑倍率決定買賣。"
+        },
+        {
+          "h": "TODOROKI",
+          "text": "投資與經濟，以數字優先於感覺。"
+        }
+      ]
+    }
+  ]
+}

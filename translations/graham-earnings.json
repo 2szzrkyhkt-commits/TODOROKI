@@ -1,0 +1,402 @@
+{
+  "en": [
+    {
+      "title": "Graham’s earnings power analysis",
+      "subtitle": "Using 10 years of net income to assess stability and persistence",
+      "blocks": [
+        {
+          "h": "One year of accounts is not enough",
+          "text": "A single year does not reveal the full strength of a business."
+        },
+        {
+          "h": "Profits and losses over 10 years",
+          "text": "Could the company remain profitable in recessions and difficult years?"
+        },
+        {
+          "h": "Earnings fluctuations",
+          "text": "Are earnings stable, or dependent on temporary exceptional demand?"
+        },
+        {
+          "h": "Recent results versus the past",
+          "text": "Is earning power improving, holding steady or deteriorating?"
+        },
+        {
+          "h": "Look beyond this year’s profit",
+          "text": "Assess whether the business can keep generating profits over the long term."
+        }
+      ]
+    },
+    {
+      "title": "Three perspectives on 10-year net income",
+      "subtitle": "Look at the causes of profit and the ability to repeat it",
+      "blocks": [
+        {
+          "h": "01  Frequency of losses",
+          "text": "The number of loss-making years helps assess business stability. Repeated losses call for examination of market conditions, competition, one-off costs and other causes."
+        },
+        {
+          "h": "02  Earnings quality and repeatability",
+          "text": "Check whether a profit surge came from exceptional gains or a temporary boom. A 10-year history helps identify a normal earnings level."
+        },
+        {
+          "h": "03  Resilience in downturns",
+          "text": "Could the company stay profitable in bad years? Past recession performance is informative, but does not guarantee the same resilience in the future."
+        },
+        {
+          "h": "Combine growth and stability",
+          "text": "Alongside EPS growth, examine the stability of earnings and the factors that produced them."
+        }
+      ]
+    },
+    {
+      "title": "A practical review process",
+      "subtitle": "Check comparability of accounting standards and consolidation scope",
+      "blocks": [
+        {
+          "h": "1. Number and causes of losses",
+          "text": "Examine why losses occurred, not just how often."
+        },
+        {
+          "h": "2. Earnings fluctuations",
+          "text": "Check the effects of business cycles, exceptional demand and one-off gains or losses."
+        },
+        {
+          "h": "3. Changes over the latest 3-5 years",
+          "text": "Compare the historical record with today’s business environment."
+        },
+        {
+          "h": "4. Operating cash flow",
+          "text": "Check whether accounting profits are accompanied by cash inflows."
+        },
+        {
+          "h": "5. Earning power and today’s share price",
+          "text": "Use the findings to interpret measures such as P/E and assess the margin of safety."
+        },
+        {
+          "h": "What 10 years can tell you",
+          "text": "Historical net income does not establish future profits. It supplies evidence for judging stability, repeatability and resilience."
+        }
+      ]
+    }
+  ],
+  "es": [
+    {
+      "title": "Análisis de la capacidad de beneficios de Graham",
+      "subtitle": "Diez años de beneficio neto para evaluar estabilidad y continuidad",
+      "blocks": [
+        {
+          "h": "Un año de cuentas no basta",
+          "text": "Un solo ejercicio no revela toda la fortaleza de una empresa."
+        },
+        {
+          "h": "Beneficios y pérdidas durante 10 años",
+          "text": "¿Mantuvo beneficios durante las recesiones y los años difíciles?"
+        },
+        {
+          "h": "Fluctuaciones del beneficio",
+          "text": "¿Es estable o depende de una demanda excepcional y temporal?"
+        },
+        {
+          "h": "Resultados recientes frente al pasado",
+          "text": "¿La capacidad de generar beneficios mejora, se mantiene o empeora?"
+        },
+        {
+          "h": "Mirar más allá del beneficio de este año",
+          "text": "Evaluar si la empresa puede seguir generando beneficios a largo plazo."
+        }
+      ]
+    },
+    {
+      "title": "Tres perspectivas sobre el beneficio de 10 años",
+      "subtitle": "Examinar sus causas y la capacidad de repetirlo",
+      "blocks": [
+        {
+          "h": "01  Frecuencia de pérdidas",
+          "text": "El número de ejercicios con pérdidas ayuda a evaluar la estabilidad. Si se repiten, analizar el mercado, la competencia, los costes extraordinarios y otras causas."
+        },
+        {
+          "h": "02  Calidad y repetibilidad de beneficios",
+          "text": "Comprobar si un aumento repentino procede de ganancias extraordinarias o de un auge temporal. Diez años ayudan a identificar el nivel normal de beneficio."
+        },
+        {
+          "h": "03  Resistencia durante las recesiones",
+          "text": "¿Mantuvo beneficios en los años malos? La experiencia pasada sirve de referencia, pero no garantiza la misma resistencia futura."
+        },
+        {
+          "h": "Combinar crecimiento y estabilidad",
+          "text": "Junto al crecimiento del BPA, examinar la estabilidad de los beneficios y los factores que los generaron."
+        }
+      ]
+    },
+    {
+      "title": "Proceso práctico de revisión",
+      "subtitle": "Comprobar comparabilidad contable y perímetro de consolidación",
+      "blocks": [
+        {
+          "h": "1. Número y causas de las pérdidas",
+          "text": "Examinar por qué ocurrieron, además de su frecuencia."
+        },
+        {
+          "h": "2. Fluctuaciones del beneficio",
+          "text": "Revisar ciclos económicos, demanda excepcional y ganancias o pérdidas extraordinarias."
+        },
+        {
+          "h": "3. Cambios en los últimos 3-5 años",
+          "text": "Contrastar el historial con el entorno empresarial actual."
+        },
+        {
+          "h": "4. Flujo de caja operativo",
+          "text": "Comprobar si el beneficio contable viene acompañado de entradas de efectivo."
+        },
+        {
+          "h": "5. Beneficios y cotización actual",
+          "text": "Relacionar el análisis con indicadores como el PER y con el margen de seguridad."
+        },
+        {
+          "h": "Qué aportan diez años",
+          "text": "El beneficio neto histórico no determina el futuro. Aporta información para evaluar estabilidad, repetibilidad y resistencia."
+        }
+      ]
+    }
+  ],
+  "pt": [
+    {
+      "title": "Análise do poder de lucro de Graham",
+      "subtitle": "Dez anos de lucro líquido para avaliar estabilidade e continuidade",
+      "blocks": [
+        {
+          "h": "Um ano de resultados não basta",
+          "text": "Um exercício isolado não revela toda a força de uma empresa."
+        },
+        {
+          "h": "Lucros e prejuízos em 10 anos",
+          "text": "A empresa manteve lucros durante recessões e anos difíceis?"
+        },
+        {
+          "h": "Oscilação dos lucros",
+          "text": "Os lucros são estáveis ou dependem de demanda excepcional e temporária?"
+        },
+        {
+          "h": "Resultados recentes e passado",
+          "text": "A capacidade de gerar lucros está melhorando, estável ou piorando?"
+        },
+        {
+          "h": "Olhar além do lucro deste ano",
+          "text": "Avaliar se a empresa consegue continuar gerando lucros no longo prazo."
+        }
+      ]
+    },
+    {
+      "title": "Três perspectivas sobre o lucro de 10 anos",
+      "subtitle": "Examinar suas causas e a capacidade de repeti-lo",
+      "blocks": [
+        {
+          "h": "01  Frequência de prejuízos",
+          "text": "O número de anos com prejuízo ajuda a avaliar a estabilidade. Se forem recorrentes, examinar mercado, concorrência, custos não recorrentes e outras causas."
+        },
+        {
+          "h": "02  Qualidade e repetibilidade dos lucros",
+          "text": "Verificar se um salto nos lucros veio de ganhos extraordinários ou de uma expansão temporária. Dez anos ajudam a identificar o lucro normal."
+        },
+        {
+          "h": "03  Resistência nas recessões",
+          "text": "A empresa permaneceu lucrativa nos anos ruins? O passado é uma referência, mas não garante a mesma resistência no futuro."
+        },
+        {
+          "h": "Combinar crescimento e estabilidade",
+          "text": "Além do crescimento do LPA, examinar a estabilidade dos lucros e os fatores que os geraram."
+        }
+      ]
+    },
+    {
+      "title": "Processo prático de análise",
+      "subtitle": "Verificar comparabilidade contábil e perímetro de consolidação",
+      "blocks": [
+        {
+          "h": "1. Número e causas dos prejuízos",
+          "text": "Examinar por que ocorreram, além da frequência."
+        },
+        {
+          "h": "2. Oscilação dos lucros",
+          "text": "Revisar ciclos econômicos, demanda excepcional e ganhos ou perdas não recorrentes."
+        },
+        {
+          "h": "3. Mudanças nos últimos 3-5 anos",
+          "text": "Comparar o histórico com o ambiente atual dos negócios."
+        },
+        {
+          "h": "4. Fluxo de caixa operacional",
+          "text": "Verificar se o lucro contábil vem acompanhado de entrada de caixa."
+        },
+        {
+          "h": "5. Poder de lucro e preço atual da ação",
+          "text": "Relacionar a análise a indicadores como o P/L e à margem de segurança."
+        },
+        {
+          "h": "O que dez anos mostram",
+          "text": "O lucro líquido histórico não determina o futuro. Fornece informações para avaliar estabilidade, repetibilidade e resistência."
+        }
+      ]
+    }
+  ],
+  "zh-Hans": [
+    {
+      "title": "格雷厄姆的盈利能力分析",
+      "subtitle": "从10年净利润观察赚钱能力的稳定性与持续性",
+      "blocks": [
+        {
+          "h": "仅看一年财报不足以了解企业实力",
+          "text": "单一年度的业绩无法展现公司的全部实力。"
+        },
+        {
+          "h": "10年中的盈利与亏损",
+          "text": "在经济恶化和逆风年份，企业是否仍能盈利？"
+        },
+        {
+          "h": "利润波动幅度",
+          "text": "盈利是否稳定？是否依赖暂时的特殊需求？"
+        },
+        {
+          "h": "近期与过去的比较",
+          "text": "赚钱能力正在改善、维持还是恶化？"
+        },
+        {
+          "h": "不仅要看今年赚了多少",
+          "text": "还要核查企业能否长期持续创造利润。"
+        }
+      ]
+    },
+    {
+      "title": "观察10年净利润的三个视角",
+      "subtitle": "除了金额，还要看利润来源与重复创造利润的能力",
+      "blocks": [
+        {
+          "h": "01  亏损频率",
+          "text": "亏损次数有助于判断业务稳定性。如果反复亏损，应核查市场状况、竞争环境、一次性费用等原因。"
+        },
+        {
+          "h": "02  利润质量与可重复性",
+          "text": "检查利润激增是否源于特殊收益或暂时繁荣。观察10年变化，有助于了解正常时期的利润水平。"
+        },
+        {
+          "h": "03  衰退时的韧性",
+          "text": "核查企业能否在不景气年份维持盈利。过去衰退时的业绩可供参考，但不保证未来同样有韧性。"
+        },
+        {
+          "h": "结合增长与稳定性",
+          "text": "除EPS增长率外，还要核查利润稳定性及其形成原因。"
+        }
+      ]
+    },
+    {
+      "title": "实际核查步骤",
+      "subtitle": "注意会计准则及合并范围是否具有可比性",
+      "blocks": [
+        {
+          "h": "1. 亏损次数与原因",
+          "text": "不仅统计次数，也要了解导致亏损的背景。"
+        },
+        {
+          "h": "2. 利润波动幅度",
+          "text": "核查经济周期、特殊需求及特殊损益的影响。"
+        },
+        {
+          "h": "3. 最近3至5年的变化",
+          "text": "将历史业绩与当前业务环境对照。"
+        },
+        {
+          "h": "4. 经营现金流",
+          "text": "观察会计利润是否伴随现金流入。"
+        },
+        {
+          "h": "5. 盈利能力与当前股价",
+          "text": "将分析与市盈率等指标及安全边际的判断联系起来。"
+        },
+        {
+          "h": "10年历史能说明什么？",
+          "text": "10年净利润不能确定未来利润，而是评估稳定性、可重复性与韧性的判断材料。"
+        }
+      ]
+    }
+  ],
+  "zh-Hant": [
+    {
+      "title": "葛拉漢的獲利能力分析",
+      "subtitle": "從10年淨利觀察賺錢能力的穩定性與持續性",
+      "blocks": [
+        {
+          "h": "僅看一年財報不足以了解企業實力",
+          "text": "單一年度的業績無法展現公司的全部實力。"
+        },
+        {
+          "h": "10年中的獲利與虧損",
+          "text": "在經濟惡化和逆風年份，企業是否仍能獲利？"
+        },
+        {
+          "h": "獲利波動幅度",
+          "text": "獲利是否穩定？是否依賴暫時的特殊需求？"
+        },
+        {
+          "h": "近期與過去的比較",
+          "text": "賺錢能力正在改善、維持還是惡化？"
+        },
+        {
+          "h": "不僅要看今年賺了多少",
+          "text": "還要核查企業能否長期持續創造獲利。"
+        }
+      ]
+    },
+    {
+      "title": "觀察10年淨利的三個視角",
+      "subtitle": "除了金額，還要看獲利來源與重複創造獲利的能力",
+      "blocks": [
+        {
+          "h": "01  虧損頻率",
+          "text": "虧損次數有助於判斷業務穩定性。如果反覆虧損，應核查市場狀況、競爭環境、一次性費用等原因。"
+        },
+        {
+          "h": "02  獲利品質與可重複性",
+          "text": "檢查獲利激增是否源於特殊收益或暫時繁榮。觀察10年變化，有助於了解正常時期的獲利水準。"
+        },
+        {
+          "h": "03  衰退時的韌性",
+          "text": "核查企業能否在不景氣年份維持獲利。過去衰退時的業績可供參考，但不保證未來同樣有韌性。"
+        },
+        {
+          "h": "結合成長與穩定性",
+          "text": "除EPS成長率外，還要核查獲利穩定性及其形成原因。"
+        }
+      ]
+    },
+    {
+      "title": "實際核查步驟",
+      "subtitle": "注意會計準則及合併範圍是否具有可比性",
+      "blocks": [
+        {
+          "h": "1. 虧損次數與原因",
+          "text": "不僅統計次數，也要了解導致虧損的背景。"
+        },
+        {
+          "h": "2. 獲利波動幅度",
+          "text": "核查經濟循環、特殊需求及特殊損益的影響。"
+        },
+        {
+          "h": "3. 最近3至5年的變化",
+          "text": "將歷史業績與目前業務環境對照。"
+        },
+        {
+          "h": "4. 營業現金流",
+          "text": "觀察會計獲利是否伴隨現金流入。"
+        },
+        {
+          "h": "5. 獲利能力與目前股價",
+          "text": "將分析與本益比等指標及安全邊際的判斷連結。"
+        },
+        {
+          "h": "10年歷史能說明什麼？",
+          "text": "10年淨利不能確定未來獲利，而是評估穩定性、可重複性與韌性的判斷材料。"
+        }
+      ]
+    }
+  ]
+}

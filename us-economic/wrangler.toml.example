@@ -1,0 +1,14 @@
+# Copy to wrangler.toml and fill in the D1 database ID from your own Cloudflare account.
+# Do not deploy until D1 schema.sql has been applied to this database.
+name = "todoroki-us-economic-sync"
+main = "worker.js"
+compatibility_date = "2026-11-05"
+workers_dev = true
+
+[triggers]
+crons = ["15 2 * * *"]
+
+[[d1_databases]]
+binding = "US_DB"
+database_name = "todoroki-us-economic"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"

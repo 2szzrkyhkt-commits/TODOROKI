@@ -1,0 +1,71 @@
+name: Notify search engines via IndexNow
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.html'
+      - 'sitemap.xml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Submit changed public pages
+        env:
+          INDEXNOW_KEY: 6e7928b3c4a05d1f9e620ab73c85d4f1
+          BEFORE_SHA: ${{ github.event.before }}
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          python3 - <<'PY'
+          import os, subprocess, urllib.request, urllib.parse, json
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+
+          host = "todoroki-gold.com"
+          key = os.environ["INDEXNOW_KEY"]
+          key_url = f"https://{host}/{key}.txt"
+          try:
+              with urllib.request.urlopen(key_url, timeout=15) as resp:
+                  if resp.read().decode("utf-8").strip() != key:
+                      raise ValueError("Key content mismatch")
+          except Exception as exc:
+              print(f"IndexNow skipped: key file not publicly verified yet: {exc}")
+              raise SystemExit(0)
+
+          root = ET.parse("sitemap.xml").getroot()
+          urls = {node.text.strip() for node in root.iter() if node.tag.endswith("loc") and node.text and node.text.strip().startswith(f"https://{host}/")}
+          if os.environ.get("EVENT_NAME") == "workflow_dispatch":
+              print("Manual run: only notifying sitemap home page; no historical bulk resubmission.")
+              chosen = {f"https://{host}/"} & urls
+          else:
+              before = os.environ.get("BEFORE_SHA", "")
+              if not before or set(before) == {"0"}:
+                  print("No prior commit to compare; skipping")
+                  raise SystemExit(0)
+              changed = subprocess.check_output(["git", "diff", "--name-only", before, "HEAD"], text=True).splitlines()
+              chosen = set()
+              for path in changed:
+                  if path == "sitemap.xml":
+                      continue
+                  if not path.endswith(".html"):
+                      continue
+                  clean = path.removesuffix(".html")
+                  slug = "/" if clean == "index" else "/" + (clean[:-6] + "/" if clean.endswith("/index") else clean)
+                  url = f"https://{host}{slug}"
+                  if url in urls:
+                      chosen.add(url)
+          if not chosen:
+              print("No changed public URLs found in sitemap")
+              raise SystemExit(0)
+          payload = json.dumps({"host": host, "key": key, "keyLocation": key_url, "urlList": sorted(chosen)}).encode()
+          request = urllib.request.Request("https://api.indexnow.org/indexnow", data=payload, headers={"Content-Type": "application/json; charset=utf-8"}, method="POST")
+          with urllib.request.urlopen(request, timeout=25) as response:
+              print(f"IndexNow HTTP {response.status}; sent {len(chosen)} changed URLs")
+          PY
