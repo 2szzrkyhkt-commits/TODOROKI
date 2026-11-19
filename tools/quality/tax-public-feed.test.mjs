@@ -37,3 +37,27 @@ test('verified collector delta passes the narrow public contract and nothing els
  const result=await taxPublicFeed(new Request('https://todoroki-gold.com/api/tax-public-links'),rpc,null);
  assert.deepEqual(await result.json(),[item]);assert.deepEqual(reads,['status','status']);assert.deepEqual(writes,['status']);assert.equal(JSON.parse(state.get('status')).private_note,'forbidden');
 });
+
+test('rolling feed keeps 30 recent records and routes non-income circulars to the circular group',async()=>{
+ const {mergePublicLinks}=await import('../tax/public-feed.mjs');
+ const prior=Array.from({length:30},(_,i)=>({...item,official_url:item.official_url.replace('1900',String(2000+i)),checked_at:new Date(Date.parse(item.checked_at)-(i+1)*1000).toISOString()}));
+ const individual='https://www.nta.go.jp/law/tsutatsu/kobetsu/denshichoubo/index.htm';
+ const rows=mergePublicLinks(prior,{at:item.checked_at,verified:[{title:'個別通達のテスト',url:individual,source_family:'tsutatsu',readback:true}]});
+ assert.equal(rows.length,30);
+ assert.equal(rows[0].official_url,individual);
+ assert.ok(!rows.some(row=>row.official_url===prior[29].official_url));
+ const note={},added={answer:[],circular:[]};
+ const group=kind=>({querySelector:s=>s==='ul'?{append:x=>added[kind].push(x)}:s===`[data-tax-source-kind="${kind}"]`?{}:null});
+ const groups=[group('answer'),group('circular')];
+ const root={querySelector:()=>note,querySelectorAll:s=>s==='[data-tax-source-kind] a'?[{href:item.official_url}]:groups};
+ const previous=globalThis.document;
+ globalThis.document={createElement:()=>({dataset:{},children:[],append(...x){this.children.push(...x);}}),createTextNode:text=>({text})};
+ try{
+  let refreshed=0;
+  await enhance(root,()=>refreshed++,async()=>Response.json(rows));
+  assert.equal(added.answer.length,29);
+  assert.equal(added.circular.length,1);
+  assert.equal(added.circular[0].children[0].href,individual);
+  assert.equal(refreshed,1);
+ }finally{globalThis.document=previous;}
+});
