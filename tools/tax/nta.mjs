@@ -86,6 +86,7 @@ export async function ntaTick(env,{fetcher=fetch,now=Date.now()}={}) {
       robotsAllows(text,NTA_SEEDS[0]);state.robots={at:now,text,sha256:await sha(raw)};
     }catch{robotsReady=false;report.failed.push({url:'https://www.nta.go.jp/robots.txt',code:'ROBOTS_UNAVAILABLE'});}
   }
+  const knownURLs=new Set(state.known);
   // Two documents at most, plus one robots refresh per day, on the existing cadence.
   for(let n=0;robotsReady&&n<2;n++) {
     // Existing queues may contain hundreds of Tax Answer URLs before any circular.
@@ -113,7 +114,7 @@ export async function ntaTick(env,{fetcher=fetch,now=Date.now()}={}) {
       if(pdf){if(new TextDecoder().decode(raw.slice(0,5))!=='%PDF-'||!new TextDecoder().decode(raw.slice(-1024)).includes('%%EOF'))throw Error('INVALID_PDF');}
       else html=ntaHTML(raw,type);
       const links=html?ntaLinks(html,item.url):[];
-      const additions=links.filter(u=>!state.known.includes(u));
+      const additions=links.filter(u=>!knownURLs.has(u));
       if(state.known.length+additions.length>MAX_URLS){state.blocked='URL_BUDGET';throw Error('URL_BUDGET');}
       const id=await sha(new TextEncoder().encode(item.url)),hash=await sha(raw),key=PREFIX+'raw:'+id+':'+hash;
       const previous=await kv.get(PREFIX+'page:'+id,'json');
@@ -137,6 +138,7 @@ export async function ntaTick(env,{fetcher=fetch,now=Date.now()}={}) {
       if(changed)report.saved++;
       if(!previous)state.saved++;
       state.queue.splice(at,1);state.known.push(...additions);
+      for(const url of additions)knownURLs.add(url);
       state.queue.push(...additions.map(url=>({url,attempts:0,due:0})));
       report.last_verified={url:item.url,sha256:hash,bytes:raw.length,encoding,title:meta.title.slice(0,300),source_family:selectedFamily,readback:true};
       report.verified.push(report.last_verified);
