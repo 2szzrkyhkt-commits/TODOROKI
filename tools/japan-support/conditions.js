@@ -49,10 +49,10 @@ export async function saveConditionDocuments(env,documents=conditionDocuments,cl
   if(d.sourceCheckedOn>clock.toISOString().slice(0,10)||d.sources.some(s=>Date.parse(s.checkedAt)>+clock))throw Error('future_source_check');
   const program=await env.DB.prepare('SELECT id FROM programs WHERE id=?').bind(d.programId).first();if(!program)throw Error('condition_program_missing');
   const json=JSON.stringify(d),hash=await digest(json);
-  const previous=await env.DB.prepare('SELECT content_hash FROM support_condition_versions WHERE program_id=? AND version=?').bind(d.programId,d.version).first();
-  if(previous){if(previous.content_hash!==hash)throw Error('condition_version_collision');unchanged++;continue;}
+  const previous=await env.DB.prepare('SELECT content_hash,document_json FROM support_condition_versions WHERE program_id=? AND version=?').bind(d.programId,d.version).first();
+  if(previous){if(previous.content_hash!==hash)throw Error('condition_version_collision');if(previous.document_json!==json)throw Error('condition_integrity_failed');unchanged++;continue;}
   const r=await env.DB.prepare('INSERT OR IGNORE INTO support_condition_versions(program_id,version,content_hash,document_json,stored_at) VALUES(?,?,?,?,?)').bind(d.programId,d.version,hash,json,clock.toISOString()).run();
-  const check=await env.DB.prepare('SELECT content_hash FROM support_condition_versions WHERE program_id=? AND version=?').bind(d.programId,d.version).first();if(check?.content_hash!==hash)throw Error('condition_version_collision');
+  const check=await env.DB.prepare('SELECT content_hash,document_json FROM support_condition_versions WHERE program_id=? AND version=?').bind(d.programId,d.version).first();if(check?.content_hash!==hash)throw Error('condition_version_collision');if(check.document_json!==json)throw Error('condition_integrity_failed');
   if(r.meta?.changes)saved++;else unchanged++;
  }
  return {status:'saved',documents:documents.length,saved,unchanged};
