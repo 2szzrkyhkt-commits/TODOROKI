@@ -24,3 +24,5 @@ await import('./national-index.test.mjs');
 await import("./test-api-errors.mjs");
 
 await import('./test-feature-persistence.mjs');
+
+await import('./test-search-errors.mjs');

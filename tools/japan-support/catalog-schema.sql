@@ -1,1 +1,0 @@
-CREATE TABLE IF NOT EXISTS support_catalog_snapshots(source_id TEXT NOT NULL REFERENCES sources(id),source_hash TEXT NOT NULL,parser_version TEXT NOT NULL,document_hash TEXT NOT NULL,document_json TEXT NOT NULL,acquired_at TEXT NOT NULL,PRIMARY KEY(source_id,source_hash,parser_version));
