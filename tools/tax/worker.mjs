@@ -1,3 +1,4 @@
+import {persistCombinedStatus} from './public-feed.mjs';
 import {isLawXml} from './xml.mjs';
 import {historyTick,getHistory,renderHistory,createEgovFetcher} from './history.mjs';
 import {ntaTick,ntaURL} from './nta.mjs';
@@ -163,9 +164,7 @@ export async function tick(env) {
  try{report.nta=await ntaTick(env);}
  catch{report.nta={state:'failed',at:new Date().toISOString(),code:'NTA_STORAGE_OR_STATE_FAILED'};}
  // One write to the shared status key per tick (KV same-key rate limit).
- const {history,nta,...collection}=report;
- const status=report.phase==='idle'?(await env.TAX.get('status','json')||{}):collection;
- await env.TAX.put('status',JSON.stringify({...status,...(report.egov?{egov:report.egov}:{}),nta:report.nta}));
+ await persistCombinedStatus(env,report);
  if(collectionFailure)throw collectionFailure;
  return report;
 }
@@ -212,4 +211,5 @@ const taxWorker = {
 };
 
 export default taxWorker;
+
 

@@ -1,3 +1,4 @@
+import {taxPublicFeed} from './tax-public-feed.mjs';
 const ORIGIN = 'https://todoroki-gold.com';
 // Only byte-identical PDF aliases share a canonical target. Keep downloads and ranges intact.
 const PDF_CANONICAL = new Map([
@@ -114,6 +115,7 @@ async function toolGate(request, env, path) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    if(url.pathname==='/api/tax-public-links')return taxPublicFeed(request,env);
     let decodedPath; try { decodedPath = decodeURIComponent(url.pathname).normalize('NFC'); } catch { decodedPath = ''; }
     const retiredPath = decodedPath.replace(/\/$/, '').replace(/\.html$/, '');
     if (RETIRED_SALES_PATHS.has(retiredPath)) return retiredSalesResponse(retiredPath);
@@ -240,4 +242,5 @@ export default {
     }
   }
 };
+
 

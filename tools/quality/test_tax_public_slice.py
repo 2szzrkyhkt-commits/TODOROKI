@@ -26,7 +26,7 @@ class TaxPublicSlice(unittest.TestCase):
         self.assertIn('<noscript>',self.section)
         self.assertIn('role="status"',self.section)
         import subprocess
-        subprocess.run(['node','--test',str(ROOT/'tools/quality/tax-source-filter.test.mjs')],check=True,cwd=ROOT)
+        subprocess.run(['node','--test',str(ROOT/'tools/quality/tax-source-filter.test.mjs'),str(ROOT/'tools/quality/tax-public-feed.test.mjs'),str(ROOT/'tools/tax/public-feed.test.mjs')],check=True,cwd=ROOT)
     def test_scope_and_verification_date(self):
         for text in ['自動同期されません','税法全体の一部','2026-11-19T18:00:00+09:00','タックスアンサー','所得税基本通達','直接配信は行わず']:
             self.assertIn(text,self.section)
@@ -38,4 +38,5 @@ class TaxPublicSlice(unittest.TestCase):
         self.assertEqual(len(re.findall(r'data-tax-lesson="',self.page)),22)
         self.assertIn('id="income-tax-form"',self.page)
 if __name__=='__main__':unittest.main()
+
 
