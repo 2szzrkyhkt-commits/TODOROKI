@@ -30,6 +30,10 @@ class TaxPublicSlice(unittest.TestCase):
     def test_scope_and_verification_date(self):
         for text in ['自動同期されません','税法全体の一部','2026-11-19T18:00:00+09:00','タックスアンサー','所得税基本通達','直接配信は行わず']:
             self.assertIn(text,self.section)
+    def test_rolling_scope_and_neutral_circular_group(self):
+        for text in ['直近に保存・確認した公式資料を最大30件', '固定6件は残り、追加分は新しい確認結果に入れ替わります', '固定のタックスアンサー3件の法令等基準日', '資料の法令等基準日や施行日ではありません', '<option value="circular">通達</option>', '<h3>通達</h3>']:
+            self.assertIn(text,self.section)
+        self.assertNotIn('この6件の題名・番号で検索', self.section)
     def test_accessible_ids_and_preserved_learning(self):
         p=Tags();p.feed(self.page)
         self.assertEqual(len(p.ids),len(set(p.ids)))
