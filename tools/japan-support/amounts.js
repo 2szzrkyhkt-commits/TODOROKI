@@ -45,10 +45,10 @@ export async function saveAmountRules(env,clock=new Date()){
  validateAmountRules(amountRules);if(amountRules.sources.some(s=>Date.parse(s.checkedAt)>+clock))throw Error('future_amount_sources');
  const p=await env.DB.prepare('SELECT id FROM programs WHERE id=?').bind(amountRules.programId).first();if(!p)throw Error('amount_program_missing');
  const json=JSON.stringify(amountRules),digest=await hash(json);
- const previous=await env.DB.prepare('SELECT content_hash FROM support_amount_versions WHERE program_id=? AND version=?').bind(amountRules.programId,amountRules.version).first();
- if(previous){if(previous.content_hash!==digest)throw Error('amount_version_collision');return{status:'saved',changed:false,sha256:digest};}
+ const previous=await env.DB.prepare('SELECT content_hash,document_json FROM support_amount_versions WHERE program_id=? AND version=?').bind(amountRules.programId,amountRules.version).first();
+ if(previous){if(previous.content_hash!==digest)throw Error('amount_version_collision');if(previous.document_json!==json)throw Error('amount_integrity_failed');return{status:'saved',changed:false,sha256:digest};}
  await env.DB.prepare('INSERT OR IGNORE INTO support_amount_versions(program_id,version,content_hash,document_json,stored_at) VALUES(?,?,?,?,?)').bind(amountRules.programId,amountRules.version,digest,json,clock.toISOString()).run();
- const check=await env.DB.prepare('SELECT content_hash FROM support_amount_versions WHERE program_id=? AND version=?').bind(amountRules.programId,amountRules.version).first();if(check?.content_hash!==digest)throw Error('amount_version_collision');return{status:'saved',changed:true,sha256:digest};
+ const check=await env.DB.prepare('SELECT content_hash,document_json FROM support_amount_versions WHERE program_id=? AND version=?').bind(amountRules.programId,amountRules.version).first();if(check?.content_hash!==digest)throw Error('amount_version_collision');if(check.document_json!==json)throw Error('amount_integrity_failed');return{status:'saved',changed:true,sha256:digest};
 }
 export async function readAmountRules(env){const row=await env.DB.prepare('SELECT content_hash,document_json FROM support_amount_versions WHERE program_id=? AND version=?').bind(amountRules.programId,AMOUNT_ENGINE_VERSION).first();if(!row)return null;if(await hash(row.document_json)!==row.content_hash)throw Error('amount_integrity_failed');return{document:validateAmountRules(JSON.parse(row.document_json)),sha256:row.content_hash};}
 export async function calculateStoredAmount(env,request,clock=new Date()){
