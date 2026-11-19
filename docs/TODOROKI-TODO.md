@@ -1523,3 +1523,10 @@ Cloudflare KVのstatusを読取。e-Govは保存446・初回走査1・待機2・
 - 新規15回帰成功（旧版8失敗）、総合85件と既存個別検査成功。[最終head CI 44438926022](https://github.com/2szzrkyhkt-commits/TODOROKI/actions/runs/44438926022) success。
 - 既存非公開Workerへcontent-only差分配備。version `6e94facd-ad70-4f5a-a5b9-5960e800988c`、deployment `4257a4ca-bb8d-4378-938d-ebb7014dd22d`、10:53:00 JST、100%。全13モジュール読戻し一致・変更外11モジュール/設定不変・deployment安定を確認。外部/api/searchはAccessログインへの302、非公開維持。
 - 認証済み実API/UIでの異常応答は未確認。合成試験・配備コード一致を本番認証後の操作成功に読み替えない。認証・公開・DBデータ・定期3件/Cron・AdSense・権限・T44の変更なし。原TODOの安全性/正確性と公開前検証が引き続き残る。
+
+
+### T29 PR #83 配備後の既存実周期確認（2026-11-19 10:55 JST）
+
+- 開始・終了とも完了22件／未完了23件、今回の新規完了0件。PR #83の非公開配備（01:53 UTC）後、既存周期がD1に保存した `support_feature_checks` を読戻した。eligibilityは2026-11-19T01:55:12.737Zに5 passed / 0 failed、amountsは01:55:12.823Zに6 passed / 0 failed、両方sourceReviewRequired=false。eligibility検証には保存制度を用いた `searchPrograms` の照合も含む。手動の収集起動・書込・障害注入はしていない。
+- これは修正版の通常検索と保存済み条件/金額の合成検証であり、実在者の受給認定、認証済みHTTP/UIの503確認、一般公開成功の証拠ではない。利用可能な接続環境はクラウド1台で、ブラウザ在庫は公開PDFタブのみ。既存の認証済みAccessセッションは確認できず、ログイン再試行・認証迂回・公開状態変更を行わない。
+- T29は認証済み実画面による受入確認と元の公開条件が残るため未完了。他項目は正本の許可・接続・既存周期依存を維持し、既知の拒否の再診断や成果数目的の部分変更を追加しない。定期3件・Cron・AdSense・権限・費用は不変。
