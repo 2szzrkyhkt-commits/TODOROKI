@@ -26,3 +26,5 @@ await import("./test-api-errors.mjs");
 await import('./test-feature-persistence.mjs');
 
 await import('./test-search-errors.mjs');
+
+await import('./test-document-readback.mjs');
