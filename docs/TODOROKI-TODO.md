@@ -114,6 +114,7 @@ D1実測：制度1件はpending/pendingのまま。取得元は有効1件・無�
 - [x] 全プロジェクトのGitHub・Workers・DBを台帳化 **〔完了〕** <!-- todo:T40 project:共通クラウド基盤 -->
   - 下記T40台帳にGitHub2・Workers10・アカウントD1 5・Sites11（DB bindingを持つSite1）を集約。列挙の全件性・DB参照・service宛先等7条件を照合し、正本保存189b5c5の全文読み戻し一致を確認。Sites内部の物理保存先と費用・復元の検証は別範囲として明記。
 - [ ] 定期実行の重複と無料枠消費を確認 **〔進行中〕** <!-- todo:T41 project:共通クラウド基盤 -->
+  - 2026-11-19：現行のCloudflare 10 WorkersのCronを全件読取。設定はEDINET・EDGARの各5分（対象が別）と米国経済の毎時17分のみ。税法・支援はEDINET側から既存service bindingで呼び出し、専用Cronなし。SLOT本体・collectorとも現在はCronなし。利用者の設定画面でWorkers Free（$0）を確認。11/12〜18 UTCのGraphQL日別集計の最大はWorkers 22,026リクエスト、D1 81,363行読取・14,606行書込。5 D1の11/18日次最大サイズ合計8,499,200 B。取得した指標は[Workers](https://developers.cloudflare.com/workers/platform/limits/)・[D1](https://developers.cloudflare.com/d1/platform/pricing/)の無料上限内。KVは一覧で取得できた1 namespaceの11/18日次最大174,305,977 B、期間内最大901読取・506書込・2一覧リクエスト。ただし[KVの上限](https://developers.cloudflare.com/kv/platform/pricing/)は読取・書込がキー単位で、GraphQL操作集計のsumはリクエスト数とオブジェクトバイトのみ。R2一覧は未有効化を示す403、メトリクス空、別環境の使用量や請求額0の証明ではない。キー単位の実績・請求内訳は未確認のためT41は未完了。定期実行・契約・権限・料金設定は変更せず。
   - 2026-11-17追記：契約/請求のダッシュボードは未ログインでサインイン画面へ転送。新規認証・本人操作なしの制約に従いログイン操作をせず保留。既存のAPI 403・KV消費未確認も維持し、無料契約や請求0円を断定しない。
   - 下表の設定を取得。SLOT本番/collectorの同時刻実行を検出。実消費・請求・プラン上限は未確認。
 - [x] 共通データAPIの設計 **〔完了〕** <!-- todo:T42 project:共通クラウド基盤 -->
