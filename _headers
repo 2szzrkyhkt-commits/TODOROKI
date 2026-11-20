@@ -1,3 +1,6 @@
+/app/sw.js
+  Service-Worker-Allowed: /
+
 /pdf/*
   Content-Type: application/pdf
   Content-Disposition: inline

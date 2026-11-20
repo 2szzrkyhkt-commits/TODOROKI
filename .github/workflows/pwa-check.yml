@@ -3,12 +3,20 @@ on:
   pull_request:
     paths:
       - 'app/**'
+      - '_headers'
+      - '_redirects'
+      - 'index.html'
+      - 'login.html'
+      - 'assets/header-account.js'
+      - 'assets/pwa-install.js'
+      - 'tools/quality/unified-home*.mjs'
       - 'scripts/check-pwa.py'
       - '.github/workflows/pwa-check.yml'
   workflow_dispatch:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    timeout-minutes: 12
     permissions:
       contents: read
     steps:
@@ -16,4 +24,15 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - run: python3 scripts/check-pwa.py
+      - run: python3 scripts/check-login-redirect.py
+      - run: node --test tools/quality/unified-home.test.mjs
+      - run: node tools/quality/tool-entry.test.mjs
+      - name: Chromium desktop and mobile viewport regressions
+        run: |
+          npm install --no-save --package-lock=false playwright@1.56.1
+          npx playwright install --with-deps chromium
+          node tools/quality/unified-home-browser.mjs

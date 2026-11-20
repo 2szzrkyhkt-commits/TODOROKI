@@ -70,5 +70,21 @@
   {
     "from": "/psychology-list",
     "to": "/behavioral-economics"
+  },
+  {
+    "from": "/app",
+    "to": "/"
+  },
+  {
+    "from": "/app/",
+    "to": "/"
+  },
+  {
+    "from": "/app/index",
+    "to": "/"
+  },
+  {
+    "from": "/app/index.html",
+    "to": "/"
   }
 ]
