@@ -478,6 +478,17 @@ footer {
 .site-header .study-nav>div a{font-family:inherit;font-size:13px;font-weight:inherit;letter-spacing:inherit}
 </style><style>#latest-articles .selection-label{display:block;margin:0 0 12px;color:#e6c66b;font-size:12px;font-weight:700}#latest-articles .article-thumbnail{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin:0 0 18px;background:#16130d}#latest-articles .card-link:focus-visible{outline:2px solid #e6c66b;outline-offset:5px}</style>
 <link rel="stylesheet" href="/assets/footer-accessibility.css"><style>
+/* Keep the sticky header controls inside the device safe area. */
+body#page-top > .site-header {
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
+}
+body#page-top > .site-header::before {
+  top: env(safe-area-inset-top, 0px);
+  left: env(safe-area-inset-left, 0px);
+  right: env(safe-area-inset-right, 0px);
+}
 /* OFUSE support button: responsive sticky header placement */
 .site-header[data-preserve-header="ofuse"] .brand-row{gap:clamp(8px,1.2vw,18px)}
 .ofuse-header-desktop{display:block;flex:0 1 205px;min-width:125px;max-width:205px;margin-left:auto;line-height:0}
