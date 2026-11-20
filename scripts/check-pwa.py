@@ -13,7 +13,7 @@ assert manifest['id']=='/app/'
 assert (root/'login.html').exists() and (root/'index.html').exists()
 assert manifest['icons'] and all((root / icon['src'].lstrip('/')).is_file() for icon in manifest['icons'])
 assert 'rel="manifest"' in html and 'apple-touch-icon' in html
-assert 'serviceWorker.register' in html
+assert 'serviceWorker.register' in html and "updateViaCache:'none'" in html
 assert 'type="password"' not in html
 assert 'fetch' not in sw.split('// No fetch interception:')[0]
 assert 'caches.delete' in sw and 'self.clients.claim()' in sw
@@ -60,7 +60,8 @@ for page in (entry, html, (root/'login.html').read_text()):
     assert 'navigator.standalone === true' in page
     assert '(device-width: 393px) and (device-height: 852px)' in frame[1]
     assert 'html[data-ios-standalone] #td-splash:not([hidden])' in frame[1]
-    assert 'background-position: center calc(50% - 43px);' in frame[1]
+    assert 'background-position: center calc(50svh - 28.667px);' in frame[1]
+    assert 'background-position: center 397.333px;' in frame[1]
     frames.append(frame[1])
     assert 'td-splash-label">TODOROKI' in page
 assert len(set(frames)) == 1
