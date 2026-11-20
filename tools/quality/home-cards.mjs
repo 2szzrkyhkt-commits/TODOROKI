@@ -11,7 +11,8 @@ try{for(const width of [390,1440]){const context=await browser.newContext({viewp
 const cards=page.locator('#latest-articles .card-link:visible');assert.equal(await cards.count(),6);
 assert.deepEqual(await cards.locator('.selection-label').allTextContents(),['新着','新着','新着','よく読まれた記事','よく読まれた記事','よく読まれた記事']);
 const hrefs=await cards.evaluateAll(es=>es.map(e=>e.getAttribute('href')));assert.equal(new Set(hrefs).size,6);assert.deepEqual(hrefs.slice(3),['/kioxia-earnings-analysis-2026','/advantest-6857-earnings-analysis-2026','/kokusai-electric-6525-earnings-2026']);
-assert.ok((await page.locator('#latest-articles').innerText()).includes('2026年11月7〜13日'));
+assert.equal(await page.locator('#latest-articles-title').innerText(),'ARTICLES｜新着・よく読まれた記事');
+assert.equal(await page.locator('#latest-articles-title + .rule + .cards').count(),1);
 
 let imagesLoaded=0;for(const card of await cards.all()){await card.scrollIntoViewIfNeeded();const img=card.locator('img.article-thumbnail');assert.ok((await img.count())<=1);if(await img.count()){await img.evaluate(e=>e.decode());assert.ok(await img.evaluate(e=>e.naturalWidth===640&&e.naturalHeight===360));imagesLoaded++;}assert.ok((await card.locator('h3').innerText()).length>8);const href=await card.getAttribute('href');assert.ok(href.startsWith('/'));await fs.access(href.slice(1)+'.html');}
 await page.goto(origin);const track=page.locator('.news-ticker-track');const transform=()=>track.evaluate(e=>getComputedStyle(e).transform);
