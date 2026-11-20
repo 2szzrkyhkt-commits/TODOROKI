@@ -35,11 +35,14 @@ assert 'td-splash-title">TODOROKI' in html
 assert 'Loading...' not in html and 'td-splash-ring' not in html
 assert 'td-splash-line' in html and 'DOMContentLoaded' in html
 assert 'Loading' not in html and '読み込み中' not in html
-assert 'display-mode:standalone' in html
+assert 'display-mode: standalone' in html
 assert manifest['background_color'] == manifest['theme_color'] == '#000000'
 startup = root / 'app/startup-iphone-1179x2556.png'
 assert startup.read_bytes()[16:24] == bytes.fromhex('0000049b000009fc')
 assert f'rel="apple-touch-startup-image" href="/app/{startup.name}"' in html
-assert '(device-width: 393px) and (device-height: 852px)' in html
+assert '(max-device-width: 480px)' in html
 assert '(-webkit-device-pixel-ratio: 3) and (orientation: portrait)' in html
+for entry in (html, (root/'index.html').read_text()):
+    assert 'navigator.standalone' in entry and 'requestAnimationFrame(() => requestAnimationFrame(dismiss))' in entry
+    assert 'apple-touch-startup-image' in entry
 print('PWA static checks passed')

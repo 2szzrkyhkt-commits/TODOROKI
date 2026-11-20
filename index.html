@@ -460,12 +460,37 @@ footer {
  .site-header[data-preserve-header="ofuse"].ofuse-scrolled .brand-row{min-height:54px}
 }
 @media(max-width:380px){.ofuse-header-mobile{width:min(245px,80vw)}}
-</style><link rel="apple-touch-startup-image" href="/app/startup-iphone-1179x2556.png" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+</style><link rel="apple-touch-startup-image" href="/app/startup-iphone-1179x2556.png" media="(max-device-width: 480px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
 <link rel="manifest" href="/app/manifest.webmanifest">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<style>/* Web fallback for standalone mobile launches. iOS controls the earlier launch screen. */
+#td-splash{display:none}
+@media (max-width:767px){
+  :root:has(#td-splash:not([hidden])){background:#000}
+  #td-splash:not([hidden]){position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:#000;color:#fff;pointer-events:none}
+}
+.td-splash-content{width:min(90vw,560px);text-align:center}
+.td-splash-title{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif;font-size:clamp(48px,11vw,100px);font-weight:700;letter-spacing:.08em;line-height:1.1;color:#fff}
+.td-splash-line{height:2px;margin:16px auto 0;width:94%;background:#d4af37}
+</style>
 </head>
 
-<body id="page-top"><a class="skip-link" href="#main-content">本文へ移動</a>
+<body id="page-top">
+<div id="td-splash" hidden aria-hidden="true"><div class="td-splash-content"><div class="td-splash-title">TODOROKI</div><div class="td-splash-line"></div></div></div>
+<script>
+(() => {
+  const splash = document.getElementById('td-splash');
+  const standalone = navigator.standalone || matchMedia('(display-mode: standalone)').matches;
+  if (!standalone || !matchMedia('(max-width: 767px)').matches ||
+      document.referrer.startsWith(location.origin + '/')) return;
+  splash.hidden = false;
+  const dismiss = () => splash.remove();
+  window.addEventListener('pagehide', dismiss, { once: true });
+  document.addEventListener('DOMContentLoaded', () => {
+    requestAnimationFrame(() => requestAnimationFrame(dismiss));
+  }, { once: true });
+})();
+</script><a class="skip-link" href="#main-content">本文へ移動</a>
 
 <!-- ヘッダー -->
 
