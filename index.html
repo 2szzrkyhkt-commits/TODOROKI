@@ -16,7 +16,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<link rel="apple-touch-startup-image" href="/app/startup-iphone-1179x2556.png" media="(max-device-width: 480px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="/app/startup-iphone-1179x2556.png" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
 <!-- Inline the cropped native artwork so the first frame needs no image fetch. -->
 <script>
 if (navigator.standalone === true) {
@@ -500,6 +500,8 @@ footer {
 @media(max-width:380px){.ofuse-header-mobile{width:min(245px,80vw)}}
 </style>
 <link rel="manifest" href="/app/manifest.webmanifest">
+<meta name="apple-mobile-web-app-title" content="TODOROKI">
+<script src="/assets/pwa-install.js" defer></script>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 </head>
@@ -544,12 +546,13 @@ footer {
     <div class="header-account" data-header-account>
       <a class="account-link" href="/login" hidden>
         <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="6" r="3"/><path d="M4 18v-2a6 6 0 0 1 12 0v2"/></svg>
-        ログイン
+        <span data-account-login-label>ログイン</span>
       </a>
       <details hidden>
         <summary class="account-link">✓ ログイン中 ▾</summary>
         <div class="header-account-panel">
           <button type="button">ログアウト</button>
+          <a data-edinet-connect target="_blank" rel="noopener noreferrer nofollow" style="display:block;margin-top:8px;font-size:12px;color:inherit;">EDINET接続（別途認証）</a>
           <p role="status" hidden></p>
         </div>
       </details>
@@ -944,6 +947,8 @@ footer {
     <a href="/about" style="color:#d4af37; text-decoration:none; margin-left:15px;">TODOROKIについて</a>
 <a href="/contact" style="color:#d4af37; text-decoration:none; margin-left:15px;">お問い合わせ</a>
   </div>
+  <button id="td-install-app" type="button" hidden style="margin-top:12px;">ホーム画面に追加</button>
+  <p id="td-install-ios-help" hidden>iPhoneではSafariの共有メニューから「ホーム画面に追加」を選択してください。</p>
 </div>
 
 

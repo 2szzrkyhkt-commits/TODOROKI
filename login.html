@@ -152,7 +152,8 @@ html { color-scheme: dark; background-color: #000; }
   </div>
   <script>
     const get = id => document.getElementById(id);
-    const destination = new URLSearchParams(location.search).get('from') === 'app' ? '/app/' : '/';
+    // Includes bookmarks with the retired ?from=app parameter.
+    const destination = '/';
     let email = '';
     let busy = false;
     let resendAt = 0;

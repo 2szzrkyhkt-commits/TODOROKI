@@ -17,3 +17,9 @@
 /technology-list /science-technology 301
 /psychology-list.html /behavioral-economics 301
 /psychology-list /behavioral-economics 301
+
+# Consolidate old installed launches and bookmarks onto the public homepage.
+/app / 301
+/app/ / 301
+/app/index / 301
+/app/index.html / 301

@@ -4,9 +4,12 @@ const headerAccount = document.querySelector('[data-header-account]');
 
 if (headerAccount) {
   const login = headerAccount.querySelector(':scope > a');
+  const loginLabel = login.querySelector('[data-account-login-label]');
   const details = headerAccount.querySelector('details');
   const logout = details.querySelector('button');
+  const edinet = details.querySelector('[data-edinet-connect]');
   const status = details.querySelector('[role="status"]');
+  const sessionUnavailable = 'ログイン状態を更新できませんでした。接続を確認してください。';
   let busy = false;
 
   async function auth(path, method = 'GET') {
@@ -23,10 +26,15 @@ if (headerAccount) {
     }
   }
 
-  function showAccount(authenticated) {
+  function showAccount(authenticated, unavailable = false) {
     const focusWasInAccount = headerAccount.contains(document.activeElement);
+    if (loginLabel) loginLabel.textContent = unavailable ? '状態を確認' : 'ログイン';
+    if (unavailable) login.setAttribute('aria-label', 'ログイン状態を確認できませんでした。ログイン画面で確認する');
+    else login.removeAttribute('aria-label');
     login.hidden = authenticated;
     details.hidden = !authenticated;
+    if (authenticated) edinet?.setAttribute('href', 'https://todoroki-edinet-connect.easysquid66.chatgpt.site/');
+    else edinet?.removeAttribute('href');
     if (!authenticated) {
       details.open = false;
       if (focusWasInAccount) login.focus();
@@ -41,10 +49,16 @@ if (headerAccount) {
       if (member !== null && !(typeof member?.email === 'string' && member.email)) {
         throw new Error('Invalid session response');
       }
+      if (status.textContent === sessionUnavailable) status.hidden = true;
       showAccount(member !== null);
     } catch {
-      // Let the login page handle an unavailable session check.
-      if (details.hidden) showAccount(false);
+      // A failed check is not proof that the visitor is signed out.
+      if (details.hidden) {
+        showAccount(false, true);
+      } else {
+        status.textContent = sessionUnavailable;
+        status.hidden = false;
+      }
     } finally {
       busy = false;
     }
