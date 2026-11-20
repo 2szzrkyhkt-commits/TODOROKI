@@ -19,7 +19,7 @@ assert 'fetch' not in sw.split('// No fetch interception:')[0]
 assert 'caches.delete' in sw and 'self.clients.claim()' in sw
 assert 'caches.open' not in sw
 for href in re.findall(r'href="(/[^"#?]+)"',html):
-    if href in ('/', '/api/tools/equity', '/api/tools/jp'):continue
+    if href in ('/', '/api/tools/equity', '/api/tools/jp', '/api/tools/us'):continue
     assert (root / href.lstrip('/')).exists() or (root / (href.lstrip('/') + '.html')).exists() or (root / href.lstrip('/') / 'index.html').exists(),href
 assert 'apple-mobile-web-app-title' in html
 assert 'OLD_PREFIX' in sw

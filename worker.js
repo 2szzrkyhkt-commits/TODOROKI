@@ -92,15 +92,24 @@ async function toolGate(request, env, path) {
   if(!env.AUTH_SECRET||env.AUTH_SECRET.length<40)return json({error:'ツールの入場設定を確認してください。'},503);
   const tool = TOOLS[path.slice('/api/tools/'.length)];
   if(tool) {
-    if(request.method!=='GET')return json({error:'Method not allowed'},405);
-    // Safari may omit Referer during a standalone-to-browser handoff.
-    // A same-origin navigation signal preserves the entry check in that case.
-    const referer = request.headers.get('Referer');
     const fetchSite = request.headers.get('Sec-Fetch-Site');
-    if (!referer && fetchSite !== 'same-origin') return back();
-    let ref;
-    try { ref = new URL(referer || ORIGIN); } catch { return back(); }
-    if(ref.origin!==ORIGIN||!['same-origin','none',''].includes(request.headers.get('Sec-Fetch-Site')||''))return back();
+    if (request.method === 'POST') {
+      if (request.headers.get('Origin') !== ORIGIN ||
+          (fetchSite && fetchSite !== 'same-origin')) return back();
+    } else if (request.method === 'GET') {
+      const referer = request.headers.get('Referer');
+      if (!referer && fetchSite !== 'same-origin') {
+        // Re-establish a first-party navigation when a web-app handoff loses its referrer.
+        const label = {jp:'日本経済データ', us:'米国経済データ', equity:'企業分析ツール β版'}[path.split('/').pop()];
+        return new Response(`<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${label}｜TODOROKI</title><style>body{margin:0;min-height:100svh;display:grid;place-items:center;background:#000;color:white;font:1rem system-ui;text-align:center}button{padding:.8rem 1.2rem;font:inherit}</style><main><h1>${label}</h1><form method="post"><button>ツールを開く</button></form></main></html>`, {headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-store','X-Robots-Tag':'noindex','Content-Security-Policy':"default-src 'none'; style-src 'unsafe-inline'; form-action 'self' https://*.chatgpt.site; frame-ancestors 'none'"}});
+      }
+      if (referer) {
+        try { if (new URL(referer).origin !== ORIGIN) return back(); } catch { return back(); }
+      }
+      if (fetchSite && !['same-origin','none'].includes(fetchSite)) return back();
+    } else {
+      return json({error:'Method not allowed'},405);
+    }
     const fp=await toolFingerprint(env.AUTH_SECRET,request.headers.get('User-Agent')||'');
     const token=await toolToken(env.AUTH_SECRET,{aud:tool.aud,kind:'entry',iat:now(),exp:now()+60,fp,nonce:crypto.randomUUID()});
     return new Response(null,{status:303,headers:{Location:tool.url+'/enter?t='+token,'Cache-Control':'no-store','Referrer-Policy':'no-referrer','X-Robots-Tag':'noindex, nofollow'}});
