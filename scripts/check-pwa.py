@@ -28,21 +28,23 @@ assert 'caches.open' not in sw
 assert 'google' not in html.lower() or 'login' not in html.lower()
 assert len(re.findall(r'<article>', html)) >= 7
 assert 'href="/boki1"' in html and 'href="/calculators/"' in html
-assert "'/api/auth/me'" in html and "cache:'no-store'" in html
-assert 'href="/login.html"' in html
+session=(root/'assets/session-startup.js').read_text()
+assert "'/api/auth/me'" in session and "cache: 'no-store'" in session
+assert 'id="td-session-page" hidden' in html
+assert "location.replace('/login?from=app')" in html
+assert 'href="/login"' in html
 assert 'id="td-splash"' in html
 assert 'td-splash-title">TODOROKI' in html
 assert 'Loading...' not in html and 'td-splash-ring' not in html
 assert 'td-splash-line' not in html and 'DOMContentLoaded' in html
 assert 'Loading' not in html and '読み込み中' not in html
-assert 'display-mode: standalone' in html
 assert manifest['background_color'] == manifest['theme_color'] == '#000000'
 startup = root / 'app/startup-iphone-1179x2556.png'
 assert startup.read_bytes()[16:24] == bytes.fromhex('0000049b000009fc')
 assert f'rel="apple-touch-startup-image" href="/app/{startup.name}"' in html
 assert '(max-device-width: 480px)' in html
 assert '(-webkit-device-pixel-ratio: 3) and (orientation: portrait)' in html
-for entry in (html, (root/'index.html').read_text()):
-    assert 'navigator.standalone' in entry and 'requestAnimationFrame(() => requestAnimationFrame(dismiss))' in entry
-    assert 'apple-touch-startup-image' in entry
+entry=(root/'index.html').read_text()
+assert 'navigator.standalone' in entry and 'requestAnimationFrame(() => requestAnimationFrame(dismiss))' in entry
+assert 'apple-touch-startup-image' in entry
 print('PWA static checks passed')
