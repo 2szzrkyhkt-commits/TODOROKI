@@ -25,4 +25,6 @@ assert 'caches.open' in sw
 assert 'google' not in html.lower() or 'login' not in html.lower()
 assert len(re.findall(r'<article>', html)) >= 7
 assert 'href="/boki1"' in html and 'href="/calculators/"' in html
+assert "'/api/auth/me'" in html and "cache:'no-store'" in html
+assert 'href="/login.html"' in html
 print('PWA static checks passed')
