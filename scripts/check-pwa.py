@@ -51,10 +51,13 @@ frames = []
 for page in (entry, html, (root/'login.html').read_text()):
     assert 'viewport-fit=cover' in page
     assert 'name="apple-mobile-web-app-status-bar-style" content="black-translucent"' in page
-    assert 'href="/assets/session-startup.css"' in page
+    assert '<meta name="color-scheme" content="dark">' in page
+    assert '<meta name="theme-color" content="#000000">' in page
     frame = re.search(r'<style id="td-first-frame">(.*?)</style>', page, re.S)
     assert frame and 'data:image/webp;base64,' in frame[1]
     assert 'center calc(50% - 17px) / 190px auto no-repeat' in frame[1]
+    assert 'html { color-scheme: dark; background-color: #000; }' in frame[1]
+    assert 'env(safe-area-inset-top, 0px) / 2' in frame[1]
     frames.append(frame[1])
     assert 'td-splash-label">TODOROKI' in page
 assert len(set(frames)) == 1
