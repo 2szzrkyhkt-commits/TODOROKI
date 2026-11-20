@@ -13,7 +13,7 @@ assert manifest['icons'] and all((root / icon['src'].lstrip('/')).is_file() for 
 assert 'rel="manifest"' in html and 'apple-touch-icon' in html
 assert 'serviceWorker.register' in html
 assert 'type="password"' not in html
-assert 'request.method!==\'GET\'' in sw and 'url.origin!==self.location.origin' in sw
+assert "request.method!=='GET'" in sw and 'url.origin!==self.location.origin' in sw
 assert '/app/' in sw and 'caches.open' in sw
 for href in re.findall(r'href="(/[^"#?]+)"',html):
     if href=='/':continue
