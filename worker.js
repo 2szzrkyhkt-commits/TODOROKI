@@ -93,7 +93,13 @@ async function toolGate(request, env, path) {
   const tool = TOOLS[path.slice('/api/tools/'.length)];
   if(tool) {
     if(request.method!=='GET')return json({error:'Method not allowed'},405);
-    let ref;try{ref=new URL(request.headers.get('Referer')||'');}catch{return back();}
+    // Safari may omit Referer during a standalone-to-browser handoff.
+    // A same-origin navigation signal preserves the entry check in that case.
+    const referer = request.headers.get('Referer');
+    const fetchSite = request.headers.get('Sec-Fetch-Site');
+    if (!referer && fetchSite !== 'same-origin') return back();
+    let ref;
+    try { ref = new URL(referer || ORIGIN); } catch { return back(); }
     if(ref.origin!==ORIGIN||!['same-origin','none',''].includes(request.headers.get('Sec-Fetch-Site')||''))return back();
     const fp=await toolFingerprint(env.AUTH_SECRET,request.headers.get('User-Agent')||'');
     const token=await toolToken(env.AUTH_SECRET,{aud:tool.aud,kind:'entry',iat:now(),exp:now()+60,fp,nonce:crypto.randomUUID()});
