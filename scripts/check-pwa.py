@@ -7,8 +7,10 @@ root=Path(__file__).resolve().parents[1]
 html=(root/'app/index.html').read_text()
 sw=(root/'app/sw.js').read_text()
 manifest=json.loads((root/'app/manifest.webmanifest').read_text())
-assert manifest['start_url']=='/app/' and manifest['scope']=='/app/'
+assert manifest['start_url']=='/app/' and manifest['scope']=='/'
 assert manifest['display']=='standalone'
+assert manifest['id']=='/app/'
+assert (root/'login.html').exists() and (root/'index.html').exists()
 assert manifest['icons'] and all((root / icon['src'].lstrip('/')).is_file() for icon in manifest['icons'])
 assert 'rel="manifest"' in html and 'apple-touch-icon' in html
 assert 'serviceWorker.register' in html
