@@ -3,7 +3,8 @@
 <head>
 <script src="/assets/privacy-controls.js" defer></script>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="robots" content="noindex, nofollow">
   <meta name="referrer" content="same-origin">
   <title>ログイン｜TODOROKI</title>
@@ -29,9 +30,9 @@
     @media(max-width:480px){.content-grid{grid-template-columns:1fr}.content-card{padding:18px}.content-title{font-size:20px}}
     @media(prefers-reduced-motion:reduce){.content-card{transition:none}}
   </style>
-<link rel="stylesheet" href="/assets/navigation.css"><link rel="stylesheet" href="/assets/language-picker.css"><link rel="stylesheet" href="/assets/site-header.css"><script src="/assets/language-picker.js" defer></script><link rel="stylesheet" href="/assets/site-quality.css"><link rel="stylesheet" href="/assets/session-startup.css"><script src="/assets/session-startup.js" defer></script></head>
+<link rel="stylesheet" href="/assets/navigation.css"><link rel="stylesheet" href="/assets/language-picker.css"><link rel="stylesheet" href="/assets/site-header.css"><script src="/assets/language-picker.js" defer></script><link rel="stylesheet" href="/assets/site-quality.css"><link rel="preload" as="image" href="/app/startup-iphone-1179x2556.png"><link rel="stylesheet" href="/assets/session-startup.css"><script src="/assets/session-startup.js" defer></script></head>
 <body>
-<div id="td-splash" role="status"><div class="td-splash-content"><div class="td-splash-title">TODOROKI</div></div></div>
+<div id="td-splash" role="status"><span class="td-splash-label">TODOROKI</span></div>
 <div id="td-session-error" hidden><div class="td-splash-content"><div class="td-splash-title">TODOROKI</div><p role="alert">ログイン状態を確認できませんでした。接続を確認して、再度お試しください。</p><button id="td-session-retry" type="button">再試行</button><a href="/">トップページへ</a></div></div>
 <noscript><style>#td-splash{display:none}</style><p>ログイン状態を確認するには、JavaScriptを有効にしてください。<a href="/">トップページへ</a></p></noscript>
 <div id="td-session-page" hidden>

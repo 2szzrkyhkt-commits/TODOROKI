@@ -34,7 +34,7 @@ assert 'id="td-session-page" hidden' in html
 assert "location.replace('/login?from=app')" in html
 assert 'href="/login"' in html
 assert 'id="td-splash"' in html
-assert 'td-splash-title">TODOROKI' in html
+assert 'td-splash-label">TODOROKI' in html
 assert 'Loading...' not in html and 'td-splash-ring' not in html
 assert 'td-splash-line' not in html and 'DOMContentLoaded' in html
 assert 'Loading' not in html and '読み込み中' not in html
@@ -47,4 +47,12 @@ assert '(-webkit-device-pixel-ratio: 3) and (orientation: portrait)' in html
 entry=(root/'index.html').read_text()
 assert 'navigator.standalone' in entry and 'requestAnimationFrame(() => requestAnimationFrame(dismiss))' in entry
 assert 'apple-touch-startup-image' in entry
+style=(root/'assets/session-startup.css').read_text()
+assert f'url("/app/{startup.name}") center / 393px auto no-repeat' in style
+for page in (entry, html, (root/'login.html').read_text()):
+    assert 'viewport-fit=cover' in page
+    assert 'name="apple-mobile-web-app-status-bar-style" content="black-translucent"' in page
+    assert 'href="/assets/session-startup.css"' in page
+    assert f'rel="preload" as="image" href="/app/{startup.name}"' in page
+    assert 'td-splash-label">TODOROKI' in page
 print('PWA static checks passed')
