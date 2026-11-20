@@ -18,11 +18,13 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
         return None
 
 def check_legacy(path):
-    request=urllib.request.Request(BASE + path, headers={'Cache-Control':'no-cache'})
+    request=urllib.request.Request(BASE + path, headers={'User-Agent':'TODOROKI-PWA-Smoke/1.0','Cache-Control':'no-cache'})
     try:
         urllib.request.build_opener(NoRedirect).open(request, timeout=25).close()
     except urllib.error.HTTPError as exc:
         with exc:
+            if exc.code in (401,403,429):
+                raise RuntimeError(f'{path}: the smoke request was denied (HTTP {exc.code}); not retrying') from None
             location=urlsplit(exc.headers.get('Location', ''))
             assert exc.code in (301,308) and location.path=='/' and location.netloc in ('','todoroki-gold.com')
             print(path,exc.code,'→ /')
