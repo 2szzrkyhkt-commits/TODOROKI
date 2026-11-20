@@ -92,6 +92,12 @@ async function toolGate(request, env, path) {
   if(!env.AUTH_SECRET||env.AUTH_SECRET.length<40)return json({error:'ツールの入場設定を確認してください。'},503);
   const tool = TOOLS[path.slice('/api/tools/'.length)];
   if(tool) {
+    // Recovery does not issue a token. The form must pass the existing POST
+    // Origin and Fetch Metadata checks before access is granted.
+    const entryPage = () => {
+        const label = {jp:'日本経済データ', us:'米国経済データ', equity:'企業分析ツール β版'}[path.split('/').pop()];
+        return new Response(`<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${label}｜TODOROKI</title><style>body{margin:0;min-height:100svh;display:grid;place-items:center;background:#000;color:white;font:1rem system-ui;text-align:center}button{padding:.8rem 1.2rem;font:inherit}</style><main><h1>${label}</h1><p>アクセス元を確認できませんでした。下のボタンから開き直してください。</p><form method="post"><button>ツールを開く</button></form><p><a href="/#company-analysis" style="color:#d4af37">ツール一覧へ戻る</a></p></main></html>`, {headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-store','X-Robots-Tag':'noindex','Content-Security-Policy':"default-src 'none'; style-src 'unsafe-inline'; form-action 'self' https://*.chatgpt.site; frame-ancestors 'none'"}});
+    };
     const fetchSite = request.headers.get('Sec-Fetch-Site');
     if (request.method === 'POST') {
       if (request.headers.get('Origin') !== ORIGIN ||
@@ -99,14 +105,12 @@ async function toolGate(request, env, path) {
     } else if (request.method === 'GET') {
       const referer = request.headers.get('Referer');
       if (!referer && fetchSite !== 'same-origin') {
-        // Re-establish a first-party navigation when a web-app handoff loses its referrer.
-        const label = {jp:'日本経済データ', us:'米国経済データ', equity:'企業分析ツール β版'}[path.split('/').pop()];
-        return new Response(`<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${label}｜TODOROKI</title><style>body{margin:0;min-height:100svh;display:grid;place-items:center;background:#000;color:white;font:1rem system-ui;text-align:center}button{padding:.8rem 1.2rem;font:inherit}</style><main><h1>${label}</h1><form method="post"><button>ツールを開く</button></form></main></html>`, {headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-store','X-Robots-Tag':'noindex','Content-Security-Policy':"default-src 'none'; style-src 'unsafe-inline'; form-action 'self' https://*.chatgpt.site; frame-ancestors 'none'"}});
+        return entryPage();
       }
       if (referer) {
-        try { if (new URL(referer).origin !== ORIGIN) return back(); } catch { return back(); }
+        try { if (new URL(referer).origin !== ORIGIN) return entryPage(); } catch { return entryPage(); }
       }
-      if (fetchSite && !['same-origin','none'].includes(fetchSite)) return back();
+      if (fetchSite && !['same-origin','none'].includes(fetchSite)) return entryPage();
     } else {
       return json({error:'Method not allowed'},405);
     }
@@ -151,6 +155,13 @@ export default {
         return new Response(response.body, {status:response.status,statusText:response.statusText,headers});
       }
       return response;
+    }
+    // The intentionally public alternate homepage must re-enter on the canonical
+    // origin; never issue entry tokens or accept alternate-origin POSTs here.
+    if (url.origin === 'https://todoroki.8njb5bzfbz.workers.dev' && request.method === 'GET' &&
+        ['/api/tools/jp', '/api/tools/us', '/api/tools/equity'].includes(url.pathname)) {
+      return new Response(null, {status:303,headers:{Location:ORIGIN+url.pathname,
+        'Cache-Control':'no-store','Referrer-Policy':'no-referrer','X-Robots-Tag':'noindex'}});
     }
     if (url.origin !== ORIGIN) return json({ error: '本番サイトからアクセスしてください。' }, 403);
     const path = url.pathname;
