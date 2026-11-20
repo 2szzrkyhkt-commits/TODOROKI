@@ -1,21 +1,21 @@
-/* Keep the muted, looping TODOROKI bull background video playing. */
+/* Play decorative videos only while they are visible. */
 (() => {
   const videos = document.querySelectorAll('.hero-video, .end-video video');
-  videos.forEach(video => {
-    video.autoplay = true;
-    video.loop = true;
-    video.muted = true;
-    video.defaultMuted = true;
-    video.playsInline = true;
-    video.removeAttribute('controls');
-    function play() {
-      if (document.hidden) return;
-      const attempt = video.play();
-      if (attempt && typeof attempt.catch === 'function') attempt.catch(() => {});
+  const visible = new Set();
+  function update(video) {
+    if (document.hidden || !visible.has(video)) {
+      video.pause();
+    } else {
+      video.play().catch(() => {});
     }
-    if (video.readyState >= 2) play();
-    else video.addEventListener('canplay', play, { once: true });
-    video.addEventListener('pause', () => { if (!document.hidden) play(); });
-    document.addEventListener('visibilitychange', () => { if (!document.hidden) play(); });
+  }
+  const observer = new IntersectionObserver(entries => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) visible.add(entry.target);
+      else visible.delete(entry.target);
+      update(entry.target);
+    }
   });
+  videos.forEach(video => observer.observe(video));
+  document.addEventListener('visibilitychange', () => videos.forEach(update));
 })();
