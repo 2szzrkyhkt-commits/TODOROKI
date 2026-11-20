@@ -18,4 +18,10 @@ assert '/app/' in sw and 'caches.open' in sw
 for href in re.findall(r'href="(/[^"#?]+)"',html):
     if href=='/':continue
     assert (root / href.lstrip('/')).exists() or href=='/pdf-library.html',href
+assert 'apple-mobile-web-app-title' in html
+assert 'request.mode===\'navigate\'' in sw
+assert 'caches.match(\'/app/\')' in sw
+assert 'caches.open' in sw
+assert 'google' not in html.lower() or 'login' not in html.lower()
+assert len(re.findall(r'<article>', html)) >= 6
 print('PWA static checks passed')
