@@ -176,8 +176,7 @@
         await api('verify', { code: get('code').value.trim() });
         const data = await api('me');
         if (!data.member) throw new Error('ログイン状態を保存できませんでした。Cookieの設定をご確認ください。');
-        get('member-email').textContent = data.member.email;
-        show('member'); status('ログインしました。');
+        window.location.replace('/');
       });
     });
     get('logout').addEventListener('click', () => action(async () => {
@@ -187,7 +186,7 @@
     action(async () => {
       status('ログイン状態を確認しています…');
       const data = await api('me');
-      if (data.member) { get('member-email').textContent = data.member.email; show('member'); }
+      if (data.member) { window.location.replace('/'); return; }
       status('');
     });
   </script>
