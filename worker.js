@@ -1,3 +1,4 @@
+import {createEquityV2} from './tool-entry-v2.mjs';
 import {taxPublicFeed} from './tax-public-feed.mjs';
 const ORIGIN = 'https://todoroki-gold.com';
 // Only byte-identical PDF aliases share a canonical target. Keep downloads and ranges intact.
@@ -94,16 +95,18 @@ async function checkToolToken(secret, token, diagnostic = {}) {
     return p;
   }catch{return null;}
 }
+const equityV2=createEquityV2({sign,hash,toolToken,toolFingerprint});
 async function toolGate(request, env, path) {
   const back=()=>new Response(null,{status:303,headers:{Location:ORIGIN+'/#company-analysis','Cache-Control':'no-store','Referrer-Policy':'no-referrer'}});
   if(!env.AUTH_SECRET||env.AUTH_SECRET.length<40)return json({error:'ツールの入場設定を確認してください。'},503);
+  if(path==='/api/tools/equity-finish')return equityV2.finish(request,env);
   const tool = TOOLS[path.slice('/api/tools/'.length)];
   if(tool) {
     // Recovery does not issue a token. The form must pass the existing POST
     // Origin and Fetch Metadata checks before access is granted.
     const entryPage = () => {
         const label = {jp:'日本経済データ', us:'米国経済データ', equity:'企業分析ツール β版'}[path.split('/').pop()];
-        return new Response(`<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${label}｜TODOROKI</title><style>body{margin:0;min-height:100svh;display:grid;place-items:center;background:#000;color:white;font:1rem system-ui;text-align:center}button{padding:.8rem 1.2rem;font:inherit}</style><main><h1>${label}</h1><p>アクセス元を確認できませんでした。下のボタンから開き直してください。</p><form method="post"><button>ツールを開く</button></form><p><a href="/#company-analysis" style="color:#d4af37">ツール一覧へ戻る</a></p></main></html>`, {headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-store','X-Robots-Tag':'noindex','Content-Security-Policy':"default-src 'none'; style-src 'unsafe-inline'; form-action 'self' https://*.chatgpt.site; frame-ancestors 'none'"}});
+        return new Response(`<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${label}｜TODOROKI</title><style>body{margin:0;min-height:100svh;display:grid;place-items:center;background:#000;color:white;font:1rem system-ui;text-align:center}button{padding:.8rem 1.2rem;font:inherit}</style><main><h1>${label}</h1><p>アクセス元を確認できませんでした。下のボタンから開き直してください。</p><form method="post"><button>ツールを開く</button></form>${path==='/api/tools/equity'?'<p><a href="/api/tools/equity?flow=v2" style="color:#d4af37">iPhone向けの入場確認を試す</a></p>':''}<p><a href="/#company-analysis" style="color:#d4af37">ツール一覧へ戻る</a></p></main></html>`, {headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-store','X-Robots-Tag':'noindex','Content-Security-Policy':"default-src 'none'; style-src 'unsafe-inline'; form-action 'self' https://*.chatgpt.site; frame-ancestors 'none'"}});
     };
     const fetchSite = request.headers.get('Sec-Fetch-Site');
     if (request.method === 'POST') {
@@ -121,6 +124,7 @@ async function toolGate(request, env, path) {
     } else {
       return json({error:'Method not allowed'},405);
     }
+    if(path==='/api/tools/equity'&&new URL(request.url).searchParams.get('flow')==='v2')return equityV2.start(request,env);
     const fp=await toolFingerprint(env.AUTH_SECRET,request.headers.get('User-Agent')||'');
     const token=await toolToken(env.AUTH_SECRET,{aud:tool.aud,kind:'entry',iat:now(),exp:now()+60,fp,nonce:crypto.randomUUID()});
     return new Response(null,{status:303,headers:{Location:tool.url+'/enter?t='+token,'Cache-Control':'no-store','Referrer-Policy':'no-referrer','X-Robots-Tag':'noindex, nofollow'}});
@@ -136,6 +140,8 @@ async function toolGate(request, env, path) {
     };
     if(request.method!=='POST')return reply({error:'Method not allowed'},405,'invalid_request');
     let input;try{input=await body(request);}catch{return reply({valid:false},400,'invalid_request');}
+    if(input?.kind==='prepare-v2')return equityV2.prepare(input,env);
+    if(input?.kind==='entry-v2')return equityV2.enter(input,env);
     const diagnostic={};
     const p=await checkToolToken(env.AUTH_SECRET,input?.token,diagnostic);
     if(!p)return reply({valid:false},403,diagnostic.reason||'invalid_ticket');

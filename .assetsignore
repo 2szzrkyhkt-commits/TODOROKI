@@ -26,3 +26,5 @@
 **/*.db-*
 **/__pycache__/**
 **/*.pyc
+
+/tool-entry-v2.mjs
