@@ -123,6 +123,14 @@ async function toolGate(request, env, path) {
     }
     const fp=await toolFingerprint(env.AUTH_SECRET,request.headers.get('User-Agent')||'');
     const token=await toolToken(env.AUTH_SECRET,{aud:tool.aud,kind:'entry',iat:now(),exp:now()+60,fp,nonce:crypto.randomUUID()});
+    // A direct user tap avoids an iPhone cross-domain HTTP redirect chain.
+    // Admission, UA binding, and the original 60-second ticket stay unchanged.
+    if (/\biPhone\b/.test(request.headers.get('User-Agent')||'')) {
+      const escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+      const label={jp:'日本経済データ',us:'米国経済データ',equity:'企業分析ツール β版'}[path.slice('/api/tools/'.length)];
+      const destination=tool.url+'/enter?t='+token;
+      return new Response(`<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escape(label)}｜TODOROKI</title><style>body{margin:0;background:#080808;color:#fff;font:1rem system-ui}main{max-width:35rem;margin:12svh auto;padding:1.5rem}a{color:#d4af37}.open{display:inline-block;padding:1rem;border:1px solid #d4af37;border-radius:.5rem;font-weight:bold}</style><main><h1>${escape(label)}</h1><p>下のボタンをタップしてツールへ進んでください。</p><p><a class="open" href="${escape(destination)}" referrerpolicy="no-referrer" rel="noreferrer">${escape(label)}を開く</a></p><p>この入場リンクは発行から60秒間有効です。時間が経った場合は、<a href="${escape(path)}" referrerpolicy="no-referrer">入場リンクを作り直す</a>を押してください。</p><p><a href="/#company-analysis">ツール一覧へ戻る</a></p></main></html>`,{headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':'private, no-store','Referrer-Policy':'no-referrer','X-Robots-Tag':'noindex, nofollow','X-Content-Type-Options':'nosniff','Content-Security-Policy':"default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"}});
+    }
     return new Response(null,{status:303,headers:{Location:tool.url+'/enter?t='+token,'Cache-Control':'no-store','Referrer-Policy':'no-referrer','X-Robots-Tag':'noindex, nofollow'}});
   }
   if(path==='/api/tools/verify') {
