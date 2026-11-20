@@ -11,7 +11,8 @@ on:
       - 'assets/pwa-install.js'
       - 'assets/equity-web-entry.js'
       - 'worker.js'
-      - 'tools/quality/tool-entry-v2.test.mjs'
+      - 'tool-entry-v2.mjs'
+      - 'tools/quality/tool-entry-v2*.test.mjs'
       - 'tools/quality/equity-web-entry.test.mjs'
       - 'tools/quality/unified-home*.mjs'
       - 'scripts/check-pwa.py'
@@ -36,6 +37,7 @@ jobs:
       - run: node --test tools/quality/unified-home.test.mjs
       - run: node tools/quality/tool-entry.test.mjs
       - run: node tools/quality/tool-entry-v2.test.mjs
+      - run: node tools/quality/tool-entry-v2-multi.test.mjs
       - run: node --test tools/quality/equity-web-entry.test.mjs
       - name: Chromium desktop and mobile viewport regressions
         run: |

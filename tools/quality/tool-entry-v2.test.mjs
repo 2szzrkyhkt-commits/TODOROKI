@@ -17,10 +17,9 @@ function legacy(r, origin=S){
  assert.equal(r.status,303);const target=new URL(r.headers.get('Location'));
  assert.equal(target.origin,origin);assert.equal(target.pathname,'/enter');assert.equal(r.headers.get('Set-Cookie'),null);
 }
-for(const ua of ['', 'Windows Chrome', 'Macintosh Safari']) legacy(await call(automatic,{...admitted,'User-Agent':ua}));
-legacy(await call(entryRoute,admitted));
-legacy(await call('/api/tools/jp?flow=auto',admitted),'https://todoroki-economy-data.easysquid66.chatgpt.site');
-legacy(await call('/api/tools/us?flow=auto',admitted),'https://todoroki-us-economy-data.easysquid66.chatgpt.site');
+for(const ua of ['', 'Windows Chrome', 'Fixture UA']) legacy(await call(entryRoute,{...admitted,'User-Agent':ua}));
+
+
 const beforeAuto=env.DB.rows.size;
 for(const headers of [{'User-Agent':iphone},{...admitted,Referer:'https://foreign.invalid/'},{...admitted,'Sec-Fetch-Site':'cross-site'}]){
  const denied=await call(automatic,headers);assert.equal(denied.status,200);assert.equal(denied.headers.get('Location'),null);assert.equal(denied.headers.get('Set-Cookie'),null);
