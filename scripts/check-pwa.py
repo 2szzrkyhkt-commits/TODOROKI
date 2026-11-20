@@ -47,6 +47,7 @@ assert '(-webkit-device-pixel-ratio: 3) and (orientation: portrait)' in html
 entry=(root/'index.html').read_text()
 assert 'navigator.standalone' in entry and 'requestAnimationFrame(() => requestAnimationFrame(dismiss))' in entry
 assert 'apple-touch-startup-image' in entry
+assert "if (document.documentElement.hasAttribute('data-ios-standalone')) return;" in entry
 frames = []
 for page in (entry, html, (root/'login.html').read_text()):
     assert 'viewport-fit=cover' in page
@@ -58,9 +59,8 @@ for page in (entry, html, (root/'login.html').read_text()):
     assert 'center calc(50% - 17px) / 190px auto no-repeat' in frame[1]
     assert 'html { color-scheme: dark; background-color: #000; }' in frame[1]
     assert 'navigator.standalone === true' in page
-    assert '(device-width: 393px) and (device-height: 852px)' in frame[1]
     assert 'html[data-ios-standalone] #td-splash:not([hidden])' in frame[1]
-    assert 'background-position: center calc(50% - 43px);' in frame[1]
+    assert re.search(r'html\[data-ios-standalone\] #td-splash:not\(\[hidden\]\)\s*\{\s*background-image: none;', frame[1])
     frames.append(frame[1])
     assert 'td-splash-label">TODOROKI' in page
 assert len(set(frames)) == 1
