@@ -29,8 +29,13 @@
     @media(max-width:480px){.content-grid{grid-template-columns:1fr}.content-card{padding:18px}.content-title{font-size:20px}}
     @media(prefers-reduced-motion:reduce){.content-card{transition:none}}
   </style>
-<link rel="stylesheet" href="/assets/navigation.css"><link rel="stylesheet" href="/assets/language-picker.css"><link rel="stylesheet" href="/assets/site-header.css"><script src="/assets/language-picker.js" defer></script><link rel="stylesheet" href="/assets/site-quality.css"></head>
-<body><a class="skip-link" href="#main-content">本文へ移動</a>
+<link rel="stylesheet" href="/assets/navigation.css"><link rel="stylesheet" href="/assets/language-picker.css"><link rel="stylesheet" href="/assets/site-header.css"><script src="/assets/language-picker.js" defer></script><link rel="stylesheet" href="/assets/site-quality.css"><link rel="stylesheet" href="/assets/session-startup.css"><script src="/assets/session-startup.js" defer></script></head>
+<body>
+<div id="td-splash" role="status"><div class="td-splash-content"><div class="td-splash-title">TODOROKI</div></div></div>
+<div id="td-session-error" hidden><div class="td-splash-content"><div class="td-splash-title">TODOROKI</div><p role="alert">ログイン状態を確認できませんでした。接続を確認して、再度お試しください。</p><button id="td-session-retry" type="button">再試行</button><a href="/">トップページへ</a></div></div>
+<noscript><style>#td-splash{display:none}</style><p>ログイン状態を確認するには、JavaScriptを有効にしてください。<a href="/">トップページへ</a></p></noscript>
+<div id="td-session-page" hidden>
+<a class="skip-link" href="#main-content">本文へ移動</a>
   <header class="site-header">
   <div class="wrap brand-row">
     <a class="logo" href="/" aria-label="TODOROKI トップページ">TODOROKI</a>
@@ -68,7 +73,7 @@
     <h1 id="page-title">メールでログイン</h1>
     <p class="intro" id="page-intro">メールで届く6桁の認証コードを入力してください。<br>パスワードの設定は不要です。</p>
     <section class="panel" aria-label="ログイン">
-      <form id="email-form">
+      <form id="email-form" hidden>
         <label for="email">メールアドレス</label>
         <input id="email" type="email" autocomplete="email" maxlength="254" required placeholder="you@example.com" spellcheck="false" autocapitalize="none">
         <label class="small" style="display:flex;align-items:flex-start;gap:10px;margin:15px 0"><input id="transfer-consent" type="checkbox" required style="width:18px;min-width:18px;margin-top:6px"><span>認証メールの配信のため、米国のResendにメールアドレス・認証コードを含む送信内容を提供することに同意します。<a href="/privacy">送信先・保護措置の説明</a>をご確認ください。広告メール配信への同意ではありません。</span></label><button type="submit">認証コードを送る</button>
@@ -105,11 +110,12 @@
       <p class="status" id="status" role="status" aria-live="polite"></p>
     </section>
     <p class="small"><a href="/privacy">プライバシーポリシー</a> ／ <a href="/contact">お問い合わせ</a></p>
-    <noscript><p>ログインするには、ブラウザのJavaScriptを有効にしてください。</p></noscript>
   </main>
   <footer>© TODOROKI<p><a href="/site-map">サイトマップ</a></p><nav class="todoroki-info-nav" aria-label="運営方針 / Policies" style="margin:16px 0;font-size:13px"><a href="/editorial-policy">編集・利用方針 / Editorial policy</a> · <a href="/data-use">広告・外部送信 / Data use</a> · <a href="/sources">資料の出典 / Sources</a></nav></footer>
+  </div>
   <script>
     const get = id => document.getElementById(id);
+    const destination = new URLSearchParams(location.search).get('from') === 'app' ? '/app/' : '/';
     let email = '';
     let busy = false;
     let resendAt = 0;
@@ -176,19 +182,20 @@
         await api('verify', { code: get('code').value.trim() });
         const data = await api('me');
         if (!data.member) throw new Error('ログイン状態を保存できませんでした。Cookieの設定をご確認ください。');
-        window.location.replace('/');
+        window.location.replace(destination);
       });
     });
     get('logout').addEventListener('click', () => action(async () => {
       await api('logout', {}); get('code').value = ''; get('member-email').textContent = '';
       show('email'); status('ログアウトしました。');
     }));
-    action(async () => {
-      status('ログイン状態を確認しています…');
-      const data = await api('me');
-      if (data.member) { window.location.replace('/'); return; }
-      status('');
-    });
+    document.addEventListener('DOMContentLoaded', () => todorokiSessionStartup(state => {
+      if (state === 'authenticated') {
+        window.location.replace(destination);
+        return false;
+      }
+      show('email');
+    }));
   </script>
 </body>
 </html>
