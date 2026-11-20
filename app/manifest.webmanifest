@@ -4,7 +4,7 @@
   "short_name": "TODOROKI",
   "description": "TODOROKI統合アプリ",
   "start_url": "/app/",
-  "scope": "/app/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#090909",
   "theme_color": "#090909",
