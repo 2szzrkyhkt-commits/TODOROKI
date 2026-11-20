@@ -33,11 +33,11 @@ html { color-scheme: dark; background-color: #000; }
   /* Use a stable viewport height while the browser chrome settles. */
   background-position: center calc(50svh - 28.667px);
 }
-/* Full-screen iOS coordinates match the center of the artwork in the native
-   1179 × 2556 px image, including the translucent status-bar area. */
+/* On the native artwork's reference device, iOS already shows the logo.
+   The web session gate keeps a dark canvas without drawing it again. */
 @media (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
   html[data-ios-standalone] #td-splash:not([hidden]) {
-    background-position: center 397.333px;
+    background-image: none;
   }
 }
 #td-splash[aria-hidden="true"] { pointer-events: none; }
@@ -509,7 +509,10 @@ footer {
 <script>
 (() => {
   const splash = document.getElementById('td-splash');
-  const standalone = navigator.standalone || matchMedia('(display-mode: standalone)').matches;
+  const ios = navigator.standalone === true;
+  const nativeArtwork = matchMedia('(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)');
+  if (ios && nativeArtwork.matches) return;
+  const standalone = ios || matchMedia('(display-mode: standalone)').matches;
   if (!standalone || !matchMedia('(max-width: 767px)').matches ||
       document.referrer.startsWith(location.origin + '/')) return;
   splash.hidden = false;

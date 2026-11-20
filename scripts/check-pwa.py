@@ -47,6 +47,7 @@ assert '(-webkit-device-pixel-ratio: 3) and (orientation: portrait)' in html
 entry=(root/'index.html').read_text()
 assert 'navigator.standalone' in entry and 'requestAnimationFrame(() => requestAnimationFrame(dismiss))' in entry
 assert 'apple-touch-startup-image' in entry
+assert 'if (ios && nativeArtwork.matches) return;' in entry
 frames = []
 for page in (entry, html, (root/'login.html').read_text()):
     assert 'viewport-fit=cover' in page
@@ -61,7 +62,7 @@ for page in (entry, html, (root/'login.html').read_text()):
     assert '(device-width: 393px) and (device-height: 852px)' in frame[1]
     assert 'html[data-ios-standalone] #td-splash:not([hidden])' in frame[1]
     assert 'background-position: center calc(50svh - 28.667px);' in frame[1]
-    assert 'background-position: center 397.333px;' in frame[1]
+    assert 'html[data-ios-standalone] #td-splash:not([hidden]) {\n    background-image: none;' in frame[1]
     frames.append(frame[1])
     assert 'td-splash-label">TODOROKI' in page
 assert len(set(frames)) == 1
