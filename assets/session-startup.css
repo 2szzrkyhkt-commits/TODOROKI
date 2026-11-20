@@ -20,3 +20,16 @@ html:has(#td-session-error:not([hidden])) { background: #000; }
   color: #d4af37;
 }
 #td-session-error button { margin: 12px auto; width: auto; }
+
+/* Use the native iPhone launch artwork at its 3× reference size. */
+#td-splash {
+  background: #000 url("/app/startup-iphone-1179x2556.png") center / 393px auto no-repeat;
+}
+#td-splash[aria-hidden="true"] { pointer-events: none; }
+.td-splash-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
