@@ -1,4 +1,4 @@
-import {createEquityV2} from './tool-entry-v2.mjs';
+import {createToolV2} from './tool-entry-v2.mjs';
 import {taxPublicFeed} from './tax-public-feed.mjs';
 const ORIGIN = 'https://todoroki-gold.com';
 // Only byte-identical PDF aliases share a canonical target. Keep downloads and ranges intact.
@@ -95,18 +95,27 @@ async function checkToolToken(secret, token, diagnostic = {}) {
     return p;
   }catch{return null;}
 }
-const equityV2=createEquityV2({sign,hash,toolToken,toolFingerprint});
+const toolV2=Object.fromEntries(['equity','jp','us'].map(slug=>[slug,createToolV2({sign,hash,toolToken,toolFingerprint},slug)]));
+const toolV2ByAudience=Object.fromEntries(Object.entries(TOOLS).map(([slug,tool])=>[tool.aud,toolV2[slug]]));
+// Protocol selection only: WebKit can send a desktop-shaped UA on iPhone navigation.
+function prefersToolProof(request){
+  const ua=request.headers.get('User-Agent')||'';
+  return request.headers.get('Sec-CH-UA-Mobile')==='?1'||/\b(?:iPhone|iPad|iPod|Android)\b/i.test(ua)||
+    (/\bAppleWebKit\//.test(ua)&&/\bSafari\//.test(ua)&&!/\b(?:Chrome|Chromium|CriOS|Edg|EdgiOS|OPR|FxiOS|Firefox|OPiOS)\//.test(ua));
+}
 async function toolGate(request, env, path) {
   const back=()=>new Response(null,{status:303,headers:{Location:ORIGIN+'/#company-analysis','Cache-Control':'no-store','Referrer-Policy':'no-referrer'}});
   if(!env.AUTH_SECRET||env.AUTH_SECRET.length<40)return json({error:'ツールの入場設定を確認してください。'},503);
-  if(path==='/api/tools/equity-finish')return equityV2.finish(request,env);
-  const tool = TOOLS[path.slice('/api/tools/'.length)];
+  const finishSlug=path.match(/^\/api\/tools\/(equity|jp|us)-finish$/)?.[1];
+  if(finishSlug)return toolV2[finishSlug].finish(request,env);
+  const slug=path.slice('/api/tools/'.length);
+  const tool=Object.hasOwn(TOOLS,slug)?TOOLS[slug]:null;
   if(tool) {
     // Recovery does not issue a token. The form must pass the existing POST
     // Origin and Fetch Metadata checks before access is granted.
     const entryPage = () => {
         const label = {jp:'日本経済データ', us:'米国経済データ', equity:'企業分析ツール β版'}[path.split('/').pop()];
-        return new Response(`<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${label}｜TODOROKI</title><style>body{margin:0;min-height:100svh;display:grid;place-items:center;background:#000;color:white;font:1rem system-ui;text-align:center}button{padding:.8rem 1.2rem;font:inherit}</style><main><h1>${label}</h1><p>アクセス元を確認できませんでした。下のボタンから開き直してください。</p><form method="post"><button>ツールを開く</button></form>${path==='/api/tools/equity'?'<p><a href="/api/tools/equity?flow=v2" style="color:#d4af37">iPhone向けの入場確認を試す</a></p>':''}<p><a href="/#company-analysis" style="color:#d4af37">ツール一覧へ戻る</a></p></main></html>`, {headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-store','X-Robots-Tag':'noindex','Content-Security-Policy':"default-src 'none'; style-src 'unsafe-inline'; form-action 'self' https://*.chatgpt.site; frame-ancestors 'none'"}});
+        return new Response(`<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${label}｜TODOROKI</title><style>body{margin:0;min-height:100svh;display:grid;place-items:center;background:#000;color:white;font:1rem system-ui;text-align:center}button{padding:.8rem 1.2rem;font:inherit}</style><main><h1>${label}</h1><p>アクセス元を確認できませんでした。下のボタンから開き直してください。</p><form method="post"><button>ツールを開く</button></form>${'<p><a href="'+path+'?flow=v2" style="color:#d4af37">スマートフォン向けの入場確認を試す</a></p>'}<p><a href="/#company-analysis" style="color:#d4af37">ツール一覧へ戻る</a></p></main></html>`, {headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-store','X-Robots-Tag':'noindex','Content-Security-Policy':"default-src 'none'; style-src 'unsafe-inline'; form-action 'self' https://*.chatgpt.site; frame-ancestors 'none'"}});
     };
     const fetchSite = request.headers.get('Sec-Fetch-Site');
     if (request.method === 'POST') {
@@ -124,15 +133,13 @@ async function toolGate(request, env, path) {
     } else {
       return json({error:'Method not allowed'},405);
     }
-    if(path==='/api/tools/equity'){
-      const flow=new URL(request.url).searchParams.get('flow');
-      if(flow==='v2')return equityV2.start(request,env);
-      // This selects a proof protocol after the existing admission checks; it grants no access.
-      if(flow==='auto'&&/\b(?:iPhone|Android)\b/i.test(request.headers.get('User-Agent')||'')){
-        const mobile=await equityV2.start(request,env);
-        // Only a source-stage failure before a proof is returned may preserve the legacy route.
-        if(![429,503].includes(mobile.status))return mobile;
-      }
+    const flow=new URL(request.url).searchParams.get('flow');
+    const handler=toolV2[slug];
+    if(flow==='v2')return handler.start(request,env);
+    if(flow==='auto'||(flow===null&&prefersToolProof(request))){
+      const mobile=await handler.start(request,env);
+      // No ticket was returned at start. Never fall back once a handshake has begun.
+      if(mobile.status!==429&&!(slug==='equity'&&flow==='auto'&&mobile.status===503))return mobile;
     }
     const fp=await toolFingerprint(env.AUTH_SECRET,request.headers.get('User-Agent')||'');
     const token=await toolToken(env.AUTH_SECRET,{aud:tool.aud,kind:'entry',iat:now(),exp:now()+60,fp,nonce:crypto.randomUUID()});
@@ -149,8 +156,11 @@ async function toolGate(request, env, path) {
     };
     if(request.method!=='POST')return reply({error:'Method not allowed'},405,'invalid_request');
     let input;try{input=await body(request);}catch{return reply({valid:false},400,'invalid_request');}
-    if(input?.kind==='prepare-v2')return equityV2.prepare(input,env);
-    if(input?.kind==='entry-v2')return equityV2.enter(input,env);
+    if(input?.kind==='prepare-v2'||input?.kind==='entry-v2'){
+      const handler=Object.hasOwn(toolV2ByAudience,input?.aud)?toolV2ByAudience[input.aud]:null;
+      if(!handler)return reply({valid:false},403,'invalid_ticket');
+      return input.kind==='prepare-v2'?handler.prepare(input,env):handler.enter(input,env);
+    }
     const diagnostic={};
     const p=await checkToolToken(env.AUTH_SECRET,input?.token,diagnostic);
     if(!p)return reply({valid:false},403,diagnostic.reason||'invalid_ticket');

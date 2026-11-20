@@ -56,8 +56,9 @@ try{
    ]));
    assert.equal(swScope,origin+'/');
    assert.equal(await p.locator('link[rel="canonical"]').getAttribute('href'),'https://todoroki-gold.com/');
-   const equity=opts.isMobile?'/api/tools/equity?flow=auto':'/api/tools/equity';
-   for(const tool of ['/api/tools/jp','/api/tools/us',equity,'/us-equity']){
+   const toEntry=slug=>'/api/tools/'+slug+(opts.isMobile?'?flow=auto':'');
+   const equity=toEntry('equity');
+   for(const tool of [toEntry('jp'),toEntry('us'),equity,'/us-equity']){
     const a=p.locator('#company-analysis a[href="'+tool+'"]');
     assert.equal(await a.count(),1,tool+' original normal entry');
    }

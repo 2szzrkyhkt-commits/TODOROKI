@@ -70,11 +70,7 @@ for icon in manifest['icons']:
     assert data
 # Exercise the same origin entry and the cookie handoff to each statistics tool.
 
-MOBILE_PROFILES = {
-    'iPhone Safari': 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1',
-    'iPhone Chrome': 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/130.0.0.0 Mobile/15E148 Safari/604.1',
-    'Android Chrome': 'Mozilla/5.0 (Linux; Android 15; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Mobile Safari/537.36',
-}
+MOBILE_UA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1'
 # These are HTTP-profile probes, not native or installed-device tests.
 GATED_TOOLS = {
     'jp': ('todoroki-economy-data.easysquid66.chatgpt.site', '日本経済を見える化'),
@@ -86,44 +82,56 @@ for tool in GATED_TOOLS:
     assert link in html, f'Missing entry link for {tool}'
 
 
-def check_economy_entry(profile, user_agent, tool, host, heading, source):
-    opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(CookieJar()))
-    headers = {'User-Agent': user_agent}
-    if source:
-        headers.update({'Referer': BASE + source, 'Sec-Fetch-Site': 'same-origin'})
+class RouteTrace(urllib.request.HTTPRedirectHandler):
+    def __init__(self):
+        super().__init__()
+        self.paths = []
+
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        self.paths.append(urlsplit(newurl).path)
+        return super().redirect_request(req, fp, code, msg, headers, newurl)
+
+
+def check_tool(tool, host, heading, admitted):
+    trace = RouteTrace()
+    opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(CookieJar()), trace)
+    headers = {'User-Agent': MOBILE_UA}
+    if admitted:
+        headers.update({'Referer': BASE + '/', 'Sec-Fetch-Site': 'same-origin'})
     endpoint = BASE + '/api/tools/' + tool
     try:
         with opener.open(urllib.request.Request(endpoint, headers=headers), timeout=25) as response:
             document = response.read(500000)
             destination = urlsplit(response.url)
             assert response.status == 200
-            if source:
+            if admitted:
                 assert (destination.scheme, destination.hostname, destination.path) == ('https', host, '/')
                 assert heading.encode() in document
+                route = trace.paths
+                if route and route[0] == '/prepare':
+                    assert route == ['/prepare', f'/api/tools/{tool}-finish', '/enter', '/']
+                    label = 'v2 proof route'
+                else:
+                    assert route == ['/enter', '/']
+                    label = 'legacy route observed; v2 not verified'
             else:
                 assert destination.geturl() == endpoint
+                assert not trace.paths and not response.headers.get('Set-Cookie')
                 assert b'<form method="post">' in document
-        if not source:
-            recovery = urllib.request.Request(endpoint, data=b'', headers={
-                **headers, 'Origin': BASE, 'Sec-Fetch-Site': 'same-origin',
-            })
-            with opener.open(recovery, timeout=25) as response:
-                destination = urlsplit(response.url)
-                assert (destination.scheme, destination.hostname, destination.path) == ('https', host, '/')
-                assert heading.encode() in response.read(500000)
+                label = 'no-referrer recovery issued no proof'
     except (OSError, AssertionError) as exc:
-        # HTTP errors can contain an entry ticket URL. Report the case and status only.
-        raise AssertionError(f'{profile}, {tool}, {source or "no referrer"}: '
+        # HTTP errors can contain credentials in a URL. Report the case/status only.
+        raise AssertionError(f'{tool}, {"admitted mobile profile" if admitted else "no referrer"}: '
                              f'{type(exc).__name__} {getattr(exc, "code", "")}') from None
-    print(profile, tool, source or 'no referrer', 'OK')
+    print(tool, label, 'OK')
 
 
-with ThreadPoolExecutor(max_workers=4) as pool:
+# One admitted mobile probe per tool; no automatic production recovery POST or retries.
+with ThreadPoolExecutor(max_workers=3) as pool:
     checks = [
-        pool.submit(check_economy_entry, profile, user_agent, tool, host, heading, source)
-        for profile, user_agent in MOBILE_PROFILES.items()
+        pool.submit(check_tool, tool, host, heading, admitted)
         for tool, (host, heading) in GATED_TOOLS.items()
-        for source in ('/', None)
+        for admitted in (True, False)
     ]
     for check in checks:
         check.result()

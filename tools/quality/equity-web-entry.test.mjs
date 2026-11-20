@@ -5,37 +5,40 @@ import vm from 'node:vm';
 
 const script = readFileSync(new URL('../../assets/equity-web-entry.js', import.meta.url), 'utf8');
 const html = readFileSync(new URL('../../index.html', import.meta.url), 'utf8');
-const href='/api/tools/equity';
+const hrefs=['equity','jp','us'].map(slug=>'/api/tools/'+slug);
 const iPhone='Mozilla/5.0 (iPhone; CPU iPhone OS 18_5) AppleWebKit/605.1.15 Version/18.5 Mobile Safari/604.1';
 const Android='Mozilla/5.0 (Linux; Android 15) AppleWebKit/537.36 Chrome/130.0 Mobile Safari/537.36';
-function link(userAgent, {iosStandalone=false, displayMode=false}={}) {
-  let target=href;
+function links(userAgent, {iosStandalone=false, displayMode=false, platform='', maxTouchPoints=0}={}) {
+  const targets=[...hrefs];
   vm.runInNewContext(script, {
-    navigator: {userAgent, standalone:iosStandalone},
+    navigator: {userAgent, standalone:iosStandalone, platform, maxTouchPoints},
     matchMedia: (query) => {
       assert.match(query, /display-mode: standalone/);
       return {matches:displayMode};
     },
     document: {querySelector(selector) {
-      assert.equal(selector, 'a[href="/api/tools/equity"]');
+      const index=hrefs.findIndex(href=>selector==='a[href="'+href+'"]');
+      assert.ok(index>=0);
       return {setAttribute(name, value) {
         assert.equal(name, 'href');
-        target=value;
+        targets[index]=value;
       }};
     }},
   });
-  return target;
+  return targets;
 }
-test('iPhone Safari and Android Chrome web equity links select the mobile proof route', () => {
-  assert.equal(link(iPhone), href+'?flow=auto');
-  assert.equal(link(Android), href+'?flow=auto');
+test('regular iPhone and Android and desktop-style touch Apple browsers opt in for all three links', () => {
+  const expected=hrefs.map(href=>href+'?flow=auto');
+  assert.deepEqual(links(iPhone), expected);
+  assert.deepEqual(links(Android), expected);
+  assert.deepEqual(links('Desktop-class Safari',{platform:'MacIntel',maxTouchPoints:5}),expected);
 });
-test('installed iOS/Android, desktop and unknown clients keep the original route', () => {
-  assert.equal(link(iPhone,{iosStandalone:true}),href);
-  assert.equal(link(Android,{displayMode:true}),href);
-  assert.equal(link(iPhone,{displayMode:true}),href);
+test('installed, desktop and unknown clients keep native card hrefs (server independently selects)', () => {
+  assert.deepEqual(links(iPhone,{iosStandalone:true}),hrefs);
+  assert.deepEqual(links(Android,{displayMode:true}),hrefs);
+  assert.deepEqual(links(iPhone,{displayMode:true}),hrefs);
   for(const userAgent of ['Mozilla/5.0 Macintosh Safari','Mozilla/5.0 Windows Chrome','Mozilla/5.0 Windows Edg','']){
-    assert.equal(link(userAgent),href);
+    assert.deepEqual(links(userAgent),hrefs);
   }
 });
 test('no-script HTML retains the original equity and two economy links and tab behavior', () => {
