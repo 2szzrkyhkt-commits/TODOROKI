@@ -47,12 +47,15 @@ assert '(-webkit-device-pixel-ratio: 3) and (orientation: portrait)' in html
 entry=(root/'index.html').read_text()
 assert 'navigator.standalone' in entry and 'requestAnimationFrame(() => requestAnimationFrame(dismiss))' in entry
 assert 'apple-touch-startup-image' in entry
-style=(root/'assets/session-startup.css').read_text()
-assert f'url("/app/{startup.name}") center / 393px auto no-repeat' in style
+frames = []
 for page in (entry, html, (root/'login.html').read_text()):
     assert 'viewport-fit=cover' in page
     assert 'name="apple-mobile-web-app-status-bar-style" content="black-translucent"' in page
     assert 'href="/assets/session-startup.css"' in page
-    assert f'rel="preload" as="image" href="/app/{startup.name}"' in page
+    frame = re.search(r'<style id="td-first-frame">(.*?)</style>', page, re.S)
+    assert frame and 'data:image/webp;base64,' in frame[1]
+    assert 'center calc(50% - 17px) / 190px auto no-repeat' in frame[1]
+    frames.append(frame[1])
     assert 'td-splash-label">TODOROKI' in page
+assert len(set(frames)) == 1
 print('PWA static checks passed')
