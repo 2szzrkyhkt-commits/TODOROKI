@@ -958,8 +958,9 @@ footer {
  var track=ticker.querySelector('.news-ticker-track');
  var btn=ticker.querySelector('.news-ticker-toggle');
  if(groups.length!==2||!track||!btn)return;
- var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
- var playing=true, position=0, previous=0, width=0;
+ var motionPreference=window.matchMedia('(prefers-reduced-motion: reduce)');
+ var playing=!motionPreference.matches, position=0, previous=0, width=0;
+ motionPreference.addEventListener('change',function(event){playing=!event.matches;previous=0;label();});
  function measure(){width=groups[0].getBoundingClientRect().width;groups[1].style.width=width+'px';if(width>0)position%=width;}
  function label(){ticker.dataset.playing=String(playing);btn.textContent=playing?'停止':'再生';btn.setAttribute('aria-label',playing?'テロップを一時停止':'テロップを再生');}
  btn.addEventListener('click',function(){playing=!playing;previous=0;label();});
