@@ -6,7 +6,9 @@ class DB{rows=new Map();fail=false;prepare(sql){const db=this;return{bind(...arg
 const O='https://todoroki-gold.com',sourceUA='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Safari/605.1.15',destUA='Mozilla/5.0 (iPhone; CPU iPhone OS 26_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.1 Mobile/15E148 Safari/604.1';
 const env={AUTH_SECRET:'test-local-only'.repeat(6),DB:new DB()};
 const configurations={equity:{dir:process.env.SITES_EQ_DIR,host:'todoroki-equity-lab',src:'__Host-todoroki_equity_source',proof:'__Host-todoroki_equity_proof',session:'__Host-todoroki_equity_entry'},jp:{dir:process.env.SITES_JP_DIR,host:'todoroki-economy-data',src:'__Host-todoroki_jp_source',proof:'__Host-todoroki_jp_proof',session:'__Host-todoroki_jp_entry'},us:{dir:process.env.SITES_US_DIR,host:'todoroki-us-economy-data',src:'__Host-todoroki_us_source',proof:'__Host-todoroki_us_proof',session:'__Host-todoroki_us_entry'}};
-const chromeUA='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36';
+const chromeUA='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36';
+const windowsSource='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36';
+const windowsDest=windowsSource.replace('154.','155.');
 const originalFetch=globalThis.fetch,originalWarn=console.warn;const logs=[];console.warn=x=>logs.push(x);
 globalThis.fetch=async(u,init)=>{assert.equal(u,O+'/api/tools/verify','No real network allowed');return central.fetch(new Request(u,init),env);};
 const sourceCall=(url,cookie,method='GET')=>central.fetch(new Request(url,{method,headers:{'User-Agent':sourceUA,Referer:O+'/','CF-Connecting-IP':'192.0.2.1',...(cookie?{Cookie:cookie}:{})}}),env);
@@ -40,6 +42,20 @@ for(const [slug,cfg]of Object.entries(configurations)){
  r=await sourceCall(r.headers.get('Location'),desktopSource);assert.equal(r.status,303);
  r=await dest(r.headers.get('Location'),desktopProof,sourceUA);assert.equal(r.status,303);
  assert.equal((await dest(S+'/',pair(r),sourceUA)).status,200);
+ if(slug==='equity'){
+  const win=(suffix,cookie)=>central.fetch(new Request(O+'/api/tools/equity'+suffix,{headers:{Referer:O+'/','User-Agent':windowsSource,'CF-Connecting-IP':'192.0.2.2',...(cookie?{Cookie:cookie}:{})}}),env);
+  const old=await win('?flow=legacy');
+  assert.equal(new URL(old.headers.get('Location')).pathname,'/enter');
+  assert.equal((await dest(old.headers.get('Location'),null,windowsDest)).status,403);
+  r=await win('');assert.equal(new URL(r.headers.get('Location')).pathname,'/prepare');
+  const winSource=pair(r);
+  r=await dest(r.headers.get('Location'),null,windowsDest);assert.equal(r.status,303);const winProof=pair(r);
+  const finishSuffix=new URL(r.headers.get('Location')).pathname.slice('/api/tools/equity'.length)+new URL(r.headers.get('Location')).search;
+  r=await win(finishSuffix,winSource);assert.equal(r.status,303);
+  r=await dest(r.headers.get('Location'),winProof,windowsDest);assert.equal(r.status,303);
+  assert.equal((await dest(S+'/',pair(r),windowsDest)).status,200);
+  console.log('Windows equity: legacy different UA denied; default proof with different UA passed.');
+ }
  for(const entry of logs){const text=JSON.stringify(entry);assert.ok(!text.includes(sourceUA)&&!text.includes(destUA)&&!text.includes(sourceCookie)&&!text.includes(proofCookie));}
  console.log(slug+': exact central/Sites local v2 and unchanged v1 integration passed; different-UA and same-UA desktop Safari success, isolated-jar denial, proof/replay/unauthenticated protections.');
 }

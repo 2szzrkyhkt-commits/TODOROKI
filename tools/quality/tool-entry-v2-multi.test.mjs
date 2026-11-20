@@ -24,9 +24,17 @@ for(const [slug,cfg]of Object.entries(configs)){
  const desktopSafari='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Safari/605.1.15';
  const pcChrome='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36';
  const admitted={Referer:O+'/','CF-Connecting-IP':'192.0.2.41'};
- for(const client of ['', 'desktop', pcChrome, pcChrome+' Edg/130.0.0.0']){
+ for(const client of ['', 'desktop', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/155.0.0.0 Safari/537.36']){
   r=await run(path,{...admitted,'User-Agent':client});assert.equal(new URL(r.headers.get('Location')).pathname,'/enter');assert.equal(r.headers.get('Set-Cookie'),null);
  }
+ for(const headers of [{'User-Agent':pcChrome},{'User-Agent':pcChrome+' Edg/130.0.0.0'},{'User-Agent':'Reduced UA','Sec-CH-UA-Platform':'"Windows"'}]){
+  r=await run(path,{...admitted,...headers,'CF-Connecting-IP':'192.0.2.43'});
+  assert.equal(r.status,303);
+  assert.equal(new URL(r.headers.get('Location')).pathname,slug==='equity'?'/prepare':'/enter');
+  assert.equal(Boolean(r.headers.get('Set-Cookie')),slug==='equity');
+ }
+ r=await run(path,{'User-Agent':pcChrome});
+ assert.equal(r.status,200);assert.equal(r.headers.get('Location'),null);assert.equal(r.headers.get('Set-Cookie'),null);
  const profiles=[
   [path,{'User-Agent':'iPhone'}],[path,{'User-Agent':'Android'}],[path,{'User-Agent':desktopSafari}],
   [path,{'User-Agent':'Reduced UA','Sec-CH-UA-Mobile':'?1'}],
@@ -46,4 +54,4 @@ for(const [slug,cfg]of Object.entries(configs)){
  assert.equal(JSON.stringify([...env.DB.rows]),before);
 }
 assert.equal(new Set(cookies).size,3);assert.equal((await verify('prepare-v2','invalid','__proto__')).status,403);
-console.log('Three-tool v2 scope, cookies, independent caps, exact destination UA/secret, replay, cross-tool denial and Safari desktop-shaped selection, stable Chrome/Edge and cap rollover passed.');
+console.log('Three-tool v2 scope, cookies, independent caps, exact destination UA/secret, replay, cross-tool denial and Safari desktop-shaped selection, Windows equity proof only, other desktop routes and cap rollover passed.');

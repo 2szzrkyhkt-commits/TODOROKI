@@ -98,8 +98,10 @@ async function checkToolToken(secret, token, diagnostic = {}) {
 const toolV2=Object.fromEntries(['equity','jp','us'].map(slug=>[slug,createToolV2({sign,hash,toolToken,toolFingerprint},slug)]));
 const toolV2ByAudience=Object.fromEntries(Object.entries(TOOLS).map(([slug,tool])=>[tool.aud,toolV2[slug]]));
 // Protocol selection only: WebKit can send a desktop-shaped UA on iPhone navigation.
-function prefersToolProof(request){
+function prefersToolProof(request,slug){
   const ua=request.headers.get('User-Agent')||'';
+  // Japan equity also saw production legacy client mismatches on Windows.
+  if(slug==='equity' && (/\bWindows NT\b/i.test(ua)||request.headers.get('Sec-CH-UA-Platform')==='"Windows"'))return true;
   return request.headers.get('Sec-CH-UA-Mobile')==='?1'||/\b(?:iPhone|iPad|iPod|Android)\b/i.test(ua)||
     (/\bAppleWebKit\//.test(ua)&&/\bSafari\//.test(ua)&&!/\b(?:Chrome|Chromium|CriOS|Edg|EdgiOS|OPR|FxiOS|Firefox|OPiOS)\//.test(ua));
 }
@@ -136,7 +138,7 @@ async function toolGate(request, env, path) {
     const flow=new URL(request.url).searchParams.get('flow');
     const handler=toolV2[slug];
     if(flow==='v2')return handler.start(request,env);
-    if(flow==='auto'||(flow===null&&prefersToolProof(request))){
+    if(flow==='auto'||(flow===null&&prefersToolProof(request,slug))){
       const mobile=await handler.start(request,env);
       // No ticket was returned at start. Never fall back once a handshake has begun.
       if(mobile.status!==429&&!(slug==='equity'&&flow==='auto'&&mobile.status===503))return mobile;
