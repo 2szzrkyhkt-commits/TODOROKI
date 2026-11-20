@@ -8,12 +8,12 @@
 #td-splash .td-splash-content{width:min(90vw,560px);text-align:center;transform:translateY(-3vh)}
 #td-splash .td-splash-title{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif;font-size:clamp(40px,11vw,80px);font-weight:700;letter-spacing:.08em;line-height:1.1;white-space:nowrap;color:#fff}
 #td-splash .td-splash-line{height:2px;margin:22px auto 42px;width:94%;background:linear-gradient(90deg,transparent,#b08b32 28%,#ffe2a0 50%,#b08b32 72%,transparent);box-shadow:0 0 12px #b58c39}
-#td-splash .td-splash-ring{width:44px;height:44px;border-radius:50%;border:4px solid #474747;border-top-color:#fff;border-right-color:#eee;margin:0 auto 17px;animation:td-splash-spin 1s linear infinite}
-#td-splash .td-splash-label{font:17px Georgia,"Times New Roman",serif;letter-spacing:.08em;color:#fff}
-@keyframes td-splash-spin{to{transform:rotate(360deg)}}
-@media(prefers-reduced-motion:reduce){#td-splash .td-splash-ring{animation:none}#td-splash{transition:none}}
+
+
+}
+@media(prefers-reduced-motion:reduce){#td-splash{transition:none}}
 </style></head><body>
-<div id="td-splash" role="status" aria-label="Loading" aria-live="off"><div class="td-splash-content"><div class="td-splash-title">TODOROKI</div><div class="td-splash-line" aria-hidden="true"></div><div class="td-splash-ring" aria-hidden="true"></div><div class="td-splash-label">Loading...</div></div></div>
+<div id="td-splash" role="status" aria-label="Loading" aria-live="off"><div class="td-splash-content"><div class="td-splash-title">TODOROKI</div><div class="td-splash-line" aria-hidden="true"></div></div></div>
 <script>(function(){var splash=document.getElementById('td-splash');function finish(){if(!splash)return;splash.classList.add('td-splash-done');setTimeout(function(){splash.remove()},450)}if(document.readyState==='complete'){requestAnimationFrame(finish)}else{window.addEventListener('load',finish,{once:true})}setTimeout(finish,3500)})();</script>
 
 <header><h1>TODOROKI</h1><a href="/">公式サイト</a></header>
