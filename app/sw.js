@@ -5,4 +5,5 @@ self.addEventListener('activate',event=>event.waitUntil(Promise.all([
   caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith(OLD_PREFIX)).map(key=>caches.delete(key)))),
   self.clients.claim()
 ])));
+// Navigation and session startup use the current network response.
 // No fetch interception: browser handles every request directly.
