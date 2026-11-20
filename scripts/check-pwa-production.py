@@ -38,14 +38,24 @@ MOBILE_PROFILES = {
     'iPhone Chrome': 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/130.0.0.0 Mobile/15E148 Safari/604.1',
     'Android Chrome': 'Mozilla/5.0 (Linux; Android 15; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Mobile Safari/537.36',
 }
-ECONOMY_TOOLS = {
+# These are HTTP browser profiles, not physical devices or independent PWA cookie stores.
+GATED_TOOLS = {
     'jp': ('todoroki-economy-data.easysquid66.chatgpt.site', '日本経済を見える化'),
     'us': ('todoroki-us-economy-data.easysquid66.chatgpt.site', '米国経済を見える化'),
+    'equity': ('todoroki-equity-lab.easysquid66.chatgpt.site', '銘柄を探す'),
 }
 homepage, _ = get('/')
-for tool in ECONOMY_TOOLS:
-    link = f'href="/api/tools/{tool}"'.encode()
-    assert link in homepage and link in html, f'Missing entry link for {tool}'
+PUBLIC_LINKS = {}
+for tool in GATED_TOOLS:
+    path = f'/api/tools/{tool}'
+    public = path + '?flow=auto'
+    # A push can schedule these probes before the concurrent edge rollout.
+    # Follow the link actually served; keep the mode in the outcome.
+    if f'href="{public}"'.encode() not in homepage:
+        public = path
+    assert f'href="{public}"'.encode() in homepage, f'Missing homepage link for {tool}'
+    assert f'href="{path}"'.encode() in html, f'Missing app link for {tool}'
+    PUBLIC_LINKS[tool] = public
 
 
 def check_economy_entry(profile, user_agent, tool, host, heading, source):
@@ -53,7 +63,7 @@ def check_economy_entry(profile, user_agent, tool, host, heading, source):
     headers = {'User-Agent': user_agent}
     if source:
         headers.update({'Referer': BASE + source, 'Sec-Fetch-Site': 'same-origin'})
-    endpoint = BASE + '/api/tools/' + tool
+    endpoint = BASE + (PUBLIC_LINKS[tool] if source == '/' else '/api/tools/' + tool)
     try:
         with opener.open(urllib.request.Request(endpoint, headers=headers), timeout=25) as response:
             document = response.read(500000)
@@ -77,14 +87,14 @@ def check_economy_entry(profile, user_agent, tool, host, heading, source):
         # HTTP errors can contain an entry ticket URL. Report the case and status only.
         raise AssertionError(f'{profile}, {tool}, {source or "no referrer"}: '
                              f'{type(exc).__name__} {getattr(exc, "code", "")}') from None
-    print(profile, tool, source or 'no referrer', 'OK')
+    print('HTTP profile', profile, tool, source or 'no referrer', 'v2 eligible' if '?flow=auto' in endpoint else 'legacy', 'OK')
 
 
 with ThreadPoolExecutor(max_workers=4) as pool:
     checks = [
         pool.submit(check_economy_entry, profile, user_agent, tool, host, heading, source)
         for profile, user_agent in MOBILE_PROFILES.items()
-        for tool, (host, heading) in ECONOMY_TOOLS.items()
+        for tool, (host, heading) in GATED_TOOLS.items()
         for source in ('/', '/app/', None)
     ]
     for check in checks:
