@@ -5,6 +5,11 @@ on:
     branches: [main]
     paths:
       - 'app/**'
+      - 'index.html'
+      - 'worker.js'
+      - 'tool-entry-v2.mjs'
+      - 'assets/session-startup.*'
+      - 'assets/site-header.css'
       - 'scripts/check-pwa-production.py'
       - '.github/workflows/pwa-production-smoke.yml'
 jobs:
