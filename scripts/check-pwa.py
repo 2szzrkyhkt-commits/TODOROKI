@@ -57,7 +57,10 @@ for page in (entry, html, (root/'login.html').read_text()):
     assert frame and 'data:image/webp;base64,' in frame[1]
     assert 'center calc(50% - 17px) / 190px auto no-repeat' in frame[1]
     assert 'html { color-scheme: dark; background-color: #000; }' in frame[1]
-    assert 'env(safe-area-inset-top, 0px) / 2' in frame[1]
+    assert 'navigator.standalone === true' in page
+    assert '(device-width: 393px) and (device-height: 852px)' in frame[1]
+    assert 'html[data-ios-standalone] #td-splash:not([hidden])' in frame[1]
+    assert 'background-position: center calc(50% - 43px);' in frame[1]
     frames.append(frame[1])
     assert 'td-splash-label">TODOROKI' in page
 assert len(set(frames)) == 1
