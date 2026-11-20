@@ -33,7 +33,7 @@ assert 'href="/login.html"' in html
 assert 'id="td-splash"' in html
 assert 'td-splash-title">TODOROKI' in html
 assert 'Loading...' not in html and 'td-splash-ring' not in html
-assert 'td-splash-line' in html and 'DOMContentLoaded' in html
+assert 'td-splash-line' not in html and 'DOMContentLoaded' in html
 assert 'Loading' not in html and '読み込み中' not in html
 assert 'display-mode: standalone' in html
 assert manifest['background_color'] == manifest['theme_color'] == '#000000'
