@@ -7,6 +7,7 @@ import assert from 'node:assert/strict';
 const root=fileURLToPath(new URL('../../',import.meta.url));
 const aliases=new Set(['/app','/app/','/app/index.html','/app/index']);
 const ct={'.html':'text/html; charset=utf-8','.js':'application/javascript','.css':'text/css','.png':'image/png','.svg':'image/svg+xml','.webmanifest':'application/manifest+json','.mp4':'video/mp4','.ico':'image/x-icon','.webp':'image/webp'};
+const economyRequests=[];
 const server=createServer(async(req,res)=>{
  const p=new URL(req.url,'http://localhost').pathname;
  // Fixture only: production independently verifies exact Cloudflare alias and worker headers.
@@ -23,7 +24,12 @@ const server=createServer(async(req,res)=>{
   await new Promise(r=>setTimeout(r,180));
   res.end(JSON.stringify({member:req.headers.cookie?.includes('fixture=member')?{email:'fixture@example.invalid'}:null}));return;
  }
- if(p.startsWith('/api/')){res.setHeader('Content-Type','application/json');res.end('{}');return;}
+ if(p.startsWith('/api/')){
+  if(p==='/api/tools/jp'||p==='/api/tools/us'){
+   economyRequests.push({url:req.url,method:req.method,origin:req.headers.origin,fetchSite:req.headers['sec-fetch-site']});
+  }
+  res.setHeader('Content-Type','application/json');res.end('{}');return;
+ }
  try{
   const clean=decodeURIComponent(p);
   const file=resolve(root,'.'+(clean==='/'?'/index.html':clean==='/login'?'/login.html':clean));
@@ -82,6 +88,25 @@ try{
    await login.waitFor({state:'visible'});
    assert.equal(await state.isVisible(),false);
    assert.equal(new URL(p.url()).pathname,'/');
+   for(const slug of ['jp','us']){
+    const target=toEntry(slug);
+    const card=p.locator('#company-analysis a[href="'+target+'"]');
+    assert.equal(await card.getAttribute('target'),'_blank');
+    assert.equal(await card.getAttribute('rel'),'noopener');
+    if(!opts.isMobile) continue;
+    const expected=origin+target;
+    const before=economyRequests.length;
+    await Promise.all([p.waitForURL(expected),card.click()]);
+    assert.equal(economyRequests.length,before+1);
+    const request=economyRequests.at(-1);
+    assert.equal(request.url,target);
+    assert.equal(request.method,'POST');
+    assert.equal(request.origin,origin);
+    assert.ok(request.fetchSite===undefined||request.fetchSite==='same-origin',
+     'Economy POST fetch-site must be absent or same-origin, as required by the Worker');
+    assert.equal(context.pages().length,1,'Economy POST must navigate the same tab');
+    await p.goto(origin+'/',{waitUntil:'domcontentloaded'});
+   }
    await Promise.all([
      p.waitForURL(origin+equity),
      p.locator('#company-analysis a[href="'+equity+'"]').click(),

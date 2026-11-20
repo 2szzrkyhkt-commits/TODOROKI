@@ -10,10 +10,13 @@ on:
       - 'assets/header-account.js'
       - 'assets/pwa-install.js'
       - 'assets/equity-web-entry.js'
+      - 'assets/economy-mobile-launch.js'
       - 'worker.js'
       - 'tool-entry-v2.mjs'
       - 'tools/quality/tool-entry-v2*.test.mjs'
       - 'tools/quality/equity-web-entry.test.mjs'
+      - 'tools/quality/economy-mobile-launch.test.mjs'
+      - 'tools/quality/economy-mobile-launch.browser.mjs'
       - 'tools/quality/unified-home*.mjs'
       - 'scripts/check-pwa.py'
       - '.github/workflows/pwa-check.yml'
@@ -38,9 +41,13 @@ jobs:
       - run: node tools/quality/tool-entry.test.mjs
       - run: node tools/quality/tool-entry-v2.test.mjs
       - run: node tools/quality/tool-entry-v2-multi.test.mjs
-      - run: node --test tools/quality/equity-web-entry.test.mjs
+      - run: node --test tools/quality/equity-web-entry.test.mjs tools/quality/economy-mobile-launch.test.mjs
       - name: Chromium desktop and mobile viewport regressions
         run: |
           npm install --no-save --package-lock=false playwright@1.56.1
           npx playwright install --with-deps chromium
           node tools/quality/unified-home-browser.mjs
+      - name: WebKit economy card navigation regression
+        run: |
+          npx playwright install --with-deps webkit
+          node tools/quality/economy-mobile-launch.browser.mjs
