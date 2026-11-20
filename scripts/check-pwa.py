@@ -23,5 +23,6 @@ assert 'request.mode===\'navigate\'' in sw
 assert 'caches.match(\'/app/\')' in sw
 assert 'caches.open' in sw
 assert 'google' not in html.lower() or 'login' not in html.lower()
-assert len(re.findall(r'<article>', html)) >= 6
+assert len(re.findall(r'<article>', html)) >= 7
+assert 'href="/boki1"' in html and 'href="/calculators/"' in html
 print('PWA static checks passed')
