@@ -35,3 +35,15 @@
  .site-header .desktop-links::-webkit-scrollbar{display:none}
  .site-header .todoroki-language-picker,.site-header .account-link{flex:none}
 }
+
+.site-header .header-account{display:grid;position:relative;flex:none;justify-items:end}
+.site-header .header-account > *{grid-area:1 / 1}
+.site-header .header-account > [hidden]{display:block;visibility:hidden}
+.site-header .header-account > a[hidden]{display:inline-flex}
+.site-header .header-account summary{list-style:none;cursor:pointer;white-space:nowrap}
+.site-header .header-account summary::-webkit-details-marker{display:none}
+.site-header .header-account summary:focus-visible,
+.site-header .header-account button:focus-visible{outline:2px solid #f4d77b;outline-offset:2px}
+.site-header .header-account-panel{position:absolute;top:calc(100% + 6px);right:0;width:max-content;max-width:80vw;padding:8px;border:1px solid #655329;border-radius:5px;background:#15120d;color:#f4d77b}
+.site-header .header-account-panel button{min-height:40px;padding:6px 12px;border:1px solid #655329;border-radius:5px;background:#211c10;color:inherit;font:inherit;cursor:pointer}
+.site-header .header-account-panel p{margin:6px 0 0;font-size:12px}
