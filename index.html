@@ -460,9 +460,35 @@ footer {
  .site-header[data-preserve-header="ofuse"].ofuse-scrolled .brand-row{min-height:54px}
 }
 @media(max-width:380px){.ofuse-header-mobile{width:min(245px,80vw)}}
-</style></head>
+</style><style id="td-pwa-launch-style">
+#td-pwa-launch{position:fixed;inset:0;z-index:100000;background:#000;color:#fff;display:grid;place-items:center;opacity:1;visibility:visible;transition:opacity .35s ease,visibility .35s ease}
+#td-pwa-launch.done{opacity:0;visibility:hidden;pointer-events:none}
+#td-pwa-launch .content{text-align:center;width:min(90vw,560px);transform:translateY(-3vh)}
+#td-pwa-launch .word{font:700 clamp(40px,10vw,80px)/1.1 Georgia,"Times New Roman",serif;letter-spacing:.035em;white-space:nowrap}
+#td-pwa-launch .line{height:2px;width:94%;margin:22px auto 42px;background:linear-gradient(90deg,transparent,#b08b32 28%,#ffe2a0 50%,#b08b32 72%,transparent);box-shadow:0 0 12px #b58c39}
+#td-pwa-launch .ring{width:44px;height:44px;border:4px solid #474747;border-top-color:#fff;border-right-color:#eee;border-radius:50%;margin:0 auto 17px;animation:td-launch-spin 1s linear infinite}
+#td-pwa-launch .label{font:17px Georgia,"Times New Roman",serif;letter-spacing:.08em}
+@keyframes td-launch-spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){#td-pwa-launch .ring{animation:none}#td-pwa-launch{transition:none}}
+</style>
+</head>
 
-<body id="page-top"><a class="skip-link" href="#main-content">本文へ移動</a>
+<body id="page-top">
+<script>
+(function(){
+  var standalone=window.matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
+  if(!standalone)return;
+  var splash=document.createElement('div');
+  splash.id='td-pwa-launch';splash.setAttribute('role','status');splash.setAttribute('aria-label','Loading');
+  splash.innerHTML='<div class="content"><div class="word">TODOROKI</div><div class="line" aria-hidden="true"></div><div class="ring" aria-hidden="true"></div><div class="label">Loading...</div></div>';
+  document.body.insertBefore(splash,document.body.firstChild);
+  var ended=false;
+  function done(){if(ended)return;ended=true;splash.classList.add('done');setTimeout(function(){splash.remove()},400)}
+  if(document.readyState==='complete')requestAnimationFrame(done);
+  else window.addEventListener('load',done,{once:true});
+  setTimeout(done,3500);
+})();
+</script><a class="skip-link" href="#main-content">本文へ移動</a>
 
 <!-- ヘッダー -->
 
