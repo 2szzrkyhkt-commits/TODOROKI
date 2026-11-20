@@ -460,7 +460,10 @@ footer {
  .site-header[data-preserve-header="ofuse"].ofuse-scrolled .brand-row{min-height:54px}
 }
 @media(max-width:380px){.ofuse-header-mobile{width:min(245px,80vw)}}
-</style></head>
+</style><link rel="apple-touch-startup-image" href="/app/startup-iphone-1179x2556.png" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+<link rel="manifest" href="/app/manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+</head>
 
 <body id="page-top"><a class="skip-link" href="#main-content">本文へ移動</a>
 
@@ -785,12 +788,11 @@ footer {
     <div class="end-video">
 
       <video
-        autoplay
         muted
         loop
         playsinline
         webkit-playsinline
-        preload="auto">
+        preload="none">
 
         <source
           src="todoroki-hero-clean.mp4"
