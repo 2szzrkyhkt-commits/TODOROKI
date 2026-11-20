@@ -29,4 +29,8 @@ assert len(re.findall(r'<article>', html)) >= 7
 assert 'href="/boki1"' in html and 'href="/calculators/"' in html
 assert "'/api/auth/me'" in html and "cache:'no-store'" in html
 assert 'href="/login.html"' in html
+assert 'id="td-splash"' in html
+assert 'td-splash-title">TODOROKI' in html
+assert 'Loading...' in html and 'prefers-reduced-motion' in html
+assert 'setTimeout(finish,3500)' in html
 print('PWA static checks passed')
