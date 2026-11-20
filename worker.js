@@ -124,7 +124,16 @@ async function toolGate(request, env, path) {
     } else {
       return json({error:'Method not allowed'},405);
     }
-    if(path==='/api/tools/equity'&&new URL(request.url).searchParams.get('flow')==='v2')return equityV2.start(request,env);
+    if(path==='/api/tools/equity'){
+      const flow=new URL(request.url).searchParams.get('flow');
+      if(flow==='v2')return equityV2.start(request,env);
+      // This selects a proof protocol after the existing admission checks; it grants no access.
+      if(flow==='auto'&&/\b(?:iPhone|Android)\b/i.test(request.headers.get('User-Agent')||'')){
+        const mobile=await equityV2.start(request,env);
+        // Only a source-stage failure before a proof is returned may preserve the legacy route.
+        if(![429,503].includes(mobile.status))return mobile;
+      }
+    }
     const fp=await toolFingerprint(env.AUTH_SECRET,request.headers.get('User-Agent')||'');
     const token=await toolToken(env.AUTH_SECRET,{aud:tool.aud,kind:'entry',iat:now(),exp:now()+60,fp,nonce:crypto.randomUUID()});
     return new Response(null,{status:303,headers:{Location:tool.url+'/enter?t='+token,'Cache-Control':'no-store','Referrer-Policy':'no-referrer','X-Robots-Tag':'noindex, nofollow'}});
