@@ -9,6 +9,10 @@ on:
       - 'login.html'
       - 'assets/header-account.js'
       - 'assets/pwa-install.js'
+      - 'assets/equity-web-entry.js'
+      - 'worker.js'
+      - 'tools/quality/tool-entry-v2.test.mjs'
+      - 'tools/quality/equity-web-entry.test.mjs'
       - 'tools/quality/unified-home*.mjs'
       - 'scripts/check-pwa.py'
       - '.github/workflows/pwa-check.yml'
@@ -31,6 +35,8 @@ jobs:
       - run: python3 scripts/check-login-redirect.py
       - run: node --test tools/quality/unified-home.test.mjs
       - run: node tools/quality/tool-entry.test.mjs
+      - run: node tools/quality/tool-entry-v2.test.mjs
+      - run: node --test tools/quality/equity-web-entry.test.mjs
       - name: Chromium desktop and mobile viewport regressions
         run: |
           npm install --no-save --package-lock=false playwright@1.56.1

@@ -56,7 +56,8 @@ try{
    ]));
    assert.equal(swScope,origin+'/');
    assert.equal(await p.locator('link[rel="canonical"]').getAttribute('href'),'https://todoroki-gold.com/');
-   for(const tool of ['/api/tools/jp','/api/tools/us','/api/tools/equity','/us-equity']){
+   const equity=opts.isMobile?'/api/tools/equity?flow=auto':'/api/tools/equity';
+   for(const tool of ['/api/tools/jp','/api/tools/us',equity,'/us-equity']){
     const a=p.locator('#company-analysis a[href="'+tool+'"]');
     assert.equal(await a.count(),1,tool+' original normal entry');
    }
@@ -80,8 +81,12 @@ try{
    await login.waitFor({state:'visible'});
    assert.equal(await state.isVisible(),false);
    assert.equal(new URL(p.url()).pathname,'/');
+   await Promise.all([
+     p.waitForURL(origin+equity),
+     p.locator('#company-analysis a[href="'+equity+'"]').click(),
+   ]);
    assert.deepEqual(errors,[],profile+' page script errors');
-   console.log(profile+': fixture legacy launch, same home, layout'+(opts.isMobile?' and rotated viewport':'')+', state restoration, legacy login return, logout, and unchanged links passed');
+   console.log(profile+': fixture legacy launch, same home, layout'+(opts.isMobile?' and rotated viewport':'')+', state restoration, legacy login return, logout, and one-click tool destination passed');
   }finally{await context.close();}
  }
 }finally{if(browser)await browser.close();await new Promise(r=>server.close(r));}
