@@ -28,6 +28,9 @@ on:
       - 'assets/behavioral-study.js'
       - 'tools/quality/behavioral-study-browser.mjs'
       - 'behavioral-economics.html'
+      - 'boki1.html'
+      - 'financial-statements-basics.html'
+      - 'tools/quality/boki-study-anchor-browser.mjs'
       - 'scripts/check-pwa.py'
       - '.github/workflows/pwa-check.yml'
   workflow_dispatch:
@@ -60,10 +63,12 @@ jobs:
           node tools/quality/behavioral-part-one-browser.mjs
           node tools/quality/behavioral-part-three-browser.mjs
           node tools/quality/behavioral-study-browser.mjs
+          node tools/quality/boki-study-anchor-browser.mjs
       - run: node tools/quality/behavioral-part-three-events.test.mjs
-      - name: WebKit economy card navigation regression
+      - name: WebKit economy card and bookkeeping navigation regressions
         run: |
           npx playwright install --with-deps webkit
           node tools/quality/economy-mobile-launch.browser.mjs
+          PLAYWRIGHT_ENGINE=webkit node tools/quality/boki-study-anchor-browser.mjs
       - name: Check article support link in Chromium
         run: node tools/quality/ofuse-article-pilot-browser.mjs
