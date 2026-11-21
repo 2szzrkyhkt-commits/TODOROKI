@@ -35,7 +35,7 @@ try {
     const cards = roadmap.locator('.part-one-card');
     assert.equal(await cards.count(),6);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width);
-    const columns = await roadmap.locator('ol').evaluate(e=>getComputedStyle(e).gridTemplateColumns.split(' ').length);
+    const columns = await roadmap.locator('.part-one-cards').evaluate(e=>getComputedStyle(e).gridTemplateColumns.split(' ').length);
     assert.equal(columns,width<681?1:2);
     const link = cards.first().getByRole('link',{name:/期待効用理論のPDF/});
     assert.ok((await link.boundingBox()).height>=44);
