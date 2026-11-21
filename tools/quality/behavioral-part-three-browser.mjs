@@ -76,6 +76,26 @@ try {
     await page.getByRole('link',{name:'日本企業分析ツールで財務を確認する'}).click();
     await page.waitForURL('**/#equity-research-tool');
     assert.equal(await page.locator('#equity-research-tool').count(),1);
+    const guide=page.locator('#analysis-reading-guide');
+    assert.equal(await guide.locator('ol').isVisible(),false);
+    await guide.locator('summary').press('Enter');
+    assert.equal(await guide.locator('li').count(),3);
+    assert.equal(await guide.locator('ol').isVisible(),true);
+    await guide.getByRole('link',{name:/参照点と判断の偏り/}).click();
+    await page.waitForURL('**/behavioral-economics#part-three-chapter-12');
+    await page.goto(origin + '/toto-5332-earnings-valuation-2026');
+    const lens=page.locator('.valuation-lens');
+    assert.ok(await lens.getByRole('heading',{name:/上向き/}).isVisible());
+    assert.ok(await lens.getByRole('heading',{name:/下向き/}).isVisible());
+    const conditions=lens.locator('.valuation-conditions');
+    assert.equal(await conditions.evaluate(e => getComputedStyle(e).gridTemplateColumns.split(' ').length),width<561?1:2);
+    const model=lens.locator('details');
+    assert.equal(await model.locator('dl').isVisible(),false);
+    await model.locator('summary').press('Enter');
+    assert.equal(await model.locator('dl').isVisible(),true);
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width);
+    await model.getByRole('link',{name:/参照点と損失回避/}).click();
+    await page.waitForURL('**/behavioral-economics#part-three-chapter-12');
     await context.close();
     console.log(`behavioral part 3: ${width}px (JS ${javascript?'on':'off'}) each navigation, keyboard disclosures, glossary, PDF library passed`);
   }
