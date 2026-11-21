@@ -8,6 +8,7 @@ const root=fileURLToPath(new URL('../../',import.meta.url));
 const aliases=new Set(['/app','/app/','/app/index.html','/app/index']);
 const ct={'.html':'text/html; charset=utf-8','.js':'application/javascript','.css':'text/css','.png':'image/png','.svg':'image/svg+xml','.webmanifest':'application/manifest+json','.mp4':'video/mp4','.ico':'image/x-icon','.webp':'image/webp'};
 const economyRequests=[];
+const earningsLinks=['/toto-5332-earnings-valuation-2026','/smc-6273-earnings-valuation-2026','/taiheiyo-cement-5233-valuation-2026-nov'];
 const server=createServer(async(req,res)=>{
  const p=new URL(req.url,'http://localhost').pathname;
  // Fixture only: production independently verifies exact Cloudflare alias and worker headers.
@@ -32,7 +33,7 @@ const server=createServer(async(req,res)=>{
  }
  try{
   const clean=decodeURIComponent(p);
-  const file=resolve(root,'.'+(clean==='/'?'/index.html':clean==='/login'?'/login.html':clean));
+  const file=resolve(root,'.'+(clean==='/'?'/index.html':clean==='/login'?'/login.html':earningsLinks.includes(clean)?clean+'.html':clean));
   if(!file.startsWith(root.endsWith(sep)?root:root+sep)){res.writeHead(404);res.end();return;}
   if(p==='/app/sw.js')res.setHeader('Service-Worker-Allowed','/');
   res.setHeader('Content-Type',ct[extname(file)]??'application/octet-stream');
@@ -43,8 +44,8 @@ await new Promise(r=>server.listen(0,'127.0.0.1',r));
 const origin='http://127.0.0.1:'+server.address().port;
 let browser;
 try{
- browser=await chromium.launch();
- for(const [profile,opts] of [['Desktop Chrome',devices['Desktop Chrome']],['Virtual iPhone',devices['iPhone 13']],['Virtual Android',devices['Pixel 7']]]){
+ browser=await chromium.launch(process.env.CHROMIUM_EXECUTABLE?{executablePath:process.env.CHROMIUM_EXECUTABLE}:{});
+ for(const [profile,opts] of [['Desktop Chrome',devices['Desktop Chrome']],['Virtual iPhone',devices['iPhone 13']],['Virtual compact iPhone',{...devices['iPhone 13'],viewport:{width:375,height:667}}],['Virtual Android',devices['Pixel 7']]]){
   const context=await browser.newContext(opts);
   try{
    await context.route(u=>u.origin!==origin,r=>r.fulfill({status:204,body:''}));
@@ -68,6 +69,38 @@ try{
     const a=p.locator('#company-analysis a[href="'+tool+'"]');
     assert.equal(await a.count(),1,tool+' original normal entry');
    }
+   const stock=p.getByRole('link',{name:'銘柄を調べる',exact:true});
+   const earnings=p.getByRole('link',{name:'最新の決算分析を読む',exact:true});
+   const hero=p.locator('.hero');
+   assert.equal(await hero.locator('.hero-actions a').count(),2);
+   await p.evaluate(()=>window.scrollTo(0,0));
+   for(const cta of [stock,earnings]){
+    const rect=await cta.boundingBox();
+    const viewport=p.viewportSize();
+    assert.ok(rect&&rect.width>100&&rect.height>=44&&rect.y>=0&&rect.y+rect.height<=viewport.height&&rect.x>=0&&rect.x+rect.width<=viewport.width,profile+' fully visible hero CTA');
+    assert.ok(await cta.evaluate(a=>a.scrollWidth<=a.clientWidth),profile+' CTA text untruncated');
+   }
+   const latest=p.locator('.hero + #latest-earnings');
+   assert.deepEqual(await latest.locator('.earnings-picks-list a').evaluateAll(ls=>ls.map(l=>l.getAttribute('href'))),earningsLinks);
+   assert.equal(await latest.locator('time').count(),3);
+   assert.equal(await p.locator('#latest-earnings + #latest-articles + #articles').count(),1);
+   assert.equal(await p.locator('#news-ticker').count(),1);
+   await Promise.all([p.waitForURL(origin+'/#latest-earnings'),earnings.click()]);
+   await p.waitForFunction(()=>document.querySelector('#latest-earnings').getBoundingClientRect().top>=document.querySelector('.site-header').getBoundingClientRect().bottom-1&&document.querySelector('#latest-earnings').getBoundingClientRect().top<250);
+   if(!opts.isMobile){
+    for(const href of earningsLinks)assert.equal((await p.request.get(origin+href)).status(),200);
+    const link=latest.locator('.earnings-picks-list a').first();
+    await Promise.all([p.waitForURL(origin+earningsLinks[0]),link.click()]);
+    await p.goBack({waitUntil:'domcontentloaded'});
+    assert.equal(p.url(),origin+'/#latest-earnings');
+   }
+   await p.goto(origin+'/',{waitUntil:'domcontentloaded'});
+   await Promise.all([p.waitForURL(origin+'/#equity-research-tool'),stock.press('Enter')]);
+   const targeted=p.locator('#equity-research-tool');
+   assert.equal(await targeted.getAttribute('href'),equity);
+   assert.equal(await targeted.getAttribute('referrerpolicy'),'origin');
+   await p.waitForFunction(()=>{const p=document.querySelector('#equity-research-tool').getBoundingClientRect();return p.top>=document.querySelector('.site-header').getBoundingClientRect().bottom-1&&p.top<250;});
+   await p.goto(origin+'/',{waitUntil:'domcontentloaded'});
    const width=()=>p.evaluate(()=>({w:innerWidth,doc:document.documentElement.scrollWidth}));
    let bounds=await width();assert.ok(bounds.doc<=bounds.w+2,profile+' portrait overflow '+JSON.stringify(bounds));
    if(opts.isMobile){
@@ -112,7 +145,15 @@ try{
      p.locator('#company-analysis a[href="'+equity+'"]').click(),
    ]);
    assert.deepEqual(errors,[],profile+' page script errors');
-   console.log(profile+': fixture legacy launch, same home, layout'+(opts.isMobile?' and rotated viewport':'')+', state restoration, legacy login return, logout, and one-click tool destination passed');
+   console.log(profile+': fixture legacy launch, same home, layout'+(opts.isMobile?' and rotated viewport':'')+', hero CTAs, featured links, state restoration, legacy login return, logout, and one-click tool destination passed');
   }finally{await context.close();}
  }
+ const noJS=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});
+ try{
+  await noJS.route(u=>u.origin!==origin,r=>r.abort());
+  const p=await noJS.newPage();await p.goto(origin,{waitUntil:'domcontentloaded'});
+  assert.deepEqual(await p.locator('#latest-earnings .earnings-picks-list a').evaluateAll(ls=>ls.map(l=>l.getAttribute('href'))),earningsLinks);
+  assert.equal(await p.locator('.hero-actions a').count(),2);
+  console.log('No-JavaScript 390px: two native CTAs and three static featured article links');
+ }finally{await noJS.close();}
 }finally{if(browser)await browser.close();await new Promise(r=>server.close(r));}
