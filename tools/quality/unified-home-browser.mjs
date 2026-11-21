@@ -104,6 +104,22 @@ try{
     await p.goBack({waitUntil:'domcontentloaded'});
     assert.equal(p.url(),origin+'/#latest-earnings');
    }
+   if(profile==='Desktop Chrome'||profile==='Virtual compact iPhone'){
+    for(const [path,code] of [[earningsLinks[0],'5332'],[earningsLinks[1],'6273']]){
+     assert.equal((await p.goto(origin+path,{waitUntil:'domcontentloaded'})).status(),200);
+     const link=p.getByRole('link',{name:'日本企業分析ツールへ →',exact:true});
+     assert.equal(await link.count(),1);
+     assert.equal(await link.getAttribute('href'),'/#equity-research-tool');
+     assert.equal(await link.getAttribute('data-article-tool-market'),'jp');
+     assert.equal(await p.evaluate(()=>typeof window.gtag),'undefined','default analytics remains off');
+     assert.ok((await p.locator('aside:has(a[href="/#equity-research-tool"])').innerText()).includes('銘柄コード「'+code+'」'));
+     await Promise.all([p.waitForURL(origin+'/#equity-research-tool'),link.click()]);
+     const existing=p.locator('#equity-research-tool');
+     assert.equal(await existing.getAttribute('href'),equity);
+     assert.equal(await existing.getAttribute('referrerpolicy'),'origin');
+     await p.waitForFunction(()=>{const card=document.querySelector('#equity-research-tool').getBoundingClientRect();return card.top>=document.querySelector('.site-header').getBoundingClientRect().bottom-1&&card.top<250;});
+    }
+   }
    await p.goto(origin+'/',{waitUntil:'domcontentloaded'});
    await Promise.all([p.waitForURL(origin+'/#equity-research-tool'),stock.press('Enter')]);
    const targeted=p.locator('#equity-research-tool');
@@ -155,7 +171,7 @@ try{
      p.locator('#company-analysis a[href="'+equity+'"]').click(),
    ]);
    assert.deepEqual(errors,[],profile+' page script errors');
-   console.log(profile+': fixture legacy launch, same home, layout'+(opts.isMobile?' and rotated viewport':'')+', hero CTAs, featured links, state restoration, legacy login return, logout, and one-click tool destination passed');
+   console.log(profile+': fixture article-to-company CTA / legacy launch, same home, layout'+(opts.isMobile?' and rotated viewport':'')+', hero CTAs, featured links, state restoration, legacy login return, logout, and one-click tool destination passed');
   }finally{await context.close();}
  }
  const noJS=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});
@@ -172,6 +188,30 @@ try{
   for(const href of earningsLinks)assert.equal(await archive.locator('a[href="'+href+'"]').isVisible(),true);
   console.log('No-JavaScript 390px: two native CTAs, disjoint article previews, full archive still opens');
  }finally{await noJS.close();}
+ const opted=await browser.newContext();
+ try{
+  await opted.route(u=>u.origin!==origin,r=>r.abort());
+  await opted.route(origin+'/api/privacy/region',r=>r.fulfill({json:{optionalAllowed:true}}));
+  await opted.addInitScript(()=>{
+   localStorage.setItem('todoroki_privacy_v1',JSON.stringify({version:1,time:Date.now(),analytics:true,ads:false}));
+  });
+  const p=await opted.newPage();
+  await p.goto(origin+earningsLinks[0],{waitUntil:'domcontentloaded'});
+  await p.waitForFunction(()=>typeof window.gtag==='function');
+  await p.evaluate(()=>{
+   const active=window.gtag;
+   window.gtag=function(...args){
+    if(args[0]==='event')sessionStorage.setItem('fixture-events',JSON.stringify([...JSON.parse(sessionStorage.getItem('fixture-events')||'[]'),args]));
+    active.apply(this,args);
+   };
+  });
+  const link=p.getByRole('link',{name:'日本企業分析ツールへ →',exact:true});
+  await link.evaluate(a=>{const e=new MouseEvent('click',{bubbles:true,cancelable:true});e.preventDefault();a.dispatchEvent(e);});
+  assert.equal(await p.evaluate(()=>sessionStorage.getItem('fixture-events')),null);
+  await Promise.all([p.waitForURL(origin+'/#equity-research-tool'),link.click()]);
+  assert.deepEqual(await p.evaluate(()=>JSON.parse(sessionStorage.getItem('fixture-events'))),[['event','article_tool_click',{market:'jp'}]]);
+  console.log('Article CTA: one fixed event only under existing permitted opt-in; no event for synthetic click; navigation unchanged');
+ }finally{await opted.close();}
  const next=await browser.newContext();
  try{
   await next.route(u=>u.origin!==origin,r=>r.abort());
