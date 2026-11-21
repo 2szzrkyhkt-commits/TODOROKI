@@ -3,6 +3,9 @@ on:
   pull_request:
     paths:
       - 'app/**'
+      - 'tools/quality/ofuse-article-pilot-browser.mjs'
+      - 'valuation-per-pbr.html'
+      - 'assets/article-ofuse.css'
       - '_headers'
       - '_redirects'
       - 'index.html'
@@ -59,3 +62,5 @@ jobs:
         run: |
           npx playwright install --with-deps webkit
           node tools/quality/economy-mobile-launch.browser.mjs
+      - name: Check article support link in Chromium
+        run: node tools/quality/ofuse-article-pilot-browser.mjs
