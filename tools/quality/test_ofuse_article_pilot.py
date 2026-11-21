@@ -1,4 +1,4 @@
-"""Contract for the single static OFUSE link on the valuation pilot article."""
+"""Contract for the opt-in, ordinary OFUSE link on the shared article component."""
 from html.parser import HTMLParser
 from pathlib import Path
 import re
@@ -6,6 +6,8 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[2]
 DESTINATION = "https://ofuse.me/todoroki_gold"
+FILES = ("valuation-per-pbr.html", "fundamental-analysis.html", "financial-statements-basics.html")
+
 
 class Links(HTMLParser):
     def __init__(self, html):
@@ -21,31 +23,42 @@ class Links(HTMLParser):
 class ArticleSupportPilot(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.article = (ROOT / "valuation-per-pbr.html").read_text()
+        cls.articles = {p: (ROOT / p).read_text() for p in FILES}
         cls.home = (ROOT / "index.html").read_text()
-        cls.block = re.search(r'<aside class="article-ofuse"[^>]*>(.*?)</aside>', cls.article, re.S)[1]
 
-    def test_one_native_optional_link_matches_home_destination(self):
-        [link] = Links(self.block).anchors
-        self.assertEqual(link, {
-            "class": "article-ofuse-link", "href": DESTINATION, "rel": "noreferrer",
-            "aria-describedby": "article-ofuse-intro article-ofuse-external",
-        })
-        self.assertEqual(sum(a.get("href") == DESTINATION for a in Links(self.article).anchors), 1)
+    def test_same_native_optional_link_matches_home_destination(self):
         self.assertTrue(any(a.get("href") == DESTINATION for a in Links(self.home).anchors))
-        self.assertNotRegex(self.block, r'<(?:form|input|script|img|iframe)\b|on(?:click|submit)=')
+        blocks = []
+        for path, article in self.articles.items():
+            with self.subTest(path=path):
+                [block] = re.findall(r'<aside class="article-ofuse"[^>]*>(.*?)</aside>', article, re.S)
+                blocks.append(block)
+                [link] = Links(block).anchors
+                self.assertEqual(link, {
+                    "class": "article-ofuse-link", "href": DESTINATION, "rel": "noreferrer",
+                    "aria-describedby": "article-ofuse-intro article-ofuse-external",
+                })
+                self.assertEqual(sum(a.get("href") == DESTINATION for a in Links(article).anchors), 1)
+                self.assertNotRegex(block, r'<(?:form|input|script|img|iframe)\b|on(?:click|submit)=')
+                for msg in ("とどろきを応援する", "記事やツールが役に立ったら、任意で応援できます。", "OFUSEが開きます"):
+                    self.assertIn(msg, block)
+        self.assertEqual(len(set(blocks)), 1, "all opted-in pages use exact same markup")
 
-    def test_exact_plain_language_and_separation(self):
-        for s in ("とどろきを応援する", "記事やツールが役に立ったら、任意で応援できます。", "OFUSEが開きます"):
-            self.assertIn(s, self.block)
-        for ref in ("article-ofuse-intro", "article-ofuse-external"):
-            self.assertEqual(self.article.count(f'id="{ref}"'), 1)
-        self.assertRegex(self.article, r'</aside>\s*<section class="related"><h2>関連記事</h2>')
-        before, after = self.article.split('<aside class="article-ofuse"', 1)
-        source = before.rsplit('<h2>定義と比較データの確認先</h2>', 1)[1]
-        self.assertNotIn('/pdf', source)
-        self.assertNotIn('広告', source)
-        self.assertGreater(after.find('aria-label="広告'), after.find('<h2>関連記事</h2>'))
+    def test_separation_from_pdf_and_advertisements(self):
+        for path, article in self.articles.items():
+            with self.subTest(path=path):
+                for ref in ("article-ofuse-intro", "article-ofuse-external"):
+                    self.assertEqual(article.count(f'id="{ref}"'), 1)
+                self.assertRegex(article, r'</aside>\s*<section class="related"><h2>関連記事</h2>')
+                before, after = article.split('<aside class="article-ofuse"', 1)
+                source = before.rsplit("<section", 1)[1]
+                self.assertRegex(source, r'<h2>[^<]+</h2>.*?</section>\s*$', "previous sibling is editorial content")
+                self.assertNotIn("/pdf", source)
+                self.assertNotIn("広告", source)
+                after_related = after.partition('<section class="related"><h2>関連記事</h2>')[2]
+                related, _, rest = after_related.partition("</section>")
+                self.assertNotIn("広告", related)
+                self.assertIn('aria-label="広告', rest)
 
     def test_readable_on_narrow_screens_without_changing_other_pages(self):
         css = (ROOT / "assets/article-ofuse.css").read_text()
@@ -54,9 +67,12 @@ class ArticleSupportPilot(unittest.TestCase):
         self.assertIn(":focus-visible", css)
         self.assertNotRegex(css, r"position:\s*(?:fixed|sticky)|@import|url\(")
         self.assertNotIn("article-ofuse.css", self.home)
-        self.assertIn('href="/assets/article-ofuse.css"', self.article)
+        for path, article in self.articles.items():
+            with self.subTest(path=path):
+                self.assertEqual(article.count('href="/assets/article-ofuse.css"'), 1)
         for p in ("toto-5332-earnings-valuation-2026.html", "smc-6273-earnings-valuation-2026.html"):
             self.assertNotIn("article-ofuse.css", (ROOT / p).read_text())
+
 
 if __name__ == "__main__":
     unittest.main()
