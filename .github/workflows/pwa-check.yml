@@ -18,6 +18,8 @@ on:
       - 'tools/quality/economy-mobile-launch.test.mjs'
       - 'tools/quality/economy-mobile-launch.browser.mjs'
       - 'tools/quality/unified-home*.mjs'
+      - 'tools/quality/behavioral-part-one-browser.mjs'
+      - 'behavioral-economics.html'
       - 'scripts/check-pwa.py'
       - '.github/workflows/pwa-check.yml'
   workflow_dispatch:
@@ -47,6 +49,7 @@ jobs:
           npm install --no-save --package-lock=false playwright@1.56.1
           npx playwright install --with-deps chromium
           node tools/quality/unified-home-browser.mjs
+          node tools/quality/behavioral-part-one-browser.mjs
       - name: WebKit economy card navigation regression
         run: |
           npx playwright install --with-deps webkit
