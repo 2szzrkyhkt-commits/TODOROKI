@@ -83,6 +83,16 @@ try{
    const latest=p.locator('.hero + #latest-earnings');
    assert.deepEqual(await latest.locator('.earnings-picks-list a').evaluateAll(ls=>ls.map(l=>l.getAttribute('href'))),earningsLinks);
    assert.equal(await latest.locator('time').count(),3);
+   const lower=p.locator('#latest-article-shortlist > a');
+   const lowerLinks=await lower.evaluateAll(ls=>ls.map(l=>l.getAttribute('href')));
+   assert.equal(lowerLinks.length,6);
+   assert.equal(new Set([...earningsLinks,...lowerLinks]).size,9,'visible picks are distinct across sections');
+   const archive=p.locator('#latest-articles details');
+   assert.equal(await archive.getAttribute('open'),null);
+   for(const href of earningsLinks)assert.equal(await archive.locator('#home-article-catalog a[href="'+href+'"]').count(),1);
+   assert.equal(await p.locator('#latest-articles a[href="/site-map"]').count(),1);
+   assert.ok(await p.locator('#news-ticker a[href="'+earningsLinks[0]+'"]').count()>0,'featured article remains in ticker');
+
    assert.equal(await p.locator('#latest-earnings + #latest-articles + #articles').count(),1);
    assert.equal(await p.locator('#news-ticker').count(),1);
    await Promise.all([p.waitForURL(origin+'/#latest-earnings'),earnings.click()]);
@@ -154,6 +164,33 @@ try{
   const p=await noJS.newPage();await p.goto(origin,{waitUntil:'domcontentloaded'});
   assert.deepEqual(await p.locator('#latest-earnings .earnings-picks-list a').evaluateAll(ls=>ls.map(l=>l.getAttribute('href'))),earningsLinks);
   assert.equal(await p.locator('.hero-actions a').count(),2);
-  console.log('No-JavaScript 390px: two native CTAs and three static featured article links');
+  const lower=await p.locator('#latest-article-shortlist > a').evaluateAll(ls=>ls.map(l=>l.getAttribute('href')));
+  assert.equal(lower.length,6);
+  assert.equal(new Set([...earningsLinks,...lower]).size,9);
+  const archive=p.locator('#latest-articles details');
+  await archive.getByText('記事一覧へ',{exact:true}).click();
+  for(const href of earningsLinks)assert.equal(await archive.locator('a[href="'+href+'"]').isVisible(),true);
+  console.log('No-JavaScript 390px: two native CTAs, disjoint article previews, full archive still opens');
  }finally{await noJS.close();}
+ const next=await browser.newContext();
+ try{
+  await next.route(u=>u.origin!==origin,r=>r.abort());
+  const p=await next.newPage();await p.clock.setFixedTime(new Date('2026-11-21T00:00:00Z'));
+  await p.route(u=>u.href===origin+'/?publish-fixture',async r=>{
+   const upstream=await r.fetch(),source=await upstream.text();
+   // A genuine editorial earnings card gets a later publication date in this synthetic fixture.
+   const pattern=/(href="\/advantest-6857-earnings-analysis-2026" class="card-link" data-earnings-analysis>.*?<time datetime=")2026-11-12(">)[^<]+/s;
+   assert.match(source,pattern);
+   await r.fulfill({response:upstream,body:source.replace(pattern,(_,before,after)=>before+'2026-11-21'+after+'2026.11.21')});
+  });
+  await p.goto(origin+'/?publish-fixture',{waitUntil:'domcontentloaded'});
+  const hrefs=selector=>p.locator(selector).evaluateAll(ls=>ls.map(l=>l.getAttribute('href')));
+  const upper=await hrefs('#latest-earnings .earnings-picks-list a'), lower=await hrefs('#latest-article-shortlist > a');
+  assert.deepEqual(upper,['/advantest-6857-earnings-analysis-2026',earningsLinks[0],earningsLinks[1]]);
+  assert.equal(lower.length,6);
+  assert.equal(new Set([...upper,...lower]).size,9);
+  assert.ok(lower.includes(earningsLinks[2]),'displaced featured article is eligible for the lower preview again');
+  assert.deepEqual(await p.locator('#latest-article-shortlist .selection-label').allTextContents(),['新着','新着','新着','よく読まれた記事','よく読まれた記事','よく読まれた記事']);
+  console.log('Synthetic newly published earnings moves into upper three; only actual upper links excluded from lower six');
+ }finally{await next.close();}
 }finally{if(browser)await browser.close();await new Promise(r=>server.close(r));}

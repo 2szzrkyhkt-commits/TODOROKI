@@ -7,10 +7,10 @@ import {chromium} from 'playwright';
 const root=process.cwd(),html=await fs.readFile(process.env.HOME_TEST_SOURCE||'index.html','utf8');
 const server=createServer(async(req,res)=>{const p=new URL(req.url,'http://localhost').pathname;if(p==='/api/privacy/region'){res.setHeader('Content-Type','application/json');return res.end('{"optionalAllowed":false}');}if(p==='/'){res.setHeader('Content-Type','text/html');return res.end(html);}if(!p.startsWith('/assets/')||!path.resolve(root,'.'+p).startsWith(root+path.sep)){res.statusCode=404;return res.end();}try{res.setHeader('Content-Type',p.endsWith('.svg')?'image/svg+xml':p.endsWith('.js')?'application/javascript':p.endsWith('.css')?'text/css':'application/octet-stream');res.end(await fs.readFile('.'+p));}catch{res.statusCode=404;res.end();}});
 await new Promise(r=>server.listen(0,'127.0.0.1',r));const origin=`http://127.0.0.1:${server.address().port}`,browser=await chromium.launch(),evidence=[];
-try{for(const width of [390,1440]){const context=await browser.newContext({viewport:{width,height:900}});await context.route('**/*',r=>r.request().url().startsWith(origin)?r.continue():r.abort());const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto(origin);
-const cards=page.locator('#latest-articles .card-link:visible');assert.equal(await cards.count(),6);
+try{for(const width of [390,1440]){const context=await browser.newContext({viewport:{width,height:900}});await context.route('**/*',r=>r.request().url().startsWith(origin)?r.continue():r.abort());const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));await page.clock.setFixedTime(new Date('2026-11-21T02:00:00Z'));await page.goto(origin);
+const cards=page.locator('#latest-article-shortlist > .card-link:visible');assert.equal(await cards.count(),6);
 assert.deepEqual(await cards.locator('.selection-label').allTextContents(),['新着','新着','新着','よく読まれた記事','よく読まれた記事','よく読まれた記事']);
-const hrefs=await cards.evaluateAll(es=>es.map(e=>e.getAttribute('href')));assert.equal(new Set(hrefs).size,6);assert.deepEqual(hrefs.slice(3),['/kioxia-earnings-analysis-2026','/advantest-6857-earnings-analysis-2026','/kokusai-electric-6525-earnings-2026']);
+const hrefs=await cards.evaluateAll(es=>es.map(e=>e.getAttribute('href')));assert.equal(new Set(hrefs).size,6);assert.deepEqual(hrefs.slice(3),['/kioxia-earnings-analysis-2026','/kokusai-electric-6525-earnings-2026','/open-house-group-3288-earnings-2026']);
 assert.equal(await page.locator('#latest-articles-title').innerText(),'ARTICLES｜新着・よく読まれた記事');
 assert.equal(await page.locator('#latest-articles-title + .rule + .cards').count(),1);
 
