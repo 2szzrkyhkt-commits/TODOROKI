@@ -43,11 +43,11 @@ class BehavioralPartThree(unittest.TestCase):
         self.assertFalse([key for key, ct in Counter(page.ids).items() if ct > 1])
         self.assertEqual(list(self.cards),list(NAMES))
         nav = Page(re.search(r'<nav id="behavior-study-roadmap".*?</nav>',self.study,re.S)[0])
-        self.assertEqual([a['href'] for a in nav.links],['#part-one-roadmap','#part-two-roadmap','#part-three-roadmap'])
+        self.assertEqual([a['href'] for a in nav.links],['#part-one-roadmap','#part-two-roadmap','#part-three-roadmap','#part-four-roadmap'])
         review = re.search(r'<section id="part-two-roadmap".*?</section>',self.study,re.S)[0]
         self.assertIn('既存の教材',review)
-        self.assertNotIn('完了',review)
-        self.assertEqual([a['href'] for a in Page(review).links],
+        self.assertEqual(len(re.findall(r'data-study-chapter="(?:6|7|8|9|10)"',review)),5)
+        self.assertEqual([a['href'] for a in Page(review[review.index('既存の教材'):]).links],
                          ['#biases','#bayesian-reasoning','#ambiguity','#investing','#part-three-roadmap'])
         for h in page.links:
             if h.get('href','').startswith('#'):
@@ -73,7 +73,7 @@ class BehavioralPartThree(unittest.TestCase):
                 self.assertEqual(len(parsed.details),5)
                 self.assertTrue(all('open' not in row for row in parsed.details))
                 self.assertRegex(card,r'<summary data-be-action="quiz">確認問題</summary><p>[^<]+</p>\s*<details')
-                self.assertRegex(card,r'<summary>解答を見る</summary><p>[^<]+</p></details></details>')
+                self.assertRegex(card,r'<summary>解答を見る</summary><p>[^<]+</p></details><form data-study-quiz')
                 for section in ['理論・図解・事例','図解｜考える順序','日常での例','経済での例','マーケティングと情報設計','学術資料・参照先']:
                     self.assertIn(section,card)
                 links=[h['href'] for h in parsed.links]
@@ -87,8 +87,7 @@ class BehavioralPartThree(unittest.TestCase):
                     entry = re.search(r'<article class="entry" id="'+term+r'".*?</article>',self.glossary,re.S)[0]
                     self.assertIn(f'/behavioral-economics#part-three-chapter-{n}',entry)
                 nav=Page(re.search(r'<nav class="part-one-actions part-three-sequence".*?</nav>',card,re.S)[0])
-                self.assertEqual([a['href'] for a in nav.links],[f'#part-three-chapter-{n-1}' if n>11 else '#part-two-roadmap',
-                                                                     f'#part-three-chapter-{n+1}' if n<16 else '#behavior-study-roadmap'])
+                self.assertEqual([a['href'] for a in nav.links],[f'#chapter-{n-1}', f'#chapter-{n+1}'])
 
     def test_pdf_viewer_raw_assets_library_and_sitemap_agree(self):
         for n,title in NAMES.items():

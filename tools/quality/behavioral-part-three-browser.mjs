@@ -55,8 +55,8 @@ try {
     await first.locator('summary').filter({hasText:/^理論・図解・事例$/}).press('Enter');
     assert.equal(await first.getByRole('heading',{name:'図解｜考える順序'}).isVisible(),true);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width);
-    await first.getByRole('link',{name:/12｜プロスペクト理論/}).click();
-    await page.waitForURL('**/behavioral-economics#part-three-chapter-12');
+    await first.getByRole('link',{name:'第12章へ →'}).click();
+    await page.waitForURL('**/behavioral-economics#chapter-12');
     const second=cards.nth(1);
     await second.locator('summary').filter({hasText:/^用語を確認する$/}).press('Enter');
     await second.getByRole('link',{name:'プロスペクト理論',exact:true}).click();
