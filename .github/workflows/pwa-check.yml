@@ -25,6 +25,8 @@ on:
       - 'tools/quality/behavioral-part-three-browser.mjs'
       - 'tools/quality/behavioral-part-three-events.test.mjs'
       - 'assets/behavioral-part-three-events.js'
+      - 'assets/behavioral-study.js'
+      - 'tools/quality/behavioral-study-browser.mjs'
       - 'behavioral-economics.html'
       - 'scripts/check-pwa.py'
       - '.github/workflows/pwa-check.yml'
@@ -57,6 +59,7 @@ jobs:
           node tools/quality/unified-home-browser.mjs
           node tools/quality/behavioral-part-one-browser.mjs
           node tools/quality/behavioral-part-three-browser.mjs
+          node tools/quality/behavioral-study-browser.mjs
       - run: node tools/quality/behavioral-part-three-events.test.mjs
       - name: WebKit economy card navigation regression
         run: |

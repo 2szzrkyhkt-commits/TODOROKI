@@ -73,7 +73,7 @@ class TestValuationReadingLens(unittest.TestCase):
         self.assertIn('同じ決算期と単位',guide)
         self.assertIn('未確認はゼロと読み替えません',guide)
         self.assertIn('出典と更新日',guide)
-        self.assertEqual(Links(guide).items,[{"href": "/behavioral-economics#part-three-chapter-12"}])
+        self.assertEqual(Links(guide).items,[{"href": "/behavioral-economics#part-three-chapter-12"}, {"href": "/behavioral-economics#chapter-19"}])
         for route in ('equity','jp','us'):
             self.assertEqual(len([a for a in Links(home).items if a.get('href')==f'/api/tools/{route}']),1)
 

@@ -32,10 +32,10 @@ try {
     const page = await context.newPage();
     await page.goto(origin + '/behavioral-economics');
     const roadmap = page.locator('#part-one-roadmap');
-    const cards = roadmap.locator('.part-one-card');
+    const cards = roadmap.locator('[id^=part-one-pdf-]');
     assert.equal(await cards.count(),6);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width);
-    const columns = await roadmap.locator('.part-one-cards').evaluate(e=>getComputedStyle(e).gridTemplateColumns.split(' ').length);
+    const columns = await roadmap.locator('.part-one-cards').filter({has:page.locator('#part-one-pdf-01')}).evaluate(e=>getComputedStyle(e).gridTemplateColumns.split(' ').length);
     assert.equal(columns,width<681?1:2);
     const link = cards.first().getByRole('link',{name:/期待効用理論のPDF/});
     assert.ok((await link.boundingBox()).height>=44);
