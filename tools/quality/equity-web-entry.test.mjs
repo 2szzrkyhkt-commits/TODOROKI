@@ -43,7 +43,7 @@ test('installed, desktop and unknown clients keep native card hrefs (server inde
 });
 test('no-script HTML retains the original equity and two economy links and tab behavior', () => {
   assert.ok(html.includes('<script src="/assets/equity-web-entry.js" defer></script>'));
-  assert.match(html, /href="\/api\/tools\/equity" class="card-link" referrerpolicy="origin">/);
+  assert.match(html, /href="\/api\/tools\/equity" class="card-link" referrerpolicy="origin" id="equity-research-tool">/);
   for(const slug of ['jp','us']){
     assert.ok(html.includes(`href="/api/tools/${slug}" class="card-link" referrerpolicy="origin" target="_blank" rel="noopener"`));
   }
