@@ -1,0 +1,16 @@
+name: TODOROKI public source policy
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  public-source-policy:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - run: python3 tools/quality/test_no_jpx_public_sources.py

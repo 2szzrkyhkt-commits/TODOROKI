@@ -527,14 +527,12 @@
     },
     {
       "file": "/pdf/TOPIX_new_members_35_TOP10_black_gold.pdf",
-      "title": "TOPIX入替の読み方",
+      "title": "株価指数の入替の読み方",
       "lang": "ja",
-      "textCharacters": 577,
-      "sourceUrls": [
-        "https://www.jpx.co.jp/news/6030/20261007-01.html"
-      ],
-      "status": "2026年10月29日改訂。公式発表リンクを追加し、再利用条件未確認の第三者試算表・金額ランキングを削除。",
-      "sha256": "10206a71690dd88dadb0f61899c81161af141026619e65e5f84668893d2f0c0b"
+      "textCharacters": 434,
+      "sourceUrls": [],
+      "status": "2026年11月22日改訂。実在の指数の銘柄・日程・価格を掲載せず、TODOROKIが作成した架空例に変更。",
+      "sha256": "e59fe79a8714280c26978f69647cba0e09b7062baac6475e903b30b06b5c030e"
     },
     {
       "file": "/pdf/robot_hand_technology.pdf",
@@ -1219,14 +1217,12 @@
     },
     {
       "file": "/pdf/en/topix-new-members.pdf",
-      "title": "Reading TOPIX changes",
+      "title": "How index rebalancing works",
       "lang": "en",
-      "textCharacters": 1219,
-      "sourceUrls": [
-        "https://www.jpx.co.jp/news/6030/20261007-01.html"
-      ],
-      "status": "2026年10月29日改訂。公式発表リンクを追加し、再利用条件未確認の第三者試算表・金額ランキングを削除。",
-      "sha256": "3caad4b6b0d1d9438f4bc956ee4913bf9ee938bd04911d2e50fa7752256da9d3"
+      "textCharacters": 1054,
+      "sourceUrls": [],
+      "status": "2026年11月22日改訂。実在の指数の銘柄・日程・価格を掲載せず、TODOROKIが作成した架空例に変更。",
+      "sha256": "054e684a43672e038fc448ebcbaceb3821e2a30cf32058f259c7cd7b8e659b10"
     },
     {
       "file": "/pdf/en/crowd-psychology.pdf",
@@ -1765,14 +1761,12 @@
     },
     {
       "file": "/pdf/zh-Hans/topix-new-members.pdf",
-      "title": "如何理解TOPIX成分股调整",
+      "title": "如何理解股票指数调仓",
       "lang": "zh-Hans",
-      "textCharacters": 477,
-      "sourceUrls": [
-        "https://www.jpx.co.jp/news/6030/20261007-01.html"
-      ],
-      "status": "2026年10月29日改訂。公式発表リンクを追加し、再利用条件未確認の第三者試算表・金額ランキングを削除。",
-      "sha256": "6b34198e61f0ae146c3b14885cfa5c5a5ead61766729a5756d3d670551dab82f"
+      "textCharacters": 353,
+      "sourceUrls": [],
+      "status": "2026年11月22日改訂。実在の指数の銘柄・日程・価格を掲載せず、TODOROKIが作成した架空例に変更。",
+      "sha256": "4ed3ce8da3d6da5532b944904dc2483b7bbcc4db4f747b3fd62f4e2c9ae39d5a"
     },
     {
       "file": "/pdf/zh-Hans/crowd-psychology.pdf",
@@ -2311,14 +2305,12 @@
     },
     {
       "file": "/pdf/es/topix-new-members.pdf",
-      "title": "Cómo leer los cambios del TOPIX",
+      "title": "Cómo funciona el reajuste de un índice",
       "lang": "es",
-      "textCharacters": 1086,
-      "sourceUrls": [
-        "https://www.jpx.co.jp/news/6030/20261007-01.html"
-      ],
-      "status": "2026年10月29日改訂。公式発表リンクを追加し、再利用条件未確認の第三者試算表・金額ランキングを削除。",
-      "sha256": "e94a9a583a033370c17374fdb1630b874ae3fd08020b984641fb431b92ebe751"
+      "textCharacters": 1074,
+      "sourceUrls": [],
+      "status": "2026年11月22日改訂。実在の指数の銘柄・日程・価格を掲載せず、TODOROKIが作成した架空例に変更。",
+      "sha256": "5577b92e543e7fc1af1896f4f0c275f4ed06908aec764c4f53728a5df386556e"
     },
     {
       "file": "/pdf/es/crowd-psychology.pdf",
@@ -2857,14 +2849,12 @@
     },
     {
       "file": "/pdf/zh-Hant/topix-new-members.pdf",
-      "title": "如何理解TOPIX成分股調整",
+      "title": "如何理解股票指數調整",
       "lang": "zh-Hant",
-      "textCharacters": 477,
-      "sourceUrls": [
-        "https://www.jpx.co.jp/news/6030/20261007-01.html"
-      ],
-      "status": "2026年10月29日改訂。公式発表リンクを追加し、再利用条件未確認の第三者試算表・金額ランキングを削除。",
-      "sha256": "359fa51250baeaaf1c353e4eb907f1c01bd0830a6ef0b6557f81cc76f5ebb49d"
+      "textCharacters": 356,
+      "sourceUrls": [],
+      "status": "2026年11月22日改訂。実在の指数の銘柄・日程・価格を掲載せず、TODOROKIが作成した架空例に変更。",
+      "sha256": "4d556f142fe03bb14ec0bda7b1cc7bd5e27d04439aa54e38c3ff54f1ad332654"
     },
     {
       "file": "/pdf/zh-Hant/crowd-psychology.pdf",
@@ -3403,14 +3393,12 @@
     },
     {
       "file": "/pdf/pt/topix-new-members.pdf",
-      "title": "Como interpretar mudanças no TOPIX",
+      "title": "Como funciona o rebalanceamento de um índice",
       "lang": "pt",
-      "textCharacters": 1043,
-      "sourceUrls": [
-        "https://www.jpx.co.jp/news/6030/20261007-01.html"
-      ],
-      "status": "2026年10月29日改訂。公式発表リンクを追加し、再利用条件未確認の第三者試算表・金額ランキングを削除。",
-      "sha256": "b3983f549bc2470a86c2e706c2b2d52da3c30f2341d0573fb21a30fc7e0c4fbe"
+      "textCharacters": 1060,
+      "sourceUrls": [],
+      "status": "2026年11月22日改訂。実在の指数の銘柄・日程・価格を掲載せず、TODOROKIが作成した架空例に変更。",
+      "sha256": "6d88177ac7363b3edf9815dac3fb57775657706b2d8b2eab31edcf12aee5c744"
     },
     {
       "file": "/pdf/pt/crowd-psychology.pdf",
