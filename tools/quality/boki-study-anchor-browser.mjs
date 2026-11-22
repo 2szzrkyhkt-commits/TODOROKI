@@ -51,6 +51,7 @@ async function checkLanding(page,label,headerHeight){
   console.log(label+' '+JSON.stringify(data));
 }
 async function checkLeaseScope(page,label){
+  await page.locator('#scope-review > summary').click();
   const year=page.locator('#scope-year');
   const row=async selected=>{
     await year.selectOption(String(selected));
