@@ -138,7 +138,8 @@ D1実測：制度1件はpending/pendingのまま。取得元は有効1件・無�
 
 
 ## TODOROKI LIFE・その他収益化
-- [ ] 無料ブログの記事公開を安定化 **〔公開証跡6件・継続連携未検証〕** <!-- todo:T36 project:TODOROKI LIFE・その他収益化 -->
+- [ ] 無料ブログの記事公開を安定化 **〔公開証跡7件・継続連携未検証〕** <!-- todo:T36 project:TODOROKI LIFE・その他収益化 -->
+  - 2026-11-22追記：[USB-Cの240Wとデータ転送速度を分けて読む記事](https://todoroki-life.doorblog.jp/archives/18073710.html)を通常の管理画面から手動で1件公開し、投稿完了と公開ページ・最新記事一覧を照合。USB-IFとメーカーの資料3件を参照。読者への通知操作・広告追加・他媒体投稿なし。既存公開証跡と合わせ7件。自動公開の実行成功とは数えず、T36は未完了。
   - 2026-11-22追記：非公開の投稿台帳を読取照合し、既存のブラウザ公開証跡6件を確認。直近3件は[食品用ラップ比較](https://todoroki-life.doorblog.jp/archives/18052963.html)、[無料クラウドの写真容量](https://todoroki-life.doorblog.jp/archives/18052990.html)、[洗濯・乾燥容量の違い](https://todoroki-life.doorblog.jp/archives/18059848.html)。今回の公開HTTP再確認は未取得。11/22のUSB-C記事は下書き、投稿APIの実行記録なし。T38の検索流入・報酬も未確認（0円とは扱わない）。公開・認証・予約は変更しない。
 - [x] 収益化の申請・広告導線を整備 **〔完了：A8提携承認・承認済み1案件をTODOROKI LIFE本番に掲載確認〕** <!-- todo:T37 project:TODOROKI LIFE・その他収益化 -->
   - 2026-11-19：A8.netの承認メールで株式会社マツモトキヨシ・キラットの提携承認を確認。利用者が発行・提供したマツモトキヨシのTODOROKI LIFE用テキスト素材1件を[まとめ買いの既存記事](https://todoroki-life.doorblog.jp/archives/18029319.html)へ掲載。記事冒頭のPR表示、元本文の維持、公開DOMの広告リンク・nofollow・A8の計測画像が提供どおりであることを検証。リンクの自己クリック・テスト購入・読者通知・AdSense変更・追加費用なし。
