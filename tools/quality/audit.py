@@ -7,10 +7,12 @@ from urllib.error import HTTPError,URLError
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime,timezone
+from functools import partial
 import unicodedata,re
 import argparse,hashlib,json,time,ssl,socket,subprocess,os,xml.etree.ElementTree as ET
 from criteria import CRITERIA
 from notification_policy import eligible
+from issuer_source_policy import SOURCE_ATTRIBUTE,SOURCE_ROLE,is_issuer_source,source_key
 ROOT=Path(__file__).resolve().parents[2]
 BASE='https://todoroki-gold.com/'
 AD_DOMAINS=('trafficgate.net','doubleclick.net','googlesyndication.com','googleadservices.com','a8.net','valuecommerce.com','moshimo.com')
@@ -18,8 +20,22 @@ def is_ad_url(url):
  host=(urlsplit(url).hostname or '').lower()
  return any(host==domain or host.endswith('.'+domain) for domain in AD_DOMAINS)
 
+# Keep JPX distinct from the narrower issuer-source audit policy and EDINET.
+JPX_SOURCE_HOSTS=('jpx.co.jp','tdnet.info','jpx-jquants.com','jquants.com','jpx.github.io')
+def is_jpx_url(url):
+ try:
+  host=unicodedata.normalize('NFKC',unquote(urlsplit(url).hostname or '')).lower()
+  host=host.translate(str.maketrans('。．｡','...')).rstrip('.')
+  return any(host==domain or host.endswith('.'+domain) for domain in JPX_SOURCE_HOSTS)
+ except ValueError:return False
+
+class AuditSourcePolicyError(HTTPError):pass
 class AuditRedirectHandler(HTTPRedirectHandler):
+ def __init__(self,tagged_sources=()):
+  super().__init__();self.tagged_sources=tagged_sources
  def redirect_request(self,req,fp,code,msg,headers,newurl):
+  if is_jpx_url(newurl):raise AuditSourcePolicyError(req.full_url,403,'JPX group redirect excluded',headers,fp)
+  if is_issuer_source(newurl,self.tagged_sources):raise AuditSourcePolicyError(req.full_url,403,'issuer source redirect excluded',headers,fp)
   if is_ad_url(newurl):raise HTTPError(newurl,403,'advertising redirect excluded',headers,fp)
   return super().redirect_request(req,fp,code,msg,headers,newurl)
 AUDIT_OPENER=build_opener(AuditRedirectHandler()).open
@@ -28,6 +44,8 @@ class HTML(HTMLParser):
   super().__init__();self.tags=[];self.feed(text)
  def handle_starttag(self,t,a):self.tags.append((t,dict(a)))
 def request(url,opener=AUDIT_OPENER,sleep=time.sleep):
+ if is_jpx_url(url):return dict(url=url,status=None,kind='inconclusive',reason='JPX group URL excluded; no request sent')
+ if is_issuer_source(url):return dict(url=url,status=None,kind='inconclusive',reason='issuer source URL excluded; no request sent')
  if is_ad_url(url):return dict(url=url,status=None,kind='inconclusive',reason='advertising URL excluded; no request sent')
  attempts=[]
  for i in range(3):
@@ -36,6 +54,9 @@ def request(url,opener=AUDIT_OPENER,sleep=time.sleep):
    with opener(Request(quote(url,safe=':/?&=%+#'),headers={'User-Agent':'TODOROKI-Quality-Audit/1.0'}),timeout=20) as r:
     body=r.read(8*1024*1024)
     return dict(url=url,final_url=r.url,status=r.status,seconds=round(time.monotonic()-start,3),headers={k:v for k,v in r.headers.items() if k.lower() in ('content-type','cache-control','content-security-policy','strict-transport-security','x-content-type-options')},sha256=hashlib.sha256(body).hexdigest(),pdf=body.startswith(b'%PDF-'),attempts=attempts)
+  except AuditSourcePolicyError as e:
+   e.close()
+   return dict(url=url,status=None,kind='inconclusive',reason=e.reason+'; target not requested')
   except HTTPError as e:
    attempts.append({'status':e.code})
    if e.code not in (429,500,502,503,504):break
@@ -86,7 +107,7 @@ def run(mode,out,previous=None,live=True):
  pages={p:HTML(p.read_text()) for p in ROOT.rglob('*.html') if not any(s in p.parts for s in ('.git','node_modules','quality-results'))}
  if mode!='hourly':
   problems={i:[] for i in (8,9,10,11,15,16,17,18,19,21,22,23,24,27,35,50,51)}
-  titles={};canonical={};links=set();ext=set();excluded_ads=set();pdfs={};counts=Counter()
+  titles={};canonical={};links=set();ext=set();excluded_ads=set();excluded_jpx=set();tagged_sources=set();pdfs={};counts=Counter()
   for p,d in pages.items():
    rel=p.relative_to(ROOT).as_posix();text=p.read_text();tags=d.tags
    noindex=any(t=='meta' and a.get('name')=='robots' and 'noindex' in a.get('content','') for t,a in tags)
@@ -116,8 +137,11 @@ def run(mode,out,previous=None,live=True):
     target,u=resolve(p,url)
     if target is None:
      external=u._replace(fragment='').geturl()
-     if 'sponsored' in a.get('rel','').lower().split() or is_ad_url(external):excluded_ads.add(external)
-     else:ext.add(external)
+     if is_jpx_url(external):excluded_jpx.add(external)
+     elif 'sponsored' in a.get('rel','').lower().split() or is_ad_url(external):excluded_ads.add(external)
+     else:
+      ext.add(external)
+      if a.get(SOURCE_ATTRIBUTE,'').strip().lower()==SOURCE_ROLE:tagged_sources.add(source_key(external))
      continue
     links.add(u._replace(fragment='').geturl())
     if u.path.startswith('/api/'):continue
@@ -156,11 +180,21 @@ def run(mode,out,previous=None,live=True):
   result(25,[],[{'duplicate_pdf_groups':[v for v in pdfs.values() if len(v)>1]}],partial=True)
   if live and mode in ('daily','weekly','monthly','all'):
    ext-=excluded_ads
-   with ThreadPoolExecutor(max_workers=4) as pool:network=list(pool.map(request,sorted(links|ext)))
+   # A marked URL is excluded even if a second, unmarked link or sitemap lists it.
+   excluded_issuer={u for u in links|ext if is_issuer_source(u,tagged_sources)}
+   ext-=excluded_issuer;links-=excluded_issuer
+   probe=request
+   if tagged_sources:
+    probe=partial(request,opener=build_opener(AuditRedirectHandler(frozenset(tagged_sources))).open)
+   with ThreadPoolExecutor(max_workers=4) as pool:network=list(pool.map(probe,sorted(links|ext)))
    for i,scope in ((18,links),(20,ext)):
     data=[x for x in network if x['url'] in scope];errors=[x for x in data if x.get('kind')=='http_failure']
-    result(i,(rows['TQ18']['errors'] if i==18 else [])+errors,data,partial=any(x.get('kind')=='inconclusive' for x in data) or (i==20 and bool(excluded_ads)))
+    result(i,(rows['TQ18']['errors'] if i==18 else [])+errors,data,partial=any(x.get('kind')=='inconclusive' for x in data) or (i==20 and bool(excluded_ads or excluded_jpx or excluded_issuer)))
+    if i==20 and excluded_jpx:rows['TQ20']['evidence'].append({'excluded_jpx_source_count':len(excluded_jpx),'method':'source policy; no request sent for excluded targets'})
     if i==20 and excluded_ads:rows['TQ20']['evidence'].append({'excluded_advertising_urls':sorted(excluded_ads),'method':'no network requests; advertising delivery remains unverified'})
+   issuer_evidence={'excluded_issuer_source_count':len(excluded_issuer),'method':'no requests to excluded issuer sources; other third-party destinations not classified for source rights'}
+   if excluded_issuer:issuer_evidence['kind']='inconclusive'
+   rows['TQ20']['evidence'].append(issuer_evidence)
  if live:
   urls=[BASE,BASE+'boki1',BASE+'pdf-library',BASE+'en/',BASE+'es/',BASE+'pt/',BASE+'zh-Hans/',BASE+'zh-Hant/',BASE+'api/privacy/region']
   network=[request(u) for u in urls]
