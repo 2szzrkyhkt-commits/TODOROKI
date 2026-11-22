@@ -60,19 +60,36 @@ function buildTopics(select,container,items,getTag,onSelect){
  });select.append(optgroup);container.append(grid);
  });
 }
+// Scope links can set a year for this lease view; free category browsing remains all-year.
+let leaseScopeYear=null;
+const leaseScopeMatch=(item,year)=>year===null||item.years?.includes(year)===true;
+function leaseResultLabel(count,topic){
+ const box=document.querySelector('#'+(count.id==='count'?'learn':'quiz'));
+ let clear=box.querySelector('.lease-scope-clear');
+ if(!clear){
+  clear=document.createElement('button');clear.type='button';clear.className='lease-scope-clear';
+  clear.textContent='年度の絞り込みを解除';
+  clear.addEventListener('click',()=>{leaseScopeYear=null;lessonPage=0;quizPage=0;renderCards();renderQuiz();count.focus();});
+  count.tabIndex=-1;count.after(clear);
+ }
+ const scoped=topic==='リース'&&leaseScopeYear!==null;
+ clear.hidden=!scoped;
+ if(scoped)count.textContent=leaseScopeYear+'年度（リース）｜'+count.textContent;
+}
 let lessonPage=0;const lessonSize=12,search=document.querySelector('#search');
 function renderCards(){
- const v=normalizeSearch(search.value.trim());const rows=lessons.filter(x=>(!lessonTopic.value||categoryFor(x)===lessonTopic.value)&&normalizeSearch(x.title+x.body+x.tag).includes(v));
+ const v=normalizeSearch(search.value.trim());const rows=lessons.filter(x=>(!lessonTopic.value||categoryFor(x)===lessonTopic.value)&&leaseScopeMatch(x,lessonTopic.value==='リース'?leaseScopeYear:null)&&normalizeSearch(x.title+x.body+x.tag).includes(v));
  // 会計公準の3つの内容を一つの欄にまとめ、検索結果では一致した内容だけを表示する。
  const displayRows=[];let postulates=null;
  rows.forEach(x=>{if(x.tag==='会計公準'){if(!postulates){postulates={tag:'会計公準',title:'会計公準',entries:[]};displayRows.push(postulates)}postulates.entries.push(x)}else displayRows.push(x)});
  const showResults=!!lessonTopic.value||!!v;const pages=Math.max(1,Math.ceil(displayRows.length/lessonSize));document.querySelector('.lesson-pages').hidden=!showResults;lessonPage=Math.min(lessonPage,pages-1);cards.replaceChildren();
  (showResults?displayRows.slice(lessonPage*lessonSize,(lessonPage+1)*lessonSize):[]).forEach(x=>{let el=document.createElement('article');el.className='card';let tag=document.createElement('div');tag.className='label';tag.textContent=x.tag;el.append(tag);if(x.entries){x.entries.forEach(entry=>{let h=document.createElement('h3');h.textContent=entry.title;let p=document.createElement('p');p.textContent=entry.body;el.append(h,p)})}else{let h=document.createElement('h3');h.textContent=x.title;let p=document.createElement('p');p.textContent=x.body;el.append(h,p)}if(x.subject){const meta=document.createElement('p');meta.className='small';meta.textContent=x.subject+'｜'+x.years.join('・')+'年度（'+(x.years.length>1?'比較解説を含む':'新基準')+'）';el.append(meta)}appendSource(el,x);cards.append(el)});
  count.textContent=showResults?rows.length+'件の解説'+(rows.length?'':'：該当する解説はまだありません'):'分野を選んでください';
+ leaseResultLabel(count,lessonTopic.value);
  document.querySelector('#lesson-page').textContent=(lessonPage+1)+' / '+pages+'ページ';document.querySelector('#lesson-prev').disabled=lessonPage===0;document.querySelector('#lesson-next').disabled=lessonPage>=pages-1;
 }
-buildTopics(lessonTopic,document.querySelector('#lesson-groups'),lessons,categoryFor,()=>{search.value='';lessonPage=0;renderCards()});
-search.addEventListener('input',()=>{lessonPage=0;renderCards()});lessonTopic.addEventListener('change',()=>{lessonPage=0;renderCards()});
+buildTopics(lessonTopic,document.querySelector('#lesson-groups'),lessons,categoryFor,()=>{leaseScopeYear=null;search.value='';lessonPage=0;renderCards()});
+search.addEventListener('input',()=>{lessonPage=0;renderCards()});lessonTopic.addEventListener('change',()=>{leaseScopeYear=null;lessonPage=0;renderCards()});
 document.querySelector('#lesson-prev').addEventListener('click',()=>{lessonPage--;renderCards();count.scrollIntoView({block:'start'})});
 document.querySelector('#lesson-next').addEventListener('click',()=>{lessonPage++;renderCards();count.scrollIntoView({block:'start'})});
 renderCards();document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{const toQuiz=b.dataset.view==='quiz';if(toQuiz&&!document.querySelector('#learn').hidden ){quizTopic.value=lessonTopic.value;quizSearch.value='';quizStatus.value='all';retrying.clear();quizPage=0;renderQuiz()}else if(!toQuiz&&!document.querySelector('#quiz').hidden ){lessonTopic.value=quizTopic.value;search.value='';lessonPage=0;renderCards()}document.querySelectorAll('[data-view]').forEach(x=>x.classList.toggle('active',x===b));document.querySelector('#learn').hidden=toQuiz;document.querySelector('#quiz').hidden=!toQuiz}));
@@ -84,7 +101,7 @@ function saveAnswers(){try{const saved={};Object.keys(chosen).forEach(i=>{if(qs[
 const pageSize=10,quizSearch=document.querySelector('#quiz-search'),quizStatus=document.querySelector('#quiz-status');
 function renderQuiz(){
  const target=document.querySelector('#questions'), term=normalizeSearch(quizSearch.value.trim());
- const filtered=qs.map((q,i)=>({q,i})).filter(({q,i})=>normalizeSearch(q.q+' '+q.ex+' '+q.a.join(' ')).includes(term)&&(!quizTopic.value||q.topic===quizTopic.value)&&(quizStatus.value==='all'||(quizStatus.value==='unanswered'&&chosen[i]===undefined)||(quizStatus.value==='wrong'&&((chosen[i]!==undefined&&chosen[i]!==q.correct)||retrying.has(i)))));
+ const filtered=qs.map((q,i)=>({q,i})).filter(({q,i})=>normalizeSearch(q.q+' '+q.ex+' '+q.a.join(' ')).includes(term)&&(!quizTopic.value||q.topic===quizTopic.value)&&leaseScopeMatch(q,quizTopic.value==='リース'?leaseScopeYear:null)&&(quizStatus.value==='all'||(quizStatus.value==='unanswered'&&chosen[i]===undefined)||(quizStatus.value==='wrong'&&((chosen[i]!==undefined&&chosen[i]!==q.correct)||retrying.has(i)))));
  document.querySelector('#quiz-prev').parentElement.hidden=!(quizTopic.value||term);const pages=Math.max(1,Math.ceil(filtered.length/pageSize));quizPage=Math.min(quizPage,pages-1);
  target.replaceChildren();
  (quizTopic.value||term?filtered.slice(quizPage*pageSize,(quizPage+1)*pageSize):[]).forEach(({q,i})=>{
@@ -101,12 +118,13 @@ function renderQuiz(){
  });
  const n=Object.keys(chosen).length, correct=qs.reduce((total,q,i)=>total+(chosen[i]===q.correct?1:0),0);
  document.querySelector('#quiz-count').textContent=(quizTopic.value||term)?filtered.length+'問が見つかりました'+(filtered.length?'':'。該当する問題はまだありません。'):'分野を選んでください';
+ leaseResultLabel(document.querySelector('#quiz-count'),quizTopic.value);
  document.querySelector('#quiz-page').textContent=(quizPage+1)+' / '+pages+'ページ';
  document.querySelector('#quiz-prev').disabled=quizPage===0;document.querySelector('#quiz-next').disabled=quizPage>=pages-1;
  document.querySelector('#result').textContent='回答済み '+n+' / '+qs.length+'問（正解 '+correct+'問）'
 }
-buildTopics(quizTopic,document.querySelector('#quiz-groups'),qs,q=>q.topic,()=>{quizSearch.value='';quizStatus.value='all';retrying.clear();quizPage=0;renderQuiz()});
-quizSearch.addEventListener('input',()=>{quizPage=0;renderQuiz()});quizStatus.addEventListener('change',()=>{retrying.clear();quizPage=0;renderQuiz()});quizTopic.addEventListener('change',()=>{quizPage=0;renderQuiz()});
+buildTopics(quizTopic,document.querySelector('#quiz-groups'),qs,q=>q.topic,()=>{leaseScopeYear=null;quizSearch.value='';quizStatus.value='all';retrying.clear();quizPage=0;renderQuiz()});
+quizSearch.addEventListener('input',()=>{quizPage=0;renderQuiz()});quizStatus.addEventListener('change',()=>{retrying.clear();quizPage=0;renderQuiz()});quizTopic.addEventListener('change',()=>{leaseScopeYear=null;quizPage=0;renderQuiz()});
 document.querySelector('#quiz-prev').addEventListener('click',()=>{quizPage--;renderQuiz();document.querySelector('#quiz').scrollIntoView()});
 document.querySelector('#quiz-next').addEventListener('click',()=>{quizPage++;renderQuiz();document.querySelector('#quiz').scrollIntoView()});
 document.querySelector('#reset').addEventListener('click',()=>{chosen={};retrying.clear();quizPage=0;saveAnswers();renderQuiz()});renderQuiz();</script>
