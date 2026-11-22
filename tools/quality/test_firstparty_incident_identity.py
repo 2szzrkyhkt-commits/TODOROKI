@@ -13,7 +13,7 @@ class FirstPartyIncidentIdentityTests(unittest.TestCase):
     def observe(self, root, status=200, attempts=None, previous=None, other=None):
         def get(url):
             code=status if url==audit.BASE else other if url==audit.BASE+'boki1' and other is not None else 200
-            result={'url':url,'status':code,'headers':{},'seconds':0}
+            result={'url':url,'final_url':url,'status':code,'headers':{},'seconds':0}
             if code!=200:
                 result['kind']='inconclusive' if code==403 else 'http_failure'
                 result['attempts']=attempts or [{'status':code}]
@@ -86,3 +86,34 @@ class FirstPartyIncidentIdentityTests(unittest.TestCase):
         # External references and non-allowlisted criteria keep existing fingerprint logic.
         for criterion,other in [('TQ20',fault),('TQ01',{**fault,'url':'https://fixture.invalid/'})]:
             self.assertEqual(identity(criterion,other),audit.fingerprint([criterion,other]))
+
+    def test_recovery_of_one_url_does_not_wait_for_a_sibling_and_recurrence_is_reportable(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            previous=str(Path(tmp)/'latest.json')
+            first=self.observe(tmp,503,other=503)
+            ids={v['detail']['url']:k for k,v in first['findings'].items() if v['id']=='TQ03'}
+            root_key=ids[audit.BASE]
+            boki_key=ids[audit.BASE+'boki1']
+            partial=self.observe(tmp,200,previous=previous,other=502)
+            self.assertIn(root_key,partial['resolved'])
+            self.assertIn(boki_key,partial['findings'])
+            self.assertNotIn(boki_key,partial['resolved'])
+            again=self.observe(tmp,503,previous=previous,other=504)
+            self.assertIn(root_key,again['notification_candidates'])
+            self.assertNotIn(boki_key,again['notification_candidates'])
+
+    def test_exact_recovery_does_not_accept_redirect_timeout_or_stale_evidence(self):
+        at='2026-11-22T01:00:00Z'
+        url=audit.BASE
+        healthy={'url':url,'final_url':url,'status':200}
+        self.assertTrue(audit.exact_url_recovery({'last_run':at,'evidence':[healthy]},url,at))
+        unreliable=[
+            [{**healthy,'final_url':url+'elsewhere'}],
+            [{**healthy,'status':403,'kind':'inconclusive'}],
+            [{**healthy,'status':None,'kind':'inconclusive'}],
+            [healthy,{**healthy,'status':503,'kind':'http_failure'}],
+            [{**healthy,'url':url+'elsewhere'}],
+        ]
+        for evidence in unreliable:
+            self.assertFalse(audit.exact_url_recovery({'last_run':at,'evidence':evidence},url,at))
+        self.assertFalse(audit.exact_url_recovery({'last_run':'old','evidence':[healthy]},url,at))

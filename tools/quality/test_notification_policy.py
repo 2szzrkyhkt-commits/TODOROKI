@@ -100,7 +100,7 @@ class ResolutionTests(unittest.TestCase):
         import audit
         def response(status):
             def fetch(url):
-                r={'url':url,'status':status if url==audit.BASE else 200,'headers':{},'seconds':0}
+                r={'url':url,'final_url':url,'status':status if url==audit.BASE else 200,'headers':{},'seconds':0}
                 if url==audit.BASE and status!=200:r['kind']='inconclusive' if status==403 else 'http_failure'
                 return r
             return fetch

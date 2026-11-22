@@ -91,6 +91,18 @@ def inconclusive_evidence(value):
  if isinstance(value,dict):return value.get('kind')=='inconclusive' or bool(value.get('inconclusive')) or any(inconclusive_evidence(v) for v in value.values())
  if isinstance(value,list):return any(inconclusive_evidence(v) for v in value)
  return False
+def exact_url_recovery(row,url,at):
+ # A sibling failure or unavailable response is not evidence about this URL.
+ # Require a fresh direct 2xx observation, and reject conflicting observations.
+ if row.get('last_run')!=at:return False
+ evidence=row.get('evidence',[])
+ observed=[e for e in evidence if isinstance(e,dict) and e.get('url')==url]
+ return bool(observed) and all(
+  type(e.get('status')) is int and 200<=e['status']<=299 and e.get('final_url')==url
+  and not e.get('kind') and not inconclusive_evidence(e)
+  for e in observed
+ )
+
 def resolution_state(prior,current,rows,at):
  # Older saved ledgers used the full attempt envelope as a fingerprint.
  # Normalize only the same narrow class so a continuing incident does not
@@ -104,7 +116,10 @@ def resolution_state(prior,current,rows,at):
  for key,finding in old.items():
   if key in current:continue
   row=rows.get(finding['id'],{})
-  verified=row.get('last_run')==at and row.get('result') in ('完了','一部完了') and not row.get('errors') and not inconclusive_evidence(row.get('evidence'))
+  if stable_firstparty_5xx(finding['id'],finding.get('detail')):
+   verified=exact_url_recovery(row,finding['detail']['url'],at)
+  else:
+   verified=row.get('last_run')==at and row.get('result') in ('完了','一部完了') and not row.get('errors') and not inconclusive_evidence(row.get('evidence'))
   if verified:resolved.append(key)
   else:unverified[key]=finding
  return old,resolved,unverified
