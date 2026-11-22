@@ -50,6 +50,38 @@ async function checkLanding(page,label,headerHeight){
   assert.equal(page.url(),destination);
   console.log(label+' '+JSON.stringify(data));
 }
+async function checkLeaseScope(page,label){
+  const year=page.locator('#scope-year');
+  const row=async selected=>{
+    await year.selectOption(String(selected));
+    const result=page.locator('#scope-rows .scope-row').filter({hasText:'リース（'+selected+'年度）'});
+    assert.equal(await result.count(),1,label+' year row '+selected);
+    await result.locator('summary').click();
+    return result;
+  };
+  const old=await row(2026);
+  assert.match(await old.innerText(),/2026年度に対応する関連教材：解説1件／問題0問/);
+  assert.match(await old.innerText(),/この年度の関連問題は未掲載です/);
+  assert.equal(await old.getByRole('button',{name:'関連する問題を開く',exact:true}).count(),0);
+  await old.getByRole('button',{name:'関連する解説を開く',exact:true}).click();
+  assert.match(await page.locator('#count').innerText(),/^2026年度（リース）｜1件/);
+  assert.match(await page.locator('#cards').innerText(),/年度別に借手の区分/);
+  assert.doesNotMatch(await page.locator('#cards').innerText(),/借手の利息法と元本返済/);
+  await page.locator('[data-view="quiz"]').click();
+  assert.match(await page.locator('#quiz-count').innerText(),/^2026年度（リース）｜0問/);
+  assert.equal((await page.locator('#questions').innerText()).trim(),'');
+  const current=await row(2027);
+  assert.match(await current.innerText(),/2027年度に対応する関連教材：解説2件／問題2問/);
+  await current.getByRole('button',{name:'関連する解説を開く',exact:true}).click();
+  assert.match(await page.locator('#count').innerText(),/^2027年度（リース）｜2件/);
+  assert.match(await page.locator('#cards').innerText(),/借手の利息法と元本返済/);
+  await current.getByRole('button',{name:'関連する問題を開く',exact:true}).click();
+  assert.match(await page.locator('#quiz-count').innerText(),/^2027年度（リース）｜2問/);
+  assert.match(await page.locator('#questions').innerText(),/2027年度/);
+  await page.getByRole('button',{name:'年度の絞り込みを解除',exact:true}).click();
+  assert.match(await page.locator('#quiz-count').innerText(),/^2問/);
+  console.log(label+' lease year scope: 2026 1 lesson/0 questions, 2027 2/2, clear filter');
+}
 let browser;
 try{
   browser=await playwright[engine].launch(engine==='chromium'&&process.env.CHROMIUM_PATH?{executablePath:process.env.CHROMIUM_PATH}:{});
@@ -73,6 +105,8 @@ try{
     await checkLanding(fresh,engine+' '+width+'px direct',heightBefore);
     await Promise.all([fresh.waitForURL(origin+article),fresh.locator('#boki-to-statements').click()]);
     assert.equal(await fresh.getByRole('heading',{name:'決算書の見方｜利益・財務・現金をつなげて読む',exact:true}).isVisible(),true);
+    await fresh.goto(origin+course);
+    await checkLeaseScope(fresh,engine+' '+width+'px');
     await context.close();
   }
 }finally{
