@@ -171,7 +171,8 @@ D1実測：制度1件はpending/pendingのまま。取得元は有効1件・無�
 確認：専用Worker/D1と毎日8時JSTの下書きAutomationが存在。現行指示では公開API・シークレット未接続のため自動公開をしない。下書き保存と公開を混同しない。実収益・成果報酬計測は未確認。
 
 ## TODOROKI BUSINESS LAB
-- [ ] BUSINESS LABの企業分析・事業設計を段階公開 **〔事業設計サマリーと5社からの比較は本番反映、全銘柄・自動更新は未完了〕** <!-- todo:T48 project:TODOROKI BUSINESS LAB -->
+- [ ] BUSINESS LABの企業分析・事業設計を段階公開 **〔事業設計サマリーと6社からの比較は本番反映、全銘柄・自動更新は未完了〕** <!-- todo:T48 project:TODOROKI BUSINESS LAB -->
+  - 2026-11-23 01:38 JST追記：v8（`bc860893`、`appgdep_6b031a96bad08191ac04957cc4a84255`）で6社目の[ソフトバンク9434](https://todoroki-business-lab.easysquid66.chatgpt.site/?company=9434#company-profile)を追加。EDINET `S100YE76` の全期連結・有効な保存済み訂正チェーンを確認。2026/3期売上7,038,680百万円、営業CF＋符号付き投資CFによるFCF122,954百万円、外部顧客売上6区分の合計を照合。本番PCで出典表示、ソニー・ソフトバンク・任天堂の比較と4社目を追加できないことを確認。自動テスト22件合格。本番の共有設定・定期処理は無変更。スマホ実機、全銘柄、自動更新は未確認・未対応。
   - 2026-11-22 22:09 JST追記：v7（`bec5dcd2`、`appgdep_6b02e99c820c81919c3f294499be9211`）で[ソニー6758](https://todoroki-business-lab.easysquid66.chatgpt.site/?company=6758#company-profile)を追加し、資料確認済み5社から最大3社を比較可能。有報S100YE2Cと照合した2026/3期の継続事業の売上12,479,620百万円とFCF1,182,099百万円、外部顧客向け売上の内訳、出典を本番PCで確認。21/21テスト。財務API接続・権限・自動更新は変更なし、スマホ実機は未確認。
   - 2026-11-22追記：v6で[INPEX](https://todoroki-business-lab.easysquid66.chatgpt.site/?company=1605#company-profile)を追加、4社収録。有報 `S100XU9L` を根拠にIFRS連結収益・外部売上の内訳・投資CF・計算FCFを明示。`65d27f51`／`appgdep_6b02c63d7920819185d3cf01c45353ab`で本番反映、20/20、PCの検索・出典・比較を確認。v6の実機、全銘柄の自動連携と採点は未完了。
   - 2026-11-22追記：[学習ガイド](https://todoroki-business-lab.easysquid66.chatgpt.site/#learn)に、サブスク・仲介・フランチャイズ・規模の経済・ネットワーク効果・内製と外注を独自例付きで追加。v5（`f6fdeec4`／`appgdep_6b02bd63afa08191af9173df735e0640`）本番反映、テスト19/19、PCと337 CSS px幅で目次遷移・表示・収益計算を確認。実機・企業データ自動連携・事業採点は未達。
