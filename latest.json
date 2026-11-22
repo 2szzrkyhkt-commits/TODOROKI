@@ -1,13 +1,13 @@
 {
   "execution": {
-    "event": "push",
-    "run_id": "45011429026",
+    "event": "schedule",
+    "run_id": "45037913053",
     "run_attempt": "1"
   },
   "last_scheduled_audit": {
-    "at": "2026-11-22T06:54:33.025812+00:00",
+    "at": "2026-11-22T15:22:43.822053+00:00",
     "event": "schedule",
-    "run_id": "44995774290",
+    "run_id": "45037913053",
     "run_attempt": "1"
   },
   "completed_modes": {
@@ -17,10 +17,10 @@
   },
   "schema": 1,
   "criteria_status": "provisional-original-missing",
-  "at": "2026-11-22T10:20:01.850654+00:00",
+  "at": "2026-11-22T15:22:43.822053+00:00",
   "timezone": "Asia/Tokyo",
-  "mode": "daily",
-  "source_commit": "d889c4ea4ca999736b5ef94e68db49e38c7f366f",
+  "mode": "hourly",
+  "source_commit": "6a64935a4d66611772f08ceed15a1a4c58edb949",
   "items": [
     {
       "id": "TQ01",
@@ -31,14 +31,14 @@
       "automatic_method": "urllib GET; follow redirects; maximum three attempts; record status, final URL and elapsed time",
       "implementation": "partial",
       "result": "完了",
-      "last_run": "2026-11-22T10:20:01.850654+00:00",
+      "last_run": "2026-11-22T15:22:43.822053+00:00",
       "errors": [],
       "evidence": [
         {
           "url": "https://todoroki-gold.com/",
           "final_url": "https://todoroki-gold.com/",
           "status": 200,
-          "seconds": 0.055,
+          "seconds": 0.057,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -52,7 +52,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "完了",
-        "at": "2026-11-22T10:20:01.850654+00:00"
+        "at": "2026-11-22T15:22:43.822053+00:00"
       },
       "classification": "完了",
       "manual_method": null
@@ -66,14 +66,14 @@
       "automatic_method": "urllib GET; follow redirects; maximum three attempts; record status, final URL and elapsed time",
       "implementation": "partial",
       "result": "完了",
-      "last_run": "2026-11-22T10:20:01.850654+00:00",
+      "last_run": "2026-11-22T15:22:43.822053+00:00",
       "errors": [],
       "evidence": [
         {
           "url": "https://todoroki-gold.com/boki1",
           "final_url": "https://todoroki-gold.com/boki1",
           "status": 200,
-          "seconds": 0.042,
+          "seconds": 0.051,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -87,7 +87,7 @@
           "url": "https://todoroki-gold.com/pdf-library",
           "final_url": "https://todoroki-gold.com/pdf-library",
           "status": 200,
-          "seconds": 0.049,
+          "seconds": 0.05,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -101,7 +101,7 @@
           "url": "https://todoroki-gold.com/en/",
           "final_url": "https://todoroki-gold.com/en/",
           "status": 200,
-          "seconds": 0.039,
+          "seconds": 0.044,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -115,7 +115,7 @@
           "url": "https://todoroki-gold.com/es/",
           "final_url": "https://todoroki-gold.com/es/",
           "status": 200,
-          "seconds": 0.055,
+          "seconds": 0.076,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -129,7 +129,7 @@
           "url": "https://todoroki-gold.com/pt/",
           "final_url": "https://todoroki-gold.com/pt/",
           "status": 200,
-          "seconds": 0.038,
+          "seconds": 0.04,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -143,7 +143,7 @@
           "url": "https://todoroki-gold.com/zh-Hans/",
           "final_url": "https://todoroki-gold.com/zh-Hans/",
           "status": 200,
-          "seconds": 0.036,
+          "seconds": 0.043,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -157,7 +157,7 @@
           "url": "https://todoroki-gold.com/zh-Hant/",
           "final_url": "https://todoroki-gold.com/zh-Hant/",
           "status": 200,
-          "seconds": 0.055,
+          "seconds": 0.041,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -171,7 +171,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "完了",
-        "at": "2026-11-22T10:20:01.850654+00:00"
+        "at": "2026-11-22T15:22:43.822053+00:00"
       },
       "classification": "完了",
       "manual_method": null
@@ -185,14 +185,14 @@
       "automatic_method": "urllib GET; follow redirects; maximum three attempts; record status, final URL and elapsed time",
       "implementation": "partial",
       "result": "完了",
-      "last_run": "2026-11-22T10:20:01.850654+00:00",
+      "last_run": "2026-11-22T15:22:43.822053+00:00",
       "errors": [],
       "evidence": [
         {
           "url": "https://todoroki-gold.com/",
           "final_url": "https://todoroki-gold.com/",
           "status": 200,
-          "seconds": 0.055,
+          "seconds": 0.057,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -206,7 +206,7 @@
           "url": "https://todoroki-gold.com/boki1",
           "final_url": "https://todoroki-gold.com/boki1",
           "status": 200,
-          "seconds": 0.042,
+          "seconds": 0.051,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -220,7 +220,7 @@
           "url": "https://todoroki-gold.com/pdf-library",
           "final_url": "https://todoroki-gold.com/pdf-library",
           "status": 200,
-          "seconds": 0.049,
+          "seconds": 0.05,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -234,7 +234,7 @@
           "url": "https://todoroki-gold.com/en/",
           "final_url": "https://todoroki-gold.com/en/",
           "status": 200,
-          "seconds": 0.039,
+          "seconds": 0.044,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -248,7 +248,7 @@
           "url": "https://todoroki-gold.com/es/",
           "final_url": "https://todoroki-gold.com/es/",
           "status": 200,
-          "seconds": 0.055,
+          "seconds": 0.076,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -262,7 +262,7 @@
           "url": "https://todoroki-gold.com/pt/",
           "final_url": "https://todoroki-gold.com/pt/",
           "status": 200,
-          "seconds": 0.038,
+          "seconds": 0.04,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -276,7 +276,7 @@
           "url": "https://todoroki-gold.com/zh-Hans/",
           "final_url": "https://todoroki-gold.com/zh-Hans/",
           "status": 200,
-          "seconds": 0.036,
+          "seconds": 0.043,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -290,7 +290,7 @@
           "url": "https://todoroki-gold.com/zh-Hant/",
           "final_url": "https://todoroki-gold.com/zh-Hant/",
           "status": 200,
-          "seconds": 0.055,
+          "seconds": 0.041,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -318,7 +318,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "完了",
-        "at": "2026-11-22T10:20:01.850654+00:00"
+        "at": "2026-11-22T15:22:43.822053+00:00"
       },
       "classification": "完了",
       "manual_method": null
@@ -332,14 +332,14 @@
       "automatic_method": "urllib GET; follow redirects; maximum three attempts; record status, final URL and elapsed time",
       "implementation": "partial",
       "result": "完了",
-      "last_run": "2026-11-22T10:20:01.850654+00:00",
+      "last_run": "2026-11-22T15:22:43.822053+00:00",
       "errors": [],
       "evidence": [
         {
           "url": "https://todoroki-gold.com/",
           "final_url": "https://todoroki-gold.com/",
           "status": 200,
-          "seconds": 0.055,
+          "seconds": 0.057,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -353,7 +353,7 @@
           "url": "https://todoroki-gold.com/boki1",
           "final_url": "https://todoroki-gold.com/boki1",
           "status": 200,
-          "seconds": 0.042,
+          "seconds": 0.051,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -367,7 +367,7 @@
           "url": "https://todoroki-gold.com/pdf-library",
           "final_url": "https://todoroki-gold.com/pdf-library",
           "status": 200,
-          "seconds": 0.049,
+          "seconds": 0.05,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -381,7 +381,7 @@
           "url": "https://todoroki-gold.com/en/",
           "final_url": "https://todoroki-gold.com/en/",
           "status": 200,
-          "seconds": 0.039,
+          "seconds": 0.044,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -395,7 +395,7 @@
           "url": "https://todoroki-gold.com/es/",
           "final_url": "https://todoroki-gold.com/es/",
           "status": 200,
-          "seconds": 0.055,
+          "seconds": 0.076,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -409,7 +409,7 @@
           "url": "https://todoroki-gold.com/pt/",
           "final_url": "https://todoroki-gold.com/pt/",
           "status": 200,
-          "seconds": 0.038,
+          "seconds": 0.04,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -423,7 +423,7 @@
           "url": "https://todoroki-gold.com/zh-Hans/",
           "final_url": "https://todoroki-gold.com/zh-Hans/",
           "status": 200,
-          "seconds": 0.036,
+          "seconds": 0.043,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -437,7 +437,7 @@
           "url": "https://todoroki-gold.com/zh-Hant/",
           "final_url": "https://todoroki-gold.com/zh-Hant/",
           "status": 200,
-          "seconds": 0.055,
+          "seconds": 0.041,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -465,7 +465,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "完了",
-        "at": "2026-11-22T10:20:01.850654+00:00"
+        "at": "2026-11-22T15:22:43.822053+00:00"
       },
       "classification": "完了",
       "manual_method": null
@@ -496,7 +496,7 @@
       "automatic_method": "urllib GET; follow redirects; maximum three attempts; record status, final URL and elapsed time",
       "implementation": "partial",
       "result": "完了",
-      "last_run": "2026-11-22T10:20:01.850654+00:00",
+      "last_run": "2026-11-22T15:22:43.822053+00:00",
       "errors": [],
       "evidence": [
         {
@@ -517,7 +517,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "完了",
-        "at": "2026-11-22T10:20:01.850654+00:00"
+        "at": "2026-11-22T15:22:43.822053+00:00"
       },
       "classification": "完了",
       "manual_method": null
@@ -531,14 +531,14 @@
       "automatic_method": "urllib GET; follow redirects; maximum three attempts; record status, final URL and elapsed time",
       "implementation": "partial",
       "result": "完了",
-      "last_run": "2026-11-22T10:20:01.850654+00:00",
+      "last_run": "2026-11-22T15:22:43.822053+00:00",
       "errors": [],
       "evidence": [
         {
           "url": "https://todoroki-gold.com/",
           "final_url": "https://todoroki-gold.com/",
           "status": 200,
-          "seconds": 0.055,
+          "seconds": 0.057,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -552,7 +552,7 @@
           "url": "https://todoroki-gold.com/boki1",
           "final_url": "https://todoroki-gold.com/boki1",
           "status": 200,
-          "seconds": 0.042,
+          "seconds": 0.051,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -566,7 +566,7 @@
           "url": "https://todoroki-gold.com/pdf-library",
           "final_url": "https://todoroki-gold.com/pdf-library",
           "status": 200,
-          "seconds": 0.049,
+          "seconds": 0.05,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -580,7 +580,7 @@
           "url": "https://todoroki-gold.com/en/",
           "final_url": "https://todoroki-gold.com/en/",
           "status": 200,
-          "seconds": 0.039,
+          "seconds": 0.044,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -594,7 +594,7 @@
           "url": "https://todoroki-gold.com/es/",
           "final_url": "https://todoroki-gold.com/es/",
           "status": 200,
-          "seconds": 0.055,
+          "seconds": 0.076,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -608,7 +608,7 @@
           "url": "https://todoroki-gold.com/pt/",
           "final_url": "https://todoroki-gold.com/pt/",
           "status": 200,
-          "seconds": 0.038,
+          "seconds": 0.04,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -622,7 +622,7 @@
           "url": "https://todoroki-gold.com/zh-Hans/",
           "final_url": "https://todoroki-gold.com/zh-Hans/",
           "status": 200,
-          "seconds": 0.036,
+          "seconds": 0.043,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -636,7 +636,7 @@
           "url": "https://todoroki-gold.com/zh-Hant/",
           "final_url": "https://todoroki-gold.com/zh-Hant/",
           "status": 200,
-          "seconds": 0.055,
+          "seconds": 0.041,
           "headers": {
             "Content-Type": "text/html",
             "Cache-Control": "public, max-age=0, must-revalidate",
@@ -664,7 +664,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "完了",
-        "at": "2026-11-22T10:20:01.850654+00:00"
+        "at": "2026-11-22T15:22:43.822053+00:00"
       },
       "classification": "完了",
       "manual_method": null
@@ -24642,7 +24642,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-22T10:20:01.850654+00:00",
+      "last_run": "2026-11-22T15:22:43.822053+00:00",
       "errors": [],
       "evidence": [
         {
@@ -24654,7 +24654,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "一部完了",
-        "at": "2026-11-22T10:20:01.850654+00:00"
+        "at": "2026-11-22T15:22:43.822053+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -24668,7 +24668,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-22T10:20:01.850654+00:00",
+      "last_run": "2026-11-22T15:22:43.822053+00:00",
       "errors": [],
       "evidence": [
         {
@@ -24680,7 +24680,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "一部完了",
-        "at": "2026-11-22T10:20:01.850654+00:00"
+        "at": "2026-11-22T15:22:43.822053+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -24723,7 +24723,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-22T10:20:01.850654+00:00",
+      "last_run": "2026-11-22T15:22:43.822053+00:00",
       "errors": [],
       "evidence": [
         {
@@ -24735,7 +24735,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "一部完了",
-        "at": "2026-11-22T10:20:01.850654+00:00"
+        "at": "2026-11-22T15:22:43.822053+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -24790,7 +24790,7 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-22T10:20:01.850654+00:00",
+      "last_run": "2026-11-22T15:22:43.822053+00:00",
       "errors": [],
       "evidence": [
         {
@@ -24802,7 +24802,7 @@
       "repair_status": "未着手",
       "retest": {
         "previous": "一部完了",
-        "at": "2026-11-22T10:20:01.850654+00:00"
+        "at": "2026-11-22T15:22:43.822053+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -24816,20 +24816,20 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-22T10:20:01.850654+00:00",
+      "last_run": "2026-11-22T15:22:43.822053+00:00",
       "errors": [],
       "evidence": [
         {
           "scope": "committed source only; production D1/member data not backed up or restored",
-          "archive_sha256": "7d853396a4a851f60a8aa6c80ff3a64890d0b31dd54e584baf526daddf62686f",
+          "archive_sha256": "80a29fb908598774984acfaca9c371c06a3904da9c02cb7dd3dd3b0f5b3b2d1c",
           "restored_files": 980,
-          "source_commit": "d889c4ea4ca999736b5ef94e68db49e38c7f366f"
+          "source_commit": "6a64935a4d66611772f08ceed15a1a4c58edb949"
         }
       ],
       "repair_status": "未着手",
       "retest": {
         "previous": "一部完了",
-        "at": "2026-11-22T10:20:01.850654+00:00"
+        "at": "2026-11-22T15:22:43.822053+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
@@ -24843,20 +24843,20 @@
       "automatic_method": "未実装または手動検証が必要。実行成功扱いにしない",
       "implementation": "pending",
       "result": "一部完了",
-      "last_run": "2026-11-22T10:20:01.850654+00:00",
+      "last_run": "2026-11-22T15:22:43.822053+00:00",
       "errors": [],
       "evidence": [
         {
           "scope": "committed source only; production D1/member data not backed up or restored",
-          "archive_sha256": "7d853396a4a851f60a8aa6c80ff3a64890d0b31dd54e584baf526daddf62686f",
+          "archive_sha256": "80a29fb908598774984acfaca9c371c06a3904da9c02cb7dd3dd3b0f5b3b2d1c",
           "restored_files": 980,
-          "source_commit": "d889c4ea4ca999736b5ef94e68db49e38c7f366f"
+          "source_commit": "6a64935a4d66611772f08ceed15a1a4c58edb949"
         }
       ],
       "repair_status": "未着手",
       "retest": {
         "previous": "一部完了",
-        "at": "2026-11-22T10:20:01.850654+00:00"
+        "at": "2026-11-22T15:22:43.822053+00:00"
       },
       "classification": "手動確認が必要",
       "manual_method": "管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない"
