@@ -133,6 +133,7 @@
 - [x] 支給額・減免額の計算を実装 **〔完了：現行収録の児童手当の月額試算・境界検証・既存周期6検証成功〕** <!-- todo:T27 project:TODOROKI JAPAN SUPPORT -->
 - [x] 更新停止・制度終了を検知 **〔完了：取得停止・確認済み終了・申請締切・未確認を分離し既存周期で保存確認〕** <!-- todo:T28 project:TODOROKI JAPAN SUPPORT -->
 - [ ] 正確性と安全性を検証後に公開 **〔収集・保存検証中／一般公開保留〕** <!-- todo:T29 project:TODOROKI JAPAN SUPPORT -->
+  - 2026-11-22追記：出生月と支給対象期間の矛盾を保留する修正を[下書きPR #154](https://github.com/2szzrkyhkt-commits/TODOROKI/pull/154)（`0c4f4baa`）へ。現行mainの対象2ファイルが隔離試験の変更前と一致、PR上の変更後バイトも一致。金額633・資格1,079を確認済み。GitHub CI・本番反映・一般公開は未確認。
   - 2026-11-22追記：非公開の児童手当試算候補で、確認済みの支給対象期間が出生月以前と矛盾した場合、金額・内訳を出さず再確認にするよう修正。[こども家庭庁の制度案内](https://www.cfa.go.jp/policies/kokoseido/jidouteate/annai/)と[江東区の実例](https://www.city.koto.lg.jp/281011/2024jidou.html)で根拠を照合。隔離テストは金額633（追加35）・資格1,079が成功。クラウド反映・法令候補6件の照合・一般公開は未実施。
   - 2026-11-22追記：非公開本番D1を読取照合。Jグランツの候補3,362件、検索ジョブ8件・エラー0、処理待ち入力4,732行。候補は公開件数・募集中件数ではない。既存周期の児童手当の条件5/5・金額6/6の合成テスト成功。制度自体はpending、改定候補6件の審査が残る。コード・データ・アクセス設定は変更せず一般公開保留。
   - 児童手当の公開前照合：こども家庭庁の[制度案内](https://www.cfa.go.jp/policies/kokoseido/jidouteate/annai/)・[一般Q&A](https://www.cfa.go.jp/policies/kokoseido/jidouteate/faq/ippan/)・[施設等Q&A](https://www.cfa.go.jp/policies/kokoseido/jidouteate/faq/jigyousha/)を現行ルールと比較。標準の年齢・金額・第3子カウント・施設区分を照合し、条件1,079件・金額598件のローカル検証が成功。海外留学、離婚前の別居・養育状況、里親等、15日特例は要確認の扱いを継続。公開前に適用中の法令改定版と保存した根拠を突合し、画面上「対象外」を受給不可の確定と読めないことを確認する。自動取得・公開は変更しない。
