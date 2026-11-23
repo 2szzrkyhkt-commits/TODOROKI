@@ -59,23 +59,6 @@ try {
       assert(geometry.coverage >= geometry.viewport);
       assert(geometry.copies);
       if (sparse) assert(geometry.groupWidth < geometry.viewport);
-      const seams = await track.evaluate(element => {
-        const animation = element.getAnimations()[0];
-        const duration = animation.effect.getTiming().duration;
-        const saved = animation.currentTime;
-        const x = () => new DOMMatrix(getComputedStyle(element).transform).m41;
-        const half = element.getBoundingClientRect().width / 2;
-        const gaps = [];
-        for (let loop = 1; loop <= 3; loop++) {
-          animation.currentTime = loop * duration - 1;
-          const before = x();
-          animation.currentTime = loop * duration + 1;
-          gaps.push(Math.abs(Math.abs(x() - before) - half));
-        }
-        animation.currentTime = saved;
-        return gaps;
-      });
-      assert(seams.every(gap => gap < 1));
       const start = (await motion())[0];
       await page.waitForTimeout(180);
       assert.notEqual((await motion())[0],start);
@@ -101,6 +84,25 @@ try {
       const start = await times();
       await page.waitForTimeout(31_000);
       assert((await times()).every((time, index) => time - start[index] >= 30_000));
+    }
+    // Seek through the seam only after checking natural motion. Seeking can reset
+    // the CSS animation's playback state on WebKit.
+    for (const track of await page.locator('.news-ticker-track').all()) {
+      const seams = await track.evaluate(element => {
+        const animation = element.getAnimations()[0];
+        const duration = animation.effect.getTiming().duration;
+        const x = () => new DOMMatrix(getComputedStyle(element).transform).m41;
+        const half = element.getBoundingClientRect().width / 2;
+        const gaps = [];
+        for (let loop = 1; loop <= 3; loop++) {
+          animation.currentTime = loop * duration - 1;
+          const before = x();
+          animation.currentTime = loop * duration + 1;
+          gaps.push(Math.abs(Math.abs(x() - before) - half));
+        }
+        return gaps;
+      });
+      assert(seams.every(gap => gap < 1));
     }
     await page.emulateMedia({reducedMotion:'reduce'});
     const archiveRow = page.locator('#archive-ticker');

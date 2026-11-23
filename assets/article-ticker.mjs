@@ -13,7 +13,7 @@ export function archiveSelection({minAge, candidates}, latest, now = Date.now(),
   return Array.from({length:count}, (_, index) => eligible[(start+index)%eligible.length]);
 }
 
-function ticker(element, eventName) {
+function mountTicker(element, eventName) {
   const windowElement = element?.querySelector('.news-ticker-window');
   const track = element?.querySelector('.news-ticker-track');
   const button = element?.querySelector('button');
@@ -74,6 +74,22 @@ function ticker(element, eventName) {
     element.hidden = false;
     resize.observe(primary);
     update();
+  };
+}
+
+function ticker(element, eventName) {
+  let render;
+  try {
+    render = mountTicker(element, eventName);
+  } catch (error) {
+    console.error(eventName, error);
+  }
+  return entries => {
+    try {
+      render?.(entries);
+    } catch (error) {
+      console.error(eventName, error);
+    }
   };
 }
 
