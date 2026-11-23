@@ -20,6 +20,11 @@
 .news-ticker[data-motion="true"][data-paused="true"] .news-ticker-track {
   animation-play-state: paused;
 }
+@media (hover: hover) and (pointer: fine) {
+  .news-ticker[data-motion="true"]:hover .news-ticker-track {
+    animation-play-state: paused;
+  }
+}
 .news-ticker[data-motion="false"] .news-ticker-window,
 .news-ticker[data-motion]:has(.news-ticker-group a:focus-visible) .news-ticker-window { overflow-x: auto; scrollbar-width: thin; }
 .news-ticker[data-motion="false"] .news-ticker-track,
