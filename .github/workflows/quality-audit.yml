@@ -74,6 +74,13 @@ jobs:
             weekly|monthly) npx playwright install --with-deps chromium firefox webkit ;;
             *) echo "Unexpected browser audit mode: $MODE" >&2; exit 1 ;;
           esac
+      - name: Ticker endurance and WebKit regression
+        if: github.event_name == 'pull_request'
+        run: |
+          node tools/sync-article-revival.mjs
+          npx playwright install --with-deps webkit
+          PLAYWRIGHT_ENGINE=webkit node tools/quality/article-revival-browser.mjs
+          TICKER_LONG_SMOKE=1 node tools/quality/article-revival-browser.mjs
       - name: Browser checks
         if: steps.cadence.outputs.mode != 'hourly'
         env:

@@ -495,7 +495,7 @@ footer {
 .news-ticker-group a:hover{text-decoration:underline;color:#fff}
 .news-ticker-group a:focus-visible{outline:2px solid #fff;outline-offset:-2px}
 .news-ticker-group a::before{content:'◆';font-size:8px;margin-right:10px;color:#b69a50}
-@keyframes todoroki-ticker{to{transform:translateX(-50%)}}
+@keyframes todoroki-ticker{from{transform:translateX(0)}to{transform:translateX(var(--ticker-distance,-50%))}}
 @media(max-width:600px){.news-ticker-label{padding-inline:8px;font-size:10px}.news-ticker-group{gap:16px}.news-ticker-group a{font-size:12px}}
 
 #glossary,#pdf-library{scroll-margin-top:150px}.reference-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.reference-cards .card{height:100%}@media(max-width:720px){.reference-cards{grid-template-columns:1fr}}
@@ -547,9 +547,9 @@ body#page-top > .site-header::before {
 <script src="/assets/economy-mobile-launch.js" defer></script>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-<link rel="stylesheet" href="/assets/article-revival.css">
+<link rel="stylesheet" href="/assets/article-revival.css?v=20261123-ticker2">
 <script defer src="/assets/article-events.js"></script>
-<script type="module" src="/assets/article-ticker.mjs"></script>
+<script type="module" src="/assets/article-ticker.mjs?v=20261123-ticker2"></script>
 </head>
 
 <body id="page-top">
