@@ -6,7 +6,7 @@ import {fileURLToPath} from 'node:url';
 import assert from 'node:assert/strict';
 const root=fileURLToPath(new URL('../../',import.meta.url));
 const aliases=new Set(['/app','/app/','/app/index.html','/app/index']);
-const ct={'.html':'text/html; charset=utf-8','.js':'application/javascript','.css':'text/css','.png':'image/png','.svg':'image/svg+xml','.webmanifest':'application/manifest+json','.mp4':'video/mp4','.ico':'image/x-icon','.webp':'image/webp'};
+const ct={'.html':'text/html; charset=utf-8','.js':'application/javascript','.mjs':'application/javascript','.css':'text/css','.png':'image/png','.svg':'image/svg+xml','.webmanifest':'application/manifest+json','.mp4':'video/mp4','.ico':'image/x-icon','.webp':'image/webp'};
 const economyRequests=[];
 const earningsLinks=['/toto-5332-earnings-valuation-2026','/smc-6273-earnings-valuation-2026','/taiheiyo-cement-5233-valuation-2026-nov'];
 const server=createServer(async(req,res)=>{
