@@ -70,6 +70,24 @@ response=await worker.fetch(make('/history?law_id='+law,{...auth,Accept:'text/ht
 assert.ok(response.headers.get('Content-Security-Policy').includes("frame-ancestors 'none'"));checks++;
 response=await worker.fetch(make('/history?law_id=bad',auth),env);eq(response.status,400);
 response=await worker.fetch(make('/history?law_id=340AC0000000033',auth),env);eq(response.status,404);
+const historyAt=async (day,headers=auth)=>worker.fetch(make('/history?law_id='+law+'&as_of='+day,headers),env);
+response=await historyAt('2018-03-31');eq(response.status,200);
+const dated=await response.json();eq(dated.as_of,'2018-03-31');eq(dated.revision_id,old);eq(dated.state,'verified');eq(dated.xml,xmls.get(old));
+response=await historyAt('2018-04-01');eq((await response.json()).state,'inactive');
+response=await historyAt('2027-01-01');eq((await response.json()).reason,'outside_verified_date_range');
+response=await historyAt('2026-02-30');eq(response.status,400);
+response=await historyAt('2018-03-31&as_of=2018-04-01');eq(response.status,400);
+response=await historyAt('2018-03-31',{});eq(response.status,401);
+response=await historyAt('2018-03-31',{...auth,Accept:'text/html'});eq(response.status,200);
+assert.ok((await response.text()).includes('&lt;Article&gt;旧条文'));checks++;
+const oldBody=kv.map.get('history:body:'+old);
+kv.map.delete('history:body:'+old);
+response=await historyAt('2018-03-31');eq((await response.json()).reason,'body_not_verified');
+kv.map.set('history:body:'+old,oldBody);
+const indexKey='history:index:'+law;
+kv.map.set(indexKey,JSON.stringify({...snapshot,revisions:[...snapshot.revisions,{...snapshot.revisions[1],revision_id:old+'X'}]}));
+response=await historyAt('2018-03-31');eq((await response.json()).reason,'ambiguous_revision');
+kv.map.set(indexKey,JSON.stringify(snapshot));
 response=await worker.fetch(make('/status'),env);eq((await response.json()).total_saved,243);
 eq(classify('地方税法'),['住民税','事業税','固定資産税']);
 const report=await collectTax(env);eq(report.phase,'idle');eq(kv.map.get('state'),original.get('state'));
@@ -99,3 +117,4 @@ try{
 }finally{globalThis.fetch=originalFetch;}
 await import('node:fs/promises').then(async fs=>{await fs.mkdir('quality-results',{recursive:true});await fs.writeFile('quality-results/tax-history-fixture.html',html);});
 console.log('T21 history: '+checks+' assertions passed; synthetic XML fixture, official-style revision metadata, namespace preservation, readback, bounds, dates, authenticated JSON/HTML and cadence.');
+
