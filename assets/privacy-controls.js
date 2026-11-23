@@ -54,7 +54,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 })();
 
 
-/* Keep OFUSE links in the page flow and reuse any existing article CTA. */
+/* Keep the OFUSE buttons near the header and footer. */
 (()=>{'use strict';
 if(document.currentScript?.hasAttribute('data-todoroki-consent-only'))return;
 if(/^\/(?:login|privacy|contact|data-use)(?:\.html)?\/?$/.test(location.pathname))return;
@@ -99,25 +99,17 @@ function addSupportLinks(){
  const header=document.querySelector('header.site-header');
  const isHome=header?.dataset.preserveHeader==='ofuse';
  const main=document.querySelector('main') || document.querySelector('#main-content');
- const article=main?.querySelector('article:has(h1)') || document.querySelector('article:has(h1)');
- const placements=[
-  [isHome ? null : header,'afterend'],
-  [article,'beforeend'],
-  [document.querySelector('body > footer, footer:not(article footer)'),'afterbegin']
- ];
- if(isHome){
-  placements.push(
-   [document.querySelector('#articles > .wrap'),'beforeend'],
-   [document.querySelector('#company-analysis > .wrap'),'beforeend']
-  );
- }
- document.querySelectorAll('.article-ofuse-link[href="'+destination+'"]').forEach(useSupportImage);
- placements.forEach(([target,position])=>place(target,position));
+ const footer=document.querySelector('body > footer, footer:not(article footer)');
+ document.querySelectorAll('.article-ofuse').forEach(block=>{
+  if(block.querySelector('.article-ofuse-link[href="'+destination+'"]'))block.remove();
+ });
+ if(!isHome)place(header,'afterend');
+ place(footer || main,footer ? 'afterbegin' : 'beforeend');
  const style=document.createElement('style');
  style.textContent=`
  .todoroki-support{display:flex;justify-content:center;margin:16px 0;padding:0 12px}
- .todoroki-support > a.todoroki-support-image,.article-ofuse a.article-ofuse-link.todoroki-support-image{
-  display:inline-flex;align-items:center;min-height:44px;width:300px;max-width:100%;
+ .todoroki-support > a.todoroki-support-image{
+  display:inline-flex;align-items:center;min-height:44px;width:240px;max-width:100%;
   padding:0;border:0;border-radius:6px;background:transparent;color:#f4d77b;text-decoration:none
  }
  .todoroki-support-image > img{display:block;width:100%;height:auto}
