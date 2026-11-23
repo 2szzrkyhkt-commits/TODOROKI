@@ -113,23 +113,16 @@ try {
         const expectedJump = half * (1 - 2 * step / duration);
         animation.pause();
         await animation.ready;
-        const position = async time => {
+        const distance = Number.parseFloat(getComputedStyle(element).getPropertyValue('--ticker-distance'));
+        const position = time => {
           animation.currentTime = time;
-          // WebKit can report the previous compositor frame after seeking.
-          const phase = (time % duration) / duration;
-          const expected = -half * phase;
-          let x;
-          for (let frame = 0; frame < 12; frame++) {
-            await new Promise(resolve => requestAnimationFrame(resolve));
-            x = new DOMMatrix(getComputedStyle(element).transform).m41;
-            if (Math.abs(x - expected) < 1) break;
-          }
-          return x;
+          const progress = animation.effect.getComputedTiming().progress;
+          return progress === null ? NaN : distance * progress;
         };
         const gaps = [];
         for (let loop = 1; loop <= 3; loop++) {
-          const before = await position(loop * duration - step);
-          const after = await position(loop * duration + step);
+          const before = position(loop * duration - step);
+          const after = position(loop * duration + step);
           gaps.push(Math.abs(Math.abs(after - before) - expectedJump));
         }
         return gaps;
