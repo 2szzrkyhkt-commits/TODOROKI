@@ -17,12 +17,8 @@
 .news-ticker[data-motion="true"] .news-ticker-track {
   animation: todoroki-ticker var(--ticker-duration) linear infinite;
 }
-#archive-ticker .news-ticker-track { animation-direction: reverse; }
 .news-ticker[data-motion="true"][data-paused="true"] .news-ticker-track {
   animation-play-state: paused;
-}
-@media (hover:hover) and (pointer:fine) {
-  .news-ticker[data-motion="true"] .news-ticker-window:hover .news-ticker-track { animation-play-state: paused; }
 }
 .news-ticker[data-motion="false"] .news-ticker-window,
 .news-ticker[data-motion]:has(.news-ticker-group a:focus-visible) .news-ticker-window { overflow-x: auto; scrollbar-width: thin; }

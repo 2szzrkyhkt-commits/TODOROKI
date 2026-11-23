@@ -36,7 +36,7 @@ try {
     const errors = [];
     page.on('pageerror',error => errors.push(error.message));
     await page.goto(origin+'/',{waitUntil:'domcontentloaded'});
-    for (const [id,direction] of [['news-ticker','normal'],['archive-ticker','reverse']]) {
+    for (const id of ['news-ticker', 'archive-ticker']) {
       const row = page.locator('#'+id);
       await row.waitFor();
       const track = row.locator('.news-ticker-track');
@@ -45,7 +45,7 @@ try {
         const css = getComputedStyle(element);
         return [css.transform,css.animationDirection,css.animationPlayState,element.getAnimations()[0]?.currentTime];
       });
-      assert.equal((await motion())[1],direction);
+      assert.equal((await motion())[1],'normal');
       const geometry = await track.evaluate(element => ({
         coverage: element.getBoundingClientRect().width / 2,
         viewport: element.parentElement.clientWidth,
@@ -55,6 +55,11 @@ try {
       assert(geometry.coverage >= geometry.viewport);
       assert(geometry.copies);
       if (sparse) assert(geometry.groupWidth < geometry.viewport);
+      if (width >= 500) {
+        const viewport = await row.locator('.news-ticker-window').boundingBox();
+        await page.mouse.move(viewport.x + viewport.width / 2, viewport.y + viewport.height / 2);
+        assert.equal((await motion())[2], 'running');
+      }
       const start = (await motion())[0];
       for (let attempt = 0; attempt < 10 && (await motion())[0] === start; attempt++) {
         await page.waitForTimeout(150);
