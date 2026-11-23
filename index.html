@@ -3,7 +3,7 @@
 
 <head>
 <meta name="google-adsense-account" content="ca-pub-7179318481718851">
-<script src="/assets/privacy-controls.js" defer></script>
+<script src="/assets/privacy-controls.js?v=ofuse-header-1" defer></script>
   <meta name="impact-site-verification" value="cf3c93cb-4fe9-42cc-8251-1da2c4e99c80">
   <!-- Google tag (gtag.js) -->
 
@@ -519,26 +519,25 @@ body#page-top > .site-header::before {
   left: env(safe-area-inset-left, 0px);
   right: env(safe-area-inset-right, 0px);
 }
-/* OFUSE support button: responsive sticky header placement */
+/* One OFUSE button shared by desktop and mobile layouts. */
 .site-header[data-preserve-header="ofuse"] .brand-row{gap:clamp(8px,1.2vw,18px)}
-.ofuse-header-desktop{display:block;flex:0 1 205px;min-width:125px;max-width:205px;margin-left:auto;line-height:0}
-.ofuse-header-desktop img,.ofuse-header-mobile img{display:block;width:100%;height:auto}
-.ofuse-mobile-row{display:none}
+.ofuse-header-slot{flex:0 1 205px;min-width:125px;max-width:205px;margin-left:auto}
+.site-header .ofuse-header-button{display:block;line-height:0}
+.ofuse-header-button img{display:block;width:100%;height:auto}
 @media(min-width:1201px){
  .site-header[data-preserve-header="ofuse"] .desktop-links{gap:clamp(7px,1vw,15px);margin-left:0}
  .site-header[data-preserve-header="ofuse"] .desktop-links a{font-size:clamp(11px,.9vw,13px)}
  .site-header[data-preserve-header="ofuse"] .logo{font-size:clamp(19px,1.6vw,24px);letter-spacing:.11em}
 }
 @media(max-width:1200px){
- .ofuse-header-desktop{display:none}
- .ofuse-mobile-row{display:flex;justify-content:center;align-items:center;min-height:52px;padding:5px 12px;border-top:1px solid #302715}
- .ofuse-header-mobile{display:block;width:min(270px,82vw);line-height:0}
- .site-header[data-preserve-header="ofuse"].ofuse-scrolled .ofuse-mobile-row{min-height:36px;padding:2px 10px}
- .site-header[data-preserve-header="ofuse"].ofuse-scrolled .ofuse-header-mobile{width:190px}
+ .site-header[data-preserve-header="ofuse"] .brand-row{flex-wrap:wrap;row-gap:0;padding-top:6px}
+ .ofuse-header-slot{order:1;display:flex;justify-content:center;align-items:center;flex:0 0 100%;min-width:0;max-width:none;min-height:52px;margin:0;padding:5px 0;border-top:1px solid #302715}
+ .site-header .ofuse-header-button{width:min(270px,82vw)}
+ .site-header[data-preserve-header="ofuse"].ofuse-scrolled .ofuse-header-slot{min-height:36px;padding:2px 0}
+ .site-header[data-preserve-header="ofuse"].ofuse-scrolled .ofuse-header-button{width:190px}
  .site-header[data-preserve-header="ofuse"].ofuse-scrolled .mobile-links{display:none}
- .site-header[data-preserve-header="ofuse"].ofuse-scrolled .brand-row{min-height:54px}
 }
-@media(max-width:380px){.ofuse-header-mobile{width:min(245px,80vw)}}
+@media(max-width:380px){.site-header .ofuse-header-button{width:min(245px,80vw)}}
 </style>
 <link rel="manifest" href="/app/manifest.webmanifest">
 <meta name="apple-mobile-web-app-title" content="TODOROKI">
@@ -587,7 +586,7 @@ body#page-top > .site-header::before {
       <a href="/#study">学ぶ</a>
       <a href="/#company-analysis">ツール</a>
     </nav>
-    <a class="ofuse-header-desktop" href="https://ofuse.me/todoroki_gold" target="_blank" rel="noopener noreferrer" aria-label="OFUSEでTODOROKIを応援する（外部サイト）"><img src="/assets/todoroki-ofuse-button-3.png" alt="TODOROKIを応援する" width="1209" height="238" decoding="async"></a>
+    <div class="ofuse-header-slot"><a class="ofuse-header-button" href="https://ofuse.me/todoroki_gold" target="_blank" rel="noopener noreferrer" aria-label="OFUSEでTODOROKIを応援する（外部サイト）"><img src="/assets/todoroki-ofuse-button-3.png" alt="TODOROKIを応援する" width="1209" height="238" decoding="async"></a></div>
     <label class="todoroki-language-picker">🌐 <select data-todoroki-language aria-label="表示言語 / Language"><option value="ja" selected>日本語</option><option value="en">English</option><option value="es">Español</option><option value="pt">Português</option><option value="zh-Hant">繁體中文</option><option value="zh-Hans">简体中文</option></select></label>
     <div class="header-account" data-header-account>
       <a class="account-link" href="/login" hidden>
@@ -605,7 +604,6 @@ body#page-top > .site-header::before {
       <noscript><a class="account-link" href="/login">ログイン</a></noscript>
     </div>
   </div>
-  <div class="ofuse-mobile-row"><a class="ofuse-header-mobile" href="https://ofuse.me/todoroki_gold" target="_blank" rel="noopener noreferrer" aria-label="OFUSEでTODOROKIを応援する（外部サイト）"><img src="/assets/todoroki-ofuse-button-3.png" alt="TODOROKIを応援する" width="1209" height="238" decoding="async"></a></div>
   <nav class="mobile-links" aria-label="メインメニュー">
     <a href="/#latest-articles">新着記事</a>
     <a href="/#articles">基礎</a>
