@@ -4,6 +4,8 @@ import datetime as dt
 import json
 import pathlib
 import re
+import sys
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from triage import triage
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
