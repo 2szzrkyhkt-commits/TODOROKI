@@ -25,6 +25,11 @@ function mountTicker(element, eventName) {
   let primary = track.firstElementChild;
   let copies = 0;
   let paused = false;
+  // A pointer resting over the ticker when the page opens must not block autoplay.
+  element.addEventListener('pointermove', event => {
+    if (event.pointerType === 'mouse') element.dataset.hoverActive = 'true';
+  }, {passive: true});
+  element.addEventListener('pointerleave', () => { element.dataset.hoverActive = 'false'; });
   const update = () => {
     const width = primary?.getBoundingClientRect().width ?? 0;
     if (!width || !windowElement.clientWidth) return;

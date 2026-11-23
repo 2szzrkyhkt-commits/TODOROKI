@@ -21,7 +21,7 @@
   animation-play-state: paused;
 }
 @media (hover: hover) and (pointer: fine) {
-  .news-ticker[data-motion="true"]:hover .news-ticker-track {
+  .news-ticker[data-motion="true"][data-hover-active="true"]:hover .news-ticker-track {
     animation-play-state: paused;
   }
 }
