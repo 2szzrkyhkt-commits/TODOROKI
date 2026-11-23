@@ -54,7 +54,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 })();
 
 
-/* Keep the OFUSE buttons near the header and footer. */
+/* Keep the OFUSE button in the sticky site header. */
 (()=>{'use strict';
 if(document.currentScript?.hasAttribute('data-todoroki-consent-only'))return;
 if(/^\/(?:login|privacy|contact|data-use)(?:\.html)?\/?$/.test(location.pathname))return;
@@ -79,10 +79,8 @@ function useSupportImage(link){
  link.classList.add('todoroki-support-image');
  link.replaceChildren(img);
 }
-function place(target,position){
- if(!target)return false;
- if(target.querySelector('a[href="'+destination+'"]') ||
-    (position==='afterend' && target.nextElementSibling?.classList.contains('todoroki-support')))return false;
+function place(header){
+ if(!header || header.querySelector('a[href="'+destination+'"]'))return;
  const block=document.createElement('div');
  block.className='todoroki-support';
  const link=document.createElement('a');
@@ -92,24 +90,20 @@ function place(target,position){
  link.textContent=labels[locale] || labels[locale.split('-')[0]] || labels.en;
  useSupportImage(link);
  block.append(link);
- target.insertAdjacentElement(position,block);
- return true;
+ header.append(block);
 }
 function addSupportLinks(){
  const header=document.querySelector('header.site-header');
- const isHome=header?.dataset.preserveHeader==='ofuse';
- const main=document.querySelector('main') || document.querySelector('#main-content');
- const footer=document.querySelector('body > footer, footer:not(article footer)');
  document.querySelectorAll('.article-ofuse').forEach(block=>{
   if(block.querySelector('.article-ofuse-link[href="'+destination+'"]'))block.remove();
  });
- if(!isHome)place(header,'afterend');
- place(footer || main,footer ? 'afterbegin' : 'beforeend');
+ if(!header || header.dataset.preserveHeader==='ofuse')return;
+ place(header);
  const style=document.createElement('style');
  style.textContent=`
- .todoroki-support{display:flex;justify-content:center;margin:16px 0;padding:0 12px}
+ .todoroki-support{display:flex;justify-content:center;margin:0;padding:0 12px 4px}
  .todoroki-support > a.todoroki-support-image{
-  display:inline-flex;align-items:center;min-height:44px;width:240px;max-width:100%;
+  display:inline-flex;align-items:center;min-height:44px;width:200px;max-width:100%;
   padding:0;border:0;border-radius:6px;background:transparent;color:#f4d77b;text-decoration:none
  }
  .todoroki-support-image > img{display:block;width:100%;height:auto}
