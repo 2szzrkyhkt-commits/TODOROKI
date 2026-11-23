@@ -125,6 +125,35 @@ export async function refreshHistory(env,law,{fetcher=fetch,now=new Date().toISO
  return verification;
 }
 export async function getHistory(env,law){if(!validLaw(law))throw Error('invalid law id');return await env.TAX.get('history:index:'+law,'json');}
+export async function getDatedHistory(env,law,asOf){
+ if(!validDate(asOf))throw Error('invalid as_of date');
+ const snapshot=await getHistory(env,law);
+ const base={law_id:law,as_of:asOf,checked_at:snapshot?.checked_at??null};
+ if(!snapshot)return {...base,state:'not_collected'};
+ const unverified=(reason,revision)=>({...base,state:'unverified',reason,...(revision?{revision_id:revision.revision_id}:{})});
+ if(!validDate(snapshot.as_of)||asOf>snapshot.as_of)return unverified('outside_verified_date_range');
+ const rows=snapshot.revisions.filter(r=>validDate(r.enforcement_date)&&r.enforcement_date<=asOf);
+ const latest=rows.reduce((date,r)=>r.enforcement_date>date?r.enforcement_date:date,'');
+ const candidates=rows.filter(r=>r.enforcement_date===latest);
+ if(candidates.length!==1)return unverified(candidates.length?'ambiguous_revision':'revision_not_listed');
+ const [row]=candidates;
+ const detail=row.revision_info;
+ if(!detail||!validRevision(row.revision_id,law)||detail.law_revision_id!==row.revision_id||detail.amendment_enforcement_date!==row.enforcement_date)return unverified('invalid_revision_metadata',row);
+ if(['Repeal','Expire','LossOfEffectiveness','Suspend'].includes(detail.repeal_status)){
+  if(!validDate(detail.repeal_date)||detail.repeal_date!==row.enforcement_date||detail.remain_in_force)return unverified('ambiguous_repeal_or_suspension',row);
+  return {...base,state:'inactive',revision_id:row.revision_id};
+ }
+ if(detail.repeal_date&&(!validDate(detail.repeal_date)||detail.repeal_date<=asOf))return unverified('inconsistent_repeal_date',row);
+ const record=await env.TAX.get('history:record:'+row.revision_id,'json');
+ if(record?.law_id!==law||record.revision_id!==row.revision_id||!record.sha256)return unverified('body_not_verified',row);
+ const raw=await env.TAX.get('history:body:'+row.revision_id,'arrayBuffer');
+ if(!raw||raw.byteLength>MAX_BODY||await sha(raw)!==record.sha256)return unverified('body_not_verified',row);
+ return {...base,state:'verified',revision_id:row.revision_id,enforcement_date:row.enforcement_date,
+  source_url:record.body_source_url,sha256:record.sha256,xml:new TextDecoder().decode(raw)};
+}
+export function renderDatedHistory(result){
+ return '<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="robots" content="noindex"><title>指定日の税法履歴</title><h1>指定日の税法履歴</h1><p>指定日 '+esc(result.as_of)+' ／ 収録確認日時 '+esc(result.checked_at)+'</p><p>'+esc(result.revision_id??result.law_id)+'</p><p>'+esc(result.state==='verified'?'確認済み':result.state==='inactive'?'廃止・失効・停止':'未確認')+'</p>'+(result.xml?'<pre>'+esc(result.xml)+'</pre>':'')+'</html>';
+}
 const esc=s=>String(s??'未確認').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function renderHistory(s){
  if(!s)return '<!doctype html><meta charset="utf-8"><p>この法令の履歴は未収集です。</p>';
@@ -141,4 +170,5 @@ export async function historyTick(env,{verifyRoutes,egovFetch}={}){
  state.queue.shift();state.next_at=new Date(Date.now()+INTERVAL).toISOString();state.last_law_id=law;state.last_success=result.at;
  await save(env,'history:state',JSON.stringify(state));return {...result,next_at:state.next_at};
 }
+
 
