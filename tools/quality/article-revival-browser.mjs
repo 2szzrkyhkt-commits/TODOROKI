@@ -119,12 +119,22 @@ try {
       });
       assert(seams.every(gap => gap < 2), JSON.stringify({width,seams}));
     }
+    await page.reload({waitUntil:'domcontentloaded'});
+    const motionReady = enabled => page.waitForFunction(expected =>
+      [...document.querySelectorAll('.news-ticker')].length === 2 &&
+      [...document.querySelectorAll('.news-ticker')].every(row => {
+        const track = row.querySelector('.news-ticker-track');
+        return row.dataset.motion === String(expected) &&
+          (getComputedStyle(track).animationName === 'todoroki-ticker') === expected;
+      }), enabled, {timeout:5000});
+    await motionReady(true);
     await page.emulateMedia({reducedMotion:'reduce'});
-    const archiveRow = page.locator('#archive-ticker');
-    assert.equal(await archiveRow.locator('.news-ticker-track').evaluate(e=>getComputedStyle(e).animationName),'none');
+    await motionReady(false);
     await page.emulateMedia({reducedMotion:'no-preference'});
-    await page.waitForFunction(() => [...document.querySelectorAll('.news-ticker-track')].every(track => track.getAnimations().length === 1));
+    await motionReady(true);
     await page.emulateMedia({reducedMotion:'reduce'});
+    await motionReady(false);
+    const archiveRow = page.locator('#archive-ticker');
     await archiveRow.locator('.news-ticker-group:not([aria-hidden]) a').first().press('Enter');
     await page.waitForURL(origin+archive[0]);
     await page.goto(origin+'/investment-list#reading-paths');
