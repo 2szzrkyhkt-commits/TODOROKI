@@ -1,8 +1,6 @@
 name: TODOROKI command center snapshot
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '43 1 * * *'
 permissions:
   contents: read
 concurrency:
