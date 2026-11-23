@@ -14,17 +14,34 @@ export function archiveSelection({minAge, candidates}, latest, now = Date.now(),
 }
 
 function ticker(element, eventName) {
-  const windowElement = element.querySelector('.news-ticker-window');
-  const track = element.querySelector('.news-ticker-track');
-  const button = element.querySelector('button');
+  const windowElement = element?.querySelector('.news-ticker-window');
+  const track = element?.querySelector('.news-ticker-track');
+  const button = element?.querySelector('button');
+  if (!windowElement || !track || !button) return () => {};
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   let primary = track.firstElementChild;
+  let copies = 0;
   let paused = false;
   const update = () => {
     const width = primary?.getBoundingClientRect().width ?? 0;
-    const motion = width >= windowElement.clientWidth && width > 0 && !reduced.matches;
+    if (!width || !windowElement.clientWidth) return;
+    const motion = !reduced.matches;
+    const repetitions = motion ? Math.ceil(windowElement.clientWidth / width) : 1;
+    const requiredCopies = repetitions * 2 - 1;
+    // Both halves must contain the same sequence for translateX(-50%) to wrap.
+    while (copies > requiredCopies) {
+      track.lastElementChild.remove();
+      copies--;
+    }
+    while (copies < requiredCopies) {
+      const copy = primary.cloneNode(true);
+      copy.setAttribute('aria-hidden', 'true');
+      for (const link of copy.querySelectorAll('a')) link.tabIndex = -1;
+      track.append(copy);
+      copies++;
+    }
+    track.style.setProperty('--ticker-duration', (width * repetitions / 62) + 's');
     element.dataset.motion = String(motion);
-    track.style.setProperty('--ticker-duration', (width/62)+'s');
     button.hidden = !motion;
   };
   button.addEventListener('click', () => {
@@ -37,10 +54,11 @@ function ticker(element, eventName) {
   reduced.addEventListener('change', update);
   const resize = new ResizeObserver(update);
   resize.observe(windowElement);
-  const observer = new IntersectionObserver(([entry]) => {
-    element.dataset.outside = String(!entry.isIntersecting);
-  });
-  observer.observe(element);
+  if (primary) {
+    for (const link of primary.querySelectorAll('a')) link.dataset.articleEvent = eventName;
+    resize.observe(primary);
+  }
+  update();
   let signature;
   return entries => {
     const key = JSON.stringify(entries);
@@ -51,10 +69,8 @@ function ticker(element, eventName) {
     primary = document.createElement('div');
     primary.className = 'news-ticker-group';
     for (const entry of entries) primary.append(articleLink(entry, eventName));
-    const copy = primary.cloneNode(true);
-    copy.setAttribute('aria-hidden','true');
-    for (const link of copy.querySelectorAll('a')) link.tabIndex = -1;
-    track.replaceChildren(primary, copy);
+    track.replaceChildren(primary);
+    copies = 0;
     element.hidden = false;
     resize.observe(primary);
     update();
