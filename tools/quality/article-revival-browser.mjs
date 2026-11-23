@@ -111,8 +111,16 @@ try {
         await animation.ready;
         const position = async time => {
           animation.currentTime = time;
-          await new Promise(resolve => requestAnimationFrame(resolve));
-          return new DOMMatrix(getComputedStyle(element).transform).m41;
+          // WebKit can report the previous compositor frame after seeking.
+          const phase = (time % duration) / duration;
+          const expected = -half * phase;
+          let x;
+          for (let frame = 0; frame < 12; frame++) {
+            await new Promise(resolve => requestAnimationFrame(resolve));
+            x = new DOMMatrix(getComputedStyle(element).transform).m41;
+            if (Math.abs(x - expected) < 1) break;
+          }
+          return x;
         };
         const gaps = [];
         for (let loop = 1; loop <= 3; loop++) {
