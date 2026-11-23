@@ -7,14 +7,15 @@ import {fileURLToPath} from 'node:url';
 const {chromium}=await import(process.env.PLAYWRIGHT_MODULE||'playwright');
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'../..');
 const slugs=['/valuation-per-pbr','/fundamental-analysis','/financial-statements-basics'];
+const pages=['/', '/boki1', ...slugs];
 const destination='https://ofuse.me/todoroki_gold';
 const server=createServer(async(req,res)=>{
   try {
     assert.equal(req.method,'GET');
     const path=new URL(req.url,'http://127.0.0.1').pathname;
     if(path==='/api/privacy/region')return res.writeHead(200,{'Content-Type':'application/json'}).end('{"optionalAllowed":false}');
-    const file=resolve(root,'.'+(slugs.includes(path)?path+'.html':path));
-    if(!file.startsWith(root+sep)||(!slugs.includes(path)&&!path.startsWith('/assets/'))) return res.writeHead(404).end();
+    const file=resolve(root,'.'+(path==='/'?'/index.html':pages.includes(path)?path+'.html':path));
+    if(!file.startsWith(root+sep)||(!pages.includes(path)&&!path.startsWith('/assets/'))) return res.writeHead(404).end();
     const mime={'.css':'text/css','.js':'text/javascript','.html':'text/html; charset=utf-8','.png':'image/png'};
     res.writeHead(200,{'Content-Type':mime[extname(file)]??'application/octet-stream'}).end(await readFile(file));
   } catch { if(!res.headersSent)res.writeHead(404);res.end(); }
@@ -79,6 +80,44 @@ try {
     await context.close();
     console.log(`OFUSE ${slug}: ${width}px, JS ${javascript?'on':'off'}, ${javascript?'sticky accessible profile':'visible disclosure and fallback'}, Tab/Enter, mocked GET only`);
   }
+  for (const width of [320, 375, 1200, 1201, 1440]) {
+    const context=await browser.newContext({viewport:{width,height:850},reducedMotion:'reduce'});
+    await context.route('**/*',route=>route.request().url().startsWith(origin+'/')?route.continue():route.abort());
+    const page=await context.newPage();
+    const links=page.locator(`a[href="${destination}"]`);
+    const header=page.locator('header.site-header');
+    const assertSingleSupport=async()=>{
+      assert.equal(await links.count(),1);
+      assert.equal(await header.locator(`a[href="${destination}"]`).isVisible(),true);
+    };
+    const assertClear=async selector=>{
+      await page.waitForFunction(selector=>{
+        const target=document.querySelector(selector).getBoundingClientRect();
+        const bottom=document.querySelector('header.site-header').getBoundingClientRect().bottom;
+        return target.top>=bottom && target.bottom<=innerHeight;
+      },selector);
+    };
+    await page.goto(origin+'/');
+    await assertSingleSupport();
+    await page.goto(origin+'/financial-statements-basics');
+    await page.locator('a[href="/boki1#learn"]').click();
+    await page.waitForURL('**/boki1#learn');
+    await assertClear('#learn h2');
+    await assertSingleSupport();
+    await page.reload();
+    await assertClear('#learn h2');
+    await assertSingleSupport();
+    await page.locator('#lesson-next').click();
+    await assertClear('#count');
+    await page.locator('[data-view="quiz"]').click();
+    await page.locator('#quiz-next').click();
+    await assertClear('#quiz h2');
+    await page.locator('#scope-year').selectOption('2027');
+    assert.equal(await page.locator('#scope-year').inputValue(),'2027');
+    await context.close();
+    console.log(`Bookkeeping: ${width}px, lesson and quiz clear the sticky header, single support link`);
+  }
+
 } finally {
   await browser?.close();
   await new Promise(done=>server.close(done));
