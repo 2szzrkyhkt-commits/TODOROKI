@@ -79,8 +79,8 @@ jobs:
         run: |
           node tools/sync-article-revival.mjs
           npx playwright install --with-deps webkit
-          TICKER_LONG_SMOKE=1 node tools/quality/article-revival-browser.mjs
           PLAYWRIGHT_ENGINE=webkit node tools/quality/article-revival-browser.mjs
+          TICKER_LONG_SMOKE=1 node tools/quality/article-revival-browser.mjs
       - name: Browser checks
         if: steps.cadence.outputs.mode != 'hourly'
         env:
