@@ -39,6 +39,7 @@ jobs:
         run: |
           node tools/sync-page-discovery.mjs
           node tools/quality/page-discovery-sync.test.mjs
+          node --test tools/quality/article-revival.test.mjs
           python -m unittest discover -s tools/quality -p 'test_*.py' -v
           node --test tools/quality/watchdog.test.mjs
           node tools/quality/security.test.mjs
@@ -81,6 +82,8 @@ jobs:
           node tools/quality/consent.mjs
           node tools/quality/browser.mjs
           node tools/quality/page-search-browser.mjs
+          node tools/sync-article-revival.mjs
+          node tools/quality/article-revival-browser.mjs
       - name: Run audit
         if: always() && !cancelled()
         env:

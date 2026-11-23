@@ -12,12 +12,12 @@ export async function inspectHomeKeyboard(page) {
  steps.push('Enter then Tab enters main content');
  let reached=false;
  for(let i=0;i<80;i++){
-  reached=await page.evaluate(()=>!!document.activeElement?.matches('.news-ticker-toggle'));
+  reached=await page.evaluate(()=>!!document.activeElement?.matches('#news-ticker .news-ticker-toggle'));
   if(reached)break;
   await page.keyboard.press('Tab');
  }
  check(reached,'Ticker control was not reachable within 80 Tab presses');
- const button=page.locator('.news-ticker-toggle');
+ const button=page.locator('#news-ticker .news-ticker-toggle');
  check(await button.getAttribute('aria-label')==='テロップを一時停止','Unexpected initial ticker control state');
  await page.keyboard.press('Space');
  check(await button.getAttribute('aria-label')==='テロップを再生','Space did not pause the ticker');

@@ -51,7 +51,7 @@ for(const [name,engine] of Object.entries(weekly?{chromium,firefox,webkit}:{chro
      add(44,loaded?[{path,name,width,error:e.message}]:[],{path,name,width,...(!loaded?{inconclusive:e.message}:{scope:'Japanese homepage keyboard smoke check failed'})});
     }finally{await keyboardPage.close();}
 
-    const track=page.locator('.news-ticker-track');
+    const track=page.locator('#news-ticker .news-ticker-track');
     if(await track.count()){
      const a=await track.evaluate(e=>getComputedStyle(e).transform);await page.waitForTimeout(400);
      const b=await track.evaluate(e=>getComputedStyle(e).transform);
