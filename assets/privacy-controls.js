@@ -52,3 +52,68 @@ function update(){
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',update,{once:true});else update();
 })();
+
+
+/* Keep OFUSE links in the page flow and reuse any existing article CTA. */
+(()=>{'use strict';
+if(document.currentScript?.hasAttribute('data-todoroki-consent-only'))return;
+if(/^\/(?:login|privacy|contact|data-use)(?:\.html)?\/?$/.test(location.pathname))return;
+
+const destination='https://ofuse.me/todoroki_gold';
+const labels={
+ ja:'とどろきを応援する',
+ en:'Support TODOROKI',
+ es:'Apoyar a TODOROKI',
+ pt:'Apoiar TODOROKI',
+ 'zh-hans':'支持 TODOROKI',
+ 'zh-hant':'支持 TODOROKI'
+};
+function place(target,position){
+ if(!target)return false;
+ if(target.querySelector('a[href="'+destination+'"]') ||
+    (position==='afterend' && target.nextElementSibling?.classList.contains('todoroki-support')))return false;
+ const block=document.createElement('div');
+ block.className='todoroki-support';
+ const link=document.createElement('a');
+ link.href=destination;
+ link.rel='noreferrer';
+ const locale=document.documentElement.lang.toLowerCase();
+ link.textContent=labels[locale] || labels[locale.split('-')[0]] || labels.en;
+ block.append(link);
+ target.insertAdjacentElement(position,block);
+ return true;
+}
+function addSupportLinks(){
+ const header=document.querySelector('header.site-header');
+ const isHome=header?.dataset.preserveHeader==='ofuse';
+ const main=document.querySelector('main') || document.querySelector('#main-content');
+ const article=main?.querySelector('article:has(h1)') || document.querySelector('article:has(h1)');
+ const placements=[
+  [isHome ? null : header,'afterend'],
+  [article,'beforeend'],
+  [document.querySelector('body > footer, footer:not(article footer)'),'afterbegin']
+ ];
+ if(isHome){
+  placements.push(
+   [document.querySelector('#articles > .wrap'),'beforeend'],
+   [document.querySelector('#company-analysis > .wrap'),'beforeend']
+  );
+ }
+ if(!placements.map(([target,position])=>place(target,position)).some(Boolean))return;
+ const style=document.createElement('style');
+ style.textContent=`
+ .todoroki-support{display:flex;justify-content:center;margin:16px 0;padding:0 12px}
+ .todoroki-support > a{
+  display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;
+  min-height:44px;max-width:100%;padding:8px 16px;border:1px solid #c5a45d;
+  border-radius:6px;background:#15120d;color:#f4d77b;
+  font:700 14px/1.4 system-ui,sans-serif;letter-spacing:normal;text-decoration:none;text-align:center
+ }
+ .todoroki-support > a:hover{background:#302715;text-decoration:underline}
+ .todoroki-support > a:focus-visible{outline:2px solid #f4d77b;outline-offset:3px}
+ `;
+ document.head.append(style);
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',addSupportLinks,{once:true});
+else addSupportLinks();
+})();
