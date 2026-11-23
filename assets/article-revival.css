@@ -15,7 +15,7 @@
 
 .news-ticker { min-height: 44px; }
 .news-ticker[data-motion="true"] .news-ticker-track {
-  animation: todoroki-ticker var(--ticker-duration) linear infinite;
+  animation: todoroki-ticker var(--ticker-duration, 45s) linear infinite;
 }
 .news-ticker[data-motion="true"][data-paused="true"] .news-ticker-track {
   animation-play-state: paused;
