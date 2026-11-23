@@ -1,6 +1,6 @@
 // Keyboard-only smoke check. No links to external sites or persistent settings are activated.
 // This is deliberately partial: other pages, focus contrast and assistive technology remain unverified.
-export async function inspectHomeKeyboard(page) {
+export async function inspectHomeKeyboard(page, {checkTickerControl = true} = {}) {
  const steps=[];
  const check=(condition,message)=>{if(!condition)throw new Error(message);};
  await page.keyboard.press('Tab');
@@ -10,6 +10,7 @@ export async function inspectHomeKeyboard(page) {
  await page.keyboard.press('Tab');
  check(await page.evaluate(()=>!!document.activeElement?.closest('#main-content')),'Skip link did not move sequential keyboard focus into main content');
  steps.push('Enter then Tab enters main content');
+ if (!checkTickerControl) return {steps,scope:'Japanese homepage skip-link at mobile width'};
  let reached=false;
  for(let i=0;i<80;i++){
   reached=await page.evaluate(()=>!!document.activeElement?.matches('#news-ticker .news-ticker-toggle'));

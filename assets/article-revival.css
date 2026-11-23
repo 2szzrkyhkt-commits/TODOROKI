@@ -37,8 +37,11 @@
   font: inherit; font-size: .75rem; cursor: pointer;
 }
 .news-ticker .news-ticker-toggle[hidden] { display: none; }
+@media (max-width: 767px), (hover: none) and (pointer: coarse) {
+  .news-ticker .news-ticker-toggle { display: none; }
+}
 @media (prefers-reduced-motion:reduce) {
-  .news-ticker[data-motion="true"] .news-ticker-track { animation: none; }
-  .news-ticker .news-ticker-window { overflow-x: auto; }
-  .news-ticker [aria-hidden="true"] { display: none; }
+  .news-ticker[data-motion="true"]:not([data-motion-override="true"]) .news-ticker-track { animation: none; }
+  .news-ticker:not([data-motion-override="true"]) .news-ticker-window { overflow-x: auto; }
+  .news-ticker:not([data-motion-override="true"]) [aria-hidden="true"] { display: none; }
 }

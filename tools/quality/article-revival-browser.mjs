@@ -65,16 +65,20 @@ try {
         await page.waitForTimeout(150);
       }
       assert.notEqual((await motion())[0],start,JSON.stringify({width,id,motion:await motion()}));
-      const stop = row.getByRole('button');
-      await stop.press('Enter');
-      await track.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
-      assert.equal(await track.evaluate(e=>getComputedStyle(e).animationPlayState),'paused');
-      const held = (await motion())[0];
-      await page.waitForTimeout(180);
-      assert.equal((await motion())[0],held);
-      await stop.press('Enter');
-      await page.waitForTimeout(180);
-      assert.notEqual((await motion())[0],held);
+      if (width < 500) {
+        assert.equal(await row.locator('button').isVisible(), false);
+      } else {
+        const stop = row.getByRole('button');
+        await stop.press('Enter');
+        await track.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+        assert.equal(await track.evaluate(e=>getComputedStyle(e).animationPlayState),'paused');
+        const held = (await motion())[0];
+        await page.waitForTimeout(180);
+        assert.equal((await motion())[0],held);
+        await stop.press('Enter');
+        await page.waitForTimeout(180);
+        assert.notEqual((await motion())[0],held);
+      }
     }
     if (width < 500) {
       await page.setViewportSize({width:850,height:width});
@@ -147,6 +151,15 @@ try {
     await motionReady(true);
     await page.emulateMedia({reducedMotion:'reduce'});
     await motionReady(false);
+    if (width >= 500) {
+      for (const id of ['news-ticker', 'archive-ticker']) {
+        const row = page.locator('#'+id);
+        await row.getByRole('button', {name:/を再生$/}).press('Enter');
+        assert.equal(await row.locator('.news-ticker-track').evaluate(e => getComputedStyle(e).animationName), 'todoroki-ticker');
+        await row.getByRole('button', {name:/を一時停止$/}).press('Enter');
+        assert.equal(await row.locator('.news-ticker-track').evaluate(e => getComputedStyle(e).animationName), 'none');
+      }
+    }
     const archiveRow = page.locator('#archive-ticker');
     await archiveRow.locator('.news-ticker-group:not([aria-hidden]) a').first().press('Enter');
     await page.waitForURL(origin+archive[0]);

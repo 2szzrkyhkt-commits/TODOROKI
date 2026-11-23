@@ -19,13 +19,16 @@ function mountTicker(element, eventName) {
   const button = element?.querySelector('button');
   if (!windowElement || !track || !button) return () => {};
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const compact = matchMedia('(max-width: 767px), (hover: none) and (pointer: coarse)');
+  const label = element.id === 'news-ticker' ? 'テロップ' : 'おすすめテロップ';
+  let allowMotion = false;
   let primary = track.firstElementChild;
   let copies = 0;
   let paused = false;
   const update = () => {
     const width = primary?.getBoundingClientRect().width ?? 0;
     if (!width || !windowElement.clientWidth) return;
-    const motion = !reduced.matches;
+    const motion = !reduced.matches || allowMotion;
     const repetitions = motion ? Math.ceil(windowElement.clientWidth / width) : 1;
     const requiredCopies = repetitions * 2 - 1;
     // Both halves must contain the same sequence for translateX(-50%) to wrap.
@@ -44,16 +47,28 @@ function mountTicker(element, eventName) {
     track.style.setProperty('--ticker-distance', -distance + 'px');
     track.style.setProperty('--ticker-duration', (distance / 62) + 's');
     element.dataset.motion = String(motion);
-    button.hidden = !motion;
+    element.dataset.motionOverride = String(allowMotion);
+    element.dataset.paused = String(paused);
+    button.hidden = compact.matches;
+    const play = !motion || paused;
+    button.textContent = play ? '再生' : '停止';
+    button.setAttribute('aria-label', label + (play ? 'を再生' : 'を一時停止'));
   };
   button.addEventListener('click', () => {
-    paused = !paused;
-    element.dataset.paused = String(paused);
-    button.textContent = paused ? '再生' : '停止';
-    const label = element.id === 'news-ticker' ? 'テロップ' : 'おすすめテロップ';
-    button.setAttribute('aria-label', label + (paused ? 'を再生' : 'を一時停止'));
+    if (reduced.matches) {
+      allowMotion = !allowMotion;
+    } else {
+      paused = !paused;
+    }
+    update();
   });
-  reduced.addEventListener('change', update);
+  const resetMotion = () => {
+    paused = false;
+    allowMotion = false;
+    update();
+  };
+  reduced.addEventListener('change', resetMotion);
+  compact.addEventListener('change', resetMotion);
   const resize = new ResizeObserver(update);
   resize.observe(windowElement);
   if (primary) {
