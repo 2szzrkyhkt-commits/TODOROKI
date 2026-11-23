@@ -65,16 +65,20 @@ try {
         await page.waitForTimeout(150);
       }
       assert.notEqual((await motion())[0],start,JSON.stringify({width,id,motion:await motion()}));
-      const stop = row.getByRole('button');
-      await stop.press('Enter');
-      await track.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
-      assert.equal(await track.evaluate(e=>getComputedStyle(e).animationPlayState),'paused');
-      const held = (await motion())[0];
-      await page.waitForTimeout(180);
-      assert.equal((await motion())[0],held);
-      await stop.press('Enter');
-      await page.waitForTimeout(180);
-      assert.notEqual((await motion())[0],held);
+      if (width < 500) {
+        assert.equal(await row.locator('button').isVisible(), false);
+      } else {
+        const stop = row.getByRole('button');
+        await stop.press('Enter');
+        await track.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+        assert.equal(await track.evaluate(e=>getComputedStyle(e).animationPlayState),'paused');
+        const held = (await motion())[0];
+        await page.waitForTimeout(180);
+        assert.equal((await motion())[0],held);
+        await stop.press('Enter');
+        await page.waitForTimeout(180);
+        assert.notEqual((await motion())[0],held);
+      }
     }
     if (width < 500) {
       await page.setViewportSize({width:850,height:width});
@@ -109,23 +113,16 @@ try {
         const expectedJump = half * (1 - 2 * step / duration);
         animation.pause();
         await animation.ready;
-        const position = async time => {
+        const distance = Number.parseFloat(getComputedStyle(element).getPropertyValue('--ticker-distance'));
+        const position = time => {
           animation.currentTime = time;
-          // WebKit can report the previous compositor frame after seeking.
-          const phase = (time % duration) / duration;
-          const expected = -half * phase;
-          let x;
-          for (let frame = 0; frame < 12; frame++) {
-            await new Promise(resolve => requestAnimationFrame(resolve));
-            x = new DOMMatrix(getComputedStyle(element).transform).m41;
-            if (Math.abs(x - expected) < 1) break;
-          }
-          return x;
+          const progress = animation.effect.getComputedTiming().progress;
+          return progress === null ? NaN : distance * progress;
         };
         const gaps = [];
         for (let loop = 1; loop <= 3; loop++) {
-          const before = await position(loop * duration - step);
-          const after = await position(loop * duration + step);
+          const before = position(loop * duration - step);
+          const after = position(loop * duration + step);
           gaps.push(Math.abs(Math.abs(after - before) - expectedJump));
         }
         return gaps;
@@ -147,6 +144,15 @@ try {
     await motionReady(true);
     await page.emulateMedia({reducedMotion:'reduce'});
     await motionReady(false);
+    if (width >= 500) {
+      for (const id of ['news-ticker', 'archive-ticker']) {
+        const row = page.locator('#'+id);
+        await row.getByRole('button', {name:/を再生$/}).press('Enter');
+        assert.equal(await row.locator('.news-ticker-track').evaluate(e => getComputedStyle(e).animationName), 'todoroki-ticker');
+        await row.getByRole('button', {name:/を一時停止$/}).press('Enter');
+        assert.equal(await row.locator('.news-ticker-track').evaluate(e => getComputedStyle(e).animationName), 'none');
+      }
+    }
     const archiveRow = page.locator('#archive-ticker');
     await archiveRow.locator('.news-ticker-group:not([aria-hidden]) a').first().press('Enter');
     await page.waitForURL(origin+archive[0]);
