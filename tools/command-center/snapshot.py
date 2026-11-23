@@ -4,6 +4,7 @@ import datetime as dt
 import json
 import pathlib
 import re
+from triage import triage
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 SOURCE = ROOT / "docs/TODOROKI-TODO.md"
@@ -27,7 +28,7 @@ def build(text):
             "generated_at_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
             "counts": {"total": len(tasks), "completed": sum(x["todo_complete"] for x in tasks),
                        "open": sum(not x["todo_complete"] for x in tasks)},
-            "tasks": tasks}
+            "tasks": triage({"tasks": tasks})}
 
 if __name__ == "__main__":
     result = build(SOURCE.read_text(encoding="utf-8"))
