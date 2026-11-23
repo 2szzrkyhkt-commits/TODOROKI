@@ -20,3 +20,12 @@ class SnapshotTests(unittest.TestCase):
     def test_empty_rejected(self):
         with self.assertRaises(ValueError):
             module.build("No tasks")
+
+    def test_malformed_marker_rejected(self):
+        with self.assertRaises(ValueError):
+            module.build("- [ ] Valid <!-- todo:T01 project:A -->\\n- [ ] Broken <!-- todo:T02 -->")
+
+    def test_untrusted_title_is_data(self):
+        result = module.build("- [ ] <script>alert(1)</script> <!-- todo:T03 project:A -->")
+        self.assertEqual(result["counts"]["open"], 1)
+        self.assertEqual(result["tasks"][0]["triage"]["execution"], "review_required")
