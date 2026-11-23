@@ -22,6 +22,10 @@ def build(text):
                       "implementation": "unverified", "tests": "unverified",
                       "production": "unverified", "public_page": "unverified",
                       "evidence": [], "requires_approval": None})
+    # A malformed TODO marker must never be silently dropped from the ledger.
+    marker_count = len(re.findall(r"<!--\\s*todo:", text, re.I))
+    if marker_count != len(tasks):
+        raise ValueError(f"Malformed or unsupported TODO markers: {marker_count - len(tasks)}")
     if not tasks:
         raise ValueError("No canonical TODO entries found; refusing empty snapshot")
     if len({x["id"] for x in tasks}) != len(tasks):
