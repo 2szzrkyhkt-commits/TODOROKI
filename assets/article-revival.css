@@ -14,7 +14,6 @@
 .revival-section a:focus-visible, .news-ticker button:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
 
 .news-ticker { min-height: 44px; }
-.news-ticker[data-motion="true"] .news-ticker-window { overflow: clip; }
 .news-ticker[data-motion="true"] .news-ticker-track {
   animation: todoroki-ticker var(--ticker-duration) linear infinite;
 }

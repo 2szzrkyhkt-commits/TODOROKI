@@ -40,7 +40,9 @@ function mountTicker(element, eventName) {
       track.append(copy);
       copies++;
     }
-    track.style.setProperty('--ticker-duration', (width * repetitions / 62) + 's');
+    const distance = width * repetitions;
+    track.style.setProperty('--ticker-distance', -distance + 'px');
+    track.style.setProperty('--ticker-duration', (distance / 62) + 's');
     element.dataset.motion = String(motion);
     button.hidden = !motion;
   };

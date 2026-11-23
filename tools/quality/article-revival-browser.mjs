@@ -36,10 +36,6 @@ try {
     const errors = [];
     page.on('pageerror',error => errors.push(error.message));
     await page.goto(origin+'/',{waitUntil:'domcontentloaded'});
-    if (width < 500) {
-      await page.setViewportSize({width:850,height:width});
-      await page.setViewportSize({width,height:900});
-    }
     for (const [id,direction] of [['news-ticker','normal'],['archive-ticker','reverse']]) {
       const row = page.locator('#'+id);
       await row.waitFor();
@@ -47,7 +43,7 @@ try {
       await track.locator(':scope > div').nth(1).waitFor({state:'attached'});
       const motion = () => track.evaluate(element => {
         const css = getComputedStyle(element);
-        return [css.transform,css.animationDirection];
+        return [css.transform,css.animationDirection,css.animationPlayState,element.getAnimations()[0]?.currentTime];
       });
       assert.equal((await motion())[1],direction);
       const geometry = await track.evaluate(element => ({
@@ -60,8 +56,10 @@ try {
       assert(geometry.copies);
       if (sparse) assert(geometry.groupWidth < geometry.viewport);
       const start = (await motion())[0];
-      await page.waitForTimeout(180);
-      assert.notEqual((await motion())[0],start);
+      for (let attempt = 0; attempt < 10 && (await motion())[0] === start; attempt++) {
+        await page.waitForTimeout(150);
+      }
+      assert.notEqual((await motion())[0],start,JSON.stringify({width,id,motion:await motion()}));
       const stop = row.getByRole('button');
       await stop.press('Enter');
       await track.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
@@ -72,6 +70,16 @@ try {
       await stop.press('Enter');
       await page.waitForTimeout(180);
       assert.notEqual((await motion())[0],held);
+    }
+    if (width < 500) {
+      await page.setViewportSize({width:850,height:width});
+      await page.waitForTimeout(200);
+      await page.setViewportSize({width,height:900});
+      const transforms = () => page.locator('.news-ticker-track').evaluateAll(tracks =>
+        tracks.map(track => getComputedStyle(track).transform));
+      const before = await transforms();
+      await page.waitForTimeout(250);
+      assert((await transforms()).every((transform,index) => transform !== before[index]));
     }
     const read = id => page.locator('#'+id+' .news-ticker-group:not([aria-hidden]) a').evaluateAll(links => links.map(link=>link.pathname));
     const newest = await read('news-ticker'), archive = await read('archive-ticker');
