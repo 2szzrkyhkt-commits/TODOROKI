@@ -1,6 +1,11 @@
 name: TODOROKI command center snapshot
 on:
   workflow_dispatch:
+  pull_request:
+    paths:
+      - 'tools/command-center/**'
+      - '.github/workflows/command-center-snapshot.yml'
+      - 'docs/TODOROKI-TODO.md'
 permissions:
   contents: read
 concurrency:
