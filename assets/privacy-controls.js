@@ -68,6 +68,17 @@ const labels={
  'zh-hans':'支持 TODOROKI',
  'zh-hant':'支持 TODOROKI'
 };
+function useSupportImage(link){
+ if(link.querySelector('img'))return;
+ const img=document.createElement('img');
+ img.src='/assets/todoroki-ofuse-button-3.png';
+ img.alt=link.textContent.trim();
+ img.width=1209;
+ img.height=238;
+ img.decoding='async';
+ link.classList.add('todoroki-support-image');
+ link.replaceChildren(img);
+}
 function place(target,position){
  if(!target)return false;
  if(target.querySelector('a[href="'+destination+'"]') ||
@@ -79,6 +90,7 @@ function place(target,position){
  link.rel='noreferrer';
  const locale=document.documentElement.lang.toLowerCase();
  link.textContent=labels[locale] || labels[locale.split('-')[0]] || labels.en;
+ useSupportImage(link);
  block.append(link);
  target.insertAdjacentElement(position,block);
  return true;
@@ -99,18 +111,18 @@ function addSupportLinks(){
    [document.querySelector('#company-analysis > .wrap'),'beforeend']
   );
  }
- if(!placements.map(([target,position])=>place(target,position)).some(Boolean))return;
+ document.querySelectorAll('.article-ofuse-link[href="'+destination+'"]').forEach(useSupportImage);
+ placements.forEach(([target,position])=>place(target,position));
  const style=document.createElement('style');
  style.textContent=`
  .todoroki-support{display:flex;justify-content:center;margin:16px 0;padding:0 12px}
- .todoroki-support > a{
-  display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;
-  min-height:44px;max-width:100%;padding:8px 16px;border:1px solid #c5a45d;
-  border-radius:6px;background:#15120d;color:#f4d77b;
-  font:700 14px/1.4 system-ui,sans-serif;letter-spacing:normal;text-decoration:none;text-align:center
+ .todoroki-support > a.todoroki-support-image,.article-ofuse a.article-ofuse-link.todoroki-support-image{
+  display:inline-flex;align-items:center;min-height:44px;width:300px;max-width:100%;
+  padding:0;border:0;border-radius:6px;background:transparent;color:#f4d77b;text-decoration:none
  }
- .todoroki-support > a:hover{background:#302715;text-decoration:underline}
- .todoroki-support > a:focus-visible{outline:2px solid #f4d77b;outline-offset:3px}
+ .todoroki-support-image > img{display:block;width:100%;height:auto}
+ .todoroki-support-image:hover{filter:brightness(1.12)}
+ .todoroki-support-image:focus-visible{outline:2px solid #f4d77b;outline-offset:3px}
  `;
  document.head.append(style);
 }
