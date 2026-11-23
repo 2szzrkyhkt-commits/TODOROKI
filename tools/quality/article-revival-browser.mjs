@@ -37,6 +37,8 @@ try {
       assert.notEqual((await motion())[0],start);
       const stop = row.getByRole('button');
       await stop.press('Enter');
+      await track.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+      assert.equal(await track.evaluate(e=>getComputedStyle(e).animationPlayState),'paused');
       const held = (await motion())[0];
       await page.waitForTimeout(180);
       assert.equal((await motion())[0],held);

@@ -17,7 +17,7 @@ assert.equal(await page.locator('#latest-articles-title + .rule + .cards').count
 let imagesLoaded=0;for(const card of await cards.all()){await card.scrollIntoViewIfNeeded();const img=card.locator('img.article-thumbnail');assert.ok((await img.count())<=1);if(await img.count()){await img.evaluate(e=>e.decode());assert.ok(await img.evaluate(e=>e.naturalWidth===640&&e.naturalHeight===360));imagesLoaded++;}assert.ok((await card.locator('h3').innerText()).length>8);const href=await card.getAttribute('href');assert.ok(href.startsWith('/'));await fs.access(href.slice(1)+'.html');}
 await page.goto(origin);const track=page.locator('#news-ticker .news-ticker-track');const transform=()=>track.evaluate(e=>getComputedStyle(e).transform);
 const a=await transform();await page.waitForTimeout(350);const b=await transform();assert.notEqual(a,b);
-await page.getByRole('button',{name:'テロップを一時停止',exact:true}).press('Enter');const stopped=await transform();await page.waitForTimeout(350);assert.equal(await transform(),stopped);
+await page.getByRole('button',{name:'テロップを一時停止',exact:true}).press('Enter');await track.evaluate(e=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));const stopped=await transform();await page.waitForTimeout(350);assert.equal(await transform(),stopped);
 await page.getByRole('button',{name:'テロップを再生',exact:true}).press('Enter');await page.waitForTimeout(350);assert.notEqual(await transform(),stopped);
 assert.equal(await page.locator('#news-ticker .news-ticker-group').count(),2);assert.equal(await page.locator('.news-ticker-group[aria-hidden="true"] a:not([tabindex="-1"])').count(),0);
 assert.deepEqual(errors,[]);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);
