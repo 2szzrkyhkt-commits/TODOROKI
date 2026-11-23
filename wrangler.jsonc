@@ -4,7 +4,7 @@
   "compatibility_date": "2026-10-08",
   "keep_vars": true,
   "build": {
-    "command": "node tools/sync-page-discovery.mjs"
+    "command": "node tools/sync-page-discovery.mjs && node tools/sync-article-revival.mjs"
   },
   "workers_dev": true,
   "preview_urls": false,
