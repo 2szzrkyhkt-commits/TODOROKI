@@ -56,7 +56,8 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 
 /* Keep the OFUSE button in the sticky site header. */
 (()=>{'use strict';
-if(document.currentScript?.hasAttribute('data-todoroki-consent-only'))return;
+if(document.currentScript?.hasAttribute('data-todoroki-consent-only') ||
+   document.currentScript?.hasAttribute('data-todoroki-no-support'))return;
 if(/^\/(?:login|privacy|contact|data-use)(?:\.html)?\/?$/.test(location.pathname))return;
 
 const destination='https://ofuse.me/todoroki_gold';

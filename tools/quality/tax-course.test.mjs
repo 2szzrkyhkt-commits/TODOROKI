@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {course} from '../../assets/tax-course-content.mjs';
 import {grade,decodeProgress,encodeProgress,lessonIds} from '../../assets/tax-course-engine.mjs';
+import {sourceUrls} from './tax-course-sources.mjs';
 import {generatedCourse} from './tax-course-render.mjs';
 let checks=0;const eq=(a,b)=>{assert.deepEqual(a,b);checks++;};
 const ids=['boki','financial','income','corporate','inheritance','consumption','liquor','collection','resident','business','property'];
@@ -13,7 +14,7 @@ for(const l of course.lessons){
  assert.ok(l.example.condition&&l.example.steps.length>=2);checks++;
  eq(l.quiz.choices.length,3);eq(new Set(l.quiz.choices.map(c=>c.id)).size,3);
  assert.ok(l.quiz.explanation.length>20&&l.sources.length>0);checks++;
- for(const id of l.sources){const s=course.sources[id];assert.ok(s&&s.basis);checks++;eq(new URL(s.url).protocol,'https:');assert.ok(['www.nta.go.jp','laws.e-gov.go.jp','www.pref.shizuoka.jp','www.city.iwata.shizuoka.jp'].includes(new URL(s.url).hostname));checks++;}
+ for(const id of l.sources){const s=course.sources[id];assert.ok(s&&s.basis);checks++;eq(new URL(sourceUrls[id]).protocol,'https:');assert.ok(['www.nta.go.jp','laws.e-gov.go.jp','www.pref.shizuoka.jp','www.city.iwata.shizuoka.jp'].includes(new URL(sourceUrls[id]).hostname));checks++;}
  eq(grade(l.id,oracle[l.id]).correct,true);
  for(const c of l.quiz.choices.filter(c=>c.id!==oracle[l.id]))eq(grade(l.id,c.id).correct,false);
  eq(grade(l.id,undefined).valid,false);eq(grade(l.id,'z').valid,false);

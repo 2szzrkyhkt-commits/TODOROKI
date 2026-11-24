@@ -7,87 +7,70 @@ export const course = {
   "sources": {
     "exam": {
       "title": "国税庁・第76回税理士試験の科目と出題範囲",
-      "url": "https://www.nta.go.jp/taxes/zeirishi/zeirishishiken/qa/qa01.htm",
       "basis": "2026年度の公表科目構成"
     },
     "timing": {
       "title": "国税庁 No.6165 前受金や前払金などがあるとき",
-      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6165.htm",
       "basis": "ページ確認2026-11-17・取引時期の原則と特例"
     },
     "prepaid": {
       "title": "国税庁 No.5380 短期前払費用",
-      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/hojin/5380.htm",
       "basis": "2026-04-01現在法令等"
     },
     "statements": {
       "title": "e-Gov・会社計算規則",
-      "url": "https://laws.e-gov.go.jp/law/418M60000010013",
       "basis": "計算書類の区分・表示（例題は会計の基礎）"
     },
     "depreciation": {
       "title": "国税庁・減価償却制度に関する研究",
-      "url": "https://www.nta.go.jp/about/organization/ntc/kenkyu/ronsou/109/03/index.htm",
       "basis": "会計上の費用配分と税務上の償却限度の区別"
     },
     "income": {
       "title": "国税庁 No.2260 所得税の税率",
-      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2260.htm",
       "basis": "2026-04-01現在法令等"
     },
     "corporate": {
       "title": "国税庁・税大講本 法人税法",
-      "url": "https://www.nta.go.jp/about/organization/ntc/kohon/houjin/pdf/all.pdf",
       "basis": "令和8年度版・2026-01-01現在法令等"
     },
     "inheritance": {
       "title": "国税庁 No.4152 相続税の計算",
-      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4152.htm",
       "basis": "2026-04-01現在法令等"
     },
     "consumption": {
       "title": "国税庁 No.6303 消費税・地方消費税の税率",
-      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6303.htm",
       "basis": "2026-04-01現在法令等・例題は2026年の条件"
     },
     "liquor": {
       "title": "国税庁・税大講本 間接税法",
-      "url": "https://www.nta.go.jp/about/organization/ntc/kohon/kansetu/pdf/all.pdf",
       "basis": "令和8年度版・2026-01-01現在法令等"
     },
     "licence": {
       "title": "e-Gov・酒税法（製造免許・販売業免許）",
-      "url": "https://laws.e-gov.go.jp/law/328AC0000000006",
       "basis": "第7条・第9条。個別の免許要件は別途確認"
     },
     "collection": {
       "title": "国税庁・税大講本 国税徴収法",
-      "url": "https://www.nta.go.jp/about/organization/ntc/kohon/tyousyu/mokuji.htm",
       "basis": "令和8年度版・2026-01-01現在法令等"
     },
     "deferral": {
       "title": "国税庁・納税に関する総合案内",
-      "url": "https://www.nta.go.jp/taxes/nozei/annai/index.htm",
       "basis": "ページ確認2026-11-17・猶予制度の概要"
     },
     "residence": {
       "title": "磐田市・住民税の概要",
-      "url": "https://www.city.iwata.shizuoka.jp/kurashi_tetsuzuki/zeikin/kojinshiminzei/1001383.html",
       "basis": "2026-02-02更新・磐田市の説明"
     },
     "move": {
       "title": "磐田市・年途中で引越した場合の住民税",
-      "url": "https://www.city.iwata.shizuoka.jp/faq/kurashi_tetsuzuki/zeikin/1005185/1000912.html",
       "basis": "ページ確認2026-11-17・1月1日の住所"
     },
     "business": {
       "title": "静岡県・個人事業税",
-      "url": "https://www.pref.shizuoka.jp/kurashikankyo/zei/kenzeigaiyou/1046763.html",
       "basis": "ページ確認2026-11-17・事業主控除と青色申告特別控除"
     },
     "property": {
       "title": "磐田市・固定資産税と都市計画税の概要",
-      "url": "https://www.city.iwata.shizuoka.jp/kurashi_tetsuzuki/zeikin/koteishisan_toshikeikakuzei/1001407.html",
       "basis": "2025-12-12更新・磐田市の税率等"
     }
   },
