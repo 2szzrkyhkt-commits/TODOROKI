@@ -21,4 +21,17 @@ test('non-idle adds one read only, preserves new eGov and NTA status',async()=>{
 test('failed status read never destroys prior',async()=>{let writes=0;await assert.rejects(persistCombinedStatus({TAX:{get:async()=>{throw Error('mock');},put:async()=>writes++}},{phase:'idle'}));assert.equal(writes,0);});
 test('RPC reader fixed key strips all other fields no writes',async()=>{const m=memory({nta_public_links:[{...link(1),secret:'mock'}],nta:{private:'mock'}});assert.deepEqual(await readPublicLinks(m.env),[link(1)]);assert.deepEqual(m.reads,[['status',undefined]]);assert.equal(m.writes.length,0);});
 test('RPC reader malformed/missing/oversized safe empty',async()=>{for(const raw of [null,'bad','x'.repeat(256*1024+1),JSON.stringify({nta_public_links:Array(31).fill(link(1))})])assert.deepEqual(await readPublicLinks({TAX:{get:async()=>raw}}),[]);assert.deepEqual(await readPublicLinks({TAX:{get:async()=>{throw Error('mock');}}}),[]);});
-test('named wrapper exposes only parameterless latest, unchanged default',async()=>{const path=new URL('./entrypoint.mjs',import.meta.url);const source=readFileSync(path,'utf8');const transformed=source.replace("import {WorkerEntrypoint} from 'cloudflare:workers';",'class WorkerEntrypoint { constructor(env){this.env=env;} }').replace("import taxWorker from './worker.mjs';",'const taxWorker={existing:true};').replace("import {readPublicLinks} from './public-feed.mjs';",`import {readPublicLinks} from '${new URL('./public-feed.mjs',import.meta.url)}';`);const module=await import('data:text/javascript,'+encodeURIComponent(transformed));assert.deepEqual(Object.getOwnPropertyNames(module.TaxPublicFeed.prototype),['constructor','latest']);const m=memory({nta_public_links:[link(1)]});const rpc=new module.TaxPublicFeed(m.env);assert.deepEqual(await rpc.latest(),[link(1)]);await assert.rejects(rpc.latest('status'));assert.equal(m.reads.length,1);assert.equal(rpc.fetch,undefined);assert.deepEqual(module.default,{existing:true});});
+test('named wrapper exposes only the fixed catalog read', async () => {
+  const source = readFileSync(new URL('./entrypoint.mjs', import.meta.url), 'utf8')
+    .replace("import {WorkerEntrypoint} from 'cloudflare:workers';", 'class WorkerEntrypoint { constructor(env) { this.env = env; } }')
+    .replace("import taxWorker from './worker.mjs';", 'const taxWorker = {existing: true};')
+    .replace("'./public-catalog.mjs'", JSON.stringify(new URL('./public-catalog.mjs', import.meta.url).href));
+  const module = await import('data:text/javascript,' + encodeURIComponent(source));
+  const m = memory({rows: []});
+  const rpc = new module.TaxPublicFeed(m.env);
+  assert.deepEqual(Object.getOwnPropertyNames(module.TaxPublicFeed.prototype), ['constructor', 'catalog']);
+  assert.deepEqual(await rpc.catalog(), {rows: []});
+  await assert.rejects(rpc.catalog('status'));
+  assert.deepEqual(m.reads, [['public-tax-catalog', 'json']]);
+  assert.deepEqual(module.default, {existing: true});
+});

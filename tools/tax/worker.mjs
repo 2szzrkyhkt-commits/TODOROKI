@@ -1,3 +1,4 @@
+import {advancePublicCatalog} from './public-catalog.mjs';
 import {persistCombinedStatus} from './public-feed.mjs';
 import {isLawXml} from './xml.mjs';
 import {historyTick,getHistory,renderHistory,createEgovFetcher} from './history.mjs';
@@ -163,6 +164,12 @@ export async function tick(env) {
  // Independent source family: an e-Gov failure must not masquerade as an NTA failure.
  try{report.nta=await ntaTick(env);}
  catch{report.nta={state:'failed',at:new Date().toISOString(),code:'NTA_STORAGE_OR_STATE_FAILED'};}
+ try {
+  const catalog = await advancePublicCatalog(env.TAX);
+  console.log(JSON.stringify({event: 'tax_public_catalog', ...catalog}));
+ } catch {
+  console.error(JSON.stringify({event: 'tax_public_catalog_retry'}));
+ }
  // One write to the shared status key per tick (KV same-key rate limit).
  await persistCombinedStatus(env,report);
  if(collectionFailure)throw collectionFailure;
