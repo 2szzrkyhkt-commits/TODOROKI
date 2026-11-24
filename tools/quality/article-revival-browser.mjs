@@ -56,9 +56,26 @@ try {
       assert(geometry.copies);
       if (sparse) assert(geometry.groupWidth < geometry.viewport);
       if (width >= 500) {
-        const viewport = await row.locator('.news-ticker-window').boundingBox();
-        await page.mouse.move(viewport.x + viewport.width / 2, viewport.y + viewport.height / 2);
+        // The current desktop contract is autoplay before mouse movement,
+        // pause during an intentional hover, and resume when the mouse leaves.
         assert.equal((await motion())[2], 'running');
+        const tickerWindow = row.locator('.news-ticker-window');
+        await tickerWindow.scrollIntoViewIfNeeded();
+        const viewport = await tickerWindow.boundingBox();
+        assert(viewport && viewport.width > 0 && viewport.height > 0);
+        const waitForHoverMotion = active => page.waitForFunction(({id,active}) => {
+          const ticker = document.getElementById(id);
+          return ticker.dataset.hoverActive === String(active) &&
+            getComputedStyle(ticker.querySelector('.news-ticker-track')).animationPlayState ===
+              (active ? 'paused' : 'running');
+        }, {id,active}, {timeout:3000});
+        await page.mouse.move(viewport.x + viewport.width / 2, viewport.y + viewport.height / 2, {steps:2});
+        await waitForHoverMotion(true);
+        const heldOnHover = (await motion())[0];
+        await page.waitForTimeout(180);
+        assert.equal((await motion())[0], heldOnHover);
+        await page.mouse.move(0,0);
+        await waitForHoverMotion(false);
       }
       const start = (await motion())[0];
       for (let attempt = 0; attempt < 10 && (await motion())[0] === start; attempt++) {
