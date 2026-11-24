@@ -71,9 +71,19 @@ try {
         }, {id,active}, {timeout:3000});
         await page.mouse.move(viewport.x + viewport.width / 2, viewport.y + viewport.height / 2, {steps:2});
         await waitForHoverMotion(true);
-        const heldOnHover = (await motion())[0];
+        // WebKit can report the CSS pause before committing the animation frame.
+        await track.evaluate(async element => {
+          const animation = element.getAnimations()[0];
+          if (!animation) throw new Error('Missing ticker animation while hovering');
+          await animation.ready;
+          await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+        });
+        const heldOnHover = await motion();
+        assert.equal(heldOnHover[2], 'paused');
         await page.waitForTimeout(180);
-        assert.equal((await motion())[0], heldOnHover);
+        const stillHeldOnHover = await motion();
+        assert.equal(stillHeldOnHover[0], heldOnHover[0]);
+        assert.equal(stillHeldOnHover[3], heldOnHover[3]);
         await page.mouse.move(0,0);
         await waitForHoverMotion(false);
       }
