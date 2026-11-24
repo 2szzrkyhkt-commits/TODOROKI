@@ -1,19 +1,72 @@
-import {publicMetadata} from './tax-public-metadata.mjs';
-export async function enhance(root,refresh,fetcher=fetch){
- const note=root.querySelector('#tax-source-live-status');
- try{
-  const response=await fetcher('/api/tax-public-links',{credentials:'omit',mode:'same-origin',signal:AbortSignal.timeout(4000)});
-  if(!response.ok||!response.headers.get('content-type')?.includes('application/json'))throw Error('unavailable');
-  const reader=response.body.getReader();let bytes=0,text='';const decoder=new TextDecoder();
-  try{for(;;){const {done,value}=await reader.read();if(done)break;bytes+=value.byteLength;if(bytes>32768)throw Error('too_large');text+=decoder.decode(value,{stream:true});}text+=decoder.decode();}finally{await reader.cancel().catch(()=>{});}
-  const rows=publicMetadata(JSON.parse(text));
-  const known=new Set([...root.querySelectorAll('[data-tax-source-kind] a')].map(a=>a.href));let added=0;
-  for(const row of rows){if(known.has(row.official_url))continue;
-   const kind=row.official_url.includes('/taxanswer/')?'answer':'circular';
-   const group=[...root.querySelectorAll('[data-tax-source-group]')].find(g=>g.querySelector(`[data-tax-source-kind="${kind}"]`));if(!group)continue;
-   const li=document.createElement('li'),a=document.createElement('a'),time=document.createElement('time');li.dataset.taxSourceKind=kind;a.href=row.official_url;a.textContent=row.title;time.dateTime=row.checked_at;time.textContent=row.checked_at;
-   li.append(a,document.createElement('br'),document.createTextNode('保存・読戻し確認：'),time);group.querySelector('ul').append(li);known.add(row.official_url);added++;
+import {KINDS, MAX_BYTES, SUBJECTS, publicMetadata} from './tax-public-metadata.mjs';
+
+const pageSize = 50;
+const normalize = value => value.normalize('NFKC').trim().toLocaleLowerCase('ja');
+
+export async function enhance(root, fetcher = fetch) {
+  const find = id => root.querySelector('#tax-source-' + id);
+  const note = find('live-status');
+  try {
+    const response = await fetcher('/api/tax-catalog', {credentials: 'omit', mode: 'same-origin', signal: AbortSignal.timeout(10000)});
+    if (!response.ok || !response.headers.get('content-type')?.includes('application/json')) throw Error('unavailable');
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder();
+    let bytes = 0;
+    let text = '';
+    try {
+      for (;;) {
+        const {done, value} = await reader.read();
+        if (done) break;
+        bytes += value.byteLength;
+        if (bytes > MAX_BYTES) throw Error('too_large');
+        text += decoder.decode(value, {stream: true});
+      }
+      text += decoder.decode();
+    } finally {
+      await reader.cancel().catch(() => {});
+    }
+    const {updated, rows} = publicMetadata(JSON.parse(text));
+    const kind = find('kind');
+    const subject = find('subject');
+    const query = find('query');
+    const list = find('list');
+    const previous = find('previous');
+    const next = find('next');
+    const count = find('count');
+    let offset = 0;
+    for (const value of SUBJECTS) subject.add(new Option(value, value));
+    function render() {
+      const needle = normalize(query.value);
+      const matches = rows.filter(row =>
+        (!kind.value || row.kind === kind.value) &&
+        (!subject.value || row.subjects.includes(subject.value)) &&
+        normalize(row.title + ' ' + (row.number ?? '')).includes(needle));
+      list.replaceChildren(...matches.slice(offset, offset + pageSize).map(row => {
+        const li = document.createElement('li');
+        const details = row.kind === 'law'
+          ? ['e-Gov法令検索', row.number, row.state, row.promulgated && '改正法令の公布日 ' + row.promulgated, row.effective && '改正施行日 ' + row.effective]
+          : ['国税庁', KINDS[row.kind]];
+        li.textContent = [row.title, ...details.filter(Boolean), row.subjects.join('・'), '保存確認日 ' + row.checked.slice(0, 10)].join(' ／ ');
+        return li;
+      }));
+      count.textContent = matches.length ? `${offset + 1}〜${Math.min(offset + pageSize, matches.length)}件／該当${matches.length}件` : '該当する資料はありません。';
+      previous.disabled = offset === 0;
+      next.disabled = offset + pageSize >= matches.length;
+    }
+    for (const control of [kind, subject, query]) {
+      control.disabled = false;
+      control.addEventListener(control === query ? 'input' : 'change', () => { offset = 0; render(); });
+    }
+    previous.addEventListener('click', () => { offset -= pageSize; render(); });
+    next.addEventListener('click', () => { offset += pageSize; render(); });
+    note.textContent = `保存済み資料 ${rows.length}件。索引更新 ${new Date(updated).toLocaleString('ja-JP', {timeZone: 'Asia/Tokyo'})}（日本時間）`;
+    render();
+  } catch {
+    note.textContent = '資料一覧を取得できませんでした。時間をおいて再読み込みしてください。';
   }
-  refresh();note.textContent=`確認済みメタデータ${rows.length}件を取得し、固定一覧と重複しない${added}件を追加しました。全件収録を意味しません。`;
- }catch{note.textContent='追加の公式リンクは取得できませんでした。確認済みの固定6件を引き続き利用できます。';}
+}
+
+if (typeof document !== 'undefined') {
+  const root = document.getElementById('tax-source-release');
+  if (root) enhance(root);
 }

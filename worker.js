@@ -178,7 +178,8 @@ async function toolGate(request, env, path) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    if(url.pathname==='/api/tax-public-links')return taxPublicFeed(request,env);
+    if(url.pathname==='/api/tax-public-links')return new Response(null,{status:410,headers:{'Cache-Control':'no-store'}});
+    if(url.pathname==='/api/tax-catalog')return taxPublicFeed(request,env);
     let decodedPath; try { decodedPath = decodeURIComponent(url.pathname).normalize('NFC'); } catch { decodedPath = ''; }
     const retiredPath = decodedPath.replace(/\/$/, '').replace(/\.html$/, '');
     if (RETIRED_SALES_PATHS.has(retiredPath)) return retiredSalesResponse(retiredPath);

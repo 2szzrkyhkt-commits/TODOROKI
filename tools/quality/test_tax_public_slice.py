@@ -16,24 +16,16 @@ class TaxPublicSlice(unittest.TestCase):
         self.page=(ROOT/'tax-study.html').read_text()
         self.section=re.search(r'<!-- tax-source-release:start -->([\s\S]*?)<!-- tax-source-release:end -->',self.page).group(1)
     def test_public_links_only(self):
-        p=Tags();p.feed(self.section)
-        self.assertEqual(p.links,['https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1900.htm','https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1901.htm','https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1902.htm','https://www.nta.go.jp/law/tsutatsu/kihon/shotoku/01/03.htm','https://www.nta.go.jp/law/tsutatsu/kihon/shotoku/01/04.htm','https://www.nta.go.jp/law/tsutatsu/kihon/shotoku/01/05.htm','#income-tax','#tax-course'])
-        self.assertNotIn('<script',self.section);self.assertNotIn('<form',self.section)
+        p=Tags();p.feed(self.page)
+        self.assertFalse(any(re.match(r'^(https?:)?//', link or '') for link in p.links))
     def test_filter_contract(self):
-        self.assertEqual(self.section.count('data-tax-source-kind='),6)
-        self.assertIn('id="tax-source-kind" disabled',self.section)
-        self.assertIn('id="tax-source-query" type="search"',self.section)
-        self.assertIn('<noscript>',self.section)
-        self.assertIn('role="status"',self.section)
+        self.assertIn('id="tax-source-kind" disabled', self.section)
+        self.assertIn('id="tax-source-subject" disabled', self.section)
+        self.assertIn('id="tax-source-query" type="search"', self.section)
+        self.assertIn('<noscript>', self.section)
+        self.assertIn('role="status"', self.section)
         import subprocess
-        subprocess.run(['node','--test',str(ROOT/'tools/quality/tax-source-filter.test.mjs'),str(ROOT/'tools/quality/tax-public-feed.test.mjs'),str(ROOT/'tools/tax/public-feed.test.mjs')],check=True,cwd=ROOT)
-    def test_scope_and_verification_date(self):
-        for text in ['自動同期されません','税法全体の一部','2026-11-19T18:00:00+09:00','タックスアンサー','所得税基本通達','直接配信は行わず']:
-            self.assertIn(text,self.section)
-    def test_rolling_scope_and_neutral_circular_group(self):
-        for text in ['直近に保存・確認した公式資料を最大30件', '固定6件は残り、追加分は新しい確認結果に入れ替わります', '固定のタックスアンサー3件の法令等基準日', '資料の法令等基準日や施行日ではありません', '<option value="circular">通達</option>', '<h3>通達</h3>']:
-            self.assertIn(text,self.section)
-        self.assertNotIn('この6件の題名・番号で検索', self.section)
+        subprocess.run(['node','--test',str(ROOT/'tools/quality/tax-public-feed.test.mjs'),str(ROOT/'tools/tax/public-feed.test.mjs')],check=True,cwd=ROOT)
     def test_accessible_ids_and_preserved_learning(self):
         p=Tags();p.feed(self.page)
         self.assertEqual(len(p.ids),len(set(p.ids)))
