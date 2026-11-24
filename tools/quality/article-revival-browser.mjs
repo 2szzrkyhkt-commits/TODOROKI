@@ -154,20 +154,24 @@ try {
         return row.dataset.motion === String(expected) &&
           (getComputedStyle(track).animationName === 'todoroki-ticker') === expected;
       }), enabled, {timeout:5000});
+    // Desktop always starts its loop; reduced-motion still disables it on mobile.
+    const desktop = width >= 500;
     await motionReady(true);
     await page.emulateMedia({reducedMotion:'reduce'});
-    await motionReady(false);
+    await motionReady(desktop);
     await page.emulateMedia({reducedMotion:'no-preference'});
     await motionReady(true);
     await page.emulateMedia({reducedMotion:'reduce'});
-    await motionReady(false);
-    if (width >= 500) {
+    await motionReady(desktop);
+    if (desktop) {
       for (const id of ['news-ticker', 'archive-ticker']) {
         const row = page.locator('#'+id);
-        await row.getByRole('button', {name:/を再生$/}).press('Enter');
-        assert.equal(await row.locator('.news-ticker-track').evaluate(e => getComputedStyle(e).animationName), 'todoroki-ticker');
+        const state = () => row.locator('.news-ticker-track').evaluate(e => getComputedStyle(e).animationPlayState);
+        assert.equal(await row.getAttribute('data-motion-override'), 'true');
         await row.getByRole('button', {name:/を一時停止$/}).press('Enter');
-        assert.equal(await row.locator('.news-ticker-track').evaluate(e => getComputedStyle(e).animationName), 'none');
+        assert.equal(await state(), 'paused');
+        await row.getByRole('button', {name:/を再生$/}).press('Enter');
+        assert.equal(await state(), 'running');
       }
     }
     const archiveRow = page.locator('#archive-ticker');
