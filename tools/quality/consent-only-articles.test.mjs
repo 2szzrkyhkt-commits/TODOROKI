@@ -14,14 +14,22 @@ async function execute(pathname, marked, allow, region=true){
     if(!nodes.has(id))nodes.set(id,{textContent:'',hidden:true,checked:false,disabled:false,setAttribute(){},focus(){focused.push(id);}});
     return nodes.get(id);
   };
-  const header={dataset:{},outerHTML:'original'};
+  const header={
+    dataset:{},outerHTML:'original',support:[],
+    querySelector:()=>header.support[0]??null,
+    append:block=>header.support.push(block)
+  };
   const body=[];
   const document={
     currentScript:{hasAttribute:name=>marked&&name==='data-todoroki-consent-only'},
     documentElement:{lang:'ja'},readyState:'complete',
     querySelectorAll:()=>[],
     querySelector:selector=>selector.includes('header')?header:null,
-    createElement:tag=>({tag}),
+    createElement:tag=>({
+      tag,children:[],classList:{add(){}},querySelector:()=>null,
+      append(child){this.children.push(child);},
+      replaceChildren(...children){this.children=children;}
+    }),
     head:{append:element=>{if(element.tag==='script')scriptUrls.push(element.src);}},
     body:{append:element=>body.push(element)},
     getElementById:get,addEventListener(){}
@@ -46,6 +54,7 @@ for(const slug of pages)test(`${slug}: existing opt-in never causes optional req
     assert.deepEqual(r.requestUrls,[]);
     assert.deepEqual(r.stored,[]);
     assert.equal(r.header.outerHTML,'original');
+    assert.deepEqual(r.header.support,[]);
     for(const id of ['td-analytics','td-ads','td-reject','td-save'])assert.equal(r.nodes.get(id).disabled,true);
     assert.match(r.nodes.get('td-region').textContent,/このページでは広告・解析を読み込みません/);
     r.nodes.get('td-privacy-open').onclick();
@@ -64,6 +73,10 @@ test('existing unmarked pages still apply current consent and regional behavior'
   assert.ok(allowed.scriptUrls.some(src=>src.includes('googlesyndication.com')));
   assert.ok(allowed.scriptUrls.some(src=>src.includes('googletagmanager.com')));
   assert.notEqual(allowed.header.outerHTML,'original');
+  assert.equal(allowed.header.support.length,1);
+  const [link]=allowed.header.support[0].children;
+  assert.equal(link.href,'https://ofuse.me/todoroki_gold');
+  assert.equal(link.children[0].alt,'とどろきを応援する');
   const refusal=await execute('/generic',false,false);
   assert.deepEqual(refusal.scriptUrls,[]);
   const regional=await execute('/generic',false,true,false);

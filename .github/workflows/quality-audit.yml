@@ -35,6 +35,16 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Load durable ledger
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python tools/quality/state.py
+      - name: Select JST audit cadence
+        id: cadence
+        env:
+          REQUESTED: ${{ inputs.mode }}
+        run: echo "mode=$(python tools/quality/cadence.py)" >> "$GITHUB_OUTPUT"
       - name: Tests
         run: |
           node tools/sync-page-discovery.mjs
@@ -49,16 +59,6 @@ jobs:
       - name: Support collection policy and isolation regressions
         working-directory: tools/japan-support
         run: node test.mjs
-      - name: Load durable ledger
-        if: github.event_name != 'pull_request'
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: python tools/quality/state.py
-      - name: Select JST audit cadence
-        id: cadence
-        env:
-          REQUESTED: ${{ inputs.mode }}
-        run: echo "mode=$(python tools/quality/cadence.py)" >> "$GITHUB_OUTPUT"
       - uses: actions/setup-node@v4
         if: steps.cadence.outputs.mode != 'hourly'
         with:
@@ -89,10 +89,11 @@ jobs:
           node tools/quality/consent.mjs
           node tools/quality/browser.mjs
           node tools/quality/page-search-browser.mjs
+          node tools/quality/ofuse-article-pilot-browser.mjs
           node tools/sync-article-revival.mjs
           node tools/quality/article-revival-browser.mjs
       - name: Run audit
-        if: always() && !cancelled()
+        if: always() && !cancelled() && steps.cadence.outcome == 'success'
         env:
           MODE: ${{ steps.cadence.outputs.mode }}
         run: |
@@ -111,7 +112,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: python tools/quality/integration.py
       - name: Job summary
-        if: always()
+        if: always() && steps.cadence.outcome == 'success'
         run: cat quality-results/summary.md >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@v4
         if: always()

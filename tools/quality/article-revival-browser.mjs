@@ -56,9 +56,36 @@ try {
       assert(geometry.copies);
       if (sparse) assert(geometry.groupWidth < geometry.viewport);
       if (width >= 500) {
-        const viewport = await row.locator('.news-ticker-window').boundingBox();
-        await page.mouse.move(viewport.x + viewport.width / 2, viewport.y + viewport.height / 2);
+        // The current desktop contract is autoplay before mouse movement,
+        // pause during an intentional hover, and resume when the mouse leaves.
         assert.equal((await motion())[2], 'running');
+        const tickerWindow = row.locator('.news-ticker-window');
+        await tickerWindow.scrollIntoViewIfNeeded();
+        const viewport = await tickerWindow.boundingBox();
+        assert(viewport && viewport.width > 0 && viewport.height > 0);
+        const waitForHoverMotion = active => page.waitForFunction(({id,active}) => {
+          const ticker = document.getElementById(id);
+          return ticker.dataset.hoverActive === String(active) &&
+            getComputedStyle(ticker.querySelector('.news-ticker-track')).animationPlayState ===
+              (active ? 'paused' : 'running');
+        }, {id,active}, {timeout:3000});
+        await page.mouse.move(viewport.x + viewport.width / 2, viewport.y + viewport.height / 2, {steps:2});
+        await waitForHoverMotion(true);
+        // WebKit can report the CSS pause before committing the animation frame.
+        await track.evaluate(async element => {
+          const animation = element.getAnimations()[0];
+          if (!animation) throw new Error('Missing ticker animation while hovering');
+          await animation.ready;
+          await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+        });
+        const heldOnHover = await motion();
+        assert.equal(heldOnHover[2], 'paused');
+        await page.waitForTimeout(180);
+        const stillHeldOnHover = await motion();
+        assert.equal(stillHeldOnHover[0], heldOnHover[0]);
+        assert.equal(stillHeldOnHover[3], heldOnHover[3]);
+        await page.mouse.move(0,0);
+        await waitForHoverMotion(false);
       }
       const start = (await motion())[0];
       for (let attempt = 0; attempt < 10 && (await motion())[0] === start; attempt++) {
@@ -137,20 +164,24 @@ try {
         return row.dataset.motion === String(expected) &&
           (getComputedStyle(track).animationName === 'todoroki-ticker') === expected;
       }), enabled, {timeout:5000});
+    // Desktop always starts its loop; reduced-motion still disables it on mobile.
+    const desktop = width >= 500;
     await motionReady(true);
     await page.emulateMedia({reducedMotion:'reduce'});
-    await motionReady(false);
+    await motionReady(desktop);
     await page.emulateMedia({reducedMotion:'no-preference'});
     await motionReady(true);
     await page.emulateMedia({reducedMotion:'reduce'});
-    await motionReady(false);
-    if (width >= 500) {
+    await motionReady(desktop);
+    if (desktop) {
       for (const id of ['news-ticker', 'archive-ticker']) {
         const row = page.locator('#'+id);
-        await row.getByRole('button', {name:/を再生$/}).press('Enter');
-        assert.equal(await row.locator('.news-ticker-track').evaluate(e => getComputedStyle(e).animationName), 'todoroki-ticker');
+        const state = () => row.locator('.news-ticker-track').evaluate(e => getComputedStyle(e).animationPlayState);
+        assert.equal(await row.getAttribute('data-motion-override'), 'true');
         await row.getByRole('button', {name:/を一時停止$/}).press('Enter');
-        assert.equal(await row.locator('.news-ticker-track').evaluate(e => getComputedStyle(e).animationName), 'none');
+        assert.equal(await state(), 'paused');
+        await row.getByRole('button', {name:/を再生$/}).press('Enter');
+        assert.equal(await state(), 'running');
       }
     }
     const archiveRow = page.locator('#archive-ticker');

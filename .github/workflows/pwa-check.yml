@@ -37,7 +37,8 @@ on:
 jobs:
   validate:
     runs-on: ubuntu-24.04
-    timeout-minutes: 12
+    # WebKit system packages can take longer on a cold hosted runner.
+    timeout-minutes: 30
     permissions:
       contents: read
     steps:
