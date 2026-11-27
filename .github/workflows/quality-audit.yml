@@ -53,6 +53,18 @@ jobs:
       - name: Support collection policy and isolation regressions
         working-directory: tools/japan-support
         run: node test.mjs
+      - name: Provide the verified GitHub CLI for the audit ledger
+        run: |
+          if command -v gh >/dev/null 2>&1; then exit 0; fi
+          work="$(mktemp -d)"
+          trap 'rm -rf "$work"' EXIT
+          asset=gh_2.106.0_linux_amd64
+          curl --fail --silent --show-error --location --proto '=https' --max-time 120 \
+            "https://github.com/cli/cli/releases/download/v2.106.0/$asset.tar.gz" -o "$work/gh.tar.gz"
+          printf '%s  %s\n' 'a476449fa9625413c54a3734eded62e9e480e49f421ff08e7f3b3879c059a033' "$work/gh.tar.gz" | sha256sum -c -
+          tar -xzf "$work/gh.tar.gz" -C "$work" "$asset/bin/gh"
+          install -D -m 0755 "$work/$asset/bin/gh" "$RUNNER_TEMP/quality-bin/gh"
+          printf '%s\n' "$RUNNER_TEMP/quality-bin" >> "$GITHUB_PATH"
       - name: Load durable ledger
         if: github.event_name != 'pull_request'
         env:
