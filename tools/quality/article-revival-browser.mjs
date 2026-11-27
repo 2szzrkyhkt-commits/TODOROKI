@@ -36,6 +36,17 @@ try {
     const errors = [];
     page.on('pageerror',error => errors.push(error.message));
     await page.goto(origin+'/',{waitUntil:'domcontentloaded'});
+
+    const support=page.locator('header.site-header a.ofuse-header-button');
+    assert.equal(await support.count(),1);
+    assert(await support.isVisible());
+    const supportImage=await support.locator('img').evaluate(async image=>{
+      await image.decode();
+      const box=image.getBoundingClientRect();
+      return {loaded:image.naturalWidth>0,within:box.left>=0&&box.right<=innerWidth+1};
+    });
+    assert.deepEqual(supportImage,{loaded:true,within:true});
+
     for (const id of ['news-ticker', 'archive-ticker']) {
       const row = page.locator('#'+id);
       await row.waitFor();
