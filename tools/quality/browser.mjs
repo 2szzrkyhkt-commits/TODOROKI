@@ -39,6 +39,17 @@ for(const [name,engine] of Object.entries(weekly?{chromium,firefox,webkit}:{chro
     }else add(31,[{path,missingSearch:true}],{path});
    }
    if(path==='/'){
+    // Check the one responsive control without opening the external destination.
+    const support=await page.evaluate(()=>{
+     const links=[...document.querySelectorAll('header.site-header a.ofuse-header-button')];
+     const [link]=links, image=link?.querySelector('img'), box=link?.getBoundingClientRect();
+     return {count:links.length, label:link?.getAttribute('aria-label')||'',
+      imageLoaded:Boolean(image?.complete&&image.naturalWidth>0),
+      visible:Boolean(link&&getComputedStyle(link).visibility==='visible'&&box?.width&&box.height),
+      fitsViewport:Boolean(box&&box.left>=0&&box.right<=document.documentElement.clientWidth+1)};
+    });
+    add(29,support.count!==1||!support.label||!support.imageLoaded||!support.visible||!support.fitsViewport
+     ?[{path,name,width,support}]:[],{path,name,width,support});
     // Use a fresh page so prior mouse/search/axe interactions cannot mask the starting tab order.
     const keyboardPage=await context.newPage();
     let loaded=false;
