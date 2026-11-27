@@ -1,7 +1,7 @@
 import {advancePublicCatalog} from './public-catalog.mjs';
 import {persistCombinedStatus} from './public-feed.mjs';
 import {isLawXml} from './xml.mjs';
-import {historyTick,getHistory,renderHistory,createEgovFetcher} from './history.mjs';
+import {historyTick,getHistory,getDatedHistory,renderHistory,renderDatedHistory,createEgovFetcher} from './history.mjs';
 import {ntaTick,ntaURL} from './nta.mjs';
 const BASE = 'https://laws.e-gov.go.jp/api/2';
 const CATEGORIES = ['013', '036'];
@@ -189,8 +189,17 @@ const taxWorker = {
     if(request.method==='GET'&&path==='/history') {
       if(!await authorized(request,env))return Response.json({error:'Unauthorized'},{status:401,headers:{'Cache-Control':'no-store','X-Robots-Tag':'noindex'}});
       try{
-       const data=await getHistory(env,new URL(request.url).searchParams.get('law_id'));
        const headers={'Cache-Control':'no-store','X-Robots-Tag':'noindex','X-Content-Type-Options':'nosniff','Content-Security-Policy':"default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"};
+       const params=new URL(request.url).searchParams;
+       const law=params.get('law_id');
+       if(params.has('as_of')){
+        if(params.getAll('as_of').length!==1||params.getAll('law_id').length!==1)throw Error('ambiguous history query');
+        const dated=await getDatedHistory(env,law,params.get('as_of'));
+        const status=dated.state==='not_collected'?404:200;
+        if(request.headers.get('Accept')?.includes('text/html'))return new Response(renderDatedHistory(dated),{status,headers:{...headers,'Content-Type':'text/html; charset=utf-8'}});
+        return Response.json(dated,{status,headers});
+       }
+       const data=await getHistory(env,law);
        if(request.headers.get('Accept')?.includes('text/html'))return new Response(renderHistory(data),{status:data?200:404,headers:{...headers,'Content-Type':'text/html; charset=utf-8'}});
        return Response.json(data??{state:'not_collected'},{status:data?200:404,headers});
       }catch{return Response.json({error:'Invalid or unavailable law history'},{status:400,headers:{'Cache-Control':'no-store'}});}
@@ -218,5 +227,6 @@ const taxWorker = {
 };
 
 export default taxWorker;
+
 
 
