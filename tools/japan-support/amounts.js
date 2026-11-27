@@ -19,6 +19,15 @@ export function calculateAmount(d,request,clock=new Date()){
  const children=request.children.map(c=>{if(!c||typeof c!=='object'||Array.isArray(c)||Object.keys(c).some(k=>!['birthDate','status','startMonth','endMonth'].includes(k))||c.birthDate!=null&&c.birthDate!==''&&(!validDate(c.birthDate)||c.birthDate>day)||!['confirmed','excluded','unknown'].includes(c.status)||c.startMonth!=null&&!validMonth(c.startMonth)||c.endMonth!=null&&!validMonth(c.endMonth)||c.startMonth&&c.endMonth&&c.startMonth>c.endMonth)throw Error('invalid_amount_input');return {...c,birthDate:c.birthDate||null};});
  if(month<d.effectiveFromMonth||month>futureLimit||(Date.parse(day)-Date.parse(d.checkedOn))/86400000>30||day<d.checkedOn){result.notes.unshift('この時点または資料の鮮度では計算できません。旧制度・1年を超える将来・未確認の変更は要確認です。');return result;}
  if(!request.beneficiaryType||request.assumptionsConfirmed!==true){result.notes.unshift('受給者区分と、当月の支給/算定資格・開始月の前提確認が必要です。');return result;}
+ // The optional period describes months payable/countable, not the date of birth or application.
+ if(children.some(c=>{
+  if(c.status!=='confirmed'||!c.birthDate)return false;
+  const birthMonth=c.birthDate.slice(0,7);
+  return (c.startMonth!=null&&c.startMonth<=birthMonth)||(c.endMonth!=null&&c.endMonth<=birthMonth);
+ })){
+  result.notes.unshift('確認済みの対象期間に、出生月以前の開始月または終了月が入力されています。届出日・申請月ではなく、支給・算定の対象月を確認してください。');
+  return result;
+ }
  let under3=0,older=0,countOnly=0,unknown=0;const individual=request.beneficiaryType==='individual';
  for(const c of children){
   if(c.status==='excluded')continue;

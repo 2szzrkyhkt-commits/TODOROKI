@@ -13,6 +13,19 @@ const siblings=[child('2004-04-01'),child('2015-01-01'),child('2018-01-01')];eq(
 eq(calc([child('2026-11-01')]).amountYen,0);eq(calc([child('2026-11-01')],'individual','2026-12').amountYen,15000);eq(calc([child('2025-01-02'),child('2025-01-02'),child('2025-01-02')]).amountYen,60000);
 eq(calc([child('2015-01-01','unknown')]).amountYen,null);eq(calc([child(null,'unknown')]).amountYen,null);eq(calc([child('2006-01-01','unknown'),child('2015-01-01')]).amountYen,null);eq(calc([child('2006-01-01','unknown')],'facility').amountYen,0);eq(calc([child('2000-01-01','unknown')]).amountYen,0);eq(calc([child('2015-01-01')],null).amountYen,null);eq(calc([child('2015-01-01')],'individual','2026-11',{assumptionsConfirmed:false}).amountYen,null);
 eq(calc([child('2015-01-01','excluded')]).amountYen,0);eq(calc([child('2015-01-01','confirmed',{startMonth:'2026-12'})]).amountYen,0);eq(calc([child('2015-01-01','confirmed',{endMonth:'2026-10'})]).amountYen,0);eq(calc([child('2015-01-01')],'individual','2024-09').amountYen,null);eq(calc([child('2015-01-01')],'individual','2027-12').amountYen,null);
+// An explicitly confirmed period that conflicts with birth is not a confirmed zero or a partial household total.
+for(const type of ['individual','corporate_guardian','facility']){
+ for(const period of [{startMonth:'2026-09'},{startMonth:'2026-10'},{endMonth:'2026-09'},{endMonth:'2026-10'}]){
+  const r=calc([child('2026-10-31','confirmed',period),child('2015-01-01')],type);
+  eq([r.status,r.amountYen,r.breakdown,r.adjudication],['needs_review',null,null,'not_performed']);
+  eq(JSON.stringify(r).includes('2026-10-31'),false);
+ }
+ eq(calc([child('2026-10-31','confirmed',{startMonth:'2026-11',endMonth:'2026-11'})],type).amountYen,15000);
+ eq(calc([child('2026-10-31','confirmed',{startMonth:'2026-12'})],type).amountYen,0);
+ eq(calc([child('2026-10-31','excluded',{endMonth:'2026-10'})],type).amountYen,0);
+}
+eq(calc([child('2026-10-31')],'individual','2026-10').amountYen,0);
+eq(calc([child('2026-10-31')],'individual','2026-11').amountYen,15000);
 eq(calculateAmount(amountRules,request([child('2015-01-01')]),new Date('2027-01-01')).amountYen,null);
 for(const patch of [{month:'2026-13'},{beneficiaryType:'other'},{children:[]},{children:Array.from({length:21},()=>child('2015-01-01'))},{children:[child('2026-12-01')]},{children:[child('2015-02-30')]},{children:[child('2015-01-01','yes')]},{children:[child('2015-01-01','confirmed',{startMonth:'2026-12',endMonth:'2026-11'})]},{programId:'other'},{extra:'not allowed'}]){assert.throws(()=>calculateAmount(amountRules,{...request([child('2015-01-01')]),...patch},clock),/invalid_amount_input/);n++;}
 const output=calc([child('2015-01-01')]);eq(output.adjudication,'not_performed');eq(JSON.stringify(output).includes('2015-01-01'),false);eq(output.amountYen,Object.entries(output.breakdown).filter(([k])=>k.endsWith('Yen')).reduce((s,[,v])=>s+v,0));
