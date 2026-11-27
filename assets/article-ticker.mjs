@@ -25,16 +25,10 @@ function mountTicker(element, eventName) {
   let primary = track.firstElementChild;
   let copies = 0;
   let paused = false;
-  // A pointer resting over the ticker when the page opens must not block autoplay.
-  element.addEventListener('pointermove', event => {
-    if (event.pointerType === 'mouse') element.dataset.hoverActive = 'true';
-  }, {passive: true});
-  element.addEventListener('pointerleave', () => { element.dataset.hoverActive = 'false'; });
   const update = () => {
     const width = primary?.getBoundingClientRect().width ?? 0;
     if (!width || !windowElement.clientWidth) return;
-    // Desktop defaults to autoplay; mobile still respects reduced-motion.
-    const motion = !compact.matches || !reduced.matches || allowMotion;
+    const motion = !reduced.matches || allowMotion;
     const repetitions = motion ? Math.ceil(windowElement.clientWidth / width) : 1;
     const requiredCopies = repetitions * 2 - 1;
     // Both halves must contain the same sequence for translateX(-50%) to wrap.
@@ -53,7 +47,7 @@ function mountTicker(element, eventName) {
     track.style.setProperty('--ticker-distance', -distance + 'px');
     track.style.setProperty('--ticker-duration', (distance / 62) + 's');
     element.dataset.motion = String(motion);
-    element.dataset.motionOverride = String(allowMotion || !compact.matches);
+    element.dataset.motionOverride = String(allowMotion);
     element.dataset.paused = String(paused);
     button.hidden = compact.matches;
     const play = !motion || paused;
@@ -61,7 +55,7 @@ function mountTicker(element, eventName) {
     button.setAttribute('aria-label', label + (play ? 'を再生' : 'を一時停止'));
   };
   button.addEventListener('click', () => {
-    if (reduced.matches && compact.matches) {
+    if (reduced.matches) {
       allowMotion = !allowMotion;
     } else {
       paused = !paused;

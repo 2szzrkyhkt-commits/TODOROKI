@@ -14,7 +14,14 @@ try{for(const width of [390,1440]){
  await page.locator('#page-query').fill('nvidia 不明語');assert.equal(await page.locator('#site-map-entries li:visible').count(),0);assert.equal(await page.locator('#page-search-empty').isVisible(),true);
  await page.locator('#page-search-reset').click();assert.equal(await page.locator('#page-search-count').innerText(),initial);
  await page.locator('#page-language').selectOption('en');assert.ok(await page.locator('#site-map-entries li:visible').count()>0);for(const href of await page.locator('#site-map-entries li:visible a').evaluateAll(es=>es.map(e=>e.getAttribute('href'))))assert.ok(href.startsWith('/en/'));
- await page.locator('#page-search-reset').click();await page.locator('#page-query').fill('NVIDIA');assert.equal(await page.locator('#site-map-entries li:visible').count(),1);await page.locator('#page-query').press('Enter');assert.ok((await page.url()).endsWith('/site-map'));
+ await page.locator('#page-search-reset').click();
+ await page.locator('#page-query').fill('NVIDIA');
+ const nvidiaHits=await page.locator('#site-map-entries li:visible a').evaluateAll(links=>links.map(link=>link.pathname));
+ assert.ok(nvidiaHits.includes('/nvidia-jensen-huang-spy-allegations-2026'));
+ assert.ok(nvidiaHits.includes('/nvidia-jensen-huang-ceo-return-2026'));
+ await page.locator('#page-query').fill('NVIDIA スパイ疑惑');
+ assert.equal(await page.locator('#site-map-entries li:visible').count(),1);
+ await page.locator('#page-query').press('Enter');assert.ok((await page.url()).endsWith('/site-map'));
  await page.locator('#site-map-entries li:visible a').click();await page.locator('#scenario-check').waitFor();assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),false);assert.equal(await page.locator('#scenario-check a[href="/site-map"]').count(),1);
  await page.screenshot({path:`quality-results/t04-article-${width}.png`,fullPage:true});assert.deepEqual(errors,[]);
  const nojs=await browser.newContext({javaScriptEnabled:false,viewport:{width,height:900}}),plain=await nojs.newPage();await plain.goto(origin+'/site-map');assert.equal(await plain.locator('#page-query').isEnabled(),false);assert.ok(await plain.locator('#site-map-entries a[href="/taiheiyo-cement-5233-valuation-2026-nov"]').isVisible());await nojs.close();

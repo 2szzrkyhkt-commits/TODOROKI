@@ -23,6 +23,8 @@ jobs:
   audit:
     if: github.event_name != 'deployment_status' || github.event.deployment_status.state == 'success'
     runs-on: ubuntu-24.04
+    # Official browser and native libraries matched to the pinned npm version below.
+    container: mcr.microsoft.com/playwright:v1.56.1-noble
     timeout-minutes: 55
     permissions:
       contents: write
@@ -32,6 +34,8 @@ jobs:
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           persist-credentials: false
+      - name: Trust this job checkout inside the browser image
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -49,6 +53,18 @@ jobs:
       - name: Support collection policy and isolation regressions
         working-directory: tools/japan-support
         run: node test.mjs
+      - name: Provide the verified GitHub CLI for the audit ledger
+        run: |
+          if command -v gh >/dev/null 2>&1; then exit 0; fi
+          work="$(mktemp -d)"
+          trap 'rm -rf "$work"' EXIT
+          asset=gh_2.106.0_linux_amd64
+          curl --fail --silent --show-error --location --proto '=https' --max-time 120 \
+            "https://github.com/cli/cli/releases/download/v2.106.0/$asset.tar.gz" -o "$work/gh.tar.gz"
+          printf '%s  %s\n' 'a476449fa9625413c54a3734eded62e9e480e49f421ff08e7f3b3879c059a033' "$work/gh.tar.gz" | sha256sum -c -
+          tar -xzf "$work/gh.tar.gz" -C "$work" "$asset/bin/gh"
+          install -D -m 0755 "$work/$asset/bin/gh" "$RUNNER_TEMP/quality-bin/gh"
+          printf '%s\n' "$RUNNER_TEMP/quality-bin" >> "$GITHUB_PATH"
       - name: Load durable ledger
         if: github.event_name != 'pull_request'
         env:
@@ -69,16 +85,18 @@ jobs:
           MODE: ${{ steps.cadence.outputs.mode }}
         run: |
           npm install --no-save --package-lock=false playwright@1.56.1 @axe-core/playwright@4.10.2
+          # The matching Playwright image supplies the native libraries. Do not
+          # refresh machine-wide apt feeds during the audit.
           case "$MODE" in
-            daily) npx playwright install --with-deps chromium ;;
-            weekly|monthly) npx playwright install --with-deps chromium firefox webkit ;;
+            daily) npx playwright install chromium ;;
+            weekly|monthly) npx playwright install chromium firefox webkit ;;
             *) echo "Unexpected browser audit mode: $MODE" >&2; exit 1 ;;
           esac
       - name: Ticker endurance and WebKit regression
         if: github.event_name == 'pull_request'
         run: |
           node tools/sync-article-revival.mjs
-          npx playwright install --with-deps webkit
+          npx playwright install webkit
           PLAYWRIGHT_ENGINE=webkit node tools/quality/article-revival-browser.mjs
           TICKER_LONG_SMOKE=1 node tools/quality/article-revival-browser.mjs
       - name: Browser checks
