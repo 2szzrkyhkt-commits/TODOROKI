@@ -72,17 +72,54 @@ def execution_metadata(environ=None):
   return value if re.fullmatch(r'[0-9]{1,24}',value) else None
  return {'event':event,'run_id':number('GITHUB_RUN_ID'),'run_attempt':number('GITHUB_RUN_ATTEMPT')}
 def fingerprint(x):return hashlib.sha256(json.dumps(x,sort_keys=True,ensure_ascii=False).encode()).hexdigest()[:24]
+# These criteria contain owned public probes. Keep a continuing 5xx for one
+# exact URL/criterion stable as upstream status and retry envelopes change.
+FIRST_PARTY_5XX_CRITERIA=frozenset(('TQ01','TQ02','TQ03','TQ06','TQ18'))
+def stable_firstparty_5xx(criterion,detail):
+ if not isinstance(criterion,str) or criterion not in FIRST_PARTY_5XX_CRITERIA or not isinstance(detail,dict) or detail.get('kind')!='http_failure':
+  return None
+ status=detail.get('status');url=detail.get('url')
+ if type(status) is not int or not 500<=status<=599 or not isinstance(url,str):return None
+ try:parsed=urlsplit(url)
+ except ValueError:return None
+ if parsed.scheme!='https' or parsed.netloc!=urlsplit(BASE).netloc or parsed.fragment:return None
+ return fingerprint([criterion,{'kind':'first-party-http-5xx','url':url}])
+def finding_fingerprint(criterion,detail):
+ return stable_firstparty_5xx(criterion,detail) or fingerprint([criterion,detail])
+
 def inconclusive_evidence(value):
  if isinstance(value,dict):return value.get('kind')=='inconclusive' or bool(value.get('inconclusive')) or any(inconclusive_evidence(v) for v in value.values())
  if isinstance(value,list):return any(inconclusive_evidence(v) for v in value)
  return False
+def exact_url_recovery(row,url,at):
+ # A sibling failure or unavailable response is not evidence about this URL.
+ # Require a fresh direct 2xx observation, and reject conflicting observations.
+ if row.get('last_run')!=at:return False
+ evidence=row.get('evidence',[])
+ observed=[e for e in evidence if isinstance(e,dict) and e.get('url')==url]
+ return bool(observed) and all(
+  type(e.get('status')) is int and 200<=e['status']<=299 and e.get('final_url')==url
+  and not e.get('kind') and not inconclusive_evidence(e)
+  for e in observed
+ )
+
 def resolution_state(prior,current,rows,at):
- old={**(prior or {}).get('unverified_findings',{}),**(prior or {}).get('findings',{})}
+ # Older saved ledgers used the full attempt envelope as a fingerprint.
+ # Normalize only the same narrow class so a continuing incident does not
+ # reopen on rollout. A definite-current finding takes precedence.
+ previous=prior or {};old={}
+ for bucket in ('unverified_findings','findings'):
+  for key,finding in previous.get(bucket,{}).items():
+   identity=stable_firstparty_5xx(finding['id'],finding.get('detail')) or key
+   old[identity]=finding
  resolved=[];unverified={}
  for key,finding in old.items():
   if key in current:continue
   row=rows.get(finding['id'],{})
-  verified=row.get('last_run')==at and row.get('result') in ('完了','一部完了') and not row.get('errors') and not inconclusive_evidence(row.get('evidence'))
+  if stable_firstparty_5xx(finding['id'],finding.get('detail')):
+   verified=exact_url_recovery(row,finding['detail']['url'],at)
+  else:
+   verified=row.get('last_run')==at and row.get('result') in ('完了','一部完了') and not row.get('errors') and not inconclusive_evidence(row.get('evidence'))
   if verified:resolved.append(key)
   else:unverified[key]=finding
  return old,resolved,unverified
@@ -225,7 +262,7 @@ def run(mode,out,previous=None,live=True):
   row['classification']='完了' if row['result']=='完了' else '未完了' if row['errors'] or int(row['id'][2:]) not in {11,19,22,25,37,38,40,42,44,45,52,53,54,56,59,60,61,62} else '手動確認が必要'
   row['manual_method']='管理者が実機・本番設定・内容を確認し、日時と証跡を記録。原典照合、認証メール受信、広告配信、D1復元は自動成功扱いにしない' if row['classification']=='手動確認が必要' else None
  # A full 62-row ledger always exists; unimplemented/manual checks remain unknown.
- items=list(rows.values());current={fingerprint([x['id'],e]):{'id':x['id'],'detail':e} for x in items for e in x['errors']}
+ items=list(rows.values());current={finding_fingerprint(x['id'],e):{'id':x['id'],'detail':e} for x in items for e in x['errors']}
  old,resolved,unverified=resolution_state(prior,current,rows,now)
  new={k:v for k,v in current.items() if k not in old}
  modes=dict(prior.get('completed_modes',{}) if prior else {})
