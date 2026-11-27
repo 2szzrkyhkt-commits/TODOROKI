@@ -23,6 +23,8 @@ jobs:
   audit:
     if: github.event_name != 'deployment_status' || github.event.deployment_status.state == 'success'
     runs-on: ubuntu-24.04
+    # Official browser and native libraries matched to the pinned npm version below.
+    container: mcr.microsoft.com/playwright:v1.56.1-noble
     timeout-minutes: 55
     permissions:
       contents: write
@@ -69,8 +71,8 @@ jobs:
           MODE: ${{ steps.cadence.outputs.mode }}
         run: |
           npm install --no-save --package-lock=false playwright@1.56.1 @axe-core/playwright@4.10.2
-          # ubuntu-24.04 runners supply the browser runtime libraries. Do not
-          # refresh unrelated machine-wide apt feeds during browser setup.
+          # The matching Playwright image supplies the native libraries. Do not
+          # refresh machine-wide apt feeds during the audit.
           case "$MODE" in
             daily) npx playwright install chromium ;;
             weekly|monthly) npx playwright install chromium firefox webkit ;;
