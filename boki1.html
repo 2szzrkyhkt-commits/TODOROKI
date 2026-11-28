@@ -5,6 +5,8 @@
 /* Keep the linked lesson heading clear of the shared sticky header. */
 #learn{scroll-margin-top:calc(100px + env(safe-area-inset-top,0px))}
 @media(max-width:1200px){#learn{scroll-margin-top:calc(132px + env(safe-area-inset-top,0px))}}
+/* The compact header can wrap to a third row at narrow mobile widths. */
+@media(max-width:600px){#learn{scroll-margin-top:calc(188px + env(safe-area-inset-top,0px))}}
 </style>
 <!-- Google Analytics -->
 
