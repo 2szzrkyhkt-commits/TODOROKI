@@ -1,4 +1,5 @@
 import {createToolV2} from './tool-entry-v2.mjs';
+import {readHomePopular, refreshHomePopular} from './home-popular.mjs';
 import {taxPublicFeed} from './tax-public-feed.mjs';
 const ORIGIN = 'https://todoroki-gold.com';
 // Only byte-identical PDF aliases share a canonical target. Keep downloads and ranges intact.
@@ -176,8 +177,21 @@ async function toolGate(request, env, path) {
 }
 
 export default {
+  async scheduled(event, env) {
+    await refreshHomePopular(env, event.scheduledTime);
+  },
   async fetch(request, env) {
     const url = new URL(request.url);
+    if (url.pathname === '/api/home-popular') {
+      if (request.method !== 'GET') return json({ error: 'Method not allowed' }, 405);
+      try {
+        const response = json(await readHomePopular(env.DB));
+        response.headers.set('Cache-Control', 'public, max-age=300, s-maxage=300');
+        return response;
+      } catch {
+        return json({ error: 'Popular articles unavailable' }, 503);
+      }
+    }
     if(url.pathname==='/api/tax-public-links')return new Response(null,{status:410,headers:{'Cache-Control':'no-store'}});
     if(url.pathname==='/api/tax-catalog')return taxPublicFeed(request,env);
     let decodedPath; try { decodedPath = decodeURIComponent(url.pathname).normalize('NFC'); } catch { decodedPath = ''; }

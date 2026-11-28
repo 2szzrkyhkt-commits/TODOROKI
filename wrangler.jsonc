@@ -6,6 +6,7 @@
   "build": {
     "command": "node tools/sync-page-discovery.mjs && node tools/sync-article-revival.mjs"
   },
+  "triggers": { "crons": ["23 1 * * *"] },
   "workers_dev": true,
   "preview_urls": false,
   "assets": {
