@@ -8,7 +8,10 @@ const root=fileURLToPath(new URL('../../',import.meta.url));
 const aliases=new Set(['/app','/app/','/app/index.html','/app/index']);
 const ct={'.html':'text/html; charset=utf-8','.js':'application/javascript','.mjs':'application/javascript','.css':'text/css','.png':'image/png','.svg':'image/svg+xml','.webmanifest':'application/manifest+json','.mp4':'video/mp4','.ico':'image/x-icon','.webp':'image/webp'};
 const economyRequests=[];
-const earningsLinks=['/toto-5332-earnings-valuation-2026','/smc-6273-earnings-valuation-2026','/taiheiyo-cement-5233-valuation-2026-nov'];
+const earningsLinks=['/fast-retailing-9983-earnings-valuation-2026','/hks-7219-earnings-valuation-2026','/toto-5332-earnings-valuation-2026'];
+// CTA verification uses articles that actually publish this feature, independent of the latest picks.
+const articleCtaCases=[['/toto-5332-earnings-valuation-2026','5332'],['/smc-6273-earnings-valuation-2026','6273']];
+const fixtureArticlePaths=new Set([...earningsLinks,...articleCtaCases.map(([path])=>path)]);
 const server=createServer(async(req,res)=>{
  const p=new URL(req.url,'http://localhost').pathname;
  // Fixture only: production independently verifies exact Cloudflare alias and worker headers.
@@ -33,7 +36,7 @@ const server=createServer(async(req,res)=>{
  }
  try{
   const clean=decodeURIComponent(p);
-  const file=resolve(root,'.'+(clean==='/'?'/index.html':clean==='/login'?'/login.html':earningsLinks.includes(clean)?clean+'.html':clean));
+  const file=resolve(root,'.'+(clean==='/'?'/index.html':clean==='/login'?'/login.html':fixtureArticlePaths.has(clean)?clean+'.html':clean));
   if(!file.startsWith(root.endsWith(sep)?root:root+sep)){res.writeHead(404);res.end();return;}
   if(p==='/app/sw.js')res.setHeader('Service-Worker-Allowed','/');
   res.setHeader('Content-Type',ct[extname(file)]??'application/octet-stream');
@@ -105,7 +108,7 @@ try{
     assert.equal(p.url(),origin+'/#latest-earnings');
    }
    if(profile==='Desktop Chrome'||profile==='Virtual compact iPhone'){
-    for(const [path,code] of [[earningsLinks[0],'5332'],[earningsLinks[1],'6273']]){
+    for(const [path,code] of articleCtaCases){
      assert.equal((await p.goto(origin+path,{waitUntil:'domcontentloaded'})).status(),200);
      const link=p.getByRole('link',{name:'日本企業分析ツールへ →',exact:true});
      assert.equal(await link.count(),1);
@@ -196,7 +199,7 @@ try{
    localStorage.setItem('todoroki_privacy_v1',JSON.stringify({version:1,time:Date.now(),analytics:true,ads:false}));
   });
   const p=await opted.newPage();
-  await p.goto(origin+earningsLinks[0],{waitUntil:'domcontentloaded'});
+  await p.goto(origin+articleCtaCases[0][0],{waitUntil:'domcontentloaded'});
   await p.waitForFunction(()=>typeof window.gtag==='function');
   await p.evaluate(()=>{
    const active=window.gtag;
@@ -215,13 +218,13 @@ try{
  const next=await browser.newContext();
  try{
   await next.route(u=>u.origin!==origin,r=>r.abort());
-  const p=await next.newPage();await p.clock.setFixedTime(new Date('2026-11-21T00:00:00Z'));
+  const p=await next.newPage();await p.clock.setFixedTime(new Date('2026-11-28T02:00:00Z'));
   await p.route(u=>u.href===origin+'/?publish-fixture',async r=>{
    const upstream=await r.fetch(),source=await upstream.text();
    // A genuine editorial earnings card gets a later publication date in this synthetic fixture.
    const pattern=/(href="\/advantest-6857-earnings-analysis-2026" class="card-link" data-earnings-analysis>.*?<time datetime=")2026-11-12(">)[^<]+/s;
    assert.match(source,pattern);
-   await r.fulfill({response:upstream,body:source.replace(pattern,(_,before,after)=>before+'2026-11-21'+after+'2026.11.21')});
+   await r.fulfill({response:upstream,body:source.replace(pattern,(_,before,after)=>before+'2026-11-28'+after+'2026.11.28')});
   });
   await p.goto(origin+'/?publish-fixture',{waitUntil:'domcontentloaded'});
   const hrefs=selector=>p.locator(selector).evaluateAll(ls=>ls.map(l=>l.getAttribute('href')));
@@ -230,7 +233,7 @@ try{
   assert.equal(lower.length,6);
   assert.equal(new Set([...upper,...lower]).size,9);
   assert.ok(lower.includes(earningsLinks[2]),'displaced featured article is eligible for the lower preview again');
-  assert.deepEqual(await p.locator('#latest-article-shortlist .selection-label').allTextContents(),['新着','新着','新着','よく読まれた記事','よく読まれた記事','よく読まれた記事']);
+  assert.deepEqual(await p.locator('#latest-article-shortlist .selection-label').allTextContents(),['新着','新着','新着','過去の記事','過去の記事','過去の記事']);
   console.log('Synthetic newly published earnings moves into upper three; only actual upper links excluded from lower six');
  }finally{await next.close();}
 }finally{if(browser)await browser.close();await new Promise(r=>server.close(r));}
