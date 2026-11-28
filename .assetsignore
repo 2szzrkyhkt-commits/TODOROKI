@@ -28,3 +28,4 @@
 **/*.pyc
 
 /tool-entry-v2.mjs
+/home-popular.mjs
