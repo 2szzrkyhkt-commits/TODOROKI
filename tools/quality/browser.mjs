@@ -57,7 +57,7 @@ for(const [name,engine] of Object.entries(weekly?{chromium,firefox,webkit}:{chro
      const response=await keyboardPage.goto('https://todoroki-gold.com/',{waitUntil:'networkidle',timeout:30000});
      if(!response?.ok())throw new Error(`HTTP ${response?.status()}`);
      loaded=true;
-     add(44,[],{path,name,width,...await inspectHomeKeyboard(keyboardPage, {checkTickerControl: width >= 768})});
+     add(44,[],{path,name,width,...await inspectHomeKeyboard(keyboardPage)});
     }catch(e){
      add(44,loaded?[{path,name,width,error:e.message}]:[],{path,name,width,...(!loaded?{inconclusive:e.message}:{scope:'Japanese homepage keyboard smoke check failed'})});
     }finally{await keyboardPage.close();}

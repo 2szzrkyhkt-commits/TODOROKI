@@ -144,7 +144,7 @@ export async function synchronizeArticles({write = true, now = Date.now()} = {})
       '<div class="news-ticker" id="archive-ticker" aria-label="過去記事のおすすめ" data-motion="true">'+
       '<span class="news-ticker-label">おすすめ</span><div class="news-ticker-window">'+
       '<nav class="news-ticker-track" aria-label="過去記事へのリンク"><div class="news-ticker-group">'+anchors+
-      '</div></nav></div><button type="button" class="news-ticker-toggle" aria-label="おすすめテロップを一時停止" hidden>停止</button></div>',
+      '</div></nav></div></div>',
       (html, text) => before(html, '<!-- archive-ticker-slot -->', text));
   }
   replacements.set('/', homepage);

@@ -11,37 +11,17 @@
 .revival-section ul, .revival-section ol { padding-inline-start: 1.35rem; }
 .revival-section a { display: inline-block; padding-block: .25rem; color: #f4d77b; text-decoration: underline; }
 .archive-directory summary { min-height: 28px; cursor: pointer; color: #f4d77b; }
-.revival-section a:focus-visible, .news-ticker button:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.revival-section a:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
 
 .news-ticker { min-height: 44px; }
 .news-ticker[data-motion="true"] .news-ticker-track {
   animation: todoroki-ticker var(--ticker-duration, 45s) linear infinite;
 }
-.news-ticker[data-motion="true"][data-paused="true"] .news-ticker-track {
-  animation-play-state: paused;
-}
-.news-ticker[data-motion="false"] .news-ticker-window,
 .news-ticker[data-motion]:has(.news-ticker-group a:focus-visible) .news-ticker-window { overflow-x: auto; scrollbar-width: thin; }
-.news-ticker[data-motion="false"] .news-ticker-track,
 .news-ticker[data-motion]:has(.news-ticker-group a:focus-visible) .news-ticker-track { animation: none; }
-.news-ticker[data-motion="false"] [aria-hidden="true"],
 .news-ticker[data-motion]:has(.news-ticker-group a:focus-visible) [aria-hidden="true"] { display: none; }
 .news-ticker .news-ticker-group a {
   padding-block: .65rem;
   max-width: min(70vw, 32rem);
   white-space: normal;
-}
-.news-ticker .news-ticker-toggle {
-  min-width: 44px; min-height: 44px; flex: none;
-  color: #f4d77b; background: #16130c; border: 0; border-left: 1px solid #665225;
-  font: inherit; font-size: .75rem; cursor: pointer;
-}
-.news-ticker .news-ticker-toggle[hidden] { display: none; }
-@media (max-width: 767px), (hover: none) and (pointer: coarse) {
-  .news-ticker .news-ticker-toggle { display: none; }
-}
-@media (prefers-reduced-motion:reduce) {
-  .news-ticker[data-motion="true"]:not([data-motion-override="true"]) .news-ticker-track { animation: none; }
-  .news-ticker:not([data-motion-override="true"]) .news-ticker-window { overflow-x: auto; }
-  .news-ticker:not([data-motion-override="true"]) [aria-hidden="true"] { display: none; }
 }
