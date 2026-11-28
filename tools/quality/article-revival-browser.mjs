@@ -76,20 +76,7 @@ try {
         await page.waitForTimeout(150);
       }
       assert.notEqual((await motion())[0],start,JSON.stringify({width,id,motion:await motion()}));
-      if (width < 500) {
-        assert.equal(await row.locator('button').isVisible(), false);
-      } else {
-        const stop = row.getByRole('button');
-        await stop.press('Enter');
-        await track.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
-        assert.equal(await track.evaluate(e=>getComputedStyle(e).animationPlayState),'paused');
-        const held = (await motion())[0];
-        await page.waitForTimeout(180);
-        assert.equal((await motion())[0],held);
-        await stop.press('Enter');
-        await page.waitForTimeout(180);
-        assert.notEqual((await motion())[0],held);
-      }
+      assert.equal(await row.locator('button').count(), 0);
     }
     if (width < 500) {
       await page.setViewportSize({width:850,height:width});
@@ -141,28 +128,38 @@ try {
       assert(seams.every(gap => gap < 2), JSON.stringify({width,seams}));
     }
     await page.reload({waitUntil:'domcontentloaded'});
-    const motionReady = enabled => page.waitForFunction(expected =>
-      [...document.querySelectorAll('.news-ticker')].length === 2 &&
-      [...document.querySelectorAll('.news-ticker')].every(row => {
-        const track = row.querySelector('.news-ticker-track');
-        return row.dataset.motion === String(expected) &&
-          (getComputedStyle(track).animationName === 'todoroki-ticker') === expected;
-      }), enabled, {timeout:5000});
-    await motionReady(true);
-    await page.emulateMedia({reducedMotion:'reduce'});
-    await motionReady(false);
-    await page.emulateMedia({reducedMotion:'no-preference'});
-    await motionReady(true);
-    await page.emulateMedia({reducedMotion:'reduce'});
-    await motionReady(false);
-    if (width >= 500) {
-      for (const id of ['news-ticker', 'archive-ticker']) {
-        const row = page.locator('#'+id);
-        await row.getByRole('button', {name:/を再生$/}).press('Enter');
-        assert.equal(await row.locator('.news-ticker-track').evaluate(e => getComputedStyle(e).animationName), 'todoroki-ticker');
-        await row.getByRole('button', {name:/を一時停止$/}).press('Enter');
-        assert.equal(await row.locator('.news-ticker-track').evaluate(e => getComputedStyle(e).animationName), 'none');
-      }
+    const motionReady = () => page.waitForFunction(() => {
+      const rows = [...document.querySelectorAll('.news-ticker')];
+      return rows.length === 2 && rows.every(row => {
+        const css = getComputedStyle(row.querySelector('.news-ticker-track'));
+        return css.animationName === 'todoroki-ticker' && css.animationPlayState === 'running';
+      });
+    }, null, {timeout:5000});
+    const readTransforms = () => page.locator('.news-ticker-track').evaluateAll(
+      tracks => tracks.map(track => getComputedStyle(track).transform)
+    );
+    for (const reducedMotion of ['no-preference', 'reduce', 'no-preference']) {
+      await page.emulateMedia({reducedMotion});
+      await motionReady();
+      const initial = await readTransforms();
+      await page.waitForFunction(before => [...document.querySelectorAll('.news-ticker-track')]
+        .every((track,i) => getComputedStyle(track).transform !== before[i]), initial, {timeout:5000});
+    }
+    // Kept separate from autoplay: keyboard focus stops only the focused row
+    // while exposing its real links. Playback returns when focus leaves.
+    await page.keyboard.press('Tab');
+    for (const id of ['news-ticker', 'archive-ticker']) {
+      const row = page.locator('#'+id);
+      const track = row.locator('.news-ticker-track');
+      const link = row.locator('.news-ticker-group:not([aria-hidden]) a').first();
+      await link.focus();
+      assert(await link.evaluate(anchor => anchor.matches(':focus-visible')));
+      assert.equal(await track.evaluate(e => getComputedStyle(e).animationName), 'none');
+      assert.equal(await row.locator('.news-ticker-window').evaluate(e => getComputedStyle(e).overflowX), 'auto');
+      assert.equal(await row.locator('.news-ticker-group[aria-hidden="true"]:visible').count(), 0);
+      assert.equal(await page.locator('.news-ticker:not(#'+id+') .news-ticker-track').evaluate(e => getComputedStyle(e).animationName), 'todoroki-ticker');
+      await link.blur();
+      await motionReady();
     }
     const archiveRow = page.locator('#archive-ticker');
     await archiveRow.locator('.news-ticker-group:not([aria-hidden]) a').first().press('Enter');
@@ -172,7 +169,7 @@ try {
     await page.goto(origin+'/price-value');
     assert((await page.locator('main [data-article-event="related_article_click"]').count())>0);
     assert.deepEqual(errors,[]);
-    console.log(JSON.stringify({width,newest:newest.length,archive:archive.length,directionAndPause:true,reducedMotion:true,realLinkNavigation:true}));
+    console.log(JSON.stringify({width,newest:newest.length,archive:archive.length,sameDirection:true,autoplayWithBothMotionSettings:true,keyboardFocusStopsRow:true,realLinkNavigation:true}));
     await context.close();
   }
 } finally { await browser.close(); }
