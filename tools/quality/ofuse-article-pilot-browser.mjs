@@ -15,7 +15,7 @@ const server=createServer(async(req,res)=>{
     if(path==='/api/privacy/region')return res.writeHead(200,{'Content-Type':'application/json'}).end('{"optionalAllowed":false}');
     const file=resolve(root,'.'+(slugs.includes(path)?path+'.html':path));
     if(!file.startsWith(root+sep)||(!slugs.includes(path)&&!path.startsWith('/assets/'))) return res.writeHead(404).end();
-    const mime={'.css':'text/css','.js':'text/javascript','.html':'text/html; charset=utf-8'};
+    const mime={'.css':'text/css','.js':'text/javascript','.html':'text/html; charset=utf-8','.png':'image/png'};
     res.writeHead(200,{'Content-Type':mime[extname(file)]??'application/octet-stream'}).end(await readFile(file));
   } catch { if(!res.headersSent)res.writeHead(404);res.end(); }
 });
@@ -40,13 +40,22 @@ try {
     });
     const page=await context.newPage();
     await page.goto(origin+slug);
-    const support=page.locator('main .article-ofuse');
+    const support=page.locator(javascript?'header.site-header .todoroki-support':'main .article-ofuse');
     const button=support.getByRole('link',{name:'とどろきを応援する',exact:true});
     assert.equal(await button.count(),1);
     assert.equal(await button.getAttribute('href'),destination);
-    assert.equal(await support.getByText('記事やツールが役に立ったら、任意で応援できます。',{exact:true}).isVisible(),true);
-    assert.equal(await support.getByText('OFUSEが開きます',{exact:true}).isVisible(),true);
-    assert.equal(await support.evaluate(e=>e.nextElementSibling.querySelector('h2').textContent),'関連記事');
+    assert.equal(await page.locator('a[href="'+destination+'"]').count(),1);
+    if(javascript){
+      assert.equal(await page.locator('main .article-ofuse').count(),0);
+      const image=button.getByRole('img',{name:'とどろきを応援する',exact:true});
+      assert.equal(await image.getAttribute('src'),'/assets/todoroki-ofuse-button-3.png');
+      await image.evaluate(i=>i.decode());
+      assert.ok(await image.evaluate(i=>i.naturalWidth>0));
+    }else{
+      assert.equal(await support.getByText('記事やツールが役に立ったら、任意で応援できます。',{exact:true}).isVisible(),true);
+      assert.equal(await support.getByText('OFUSEが開きます',{exact:true}).isVisible(),true);
+      assert.equal(await support.evaluate(e=>e.nextElementSibling.querySelector('h2').textContent),'関連記事');
+    }
     assert.deepEqual(external,[],'No OFUSE request on viewing the article');
     await button.press('Shift+Tab');
     assert.equal(await button.evaluate(e=>document.activeElement===e),false);
@@ -60,7 +69,7 @@ try {
     assert.deepEqual(external,[{method:'GET',body:null}]);
     assert.equal(await page.title(),'Navigation fixture only');
     await context.close();
-    console.log(`OFUSE ${slug}: ${width}px, JS ${javascript?'on':'off'}, visible disclosure, Tab/Enter, mocked GET only`);
+    console.log(`OFUSE ${slug}: ${width}px, JS ${javascript?'on':'off'}, one visible control, Tab/Enter, mocked GET only`);
   }
 } finally {
   await browser?.close();
